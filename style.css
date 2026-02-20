@@ -1019,14 +1019,17 @@ h4 { font-size: 1.15rem; }
     color: var(--color-accent);
 }
 
-.footer-social-link {
+.footer-connect .footer-social-link {
     display: flex;
     align-items: center;
     gap: 0.6rem;
+    line-height: 1;
 }
 
 .footer-social-link svg {
     flex-shrink: 0;
+    width: 18px;
+    height: 18px;
 }
 
 .btn-nav {
