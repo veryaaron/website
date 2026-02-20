@@ -211,6 +211,7 @@ h4 { font-size: 1.15rem; }
 
 .nav-links {
     display: flex;
+    align-items: center;
     gap: 2.5rem;
     list-style: none;
 }
@@ -322,6 +323,91 @@ h4 { font-size: 1.15rem; }
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+}
+
+.hero-newsletter {
+    max-width: 480px;
+}
+
+.hero-newsletter-row {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.hero-newsletter-row input[type="email"] {
+    flex: 1;
+    padding: 0.85rem 1.25rem;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #fff;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.hero-newsletter-row input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-newsletter-row input[type="email"]:focus {
+    border-color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.hero-newsletter-row .btn {
+    white-space: nowrap;
+}
+
+.hero-newsletter-success p {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    margin-top: 0.75rem;
+}
+
+.hero-social-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-social {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.hero-social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.hero-social-link:hover {
+    color: #fff;
+}
+
+.hero-social-link svg {
+    opacity: 0.85;
+}
+
+.hero-social-link:hover svg {
+    opacity: 1;
+}
+
+@media (max-width: 480px) {
+    .hero-newsletter-row {
+        flex-direction: column;
+    }
 }
 
 /* About */
@@ -570,11 +656,86 @@ h4 { font-size: 1.15rem; }
 
 .join h2 { text-align: center; }
 
-.join-intro {
-    text-align: center;
+.ticket-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+.ticket-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-yellow), var(--color-pink));
+}
+
+.ticket-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.ticket-card-header strong {
+    display: block;
+    font-size: 1.25rem;
+    color: var(--color-text);
+}
+
+.ticket-card-header p {
+    margin: 0.25rem 0 0;
     color: var(--color-text-muted);
-    font-size: 1.15rem;
-    margin-bottom: 3rem;
+    font-size: 0.95rem;
+}
+
+.ticket-card-icon {
+    font-size: 2.5rem;
+}
+
+.ticket-card-row {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.ticket-card-row input[type="email"] {
+    flex: 1;
+    padding: 0.85rem 1.25rem;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-bg);
+    color: var(--color-text);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.ticket-card-row input[type="email"]::placeholder {
+    color: var(--color-text-muted);
+}
+
+.ticket-card-row input[type="email"]:focus {
+    border-color: var(--color-accent);
+}
+
+.ticket-card-success p {
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-top: 0.75rem;
+}
+
+@media (max-width: 480px) {
+    .ticket-card-row {
+        flex-direction: column;
+    }
 }
 
 .join-grid {
@@ -611,6 +772,8 @@ h4 { font-size: 1.15rem; }
 /* Coming Soon */
 .coming-soon {
     padding: 3rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
     background: #fff;
     border-radius: var(--radius);
     text-align: center;
@@ -646,6 +809,82 @@ h4 { font-size: 1.15rem; }
     gap: 1.5rem;
     flex-wrap: wrap;
     margin-bottom: 2rem;
+}
+
+.coming-soon-row {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.coming-soon-row .coming-soon-item {
+    flex: 1 1 0;
+}
+
+.coming-soon-ticket {
+    background: var(--color-bg);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.coming-soon-ticket-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    text-align: left;
+}
+
+.coming-soon-ticket-header strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--color-text);
+}
+
+.coming-soon-ticket-header p {
+    margin: 0.25rem 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+.coming-soon-ticket-row {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.coming-soon-ticket-row input[type="email"] {
+    flex: 1;
+    padding: 0.85rem 1.25rem;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--color-text);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.coming-soon-ticket-row input[type="email"]::placeholder {
+    color: var(--color-text-muted);
+}
+
+.coming-soon-ticket-row input[type="email"]:focus {
+    border-color: var(--color-accent);
+}
+
+.coming-soon-ticket-success p {
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-top: 0.75rem;
+}
+
+@media (max-width: 480px) {
+    .coming-soon-ticket-row {
+        flex-direction: column;
+    }
 }
 
 .coming-soon-item {
@@ -778,6 +1017,23 @@ h4 { font-size: 1.15rem; }
 .footer-links a:hover,
 .footer-connect a:hover {
     color: var(--color-accent);
+}
+
+.footer-social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.footer-social-link svg {
+    flex-shrink: 0;
+}
+
+.btn-nav {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    color: #fff !important;
 }
 
 .footer-bottom {
