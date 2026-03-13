@@ -1512,3 +1512,62 @@ h4 { font-size: 1.15rem; }
         width: 100% !important;
     }
 }
+
+/* ==========================================================================
+   Scroll Animations
+   ========================================================================== */
+
+.anim {
+    opacity: 0;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    will-change: opacity, transform;
+}
+
+.anim-fade-up {
+    transform: translateY(30px);
+}
+
+.anim-slide-left {
+    transform: translateX(-60px);
+}
+
+.anim-slide-right {
+    transform: translateX(60px);
+}
+
+.anim.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Staggered delays for principles (stepped entry) */
+.principle.anim:nth-child(1)  { transition-delay: 0s; }
+.principle.anim:nth-child(2)  { transition-delay: 0.08s; }
+.principle.anim:nth-child(3)  { transition-delay: 0.16s; }
+.principle.anim:nth-child(4)  { transition-delay: 0.24s; }
+.principle.anim:nth-child(5)  { transition-delay: 0.32s; }
+.principle.anim:nth-child(6)  { transition-delay: 0.40s; }
+.principle.anim:nth-child(7)  { transition-delay: 0.48s; }
+.principle.anim:nth-child(8)  { transition-delay: 0.56s; }
+.principle.anim:nth-child(9)  { transition-delay: 0.64s; }
+.principle.anim:nth-child(10) { transition-delay: 0.72s; }
+
+/* Staggered delays for governance items */
+.governance-item.anim:nth-child(1) { transition-delay: 0s; }
+.governance-item.anim:nth-child(2) { transition-delay: 0.12s; }
+.governance-item.anim:nth-child(3) { transition-delay: 0.24s; }
+.governance-item.anim:nth-child(4) { transition-delay: 0.36s; }
+
+/* Staggered delays for governance link cards */
+.governance-link-card.anim:nth-child(1) { transition-delay: 0s; }
+.governance-link-card.anim:nth-child(2) { transition-delay: 0.12s; }
+.governance-link-card.anim:nth-child(3) { transition-delay: 0.24s; }
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .anim {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
