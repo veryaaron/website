@@ -12,6 +12,9 @@
                     '<span></span><span></span><span></span>' +
                 '</button>' +
                 '<ul class="nav-links">' +
+                    '<li><a href="' + prefix + '/#about">About</a></li>' +
+                    '<li><a href="' + prefix + '/#principles">Principles</a></li>' +
+                    '<li><a href="' + prefix + '/#event">Event</a></li>' +
                     '<li><a href="' + prefix + '/faq.html">FAQ</a></li>' +
                     '<li><a href="' + prefix + '/transparency.html">Transparency</a></li>' +
                     '<li><a href="' + prefix + '/#join" class="btn btn-primary btn-nav">Get Tickets</a></li>' +
