@@ -33,6 +33,9 @@
                         '<a href="' + prefix + '/transparency.html">Transparency</a>' +
                         '<a href="' + prefix + '/faq.html">FAQ</a>' +
                         '<a href="' + prefix + '/code-of-conduct.html">Code of Conduct</a>' +
+                        '<a href="' + prefix + '/terms.html">Terms &amp; Conditions</a>' +
+                        '<a href="' + prefix + '/refund-policy.html">Refund Policy</a>' +
+                        '<a href="' + prefix + '/privacy-policy.html">Privacy Policy</a>' +
                     '</div>' +
                     '<div class="footer-volunteer">' +
                         '<h4>Volunteer</h4>' +
