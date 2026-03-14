@@ -36,6 +36,7 @@
                         '<a href="' + prefix + '/terms.html">Terms &amp; Conditions</a>' +
                         '<a href="' + prefix + '/refund-policy.html">Refund Policy</a>' +
                         '<a href="' + prefix + '/privacy-policy.html">Privacy Policy</a>' +
+                        '<a href="' + prefix + '/survival-guide.html">Survival Guide</a>' +
                     '</div>' +
                     '<div class="footer-volunteer">' +
                         '<h4>Volunteer</h4>' +

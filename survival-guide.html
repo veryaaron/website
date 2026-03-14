@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survival Guide | Elsewhere Burn — by Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .guide-page {
+            padding: 8rem 0 4rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+
+        .guide-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .guide-content h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .guide-content p {
+            color: var(--color-text-muted);
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .guide-coming-soon {
+            margin-top: 2.5rem;
+            padding: 2rem 2.5rem;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            color: var(--color-text-muted);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .guide-coming-soon a {
+            color: var(--color-accent);
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .guide-page {
+                padding: 6rem 0 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="guide-page">
+        <div class="container">
+            <a href="/" class="back-link">Back to Home</a>
+
+            <div class="guide-content">
+                <h1>Survival Guide</h1>
+                <p>The Elsewhere 2026 Survival Guide is being prepared and will be published here soon.</p>
+                <p>The guide will cover everything you need to know to prepare for and thrive at Elsewhere &mdash; from what to bring and how to get there, to site rules, safety information, and Leave No Trace guidelines.</p>
+
+                <div class="guide-coming-soon">
+                    <p>In the meantime, join our <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a> for the latest updates, or check the <a href="faq.html">FAQ</a> for answers to common questions.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
