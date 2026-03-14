@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board Meeting - February 16, 2026 | Nobodies Collective</title>
+    <title>NCA Board Meeting Minutes - February 16, 2026 | Nobodies Collective</title>
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +28,12 @@
         .meeting-content th { background: var(--color-bg-secondary); font-weight: 600; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -40,102 +46,494 @@
                 <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
 
                 <div class="meeting-header">
-                    <h1>Board Meeting</h1>
+                    <h1>NCA Board Meeting Minutes</h1>
                     <div class="meeting-meta">
                         <span><strong>Date:</strong> February 16, 2026</span>
                         <span><strong>Duration:</strong> ~2 hours</span>
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Board members present:</strong> Daniel, Pablo, Ben, Peter, Chris, Michelle, Victor, Ward (quorum met &mdash; all 8 members)
-                    <br><strong>Non-board attendees:</strong> Pepe C (legal advisor), Daniela (production consultant)
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Decisions</h2>
-                    <table>
-                        <thead>
-                            <tr><th>Decision</th><th>Context</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Production consultant confirmed the event is operationally viable for July 7</td>
-                                <td>Vendor engagement strong, key quotes received; main barriers are logistical</td>
-                            </tr>
-                            <tr>
-                                <td>Board agreed to seek further legal review before proceeding with the current draft IP agreement</td>
-                                <td>Legal advisor recommended additional review; decision memo to follow for electronic vote</td>
-                            </tr>
-                            <tr>
-                                <td>Deferred applicant routed to consent lead for review</td>
-                                <td>Board agreed to seek advice from the consent lead before voting on the application</td>
-                            </tr>
-                            <tr>
-                                <td>Applications with special legal terms to be reviewed by legal counsel before acceptance</td>
-                                <td>Two applicants included non-standard IP clauses in their volunteer agreements</td>
-                            </tr>
-                            <tr>
-                                <td>Meeting notes publication approval reduced from 4 to 3 board members</td>
-                                <td>Streamlines the transparency publication process</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                    <h2>Discussion Summary</h2>
+                    <div class="attendees">
+                        <strong>Board members present:</strong> Daniel T, Pablo V, Ben D, Peter D, Chris O, Michelle T, Victor P, Ward D (quorum met &mdash; all 8 members)
+                        <br><strong>Non-board attendees:</strong> Pepe C (legal advisor), Daniela M S (production consultant)
+                    </div>
 
-                    <h3>Production Update</h3>
-                    <p>The production consultant presented a comprehensive status update. The master timeline has been updated with key milestones covering placements, first crew, setup week, pre-event week, event week, and strike. Vendor engagement is strong, with quotes received for cabins, fences, and generators. The Red Cross estimate is approximately 6% higher than last year; alternatives are being explored for build and strike medical coverage to reduce costs. The generator arrangement is favourable, with payment due after service delivery.</p>
-                    <p>A crew list tracking tool has been created for departments. Permitting is on track, with good relationships maintained with local authorities. The consultant&rsquo;s overall assessment is that the event is operationally viable for July 7, with production ahead of schedule compared to last year. The main barriers remain logistical rather than related to production complexity.</p>
-                    <p>The board noted the need for a paid local person to supervise vendor pickups during strike, and the consultant will prepare role descriptions for this.</p>
+                    <div class="meeting-content">
+                        <h2>Decisions</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Decision</th><th>Context</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Production consultant confirmed the event is operationally viable for July 7</td>
+                                    <td>Vendor engagement strong, key quotes received; main barriers are logistical</td>
+                                </tr>
+                                <tr>
+                                    <td>Board agreed to seek further legal review before proceeding with the current draft IP agreement</td>
+                                    <td>Legal advisor recommended additional review; decision memo to follow for electronic vote</td>
+                                </tr>
+                                <tr>
+                                    <td>Deferred applicant routed to consent lead for review</td>
+                                    <td>Board agreed to seek advice from the consent lead before voting on the application</td>
+                                </tr>
+                                <tr>
+                                    <td>Applications with special legal terms to be reviewed by legal counsel before acceptance</td>
+                                    <td>Two applicants included non-standard IP clauses in their volunteer agreements</td>
+                                </tr>
+                                <tr>
+                                    <td>Meeting notes publication approval reduced from 4 to 3 board members</td>
+                                    <td>Streamlines the transparency publication process</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                    <h3>Containers</h3>
-                    <p>The board discussed the critical need for containers, which hold tools, power cables, structures, and other essential equipment needed from the first crew week onward. Board members emphasised the significant financial implications of proceeding without containers, as replacement costs for the stored equipment would substantially increase multiple budget lines. The consultant confirmed that while the event could technically proceed without them, the cost impact and effect on community morale would be significant. The board agreed that a decision on container access is needed promptly.</p>
+                        <h2>Discussion Summary</h2>
 
-                    <h3>External Discussions Update</h3>
-                    <p>A scheduled external meeting did not take place. A draft agreement was subsequently shared relating to access to operational documents. The board&rsquo;s legal advisor reviewed the draft and recommended that further legal review was needed before proceeding. The legal advisor committed to providing a one-page decision memo within 24 hours outlining the recommended approach, which will be put to an electronic board vote.</p>
+                        <h3>Production Update</h3>
+                        <p>The production consultant presented a comprehensive status update. The master timeline has been updated with key milestones covering placements, first crew, setup week, pre-event week, event week, and strike. Vendor engagement is strong, with quotes received for cabins, fences, and generators. The Red Cross estimate is approximately 6% higher than last year; alternatives are being explored for build and strike medical coverage to reduce costs. The generator arrangement is favourable, with payment due after service delivery.</p>
+                        <p>A crew list tracking tool has been created for departments. Permitting is on track, with good relationships maintained with local authorities. The consultant&rsquo;s overall assessment is that the event is operationally viable for July 7, with production ahead of schedule compared to last year. The main barriers remain logistical rather than related to production complexity.</p>
+                        <p>The board noted the need for a paid local person to supervise vendor pickups during strike, and the consultant will prepare role descriptions for this.</p>
 
-                    <h3>Association Applicants</h3>
-                    <p>The board reviewed pending membership applications. One deferred applicant was discussed and the board agreed to route the application to the consent lead for review and advice before a board vote. Two other applicants had included special terms in their volunteer agreements relating to intellectual property. The board agreed to have legal counsel review the exact wording of these clauses before accepting the applications.</p>
+                        <h3>Containers</h3>
+                        <p>The board discussed the critical need for containers, which hold tools, power cables, structures, and other essential equipment needed from the first crew week onward. Board members emphasised the significant financial implications of proceeding without containers, as replacement costs for the stored equipment would substantially increase multiple budget lines. The consultant confirmed that while the event could technically proceed without them, the cost impact and effect on community morale would be significant. The board agreed that a decision on container access is needed promptly.</p>
 
-                    <h3>Transparency and Community Communication</h3>
-                    <p>Daniel raised a concern that the necessary confidentiality around ongoing negotiations may be causing community trust to erode. The board discussed how to balance the privacy requirements of active negotiations with the community&rsquo;s need for information. Suggestions included being more explicit in communications about why certain information is temporarily being withheld. The board agreed to refresh and publish the community FAQ by Thursday, and to engage the governance working group on community communication strategies.</p>
+                        <h3>External Discussions Update</h3>
+                        <p>A scheduled external meeting did not take place. A draft agreement was subsequently shared relating to access to operational documents. The board&rsquo;s legal advisor reviewed the draft and recommended that further legal review was needed before proceeding. The legal advisor committed to providing a one-page decision memo within 24 hours outlining the recommended approach, which will be put to an electronic board vote.</p>
 
-                    <h3>Insurance, Liability, and Regulatory Compliance</h3>
-                    <p>The board discussed an email from a community member raising questions about legal liability, the possibility of lawyers meeting, and an offer of a risk assessment. The board noted that liability and D&amp;O insurance are available for Spanish associations. The board agreed that any legal assessments should be procured independently to ensure impartiality. Pablo committed to obtaining a quote from the association&rsquo;s own lawyers and creating a separate workstream to address the regulatory and compliance questions raised.</p>
+                        <h3>Association Applicants</h3>
+                        <p>The board reviewed pending membership applications. One deferred applicant was discussed and the board agreed to route the application to the consent lead for review and advice before a board vote. Two other applicants had included special terms in their volunteer agreements relating to intellectual property. The board agreed to have legal counsel review the exact wording of these clauses before accepting the applications.</p>
 
-                    <h3>Other Updates</h3>
-                    <ul>
-                        <li>The Humans app is in QA testing, with 12 people signed up. A WordPress site is also being set up.</li>
-                        <li>The WWWG typesetting process has been significantly streamlined, reducing production time from several hours to approximately two minutes.</li>
-                    </ul>
+                        <h3>Transparency and Community Communication</h3>
+                        <p>Daniel T raised a concern that the necessary confidentiality around ongoing negotiations may be causing community trust to erode. The board discussed how to balance the privacy requirements of active negotiations with the community&rsquo;s need for information. Suggestions included being more explicit in communications about why certain information is temporarily being withheld. The board agreed to refresh and publish the community FAQ by Thursday, and to engage the governance working group on community communication strategies.</p>
 
-                    <h2>Action Items</h2>
-                    <ul>
-                        <li><strong>Daniela:</strong> Prepare paid role descriptions for strike supervision</li>
-                        <li><strong>Daniela:</strong> Explore medical coverage alternatives to Red Cross for build and strike periods</li>
-                        <li><strong>Daniela:</strong> Procure liability and D&amp;O insurance for the association</li>
-                        <li><strong>Pepe:</strong> Provide a one-page decision memo within 24 hours on the recommended approach to the draft agreement, for electronic board vote</li>
-                        <li><strong>Ben:</strong> Route the deferred applicant&rsquo;s application to consent lead for review</li>
-                        <li><strong>Ben:</strong> Submit the two applicants&rsquo; IP terms wording to legal counsel for review</li>
-                        <li><strong>Ben:</strong> Speak to Kate about community engagement through the governance working group</li>
-                        <li><strong>Daniel:</strong> Refresh the community FAQ for publication by Thursday</li>
-                        <li><strong>Daniel:</strong> Implement streamlined meeting notes publication process (3 approvals instead of 4)</li>
-                        <li><strong>Pablo:</strong> Obtain a quote from the association&rsquo;s lawyers</li>
-                        <li><strong>Pablo:</strong> Create a separate workstream for the regulatory and compliance questions raised</li>
-                        <li><strong>Pablo:</strong> Supervise the full list of regulations the association needs to meet</li>
-                    </ul>
+                        <h3>Insurance, Liability, and Regulatory Compliance</h3>
+                        <p>The board discussed an email from a community member raising questions about legal liability, the possibility of lawyers meeting, and an offer of a risk assessment. The board noted that liability and D&amp;O insurance are available for Spanish associations. The board agreed that any legal assessments should be procured independently to ensure impartiality. Pablo V committed to obtaining a quote from the association&rsquo;s own lawyers and creating a separate workstream to address the regulatory and compliance questions raised.</p>
 
-                    <h2>Open Items for Future Meetings</h2>
-                    <ul>
-                        <li>Container access decision</li>
-                        <li>External agreement approach (following electronic vote on decision memo)</li>
-                        <li>Deferred applicant vote (following consent lead review)</li>
-                        <li>Applicants with special IP terms (following legal review)</li>
-                        <li>Community FAQ publication</li>
-                        <li>Regulatory compliance workstream progress</li>
-                    </ul>
+                        <h3>Other Updates</h3>
+                        <ul>
+                            <li>The Humans app is in QA testing, with 12 people signed up. A WordPress site is also being set up.</li>
+                            <li>The WWWG typesetting process has been significantly streamlined, reducing production time from several hours to approximately two minutes.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <ul>
+                            <li><strong>Daniela M S:</strong> Prepare paid role descriptions for strike supervision</li>
+                            <li><strong>Daniela M S:</strong> Explore medical coverage alternatives to Red Cross for build and strike periods</li>
+                            <li><strong>Daniela M S:</strong> Procure liability and D&amp;O insurance for the association</li>
+                            <li><strong>Pepe C:</strong> Provide a one-page decision memo within 24 hours on the recommended approach to the draft agreement, for electronic board vote</li>
+                            <li><strong>Ben D:</strong> Route the deferred applicant&rsquo;s application to consent lead for review</li>
+                            <li><strong>Ben D:</strong> Submit the two applicants&rsquo; IP terms wording to legal counsel for review</li>
+                            <li><strong>Ben D:</strong> Speak to Kate about community engagement through the governance working group</li>
+                            <li><strong>Daniel T:</strong> Refresh the community FAQ for publication by Thursday</li>
+                            <li><strong>Daniel T:</strong> Implement streamlined meeting notes publication process (3 approvals instead of 4)</li>
+                            <li><strong>Pablo V:</strong> Obtain a quote from the association&rsquo;s lawyers</li>
+                            <li><strong>Pablo V:</strong> Create a separate workstream for the regulatory and compliance questions raised</li>
+                            <li><strong>Pablo V:</strong> Supervise the full list of regulations the association needs to meet</li>
+                        </ul>
+
+                        <h2>Open Items for Future Meetings</h2>
+                        <ul>
+                            <li>Container access decision</li>
+                            <li>External agreement approach (following electronic vote on decision memo)</li>
+                            <li>Deferred applicant vote (following consent lead review)</li>
+                            <li>Applicants with special IP terms (following legal review)</li>
+                            <li>Community FAQ publication</li>
+                            <li>Regulatory compliance workstream progress</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Miembros de la junta presentes:</strong> Daniel T, Pablo V, Ben D, Peter D, Chris O, Michelle T, Victor P, Ward D (qu&oacute;rum alcanzado &mdash; los 8 miembros)
+                        <br><strong>Asistentes no pertenecientes a la junta:</strong> Pepe C (asesor legal), Daniela M S (consultora de producci&oacute;n)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisiones</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Decisi&oacute;n</th><th>Contexto</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>La consultora de producci&oacute;n confirm&oacute; que el evento es operativamente viable para el 7 de julio</td>
+                                    <td>Fuerte compromiso de proveedores, presupuestos clave recibidos; las principales barreras son log&iacute;sticas</td>
+                                </tr>
+                                <tr>
+                                    <td>La junta acord&oacute; solicitar una revisi&oacute;n legal adicional antes de proceder con el borrador actual del acuerdo de PI</td>
+                                    <td>El asesor legal recomend&oacute; una revisi&oacute;n adicional; seguir&aacute; un memor&aacute;ndum de decisi&oacute;n para votaci&oacute;n electr&oacute;nica</td>
+                                </tr>
+                                <tr>
+                                    <td>Solicitud aplazada derivada al responsable de consentimiento para su revisi&oacute;n</td>
+                                    <td>La junta acord&oacute; solicitar asesoramiento del responsable de consentimiento antes de votar sobre la solicitud</td>
+                                </tr>
+                                <tr>
+                                    <td>Las solicitudes con t&eacute;rminos legales especiales deben ser revisadas por el asesor legal antes de su aceptaci&oacute;n</td>
+                                    <td>Dos solicitantes incluyeron cl&aacute;usulas de PI no est&aacute;ndar en sus acuerdos de voluntariado</td>
+                                </tr>
+                                <tr>
+                                    <td>La aprobaci&oacute;n de publicaci&oacute;n de actas se redujo de 4 a 3 miembros de la junta</td>
+                                    <td>Agiliza el proceso de publicaci&oacute;n de transparencia</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Resumen de la Discusi&oacute;n</h2>
+
+                        <h3>Actualizaci&oacute;n de Producci&oacute;n</h3>
+                        <p>La consultora de producci&oacute;n present&oacute; una actualizaci&oacute;n de estado completa. El cronograma maestro ha sido actualizado con hitos clave que cubren emplazamientos, primer equipo, semana de montaje, semana previa al evento, semana del evento y desmontaje. El compromiso de los proveedores es fuerte, con presupuestos recibidos para caba&ntilde;as, vallas y generadores. El presupuesto de la Cruz Roja es aproximadamente un 6% superior al del a&ntilde;o pasado; se est&aacute;n explorando alternativas para la cobertura m&eacute;dica durante el montaje y desmontaje para reducir costes. El acuerdo del generador es favorable, con pago previsto tras la prestaci&oacute;n del servicio.</p>
+                        <p>Se ha creado una herramienta de seguimiento de listas de equipo para los departamentos. Los permisos van por buen camino, manteni&eacute;ndose buenas relaciones con las autoridades locales. La evaluaci&oacute;n general de la consultora es que el evento es operativamente viable para el 7 de julio, con la producci&oacute;n adelantada respecto al a&ntilde;o pasado. Las principales barreras siguen siendo log&iacute;sticas y no est&aacute;n relacionadas con la complejidad de la producci&oacute;n.</p>
+                        <p>La junta se&ntilde;al&oacute; la necesidad de contratar a una persona local para supervisar las recogidas de proveedores durante el desmontaje, y la consultora preparar&aacute; las descripciones de puesto para ello.</p>
+
+                        <h3>Contenedores</h3>
+                        <p>La junta discuti&oacute; la necesidad cr&iacute;tica de contenedores, que albergan herramientas, cables de alimentaci&oacute;n, estructuras y otros equipos esenciales necesarios desde la primera semana de equipo en adelante. Los miembros de la junta enfatizaron las importantes implicaciones financieras de proceder sin contenedores, ya que los costes de reposici&oacute;n del equipamiento almacenado aumentar&iacute;an sustancialmente m&uacute;ltiples partidas presupuestarias. La consultora confirm&oacute; que, si bien el evento podr&iacute;a t&eacute;cnicamente llevarse a cabo sin ellos, el impacto en los costes y en la moral de la comunidad ser&iacute;a significativo. La junta acord&oacute; que se necesita una decisi&oacute;n sobre el acceso a los contenedores con prontitud.</p>
+
+                        <h3>Actualizaci&oacute;n de Conversaciones Externas</h3>
+                        <p>Una reuni&oacute;n externa programada no tuvo lugar. Posteriormente se comparti&oacute; un borrador de acuerdo relativo al acceso a documentos operativos. El asesor legal de la junta revis&oacute; el borrador y recomend&oacute; que era necesaria una revisi&oacute;n legal adicional antes de proceder. El asesor legal se comprometi&oacute; a proporcionar un memor&aacute;ndum de decisi&oacute;n de una p&aacute;gina en un plazo de 24 horas describiendo el enfoque recomendado, que ser&aacute; sometido a votaci&oacute;n electr&oacute;nica de la junta.</p>
+
+                        <h3>Solicitantes de la Asociaci&oacute;n</h3>
+                        <p>La junta revis&oacute; las solicitudes de membres&iacute;a pendientes. Se discuti&oacute; un solicitante aplazado y la junta acord&oacute; derivar la solicitud al responsable de consentimiento para su revisi&oacute;n y asesoramiento antes de la votaci&oacute;n de la junta. Otros dos solicitantes hab&iacute;an incluido t&eacute;rminos especiales en sus acuerdos de voluntariado relativos a la propiedad intelectual. La junta acord&oacute; que el asesor legal revise la redacci&oacute;n exacta de estas cl&aacute;usulas antes de aceptar las solicitudes.</p>
+
+                        <h3>Transparencia y Comunicaci&oacute;n Comunitaria</h3>
+                        <p>Daniel T plante&oacute; la preocupaci&oacute;n de que la confidencialidad necesaria en torno a las negociaciones en curso pueda estar erosionando la confianza de la comunidad. La junta discuti&oacute; c&oacute;mo equilibrar los requisitos de privacidad de las negociaciones activas con la necesidad de informaci&oacute;n de la comunidad. Las sugerencias incluyeron ser m&aacute;s expl&iacute;citos en las comunicaciones sobre por qu&eacute; cierta informaci&oacute;n se retiene temporalmente. La junta acord&oacute; actualizar y publicar las preguntas frecuentes de la comunidad antes del jueves, y contactar con el grupo de trabajo de gobernanza sobre estrategias de comunicaci&oacute;n comunitaria.</p>
+
+                        <h3>Seguros, Responsabilidad Civil y Cumplimiento Normativo</h3>
+                        <p>La junta discuti&oacute; un correo electr&oacute;nico de un miembro de la comunidad que planteaba preguntas sobre responsabilidad legal, la posibilidad de una reuni&oacute;n de abogados y una oferta de evaluaci&oacute;n de riesgos. La junta se&ntilde;al&oacute; que el seguro de responsabilidad civil y de D&amp;O est&aacute; disponible para asociaciones espa&ntilde;olas. La junta acord&oacute; que cualquier evaluaci&oacute;n legal debe ser contratada de forma independiente para garantizar la imparcialidad. Pablo V se comprometi&oacute; a obtener un presupuesto de los abogados propios de la asociaci&oacute;n y a crear un flujo de trabajo separado para abordar las cuestiones normativas y de cumplimiento planteadas.</p>
+
+                        <h3>Otras Actualizaciones</h3>
+                        <ul>
+                            <li>La aplicaci&oacute;n Humans est&aacute; en pruebas de QA, con 12 personas registradas. Tambi&eacute;n se est&aacute; configurando un sitio WordPress.</li>
+                            <li>El proceso de maquetaci&oacute;n del WWWG se ha simplificado significativamente, reduciendo el tiempo de producci&oacute;n de varias horas a aproximadamente dos minutos.</li>
+                        </ul>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <ul>
+                            <li><strong>Daniela M S:</strong> Preparar descripciones de puestos remunerados para la supervisi&oacute;n del desmontaje</li>
+                            <li><strong>Daniela M S:</strong> Explorar alternativas de cobertura m&eacute;dica a la Cruz Roja para los per&iacute;odos de montaje y desmontaje</li>
+                            <li><strong>Daniela M S:</strong> Contratar seguro de responsabilidad civil y D&amp;O para la asociaci&oacute;n</li>
+                            <li><strong>Pepe C:</strong> Proporcionar un memor&aacute;ndum de decisi&oacute;n de una p&aacute;gina en un plazo de 24 horas sobre el enfoque recomendado para el borrador de acuerdo, para votaci&oacute;n electr&oacute;nica de la junta</li>
+                            <li><strong>Ben D:</strong> Derivar la solicitud del solicitante aplazado al responsable de consentimiento para su revisi&oacute;n</li>
+                            <li><strong>Ben D:</strong> Enviar la redacci&oacute;n de los t&eacute;rminos de PI de los dos solicitantes al asesor legal para su revisi&oacute;n</li>
+                            <li><strong>Ben D:</strong> Hablar con Kate sobre la participaci&oacute;n comunitaria a trav&eacute;s del grupo de trabajo de gobernanza</li>
+                            <li><strong>Daniel T:</strong> Actualizar las preguntas frecuentes de la comunidad para su publicaci&oacute;n antes del jueves</li>
+                            <li><strong>Daniel T:</strong> Implementar el proceso simplificado de publicaci&oacute;n de actas (3 aprobaciones en lugar de 4)</li>
+                            <li><strong>Pablo V:</strong> Obtener un presupuesto de los abogados de la asociaci&oacute;n</li>
+                            <li><strong>Pablo V:</strong> Crear un flujo de trabajo separado para las cuestiones normativas y de cumplimiento planteadas</li>
+                            <li><strong>Pablo V:</strong> Supervisar la lista completa de regulaciones que la asociaci&oacute;n debe cumplir</li>
+                        </ul>
+
+                        <h2>Temas Pendientes para Futuras Reuniones</h2>
+                        <ul>
+                            <li>Decisi&oacute;n sobre acceso a contenedores</li>
+                            <li>Enfoque del acuerdo externo (tras la votaci&oacute;n electr&oacute;nica sobre el memor&aacute;ndum de decisi&oacute;n)</li>
+                            <li>Votaci&oacute;n sobre el solicitante aplazado (tras la revisi&oacute;n del responsable de consentimiento)</li>
+                            <li>Solicitantes con t&eacute;rminos especiales de PI (tras la revisi&oacute;n legal)</li>
+                            <li>Publicaci&oacute;n de las preguntas frecuentes de la comunidad</li>
+                            <li>Progreso del flujo de trabajo de cumplimiento normativo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Membres du conseil pr&eacute;sents :</strong> Daniel T, Pablo V, Ben D, Peter D, Chris O, Michelle T, Victor P, Ward D (quorum atteint &mdash; les 8 membres)
+                        <br><strong>Participants hors conseil :</strong> Pepe C (conseiller juridique), Daniela M S (consultante en production)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>D&eacute;cisions</h2>
+                        <table>
+                            <thead>
+                                <tr><th>D&eacute;cision</th><th>Contexte</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>La consultante en production a confirm&eacute; que l&rsquo;&eacute;v&eacute;nement est op&eacute;rationnellement viable pour le 7 juillet</td>
+                                    <td>Fort engagement des fournisseurs, devis cl&eacute;s re&ccedil;us ; les principales barri&egrave;res sont logistiques</td>
+                                </tr>
+                                <tr>
+                                    <td>Le conseil a accept&eacute; de demander un examen juridique suppl&eacute;mentaire avant de proc&eacute;der avec le projet d&rsquo;accord de PI actuel</td>
+                                    <td>Le conseiller juridique a recommand&eacute; un examen suppl&eacute;mentaire ; un m&eacute;morandum de d&eacute;cision suivra pour un vote &eacute;lectronique</td>
+                                </tr>
+                                <tr>
+                                    <td>Candidature report&eacute;e transmise au responsable du consentement pour examen</td>
+                                    <td>Le conseil a accept&eacute; de demander l&rsquo;avis du responsable du consentement avant de voter sur la candidature</td>
+                                </tr>
+                                <tr>
+                                    <td>Les candidatures comportant des termes juridiques sp&eacute;ciaux doivent &ecirc;tre examin&eacute;es par le conseiller juridique avant acceptation</td>
+                                    <td>Deux candidats ont inclus des clauses de PI non standard dans leurs accords de b&eacute;n&eacute;volat</td>
+                                </tr>
+                                <tr>
+                                    <td>L&rsquo;approbation de publication des comptes rendus r&eacute;duite de 4 &agrave; 3 membres du conseil</td>
+                                    <td>Simplifie le processus de publication en mati&egrave;re de transparence</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>R&eacute;sum&eacute; des Discussions</h2>
+
+                        <h3>Mise &agrave; jour de la Production</h3>
+                        <p>La consultante en production a pr&eacute;sent&eacute; une mise &agrave; jour compl&egrave;te de l&rsquo;&eacute;tat d&rsquo;avancement. Le calendrier g&eacute;n&eacute;ral a &eacute;t&eacute; mis &agrave; jour avec les &eacute;tapes cl&eacute;s couvrant les emplacements, la premi&egrave;re &eacute;quipe, la semaine de montage, la semaine pr&eacute;c&eacute;dant l&rsquo;&eacute;v&eacute;nement, la semaine de l&rsquo;&eacute;v&eacute;nement et le d&eacute;montage. L&rsquo;engagement des fournisseurs est fort, avec des devis re&ccedil;us pour les cabanes, les cl&ocirc;tures et les g&eacute;n&eacute;rateurs. Le devis de la Croix-Rouge est environ 6 % sup&eacute;rieur &agrave; celui de l&rsquo;ann&eacute;e derni&egrave;re ; des alternatives sont explor&eacute;es pour la couverture m&eacute;dicale pendant le montage et le d&eacute;montage afin de r&eacute;duire les co&ucirc;ts. L&rsquo;arrangement pour le g&eacute;n&eacute;rateur est favorable, avec un paiement pr&eacute;vu apr&egrave;s la prestation du service.</p>
+                        <p>Un outil de suivi des listes d&rsquo;&eacute;quipes a &eacute;t&eacute; cr&eacute;&eacute; pour les d&eacute;partements. Les permis sont en bonne voie, avec de bonnes relations maintenues avec les autorit&eacute;s locales. L&rsquo;&eacute;valuation globale de la consultante est que l&rsquo;&eacute;v&eacute;nement est op&eacute;rationnellement viable pour le 7 juillet, avec une production en avance par rapport &agrave; l&rsquo;ann&eacute;e derni&egrave;re. Les principales barri&egrave;res restent logistiques plut&ocirc;t que li&eacute;es &agrave; la complexit&eacute; de la production.</p>
+                        <p>Le conseil a not&eacute; la n&eacute;cessit&eacute; d&rsquo;une personne locale r&eacute;mun&eacute;r&eacute;e pour superviser les r&eacute;cup&eacute;rations des fournisseurs pendant le d&eacute;montage, et la consultante pr&eacute;parera les descriptions de poste &agrave; cet effet.</p>
+
+                        <h3>Conteneurs</h3>
+                        <p>Le conseil a discut&eacute; du besoin critique de conteneurs, qui contiennent des outils, des c&acirc;bles d&rsquo;alimentation, des structures et d&rsquo;autres &eacute;quipements essentiels n&eacute;cessaires d&egrave;s la premi&egrave;re semaine d&rsquo;&eacute;quipe. Les membres du conseil ont soulign&eacute; les implications financi&egrave;res importantes de proc&eacute;der sans conteneurs, car les co&ucirc;ts de remplacement de l&rsquo;&eacute;quipement stock&eacute; augmenteraient consid&eacute;rablement plusieurs lignes budg&eacute;taires. La consultante a confirm&eacute; que si l&rsquo;&eacute;v&eacute;nement pouvait techniquement se d&eacute;rouler sans eux, l&rsquo;impact sur les co&ucirc;ts et le moral de la communaut&eacute; serait significatif. Le conseil a convenu qu&rsquo;une d&eacute;cision sur l&rsquo;acc&egrave;s aux conteneurs est n&eacute;cessaire rapidement.</p>
+
+                        <h3>Mise &agrave; jour des Discussions Externes</h3>
+                        <p>Une r&eacute;union externe pr&eacute;vue n&rsquo;a pas eu lieu. Un projet d&rsquo;accord a ensuite &eacute;t&eacute; partag&eacute; concernant l&rsquo;acc&egrave;s aux documents op&eacute;rationnels. Le conseiller juridique du conseil a examin&eacute; le projet et a recommand&eacute; qu&rsquo;un examen juridique suppl&eacute;mentaire &eacute;tait n&eacute;cessaire avant de proc&eacute;der. Le conseiller juridique s&rsquo;est engag&eacute; &agrave; fournir un m&eacute;morandum de d&eacute;cision d&rsquo;une page sous 24 heures d&eacute;crivant l&rsquo;approche recommand&eacute;e, qui sera soumis &agrave; un vote &eacute;lectronique du conseil.</p>
+
+                        <h3>Candidats &agrave; l&rsquo;Association</h3>
+                        <p>Le conseil a examin&eacute; les candidatures en attente. Une candidature report&eacute;e a &eacute;t&eacute; discut&eacute;e et le conseil a accept&eacute; de transmettre la candidature au responsable du consentement pour examen et avis avant le vote du conseil. Deux autres candidats avaient inclus des termes sp&eacute;ciaux dans leurs accords de b&eacute;n&eacute;volat relatifs &agrave; la propri&eacute;t&eacute; intellectuelle. Le conseil a accept&eacute; de faire examiner la formulation exacte de ces clauses par le conseiller juridique avant d&rsquo;accepter les candidatures.</p>
+
+                        <h3>Transparence et Communication Communautaire</h3>
+                        <p>Daniel T a soulev&eacute; la pr&eacute;occupation que la confidentialit&eacute; n&eacute;cessaire autour des n&eacute;gociations en cours puisse &eacute;roder la confiance de la communaut&eacute;. Le conseil a discut&eacute; de la mani&egrave;re d&rsquo;&eacute;quilibrer les exigences de confidentialit&eacute; des n&eacute;gociations actives avec le besoin d&rsquo;information de la communaut&eacute;. Les suggestions comprenaient une communication plus explicite sur les raisons pour lesquelles certaines informations sont temporairement retenues. Le conseil a convenu d&rsquo;actualiser et de publier la FAQ communautaire avant jeudi, et de solliciter le groupe de travail sur la gouvernance pour les strat&eacute;gies de communication communautaire.</p>
+
+                        <h3>Assurances, Responsabilit&eacute; Civile et Conformit&eacute; R&eacute;glementaire</h3>
+                        <p>Le conseil a discut&eacute; d&rsquo;un courriel d&rsquo;un membre de la communaut&eacute; soulevant des questions sur la responsabilit&eacute; juridique, la possibilit&eacute; d&rsquo;une r&eacute;union entre avocats et une offre d&rsquo;&eacute;valuation des risques. Le conseil a not&eacute; que l&rsquo;assurance responsabilit&eacute; civile et D&amp;O est disponible pour les associations espagnoles. Le conseil a convenu que toute &eacute;valuation juridique doit &ecirc;tre command&eacute;e de mani&egrave;re ind&eacute;pendante pour garantir l&rsquo;impartialit&eacute;. Pablo V s&rsquo;est engag&eacute; &agrave; obtenir un devis des avocats propres de l&rsquo;association et &agrave; cr&eacute;er un flux de travail s&eacute;par&eacute; pour traiter les questions r&eacute;glementaires et de conformit&eacute; soulev&eacute;es.</p>
+
+                        <h3>Autres Mises &agrave; Jour</h3>
+                        <ul>
+                            <li>L&rsquo;application Humans est en phase de tests QA, avec 12 personnes inscrites. Un site WordPress est &eacute;galement en cours de mise en place.</li>
+                            <li>Le processus de mise en page du WWWG a &eacute;t&eacute; consid&eacute;rablement simplifi&eacute;, r&eacute;duisant le temps de production de plusieurs heures &agrave; environ deux minutes.</li>
+                        </ul>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <ul>
+                            <li><strong>Daniela M S :</strong> Pr&eacute;parer les descriptions de postes r&eacute;mun&eacute;r&eacute;s pour la supervision du d&eacute;montage</li>
+                            <li><strong>Daniela M S :</strong> Explorer les alternatives de couverture m&eacute;dicale &agrave; la Croix-Rouge pour les p&eacute;riodes de montage et de d&eacute;montage</li>
+                            <li><strong>Daniela M S :</strong> Souscrire une assurance responsabilit&eacute; civile et D&amp;O pour l&rsquo;association</li>
+                            <li><strong>Pepe C :</strong> Fournir un m&eacute;morandum de d&eacute;cision d&rsquo;une page sous 24 heures sur l&rsquo;approche recommand&eacute;e pour le projet d&rsquo;accord, pour vote &eacute;lectronique du conseil</li>
+                            <li><strong>Ben D :</strong> Transmettre la candidature du candidat report&eacute; au responsable du consentement pour examen</li>
+                            <li><strong>Ben D :</strong> Soumettre la formulation des termes de PI des deux candidats au conseiller juridique pour examen</li>
+                            <li><strong>Ben D :</strong> Parler &agrave; Kate de l&rsquo;engagement communautaire &agrave; travers le groupe de travail sur la gouvernance</li>
+                            <li><strong>Daniel T :</strong> Actualiser la FAQ communautaire pour publication avant jeudi</li>
+                            <li><strong>Daniel T :</strong> Mettre en &oelig;uvre le processus simplifi&eacute; de publication des comptes rendus (3 approbations au lieu de 4)</li>
+                            <li><strong>Pablo V :</strong> Obtenir un devis des avocats de l&rsquo;association</li>
+                            <li><strong>Pablo V :</strong> Cr&eacute;er un flux de travail s&eacute;par&eacute; pour les questions r&eacute;glementaires et de conformit&eacute; soulev&eacute;es</li>
+                            <li><strong>Pablo V :</strong> Superviser la liste compl&egrave;te des r&eacute;glementations que l&rsquo;association doit respecter</li>
+                        </ul>
+
+                        <h2>Points Ouverts pour les Prochaines R&eacute;unions</h2>
+                        <ul>
+                            <li>D&eacute;cision sur l&rsquo;acc&egrave;s aux conteneurs</li>
+                            <li>Approche de l&rsquo;accord externe (suite au vote &eacute;lectronique sur le m&eacute;morandum de d&eacute;cision)</li>
+                            <li>Vote sur le candidat report&eacute; (suite &agrave; l&rsquo;examen du responsable du consentement)</li>
+                            <li>Candidats avec termes sp&eacute;ciaux de PI (suite &agrave; l&rsquo;examen juridique)</li>
+                            <li>Publication de la FAQ communautaire</li>
+                            <li>Progr&egrave;s du flux de travail de conformit&eacute; r&eacute;glementaire</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Membri del consiglio presenti:</strong> Daniel T, Pablo V, Ben D, Peter D, Chris O, Michelle T, Victor P, Ward D (quorum raggiunto &mdash; tutti gli 8 membri)
+                        <br><strong>Partecipanti non appartenenti al consiglio:</strong> Pepe C (consulente legale), Daniela M S (consulente di produzione)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisioni</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Decisione</th><th>Contesto</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>La consulente di produzione ha confermato che l&rsquo;evento &egrave; operativamente realizzabile per il 7 luglio</td>
+                                    <td>Forte coinvolgimento dei fornitori, preventivi chiave ricevuti; le principali barriere sono logistiche</td>
+                                </tr>
+                                <tr>
+                                    <td>Il consiglio ha concordato di richiedere un&rsquo;ulteriore revisione legale prima di procedere con la bozza attuale dell&rsquo;accordo di PI</td>
+                                    <td>Il consulente legale ha raccomandato una revisione aggiuntiva; seguir&agrave; un memorandum decisionale per votazione elettronica</td>
+                                </tr>
+                                <tr>
+                                    <td>Candidatura differita indirizzata al responsabile del consenso per la revisione</td>
+                                    <td>Il consiglio ha concordato di richiedere il parere del responsabile del consenso prima di votare sulla candidatura</td>
+                                </tr>
+                                <tr>
+                                    <td>Le candidature con termini legali speciali devono essere esaminate dal consulente legale prima dell&rsquo;accettazione</td>
+                                    <td>Due candidati hanno incluso clausole di PI non standard nei loro accordi di volontariato</td>
+                                </tr>
+                                <tr>
+                                    <td>L&rsquo;approvazione per la pubblicazione dei verbali ridotta da 4 a 3 membri del consiglio</td>
+                                    <td>Semplifica il processo di pubblicazione per la trasparenza</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Riepilogo della Discussione</h2>
+
+                        <h3>Aggiornamento sulla Produzione</h3>
+                        <p>La consulente di produzione ha presentato un aggiornamento completo sullo stato di avanzamento. Il cronoprogramma generale &egrave; stato aggiornato con le tappe chiave che coprono i posizionamenti, il primo equipaggio, la settimana di allestimento, la settimana pre-evento, la settimana dell&rsquo;evento e lo smontaggio. Il coinvolgimento dei fornitori &egrave; forte, con preventivi ricevuti per cabine, recinzioni e generatori. Il preventivo della Croce Rossa &egrave; circa il 6% pi&ugrave; alto rispetto all&rsquo;anno scorso; si stanno esplorando alternative per la copertura medica durante l&rsquo;allestimento e lo smontaggio per ridurre i costi. L&rsquo;accordo per il generatore &egrave; favorevole, con pagamento previsto dopo la prestazione del servizio.</p>
+                        <p>&Egrave; stato creato uno strumento di monitoraggio degli elenchi degli equipaggi per i dipartimenti. I permessi procedono secondo i piani, con buoni rapporti mantenuti con le autorit&agrave; locali. La valutazione complessiva della consulente &egrave; che l&rsquo;evento &egrave; operativamente realizzabile per il 7 luglio, con la produzione in anticipo rispetto all&rsquo;anno scorso. Le principali barriere restano logistiche piuttosto che legate alla complessit&agrave; della produzione.</p>
+                        <p>Il consiglio ha evidenziato la necessit&agrave; di una persona locale retribuita per supervisionare i ritiri dei fornitori durante lo smontaggio, e la consulente preparer&agrave; le descrizioni dei ruoli a tal fine.</p>
+
+                        <h3>Contenitori</h3>
+                        <p>Il consiglio ha discusso la necessit&agrave; critica di contenitori, che custodiscono attrezzi, cavi elettrici, strutture e altre attrezzature essenziali necessarie dalla prima settimana di equipaggio in poi. I membri del consiglio hanno sottolineato le significative implicazioni finanziarie nel procedere senza contenitori, poich&eacute; i costi di sostituzione delle attrezzature immagazzinate aumenterebbero sostanzialmente diverse voci di bilancio. La consulente ha confermato che, sebbene l&rsquo;evento potrebbe tecnicamente svolgersi senza di essi, l&rsquo;impatto sui costi e sul morale della comunit&agrave; sarebbe significativo. Il consiglio ha concordato che una decisione sull&rsquo;accesso ai contenitori &egrave; necessaria tempestivamente.</p>
+
+                        <h3>Aggiornamento sulle Discussioni Esterne</h3>
+                        <p>Un incontro esterno programmato non ha avuto luogo. Successivamente &egrave; stata condivisa una bozza di accordo relativa all&rsquo;accesso a documenti operativi. Il consulente legale del consiglio ha esaminato la bozza e ha raccomandato che fosse necessaria un&rsquo;ulteriore revisione legale prima di procedere. Il consulente legale si &egrave; impegnato a fornire un memorandum decisionale di una pagina entro 24 ore descrivendo l&rsquo;approccio raccomandato, che sar&agrave; sottoposto a votazione elettronica del consiglio.</p>
+
+                        <h3>Candidati all&rsquo;Associazione</h3>
+                        <p>Il consiglio ha esaminato le candidature in sospeso. Una candidatura differita &egrave; stata discussa e il consiglio ha concordato di indirizzare la candidatura al responsabile del consenso per revisione e parere prima della votazione del consiglio. Altri due candidati avevano incluso termini speciali nei loro accordi di volontariato relativi alla propriet&agrave; intellettuale. Il consiglio ha concordato di far esaminare la formulazione esatta di queste clausole dal consulente legale prima di accettare le candidature.</p>
+
+                        <h3>Trasparenza e Comunicazione Comunitaria</h3>
+                        <p>Daniel T ha sollevato la preoccupazione che la riservatezza necessaria attorno alle negoziazioni in corso possa erodere la fiducia della comunit&agrave;. Il consiglio ha discusso come bilanciare i requisiti di riservatezza delle negoziazioni attive con la necessit&agrave; di informazione della comunit&agrave;. I suggerimenti includevano una comunicazione pi&ugrave; esplicita sulle ragioni per cui determinate informazioni vengono temporaneamente trattenute. Il consiglio ha concordato di aggiornare e pubblicare le FAQ della comunit&agrave; entro gioved&igrave;, e di coinvolgere il gruppo di lavoro sulla governance nelle strategie di comunicazione comunitaria.</p>
+
+                        <h3>Assicurazioni, Responsabilit&agrave; Civile e Conformit&agrave; Normativa</h3>
+                        <p>Il consiglio ha discusso un&rsquo;email di un membro della comunit&agrave; che sollevava domande sulla responsabilit&agrave; legale, la possibilit&agrave; di un incontro tra avvocati e un&rsquo;offerta di valutazione del rischio. Il consiglio ha rilevato che l&rsquo;assicurazione di responsabilit&agrave; civile e D&amp;O &egrave; disponibile per le associazioni spagnole. Il consiglio ha concordato che qualsiasi valutazione legale debba essere commissionata in modo indipendente per garantire l&rsquo;imparzialit&agrave;. Pablo V si &egrave; impegnato a ottenere un preventivo dagli avvocati propri dell&rsquo;associazione e a creare un flusso di lavoro separato per affrontare le questioni normative e di conformit&agrave; sollevate.</p>
+
+                        <h3>Altri Aggiornamenti</h3>
+                        <ul>
+                            <li>L&rsquo;applicazione Humans &egrave; in fase di test QA, con 12 persone iscritte. &Egrave; in corso anche la configurazione di un sito WordPress.</li>
+                            <li>Il processo di impaginazione del WWWG &egrave; stato notevolmente semplificato, riducendo i tempi di produzione da diverse ore a circa due minuti.</li>
+                        </ul>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <ul>
+                            <li><strong>Daniela M S:</strong> Preparare le descrizioni dei ruoli retribuiti per la supervisione dello smontaggio</li>
+                            <li><strong>Daniela M S:</strong> Esplorare alternative di copertura medica alla Croce Rossa per i periodi di allestimento e smontaggio</li>
+                            <li><strong>Daniela M S:</strong> Stipulare un&rsquo;assicurazione di responsabilit&agrave; civile e D&amp;O per l&rsquo;associazione</li>
+                            <li><strong>Pepe C:</strong> Fornire un memorandum decisionale di una pagina entro 24 ore sull&rsquo;approccio raccomandato per la bozza di accordo, per votazione elettronica del consiglio</li>
+                            <li><strong>Ben D:</strong> Indirizzare la candidatura del candidato differito al responsabile del consenso per la revisione</li>
+                            <li><strong>Ben D:</strong> Inviare la formulazione dei termini di PI dei due candidati al consulente legale per la revisione</li>
+                            <li><strong>Ben D:</strong> Parlare con Kate del coinvolgimento comunitario attraverso il gruppo di lavoro sulla governance</li>
+                            <li><strong>Daniel T:</strong> Aggiornare le FAQ della comunit&agrave; per la pubblicazione entro gioved&igrave;</li>
+                            <li><strong>Daniel T:</strong> Implementare il processo semplificato di pubblicazione dei verbali (3 approvazioni invece di 4)</li>
+                            <li><strong>Pablo V:</strong> Ottenere un preventivo dagli avvocati dell&rsquo;associazione</li>
+                            <li><strong>Pablo V:</strong> Creare un flusso di lavoro separato per le questioni normative e di conformit&agrave; sollevate</li>
+                            <li><strong>Pablo V:</strong> Supervisionare l&rsquo;elenco completo delle normative che l&rsquo;associazione deve rispettare</li>
+                        </ul>
+
+                        <h2>Punti Aperti per le Prossime Riunioni</h2>
+                        <ul>
+                            <li>Decisione sull&rsquo;accesso ai contenitori</li>
+                            <li>Approccio all&rsquo;accordo esterno (a seguito della votazione elettronica sul memorandum decisionale)</li>
+                            <li>Votazione sul candidato differito (a seguito della revisione del responsabile del consenso)</li>
+                            <li>Candidati con termini speciali di PI (a seguito della revisione legale)</li>
+                            <li>Pubblicazione delle FAQ della comunit&agrave;</li>
+                            <li>Progressi del flusso di lavoro di conformit&agrave; normativa</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version ist die spanische Version ma&szlig;geblich.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesende Vorstandsmitglieder:</strong> Daniel T, Pablo V, Ben D, Peter D, Chris O, Michelle T, Victor P, Ward D (Beschlussf&auml;higkeit erreicht &mdash; alle 8 Mitglieder)
+                        <br><strong>Teilnehmer au&szlig;erhalb des Vorstands:</strong> Pepe C (Rechtsberater), Daniela M S (Produktionsberaterin)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Beschl&uuml;sse</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Beschluss</th><th>Kontext</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Die Produktionsberaterin best&auml;tigte, dass die Veranstaltung f&uuml;r den 7. Juli operativ durchf&uuml;hrbar ist</td>
+                                    <td>Starkes Engagement der Lieferanten, wichtige Angebote erhalten; Haupthindernisse sind logistischer Natur</td>
+                                </tr>
+                                <tr>
+                                    <td>Der Vorstand stimmte zu, eine weitere rechtliche Pr&uuml;fung einzuholen, bevor mit dem aktuellen Entwurf der IP-Vereinbarung fortgefahren wird</td>
+                                    <td>Der Rechtsberater empfahl eine zus&auml;tzliche Pr&uuml;fung; ein Entscheidungsmemorandum f&uuml;r eine elektronische Abstimmung folgt</td>
+                                </tr>
+                                <tr>
+                                    <td>Aufgeschobener Antrag an den Einwilligungsverantwortlichen zur Pr&uuml;fung weitergeleitet</td>
+                                    <td>Der Vorstand stimmte zu, vor der Abstimmung &uuml;ber den Antrag den Rat des Einwilligungsverantwortlichen einzuholen</td>
+                                </tr>
+                                <tr>
+                                    <td>Antr&auml;ge mit besonderen rechtlichen Bedingungen m&uuml;ssen vor der Annahme vom Rechtsberater gepr&uuml;ft werden</td>
+                                    <td>Zwei Antragsteller hatten nicht standardm&auml;&szlig;ige IP-Klauseln in ihre Freiwilligenvereinbarungen aufgenommen</td>
+                                </tr>
+                                <tr>
+                                    <td>Die Genehmigung zur Ver&ouml;ffentlichung der Sitzungsprotokolle wurde von 4 auf 3 Vorstandsmitglieder reduziert</td>
+                                    <td>Vereinfacht den Ver&ouml;ffentlichungsprozess im Bereich Transparenz</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Zusammenfassung der Diskussion</h2>
+
+                        <h3>Produktionsaktualisierung</h3>
+                        <p>Die Produktionsberaterin pr&auml;sentierte ein umfassendes Statusupdate. Der &uuml;bergeordnete Zeitplan wurde mit wichtigen Meilensteinen aktualisiert, die Platzierungen, erstes Team, Aufbauwoche, Vorveranstaltungswoche, Veranstaltungswoche und Abbau umfassen. Das Engagement der Lieferanten ist stark, mit eingegangenen Angeboten f&uuml;r Kabinen, Z&auml;une und Generatoren. Der Kostenvoranschlag des Roten Kreuzes liegt etwa 6 % &uuml;ber dem des Vorjahres; Alternativen werden f&uuml;r die medizinische Versorgung w&auml;hrend Auf- und Abbau gepr&uuml;ft, um Kosten zu senken. Die Generatorvereinbarung ist g&uuml;nstig, mit Zahlung nach Leistungserbringung.</p>
+                        <p>Ein Tool zur Nachverfolgung der Teamlisten wurde f&uuml;r die Abteilungen erstellt. Die Genehmigungen sind auf Kurs, mit guten Beziehungen zu den lokalen Beh&ouml;rden. Die Gesamtbewertung der Beraterin ist, dass die Veranstaltung f&uuml;r den 7. Juli operativ durchf&uuml;hrbar ist, wobei die Produktion dem Vorjahr voraus ist. Die Haupthindernisse bleiben logistischer Natur und h&auml;ngen nicht mit der Komplexit&auml;t der Produktion zusammen.</p>
+                        <p>Der Vorstand wies auf die Notwendigkeit einer bezahlten lokalen Person hin, die die Abholungen der Lieferanten w&auml;hrend des Abbaus &uuml;berwacht, und die Beraterin wird hierf&uuml;r Rollenbeschreibungen vorbereiten.</p>
+
+                        <h3>Container</h3>
+                        <p>Der Vorstand diskutierte den dringenden Bedarf an Containern, die Werkzeuge, Stromkabel, Strukturen und andere wesentliche Ausr&uuml;stung enthalten, die ab der ersten Teamwoche ben&ouml;tigt werden. Vorstandsmitglieder betonten die erheblichen finanziellen Auswirkungen eines Vorgehens ohne Container, da die Ersatzkosten f&uuml;r die gelagerte Ausr&uuml;stung mehrere Haushaltsposten wesentlich erh&ouml;hen w&uuml;rden. Die Beraterin best&auml;tigte, dass die Veranstaltung zwar technisch ohne sie stattfinden k&ouml;nnte, die Auswirkungen auf die Kosten und die Stimmung in der Gemeinschaft jedoch erheblich w&auml;ren. Der Vorstand stimmte &uuml;berein, dass eine Entscheidung &uuml;ber den Zugang zu den Containern zeitnah erforderlich ist.</p>
+
+                        <h3>Aktualisierung der Externen Gespr&auml;che</h3>
+                        <p>Ein geplantes externes Treffen fand nicht statt. Anschlie&szlig;end wurde ein Vereinbarungsentwurf bez&uuml;glich des Zugangs zu Betriebsdokumenten geteilt. Der Rechtsberater des Vorstands pr&uuml;fte den Entwurf und empfahl, dass vor dem Fortfahren eine weitere rechtliche Pr&uuml;fung erforderlich sei. Der Rechtsberater verpflichtete sich, innerhalb von 24 Stunden ein einseitiges Entscheidungsmemorandum mit dem empfohlenen Vorgehen vorzulegen, das einer elektronischen Abstimmung des Vorstands unterzogen wird.</p>
+
+                        <h3>Vereinsbewerber</h3>
+                        <p>Der Vorstand pr&uuml;fte die ausstehenden Mitgliedschaftsantr&auml;ge. Ein aufgeschobener Antrag wurde er&ouml;rtert und der Vorstand stimmte zu, den Antrag an den Einwilligungsverantwortlichen zur Pr&uuml;fung und Beratung vor der Vorstandsabstimmung weiterzuleiten. Zwei weitere Bewerber hatten besondere Bedingungen in ihren Freiwilligenvereinbarungen bez&uuml;glich des geistigen Eigentums aufgenommen. Der Vorstand stimmte zu, die genaue Formulierung dieser Klauseln vom Rechtsberater pr&uuml;fen zu lassen, bevor die Antr&auml;ge angenommen werden.</p>
+
+                        <h3>Transparenz und Gemeinschaftskommunikation</h3>
+                        <p>Daniel T &auml;u&szlig;erte die Sorge, dass die notwendige Vertraulichkeit im Zusammenhang mit laufenden Verhandlungen das Vertrauen der Gemeinschaft untergraben k&ouml;nnte. Der Vorstand diskutierte, wie die Datenschutzanforderungen aktiver Verhandlungen mit dem Informationsbedarf der Gemeinschaft in Einklang gebracht werden k&ouml;nnen. Vorschl&auml;ge umfassten eine explizitere Kommunikation dar&uuml;ber, warum bestimmte Informationen vor&uuml;bergehend zur&uuml;ckgehalten werden. Der Vorstand stimmte &uuml;berein, die FAQ der Gemeinschaft bis Donnerstag zu aktualisieren und zu ver&ouml;ffentlichen und die Arbeitsgruppe Governance zu Strategien der Gemeinschaftskommunikation einzubeziehen.</p>
+
+                        <h3>Versicherung, Haftung und Einhaltung Gesetzlicher Vorschriften</h3>
+                        <p>Der Vorstand diskutierte eine E-Mail eines Gemeinschaftsmitglieds, das Fragen zur rechtlichen Haftung, der M&ouml;glichkeit eines Anwaltstreffens und einem Angebot einer Risikobewertung aufwarf. Der Vorstand stellte fest, dass Haftpflicht- und D&amp;O-Versicherungen f&uuml;r spanische Vereine verf&uuml;gbar sind. Der Vorstand stimmte &uuml;berein, dass jede rechtliche Bewertung unabh&auml;ngig beauftragt werden sollte, um die Unparteilichkeit zu gew&auml;hrleisten. Pablo V verpflichtete sich, ein Angebot von den eigenen Anw&auml;lten des Vereins einzuholen und einen separaten Arbeitsstrom zur Behandlung der aufgeworfenen regulatorischen Fragen und Compliance-Fragen zu schaffen.</p>
+
+                        <h3>Weitere Aktualisierungen</h3>
+                        <ul>
+                            <li>Die Humans-App befindet sich in der QA-Testphase, mit 12 angemeldeten Personen. Eine WordPress-Seite wird ebenfalls eingerichtet.</li>
+                            <li>Der WWWG-Satzprozess wurde erheblich vereinfacht und die Produktionszeit von mehreren Stunden auf etwa zwei Minuten reduziert.</li>
+                        </ul>
+
+                        <h2>Ma&szlig;nahmenpunkte</h2>
+                        <ul>
+                            <li><strong>Daniela M S:</strong> Bezahlte Rollenbeschreibungen f&uuml;r die Abbau&uuml;berwachung vorbereiten</li>
+                            <li><strong>Daniela M S:</strong> Alternativen zur medizinischen Versorgung durch das Rote Kreuz f&uuml;r die Auf- und Abbauzeiten erkunden</li>
+                            <li><strong>Daniela M S:</strong> Haftpflicht- und D&amp;O-Versicherung f&uuml;r den Verein abschlie&szlig;en</li>
+                            <li><strong>Pepe C:</strong> Innerhalb von 24 Stunden ein einseitiges Entscheidungsmemorandum zum empfohlenen Vorgehen f&uuml;r den Vereinbarungsentwurf vorlegen, f&uuml;r elektronische Abstimmung des Vorstands</li>
+                            <li><strong>Ben D:</strong> Den Antrag des aufgeschobenen Bewerbers an den Einwilligungsverantwortlichen zur Pr&uuml;fung weiterleiten</li>
+                            <li><strong>Ben D:</strong> Die Formulierung der IP-Bedingungen der beiden Bewerber dem Rechtsberater zur Pr&uuml;fung vorlegen</li>
+                            <li><strong>Ben D:</strong> Mit Kate &uuml;ber die Gemeinschaftsbeteiligung durch die Arbeitsgruppe Governance sprechen</li>
+                            <li><strong>Daniel T:</strong> Die FAQ der Gemeinschaft f&uuml;r die Ver&ouml;ffentlichung bis Donnerstag aktualisieren</li>
+                            <li><strong>Daniel T:</strong> Den vereinfachten Ver&ouml;ffentlichungsprozess f&uuml;r Sitzungsprotokolle umsetzen (3 statt 4 Genehmigungen)</li>
+                            <li><strong>Pablo V:</strong> Ein Angebot von den Anw&auml;lten des Vereins einholen</li>
+                            <li><strong>Pablo V:</strong> Einen separaten Arbeitsstrom f&uuml;r die aufgeworfenen regulatorischen Fragen und Compliance-Fragen schaffen</li>
+                            <li><strong>Pablo V:</strong> Die vollst&auml;ndige Liste der Vorschriften &uuml;berwachen, die der Verein einhalten muss</li>
+                        </ul>
+
+                        <h2>Offene Punkte f&uuml;r Zuk&uuml;nftige Sitzungen</h2>
+                        <ul>
+                            <li>Entscheidung &uuml;ber den Containerzugang</li>
+                            <li>Vorgehensweise bei der externen Vereinbarung (nach elektronischer Abstimmung &uuml;ber das Entscheidungsmemorandum)</li>
+                            <li>Abstimmung &uuml;ber den aufgeschobenen Bewerber (nach Pr&uuml;fung durch den Einwilligungsverantwortlichen)</li>
+                            <li>Bewerber mit besonderen IP-Bedingungen (nach rechtlicher Pr&uuml;fung)</li>
+                            <li>Ver&ouml;ffentlichung der Gemeinschafts-FAQ</li>
+                            <li>Fortschritt des Arbeitsstroms zur Einhaltung gesetzlicher Vorschriften</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -144,5 +542,18 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

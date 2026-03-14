@@ -28,6 +28,12 @@
         .meeting-content th { background: var(--color-bg-secondary); font-weight: 600; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -48,28 +54,152 @@
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Present:</strong> Daniel, Chris, Pablo, Victor, Ben
-                    <br><strong>Absent:</strong> Peter, Ward, Michelle
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Decisions</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Decision</th>
-                                <th>Context</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Approved 49 collaborators as association members</td>
-                                <td>Quorum confirmed (5 board members required), unanimous approval</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Present:</strong> Daniel, Chris, Pablo, Victor, Ben
+                        <br><strong>Absent:</strong> Peter, Ward, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisions</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decision</th>
+                                    <th>Context</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Approved 49 collaborators as association members</td>
+                                    <td>Quorum confirmed (5 board members required), unanimous approval</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Presentes:</strong> Daniel, Chris, Pablo, Victor, Ben
+                        <br><strong>Ausentes:</strong> Peter, Ward, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisiones</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decisi&oacute;n</th>
+                                    <th>Contexto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Aprobados 49 colaboradores como miembros de la asociaci&oacute;n</td>
+                                    <td>Qu&oacute;rum confirmado (se requieren 5 miembros de la junta), aprobaci&oacute;n un&aacute;nime</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sents :</strong> Daniel, Chris, Pablo, Victor, Ben
+                        <br><strong>Absents :</strong> Peter, Ward, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>D&eacute;cisions</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>D&eacute;cision</th>
+                                    <th>Contexte</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>49 collaborateurs approuv&eacute;s en tant que membres de l&rsquo;association</td>
+                                    <td>Quorum confirm&eacute; (5 membres du conseil requis), approbation unanime</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presenti:</strong> Daniel, Chris, Pablo, Victor, Ben
+                        <br><strong>Assenti:</strong> Peter, Ward, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisioni</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decisione</th>
+                                    <th>Contesto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Approvati 49 collaboratori come membri dell&rsquo;associazione</td>
+                                    <td>Quorum confermato (richiesti 5 membri del consiglio), approvazione unanime</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesend:</strong> Daniel, Chris, Pablo, Victor, Ben
+                        <br><strong>Abwesend:</strong> Peter, Ward, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Beschl&uuml;sse</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Beschluss</th>
+                                    <th>Kontext</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>49 Mitarbeiter als Vereinsmitglieder genehmigt</td>
+                                    <td>Beschlussf&auml;higkeit best&auml;tigt (5 Vorstandsmitglieder erforderlich), einstimmige Genehmigung</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -78,5 +208,18 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

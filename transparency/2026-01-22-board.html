@@ -28,6 +28,12 @@
         .meeting-content th { background: var(--color-bg-secondary); font-weight: 600; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -46,78 +52,402 @@
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Present:</strong> Ben, Chris, Daniel, Pablo, Peter, Ward
-                    <br><strong>Absent:</strong> Michelle, Victor
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Decisions</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Decision</th>
-                                <th>Context</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Announce the association's existence and event plans</td>
-                                <td>Unanimous - focus on independence and self-reliance</td>
-                            </tr>
-                            <tr>
-                                <td>Hold two community meetings (following Thursday and Wednesday)</td>
-                                <td>Fast community engagement</td>
-                            </tr>
-                            <tr>
-                                <td>Register the domain nobodies.team</td>
-                                <td>Pablo to register and configure</td>
-                            </tr>
-                            <tr>
-                                <td>Move non-urgent communication from WhatsApp to Discord</td>
-                                <td>WhatsApp reserved for time-sensitive matters only</td>
-                            </tr>
-                            <tr>
-                                <td>Self-reliance approach to operations</td>
-                                <td>Any external support is a bonus, not a dependency</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                    <h2>Discussion Summary</h2>
+                    <div class="attendees">
+                        <strong>Present:</strong> Ben, Chris, Daniel, Pablo, Peter, Ward
+                        <br><strong>Absent:</strong> Michelle, Victor
+                    </div>
 
-                    <h3>Operational Approach</h3>
-                    <p>The board agreed on a self-reliance strategy: build the association independently, seek support where offered but not depend on it. The board emphasized prudent management of external relationships.</p>
+                    <div class="meeting-content">
+                        <h2>Decisions</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decision</th>
+                                    <th>Context</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Announce the association&rsquo;s existence and event plans</td>
+                                    <td>Unanimous &mdash; focus on independence and self-reliance</td>
+                                </tr>
+                                <tr>
+                                    <td>Hold two community meetings (following Thursday and Wednesday)</td>
+                                    <td>Fast community engagement</td>
+                                </tr>
+                                <tr>
+                                    <td>Register the domain nobodies.team</td>
+                                    <td>Pablo to register and configure</td>
+                                </tr>
+                                <tr>
+                                    <td>Move non-urgent communication from WhatsApp to Discord</td>
+                                    <td>WhatsApp reserved for time-sensitive matters only</td>
+                                </tr>
+                                <tr>
+                                    <td>Self-reliance approach to operations</td>
+                                    <td>Any external support is a bonus, not a dependency</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                    <h3>External Agreement Review</h3>
-                    <p>An initial draft agreement was reviewed. The board identified areas requiring revision and agreed to obtain a written legal opinion before proceeding.</p>
+                        <h2>Discussion Summary</h2>
 
-                    <h3>Association Incorporation Status</h3>
-                    <p>One final signature is needed for incorporation. Once complete, the association will retroactively exist from its founding date. The board can then proceed with bank account setup. Initial legal costs are covered; a member has offered to advance funds if needed.</p>
+                        <h3>Operational Approach</h3>
+                        <p>The board agreed on a self-reliance strategy: build the association independently, seek support where offered but not depend on it. The board emphasized prudent management of external relationships.</p>
 
-                    <h3>Communication & Community</h3>
-                    <p>The board agreed on a community announcement covering: the association's existence and independence, commitment to Burning Man principles, event plans, and how to become a member. Community meetings were scheduled to engage the broader community quickly.</p>
+                        <h3>External Agreement Review</h3>
+                        <p>An initial draft agreement was reviewed. The board identified areas requiring revision and agreed to obtain a written legal opinion before proceeding.</p>
 
-                    <h3>Intellectual Property</h3>
-                    <p>The board discussed whether work created for the association should be IP-assigned to the organization. Views ranged from full assignment (to prevent disputes) to a lighter approach (appropriate for a volunteer community). Legal counsel will advise on Spanish law requirements. A contributor agreement was proposed.</p>
+                        <h3>Association Incorporation Status</h3>
+                        <p>One final signature is needed for incorporation. Once complete, the association will retroactively exist from its founding date. The board can then proceed with bank account setup. Initial legal costs are covered; a member has offered to advance funds if needed.</p>
 
-                    <h3>Asset Planning</h3>
-                    <p>The board proposed creating a detailed, itemized list of assets the association may need to procure, noting that different assets will require different processes. Physical assets were identified as requiring the most planning.</p>
+                        <h3>Communication &amp; Community</h3>
+                        <p>The board agreed on a community announcement covering: the association&rsquo;s existence and independence, commitment to Burning Man principles, event plans, and how to become a member. Community meetings were scheduled to engage the broader community quickly.</p>
 
-                    <h2>Action Items</h2>
-                    <ul>
-                        <li><strong>Pablo:</strong> Obtain written legal opinion on draft agreement; Register nobodies.team and set up Google Workspace; Draft community announcement; Organize community calls</li>
-                        <li><strong>Chris:</strong> Add member onboarding discussion to next meeting</li>
-                        <li><strong>Board:</strong> Create itemized asset requirements list</li>
-                    </ul>
+                        <h3>Intellectual Property</h3>
+                        <p>The board discussed whether work created for the association should be IP-assigned to the organization. Views ranged from full assignment (to prevent disputes) to a lighter approach (appropriate for a volunteer community). Legal counsel will advise on Spanish law requirements. A contributor agreement was proposed.</p>
 
-                    <h2>Open Items for Future Meetings</h2>
-                    <ul>
-                        <li>Member onboarding criteria and process</li>
-                        <li>Contributor/IP agreement</li>
-                        <li>Asset procurement strategy</li>
-                    </ul>
+                        <h3>Asset Planning</h3>
+                        <p>The board proposed creating a detailed, itemized list of assets the association may need to procure, noting that different assets will require different processes. Physical assets were identified as requiring the most planning.</p>
+
+                        <h2>Action Items</h2>
+                        <ul>
+                            <li><strong>Pablo:</strong> Obtain written legal opinion on draft agreement; Register nobodies.team and set up Google Workspace; Draft community announcement; Organize community calls</li>
+                            <li><strong>Chris:</strong> Add member onboarding discussion to next meeting</li>
+                            <li><strong>Board:</strong> Create itemized asset requirements list</li>
+                        </ul>
+
+                        <h2>Open Items for Future Meetings</h2>
+                        <ul>
+                            <li>Member onboarding criteria and process</li>
+                            <li>Contributor/IP agreement</li>
+                            <li>Asset procurement strategy</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Presentes:</strong> Ben, Chris, Daniel, Pablo, Peter, Ward
+                        <br><strong>Ausentes:</strong> Michelle, Victor
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisiones</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decisi&oacute;n</th>
+                                    <th>Contexto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Anunciar la existencia de la asociaci&oacute;n y sus planes de evento</td>
+                                    <td>Un&aacute;nime &mdash; enfoque en independencia y autosuficiencia</td>
+                                </tr>
+                                <tr>
+                                    <td>Celebrar dos reuniones comunitarias (el jueves y el mi&eacute;rcoles siguientes)</td>
+                                    <td>Participaci&oacute;n comunitaria r&aacute;pida</td>
+                                </tr>
+                                <tr>
+                                    <td>Registrar el dominio nobodies.team</td>
+                                    <td>Pablo se encarga del registro y la configuraci&oacute;n</td>
+                                </tr>
+                                <tr>
+                                    <td>Trasladar la comunicaci&oacute;n no urgente de WhatsApp a Discord</td>
+                                    <td>WhatsApp reservado solo para asuntos urgentes</td>
+                                </tr>
+                                <tr>
+                                    <td>Enfoque de autosuficiencia en las operaciones</td>
+                                    <td>Cualquier apoyo externo es una ventaja, no una dependencia</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Resumen de la Discusi&oacute;n</h2>
+
+                        <h3>Enfoque Operativo</h3>
+                        <p>La junta acord&oacute; una estrategia de autosuficiencia: construir la asociaci&oacute;n de forma independiente, buscar apoyo donde se ofrezca pero sin depender de &eacute;l. La junta enfatiz&oacute; la gesti&oacute;n prudente de las relaciones externas.</p>
+
+                        <h3>Revisi&oacute;n de Acuerdo Externo</h3>
+                        <p>Se revis&oacute; un borrador inicial de acuerdo. La junta identific&oacute; &aacute;reas que requieren revisi&oacute;n y acord&oacute; obtener un dictamen jur&iacute;dico por escrito antes de proceder.</p>
+
+                        <h3>Estado de la Constituci&oacute;n de la Asociaci&oacute;n</h3>
+                        <p>Se necesita una &uacute;ltima firma para la constituci&oacute;n. Una vez completada, la asociaci&oacute;n existir&aacute; retroactivamente desde su fecha de fundaci&oacute;n. La junta podr&aacute; entonces proceder con la apertura de cuenta bancaria. Los costes legales iniciales est&aacute;n cubiertos; un miembro se ha ofrecido a adelantar fondos si fuera necesario.</p>
+
+                        <h3>Comunicaci&oacute;n y Comunidad</h3>
+                        <p>La junta acord&oacute; un anuncio comunitario que cubra: la existencia e independencia de la asociaci&oacute;n, el compromiso con los principios de Burning Man, los planes del evento y c&oacute;mo hacerse miembro. Se programaron reuniones comunitarias para involucrar r&aacute;pidamente a la comunidad en general.</p>
+
+                        <h3>Propiedad Intelectual</h3>
+                        <p>La junta debati&oacute; si el trabajo creado para la asociaci&oacute;n deber&iacute;a asignarse como propiedad intelectual a la organizaci&oacute;n. Las opiniones variaron desde la cesi&oacute;n total (para prevenir disputas) hasta un enfoque m&aacute;s ligero (apropiado para una comunidad de voluntarios). El asesor legal aconsejar&aacute; sobre los requisitos de la legislaci&oacute;n espa&ntilde;ola. Se propuso un acuerdo de colaboraci&oacute;n.</p>
+
+                        <h3>Planificaci&oacute;n de Activos</h3>
+                        <p>La junta propuso crear una lista detallada y desglosada de los activos que la asociaci&oacute;n podr&iacute;a necesitar adquirir, se&ntilde;alando que distintos activos requerir&aacute;n distintos procesos. Los activos f&iacute;sicos se identificaron como los que requieren m&aacute;s planificaci&oacute;n.</p>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <ul>
+                            <li><strong>Pablo:</strong> Obtener dictamen jur&iacute;dico por escrito sobre el borrador del acuerdo; Registrar nobodies.team y configurar Google Workspace; Redactar anuncio comunitario; Organizar reuniones comunitarias</li>
+                            <li><strong>Chris:</strong> A&ntilde;adir la discusi&oacute;n sobre incorporaci&oacute;n de miembros a la pr&oacute;xima reuni&oacute;n</li>
+                            <li><strong>Junta:</strong> Crear lista desglosada de necesidades de activos</li>
+                        </ul>
+
+                        <h2>Temas Pendientes para Futuras Reuniones</h2>
+                        <ul>
+                            <li>Criterios y proceso de incorporaci&oacute;n de miembros</li>
+                            <li>Acuerdo de colaboraci&oacute;n/propiedad intelectual</li>
+                            <li>Estrategia de adquisici&oacute;n de activos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sents :</strong> Ben, Chris, Daniel, Pablo, Peter, Ward
+                        <br><strong>Absents :</strong> Michelle, Victor
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>D&eacute;cisions</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>D&eacute;cision</th>
+                                    <th>Contexte</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Annoncer l&rsquo;existence de l&rsquo;association et ses projets d&rsquo;&eacute;v&eacute;nement</td>
+                                    <td>Unanime &mdash; accent sur l&rsquo;ind&eacute;pendance et l&rsquo;autonomie</td>
+                                </tr>
+                                <tr>
+                                    <td>Tenir deux r&eacute;unions communautaires (le jeudi et le mercredi suivants)</td>
+                                    <td>Engagement communautaire rapide</td>
+                                </tr>
+                                <tr>
+                                    <td>Enregistrer le domaine nobodies.team</td>
+                                    <td>Pablo se charge de l&rsquo;enregistrement et de la configuration</td>
+                                </tr>
+                                <tr>
+                                    <td>Transf&eacute;rer la communication non urgente de WhatsApp vers Discord</td>
+                                    <td>WhatsApp r&eacute;serv&eacute; aux questions urgentes uniquement</td>
+                                </tr>
+                                <tr>
+                                    <td>Approche d&rsquo;autonomie pour les op&eacute;rations</td>
+                                    <td>Tout soutien externe est un bonus, pas une d&eacute;pendance</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>R&eacute;sum&eacute; des Discussions</h2>
+
+                        <h3>Approche Op&eacute;rationnelle</h3>
+                        <p>Le conseil a convenu d&rsquo;une strat&eacute;gie d&rsquo;autonomie : construire l&rsquo;association de mani&egrave;re ind&eacute;pendante, rechercher le soutien l&agrave; o&ugrave; il est offert mais sans en d&eacute;pendre. Le conseil a soulign&eacute; la gestion prudente des relations ext&eacute;rieures.</p>
+
+                        <h3>Examen d&rsquo;un Accord Externe</h3>
+                        <p>Un premier projet d&rsquo;accord a &eacute;t&eacute; examin&eacute;. Le conseil a identifi&eacute; des points n&eacute;cessitant une r&eacute;vision et a convenu d&rsquo;obtenir un avis juridique &eacute;crit avant de poursuivre.</p>
+
+                        <h3>&Eacute;tat de la Constitution de l&rsquo;Association</h3>
+                        <p>Une derni&egrave;re signature est n&eacute;cessaire pour la constitution. Une fois termin&eacute;e, l&rsquo;association existera r&eacute;troactivement &agrave; compter de sa date de fondation. Le conseil pourra alors proc&eacute;der &agrave; l&rsquo;ouverture du compte bancaire. Les frais juridiques initiaux sont couverts ; un membre s&rsquo;est propos&eacute; pour avancer des fonds si n&eacute;cessaire.</p>
+
+                        <h3>Communication et Communaut&eacute;</h3>
+                        <p>Le conseil a convenu d&rsquo;une annonce communautaire couvrant : l&rsquo;existence et l&rsquo;ind&eacute;pendance de l&rsquo;association, l&rsquo;engagement envers les principes de Burning Man, les projets d&rsquo;&eacute;v&eacute;nement et les modalit&eacute;s d&rsquo;adh&eacute;sion. Des r&eacute;unions communautaires ont &eacute;t&eacute; programm&eacute;es pour mobiliser rapidement la communaut&eacute; au sens large.</p>
+
+                        <h3>Propri&eacute;t&eacute; Intellectuelle</h3>
+                        <p>Le conseil a d&eacute;battu de la question de savoir si les travaux cr&eacute;&eacute;s pour l&rsquo;association devaient &ecirc;tre c&eacute;d&eacute;s en propri&eacute;t&eacute; intellectuelle &agrave; l&rsquo;organisation. Les avis allaient de la cession compl&egrave;te (pour pr&eacute;venir les litiges) &agrave; une approche plus souple (adapt&eacute;e &agrave; une communaut&eacute; de b&eacute;n&eacute;voles). Le conseiller juridique formulera des recommandations sur les exigences du droit espagnol. Un accord de contribution a &eacute;t&eacute; propos&eacute;.</p>
+
+                        <h3>Planification des Actifs</h3>
+                        <p>Le conseil a propos&eacute; de cr&eacute;er une liste d&eacute;taill&eacute;e et d&eacute;taill&eacute;e des actifs que l&rsquo;association pourrait avoir besoin d&rsquo;acqu&eacute;rir, en notant que diff&eacute;rents actifs n&eacute;cessiteront des processus diff&eacute;rents. Les actifs physiques ont &eacute;t&eacute; identifi&eacute;s comme n&eacute;cessitant le plus de planification.</p>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <ul>
+                            <li><strong>Pablo :</strong> Obtenir un avis juridique &eacute;crit sur le projet d&rsquo;accord ; Enregistrer nobodies.team et configurer Google Workspace ; R&eacute;diger l&rsquo;annonce communautaire ; Organiser les r&eacute;unions communautaires</li>
+                            <li><strong>Chris :</strong> Ajouter la discussion sur l&rsquo;int&eacute;gration des membres &agrave; la prochaine r&eacute;union</li>
+                            <li><strong>Conseil :</strong> Cr&eacute;er une liste d&eacute;taill&eacute;e des besoins en actifs</li>
+                        </ul>
+
+                        <h2>Points en Suspens pour les R&eacute;unions Futures</h2>
+                        <ul>
+                            <li>Crit&egrave;res et processus d&rsquo;int&eacute;gration des membres</li>
+                            <li>Accord de contribution/propri&eacute;t&eacute; intellectuelle</li>
+                            <li>Strat&eacute;gie d&rsquo;acquisition d&rsquo;actifs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presenti:</strong> Ben, Chris, Daniel, Pablo, Peter, Ward
+                        <br><strong>Assenti:</strong> Michelle, Victor
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisioni</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decisione</th>
+                                    <th>Contesto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Annunciare l&rsquo;esistenza dell&rsquo;associazione e i piani per l&rsquo;evento</td>
+                                    <td>Unanime &mdash; attenzione all&rsquo;indipendenza e all&rsquo;autosufficienza</td>
+                                </tr>
+                                <tr>
+                                    <td>Tenere due riunioni comunitarie (il gioved&igrave; e il mercoled&igrave; successivi)</td>
+                                    <td>Coinvolgimento rapido della comunit&agrave;</td>
+                                </tr>
+                                <tr>
+                                    <td>Registrare il dominio nobodies.team</td>
+                                    <td>Pablo si occupa della registrazione e della configurazione</td>
+                                </tr>
+                                <tr>
+                                    <td>Spostare la comunicazione non urgente da WhatsApp a Discord</td>
+                                    <td>WhatsApp riservato solo a questioni urgenti</td>
+                                </tr>
+                                <tr>
+                                    <td>Approccio di autosufficienza nelle operazioni</td>
+                                    <td>Qualsiasi supporto esterno &egrave; un vantaggio, non una dipendenza</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Riepilogo della Discussione</h2>
+
+                        <h3>Approccio Operativo</h3>
+                        <p>Il consiglio ha concordato una strategia di autosufficienza: costruire l&rsquo;associazione in modo indipendente, cercare supporto dove viene offerto ma senza dipenderne. Il consiglio ha sottolineato la gestione prudente delle relazioni esterne.</p>
+
+                        <h3>Esame di un Accordo Esterno</h3>
+                        <p>&Egrave; stata esaminata una bozza iniziale di accordo. Il consiglio ha individuato aree che necessitano di revisione e ha concordato di ottenere un parere legale scritto prima di procedere.</p>
+
+                        <h3>Stato della Costituzione dell&rsquo;Associazione</h3>
+                        <p>&Egrave; necessaria un&rsquo;ultima firma per la costituzione. Una volta completata, l&rsquo;associazione esister&agrave; retroattivamente dalla data di fondazione. Il consiglio potr&agrave; quindi procedere con l&rsquo;apertura del conto bancario. I costi legali iniziali sono coperti; un membro si &egrave; offerto di anticipare fondi se necessario.</p>
+
+                        <h3>Comunicazione e Comunit&agrave;</h3>
+                        <p>Il consiglio ha concordato un annuncio alla comunit&agrave; che comprenda: l&rsquo;esistenza e l&rsquo;indipendenza dell&rsquo;associazione, l&rsquo;impegno verso i principi di Burning Man, i piani per l&rsquo;evento e le modalit&agrave; per diventare membro. Sono state programmate riunioni comunitarie per coinvolgere rapidamente la comunit&agrave; nel suo complesso.</p>
+
+                        <h3>Propriet&agrave; Intellettuale</h3>
+                        <p>Il consiglio ha discusso se il lavoro creato per l&rsquo;associazione debba essere ceduto come propriet&agrave; intellettuale all&rsquo;organizzazione. Le opinioni spaziavano dalla cessione completa (per prevenire controversie) a un approccio pi&ugrave; leggero (appropriato per una comunit&agrave; di volontari). Il consulente legale fornir&agrave; indicazioni sui requisiti della legislazione spagnola. &Egrave; stato proposto un accordo di collaborazione.</p>
+
+                        <h3>Pianificazione degli Attivi</h3>
+                        <p>Il consiglio ha proposto di creare un elenco dettagliato degli attivi che l&rsquo;associazione potrebbe dover acquisire, notando che attivi diversi richiederanno processi diversi. Gli attivi fisici sono stati identificati come quelli che richiedono maggiore pianificazione.</p>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <ul>
+                            <li><strong>Pablo:</strong> Ottenere parere legale scritto sulla bozza dell&rsquo;accordo; Registrare nobodies.team e configurare Google Workspace; Redigere l&rsquo;annuncio alla comunit&agrave;; Organizzare le riunioni comunitarie</li>
+                            <li><strong>Chris:</strong> Aggiungere la discussione sull&rsquo;integrazione dei membri alla prossima riunione</li>
+                            <li><strong>Consiglio:</strong> Creare elenco dettagliato delle necessit&agrave; di attivi</li>
+                        </ul>
+
+                        <h2>Punti Aperti per le Riunioni Future</h2>
+                        <ul>
+                            <li>Criteri e processo di integrazione dei membri</li>
+                            <li>Accordo di collaborazione/propriet&agrave; intellettuale</li>
+                            <li>Strategia di acquisizione degli attivi</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesend:</strong> Ben, Chris, Daniel, Pablo, Peter, Ward
+                        <br><strong>Abwesend:</strong> Michelle, Victor
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Beschl&uuml;sse</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Beschluss</th>
+                                    <th>Kontext</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Die Existenz des Vereins und die Veranstaltungspl&auml;ne bekanntgeben</td>
+                                    <td>Einstimmig &mdash; Fokus auf Unabh&auml;ngigkeit und Eigenst&auml;ndigkeit</td>
+                                </tr>
+                                <tr>
+                                    <td>Zwei Gemeinschaftsversammlungen abhalten (den folgenden Donnerstag und Mittwoch)</td>
+                                    <td>Schnelle Einbindung der Gemeinschaft</td>
+                                </tr>
+                                <tr>
+                                    <td>Die Domain nobodies.team registrieren</td>
+                                    <td>Pablo &uuml;bernimmt Registrierung und Konfiguration</td>
+                                </tr>
+                                <tr>
+                                    <td>Nicht dringende Kommunikation von WhatsApp zu Discord verlagern</td>
+                                    <td>WhatsApp nur f&uuml;r zeitkritische Angelegenheiten reserviert</td>
+                                </tr>
+                                <tr>
+                                    <td>Eigenst&auml;ndiger Ansatz f&uuml;r den Betrieb</td>
+                                    <td>Jede externe Unterst&uuml;tzung ist ein Bonus, keine Abh&auml;ngigkeit</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Zusammenfassung der Diskussion</h2>
+
+                        <h3>Operativer Ansatz</h3>
+                        <p>Der Vorstand einigte sich auf eine Strategie der Eigenst&auml;ndigkeit: den Verein unabh&auml;ngig aufbauen, Unterst&uuml;tzung annehmen wo angeboten, aber nicht davon abh&auml;ngen. Der Vorstand betonte das umsichtige Management externer Beziehungen.</p>
+
+                        <h3>&Uuml;berpr&uuml;fung einer Externen Vereinbarung</h3>
+                        <p>Ein erster Entwurf einer Vereinbarung wurde &uuml;berpr&uuml;ft. Der Vorstand identifizierte &uuml;berarbeitungsbed&uuml;rftige Bereiche und beschloss, vor dem Fortfahren ein schriftliches Rechtsgutachten einzuholen.</p>
+
+                        <h3>Stand der Vereinsgr&uuml;ndung</h3>
+                        <p>Eine letzte Unterschrift wird f&uuml;r die Gr&uuml;ndung ben&ouml;tigt. Nach Abschluss wird der Verein r&uuml;ckwirkend ab seinem Gr&uuml;ndungsdatum bestehen. Der Vorstand kann dann mit der Einrichtung des Bankkontos fortfahren. Die anf&auml;nglichen Rechtskosten sind gedeckt; ein Mitglied hat angeboten, bei Bedarf Mittel vorzustrecken.</p>
+
+                        <h3>Kommunikation und Gemeinschaft</h3>
+                        <p>Der Vorstand einigte sich auf eine Gemeinschaftsank&uuml;ndigung, die Folgendes umfasst: die Existenz und Unabh&auml;ngigkeit des Vereins, das Bekenntnis zu den Burning-Man-Prinzipien, die Veranstaltungspl&auml;ne und die Modalit&auml;ten f&uuml;r eine Mitgliedschaft. Gemeinschaftsversammlungen wurden geplant, um die breitere Gemeinschaft schnell einzubinden.</p>
+
+                        <h3>Geistiges Eigentum</h3>
+                        <p>Der Vorstand er&ouml;rterte, ob f&uuml;r den Verein geschaffene Arbeiten als geistiges Eigentum an die Organisation &uuml;bertragen werden sollten. Die Meinungen reichten von vollst&auml;ndiger &Uuml;bertragung (zur Vermeidung von Streitigkeiten) bis zu einem leichteren Ansatz (angemessen f&uuml;r eine Freiwilligengemeinschaft). Der Rechtsberater wird zu den Anforderungen des spanischen Rechts beraten. Eine Mitwirkungsvereinbarung wurde vorgeschlagen.</p>
+
+                        <h3>Verm&ouml;gensplanung</h3>
+                        <p>Der Vorstand schlug vor, eine detaillierte, aufgeschl&uuml;sselte Liste der Verm&ouml;genswerte zu erstellen, die der Verein m&ouml;glicherweise beschaffen muss, und wies darauf hin, dass verschiedene Verm&ouml;genswerte unterschiedliche Verfahren erfordern. Physische Verm&ouml;genswerte wurden als diejenigen identifiziert, die die meiste Planung erfordern.</p>
+
+                        <h2>Aktionspunkte</h2>
+                        <ul>
+                            <li><strong>Pablo:</strong> Schriftliches Rechtsgutachten zum Vereinbarungsentwurf einholen; nobodies.team registrieren und Google Workspace einrichten; Gemeinschaftsank&uuml;ndigung entwerfen; Gemeinschaftsversammlungen organisieren</li>
+                            <li><strong>Chris:</strong> Diskussion zur Mitgliederaufnahme auf die n&auml;chste Sitzung setzen</li>
+                            <li><strong>Vorstand:</strong> Aufgeschl&uuml;sselte Liste der Verm&ouml;gensbedarfe erstellen</li>
+                        </ul>
+
+                        <h2>Offene Punkte f&uuml;r Zuk&uuml;nftige Sitzungen</h2>
+                        <ul>
+                            <li>Kriterien und Verfahren f&uuml;r die Mitgliederaufnahme</li>
+                            <li>Mitwirkungs-/IP-Vereinbarung</li>
+                            <li>Strategie zur Verm&ouml;gensbeschaffung</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -126,5 +456,18 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

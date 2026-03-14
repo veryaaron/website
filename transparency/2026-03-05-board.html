@@ -42,6 +42,12 @@
             color: var(--color-text-muted);
             font-style: italic;
         }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -60,65 +66,337 @@
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Board members present:</strong> Pablo V, Daniel T, Ben D, Ward D, Michelle T, Chris T O
-                    <br><strong>Non-board attendees:</strong> Pepe C (Legal Counsel), Daniela M S (Production Manager)
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>1. Check-ins</h2>
-                    <p>Board members shared brief personal updates. Several members noted an intense but productive week. Chris T O joined from transit. Victor P was expected to join later.</p>
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                    <h2>2. Legal Counsel Update</h2>
-                    <p>Daniel T reported on a recent meeting with legal counsel, which provided useful guidance on various organisational matters. The board discussed resulting recommendations.</p>
-                    <p><strong>Decision:</strong> The board agreed to adopt updated communication guidelines and to review previous board minutes for consistency.</p>
+                    <div class="attendees">
+                        <strong>Board members present:</strong> Pablo V, Daniel T, Ben D, Ward D, Michelle T, Chris T O
+                        <br><strong>Non-board attendees:</strong> Pepe C (Legal Counsel), Daniela M S (Production Manager)
+                    </div>
 
-                    <h2>3. Membership and Collaborator Status</h2>
-                    <p>The board discussed membership eligibility matters arising from legal guidance.</p>
-                    <p><strong>Decision:</strong> Michelle T, Pablo V, and Daniel T will follow up individually with relevant parties.</p>
+                    <div class="meeting-content">
+                        <h2>1. Check-ins</h2>
+                        <p>Board members shared brief personal updates. Several members noted an intense but productive week. Chris T O joined from transit. Victor P was expected to join later.</p>
 
-                    <h2>4. Go Statement Approval</h2>
-                    <p>Ben D presented the &ldquo;Go statement&rdquo; for board approval.</p>
-                    <p><strong>Decision:</strong> The statement was unanimously approved. Daniel T to publish immediately. Ben D to review the language.</p>
+                        <h2>2. Legal Counsel Update</h2>
+                        <p>Daniel T reported on a recent meeting with legal counsel, which provided useful guidance on various organisational matters. The board discussed resulting recommendations.</p>
+                        <p><strong>Decision:</strong> The board agreed to adopt updated communication guidelines and to review previous board minutes for consistency.</p>
 
-                    <h2>5. Standing Communications Agenda Item</h2>
-                    <p>Pablo V proposed adding a standing item &mdash; &ldquo;what should we communicate to comms&rdquo; &mdash; to the end of every board meeting template.</p>
-                    <p><strong>Decision:</strong> Proposal accepted. Ben D to update the template.</p>
+                        <h2>3. Membership and Collaborator Status</h2>
+                        <p>The board discussed membership eligibility matters arising from legal guidance.</p>
+                        <p><strong>Decision:</strong> Michelle T, Pablo V, and Daniel T will follow up individually with relevant parties.</p>
 
-                    <h2>6. Founding Member Loans</h2>
-                    <p>Pepe C requested that loans provided by founding members be formally documented and approved, with the option to make them revolving for financial flexibility.</p>
-                    <p><strong>Decision:</strong> Deferred to the next meeting, as one key lender was absent.</p>
+                        <h2>4. Go Statement Approval</h2>
+                        <p>Ben D presented the &ldquo;Go statement&rdquo; for board approval.</p>
+                        <p><strong>Decision:</strong> The statement was unanimously approved. Daniel T to publish immediately. Ben D to review the language.</p>
 
-                    <h2>7. Ticketing Update</h2>
-                    <p>Daniela M S outlined the dependencies for opening ticket sales, including: association name, basic branding, terms and conditions, participant code of conduct, refund terms, and the registration system.</p>
-                    <p>Ward D raised concerns about ticket pricing. Daniel T explained the current pricing was set conservatively to build a cash buffer, with plans for reductions in future years.</p>
-                    <p><strong>Decision:</strong> Target to open ticket sales the following week, pending resolution of dependencies. Daniel T to coordinate requirements via a board thread.</p>
+                        <h2>5. Standing Communications Agenda Item</h2>
+                        <p>Pablo V proposed adding a standing item &mdash; &ldquo;what should we communicate to comms&rdquo; &mdash; to the end of every board meeting template.</p>
+                        <p><strong>Decision:</strong> Proposal accepted. Ben D to update the template.</p>
 
-                    <h2>8. Ongoing Asset Discussions</h2>
-                    <p>The board discussed approaches to sourcing physical assets for the event.</p>
-                    <p><strong>Decision:</strong> Pepe C to continue working with legal counsel on suitable arrangements.</p>
+                        <h2>6. Founding Member Loans</h2>
+                        <p>Pepe C requested that loans provided by founding members be formally documented and approved, with the option to make them revolving for financial flexibility.</p>
+                        <p><strong>Decision:</strong> Deferred to the next meeting, as one key lender was absent.</p>
 
-                    <h2>9. Communications Team Coordination</h2>
-                    <p>Daniela M S raised the need to keep the comms team aligned with board decisions. Pablo V and Pepe C offered to speak with team members they are in regular contact with.</p>
-                    <p><strong>Decision:</strong> Pablo V and Pepe C to brief comms team members.</p>
+                        <h2>7. Ticketing Update</h2>
+                        <p>Daniela M S outlined the dependencies for opening ticket sales, including: association name, basic branding, terms and conditions, participant code of conduct, refund terms, and the registration system.</p>
+                        <p>Ward D raised concerns about ticket pricing. Daniel T explained the current pricing was set conservatively to build a cash buffer, with plans for reductions in future years.</p>
+                        <p><strong>Decision:</strong> Target to open ticket sales the following week, pending resolution of dependencies. Daniel T to coordinate requirements via a board thread.</p>
 
-                    <h2>10. Engagement of Administrative Support</h2>
-                    <p>Ben D presented draft documents for engaging Pepe C and an assistant for pro bono administrative work. Michelle T and Ward D raised concerns about formalizing volunteer work with a contract.</p>
-                    <p><strong>Decision:</strong> Deferred for offline discussion to build consensus before a formal vote.</p>
+                        <h2>8. Ongoing Asset Discussions</h2>
+                        <p>The board discussed approaches to sourcing physical assets for the event.</p>
+                        <p><strong>Decision:</strong> Pepe C to continue working with legal counsel on suitable arrangements.</p>
 
-                    <h2>11. Site Location</h2>
-                    <p>Ward D raised the possibility of exploring an alternative site location for the event.</p>
-                    <p><strong>Decision:</strong> The topic to be raised at the community meeting for broader discussion. Pablo V offered to present site options.</p>
+                        <h2>9. Communications Team Coordination</h2>
+                        <p>Daniela M S raised the need to keep the comms team aligned with board decisions. Pablo V and Pepe C offered to speak with team members they are in regular contact with.</p>
+                        <p><strong>Decision:</strong> Pablo V and Pepe C to brief comms team members.</p>
 
-                    <h2>Action Items</h2>
-                    <ol>
-                        <li><strong>Daniel T</strong> &mdash; Publish the Go statement; add new site discussion to community meeting agenda; follow up on membership matters; create board thread for ticketing requirements</li>
-                        <li><strong>Ben D</strong> &mdash; Review Go statement; add standing comms item to board meeting template</li>
-                        <li><strong>Pepe C</strong> &mdash; Create spreadsheet for founding member loans; continue asset discussions with legal counsel</li>
-                        <li><strong>Michelle T &amp; Pablo V</strong> &mdash; Follow up on membership matters with relevant parties</li>
-                        <li><strong>Pablo V</strong> &mdash; Brief local comms team members</li>
-                    </ol>
+                        <h2>10. Engagement of Administrative Support</h2>
+                        <p>Ben D presented draft documents for engaging Pepe C and an assistant for pro bono administrative work. Michelle T and Ward D raised concerns about formalizing volunteer work with a contract.</p>
+                        <p><strong>Decision:</strong> Deferred for offline discussion to build consensus before a formal vote.</p>
+
+                        <h2>11. Site Location</h2>
+                        <p>Ward D raised the possibility of exploring an alternative site location for the event.</p>
+                        <p><strong>Decision:</strong> The topic to be raised at the community meeting for broader discussion. Pablo V offered to present site options.</p>
+
+                        <h2>Action Items</h2>
+                        <ol>
+                            <li><strong>Daniel T</strong> &mdash; Publish the Go statement; add new site discussion to community meeting agenda; follow up on membership matters; create board thread for ticketing requirements</li>
+                            <li><strong>Ben D</strong> &mdash; Review Go statement; add standing comms item to board meeting template</li>
+                            <li><strong>Pepe C</strong> &mdash; Create spreadsheet for founding member loans; continue asset discussions with legal counsel</li>
+                            <li><strong>Michelle T &amp; Pablo V</strong> &mdash; Follow up on membership matters with relevant parties</li>
+                            <li><strong>Pablo V</strong> &mdash; Brief local comms team members</li>
+                        </ol>
+                    </div>
                 </div>
+
+                <!-- ESPA&Ntilde;OL -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Miembros de la junta presentes:</strong> Pablo V, Daniel T, Ben D, Ward D, Michelle T, Chris T O
+                        <br><strong>Asistentes no pertenecientes a la junta:</strong> Pepe C (Asesor Legal), Daniela M S (Directora de Producci&oacute;n)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Ronda de saludos</h2>
+                        <p>Los miembros de la junta compartieron breves actualizaciones personales. Varios miembros se&ntilde;alaron una semana intensa pero productiva. Chris T O se uni&oacute; desde el trayecto. Se esperaba que Victor P se uniera m&aacute;s tarde.</p>
+
+                        <h2>2. Actualizaci&oacute;n del asesor legal</h2>
+                        <p>Daniel T inform&oacute; sobre una reuni&oacute;n reciente con el asesor legal, que proporcion&oacute; orientaci&oacute;n &uacute;til sobre diversos asuntos organizativos. La junta discuti&oacute; las recomendaciones resultantes.</p>
+                        <p><strong>Decisi&oacute;n:</strong> La junta acord&oacute; adoptar directrices de comunicaci&oacute;n actualizadas y revisar las actas anteriores de la junta para garantizar la coherencia.</p>
+
+                        <h2>3. Membres&iacute;a y estatus de colaborador</h2>
+                        <p>La junta discuti&oacute; cuestiones de elegibilidad de membres&iacute;a derivadas de la orientaci&oacute;n legal.</p>
+                        <p><strong>Decisi&oacute;n:</strong> Michelle T, Pablo V y Daniel T har&aacute;n seguimiento individual con las partes pertinentes.</p>
+
+                        <h2>4. Aprobaci&oacute;n de la declaraci&oacute;n de inicio</h2>
+                        <p>Ben D present&oacute; la &laquo;declaraci&oacute;n de inicio&raquo; para la aprobaci&oacute;n de la junta.</p>
+                        <p><strong>Decisi&oacute;n:</strong> La declaraci&oacute;n fue aprobada por unanimidad. Daniel T la publicar&aacute; de inmediato. Ben D revisar&aacute; la redacci&oacute;n.</p>
+
+                        <h2>5. Punto permanente de comunicaciones en la agenda</h2>
+                        <p>Pablo V propuso a&ntilde;adir un punto permanente &mdash; &laquo;qu&eacute; debemos comunicar al equipo de comunicaciones&raquo; &mdash; al final de cada plantilla de reuni&oacute;n de la junta.</p>
+                        <p><strong>Decisi&oacute;n:</strong> Propuesta aceptada. Ben D actualizar&aacute; la plantilla.</p>
+
+                        <h2>6. Pr&eacute;stamos de miembros fundadores</h2>
+                        <p>Pepe C solicit&oacute; que los pr&eacute;stamos proporcionados por los miembros fundadores sean formalmente documentados y aprobados, con la opci&oacute;n de hacerlos renovables para mayor flexibilidad financiera.</p>
+                        <p><strong>Decisi&oacute;n:</strong> Aplazado a la pr&oacute;xima reuni&oacute;n, ya que un prestamista clave estaba ausente.</p>
+
+                        <h2>7. Actualizaci&oacute;n de venta de entradas</h2>
+                        <p>Daniela M S describi&oacute; las dependencias para la apertura de la venta de entradas, incluyendo: nombre de la asociaci&oacute;n, imagen de marca b&aacute;sica, t&eacute;rminos y condiciones, c&oacute;digo de conducta del participante, condiciones de reembolso y el sistema de registro.</p>
+                        <p>Ward D plante&oacute; preocupaciones sobre el precio de las entradas. Daniel T explic&oacute; que el precio actual se estableci&oacute; de forma conservadora para crear un colch&oacute;n financiero, con planes de reducci&oacute;n en a&ntilde;os futuros.</p>
+                        <p><strong>Decisi&oacute;n:</strong> Objetivo de abrir la venta de entradas la semana siguiente, pendiente de la resoluci&oacute;n de las dependencias. Daniel T coordinar&aacute; los requisitos a trav&eacute;s de un hilo de la junta.</p>
+
+                        <h2>8. Discusiones en curso sobre activos</h2>
+                        <p>La junta discuti&oacute; enfoques para la obtenci&oacute;n de activos f&iacute;sicos para el evento.</p>
+                        <p><strong>Decisi&oacute;n:</strong> Pepe C continuar&aacute; trabajando con el asesor legal en acuerdos adecuados.</p>
+
+                        <h2>9. Coordinaci&oacute;n del equipo de comunicaciones</h2>
+                        <p>Daniela M S plante&oacute; la necesidad de mantener al equipo de comunicaciones alineado con las decisiones de la junta. Pablo V y Pepe C se ofrecieron a hablar con los miembros del equipo con los que mantienen contacto regular.</p>
+                        <p><strong>Decisi&oacute;n:</strong> Pablo V y Pepe C informar&aacute;n a los miembros del equipo de comunicaciones.</p>
+
+                        <h2>10. Contrataci&oacute;n de apoyo administrativo</h2>
+                        <p>Ben D present&oacute; documentos preliminares para la contrataci&oacute;n de Pepe C y un asistente para trabajo administrativo pro bono. Michelle T y Ward D expresaron preocupaciones sobre la formalizaci&oacute;n del trabajo voluntario mediante un contrato.</p>
+                        <p><strong>Decisi&oacute;n:</strong> Aplazado para discusi&oacute;n fuera de l&iacute;nea a fin de alcanzar consenso antes de una votaci&oacute;n formal.</p>
+
+                        <h2>11. Ubicaci&oacute;n del sitio</h2>
+                        <p>Ward D plante&oacute; la posibilidad de explorar una ubicaci&oacute;n alternativa para el evento.</p>
+                        <p><strong>Decisi&oacute;n:</strong> El tema se plantear&aacute; en la reuni&oacute;n comunitaria para una discusi&oacute;n m&aacute;s amplia. Pablo V se ofreci&oacute; a presentar opciones de ubicaci&oacute;n.</p>
+
+                        <h2>Puntos de acci&oacute;n</h2>
+                        <ol>
+                            <li><strong>Daniel T</strong> &mdash; Publicar la declaraci&oacute;n de inicio; a&ntilde;adir la discusi&oacute;n sobre nueva ubicaci&oacute;n a la agenda de la reuni&oacute;n comunitaria; dar seguimiento a asuntos de membres&iacute;a; crear hilo de la junta para requisitos de venta de entradas</li>
+                            <li><strong>Ben D</strong> &mdash; Revisar la declaraci&oacute;n de inicio; a&ntilde;adir punto permanente de comunicaciones a la plantilla de reuniones de la junta</li>
+                            <li><strong>Pepe C</strong> &mdash; Crear hoja de c&aacute;lculo para pr&eacute;stamos de miembros fundadores; continuar discusiones sobre activos con el asesor legal</li>
+                            <li><strong>Michelle T y Pablo V</strong> &mdash; Dar seguimiento a asuntos de membres&iacute;a con las partes pertinentes</li>
+                            <li><strong>Pablo V</strong> &mdash; Informar a los miembros locales del equipo de comunicaciones</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- FRAN&Ccedil;AIS -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Membres du conseil pr&eacute;sents :</strong> Pablo V, Daniel T, Ben D, Ward D, Michelle T, Chris T O
+                        <br><strong>Participants hors conseil :</strong> Pepe C (Conseiller juridique), Daniela M S (Directrice de production)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Tour de table</h2>
+                        <p>Les membres du conseil ont partag&eacute; de br&egrave;ves nouvelles personnelles. Plusieurs membres ont not&eacute; une semaine intense mais productive. Chris T O a rejoint la r&eacute;union en d&eacute;placement. Victor P devait rejoindre plus tard.</p>
+
+                        <h2>2. Mise &agrave; jour du conseiller juridique</h2>
+                        <p>Daniel T a fait un compte rendu d&rsquo;une r&eacute;union r&eacute;cente avec le conseiller juridique, qui a fourni des orientations utiles sur divers sujets organisationnels. Le conseil a discut&eacute; des recommandations qui en d&eacute;coulent.</p>
+                        <p><strong>D&eacute;cision :</strong> Le conseil a accept&eacute; d&rsquo;adopter des directives de communication mises &agrave; jour et de revoir les proc&egrave;s-verbaux pr&eacute;c&eacute;dents pour en assurer la coh&eacute;rence.</p>
+
+                        <h2>3. Adh&eacute;sion et statut de collaborateur</h2>
+                        <p>Le conseil a discut&eacute; des questions d&rsquo;&eacute;ligibilit&eacute; &agrave; l&rsquo;adh&eacute;sion d&eacute;coulant des orientations juridiques.</p>
+                        <p><strong>D&eacute;cision :</strong> Michelle T, Pablo V et Daniel T assureront un suivi individuel avec les parties concern&eacute;es.</p>
+
+                        <h2>4. Approbation de la d&eacute;claration de lancement</h2>
+                        <p>Ben D a pr&eacute;sent&eacute; la &laquo; d&eacute;claration de lancement &raquo; pour approbation du conseil.</p>
+                        <p><strong>D&eacute;cision :</strong> La d&eacute;claration a &eacute;t&eacute; approuv&eacute;e &agrave; l&rsquo;unanimit&eacute;. Daniel T la publiera imm&eacute;diatement. Ben D en r&eacute;visera la r&eacute;daction.</p>
+
+                        <h2>5. Point permanent de communications &agrave; l&rsquo;ordre du jour</h2>
+                        <p>Pablo V a propos&eacute; d&rsquo;ajouter un point permanent &mdash; &laquo; que devons-nous communiquer &agrave; l&rsquo;&eacute;quipe de communication &raquo; &mdash; &agrave; la fin de chaque mod&egrave;le de r&eacute;union du conseil.</p>
+                        <p><strong>D&eacute;cision :</strong> Proposition accept&eacute;e. Ben D mettra &agrave; jour le mod&egrave;le.</p>
+
+                        <h2>6. Pr&ecirc;ts des membres fondateurs</h2>
+                        <p>Pepe C a demand&eacute; que les pr&ecirc;ts accord&eacute;s par les membres fondateurs soient formellement document&eacute;s et approuv&eacute;s, avec la possibilit&eacute; de les rendre renouvelables pour plus de flexibilit&eacute; financi&egrave;re.</p>
+                        <p><strong>D&eacute;cision :</strong> Report&eacute; &agrave; la prochaine r&eacute;union, un pr&ecirc;teur cl&eacute; &eacute;tant absent.</p>
+
+                        <h2>7. Mise &agrave; jour de la billetterie</h2>
+                        <p>Daniela M S a pr&eacute;sent&eacute; les pr&eacute;requis pour l&rsquo;ouverture de la vente de billets, notamment : le nom de l&rsquo;association, l&rsquo;identit&eacute; visuelle de base, les conditions g&eacute;n&eacute;rales, le code de conduite des participants, les conditions de remboursement et le syst&egrave;me d&rsquo;inscription.</p>
+                        <p>Ward D a exprim&eacute; des inqui&eacute;tudes concernant le prix des billets. Daniel T a expliqu&eacute; que la tarification actuelle avait &eacute;t&eacute; fix&eacute;e de mani&egrave;re conservatrice afin de constituer une r&eacute;serve de tr&eacute;sorerie, avec des r&eacute;ductions pr&eacute;vues pour les ann&eacute;es suivantes.</p>
+                        <p><strong>D&eacute;cision :</strong> Objectif d&rsquo;ouvrir la vente de billets la semaine suivante, sous r&eacute;serve de la r&eacute;solution des pr&eacute;requis. Daniel T coordonnera les exigences via un fil de discussion du conseil.</p>
+
+                        <h2>8. Discussions en cours sur les actifs</h2>
+                        <p>Le conseil a discut&eacute; des approches pour l&rsquo;acquisition d&rsquo;actifs physiques pour l&rsquo;&eacute;v&eacute;nement.</p>
+                        <p><strong>D&eacute;cision :</strong> Pepe C continuera &agrave; travailler avec le conseiller juridique sur des dispositions ad&eacute;quates.</p>
+
+                        <h2>9. Coordination de l&rsquo;&eacute;quipe de communication</h2>
+                        <p>Daniela M S a soulev&eacute; la n&eacute;cessit&eacute; de maintenir l&rsquo;&eacute;quipe de communication align&eacute;e sur les d&eacute;cisions du conseil. Pablo V et Pepe C se sont propos&eacute;s pour parler aux membres de l&rsquo;&eacute;quipe avec lesquels ils sont en contact r&eacute;gulier.</p>
+                        <p><strong>D&eacute;cision :</strong> Pablo V et Pepe C informeront les membres de l&rsquo;&eacute;quipe de communication.</p>
+
+                        <h2>10. Engagement de soutien administratif</h2>
+                        <p>Ben D a pr&eacute;sent&eacute; des documents pr&eacute;liminaires pour l&rsquo;engagement de Pepe C et d&rsquo;un assistant pour un travail administratif pro bono. Michelle T et Ward D ont exprim&eacute; des r&eacute;serves quant &agrave; la formalisation du travail b&eacute;n&eacute;vole par un contrat.</p>
+                        <p><strong>D&eacute;cision :</strong> Report&eacute; pour discussion hors r&eacute;union afin de parvenir &agrave; un consensus avant un vote formel.</p>
+
+                        <h2>11. Emplacement du site</h2>
+                        <p>Ward D a soulev&eacute; la possibilit&eacute; d&rsquo;explorer un emplacement alternatif pour l&rsquo;&eacute;v&eacute;nement.</p>
+                        <p><strong>D&eacute;cision :</strong> Le sujet sera abord&eacute; lors de la r&eacute;union communautaire pour une discussion plus large. Pablo V a propos&eacute; de pr&eacute;senter les options de site.</p>
+
+                        <h2>Points d&rsquo;action</h2>
+                        <ol>
+                            <li><strong>Daniel T</strong> &mdash; Publier la d&eacute;claration de lancement ; ajouter la discussion sur le nouveau site &agrave; l&rsquo;ordre du jour de la r&eacute;union communautaire ; assurer le suivi des questions d&rsquo;adh&eacute;sion ; cr&eacute;er un fil de discussion du conseil pour les exigences de billetterie</li>
+                            <li><strong>Ben D</strong> &mdash; R&eacute;viser la d&eacute;claration de lancement ; ajouter le point permanent de communications au mod&egrave;le de r&eacute;union du conseil</li>
+                            <li><strong>Pepe C</strong> &mdash; Cr&eacute;er un tableur pour les pr&ecirc;ts des membres fondateurs ; poursuivre les discussions sur les actifs avec le conseiller juridique</li>
+                            <li><strong>Michelle T et Pablo V</strong> &mdash; Assurer le suivi des questions d&rsquo;adh&eacute;sion avec les parties concern&eacute;es</li>
+                            <li><strong>Pablo V</strong> &mdash; Informer les membres locaux de l&rsquo;&eacute;quipe de communication</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- ITALIANO -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Membri del consiglio presenti:</strong> Pablo V, Daniel T, Ben D, Ward D, Michelle T, Chris T O
+                        <br><strong>Partecipanti non membri del consiglio:</strong> Pepe C (Consulente legale), Daniela M S (Responsabile della produzione)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Giro di aggiornamenti</h2>
+                        <p>I membri del consiglio hanno condiviso brevi aggiornamenti personali. Diversi membri hanno segnalato una settimana intensa ma produttiva. Chris T O si &egrave; collegato in viaggio. Victor P era atteso pi&ugrave; tardi.</p>
+
+                        <h2>2. Aggiornamento del consulente legale</h2>
+                        <p>Daniel T ha riferito di un recente incontro con il consulente legale, che ha fornito indicazioni utili su vari aspetti organizzativi. Il consiglio ha discusso le raccomandazioni risultanti.</p>
+                        <p><strong>Decisione:</strong> Il consiglio ha concordato di adottare linee guida di comunicazione aggiornate e di riesaminare i verbali precedenti per garantirne la coerenza.</p>
+
+                        <h2>3. Adesione e status di collaboratore</h2>
+                        <p>Il consiglio ha discusso questioni di idoneit&agrave; all&rsquo;adesione derivanti dalle indicazioni legali.</p>
+                        <p><strong>Decisione:</strong> Michelle T, Pablo V e Daniel T daranno seguito individualmente con le parti interessate.</p>
+
+                        <h2>4. Approvazione della dichiarazione di avvio</h2>
+                        <p>Ben D ha presentato la &laquo;dichiarazione di avvio&raquo; per l&rsquo;approvazione del consiglio.</p>
+                        <p><strong>Decisione:</strong> La dichiarazione &egrave; stata approvata all&rsquo;unanimit&agrave;. Daniel T la pubblicher&agrave; immediatamente. Ben D ne riveder&agrave; la formulazione.</p>
+
+                        <h2>5. Punto permanente sulle comunicazioni all&rsquo;ordine del giorno</h2>
+                        <p>Pablo V ha proposto di aggiungere un punto permanente &mdash; &laquo;cosa comunicare al team di comunicazione&raquo; &mdash; alla fine di ogni modello di riunione del consiglio.</p>
+                        <p><strong>Decisione:</strong> Proposta accettata. Ben D aggiorner&agrave; il modello.</p>
+
+                        <h2>6. Prestiti dei membri fondatori</h2>
+                        <p>Pepe C ha richiesto che i prestiti forniti dai membri fondatori vengano formalmente documentati e approvati, con la possibilit&agrave; di renderli rinnovabili per maggiore flessibilit&agrave; finanziaria.</p>
+                        <p><strong>Decisione:</strong> Rinviato alla prossima riunione, dato che un prestatore chiave era assente.</p>
+
+                        <h2>7. Aggiornamento sulla biglietteria</h2>
+                        <p>Daniela M S ha illustrato i prerequisiti per l&rsquo;apertura della vendita dei biglietti, tra cui: nome dell&rsquo;associazione, identit&agrave; visiva di base, termini e condizioni, codice di condotta dei partecipanti, condizioni di rimborso e il sistema di registrazione.</p>
+                        <p>Ward D ha espresso preoccupazioni riguardo ai prezzi dei biglietti. Daniel T ha spiegato che i prezzi attuali sono stati fissati in modo conservativo per creare una riserva di liquidit&agrave;, con piani di riduzione negli anni futuri.</p>
+                        <p><strong>Decisione:</strong> Obiettivo di aprire la vendita dei biglietti la settimana successiva, in attesa della risoluzione dei prerequisiti. Daniel T coordiner&agrave; i requisiti tramite una discussione del consiglio.</p>
+
+                        <h2>8. Discussioni in corso sugli asset</h2>
+                        <p>Il consiglio ha discusso approcci per il reperimento di beni fisici per l&rsquo;evento.</p>
+                        <p><strong>Decisione:</strong> Pepe C continuer&agrave; a lavorare con il consulente legale su soluzioni adeguate.</p>
+
+                        <h2>9. Coordinamento del team di comunicazione</h2>
+                        <p>Daniela M S ha sottolineato la necessit&agrave; di mantenere il team di comunicazione allineato con le decisioni del consiglio. Pablo V e Pepe C si sono offerti di parlare con i membri del team con cui sono in contatto regolare.</p>
+                        <p><strong>Decisione:</strong> Pablo V e Pepe C informeranno i membri del team di comunicazione.</p>
+
+                        <h2>10. Coinvolgimento di supporto amministrativo</h2>
+                        <p>Ben D ha presentato bozze di documenti per il coinvolgimento di Pepe C e di un assistente per lavoro amministrativo pro bono. Michelle T e Ward D hanno espresso perplessit&agrave; sulla formalizzazione del lavoro volontario con un contratto.</p>
+                        <p><strong>Decisione:</strong> Rinviato per discussione offline al fine di raggiungere un consenso prima di un voto formale.</p>
+
+                        <h2>11. Ubicazione del sito</h2>
+                        <p>Ward D ha sollevato la possibilit&agrave; di esplorare un&rsquo;ubicazione alternativa per l&rsquo;evento.</p>
+                        <p><strong>Decisione:</strong> L&rsquo;argomento sar&agrave; portato alla riunione comunitaria per una discussione pi&ugrave; ampia. Pablo V si &egrave; offerto di presentare le opzioni del sito.</p>
+
+                        <h2>Punti d&rsquo;azione</h2>
+                        <ol>
+                            <li><strong>Daniel T</strong> &mdash; Pubblicare la dichiarazione di avvio; aggiungere la discussione sulla nuova ubicazione all&rsquo;ordine del giorno della riunione comunitaria; dare seguito alle questioni di adesione; creare una discussione del consiglio per i requisiti di biglietteria</li>
+                            <li><strong>Ben D</strong> &mdash; Rivedere la dichiarazione di avvio; aggiungere il punto permanente sulle comunicazioni al modello di riunione del consiglio</li>
+                            <li><strong>Pepe C</strong> &mdash; Creare un foglio di calcolo per i prestiti dei membri fondatori; proseguire le discussioni sugli asset con il consulente legale</li>
+                            <li><strong>Michelle T e Pablo V</strong> &mdash; Dare seguito alle questioni di adesione con le parti interessate</li>
+                            <li><strong>Pablo V</strong> &mdash; Informare i membri locali del team di comunicazione</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- DEUTSCH -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Abweichungen zwischen dieser Version und der spanischen Version ist die spanische Version ma&szlig;geblich.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesende Vorstandsmitglieder:</strong> Pablo V, Daniel T, Ben D, Ward D, Michelle T, Chris T O
+                        <br><strong>Weitere Teilnehmer:</strong> Pepe C (Rechtsberater), Daniela M S (Produktionsleiterin)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Begr&uuml;&szlig;ungsrunde</h2>
+                        <p>Die Vorstandsmitglieder teilten kurze pers&ouml;nliche Neuigkeiten mit. Mehrere Mitglieder berichteten von einer intensiven, aber produktiven Woche. Chris T O nahm von unterwegs teil. Victor P wurde sp&auml;ter erwartet.</p>
+
+                        <h2>2. Bericht des Rechtsberaters</h2>
+                        <p>Daniel T berichtete &uuml;ber ein k&uuml;rzliches Treffen mit dem Rechtsberater, das n&uuml;tzliche Orientierung zu verschiedenen organisatorischen Angelegenheiten lieferte. Der Vorstand er&ouml;rterte die daraus resultierenden Empfehlungen.</p>
+                        <p><strong>Beschluss:</strong> Der Vorstand stimmte zu, aktualisierte Kommunikationsrichtlinien zu verabschieden und fr&uuml;here Vorstandsprotokolle auf Konsistenz zu &uuml;berpr&uuml;fen.</p>
+
+                        <h2>3. Mitgliedschaft und Mitarbeiterstatus</h2>
+                        <p>Der Vorstand er&ouml;rterte Fragen zur Mitgliedschaftsberechtigung, die sich aus der rechtlichen Beratung ergaben.</p>
+                        <p><strong>Beschluss:</strong> Michelle T, Pablo V und Daniel T werden einzeln mit den betreffenden Parteien nachfassen.</p>
+
+                        <h2>4. Genehmigung der Starterkl&auml;rung</h2>
+                        <p>Ben D pr&auml;sentierte die &bdquo;Starterkl&auml;rung&ldquo; zur Genehmigung durch den Vorstand.</p>
+                        <p><strong>Beschluss:</strong> Die Erkl&auml;rung wurde einstimmig genehmigt. Daniel T wird sie unverz&uuml;glich ver&ouml;ffentlichen. Ben D wird die Formulierung &uuml;berpr&uuml;fen.</p>
+
+                        <h2>5. St&auml;ndiger Tagesordnungspunkt Kommunikation</h2>
+                        <p>Pablo V schlug vor, einen st&auml;ndigen Punkt &mdash; &bdquo;Was sollen wir dem Kommunikationsteam mitteilen&ldquo; &mdash; am Ende jeder Vorstands-Sitzungsvorlage hinzuzuf&uuml;gen.</p>
+                        <p><strong>Beschluss:</strong> Vorschlag angenommen. Ben D wird die Vorlage aktualisieren.</p>
+
+                        <h2>6. Darlehen der Gr&uuml;ndungsmitglieder</h2>
+                        <p>Pepe C forderte, dass die von Gr&uuml;ndungsmitgliedern gew&auml;hrten Darlehen formell dokumentiert und genehmigt werden, mit der Option, sie f&uuml;r mehr finanzielle Flexibilit&auml;t als revolvierende Darlehen zu gestalten.</p>
+                        <p><strong>Beschluss:</strong> Auf die n&auml;chste Sitzung vertagt, da ein wichtiger Darlehensgeber abwesend war.</p>
+
+                        <h2>7. Aktuelles zum Ticketverkauf</h2>
+                        <p>Daniela M S erl&auml;uterte die Voraussetzungen f&uuml;r die Er&ouml;ffnung des Ticketverkaufs, darunter: Vereinsname, grundlegendes Branding, Allgemeine Gesch&auml;ftsbedingungen, Verhaltenskodex f&uuml;r Teilnehmer, R&uuml;ckerstattungsbedingungen und das Registrierungssystem.</p>
+                        <p>Ward D &auml;u&szlig;erte Bedenken hinsichtlich der Ticketpreise. Daniel T erkl&auml;rte, dass die derzeitige Preisgestaltung konservativ festgelegt wurde, um einen finanziellen Puffer aufzubauen, mit Pl&auml;nen f&uuml;r Preissenkungen in k&uuml;nftigen Jahren.</p>
+                        <p><strong>Beschluss:</strong> Ziel, den Ticketverkauf in der folgenden Woche zu er&ouml;ffnen, vorbehaltlich der Kl&auml;rung der Voraussetzungen. Daniel T wird die Anforderungen &uuml;ber einen Vorstandsthread koordinieren.</p>
+
+                        <h2>8. Laufende Diskussionen zu Verm&ouml;genswerten</h2>
+                        <p>Der Vorstand er&ouml;rterte Ans&auml;tze zur Beschaffung physischer Verm&ouml;genswerte f&uuml;r die Veranstaltung.</p>
+                        <p><strong>Beschluss:</strong> Pepe C wird weiterhin mit dem Rechtsberater an geeigneten Vereinbarungen arbeiten.</p>
+
+                        <h2>9. Koordinierung des Kommunikationsteams</h2>
+                        <p>Daniela M S wies auf die Notwendigkeit hin, das Kommunikationsteam mit den Vorstandsbeschl&uuml;ssen abzustimmen. Pablo V und Pepe C boten an, mit Teammitgliedern zu sprechen, mit denen sie in regelm&auml;&szlig;igem Kontakt stehen.</p>
+                        <p><strong>Beschluss:</strong> Pablo V und Pepe C werden die Mitglieder des Kommunikationsteams informieren.</p>
+
+                        <h2>10. Einbindung administrativer Unterst&uuml;tzung</h2>
+                        <p>Ben D pr&auml;sentierte Dokumententw&uuml;rfe f&uuml;r die Einbindung von Pepe C und einem Assistenten f&uuml;r ehrenamtliche Verwaltungsarbeit. Michelle T und Ward D &auml;u&szlig;erten Bedenken hinsichtlich der Formalisierung ehrenamtlicher Arbeit durch einen Vertrag.</p>
+                        <p><strong>Beschluss:</strong> Zur Offline-Diskussion vertagt, um vor einer formellen Abstimmung einen Konsens zu erzielen.</p>
+
+                        <h2>11. Standort des Gel&auml;ndes</h2>
+                        <p>Ward D brachte die M&ouml;glichkeit ins Gespr&auml;ch, einen alternativen Standort f&uuml;r die Veranstaltung zu erkunden.</p>
+                        <p><strong>Beschluss:</strong> Das Thema wird in der Gemeinschaftsversammlung zur breiteren Diskussion eingebracht. Pablo V bot an, Standortoptionen vorzustellen.</p>
+
+                        <h2>Ma&szlig;nahmenpunkte</h2>
+                        <ol>
+                            <li><strong>Daniel T</strong> &mdash; Starterkl&auml;rung ver&ouml;ffentlichen; Diskussion &uuml;ber neuen Standort auf die Tagesordnung der Gemeinschaftsversammlung setzen; Mitgliedschaftsfragen nachgehen; Vorstandsthread f&uuml;r Ticketing-Anforderungen erstellen</li>
+                            <li><strong>Ben D</strong> &mdash; Starterkl&auml;rung &uuml;berpr&uuml;fen; st&auml;ndigen Kommunikationspunkt zur Vorstands-Sitzungsvorlage hinzuf&uuml;gen</li>
+                            <li><strong>Pepe C</strong> &mdash; Tabelle f&uuml;r Darlehen der Gr&uuml;ndungsmitglieder erstellen; Diskussionen &uuml;ber Verm&ouml;genswerte mit dem Rechtsberater fortsetzen</li>
+                            <li><strong>Michelle T und Pablo V</strong> &mdash; Mitgliedschaftsfragen mit den betreffenden Parteien nachverfolgen</li>
+                            <li><strong>Pablo V</strong> &mdash; Lokale Mitglieder des Kommunikationsteams informieren</li>
+                        </ol>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -127,5 +405,18 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

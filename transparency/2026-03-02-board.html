@@ -24,24 +24,16 @@
         .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
         .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
         .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
-        .meeting-content blockquote {
-            margin: 1.25rem 0;
-            padding: 0.75rem 1rem;
-            border-left: 4px solid var(--color-border);
-            background: var(--color-bg-secondary);
-            color: var(--color-text);
-        }
+        .meeting-content blockquote { margin: 1.25rem 0; padding: 0.75rem 1rem; border-left: 4px solid var(--color-border); background: var(--color-bg-secondary); color: var(--color-text); }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
-        .note-box {
-            margin: 1.25rem 0 2rem;
-            padding: 0.75rem 1rem;
-            border: 1px solid var(--color-border);
-            border-radius: 8px;
-            background: #fff;
-            color: var(--color-text-muted);
-            font-style: italic;
-        }
+        .note-box { margin: 1.25rem 0 2rem; padding: 0.75rem 1rem; border: 1px solid var(--color-border); border-radius: 8px; background: #fff; color: var(--color-text-muted); font-style: italic; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -60,6 +52,16 @@
                     </div>
                 </div>
 
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <div class="lang-content active" data-lang="en">
+                    <p class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</p>
                 <div class="attendees">
                     <strong>Board members present:</strong> Ben D, Peter D, Pablo V, Chris T O, Ward D, Daniel T, Michelle T, Victor P
                     <br><strong>Non-board attendees:</strong> Pepe C (Legal Counsel), Daniela M S (Production Manager)
@@ -184,12 +186,538 @@
                         <li><strong>All board members</strong> &mdash; Log into Humans app to approve pending collaborators</li>
                     </ol>
                 </div>
+                </div>
+
+                <div class="lang-content" data-lang="es">
+<div class="attendees">
+    <strong>Miembros de la junta presentes:</strong> Ben D, Peter D, Pablo V, Chris T O, Ward D, Daniel T, Michelle T, Victor P
+    <br><strong>Asistentes no pertenecientes a la junta:</strong> Pepe C (Asesor Legal), Daniela M S (Directora de Producci&oacute;n)
+</div>
+
+<p class="note-box">Nota: La junta vot&oacute; durante esta reuni&oacute;n publicar estas actas con menos edici&oacute;n de lo habitual, con el fin de proporcionar a la comunidad mayor detalle sobre la discusi&oacute;n del go/no-go.</p>
+
+<div class="meeting-content">
+    <h2>1. Revisi&oacute;n de la Agenda</h2>
+    <p>Se revis&oacute; y acept&oacute; la agenda. Los puntos se ordenaron para abordar primero los asuntos de r&aacute;pida resoluci&oacute;n. Pablo V propuso mover la discusi&oacute;n sobre el &ldquo;Nuevo Sitio&rdquo; despu&eacute;s del punto de &ldquo;Relaciones Externas&rdquo;. Se acept&oacute; la propuesta.</p>
+
+    <h2>2. Ronda de Intervenciones</h2>
+    <p>Los participantes compartieron sus perspectivas actuales antes de los puntos sustantivos de la agenda:</p>
+    <ul>
+        <li><strong>Chris T O</strong> &mdash; Se sent&iacute;a muy bien; reserv&oacute; sus comentarios para la discusi&oacute;n de la votaci&oacute;n.</li>
+        <li><strong>Pablo V</strong> &mdash; Sent&iacute;a que se hab&iacute;a levantado un peso de incertidumbre; m&aacute;s ligero y entusiasmado.</li>
+        <li><strong>Ward D</strong> &mdash; Necesitaba ponerse al d&iacute;a, ya que se hab&iacute;a perdido la semana anterior y la votaci&oacute;n.</li>
+        <li><strong>Daniel T</strong> &mdash; Expres&oacute; frustraci&oacute;n y cansancio con el drama pol&iacute;tico en torno a la decisi&oacute;n de go/no-go; esperaba poder dejarlo atr&aacute;s y centrarse en la planificaci&oacute;n del evento.</li>
+        <li><strong>Pepe C</strong> &mdash; Esperanzado en que el drama terminar&iacute;a pronto.</li>
+        <li><strong>Daniela M S</strong> &mdash; Cansada por el volumen de lectura y escritura, pero entusiasmada por la participaci&oacute;n en la votaci&oacute;n, que fue inesperadamente positiva a pesar de las discusiones negativas en Discord.</li>
+        <li><strong>Michelle T</strong> &mdash; Comparti&oacute; buenas noticias personales; de buen &aacute;nimo.</li>
+        <li><strong>Ben D</strong> &mdash; Se sent&iacute;a bien tras un fin de semana relajante.</li>
+    </ul>
+    <p>Se confirm&oacute; como aceptada la agenda de la reuni&oacute;n anterior.</p>
+
+    <h2>3. Enmiendas a los Estatutos</h2>
+    <p>Peter D confirm&oacute; que localizar&iacute;a el documento con las referencias cruzadas y correcciones necesarias para las enmiendas propuestas a los estatutos, con el objetivo de tenerlo listo para el mi&eacute;rcoles.</p>
+    <p>El grupo discuti&oacute; si ser&iacute;a necesaria una Asamblea General para las enmiendas. Pepe C confirm&oacute; que, dado que los ocho miembros con derecho a voto estaban presentes, pod&iacute;an agilizar el proceso haciendo que los ocho firmaran el documento directamente.</p>
+    <p><strong>Decisi&oacute;n:</strong> Pepe C preparar&aacute; los documentos para su firma tras recibir los detalles de correcciones de Peter D. Objetivo: completarlo esta semana.</p>
+
+    <h2>4. Propuesta de Asesor&iacute;a Legal</h2>
+    <p>Pablo V present&oacute; una propuesta de asesor&iacute;a legal que cubre C&oacute;digo de Conducta, RGPD, t&eacute;rminos y condiciones, y otras pol&iacute;ticas.</p>
+    <ul>
+        <li><strong>Coste:</strong> 5.700 EUR (m&aacute;s IVA)</li>
+        <li><strong>Plazo inicial:</strong> 3 meses de soporte</li>
+        <li><strong>Negociaci&oacute;n propuesta:</strong> Extender el per&iacute;odo de soporte a 6&ndash;9 meses al mismo precio</li>
+    </ul>
+    <p>Puntos clave de la discusi&oacute;n:</p>
+    <ul>
+        <li><strong>Peter D</strong> consider&oacute; razonables ~500 EUR/mes y prefiri&oacute; extenderlo a un a&ntilde;o completo para evitar ambig&uuml;edad sobre los costes legales anuales.</li>
+        <li><strong>Ben D</strong> confirm&oacute; que no hab&iacute;a inconveniente en aceptar el acuerdo y luego negociar una duraci&oacute;n mayor.</li>
+        <li><strong>Pepe C</strong> aconsej&oacute; ampliar el plazo a al menos seis meses debido a la lenta ejecuci&oacute;n esperada, y sugiri&oacute; a&ntilde;adir hitos para que el pago se base en entregas en lugar de un plazo fijo, transfiriendo el riesgo de retrasos a los abogados.</li>
+        <li><strong>Daniel T</strong> se ofreci&oacute; a cubrir el primer pago para aliviar la carga financiera inmediata mientras se establece la cuenta bancaria de la asociaci&oacute;n.</li>
+    </ul>
+    <p><strong>Decisi&oacute;n:</strong> La junta autoriz&oacute; aceptar el precio y la estructura de tres pagos, y autoriz&oacute; a Pablo V y Pepe C a negociar una cl&aacute;usula de seguimiento que extienda el soporte a 6&ndash;9 meses con pagos basados en hitos. Actualizaci&oacute;n esperada para el jueves.</p>
+
+    <h2>5. Actualizaci&oacute;n de Relaciones Externas</h2>
+    <p>Pepe C proporcion&oacute; una breve actualizaci&oacute;n. El objetivo principal actual es establecer canales de comunicaci&oacute;n directa entre abogados. Chris T O se ofreci&oacute; a asistir a cualquier reuni&oacute;n presencial si fuera &uacute;til.</p>
+
+    <h2>6. Resultados de la Votaci&oacute;n Go/No-Go &mdash; Discusi&oacute;n</h2>
+    <p>La votaci&oacute;n comunitaria sobre si proceder con un evento result&oacute; en un <strong>65% S&iacute;</strong>. Daniel T abri&oacute; la discusi&oacute;n, se&ntilde;alando que el resultado ya estaba siendo interpretado de diversas maneras en los canales comunitarios. Enfatiz&oacute; la necesidad de que la junta acordara un breve comunicado ese mismo d&iacute;a y uno m&aacute;s completo para la reuni&oacute;n comunitaria del jueves.</p>
+
+    <h3>Posiciones Individuales</h3>
+
+    <h4>Daniel T</h4>
+    <p>Personalmente decepcionado de que el voto afirmativo no superara el 70%. Se&ntilde;al&oacute; confusi&oacute;n durante el proceso de votaci&oacute;n simult&aacute;nea e inst&oacute; a la junta a simplificar las votaciones futuras. Interpret&oacute; el 65% de S&iacute; como un mandato para &ldquo;alg&uacute;n tipo de evento&rdquo;.</p>
+
+    <h4>Chris T O</h4>
+    <p>Se&ntilde;al&oacute; que la participaci&oacute;n y el porcentaje fueron aproximadamente 10 puntos porcentuales inferiores al 75% esperado, lo que plantea cuestiones de gobernanza y sobre la naturaleza del evento. Preocupado por la percepci&oacute;n de bajo entusiasmo por el &ldquo;S&iacute;&rdquo; y sugiri&oacute; investigar qu&eacute; preocupaciones llevaron a la gente a votar &ldquo;No&rdquo; &mdash; potencialmente para abordar esas preocupaciones y sumarlos. Sugiri&oacute; posiblemente reestructurar el evento como un &ldquo;evento de trabajo&rdquo;.</p>
+
+    <h4>Pepe C (no miembro de la junta)</h4>
+    <p>Sentimientos encontrados. Consider&oacute; el resultado como positivo y viable a pesar de la dispersi&oacute;n. Subray&oacute; la necesidad de mostrar claridad para impulsar el entusiasmo. Enfatiz&oacute; la importancia de distinguir entre quienes nunca cambiar&aacute;n de opini&oacute;n y quienes solo son cautelosos &mdash; el grupo cauteloso puede potencialmente ser convencido.</p>
+
+    <h4>Daniela M S (no miembro de la junta)</h4>
+    <p>Ofreci&oacute; una perspectiva m&aacute;s optimista: la participaci&oacute;n del 67,2% de los votantes fue bastante alta y exitosa, especialmente comparada con los niveles t&iacute;picos de participaci&oacute;n en votaciones comunitarias similares. Sinti&oacute; que el ruido de la oposici&oacute;n se concentraba en Discord y no representaba a la comunidad en general. Inform&oacute; que, seg&uacute;n conversaciones con l&iacute;deres de departamento, la situaci&oacute;n de voluntarios y las se&ntilde;ales de crisis no eran tan graves como se percib&iacute;a, con personas trabajando activamente en soluciones. Insisti&oacute; en la necesidad de un equipo dedicado de comunicaciones para difundir informaci&oacute;n y contrarrestar narrativas negativas, citando la importancia de este rol en otros burns.</p>
+
+    <h4>Ben D</h4>
+    <p>Consider&oacute; el 65% como ambiguamente intermedio &mdash; una votaci&oacute;n de S&iacute; exitosa pero sin una certeza abrumadora. Encontr&oacute; alentador el 80% de disposici&oacute;n a participar (tanto de votantes del S&iacute; como del No), lo que sugiere que muchos votantes del No se involucrar&iacute;an si la junta decidiera seguir adelante. Se inclin&oacute; hacia una decisi&oacute;n positiva de &ldquo;adelante&rdquo; bas&aacute;ndose en los n&uacute;meros y el principio de que un &oacute;rgano central debe movilizar a las personas hacia la acci&oacute;n. Subray&oacute; que seguir adelante solo tiene sentido si el evento aborda activamente el agotamiento y se centra en el dise&ntilde;o organizativo y la planificaci&oacute;n de sostenibilidad. Identific&oacute; dos riesgos cr&iacute;ticos: (1) el riesgo de da&ntilde;ar el evento o la comunidad para futuras ediciones, y (2) la viabilidad financiera del evento.</p>
+
+    <h4>Michelle T</h4>
+    <p>Sorprendida por el alto 35% de votos por el No, encontr&aacute;ndolo sorprendentemente alto. Estuvo de acuerdo con la idea de organizar un encuentro para que los votantes del No expresaran sus razones. Se hizo eco del sentimiento de que la organizaci&oacute;n hist&oacute;ricamente ha gestionado mal las comunicaciones y necesita una mejora masiva. Expres&oacute; inter&eacute;s en explorar un formato de evento diferente, viendo la situaci&oacute;n actual como una oportunidad para repensar y diferenciar el evento. Afirm&oacute; que no estaba convencida de que tomarse un a&ntilde;o libre resultar&iacute;a en perder gente, sugiriendo que podr&iacute;a proporcionar tiempo para &ldquo;podar las cosas&rdquo;.</p>
+
+    <h4>Ward D</h4>
+    <p>Se&ntilde;al&oacute; que de los 42 votantes del No, solo 15 dijeron que no asistir&iacute;an al evento si se llevaba a cabo, pero enfatiz&oacute; que debe haber suficientes voluntarios para roles cruciales. Plante&oacute; la preocupaci&oacute;n (de Tyche) de que las personas que prometen ayudar a menudo no cumplen, especialmente si no asisten al evento. Se&ntilde;al&oacute; que el evento tiene altos costes fijos de arranque, lo que significa que una menor asistencia podr&iacute;a requerir precios de entrada m&aacute;s altos. Sinti&oacute; que estaban perdiendo potenciales voluntarios cada semana a medida que la gente hac&iacute;a otros planes, e inst&oacute; a la urgencia. Sugiri&oacute; priorizar entradas de bajo coste para personas dispuestas a trabajar en la construcci&oacute;n anticipada.</p>
+
+    <h4>Victor P</h4>
+    <p>Estuvo de acuerdo con Ben D y Daniela M S. Recomend&oacute; decidir &ldquo;Go&rdquo;. Reconoci&oacute; que la votaci&oacute;n fue imperfecta pero destac&oacute; la respuesta entusiasta y el impulso sin precedentes actual de auto-organizaci&oacute;n en Discord.</p>
+
+    <h4>Pablo V</h4>
+    <p>Concluy&oacute; que la gobernanza hab&iacute;a funcionado eficazmente &mdash; el resultado de dos a uno de S&iacute; frente a No proporciona una clara preferencia comunitaria para proceder con un evento. Identific&oacute; el principal desaf&iacute;o como prevenir el agotamiento de las personas clave. Propuso comunicar el evento como deliberadamente reducido en escala, reduciendo intencionalmente el alcance para hacerlo m&aacute;s f&aacute;cil de gestionar y generar nueva experiencia y confianza. Subray&oacute; la importancia de atraer nueva energ&iacute;a, ya que el grupo central actual est&aacute; envejeciendo.</p>
+
+    <h3>Decisi&oacute;n de la Junta sobre Go/No-Go</h3>
+    <p>La junta acord&oacute; proceder con un evento del 7 al 12 de julio de 2026. Se public&oacute; el siguiente comunicado:</p>
+    <blockquote>
+        &ldquo;La Junta ha votado ratificar la recomendaci&oacute;n de Go/No-Go: estamos en GO para un evento en Monegros del 7 al 12 de julio de 2026, tras considerar la votaci&oacute;n y los comentarios de la comunidad. M&aacute;s detalles el jueves a las 20:00 CET / 19:00 UK https://meet.google.com/ers-prkd-rzt&rdquo;
+    </blockquote>
+    <p>Ben D elaborar&aacute; un comunicado m&aacute;s completo y detallado para publicar el jueves en la reuni&oacute;n comunitaria.</p>
+    <p><strong>Nota sobre el alcance:</strong> Aunque varios miembros expresaron opiniones sobre la escala y el formato del evento (algunos a favor de un enfoque reducido, otros explorando formatos diferentes), <strong>no se tom&oacute; ninguna decisi&oacute;n formal sobre la escala o la naturaleza del evento</strong> &mdash; solo que se celebrar&aacute; un evento. La cuesti&oacute;n del alcance y formato del evento sigue siendo parte de la consulta en curso.</p>
+
+    <h3>Votaci&oacute;n de Miembros No Pertenecientes a la Junta</h3>
+    <p>Daniel T propuso permitir que los miembros no pertenecientes a la junta, Pepe C y Daniela M S, participaran en la votaci&oacute;n dadas sus perspectivas cr&iacute;ticas. Michelle T no estuvo de acuerdo, se&ntilde;alando el posible conflicto de intereses de Daniela M S (como contratista remunerada). La junta procedi&oacute; con una votaci&oacute;n formal solo de miembros de la junta con siete miembros presentes (qu&oacute;rum alcanzado).</p>
+
+    <h2>7. Extensi&oacute;n del Contrato de Daniela M S</h2>
+    <p>Daniela M S sali&oacute; de la sala para esta discusi&oacute;n. Daniel T propuso renovar su contrato por el siguiente mes de trabajo dada la decisi&oacute;n de proceder con el evento.</p>
+    <ul>
+        <li><strong>Pablo V</strong> se ofreci&oacute; a financiar personalmente la extensi&oacute;n como un pr&eacute;stamo de miembro, que se documentar&iacute;a formalmente como financiaci&oacute;n OPEX a inter&eacute;s cero.</li>
+        <li><strong>Ward D</strong> sugiri&oacute; vincular el contrato a una fecha l&iacute;mite de venta de entradas.</li>
+    </ul>
+    <p><strong>Decisi&oacute;n:</strong> La junta vot&oacute; por unanimidad renovar el contrato de Daniela M S, financiado por un pr&eacute;stamo de miembro de Pablo V.</p>
+
+    <h2>8. Venta de Entradas</h2>
+    <p>Ward D plante&oacute; preocupaciones sobre la falta de plazos para la venta de entradas. El consenso fue que no se pod&iacute;a anunciar inmediatamente una fecha de lanzamiento de venta de entradas &mdash; el tesorero (Peter) y Daniela M S necesitan reunirse primero para discutir escenarios, presupuestos y mitigaci&oacute;n de riesgos.</p>
+    <p><strong>Decisi&oacute;n:</strong> Los plazos de venta de entradas se anunciar&aacute;n la pr&oacute;xima semana tras las discusiones con el tesorero.</p>
+
+    <h2>9. Reuni&oacute;n de MetaLeads</h2>
+    <p>Ward D pregunt&oacute; sobre la pr&oacute;xima reuni&oacute;n de MetaLeads. Ben D confirm&oacute; que la estaba organizando. Daniela M S sugiri&oacute; esperar hasta despu&eacute;s de la llamada comunitaria del jueves para que la reuni&oacute;n pudiera abordar preguntas derivadas de la decisi&oacute;n de &ldquo;go&rdquo;.</p>
+    <p><strong>Decisi&oacute;n:</strong> La reuni&oacute;n de MetaLeads se pospuso a la semana siguiente para permitir una mejor organizaci&oacute;n interna de los equipos. Una encuesta determinar&aacute; la frecuencia de las reuniones.</p>
+    <p>Ben D identific&oacute; como prioridad inmediata consolidar los departamentos y equipos para abordar las carencias cr&iacute;ticas de voluntarios.</p>
+
+    <h2>10. Administrativo</h2>
+    <p>Daniel T record&oacute; a todos que iniciaran sesi&oacute;n en la aplicaci&oacute;n Humans para aprobar colaboradores. Se se&ntilde;al&oacute; a una persona en tr&aacute;mite como posible l&iacute;der de strike.</p>
+
+    <h2>Puntos de Acci&oacute;n</h2>
+    <ol>
+        <li><strong>Peter D</strong> &mdash; Enviar los detalles de correcciones de los estatutos a Pepe C (objetivo: mi&eacute;rcoles)</li>
+        <li><strong>Pepe C</strong> &mdash; Preparar los documentos de enmienda de los estatutos para su firma por los ocho miembros con derecho a voto (objetivo: esta semana)</li>
+        <li><strong>Pablo V y Pepe C</strong> &mdash; Negociar con los asesores legales un plazo de soporte extendido (6&ndash;9 meses) con pagos basados en hitos; informar para el jueves</li>
+        <li><strong>Daniela M S y Michelle T</strong> &mdash; Iniciar conversaci&oacute;n sobre la mejora de la estrategia de comunicaciones de la asociaci&oacute;n</li>
+        <li><strong>Ben D</strong> &mdash; Elaborar un comunicado p&uacute;blico m&aacute;s completo para publicar el jueves</li>
+        <li><strong>Ben D</strong> &mdash; Informar a los l&iacute;deres sobre el calendario de la reuni&oacute;n de MetaLeads; continuar con la planificaci&oacute;n de departamentos</li>
+        <li><strong>Peter D y Daniela M S</strong> &mdash; Reunirse con el tesorero para discutir escenarios de venta de entradas, presupuestos y mitigaci&oacute;n de riesgos</li>
+        <li><strong>Todos los miembros de la junta</strong> &mdash; Iniciar sesi&oacute;n en la aplicaci&oacute;n Humans para aprobar colaboradores pendientes</li>
+    </ol>
+</div>                </div>
+
+                <div class="lang-content" data-lang="fr">
+<p class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</p>
+
+<div class="attendees">
+    <strong>Membres du conseil pr&eacute;sents :</strong> Ben D, Peter D, Pablo V, Chris T O, Ward D, Daniel T, Michelle T, Victor P
+    <br><strong>Participants non membres du conseil :</strong> Pepe C (Conseiller juridique), Daniela M S (Directrice de production)
+</div>
+
+<p class="note-box">Note : Le conseil a vot&eacute; lors de cette r&eacute;union pour publier ces proc&egrave;s-verbaux avec moins d&rsquo;&eacute;dition que d&rsquo;habitude, afin de fournir &agrave; la communaut&eacute; plus de d&eacute;tails sur la discussion go/no-go.</p>
+
+<div class="meeting-content">
+    <h2>1. Revue de l&rsquo;ordre du jour</h2>
+    <p>L&rsquo;ordre du jour a &eacute;t&eacute; examin&eacute; et accept&eacute;. Les points ont &eacute;t&eacute; ordonn&eacute;s pour traiter en premier les sujets pouvant &ecirc;tre r&eacute;solus rapidement. Pablo V a propos&eacute; de d&eacute;placer la discussion sur le &laquo; Nouveau Site &raquo; apr&egrave;s le point &laquo; Relations ext&eacute;rieures &raquo;. La proposition a &eacute;t&eacute; accept&eacute;e.</p>
+
+    <h2>2. Tour de table</h2>
+    <p>Les participants ont partag&eacute; leurs perspectives actuelles avant les points substantifs de l&rsquo;ordre du jour :</p>
+    <ul>
+        <li><strong>Chris T O</strong> &mdash; Se sentait tr&egrave;s bien ; a r&eacute;serv&eacute; ses commentaires pour la discussion sur le vote.</li>
+        <li><strong>Pablo V</strong> &mdash; Sentait qu&rsquo;un poids d&rsquo;incertitude avait &eacute;t&eacute; lev&eacute; ; plus l&eacute;ger et enthousiaste.</li>
+        <li><strong>Ward D</strong> &mdash; Avait besoin de se mettre &agrave; jour, ayant manqu&eacute; la semaine pr&eacute;c&eacute;dente et le vote.</li>
+        <li><strong>Daniel T</strong> &mdash; A exprim&eacute; sa frustration et sa fatigue face au drame politique entourant la d&eacute;cision go/no-go ; esp&eacute;rait pouvoir passer &agrave; autre chose et se concentrer sur la planification de l&rsquo;&eacute;v&eacute;nement.</li>
+        <li><strong>Pepe C</strong> &mdash; Esp&eacute;rait que le drame serait bient&ocirc;t termin&eacute;.</li>
+        <li><strong>Daniela M S</strong> &mdash; Fatigu&eacute;e par le volume de lecture et d&rsquo;&eacute;criture, mais enthousiasm&eacute;e par la participation au vote, qui &eacute;tait &eacute;tonnamment positive malgr&eacute; les discussions n&eacute;gatives sur Discord.</li>
+        <li><strong>Michelle T</strong> &mdash; A partag&eacute; de bonnes nouvelles personnelles ; de bonne humeur.</li>
+        <li><strong>Ben D</strong> &mdash; Se sentait bien apr&egrave;s un week-end reposant.</li>
+    </ul>
+    <p>L&rsquo;ordre du jour de la r&eacute;union pr&eacute;c&eacute;dente a &eacute;t&eacute; confirm&eacute; comme accept&eacute;.</p>
+
+    <h2>3. Amendements aux statuts</h2>
+    <p>Peter D a confirm&eacute; qu&rsquo;il localiserait le document contenant les r&eacute;f&eacute;rences crois&eacute;es et corrections n&eacute;cessaires pour les amendements propos&eacute;s aux statuts, avec l&rsquo;objectif de l&rsquo;avoir pr&ecirc;t pour mercredi.</p>
+    <p>Le groupe a discut&eacute; de la n&eacute;cessit&eacute; d&rsquo;une Assembl&eacute;e G&eacute;n&eacute;rale pour les amendements. Pepe C a confirm&eacute; que, puisque les huit membres votants &eacute;taient pr&eacute;sents, ils pouvaient simplifier le processus en faisant signer le document directement par les huit.</p>
+    <p><strong>D&eacute;cision :</strong> Pepe C pr&eacute;parera les documents pour signature apr&egrave;s r&eacute;ception des d&eacute;tails de corrections de Peter D. Objectif : compl&eacute;ter cette semaine.</p>
+
+    <h2>4. Proposition de conseil juridique</h2>
+    <p>Pablo V a pr&eacute;sent&eacute; une proposition de conseil juridique couvrant le Code de conduite, le RGPD, les conditions g&eacute;n&eacute;rales et d&rsquo;autres politiques.</p>
+    <ul>
+        <li><strong>Co&ucirc;t :</strong> 5 700 EUR (hors TVA)</li>
+        <li><strong>Dur&eacute;e initiale :</strong> 3 mois de support</li>
+        <li><strong>N&eacute;gociation propos&eacute;e :</strong> &Eacute;tendre la p&eacute;riode de support &agrave; 6&ndash;9 mois au m&ecirc;me prix</li>
+    </ul>
+    <p>Points cl&eacute;s de la discussion :</p>
+    <ul>
+        <li><strong>Peter D</strong> a jug&eacute; ~500 EUR/mois raisonnable et a pr&eacute;f&eacute;r&eacute; &eacute;tendre &agrave; une ann&eacute;e compl&egrave;te pour &eacute;viter toute ambigu&iuml;t&eacute; sur les co&ucirc;ts juridiques annuels.</li>
+        <li><strong>Ben D</strong> a confirm&eacute; qu&rsquo;il n&rsquo;y avait aucun inconv&eacute;nient &agrave; accepter l&rsquo;accord puis &agrave; n&eacute;gocier une dur&eacute;e plus longue.</li>
+        <li><strong>Pepe C</strong> a conseill&eacute; d&rsquo;&eacute;tendre la dur&eacute;e &agrave; au moins six mois en raison de l&rsquo;ex&eacute;cution lente attendue, et a sugg&eacute;r&eacute; d&rsquo;ajouter des jalons afin que le paiement soit bas&eacute; sur les livrables plut&ocirc;t que sur un calendrier fixe, transf&eacute;rant le risque de retards aux avocats.</li>
+        <li><strong>Daniel T</strong> a propos&eacute; de couvrir le premier versement, pour all&eacute;ger la charge financi&egrave;re imm&eacute;diate pendant la mise en place du compte bancaire de l&rsquo;association.</li>
+    </ul>
+    <p><strong>D&eacute;cision :</strong> Le conseil a autoris&eacute; l&rsquo;acceptation du prix et de la structure en trois paiements, et a autoris&eacute; Pablo V et Pepe C &agrave; n&eacute;gocier une clause de suivi &eacute;tendant le support &agrave; 6&ndash;9 mois avec des paiements bas&eacute;s sur des jalons. Mise &agrave; jour attendue pour jeudi.</p>
+
+    <h2>5. Mise &agrave; jour des relations ext&eacute;rieures</h2>
+    <p>Pepe C a fourni une br&egrave;ve mise &agrave; jour. L&rsquo;objectif principal actuel est d&rsquo;&eacute;tablir des canaux de communication directe entre avocats. Chris T O a propos&eacute; de participer &agrave; toute r&eacute;union en personne si n&eacute;cessaire.</p>
+
+    <h2>6. R&eacute;sultats du vote Go/No-Go &mdash; Discussion</h2>
+    <p>Le vote communautaire sur la tenue d&rsquo;un &eacute;v&eacute;nement a donn&eacute; <strong>65 % Oui</strong>. Daniel T a ouvert la discussion, notant que le r&eacute;sultat &eacute;tait d&eacute;j&agrave; interpr&eacute;t&eacute; de diverses mani&egrave;res sur les canaux communautaires. Il a soulign&eacute; la n&eacute;cessit&eacute; pour le conseil de convenir d&rsquo;un bref communiqu&eacute; le jour m&ecirc;me et d&rsquo;un communiqu&eacute; plus complet pour la r&eacute;union communautaire de jeudi.</p>
+
+    <h3>Positions individuelles</h3>
+
+    <h4>Daniel T</h4>
+    <p>Personnellement d&eacute;&ccedil;u que le vote Oui n&rsquo;ait pas d&eacute;pass&eacute; 70 %. A signal&eacute; une confusion lors du processus de vote simultan&eacute; et a exhort&eacute; le conseil &agrave; simplifier les votes futurs. A interpr&eacute;t&eacute; les 65 % de Oui comme un mandat pour &laquo; un certain type d&rsquo;&eacute;v&eacute;nement &raquo;.</p>
+
+    <h4>Chris T O</h4>
+    <p>A not&eacute; que la participation et le pourcentage &eacute;taient environ 10 points de pourcentage inf&eacute;rieurs aux 75 % esp&eacute;r&eacute;s, ce qui soul&egrave;ve des questions de gouvernance et sur la nature de l&rsquo;&eacute;v&eacute;nement. Inquiet de la perception d&rsquo;un faible enthousiasme pour le &laquo; Oui &raquo; et a sugg&eacute;r&eacute; d&rsquo;enqu&ecirc;ter sur les pr&eacute;occupations ayant conduit les gens &agrave; voter &laquo; Non &raquo; &mdash; potentiellement pour r&eacute;pondre &agrave; ces pr&eacute;occupations et les rallier. A sugg&eacute;r&eacute; de potentiellement restructurer l&rsquo;&eacute;v&eacute;nement en un &laquo; &eacute;v&eacute;nement de travail &raquo;.</p>
+
+    <h4>Pepe C (non membre du conseil)</h4>
+    <p>Sentiments mitig&eacute;s. A consid&eacute;r&eacute; le r&eacute;sultat comme positif et exploitable malgr&eacute; la dispersion. A insist&eacute; sur la n&eacute;cessit&eacute; de montrer de la clart&eacute; pour stimuler l&rsquo;enthousiasme. A soulign&eacute; l&rsquo;importance de distinguer entre ceux qui ne changeront jamais d&rsquo;avis et ceux qui sont simplement prudents &mdash; le groupe prudent peut potentiellement &ecirc;tre convaincu.</p>
+
+    <h4>Daniela M S (non membre du conseil)</h4>
+    <p>A offert une perspective plus optimiste : la participation de 67,2 % des &eacute;lecteurs &eacute;tait assez &eacute;lev&eacute;e et r&eacute;ussie, surtout compar&eacute;e aux niveaux de participation typiques pour des votes communautaires similaires. A estim&eacute; que le bruit de l&rsquo;opposition se concentrait sur Discord et ne repr&eacute;sentait pas la communaut&eacute; dans son ensemble. A rapport&eacute; que, d&rsquo;apr&egrave;s ses conversations avec les responsables de d&eacute;partements, la situation des b&eacute;n&eacute;voles et les signaux de crise n&rsquo;&eacute;taient pas aussi graves que per&ccedil;us, des personnes travaillant activement sur des solutions. A insist&eacute; sur la n&eacute;cessit&eacute; d&rsquo;une &eacute;quipe de communication d&eacute;di&eacute;e pour diffuser l&rsquo;information et contrer les r&eacute;cits n&eacute;gatifs, citant l&rsquo;importance de ce r&ocirc;le dans d&rsquo;autres burns.</p>
+
+    <h4>Ben D</h4>
+    <p>A consid&eacute;r&eacute; les 65 % comme un r&eacute;sultat ambigu au milieu &mdash; un vote Oui r&eacute;ussi mais sans certitude &eacute;crasante. A trouv&eacute; encourageant le 80 % de volont&eacute; de participer (parmi les votants Oui et Non), sugg&eacute;rant que de nombreux votants du Non s&rsquo;impliqueraient si le conseil d&eacute;cidait de poursuivre. S&rsquo;est orient&eacute; vers une d&eacute;cision positive de &laquo; allons-y &raquo; bas&eacute;e sur les chiffres et le principe qu&rsquo;un organe central doit mobiliser les gens vers l&rsquo;action. A soulign&eacute; que poursuivre n&rsquo;a de sens que si l&rsquo;&eacute;v&eacute;nement s&rsquo;attaque activement &agrave; l&rsquo;&eacute;puisement et se concentre sur la conception organisationnelle et la planification de la durabilit&eacute;. A identifi&eacute; deux risques critiques : (1) le risque de nuire &agrave; l&rsquo;&eacute;v&eacute;nement ou &agrave; la communaut&eacute; pour les &eacute;ditions futures, et (2) la viabilit&eacute; financi&egrave;re de l&rsquo;&eacute;v&eacute;nement.</p>
+
+    <h4>Michelle T</h4>
+    <p>Surprise par le taux &eacute;lev&eacute; de 35 % de Non, le trouvant &eacute;tonnamment haut. A approuv&eacute; l&rsquo;id&eacute;e d&rsquo;organiser une rencontre pour que les votants du Non expriment leurs raisons. A fait &eacute;cho au sentiment que l&rsquo;organisation a historiquement mal g&eacute;r&eacute; les communications et a besoin d&rsquo;une am&eacute;lioration massive. A exprim&eacute; son int&eacute;r&ecirc;t pour explorer un format d&rsquo;&eacute;v&eacute;nement diff&eacute;rent, voyant la situation actuelle comme une opportunit&eacute; de repenser et de diff&eacute;rencier l&rsquo;&eacute;v&eacute;nement. A d&eacute;clar&eacute; ne pas &ecirc;tre convaincue que prendre une ann&eacute;e de pause entra&icirc;nerait une perte de participants, sugg&eacute;rant que cela pourrait fournir du temps pour &laquo; &eacute;laguer les choses &raquo;.</p>
+
+    <h4>Ward D</h4>
+    <p>A not&eacute; que sur les 42 votants du Non, seuls 15 ont d&eacute;clar&eacute; qu&rsquo;ils ne participeraient pas &agrave; l&rsquo;&eacute;v&eacute;nement s&rsquo;il avait lieu, mais a soulign&eacute; qu&rsquo;il faut suffisamment de b&eacute;n&eacute;voles pour les r&ocirc;les essentiels. A soulev&eacute; la pr&eacute;occupation (de Tyche) que les personnes qui promettent d&rsquo;aider ne tiennent souvent pas leur engagement, surtout si elles ne participent pas &agrave; l&rsquo;&eacute;v&eacute;nement. A signal&eacute; que l&rsquo;&eacute;v&eacute;nement a des co&ucirc;ts fixes de d&eacute;marrage &eacute;lev&eacute;s, ce qui signifie qu&rsquo;une participation r&eacute;duite pourrait n&eacute;cessiter des prix de billets plus &eacute;lev&eacute;s. A estim&eacute; qu&rsquo;ils perdaient des b&eacute;n&eacute;voles potentiels chaque semaine &agrave; mesure que les gens faisaient d&rsquo;autres projets, et a insist&eacute; sur l&rsquo;urgence. A sugg&eacute;r&eacute; de donner la priorit&eacute; aux billets &agrave; bas prix pour les personnes pr&ecirc;tes &agrave; travailler sur la construction anticip&eacute;e.</p>
+
+    <h4>Victor P</h4>
+    <p>D&rsquo;accord avec Ben D et Daniela M S. A recommand&eacute; de d&eacute;cider &laquo; Go &raquo;. A reconnu que le vote &eacute;tait imparfait mais a soulign&eacute; la r&eacute;ponse enthousiaste et l&rsquo;&eacute;lan sans pr&eacute;c&eacute;dent actuel d&rsquo;auto-organisation sur Discord.</p>
+
+    <h4>Pablo V</h4>
+    <p>A conclu que la gouvernance avait fonctionn&eacute; efficacement &mdash; le r&eacute;sultat de deux contre un de Oui par rapport au Non fournit une pr&eacute;f&eacute;rence communautaire claire pour la tenue d&rsquo;un &eacute;v&eacute;nement. A identifi&eacute; le principal d&eacute;fi comme la pr&eacute;vention de l&rsquo;&eacute;puisement des personnes cl&eacute;s. A propos&eacute; de communiquer l&rsquo;&eacute;v&eacute;nement comme d&eacute;lib&eacute;r&eacute;ment r&eacute;duit en &eacute;chelle, r&eacute;duisant intentionnellement la port&eacute;e pour le rendre plus facile &agrave; g&eacute;rer et construire une nouvelle exp&eacute;rience et confiance. A soulign&eacute; l&rsquo;importance d&rsquo;attirer une nouvelle &eacute;nergie, car le groupe central actuel vieillit.</p>
+
+    <h3>D&eacute;cision du conseil sur le Go/No-Go</h3>
+    <p>Le conseil a d&eacute;cid&eacute; de proc&eacute;der &agrave; un &eacute;v&eacute;nement du 7 au 12 juillet 2026. Le communiqu&eacute; suivant a &eacute;t&eacute; publi&eacute; :</p>
+    <blockquote>
+        &laquo; Le Conseil a vot&eacute; pour ratifier la recommandation Go/No-Go : nous sommes GO pour un &eacute;v&eacute;nement &agrave; Monegros du 7 au 12 juillet 2026, apr&egrave;s examen du vote et des retours de la communaut&eacute;. Plus de d&eacute;tails jeudi &agrave; 20h00 CET / 19h00 UK https://meet.google.com/ers-prkd-rzt &raquo;
+    </blockquote>
+    <p>Ben D &eacute;laborera un communiqu&eacute; plus complet et d&eacute;taill&eacute; pour publication jeudi lors de la r&eacute;union communautaire.</p>
+    <p><strong>Note sur la port&eacute;e :</strong> Bien que plusieurs membres aient exprim&eacute; des avis sur l&rsquo;&eacute;chelle et le format de l&rsquo;&eacute;v&eacute;nement (certains en faveur d&rsquo;une approche r&eacute;duite, d&rsquo;autres explorant des formats diff&eacute;rents), <strong>aucune d&eacute;cision formelle n&rsquo;a &eacute;t&eacute; prise sur l&rsquo;&eacute;chelle ou la nature de l&rsquo;&eacute;v&eacute;nement</strong> &mdash; seulement qu&rsquo;un &eacute;v&eacute;nement aura lieu. La question de la port&eacute;e et du format de l&rsquo;&eacute;v&eacute;nement reste partie de la consultation en cours.</p>
+
+    <h3>Vote des membres non membres du conseil</h3>
+    <p>Daniel T a propos&eacute; de permettre aux non-membres du conseil, Pepe C et Daniela M S, de participer au vote &eacute;tant donn&eacute; leurs perspectives essentielles. Michelle T n&rsquo;&eacute;tait pas d&rsquo;accord, notant le potentiel conflit d&rsquo;int&eacute;r&ecirc;ts de Daniela M S (en tant que prestataire r&eacute;mun&eacute;r&eacute;e). Le conseil a proc&eacute;d&eacute; &agrave; un vote formel r&eacute;serv&eacute; aux membres du conseil avec sept membres pr&eacute;sents (quorum atteint).</p>
+
+    <h2>7. Extension du contrat de Daniela M S</h2>
+    <p>Daniela M S a quitt&eacute; la salle pour cette discussion. Daniel T a propos&eacute; de renouveler son contrat pour le mois de travail suivant, &eacute;tant donn&eacute; la d&eacute;cision de poursuivre avec l&rsquo;&eacute;v&eacute;nement.</p>
+    <ul>
+        <li><strong>Pablo V</strong> a propos&eacute; de financer personnellement l&rsquo;extension sous forme de pr&ecirc;t de membre, &agrave; documenter formellement comme financement OPEX &agrave; taux z&eacute;ro.</li>
+        <li><strong>Ward D</strong> a sugg&eacute;r&eacute; de lier le contrat &agrave; une date limite de mise en vente des billets.</li>
+    </ul>
+    <p><strong>D&eacute;cision :</strong> Le conseil a vot&eacute; &agrave; l&rsquo;unanimit&eacute; le renouvellement du contrat de Daniela M S, financ&eacute; par un pr&ecirc;t de membre de Pablo V.</p>
+
+    <h2>8. Billetterie</h2>
+    <p>Ward D a soulev&eacute; des pr&eacute;occupations quant &agrave; l&rsquo;absence de dates limites pour la vente de billets. Le consensus &eacute;tait qu&rsquo;une date de lancement de la billetterie ne pouvait pas &ecirc;tre annonc&eacute;e imm&eacute;diatement &mdash; le tr&eacute;sorier (Peter) et Daniela M S doivent d&rsquo;abord se r&eacute;unir pour discuter des sc&eacute;narios, budgets et mesures d&rsquo;att&eacute;nuation des risques.</p>
+    <p><strong>D&eacute;cision :</strong> Les d&eacute;lais de billetterie seront annonc&eacute;s la semaine prochaine apr&egrave;s les discussions avec le tr&eacute;sorier.</p>
+
+    <h2>9. R&eacute;union MetaLeads</h2>
+    <p>Ward D a demand&eacute; quand aurait lieu la prochaine r&eacute;union MetaLeads. Ben D a confirm&eacute; qu&rsquo;il l&rsquo;organisait. Daniela M S a sugg&eacute;r&eacute; d&rsquo;attendre apr&egrave;s l&rsquo;appel communautaire de jeudi afin que la r&eacute;union puisse traiter les questions d&eacute;coulant de la d&eacute;cision &laquo; go &raquo;.</p>
+    <p><strong>D&eacute;cision :</strong> La r&eacute;union MetaLeads a &eacute;t&eacute; report&eacute;e &agrave; la semaine suivante pour permettre une meilleure organisation interne des &eacute;quipes. Un sondage d&eacute;terminera la fr&eacute;quence des r&eacute;unions.</p>
+    <p>Ben D a identifi&eacute; comme priorit&eacute; imm&eacute;diate de consolider les d&eacute;partements et &eacute;quipes pour combler les lacunes critiques en b&eacute;n&eacute;voles.</p>
+
+    <h2>10. Administratif</h2>
+    <p>Daniel T a rappel&eacute; &agrave; tous de se connecter &agrave; l&rsquo;application Humans pour approuver les collaborateurs. Une personne en cours de traitement a &eacute;t&eacute; signal&eacute;e comme potentiel responsable de strike.</p>
+
+    <h2>Points d&rsquo;action</h2>
+    <ol>
+        <li><strong>Peter D</strong> &mdash; Envoyer les d&eacute;tails de correction des statuts &agrave; Pepe C (objectif : mercredi)</li>
+        <li><strong>Pepe C</strong> &mdash; Pr&eacute;parer les documents d&rsquo;amendement des statuts pour signature par les huit membres votants (objectif : cette semaine)</li>
+        <li><strong>Pablo V et Pepe C</strong> &mdash; N&eacute;gocier avec les conseillers juridiques un support &eacute;tendu (6&ndash;9 mois) avec des paiements bas&eacute;s sur des jalons ; rendre compte d&rsquo;ici jeudi</li>
+        <li><strong>Daniela M S et Michelle T</strong> &mdash; Engager une conversation sur l&rsquo;am&eacute;lioration de la strat&eacute;gie de communication de l&rsquo;association</li>
+        <li><strong>Ben D</strong> &mdash; &Eacute;laborer un communiqu&eacute; public plus complet pour publication jeudi</li>
+        <li><strong>Ben D</strong> &mdash; Informer les responsables du calendrier de la r&eacute;union MetaLeads ; poursuivre la planification des d&eacute;partements</li>
+        <li><strong>Peter D et Daniela M S</strong> &mdash; Se r&eacute;unir avec le tr&eacute;sorier pour discuter des sc&eacute;narios de billetterie, des budgets et de l&rsquo;att&eacute;nuation des risques</li>
+        <li><strong>Tous les membres du conseil</strong> &mdash; Se connecter &agrave; l&rsquo;application Humans pour approuver les collaborateurs en attente</li>
+    </ol>
+</div>                </div>
+
+                <div class="lang-content" data-lang="it">
+<p class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</p>
+
+<div class="attendees">
+    <strong>Membri del consiglio presenti:</strong> Ben D, Peter D, Pablo V, Chris T O, Ward D, Daniel T, Michelle T, Victor P
+    <br><strong>Partecipanti non membri del consiglio:</strong> Pepe C (Consulente Legale), Daniela M S (Responsabile di Produzione)
+</div>
+
+<p class="note-box">Nota: Durante questa riunione il consiglio ha votato per pubblicare questi verbali con meno revisione del solito, al fine di fornire alla comunit&agrave; maggiori dettagli sulla discussione go/no-go.</p>
+
+<div class="meeting-content">
+    <h2>1. Revisione dell&rsquo;ordine del giorno</h2>
+    <p>L&rsquo;ordine del giorno &egrave; stato esaminato e approvato. I punti sono stati ordinati per affrontare prima le questioni pi&ugrave; rapide da risolvere. Pablo V ha proposto di spostare la discussione sul &ldquo;Nuovo Sito&rdquo; dopo il punto &ldquo;Relazioni Esterne&rdquo;. La proposta &egrave; stata accettata.</p>
+
+    <h2>2. Giro di tavolo</h2>
+    <p>I partecipanti hanno condiviso le loro prospettive attuali prima di passare all&rsquo;ordine del giorno sostanziale:</p>
+    <ul>
+        <li><strong>Chris T O</strong> &mdash; Si sentiva bene, riservando i propri pensieri per la discussione sul voto.</li>
+        <li><strong>Pablo V</strong> &mdash; Sentiva che il peso dell&rsquo;incertezza si era sollevato; pi&ugrave; leggero ed entusiasta.</li>
+        <li><strong>Ward D</strong> &mdash; Aveva bisogno di aggiornarsi, avendo perso la settimana precedente e la votazione.</li>
+        <li><strong>Daniel T</strong> &mdash; Ha espresso frustrazione e stanchezza per il dramma politico attorno alla decisione go/no-go; sperava di superarlo e concentrarsi sulla pianificazione dell&rsquo;evento.</li>
+        <li><strong>Pepe C</strong> &mdash; Speranzoso che il dramma finisse presto.</li>
+        <li><strong>Daniela M S</strong> &mdash; Stanca per la mole di letture e scritture, ma entusiasta della partecipazione al voto, che &egrave; stata inaspettatamente positiva nonostante le discussioni negative su Discord.</li>
+        <li><strong>Michelle T</strong> &mdash; Ha condiviso buone notizie personali; di buon umore.</li>
+        <li><strong>Ben D</strong> &mdash; Si sentiva bene dopo un fine settimana rilassante.</li>
+    </ul>
+    <p>L&rsquo;ordine del giorno della riunione precedente &egrave; stato confermato come approvato.</p>
+
+    <h2>3. Modifiche allo statuto</h2>
+    <p>Peter D ha confermato che avrebbe individuato il documento con i riferimenti incrociati e le correzioni necessarie per le modifiche statutarie proposte, con l&rsquo;obiettivo di averlo pronto entro mercoled&igrave;.</p>
+    <p>Il gruppo ha discusso se fosse necessaria un&rsquo;Assemblea Generale per le modifiche. Pepe C ha confermato che, essendo presenti tutti e otto i membri votanti, il processo poteva essere semplificato facendo firmare direttamente il documento a tutti e otto.</p>
+    <p><strong>Decisione:</strong> Pepe C preparer&agrave; i documenti per la firma dopo aver ricevuto i dettagli delle correzioni da Peter D. Obiettivo: completamento entro questa settimana.</p>
+
+    <h2>4. Proposta di consulenza legale</h2>
+    <p>Pablo V ha presentato una proposta di consulenza legale riguardante il Codice di Condotta, il GDPR, i termini e le condizioni e altre politiche.</p>
+    <ul>
+        <li><strong>Costo:</strong> 5.700 EUR (pi&ugrave; IVA)</li>
+        <li><strong>Durata iniziale:</strong> 3 mesi di supporto</li>
+        <li><strong>Negoziazione proposta:</strong> Estendere il periodo di supporto a 6&ndash;9 mesi allo stesso prezzo</li>
+    </ul>
+    <p>Punti chiave della discussione:</p>
+    <ul>
+        <li><strong>Peter D</strong> ha ritenuto ragionevoli circa 500 EUR/mese e ha preferito estendere a un anno intero per evitare ambiguit&agrave; sui costi legali annuali.</li>
+        <li><strong>Ben D</strong> ha confermato che non c&rsquo;era alcuno svantaggio nell&rsquo;accettare l&rsquo;accordo per poi negoziare una durata pi&ugrave; lunga.</li>
+        <li><strong>Pepe C</strong> ha consigliato di estendere il termine ad almeno sei mesi a causa della prevista lentezza nell&rsquo;esecuzione, e ha suggerito di aggiungere tappe intermedie affinch&eacute; il pagamento sia basato sulle consegne piuttosto che su un calendario fisso, trasferendo il rischio dei ritardi agli avvocati.</li>
+        <li><strong>Daniel T</strong> si &egrave; offerto di coprire la prima rata di pagamento, per alleviare l&rsquo;onere finanziario immediato mentre viene aperto il conto bancario dell&rsquo;associazione.</li>
+    </ul>
+    <p><strong>Decisione:</strong> Il consiglio ha autorizzato l&rsquo;accettazione del prezzo e della struttura a tre pagamenti, e ha autorizzato Pablo V e Pepe C a negoziare una clausola di follow-up che estenda il supporto a 6&ndash;9 mesi con pagamenti basati su tappe intermedie. Aggiornamento previsto entro gioved&igrave;.</p>
+
+    <h2>5. Aggiornamento sulle relazioni esterne</h2>
+    <p>Pepe C ha fornito un breve aggiornamento. L&rsquo;obiettivo principale attuale &egrave; stabilire canali di comunicazione diretta tra avvocati. Chris T O si &egrave; offerto di partecipare a eventuali incontri di persona se utile.</p>
+
+    <h2>6. Risultati del voto Go/No-Go &mdash; Discussione</h2>
+    <p>Il voto della comunit&agrave; sulla possibilit&agrave; di procedere con un evento ha dato un risultato del <strong>65% S&igrave;</strong>. Daniel T ha aperto la discussione, notando che il risultato veniva gi&agrave; interpretato in vari modi sui canali della comunit&agrave;. Ha sottolineato la necessit&agrave; che il consiglio concordasse su una breve dichiarazione in giornata e su una pi&ugrave; completa entro la riunione comunitaria di gioved&igrave;.</p>
+
+    <h3>Posizioni individuali</h3>
+
+    <h4>Daniel T</h4>
+    <p>Personalmente deluso che il voto S&igrave; non avesse superato il 70%. Ha notato confusione durante il processo di voto simultaneo e ha esortato il consiglio a semplificare le votazioni future. Ha interpretato il 65% di S&igrave; come un mandato per &ldquo;un qualche tipo di evento&rdquo;.</p>
+
+    <h4>Chris T O</h4>
+    <p>Ha osservato che l&rsquo;affluenza e la percentuale erano circa 10 punti percentuali inferiori al 75% sperato, il che solleva questioni sulla governance e sulla natura dell&rsquo;evento. Preoccupato per il percepito scarso entusiasmo per il &ldquo;S&igrave;&rdquo;, ha suggerito di indagare quali preoccupazioni avessero portato le persone a votare &ldquo;No&rdquo; &mdash; potenzialmente per affrontare tali preoccupazioni e coinvolgerle. Ha suggerito di ristrutturare eventualmente l&rsquo;evento in un &ldquo;evento di lavoro&rdquo;.</p>
+
+    <h4>Pepe C (non membro del consiglio)</h4>
+    <p>Sentimenti contrastanti. Ha considerato il risultato positivo e gestibile nonostante la distribuzione. Ha sottolineato la necessit&agrave; di mostrare chiarezza per aumentare l&rsquo;entusiasmo. Ha enfatizzato l&rsquo;importanza di distinguere tra coloro che non cambieranno mai idea e coloro che sono solo cauti &mdash; il gruppo dei cauti pu&ograve; potenzialmente essere conquistato.</p>
+
+    <h4>Daniela M S (non membro del consiglio)</h4>
+    <p>Ha offerto una prospettiva pi&ugrave; ottimista: la partecipazione al voto del 67,2% era piuttosto alta e positiva, specialmente rispetto ai livelli tipici di partecipazione per votazioni comunitarie simili. Riteneva che l&rsquo;opposizione rumorosa fosse concentrata su Discord e non rappresentasse la comunit&agrave; pi&ugrave; ampia. Ha riferito che, in base alle conversazioni con i responsabili dei dipartimenti, la situazione dei volontari e le criticit&agrave; non erano cos&igrave; gravi come percepite, con persone che lavoravano attivamente alle soluzioni. Ha insistito sulla necessit&agrave; di un team di comunicazione dedicato per diffondere informazioni e contrastare le narrazioni negative, citando l&rsquo;importanza di questo ruolo in altri burn.</p>
+
+    <h4>Ben D</h4>
+    <p>Ha visto il 65% come ambiguamente nel mezzo &mdash; un voto S&igrave; riuscito ma non una certezza schiacciante. Ha trovato incoraggiante l&rsquo;80% di disponibilit&agrave; a partecipare (sia da parte dei votanti S&igrave; che No), suggerendo che molti votanti No si sarebbero impegnati se il consiglio avesse deciso di procedere. Propendeva per una decisione positiva &ldquo;facciamolo&rdquo; basata sui numeri e sul principio che un organo centrale dovrebbe mobilitare le persone verso l&rsquo;azione. Ha sottolineato che procedere ha senso solo se l&rsquo;evento affronta attivamente il burnout e si concentra sulla progettazione organizzativa e sulla pianificazione della sostenibilit&agrave;. Ha identificato due rischi critici: (1) il rischio di danneggiare l&rsquo;evento o la comunit&agrave; per le edizioni future, e (2) la sostenibilit&agrave; finanziaria dell&rsquo;evento.</p>
+
+    <h4>Michelle T</h4>
+    <p>Sorpresa dall&rsquo;alto 35% di No, trovandolo sorprendentemente elevato. Ha concordato con l&rsquo;idea di organizzare un incontro per i votanti No per esprimere le loro ragioni. Ha fatto eco al sentimento che l&rsquo;organizzazione ha storicamente gestito male la comunicazione e necessita di un miglioramento massiccio. Ha espresso interesse nell&rsquo;esplorare un formato diverso per l&rsquo;evento, vedendo la situazione attuale come un&rsquo;opportunit&agrave; per ripensare e differenziare l&rsquo;evento. Ha dichiarato di non essere convinta che prendersi un anno di pausa avrebbe comportato la perdita di persone, suggerendo che potrebbe fornire tempo per &ldquo;potare le cose&rdquo;.</p>
+
+    <h4>Ward D</h4>
+    <p>Ha notato che dei 42 votanti No, solo 15 hanno detto che non avrebbero partecipato all&rsquo;evento se fosse andato avanti, ma ha sottolineato che devono esserci abbastanza volontari per i ruoli cruciali. Ha sollevato la preoccupazione (da Tyche) che le persone che promettono di aiutare spesso non mantengono l&rsquo;impegno, specialmente se non partecipano all&rsquo;evento. Ha fatto notare che l&rsquo;evento ha alti costi fissi di avvio, il che significa che una minore partecipazione potrebbe richiedere prezzi dei biglietti pi&ugrave; alti. Sentiva che si stavano perdendo potenziali volontari ogni settimana poich&eacute; le persone facevano altri piani, e ha sollecitato urgenza. Ha suggerito di dare priorit&agrave; ai biglietti a basso reddito per le persone disposte a lavorare alla costruzione anticipata.</p>
+
+    <h4>Victor P</h4>
+    <p>D&rsquo;accordo con Ben D e Daniela M S. Ha raccomandato di decidere &ldquo;Go&rdquo;. Ha riconosciuto che il voto era imperfetto ma ha evidenziato la risposta entusiasta e l&rsquo;attuale slancio senza precedenti di auto-organizzazione su Discord.</p>
+
+    <h4>Pablo V</h4>
+    <p>Ha concluso che la governance aveva funzionato efficacemente &mdash; il risultato di due a uno tra S&igrave; e No fornisce una chiara preferenza della comunit&agrave; per procedere con un evento. Ha identificato la sfida principale nel prevenire il burnout delle persone chiave. Ha proposto di comunicare l&rsquo;evento come deliberatamente ridimensionato, riducendo intenzionalmente la portata per renderlo pi&ugrave; facile da gestire e costruire nuova esperienza e fiducia. Ha sottolineato l&rsquo;importanza di attrarre nuove energie, poich&eacute; il gruppo centrale attuale sta invecchiando.</p>
+
+    <h3>Decisione del consiglio su Go/No-Go</h3>
+    <p>Il consiglio ha concordato di procedere con un evento dal 7 al 12 luglio 2026. La seguente dichiarazione &egrave; stata rilasciata:</p>
+    <blockquote>
+        &ldquo;Il Consiglio ha votato per ratificare la raccomandazione Go/No-Go: siamo GO per un evento a Monegros il 7-12 luglio 2026, dopo aver considerato il voto e il feedback della comunit&agrave;. Maggiori dettagli gioved&igrave; alle 20:00 CET / 19:00 UK https://meet.google.com/ers-prkd-rzt&rdquo;
+    </blockquote>
+    <p>Ben D elaborer&agrave; una dichiarazione pi&ugrave; completa e dettagliata da rilasciare gioved&igrave; alla riunione comunitaria.</p>
+    <p><strong>Nota sulla portata:</strong> Mentre diversi membri hanno espresso opinioni sulla scala e il formato dell&rsquo;evento (alcuni favorevoli a un approccio ridimensionato, altri interessati a esplorare formati diversi), <strong>non &egrave; stata presa alcuna decisione formale sulla scala o la natura dell&rsquo;evento</strong> &mdash; solo che un evento avr&agrave; luogo. La questione della portata e del formato dell&rsquo;evento rimane parte della consultazione in corso.</p>
+
+    <h3>Voto dei membri non del consiglio</h3>
+    <p>Daniel T ha proposto di permettere ai non membri del consiglio Pepe C e Daniela M S di partecipare al voto, date le loro prospettive critiche. Michelle T ha dissentito, notando il potenziale conflitto di interessi di Daniela M S (in quanto collaboratrice retribuita). Il consiglio ha proceduto con un voto formale riservato ai soli membri del consiglio, con sette membri presenti (quorum raggiunto).</p>
+
+    <h2>7. Estensione del contratto di Daniela M S</h2>
+    <p>Daniela M S si &egrave; allontanata per questa discussione. Daniel T ha proposto di rinnovare il suo contratto per il mese successivo di lavoro, data la decisione di procedere con l&rsquo;evento.</p>
+    <ul>
+        <li><strong>Pablo V</strong> si &egrave; offerto di finanziare personalmente l&rsquo;estensione come prestito di un membro, da documentare formalmente come finanziamento OPEX a tasso zero.</li>
+        <li><strong>Ward D</strong> ha suggerito di collegare il contratto a una scadenza per la vendita dei biglietti.</li>
+    </ul>
+    <p><strong>Decisione:</strong> Il consiglio ha votato all&rsquo;unanimit&agrave; per rinnovare il contratto di Daniela M S, finanziato da un prestito di un membro da parte di Pablo V.</p>
+
+    <h2>8. Biglietteria</h2>
+    <p>Ward D ha sollevato preoccupazioni sulla mancanza di scadenze per la vendita dei biglietti. Il consenso &egrave; stato che una data di lancio della biglietteria non potesse essere annunciata immediatamente &mdash; il tesoriere (Peter) e Daniela M S devono prima incontrarsi per discutere scenari, budget e mitigazione dei rischi.</p>
+    <p><strong>Decisione:</strong> Le tempistiche per la biglietteria saranno annunciate la prossima settimana dopo le discussioni con il tesoriere.</p>
+
+    <h2>9. Riunione MetaLeads</h2>
+    <p>Ward D ha chiesto informazioni sulla prossima riunione MetaLeads. Ben D ha confermato che la stava organizzando. Daniela M S ha suggerito di aspettare fino a dopo la call comunitaria di gioved&igrave;, cos&igrave; che la riunione potesse affrontare le domande derivanti dalla decisione &ldquo;go&rdquo;.</p>
+    <p><strong>Decisione:</strong> Riunione MetaLeads posticipata alla settimana successiva per consentire una migliore organizzazione interna dei team. Un sondaggio determiner&agrave; la frequenza delle riunioni.</p>
+    <p>Ben D ha identificato come priorit&agrave; immediata la definizione dei dipartimenti e dei team per affrontare le lacune critiche nei volontari.</p>
+
+    <h2>10. Amministrazione</h2>
+    <p>Daniel T ha ricordato a tutti di accedere all&rsquo;app Humans per approvare i collaboratori. Una persona nella pipeline &egrave; stata segnalata come potenziale responsabile dello strike.</p>
+
+    <h2>Azioni da intraprendere</h2>
+    <ol>
+        <li><strong>Peter D</strong> &mdash; Inviare i dettagli delle correzioni allo statuto a Pepe C (obiettivo: mercoled&igrave;)</li>
+        <li><strong>Pepe C</strong> &mdash; Preparare i documenti di modifica dello statuto per la firma di tutti e otto i membri votanti (obiettivo: questa settimana)</li>
+        <li><strong>Pablo V &amp; Pepe C</strong> &mdash; Negoziare con i consulenti legali per un periodo di supporto esteso (6&ndash;9 mesi) con pagamenti basati su tappe intermedie; aggiornamento entro gioved&igrave;</li>
+        <li><strong>Daniela M S &amp; Michelle T</strong> &mdash; Avviare una conversazione sul miglioramento della strategia di comunicazione dell&rsquo;associazione</li>
+        <li><strong>Ben D</strong> &mdash; Elaborare una dichiarazione pubblica pi&ugrave; completa da rilasciare gioved&igrave;</li>
+        <li><strong>Ben D</strong> &mdash; Informare i responsabili sui tempi della riunione MetaLeads; continuare la pianificazione dei dipartimenti</li>
+        <li><strong>Peter D &amp; Daniela M S</strong> &mdash; Incontro con il tesoriere per discutere scenari di biglietteria, budget e mitigazione dei rischi</li>
+        <li><strong>Tutti i membri del consiglio</strong> &mdash; Accedere all&rsquo;app Humans per approvare i collaboratori in attesa</li>
+    </ol>
+</div>
+                </div>
+
+                <div class="lang-content" data-lang="de">
+<p class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</p>
+
+<div class="attendees">
+    <strong>Anwesende Vorstandsmitglieder:</strong> Ben D, Peter D, Pablo V, Chris T O, Ward D, Daniel T, Michelle T, Victor P
+    <br><strong>Teilnehmer ohne Vorstandsmandat:</strong> Pepe C (Rechtsberater), Daniela M S (Produktionsleiterin)
+</div>
+
+<p class="note-box">Hinweis: Der Vorstand hat w&auml;hrend dieser Sitzung beschlossen, dieses Protokoll mit weniger Bereinigung als &uuml;blich zu ver&ouml;ffentlichen, um der Gemeinschaft mehr Details zur Go/No-Go-Diskussion zu liefern.</p>
+
+<div class="meeting-content">
+    <h2>1. &Uuml;berpr&uuml;fung der Tagesordnung</h2>
+    <p>Die Tagesordnung wurde gepr&uuml;ft und angenommen. Die Punkte wurden so geordnet, dass schnell l&ouml;sbare Angelegenheiten zuerst behandelt werden. Pablo V schlug vor, die Diskussion &uuml;ber die &ldquo;Neue Website&rdquo; nach dem Punkt &ldquo;Au&szlig;enbeziehungen&rdquo; zu verschieben. Dies wurde angenommen.</p>
+
+    <h2>2. Eingangsrunde</h2>
+    <p>Die Teilnehmer teilten ihre aktuellen Perspektiven vor der inhaltlichen Tagesordnung:</p>
+    <ul>
+        <li><strong>Chris T O</strong> &mdash; F&uuml;hlte sich gut, behielt seine Gedanken f&uuml;r die Abstimmungsdiskussion zur&uuml;ck.</li>
+        <li><strong>Pablo V</strong> &mdash; Sp&uuml;rte, dass die Last der Ungewissheit von ihm abgefallen war; leichter und voller Vorfreude.</li>
+        <li><strong>Ward D</strong> &mdash; Musste sich erst auf den neuesten Stand bringen, da er die Vorwoche und die Abstimmung verpasst hatte.</li>
+        <li><strong>Daniel T</strong> &mdash; &Auml;u&szlig;erte Frustration und M&uuml;digkeit &uuml;ber das politische Drama rund um die Go/No-Go-Entscheidung; hoffte, dies hinter sich zu lassen und sich auf die Veranstaltungsplanung zu konzentrieren.</li>
+        <li><strong>Pepe C</strong> &mdash; Hoffnungsvoll, dass das Drama bald vorbei sein w&uuml;rde.</li>
+        <li><strong>Daniela M S</strong> &mdash; M&uuml;de vom Umfang der Lese- und Schreibarbeit, aber begeistert von der Wahlbeteiligung, die trotz negativer Diskussionen auf Discord unerwartet positiv war.</li>
+        <li><strong>Michelle T</strong> &mdash; Teilte pers&ouml;nliche gute Neuigkeiten; in guter Stimmung.</li>
+        <li><strong>Ben D</strong> &mdash; F&uuml;hlte sich gut nach einem erholsamen Wochenende.</li>
+    </ul>
+    <p>Die Tagesordnung der vorangegangenen Sitzung wurde als angenommen best&auml;tigt.</p>
+
+    <h2>3. Satzungs&auml;nderungen</h2>
+    <p>Peter D best&auml;tigte, dass er das Dokument mit den erforderlichen Querverweisen und Bereinigungen f&uuml;r die vorgeschlagenen Satzungs&auml;nderungen ausfindig machen w&uuml;rde, mit dem Ziel, es bis Mittwoch fertig zu haben.</p>
+    <p>Die Gruppe diskutierte, ob f&uuml;r die &Auml;nderungen eine Generalversammlung erforderlich w&auml;re. Pepe C best&auml;tigte, dass der Prozess vereinfacht werden k&ouml;nne, da alle acht stimmberechtigten Mitglieder anwesend waren, indem alle acht das Dokument direkt unterzeichnen.</p>
+    <p><strong>Beschluss:</strong> Pepe C wird die Dokumente zur Unterzeichnung vorbereiten, nachdem er die Bereinigungsdetails von Peter D erhalten hat. Ziel: Abschluss in dieser Woche.</p>
+
+    <h2>4. Vorschlag f&uuml;r Rechtsberatung</h2>
+    <p>Pablo V stellte einen Vorschlag f&uuml;r Rechtsberatung vor, der den Verhaltenskodex, die DSGVO, die Allgemeinen Gesch&auml;ftsbedingungen und weitere Richtlinien umfasst.</p>
+    <ul>
+        <li><strong>Kosten:</strong> 5.700 EUR (zzgl. MwSt.)</li>
+        <li><strong>Anf&auml;ngliche Laufzeit:</strong> 3 Monate Unterst&uuml;tzung</li>
+        <li><strong>Vorgeschlagene Verhandlung:</strong> Verl&auml;ngerung des Unterst&uuml;tzungszeitraums auf 6&ndash;9 Monate zum gleichen Preis</li>
+    </ul>
+    <p>Wesentliche Diskussionspunkte:</p>
+    <ul>
+        <li><strong>Peter D</strong> hielt ca. 500 EUR/Monat f&uuml;r angemessen und bevorzugte eine Verl&auml;ngerung auf ein ganzes Jahr, um Unklarheiten &uuml;ber die j&auml;hrlichen Rechtskosten zu vermeiden.</li>
+        <li><strong>Ben D</strong> best&auml;tigte, dass es keinen Nachteil habe, die Vereinbarung anzunehmen und anschlie&szlig;end eine l&auml;ngere Laufzeit auszuhandeln.</li>
+        <li><strong>Pepe C</strong> riet dazu, die Laufzeit auf mindestens sechs Monate zu verl&auml;ngern, da mit einer langsamen Umsetzung zu rechnen sei, und schlug vor, Meilensteine hinzuzuf&uuml;gen, damit die Zahlung auf der Lieferung basiert statt auf einem festen Zeitplan, wodurch das Verz&ouml;gerungsrisiko auf die Anw&auml;lte &uuml;bertragen wird.</li>
+        <li><strong>Daniel T</strong> bot an, die erste Zahlungsrate zu &uuml;bernehmen, um die unmittelbare finanzielle Belastung zu lindern, w&auml;hrend das Bankkonto des Vereins eingerichtet wird.</li>
+    </ul>
+    <p><strong>Beschluss:</strong> Der Vorstand genehmigte die Annahme des Preises und der Drei-Raten-Struktur und erm&auml;chtigte Pablo V und Pepe C, eine Folgeklausel auszuhandeln, die die Unterst&uuml;tzung auf 6&ndash;9 Monate mit meilensteinbasierten Zahlungen verl&auml;ngert. Aktualisierung bis Donnerstag erwartet.</p>
+
+    <h2>5. Aktualisierung der Au&szlig;enbeziehungen</h2>
+    <p>Pepe C gab ein kurzes Update. Das prim&auml;re aktuelle Ziel ist die Einrichtung direkter Kommunikationskan&auml;le zwischen den Anw&auml;lten. Chris T O bot an, bei Bedarf an pers&ouml;nlichen Treffen teilzunehmen.</p>
+
+    <h2>6. Ergebnisse der Go/No-Go-Abstimmung &mdash; Diskussion</h2>
+    <p>Die Abstimmung der Gemeinschaft dar&uuml;ber, ob eine Veranstaltung stattfinden soll, ergab <strong>65% Ja</strong>. Daniel T er&ouml;ffnete die Diskussion und stellte fest, dass das Ergebnis in den Gemeinschaftskan&auml;len bereits auf verschiedene Weise interpretiert wurde. Er betonte die Notwendigkeit, dass der Vorstand sich noch am selben Tag auf eine kurze Erkl&auml;rung und bis zur Gemeinschaftsversammlung am Donnerstag auf eine umfassendere einigt.</p>
+
+    <h3>Einzelne Positionen</h3>
+
+    <h4>Daniel T</h4>
+    <p>Pers&ouml;nlich entt&auml;uscht, dass das Ja-Ergebnis nicht &uuml;ber 70% lag. Stellte Verwirrung w&auml;hrend des gleichzeitigen Abstimmungsprozesses fest und forderte den Vorstand auf, k&uuml;nftige Abstimmungen zu vereinfachen. Interpretierte die 65% Ja als Mandat f&uuml;r &ldquo;eine Art von Veranstaltung&rdquo;.</p>
+
+    <h4>Chris T O</h4>
+    <p>Stellte fest, dass die Beteiligung und der Prozentsatz etwa 10 Prozentpunkte unter den erhofften 75% lagen, was Fragen zur Governance und zur Art der Veranstaltung aufwirft. Besorgt &uuml;ber den wahrgenommenen geringen Enthusiasmus f&uuml;r &ldquo;Ja&rdquo;, schlug er vor, zu untersuchen, welche Bedenken die Menschen dazu brachten, mit &ldquo;Nein&rdquo; zu stimmen &mdash; m&ouml;glicherweise um diese Bedenken auszur&auml;umen und sie zu gewinnen. Schlug vor, die Veranstaltung m&ouml;glicherweise als &ldquo;Arbeitsveranstaltung&rdquo; umzustrukturieren.</p>
+
+    <h4>Pepe C (kein Vorstandsmitglied)</h4>
+    <p>Gemischte Gef&uuml;hle. Betrachtete das Ergebnis als positiv und handhabbar trotz der Streuung. Betonte die Notwendigkeit, Klarheit zu zeigen, um die Begeisterung zu steigern. Hob die Bedeutung hervor, zwischen denen zu unterscheiden, die ihre Meinung nie &auml;ndern werden, und denen, die nur vorsichtig sind &mdash; die vorsichtige Gruppe kann potenziell &uuml;berzeugt werden.</p>
+
+    <h4>Daniela M S (kein Vorstandsmitglied)</h4>
+    <p>Bot eine optimistischere Perspektive: Die Wahlbeteiligung von 67,2% war recht hoch und erfolgreich, insbesondere im Vergleich zu typischen Beteiligungsraten bei &auml;hnlichen Gemeinschaftsabstimmungen. War der Meinung, dass der laute Widerstand auf Discord konzentriert war und nicht die breitere Gemeinschaft repr&auml;sentierte. Berichtete, dass die Freiwilligensituation und die Krisenzeichen laut Gespr&auml;chen mit den Abteilungsleitern nicht so schlimm waren wie wahrgenommen, da Menschen aktiv an L&ouml;sungen arbeiteten. Bestand auf der Notwendigkeit eines eigenen Kommunikationsteams, um Informationen zu verbreiten und negativen Narrativen entgegenzuwirken, und verwies auf die Bedeutung dieser Rolle bei anderen Burns.</p>
+
+    <h4>Ben D</h4>
+    <p>Betrachtete die 65% als zweideutig in der Mitte &mdash; ein erfolgreiches Ja-Ergebnis, aber keine &uuml;berw&auml;ltigende Gewissheit. Fand die 80%ige Bereitschaft zur Teilnahme (sowohl von Ja- als auch von Nein-W&auml;hlern) ermutigend, was darauf hindeutet, dass viele Nein-W&auml;hler sich engagieren w&uuml;rden, falls der Vorstand beschlie&szlig;t fortzufahren. Tendierte zu einer positiven &ldquo;Lasst es uns tun&rdquo;-Entscheidung auf Grundlage der Zahlen und des Prinzips, dass ein zentrales Gremium Menschen zum Handeln mobilisieren sollte. Betonte, dass ein Fortfahren nur sinnvoll sei, wenn die Veranstaltung aktiv Burnout angeht und sich auf organisatorische Gestaltung und Nachhaltigkeitsplanung konzentriert. Identifizierte zwei kritische Risiken: (1) das Risiko, die Veranstaltung oder Gemeinschaft f&uuml;r zuk&uuml;nftige Ausgaben zu sch&auml;digen, und (2) die finanzielle Tragf&auml;higkeit der Veranstaltung.</p>
+
+    <h4>Michelle T</h4>
+    <p>&Uuml;berrascht von der hohen Nein-Quote von 35%, die sie als &uuml;berraschend hoch empfand. Stimmte der Idee zu, ein Treffen f&uuml;r Nein-W&auml;hler abzuhalten, um ihre Gr&uuml;nde darzulegen. Teilte die Einsch&auml;tzung, dass die Organisation historisch schlecht kommuniziert hat und eine massive Verbesserung braucht. Zeigte Interesse daran, ein anderes Veranstaltungsformat zu erkunden, und sah die aktuelle Situation als Gelegenheit, die Veranstaltung neu zu denken und zu differenzieren. Erkl&auml;rte, sie sei nicht &uuml;berzeugt, dass eine einj&auml;hrige Pause zum Verlust von Menschen f&uuml;hren w&uuml;rde, und meinte, es k&ouml;nnte Zeit bieten, &ldquo;zur&uuml;ckzuschneiden&rdquo;.</p>
+
+    <h4>Ward D</h4>
+    <p>Stellte fest, dass von den 42 Nein-W&auml;hlern nur 15 sagten, sie w&uuml;rden nicht an der Veranstaltung teilnehmen, falls sie stattfindet, betonte aber, dass gen&uuml;gend Freiwillige f&uuml;r entscheidende Rollen vorhanden sein m&uuml;ssen. Brachte die Sorge (von Tyche) vor, dass Menschen, die versprechen zu helfen, oft nicht durchhalten, besonders wenn sie nicht an der Veranstaltung teilnehmen. Wies darauf hin, dass die Veranstaltung hohe fixe Anlaufkosten hat, was bedeutet, dass eine geringere Teilnehmerzahl h&ouml;here Ticketpreise erfordern k&ouml;nnte. Hatte das Gef&uuml;hl, dass jede Woche potenzielle Freiwillige verloren gehen, da die Leute andere Pl&auml;ne machen, und dr&auml;ngte auf Dringlichkeit. Schlug vor, Tickets f&uuml;r Geringverdiener f&uuml;r Personen zu priorisieren, die bereit sind, beim fr&uuml;hen Aufbau mitzuarbeiten.</p>
+
+    <h4>Victor P</h4>
+    <p>Stimmte Ben D und Daniela M S zu. Empfahl die Entscheidung &ldquo;Go&rdquo;. R&auml;umte ein, dass die Abstimmung nicht perfekt war, hob aber die enthusiastische Resonanz und das gegenw&auml;rtig beispiellose Momentum der Selbstorganisation auf Discord hervor.</p>
+
+    <h4>Pablo V</h4>
+    <p>Kam zu dem Schluss, dass die Governance effektiv funktioniert hatte &mdash; das Zwei-zu-Eins-Ergebnis von Ja zu Nein zeigt eine klare Pr&auml;ferenz der Gemeinschaft f&uuml;r die Durchf&uuml;hrung einer Veranstaltung. Identifizierte als gr&ouml;&szlig;te Herausforderung, zu verhindern, dass Schl&uuml;sselpersonen ausbrennen. Schlug vor, die Veranstaltung als bewusst reduziert zu kommunizieren, den Umfang absichtlich zu verringern, um sie einfacher durchf&uuml;hrbar zu machen und neue Erfahrung und Vertrauen aufzubauen. Betonte die Bedeutung, neue Energie zu gewinnen, da die aktuelle Kerngruppe &auml;lter wird.</p>
+
+    <h3>Vorstandsbeschluss zu Go/No-Go</h3>
+    <p>Der Vorstand beschloss, eine Veranstaltung vom 7. bis 12. Juli 2026 durchzuf&uuml;hren. Die folgende Erkl&auml;rung wurde ver&ouml;ffentlicht:</p>
+    <blockquote>
+        &ldquo;Der Vorstand hat abgestimmt, die Go/No-Go-Empfehlung zu ratifizieren: Wir sind GO f&uuml;r eine Veranstaltung in Monegros am 7.-12. Juli 2026, nach Ber&uuml;cksichtigung der Abstimmung und des Feedbacks der Gemeinschaft. Weitere Details am Donnerstag um 20:00 CET / 19:00 UK https://meet.google.com/ers-prkd-rzt&rdquo;
+    </blockquote>
+    <p>Ben D wird eine ausf&uuml;hrlichere, detailliertere Erkl&auml;rung ausarbeiten, die am Donnerstag bei der Gemeinschaftsversammlung ver&ouml;ffentlicht wird.</p>
+    <p><strong>Anmerkung zum Umfang:</strong> W&auml;hrend mehrere Mitglieder Meinungen &uuml;ber Gr&ouml;&szlig;e und Format der Veranstaltung &auml;u&szlig;erten (einige f&uuml;r einen reduzierten Ansatz, andere f&uuml;r die Erkundung anderer Formate), <strong>wurde keine formelle Entscheidung &uuml;ber den Umfang oder die Art der Veranstaltung getroffen</strong> &mdash; nur, dass eine Veranstaltung stattfinden wird. Die Frage des Veranstaltungsumfangs und -formats bleibt Teil der laufenden Konsultation.</p>
+
+    <h3>Stimmrecht f&uuml;r Nicht-Vorstandsmitglieder</h3>
+    <p>Daniel T schlug vor, den Nicht-Vorstandsmitgliedern Pepe C und Daniela M S angesichts ihrer wichtigen Perspektiven die Teilnahme an der Abstimmung zu erm&ouml;glichen. Michelle T widersprach und verwies auf den m&ouml;glichen Interessenkonflikt von Daniela M S (als bezahlte Auftragnehmerin). Der Vorstand fuhr mit einer formellen Abstimmung nur der Vorstandsmitglieder fort, wobei sieben Mitglieder anwesend waren (Beschlussf&auml;higkeit gegeben).</p>
+
+    <h2>7. Verl&auml;ngerung des Vertrags von Daniela M S</h2>
+    <p>Daniela M S verlie&szlig; den Raum f&uuml;r diese Diskussion. Daniel T schlug vor, ihren Vertrag f&uuml;r den n&auml;chsten Arbeitsmonat zu verl&auml;ngern, angesichts des Beschlusses, mit der Veranstaltung fortzufahren.</p>
+    <ul>
+        <li><strong>Pablo V</strong> bot an, die Verl&auml;ngerung pers&ouml;nlich als Mitgliedsdarlehen zu finanzieren, das formal als OPEX-Finanzierung zu null Zinsen dokumentiert wird.</li>
+        <li><strong>Ward D</strong> schlug vor, den Vertrag an eine Frist f&uuml;r den Ticketverkauf zu kn&uuml;pfen.</li>
+    </ul>
+    <p><strong>Beschluss:</strong> Der Vorstand stimmte einstimmig f&uuml;r die Verl&auml;ngerung des Vertrags von Daniela M S, finanziert durch ein Mitgliedsdarlehen von Pablo V.</p>
+
+    <h2>8. Ticketverkauf</h2>
+    <p>Ward D &auml;u&szlig;erte Bedenken &uuml;ber fehlende Fristen f&uuml;r den Ticketverkauf. Der Konsens war, dass ein Startdatum f&uuml;r den Ticketverkauf nicht sofort angek&uuml;ndigt werden konnte &mdash; der Schatzmeister (Peter) und Daniela M S m&uuml;ssen sich zuerst treffen, um Szenarien, Budgets und Risikominderung zu besprechen.</p>
+    <p><strong>Beschluss:</strong> Die Zeitpl&auml;ne f&uuml;r den Ticketverkauf werden n&auml;chste Woche nach den Gespr&auml;chen mit dem Schatzmeister bekanntgegeben.</p>
+
+    <h2>9. MetaLeads-Treffen</h2>
+    <p>Ward D fragte nach dem n&auml;chsten MetaLeads-Treffen. Ben D best&auml;tigte, dass er es organisiere. Daniela M S schlug vor, bis nach dem Gemeinschaftsanruf am Donnerstag zu warten, damit das Treffen Fragen behandeln kann, die sich aus der &ldquo;Go&rdquo;-Entscheidung ergeben.</p>
+    <p><strong>Beschluss:</strong> MetaLeads-Treffen auf die folgende Woche verschoben, um eine bessere interne Organisation der Teams zu erm&ouml;glichen. Eine Umfrage wird die H&auml;ufigkeit der Treffen bestimmen.</p>
+    <p>Ben D identifizierte als unmittelbare Priorit&auml;t die Festlegung von Abteilungen und Teams, um kritische L&uuml;cken bei den Freiwilligen zu schlie&szlig;en.</p>
+
+    <h2>10. Verwaltung</h2>
+    <p>Daniel T erinnerte alle daran, sich in der Humans-App anzumelden, um Mitarbeiter zu genehmigen. Eine Person in der Pipeline wurde als potenzielle Strike-Leitung vermerkt.</p>
+
+    <h2>Aktionspunkte</h2>
+    <ol>
+        <li><strong>Peter D</strong> &mdash; Bereinigungsdetails zur Satzung an Pepe C senden (Ziel: Mittwoch)</li>
+        <li><strong>Pepe C</strong> &mdash; Dokumente zur Satzungs&auml;nderung zur Unterzeichnung durch alle acht stimmberechtigten Mitglieder vorbereiten (Ziel: diese Woche)</li>
+        <li><strong>Pablo V &amp; Pepe C</strong> &mdash; Mit Rechtsberatern &uuml;ber eine verl&auml;ngerte Unterst&uuml;tzungslaufzeit (6&ndash;9 Monate) mit meilensteinbasierten Zahlungen verhandeln; R&uuml;ckmeldung bis Donnerstag</li>
+        <li><strong>Daniela M S &amp; Michelle T</strong> &mdash; Gespr&auml;ch &uuml;ber die Verbesserung der Kommunikationsstrategie des Vereins beginnen</li>
+        <li><strong>Ben D</strong> &mdash; Eine ausf&uuml;hrlichere &ouml;ffentliche Erkl&auml;rung zur Ver&ouml;ffentlichung am Donnerstag ausarbeiten</li>
+        <li><strong>Ben D</strong> &mdash; Verantwortliche &uuml;ber den Zeitplan des MetaLeads-Treffens informieren; Abteilungsplanung fortsetzen</li>
+        <li><strong>Peter D &amp; Daniela M S</strong> &mdash; Treffen mit dem Schatzmeister zur Besprechung von Ticketszenarien, Budgets und Risikominderung</li>
+        <li><strong>Alle Vorstandsmitglieder</strong> &mdash; In der Humans-App anmelden, um ausstehende Mitarbeiter zu genehmigen</li>
+    </ol>
+</div>
+                </div>
             </div>
         </section>
     </main>
 
     <div id="shared-footer" data-prefix=".."></div>
     <script src="../footer.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 
     <script src="../script.js"></script>
 </body>

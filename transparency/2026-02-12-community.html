@@ -31,6 +31,12 @@
         .resource-links li { margin-bottom: 0.5rem; }
         .resource-links a { color: var(--color-accent); font-weight: 500; }
         .resource-links a:hover { text-decoration: underline; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -50,145 +56,727 @@
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>~40+ attendees including board members, leads, camp leads, and community members</strong>
-                    <strong>Board members present:</strong> Daniel (host), Pablo, Peter
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="resource-links">
-                    <h3>Full Records</h3>
-                    <ul>
-                        <li><a href="2026-02-12-community-transcript.html">Full meeting transcript</a></li>
-                        <li><a href="2026-02-12-community-chat.html">Full chat log</a></li>
-                        <li><a href="https://youtu.be/VaHcAnxq-Z0" target="_blank">Video recording</a> (subject to copyright review)</li>
-                    </ul>
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>~40+ attendees including board members, leads, camp leads, and community members</strong>
+                        <strong>Board members present:</strong> Daniel (host), Pablo, Peter
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-02-12-community-transcript.html">Full meeting transcript</a></li>
+                            <li><a href="2026-02-12-community-chat.html">Full chat log</a></li>
+                            <li><a href="https://youtu.be/VaHcAnxq-Z0" target="_blank">Video recording</a> (subject to copyright review)</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Overview</h2>
+                        <p>Second community meeting of the Nobodies Collective Asociaci&oacute;n (NCA). The meeting featured a production update, barrio survey results, a demo of the new volunteer management app, and an introduction to the community-led Governance Working Group. Significant discussion around the event name, operational readiness, and the path to a go/no-go decision.</p>
+
+                        <h2>Presentations</h2>
+
+                        <h3>Daniela &mdash; Production Update</h3>
+                        <ul>
+                            <li>Daniela has begun building a vendor database, contacting suitable suppliers using publicly available information</li>
+                            <li>Quotes received or in progress for critical services: cabins, Red Cross, generators</li>
+                            <li>Timeline tracking based on comparable event schedules &mdash; currently on track</li>
+                            <li>Permit process underway; Jorge is in contact with local authorities who are cooperative</li>
+                            <li>Vendors are enthusiastic about working with the association</li>
+                            <li>Creating a public, reusable database of vendor information for future use</li>
+                            <li>Departments are encouraged to reach out with their specific needs</li>
+                        </ul>
+
+                        <h3>Daniel &mdash; Barrio Survey Results</h3>
+                        <ul>
+                            <li>~100 responses received from barrio leads and camp members</li>
+                            <li><strong>24 definite yes</strong>, 9 mixed (yes + don&rsquo;t know), 9 don&rsquo;t know, 1 no</li>
+                            <li>Common reasons for uncertainty: lead transitions, event uncertainty creating a self-fulfilling prophecy, logistics questions, desire for a break year by some</li>
+                            <li>Key questions from respondents: Will there be power on site? How will container fees change? Will there be low-income tickets? When do we need a firm answer?</li>
+                            <li>Strong sense of urgency &mdash; uncertainty is causing some people to commit to other events</li>
+                            <li>Even undecided camps expressed support for the event happening</li>
+                            <li>Full anonymised results to be published on the website</li>
+                        </ul>
+
+                        <h3>Peter &mdash; Humans App Demo</h3>
+                        <ul>
+                            <li>New custom-built application at <strong>humans.n.burn.camp</strong> to manage volunteers and team membership</li>
+                            <li>Google sign-in based (required for Google Drive integration)</li>
+                            <li>Features: profile creation, consent/policy acknowledgement with audit trail, team management, resource access control</li>
+                            <li>Automatically manages Google Drive permissions when people join or leave teams</li>
+                            <li>Policy versioning &mdash; when policies update, all members must re-acknowledge</li>
+                            <li>Planned: emergency contact information (board-only visibility), volunteer coordinator role</li>
+                            <li>Addresses GDPR concerns by centralising personal data rather than spreading it across multiple Google Docs</li>
+                            <li>Expected to go live on Sunday for broader sign-up</li>
+                        </ul>
+
+                        <h3>Kate &mdash; Governance Working Group</h3>
+                        <ul>
+                            <li>Community-led initiative to structure the go/no-go decision for 2026</li>
+                            <li>Current members: Kate and Ella, supported by Bambi in a project management capacity</li>
+                            <li>Seeking 1&ndash;2 additional members with expertise in process design or decentralised governance</li>
+                            <li>Aim: non-partisan, credibly neutral process to ensure the community has relevant information</li>
+                            <li>Developing a list of &ldquo;non-negotiables&rdquo; (conditions that must be met for a safe event) vs. important-but-flexible items</li>
+                            <li>May involve a sensemaking or citizens&rsquo; assembly approach, followed by a structured vote</li>
+                            <li>Updates will be posted in the Discord governance channel</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Administrative &amp; Bank Update</h3>
+                        <ul>
+                            <li>Association incorporation complete; tax ID has been issued and is in transit to the lawyer</li>
+                            <li>Bank account opening is the next step once the tax ID document arrives physically &mdash; expected within days</li>
+                            <li>Once the bank account is open: ticket sales, vendor payments, and donations become possible</li>
+                            <li>The association is working to secure the operational assets needed for the event</li>
+                            <li>GDPR compliance requirements are being carefully followed</li>
+                        </ul>
+
+                        <h3>Daniel &mdash; Membership &amp; Board Elections</h3>
+                        <ul>
+                            <li>Membership criteria still being defined &mdash; balancing inclusivity with practical governance (quorum requirements mean a very large membership body could prevent decisions)</li>
+                            <li>Representative democracy approach under consideration: engaged community members who understand the event</li>
+                            <li>Association membership is NOT required to participate, volunteer, lead, or attend the event</li>
+                            <li>Board committed to running an election for additional, more diverse board members</li>
+                            <li>Process requires 45-day notice period and onboarded members</li>
+                            <li>Community members interested in joining the board are encouraged to make themselves known</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Event Name</h3>
+                        <ul>
+                            <li>The &ldquo;Nowhere&rdquo; name is not available to the association</li>
+                            <li>A temporary event name is needed for ticket sales and communications</li>
+                            <li>Community members invited to suggest names via a form (shared on Discord, Telegram, and other channels)</li>
+                            <li>Top suggestions will be put to a vote among approved volunteers registered in the Humans app</li>
+                        </ul>
+
+                        <h2>Key Community Questions &amp; Discussion</h2>
+
+                        <h3>Association Independence</h3>
+                        <p>Several community members asked about the association&rsquo;s legal standing. The board confirmed that the association is an independent legal entity, established through a democratic election process, and focused on building its own operational capability.</p>
+
+                        <h3>Why an Association?</h3>
+                        <p>For those joining the conversation for the first time: an association structure is the appropriate legal form for a volunteer-run community event under Spanish law. The association was founded through a democratic election in December 2025.</p>
+
+                        <h3>Why a New Name?</h3>
+                        <p>This generated significant discussion. Community members expressed strong attachment to the &ldquo;Nowhere&rdquo; name. Some participants in the meeting stated that a temporary name change could be a risk-reduction measure. Multiple creative name suggestions were offered in the chat.</p>
+
+                        <h3>Container Access</h3>
+                        <p>Community members emphasised that containers holding critical infrastructure (build materials, department equipment) are important for a full-scale event. Securing container access is a priority in the association&rsquo;s operational planning.</p>
+
+                        <h3>Event Size and Pricing</h3>
+                        <p>Discussion about whether the event should be smaller this year. The board noted that fixed costs create a minimum viable scale of approximately 2,400&ndash;2,800 attendees. Target ticket price is approximately &euro;275 (blended average including low-income and VIP tickets), similar to comparable community events. The board is actively looking for ways to reduce costs, including a 10% VAT rate (vs. 21% previously).</p>
+
+                        <h3>Lead Recruitment and Continuity</h3>
+                        <p>A community member asked about lead recruitment and retention, noting some Discord channels are quiet. The board acknowledged this is a priority and outlined plans for the Humans app to help organise teams and for a volunteer coordinator to help match people to roles. A departmental structure has been adopted provisionally.</p>
+
+                        <h3>Ticket Sales Timeline</h3>
+                        <p>Previous years typically began ticket sales in February or early March. The community expressed urgency about needing a clear commitment date, as some members need to book leave and are considering alternative events.</p>
+
+                        <h2>Community Expressions</h2>
+                        <ul>
+                            <li>Strong appreciation for the pace of progress and professionalism of the board</li>
+                            <li>Multiple creative event name suggestions in the chat</li>
+                            <li>Offers of practical help (camp infrastructure, build support)</li>
+                            <li>Desire for more information and clearer communication channels</li>
+                            <li>Suggestion to use email and WhatsApp alongside Discord, as some community members find Discord overwhelming</li>
+                        </ul>
+
+                        <h2>Key Dates Mentioned</h2>
+                        <ul>
+                            <li><strong>Event dates (if it proceeds):</strong> July 7&ndash;12, 2026</li>
+                            <li><strong>Setup:</strong> Starting approximately June 15</li>
+                            <li><strong>Strike:</strong> Ending approximately July 22</li>
+                            <li><strong>Humans app launch:</strong> Expected Sunday</li>
+                            <li><strong>Bank account:</strong> Expected within days</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Overview</h2>
-                    <p>Second community meeting of the Nobodies Collecting Asociaci&oacute;n (NCA). The meeting featured a production update, barrio survey results, a demo of the new volunteer management app, and an introduction to the community-led Governance Working Group. Significant discussion around the event name, operational readiness, and the path to a go/no-go decision.</p>
+                <!-- ==================== ESPA&Ntilde;OL ==================== -->
+                <div class="lang-content" data-lang="es">
 
-                    <h2>Presentations</h2>
+                    <div class="attendees">
+                        <strong>~40+ asistentes incluyendo miembros de la junta, responsables de &aacute;rea, l&iacute;deres de barrio y miembros de la comunidad</strong>
+                        <strong>Miembros de la junta presentes:</strong> Daniel (anfitri&oacute;n), Pablo, Peter
+                    </div>
 
-                    <h3>Daniela &mdash; Production Update</h3>
-                    <ul>
-                        <li>Daniela has begun building a vendor database, contacting suitable suppliers using publicly available information</li>
-                        <li>Quotes received or in progress for critical services: cabins, Red Cross, generators</li>
-                        <li>Timeline tracking based on comparable event schedules &mdash; currently on track</li>
-                        <li>Permit process underway; Jorge is in contact with local authorities who are cooperative</li>
-                        <li>Vendors are enthusiastic about working with the association</li>
-                        <li>Creating a public, reusable database of vendor information for future use</li>
-                        <li>Departments are encouraged to reach out with their specific needs</li>
-                    </ul>
+                    <div class="resource-links">
+                        <h3>Registros completos</h3>
+                        <ul>
+                            <li><a href="2026-02-12-community-transcript.html">Transcripci&oacute;n completa de la reuni&oacute;n</a></li>
+                            <li><a href="2026-02-12-community-chat.html">Registro completo del chat</a></li>
+                            <li><a href="https://youtu.be/VaHcAnxq-Z0" target="_blank">Grabaci&oacute;n en v&iacute;deo</a> (sujeta a revisi&oacute;n de derechos de autor)</li>
+                        </ul>
+                    </div>
 
-                    <h3>Daniel &mdash; Barrio Survey Results</h3>
-                    <ul>
-                        <li>~100 responses received from barrio leads and camp members</li>
-                        <li><strong>24 definite yes</strong>, 9 mixed (yes + don&rsquo;t know), 9 don&rsquo;t know, 1 no</li>
-                        <li>Common reasons for uncertainty: lead transitions, event uncertainty creating a self-fulfilling prophecy, logistics questions, desire for a break year by some</li>
-                        <li>Key questions from respondents: Will there be power on site? How will container fees change? Will there be low-income tickets? When do we need a firm answer?</li>
-                        <li>Strong sense of urgency &mdash; uncertainty is causing some people to commit to other events</li>
-                        <li>Even undecided camps expressed support for the event happening</li>
-                        <li>Full anonymised results to be published on the website</li>
-                    </ul>
+                    <div class="meeting-content">
+                        <h2>Resumen</h2>
+                        <p>Segunda reuni&oacute;n comunitaria de la Asociaci&oacute;n Nobodies Collective (NCA). La reuni&oacute;n incluy&oacute; una actualizaci&oacute;n de producci&oacute;n, los resultados de la encuesta de barrios, una demostraci&oacute;n de la nueva aplicaci&oacute;n de gesti&oacute;n de voluntarios y una presentaci&oacute;n del Grupo de Trabajo de Gobernanza liderado por la comunidad. Se debati&oacute; ampliamente sobre el nombre del evento, la preparaci&oacute;n operativa y el camino hacia la decisi&oacute;n de seguir adelante o no.</p>
 
-                    <h3>Peter &mdash; Humans App Demo</h3>
-                    <ul>
-                        <li>New custom-built application at <strong>humans.n.burn.camp</strong> to manage volunteers and team membership</li>
-                        <li>Google sign-in based (required for Google Drive integration)</li>
-                        <li>Features: profile creation, consent/policy acknowledgement with audit trail, team management, resource access control</li>
-                        <li>Automatically manages Google Drive permissions when people join or leave teams</li>
-                        <li>Policy versioning &mdash; when policies update, all members must re-acknowledge</li>
-                        <li>Planned: emergency contact information (board-only visibility), volunteer coordinator role</li>
-                        <li>Addresses GDPR concerns by centralising personal data rather than spreading it across multiple Google Docs</li>
-                        <li>Expected to go live on Sunday for broader sign-up</li>
-                    </ul>
+                        <h2>Presentaciones</h2>
 
-                    <h3>Kate &mdash; Governance Working Group</h3>
-                    <ul>
-                        <li>Community-led initiative to structure the go/no-go decision for 2026</li>
-                        <li>Current members: Kate and Ella, supported by Bambi in a project management capacity</li>
-                        <li>Seeking 1&ndash;2 additional members with expertise in process design or decentralised governance</li>
-                        <li>Aim: non-partisan, credibly neutral process to ensure the community has relevant information</li>
-                        <li>Developing a list of &ldquo;non-negotiables&rdquo; (conditions that must be met for a safe event) vs. important-but-flexible items</li>
-                        <li>May involve a sensemaking or citizens&rsquo; assembly approach, followed by a structured vote</li>
-                        <li>Updates will be posted in the Discord governance channel</li>
-                    </ul>
+                        <h3>Daniela &mdash; Actualizaci&oacute;n de producci&oacute;n</h3>
+                        <ul>
+                            <li>Daniela ha comenzado a construir una base de datos de proveedores, contactando a proveedores adecuados utilizando informaci&oacute;n p&uacute;blicamente disponible</li>
+                            <li>Presupuestos recibidos o en proceso para servicios cr&iacute;ticos: cabinas, Cruz Roja, generadores</li>
+                            <li>Seguimiento de plazos basado en calendarios de eventos comparables &mdash; actualmente en hora</li>
+                            <li>Proceso de permisos en marcha; Jorge est&aacute; en contacto con las autoridades locales, que se muestran cooperativas</li>
+                            <li>Los proveedores est&aacute;n entusiasmados con trabajar con la asociaci&oacute;n</li>
+                            <li>Creando una base de datos p&uacute;blica y reutilizable de informaci&oacute;n de proveedores para uso futuro</li>
+                            <li>Se anima a los departamentos a comunicar sus necesidades espec&iacute;ficas</li>
+                        </ul>
 
-                    <h3>Pablo &mdash; Administrative &amp; Bank Update</h3>
-                    <ul>
-                        <li>Association incorporation complete; tax ID has been issued and is in transit to the lawyer</li>
-                        <li>Bank account opening is the next step once the tax ID document arrives physically &mdash; expected within days</li>
-                        <li>Once the bank account is open: ticket sales, vendor payments, and donations become possible</li>
-                        <li>The association is working to secure the operational assets needed for the event</li>
-                        <li>GDPR compliance requirements are being carefully followed</li>
-                    </ul>
+                        <h3>Daniel &mdash; Resultados de la encuesta de barrios</h3>
+                        <ul>
+                            <li>~100 respuestas recibidas de l&iacute;deres de barrio y miembros de campamentos</li>
+                            <li><strong>24 s&iacute; definitivos</strong>, 9 mixtos (s&iacute; + no s&eacute;), 9 no s&eacute;, 1 no</li>
+                            <li>Razones comunes de incertidumbre: transiciones de liderazgo, la incertidumbre del evento creando una profec&iacute;a autocumplida, preguntas log&iacute;sticas, deseo de un a&ntilde;o de descanso por parte de algunos</li>
+                            <li>Preguntas clave de los encuestados: &iquest;Habr&aacute; electricidad en el recinto? &iquest;C&oacute;mo cambiar&aacute;n las tarifas de contenedores? &iquest;Habr&aacute; entradas de renta reducida? &iquest;Cu&aacute;ndo necesitamos una respuesta firme?</li>
+                            <li>Fuerte sensaci&oacute;n de urgencia &mdash; la incertidumbre est&aacute; haciendo que algunas personas se comprometan con otros eventos</li>
+                            <li>Incluso los campamentos indecisos expresaron su apoyo a la realizaci&oacute;n del evento</li>
+                            <li>Los resultados anonimizados completos se publicar&aacute;n en la web</li>
+                        </ul>
 
-                    <h3>Daniel &mdash; Membership &amp; Board Elections</h3>
-                    <ul>
-                        <li>Membership criteria still being defined &mdash; balancing inclusivity with practical governance (quorum requirements mean a very large membership body could prevent decisions)</li>
-                        <li>Representative democracy approach under consideration: engaged community members who understand the event</li>
-                        <li>Association membership is NOT required to participate, volunteer, lead, or attend the event</li>
-                        <li>Board committed to running an election for additional, more diverse board members</li>
-                        <li>Process requires 45-day notice period and onboarded members</li>
-                        <li>Community members interested in joining the board are encouraged to make themselves known</li>
-                    </ul>
+                        <h3>Peter &mdash; Demostraci&oacute;n de la aplicaci&oacute;n Humans</h3>
+                        <ul>
+                            <li>Nueva aplicaci&oacute;n personalizada en <strong>humans.n.burn.camp</strong> para gestionar voluntarios y membres&iacute;a de equipos</li>
+                            <li>Basada en inicio de sesi&oacute;n con Google (necesario para la integraci&oacute;n con Google Drive)</li>
+                            <li>Funcionalidades: creaci&oacute;n de perfiles, reconocimiento de consentimiento/pol&iacute;ticas con registro de auditor&iacute;a, gesti&oacute;n de equipos, control de acceso a recursos</li>
+                            <li>Gestiona autom&aacute;ticamente los permisos de Google Drive cuando las personas se unen o abandonan equipos</li>
+                            <li>Versionado de pol&iacute;ticas &mdash; cuando se actualizan las pol&iacute;ticas, todos los miembros deben volver a aceptarlas</li>
+                            <li>Previsto: informaci&oacute;n de contacto de emergencia (visible solo para la junta), rol de coordinador de voluntarios</li>
+                            <li>Aborda las preocupaciones del RGPD centralizando los datos personales en lugar de dispersarlos en m&uacute;ltiples Google Docs</li>
+                            <li>Se espera su lanzamiento el domingo para un registro m&aacute;s amplio</li>
+                        </ul>
 
-                    <h3>Pablo &mdash; Event Name</h3>
-                    <ul>
-                        <li>The &ldquo;Nowhere&rdquo; name is not available to the association</li>
-                        <li>A temporary event name is needed for ticket sales and communications</li>
-                        <li>Community members invited to suggest names via a form (shared on Discord, Telegram, and other channels)</li>
-                        <li>Top suggestions will be put to a vote among approved volunteers registered in the Humans app</li>
-                    </ul>
+                        <h3>Kate &mdash; Grupo de Trabajo de Gobernanza</h3>
+                        <ul>
+                            <li>Iniciativa liderada por la comunidad para estructurar la decisi&oacute;n de seguir adelante o no (go/no-go) para 2026</li>
+                            <li>Miembros actuales: Kate y Ella, con el apoyo de Bambi en funciones de gesti&oacute;n de proyectos</li>
+                            <li>Se buscan 1&ndash;2 miembros adicionales con experiencia en dise&ntilde;o de procesos o gobernanza descentralizada</li>
+                            <li>Objetivo: proceso imparcial y cre&iacute;blemente neutral para garantizar que la comunidad disponga de informaci&oacute;n relevante</li>
+                            <li>Elaborando una lista de &laquo;innegociables&raquo; (condiciones que deben cumplirse para un evento seguro) frente a elementos importantes pero flexibles</li>
+                            <li>Puede incluir un enfoque de construcci&oacute;n de sentido o asamblea ciudadana, seguido de una votaci&oacute;n estructurada</li>
+                            <li>Las actualizaciones se publicar&aacute;n en el canal de gobernanza de Discord</li>
+                        </ul>
 
-                    <h2>Key Community Questions &amp; Discussion</h2>
+                        <h3>Pablo &mdash; Actualizaci&oacute;n administrativa y bancaria</h3>
+                        <ul>
+                            <li>Constituci&oacute;n de la asociaci&oacute;n completada; el NIF ha sido emitido y est&aacute; en tr&aacute;nsito hacia el abogado</li>
+                            <li>La apertura de la cuenta bancaria es el siguiente paso una vez que el documento del NIF llegue f&iacute;sicamente &mdash; se espera en d&iacute;as</li>
+                            <li>Una vez abierta la cuenta bancaria: ser&aacute;n posibles la venta de entradas, los pagos a proveedores y las donaciones</li>
+                            <li>La asociaci&oacute;n est&aacute; trabajando para asegurar los activos operativos necesarios para el evento</li>
+                            <li>Se est&aacute;n cumpliendo cuidadosamente los requisitos de conformidad con el RGPD</li>
+                        </ul>
 
-                    <h3>Association Independence</h3>
-                    <p>Several community members asked about the association&rsquo;s legal standing. The board confirmed that the association is an independent legal entity, established through a democratic election process, and focused on building its own operational capability.</p>
+                        <h3>Daniel &mdash; Membres&iacute;a y elecciones de la junta</h3>
+                        <ul>
+                            <li>Los criterios de membres&iacute;a a&uacute;n se est&aacute;n definiendo &mdash; equilibrando inclusividad con gobernanza pr&aacute;ctica (los requisitos de qu&oacute;rum significan que un cuerpo de miembros muy grande podr&iacute;a impedir las decisiones)</li>
+                            <li>Se est&aacute; considerando un enfoque de democracia representativa: miembros comprometidos de la comunidad que entienden el evento</li>
+                            <li>La membres&iacute;a de la asociaci&oacute;n NO es necesaria para participar, ser voluntario, liderar o asistir al evento</li>
+                            <li>La junta se comprometi&oacute; a celebrar elecciones para miembros adicionales y m&aacute;s diversos</li>
+                            <li>El proceso requiere un per&iacute;odo de preaviso de 45 d&iacute;as y miembros integrados</li>
+                            <li>Se anima a los miembros de la comunidad interesados en unirse a la junta a darse a conocer</li>
+                        </ul>
 
-                    <h3>Why an Association?</h3>
-                    <p>For those joining the conversation for the first time: an association structure is the appropriate legal form for a volunteer-run community event under Spanish law. The association was founded through a democratic election in December 2025.</p>
+                        <h3>Pablo &mdash; Nombre del evento</h3>
+                        <ul>
+                            <li>El nombre &laquo;Nowhere&raquo; no est&aacute; disponible para la asociaci&oacute;n</li>
+                            <li>Se necesita un nombre temporal para la venta de entradas y las comunicaciones</li>
+                            <li>Se invita a los miembros de la comunidad a sugerir nombres a trav&eacute;s de un formulario (compartido en Discord, Telegram y otros canales)</li>
+                            <li>Las mejores sugerencias se someter&aacute;n a votaci&oacute;n entre los voluntarios aprobados registrados en la aplicaci&oacute;n Humans</li>
+                        </ul>
 
-                    <h3>Why a New Name?</h3>
-                    <p>This generated significant discussion. Community members expressed strong attachment to the &ldquo;Nowhere&rdquo; name. Some participants in the meeting stated that a temporary name change could be a risk-reduction measure. Multiple creative name suggestions were offered in the chat.</p>
+                        <h2>Preguntas clave de la comunidad y debate</h2>
 
-                    <h3>Container Access</h3>
-                    <p>Community members emphasised that containers holding critical infrastructure (build materials, department equipment) are important for a full-scale event. Securing container access is a priority in the association&rsquo;s operational planning.</p>
+                        <h3>Independencia de la asociaci&oacute;n</h3>
+                        <p>Varios miembros de la comunidad preguntaron sobre la situaci&oacute;n legal de la asociaci&oacute;n. La junta confirm&oacute; que la asociaci&oacute;n es una entidad jur&iacute;dica independiente, establecida mediante un proceso electoral democr&aacute;tico, y centrada en desarrollar su propia capacidad operativa.</p>
 
-                    <h3>Event Size and Pricing</h3>
-                    <p>Discussion about whether the event should be smaller this year. The board noted that fixed costs create a minimum viable scale of approximately 2,400&ndash;2,800 attendees. Target ticket price is approximately &euro;275 (blended average including low-income and VIP tickets), similar to comparable community events. The board is actively looking for ways to reduce costs, including a 10% VAT rate (vs. 21% previously).</p>
+                        <h3>&iquest;Por qu&eacute; una asociaci&oacute;n?</h3>
+                        <p>Para quienes se unen a la conversaci&oacute;n por primera vez: una estructura de asociaci&oacute;n es la forma jur&iacute;dica apropiada para un evento comunitario gestionado por voluntarios bajo la legislaci&oacute;n espa&ntilde;ola. La asociaci&oacute;n fue fundada mediante una elecci&oacute;n democr&aacute;tica en diciembre de 2025.</p>
 
-                    <h3>Lead Recruitment and Continuity</h3>
-                    <p>A community member asked about lead recruitment and retention, noting some Discord channels are quiet. The board acknowledged this is a priority and outlined plans for the Humans app to help organise teams and for a volunteer coordinator to help match people to roles. A departmental structure has been adopted provisionally.</p>
+                        <h3>&iquest;Por qu&eacute; un nuevo nombre?</h3>
+                        <p>Esto gener&oacute; un debate significativo. Los miembros de la comunidad expresaron un fuerte apego al nombre &laquo;Nowhere&raquo;. Algunos participantes de la reuni&oacute;n se&ntilde;alaron que un cambio temporal de nombre podr&iacute;a ser una medida de reducci&oacute;n de riesgos. Se ofrecieron m&uacute;ltiples sugerencias creativas de nombres en el chat.</p>
 
-                    <h3>Ticket Sales Timeline</h3>
-                    <p>Previous years typically began ticket sales in February or early March. The community expressed urgency about needing a clear commitment date, as some members need to book leave and are considering alternative events.</p>
+                        <h3>Acceso a contenedores</h3>
+                        <p>Los miembros de la comunidad enfatizaron que los contenedores que albergan infraestructura cr&iacute;tica (materiales de construcci&oacute;n, equipamiento de departamentos) son importantes para un evento a gran escala. Asegurar el acceso a los contenedores es una prioridad en la planificaci&oacute;n operativa de la asociaci&oacute;n.</p>
 
-                    <h2>Community Expressions</h2>
-                    <ul>
-                        <li>Strong appreciation for the pace of progress and professionalism of the board</li>
-                        <li>Multiple creative event name suggestions in the chat</li>
-                        <li>Offers of practical help (camp infrastructure, build support)</li>
-                        <li>Desire for more information and clearer communication channels</li>
-                        <li>Suggestion to use email and WhatsApp alongside Discord, as some community members find Discord overwhelming</li>
-                    </ul>
+                        <h3>Tama&ntilde;o del evento y precios</h3>
+                        <p>Debate sobre si el evento deber&iacute;a ser m&aacute;s peque&ntilde;o este a&ntilde;o. La junta se&ntilde;al&oacute; que los costes fijos crean una escala m&iacute;nima viable de aproximadamente 2.400&ndash;2.800 asistentes. El precio objetivo de la entrada es de aproximadamente 275&nbsp;&euro; (media ponderada incluyendo entradas de renta reducida y VIP), similar a eventos comunitarios comparables. La junta est&aacute; buscando activamente formas de reducir costes, incluyendo un tipo de IVA del 10% (frente al 21% anterior).</p>
 
-                    <h2>Key Dates Mentioned</h2>
-                    <ul>
-                        <li><strong>Event dates (if it proceeds):</strong> July 7&ndash;12, 2026</li>
-                        <li><strong>Setup:</strong> Starting approximately June 15</li>
-                        <li><strong>Strike:</strong> Ending approximately July 22</li>
-                        <li><strong>Humans app launch:</strong> Expected Sunday</li>
-                        <li><strong>Bank account:</strong> Expected within days</li>
-                    </ul>
+                        <h3>Captaci&oacute;n y continuidad de l&iacute;deres</h3>
+                        <p>Un miembro de la comunidad pregunt&oacute; sobre la captaci&oacute;n y retenci&oacute;n de l&iacute;deres, observando que algunos canales de Discord est&aacute;n tranquilos. La junta reconoci&oacute; que es una prioridad y describi&oacute; planes para que la aplicaci&oacute;n Humans ayude a organizar equipos y para que un coordinador de voluntarios ayude a emparejar personas con funciones. Se ha adoptado provisionalmente una estructura departamental.</p>
+
+                        <h3>Cronograma de venta de entradas</h3>
+                        <p>En a&ntilde;os anteriores, la venta de entradas comenzaba normalmente en febrero o principios de marzo. La comunidad expres&oacute; urgencia sobre la necesidad de una fecha clara de compromiso, ya que algunos miembros necesitan reservar vacaciones y est&aacute;n considerando eventos alternativos.</p>
+
+                        <h2>Expresiones de la comunidad</h2>
+                        <ul>
+                            <li>Fuerte agradecimiento por el ritmo de progreso y la profesionalidad de la junta</li>
+                            <li>M&uacute;ltiples sugerencias creativas de nombres para el evento en el chat</li>
+                            <li>Ofertas de ayuda pr&aacute;ctica (infraestructura de campamentos, apoyo en construcci&oacute;n)</li>
+                            <li>Deseo de m&aacute;s informaci&oacute;n y canales de comunicaci&oacute;n m&aacute;s claros</li>
+                            <li>Sugerencia de usar correo electr&oacute;nico y WhatsApp junto con Discord, ya que algunos miembros de la comunidad encuentran Discord abrumador</li>
+                        </ul>
+
+                        <h2>Fechas clave mencionadas</h2>
+                        <ul>
+                            <li><strong>Fechas del evento (si se celebra):</strong> 7&ndash;12 de julio de 2026</li>
+                            <li><strong>Montaje:</strong> Comenzando aproximadamente el 15 de junio</li>
+                            <li><strong>Desmontaje:</strong> Finalizando aproximadamente el 22 de julio</li>
+                            <li><strong>Lanzamiento de la aplicaci&oacute;n Humans:</strong> Previsto para el domingo</li>
+                            <li><strong>Cuenta bancaria:</strong> Esperada en d&iacute;as</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- ==================== FRAN&Ccedil;AIS ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>~40+ participants dont des membres du conseil, des responsables, des chefs de barrio et des membres de la communaut&eacute;</strong>
+                        <strong>Membres du conseil pr&eacute;sents :</strong> Daniel (h&ocirc;te), Pablo, Peter
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archives compl&egrave;tes</h3>
+                        <ul>
+                            <li><a href="2026-02-12-community-transcript.html">Transcription compl&egrave;te de la r&eacute;union</a></li>
+                            <li><a href="2026-02-12-community-chat.html">Journal complet du chat</a></li>
+                            <li><a href="https://youtu.be/VaHcAnxq-Z0" target="_blank">Enregistrement vid&eacute;o</a> (sous r&eacute;serve de v&eacute;rification des droits d&rsquo;auteur)</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Aper&ccedil;u</h2>
+                        <p>Deuxi&egrave;me r&eacute;union communautaire de la Nobodies Collective Asociaci&oacute;n (NCA). La r&eacute;union a pr&eacute;sent&eacute; une mise &agrave; jour de la production, les r&eacute;sultats de l&rsquo;enqu&ecirc;te sur les barrios, une d&eacute;monstration de la nouvelle application de gestion des b&eacute;n&eacute;voles et une introduction au Groupe de Travail sur la Gouvernance men&eacute; par la communaut&eacute;. Discussion approfondie autour du nom de l&rsquo;&eacute;v&eacute;nement, de la pr&eacute;paration op&eacute;rationnelle et du processus de d&eacute;cision go/no-go.</p>
+
+                        <h2>Pr&eacute;sentations</h2>
+
+                        <h3>Daniela &mdash; Mise &agrave; jour de la production</h3>
+                        <ul>
+                            <li>Daniela a commenc&eacute; &agrave; constituer une base de donn&eacute;es de fournisseurs, en contactant des prestataires adapt&eacute;s &agrave; partir d&rsquo;informations publiquement disponibles</li>
+                            <li>Devis re&ccedil;us ou en cours pour des services essentiels : cabines, Croix-Rouge, g&eacute;n&eacute;rateurs</li>
+                            <li>Suivi du calendrier bas&eacute; sur des &eacute;v&eacute;nements comparables &mdash; actuellement dans les temps</li>
+                            <li>Processus de permis en cours ; Jorge est en contact avec les autorit&eacute;s locales, qui se montrent coop&eacute;ratives</li>
+                            <li>Les fournisseurs sont enthousiastes &agrave; l&rsquo;id&eacute;e de travailler avec l&rsquo;association</li>
+                            <li>Cr&eacute;ation d&rsquo;une base de donn&eacute;es publique et r&eacute;utilisable d&rsquo;informations sur les fournisseurs pour un usage futur</li>
+                            <li>Les d&eacute;partements sont encourag&eacute;s &agrave; communiquer leurs besoins sp&eacute;cifiques</li>
+                        </ul>
+
+                        <h3>Daniel &mdash; R&eacute;sultats de l&rsquo;enqu&ecirc;te sur les barrios</h3>
+                        <ul>
+                            <li>~100 r&eacute;ponses re&ccedil;ues de chefs de barrio et de membres de campements</li>
+                            <li><strong>24 oui d&eacute;finitifs</strong>, 9 mixtes (oui + ne sait pas), 9 ne sait pas, 1 non</li>
+                            <li>Raisons courantes d&rsquo;incertitude : transitions de leadership, l&rsquo;incertitude de l&rsquo;&eacute;v&eacute;nement cr&eacute;ant une proph&eacute;tie auto-r&eacute;alisatrice, questions logistiques, souhait d&rsquo;une ann&eacute;e de pause par certains</li>
+                            <li>Questions cl&eacute;s des r&eacute;pondants : Y aura-t-il de l&rsquo;&eacute;lectricit&eacute; sur le site ? Comment les frais de conteneurs &eacute;volueront-ils ? Y aura-t-il des billets &agrave; revenu r&eacute;duit ? Quand avons-nous besoin d&rsquo;une r&eacute;ponse ferme ?</li>
+                            <li>Fort sentiment d&rsquo;urgence &mdash; l&rsquo;incertitude pousse certains &agrave; s&rsquo;engager dans d&rsquo;autres &eacute;v&eacute;nements</li>
+                            <li>M&ecirc;me les campements ind&eacute;cis ont exprim&eacute; leur soutien &agrave; la tenue de l&rsquo;&eacute;v&eacute;nement</li>
+                            <li>Les r&eacute;sultats anonymis&eacute;s complets seront publi&eacute;s sur le site web</li>
+                        </ul>
+
+                        <h3>Peter &mdash; D&eacute;monstration de l&rsquo;application Humans</h3>
+                        <ul>
+                            <li>Nouvelle application d&eacute;velopp&eacute;e sur mesure &agrave; <strong>humans.n.burn.camp</strong> pour g&eacute;rer les b&eacute;n&eacute;voles et l&rsquo;appartenance aux &eacute;quipes</li>
+                            <li>Connexion via Google (n&eacute;cessaire pour l&rsquo;int&eacute;gration avec Google Drive)</li>
+                            <li>Fonctionnalit&eacute;s : cr&eacute;ation de profil, reconnaissance du consentement/des politiques avec piste d&rsquo;audit, gestion des &eacute;quipes, contr&ocirc;le d&rsquo;acc&egrave;s aux ressources</li>
+                            <li>G&egrave;re automatiquement les permissions Google Drive lorsque des personnes rejoignent ou quittent des &eacute;quipes</li>
+                            <li>Versionnage des politiques &mdash; lorsque les politiques sont mises &agrave; jour, tous les membres doivent les r&eacute;accepter</li>
+                            <li>Pr&eacute;vu : coordonn&eacute;es d&rsquo;urgence (visibles uniquement par le conseil), r&ocirc;le de coordinateur des b&eacute;n&eacute;voles</li>
+                            <li>R&eacute;pond aux pr&eacute;occupations RGPD en centralisant les donn&eacute;es personnelles plut&ocirc;t que de les disperser dans de multiples Google Docs</li>
+                            <li>Lancement pr&eacute;vu dimanche pour une inscription plus large</li>
+                        </ul>
+
+                        <h3>Kate &mdash; Groupe de Travail sur la Gouvernance</h3>
+                        <ul>
+                            <li>Initiative men&eacute;e par la communaut&eacute; pour structurer la d&eacute;cision go/no-go pour 2026</li>
+                            <li>Membres actuels : Kate et Ella, soutenues par Bambi dans un r&ocirc;le de gestion de projet</li>
+                            <li>Recherche de 1&ndash;2 membres suppl&eacute;mentaires ayant une expertise en conception de processus ou en gouvernance d&eacute;centralis&eacute;e</li>
+                            <li>Objectif : un processus impartial et cr&eacute;diblement neutre pour garantir que la communaut&eacute; dispose des informations pertinentes</li>
+                            <li>&Eacute;laboration d&rsquo;une liste de &laquo; non-n&eacute;gociables &raquo; (conditions devant &ecirc;tre remplies pour un &eacute;v&eacute;nement s&ucirc;r) par rapport aux &eacute;l&eacute;ments importants mais flexibles</li>
+                            <li>Peut impliquer une approche de construction de sens ou d&rsquo;assembl&eacute;e citoyenne, suivie d&rsquo;un vote structur&eacute;</li>
+                            <li>Les mises &agrave; jour seront publi&eacute;es dans le canal de gouvernance sur Discord</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Mise &agrave; jour administrative et bancaire</h3>
+                        <ul>
+                            <li>Constitution de l&rsquo;association termin&eacute;e ; le num&eacute;ro d&rsquo;identification fiscale a &eacute;t&eacute; d&eacute;livr&eacute; et est en transit vers l&rsquo;avocat</li>
+                            <li>L&rsquo;ouverture du compte bancaire est la prochaine &eacute;tape une fois le document d&rsquo;identification fiscale re&ccedil;u physiquement &mdash; attendu dans les prochains jours</li>
+                            <li>Une fois le compte bancaire ouvert : la vente de billets, les paiements aux fournisseurs et les dons deviennent possibles</li>
+                            <li>L&rsquo;association travaille &agrave; s&eacute;curiser les actifs op&eacute;rationnels n&eacute;cessaires &agrave; l&rsquo;&eacute;v&eacute;nement</li>
+                            <li>Les exigences de conformit&eacute; au RGPD sont soigneusement respect&eacute;es</li>
+                        </ul>
+
+                        <h3>Daniel &mdash; Membres et &eacute;lections du conseil</h3>
+                        <ul>
+                            <li>Les crit&egrave;res de membres sont encore en cours de d&eacute;finition &mdash; &eacute;quilibrant inclusivit&eacute; et gouvernance pratique (les exigences de quorum signifient qu&rsquo;un tr&egrave;s grand nombre de membres pourrait emp&ecirc;cher les d&eacute;cisions)</li>
+                            <li>Approche de d&eacute;mocratie repr&eacute;sentative &agrave; l&rsquo;&eacute;tude : des membres engag&eacute;s de la communaut&eacute; qui comprennent l&rsquo;&eacute;v&eacute;nement</li>
+                            <li>L&rsquo;adh&eacute;sion &agrave; l&rsquo;association N&rsquo;EST PAS requise pour participer, &ecirc;tre b&eacute;n&eacute;vole, diriger ou assister &agrave; l&rsquo;&eacute;v&eacute;nement</li>
+                            <li>Le conseil s&rsquo;est engag&eacute; &agrave; organiser une &eacute;lection pour des membres suppl&eacute;mentaires et plus diversifi&eacute;s</li>
+                            <li>Le processus n&eacute;cessite un d&eacute;lai de pr&eacute;avis de 45 jours et des membres int&eacute;gr&eacute;s</li>
+                            <li>Les membres de la communaut&eacute; int&eacute;ress&eacute;s par un si&egrave;ge au conseil sont encourag&eacute;s &agrave; se faire conna&icirc;tre</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Nom de l&rsquo;&eacute;v&eacute;nement</h3>
+                        <ul>
+                            <li>Le nom &laquo; Nowhere &raquo; n&rsquo;est pas disponible pour l&rsquo;association</li>
+                            <li>Un nom temporaire est n&eacute;cessaire pour la vente de billets et les communications</li>
+                            <li>Les membres de la communaut&eacute; sont invit&eacute;s &agrave; sugg&eacute;rer des noms via un formulaire (partag&eacute; sur Discord, Telegram et d&rsquo;autres canaux)</li>
+                            <li>Les meilleures suggestions seront soumises au vote des b&eacute;n&eacute;voles approuv&eacute;s inscrits dans l&rsquo;application Humans</li>
+                        </ul>
+
+                        <h2>Questions cl&eacute;s de la communaut&eacute; et discussion</h2>
+
+                        <h3>Ind&eacute;pendance de l&rsquo;association</h3>
+                        <p>Plusieurs membres de la communaut&eacute; ont pos&eacute; des questions sur le statut juridique de l&rsquo;association. Le conseil a confirm&eacute; que l&rsquo;association est une entit&eacute; juridique ind&eacute;pendante, &eacute;tablie par un processus &eacute;lectoral d&eacute;mocratique, et centr&eacute;e sur le d&eacute;veloppement de sa propre capacit&eacute; op&eacute;rationnelle.</p>
+
+                        <h3>Pourquoi une association ?</h3>
+                        <p>Pour ceux qui rejoignent la conversation pour la premi&egrave;re fois : une structure associative est la forme juridique appropri&eacute;e pour un &eacute;v&eacute;nement communautaire g&eacute;r&eacute; par des b&eacute;n&eacute;voles en droit espagnol. L&rsquo;association a &eacute;t&eacute; fond&eacute;e par une &eacute;lection d&eacute;mocratique en d&eacute;cembre 2025.</p>
+
+                        <h3>Pourquoi un nouveau nom ?</h3>
+                        <p>Cela a g&eacute;n&eacute;r&eacute; une discussion significative. Les membres de la communaut&eacute; ont exprim&eacute; un fort attachement au nom &laquo; Nowhere &raquo;. Certains participants &agrave; la r&eacute;union ont indiqu&eacute; qu&rsquo;un changement de nom temporaire pourrait &ecirc;tre une mesure de r&eacute;duction des risques. De multiples suggestions cr&eacute;atives de noms ont &eacute;t&eacute; propos&eacute;es dans le chat.</p>
+
+                        <h3>Acc&egrave;s aux conteneurs</h3>
+                        <p>Les membres de la communaut&eacute; ont soulign&eacute; que les conteneurs abritant des infrastructures critiques (mat&eacute;riaux de construction, &eacute;quipement des d&eacute;partements) sont importants pour un &eacute;v&eacute;nement &agrave; grande &eacute;chelle. S&eacute;curiser l&rsquo;acc&egrave;s aux conteneurs est une priorit&eacute; dans la planification op&eacute;rationnelle de l&rsquo;association.</p>
+
+                        <h3>Taille de l&rsquo;&eacute;v&eacute;nement et tarification</h3>
+                        <p>Discussion sur la possibilit&eacute; de r&eacute;duire la taille de l&rsquo;&eacute;v&eacute;nement cette ann&eacute;e. Le conseil a not&eacute; que les co&ucirc;ts fixes cr&eacute;ent une &eacute;chelle minimale viable d&rsquo;environ 2 400&ndash;2 800 participants. Le prix cible du billet est d&rsquo;environ 275&nbsp;&euro; (moyenne pond&eacute;r&eacute;e incluant billets &agrave; revenu r&eacute;duit et VIP), similaire &agrave; des &eacute;v&eacute;nements communautaires comparables. Le conseil recherche activement des moyens de r&eacute;duire les co&ucirc;ts, notamment un taux de TVA de 10 % (contre 21 % pr&eacute;c&eacute;demment).</p>
+
+                        <h3>Recrutement et continuit&eacute; des responsables</h3>
+                        <p>Un membre de la communaut&eacute; a pos&eacute; des questions sur le recrutement et la r&eacute;tention des responsables, notant que certains canaux Discord sont calmes. Le conseil a reconnu que c&rsquo;est une priorit&eacute; et a d&eacute;crit des plans pour que l&rsquo;application Humans aide &agrave; organiser les &eacute;quipes et pour qu&rsquo;un coordinateur des b&eacute;n&eacute;voles aide &agrave; assigner les personnes aux r&ocirc;les. Une structure d&eacute;partementale a &eacute;t&eacute; adopt&eacute;e provisoirement.</p>
+
+                        <h3>Calendrier de vente des billets</h3>
+                        <p>Les ann&eacute;es pr&eacute;c&eacute;dentes, la vente des billets commen&ccedil;ait g&eacute;n&eacute;ralement en f&eacute;vrier ou d&eacute;but mars. La communaut&eacute; a exprim&eacute; l&rsquo;urgence d&rsquo;avoir une date d&rsquo;engagement claire, certains membres devant r&eacute;server leurs cong&eacute;s et envisageant des &eacute;v&eacute;nements alternatifs.</p>
+
+                        <h2>Expressions de la communaut&eacute;</h2>
+                        <ul>
+                            <li>Forte appr&eacute;ciation pour le rythme des progr&egrave;s et le professionnalisme du conseil</li>
+                            <li>Multiples suggestions cr&eacute;atives de noms pour l&rsquo;&eacute;v&eacute;nement dans le chat</li>
+                            <li>Offres d&rsquo;aide pratique (infrastructure de campements, soutien &agrave; la construction)</li>
+                            <li>Souhait d&rsquo;obtenir plus d&rsquo;informations et des canaux de communication plus clairs</li>
+                            <li>Suggestion d&rsquo;utiliser l&rsquo;e-mail et WhatsApp en compl&eacute;ment de Discord, certains membres de la communaut&eacute; trouvant Discord d&eacute;routant</li>
+                        </ul>
+
+                        <h2>Dates cl&eacute;s mentionn&eacute;es</h2>
+                        <ul>
+                            <li><strong>Dates de l&rsquo;&eacute;v&eacute;nement (s&rsquo;il a lieu) :</strong> 7&ndash;12 juillet 2026</li>
+                            <li><strong>Montage :</strong> &Agrave; partir d&rsquo;environ le 15 juin</li>
+                            <li><strong>D&eacute;montage :</strong> Jusqu&rsquo;&agrave; environ le 22 juillet</li>
+                            <li><strong>Lancement de l&rsquo;application Humans :</strong> Pr&eacute;vu dimanche</li>
+                            <li><strong>Compte bancaire :</strong> Attendu dans les prochains jours</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIANO ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>~40+ partecipanti tra membri del consiglio, responsabili, capigruppo di barrio e membri della comunit&agrave;</strong>
+                        <strong>Membri del consiglio presenti:</strong> Daniel (ospite), Pablo, Peter
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archivi completi</h3>
+                        <ul>
+                            <li><a href="2026-02-12-community-transcript.html">Trascrizione completa della riunione</a></li>
+                            <li><a href="2026-02-12-community-chat.html">Registro completo della chat</a></li>
+                            <li><a href="https://youtu.be/VaHcAnxq-Z0" target="_blank">Registrazione video</a> (soggetta a verifica dei diritti d&rsquo;autore)</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Panoramica</h2>
+                        <p>Seconda riunione comunitaria della Nobodies Collective Asociaci&oacute;n (NCA). La riunione ha presentato un aggiornamento sulla produzione, i risultati del sondaggio sui barrios, una dimostrazione della nuova applicazione per la gestione dei volontari e un&rsquo;introduzione al Gruppo di Lavoro sulla Governance guidato dalla comunit&agrave;. Discussione significativa sul nome dell&rsquo;evento, sulla preparazione operativa e sul percorso verso la decisione go/no-go.</p>
+
+                        <h2>Presentazioni</h2>
+
+                        <h3>Daniela &mdash; Aggiornamento sulla produzione</h3>
+                        <ul>
+                            <li>Daniela ha iniziato a costruire un database dei fornitori, contattando prestatori idonei utilizzando informazioni disponibili pubblicamente</li>
+                            <li>Preventivi ricevuti o in corso per servizi essenziali: cabine, Croce Rossa, generatori</li>
+                            <li>Monitoraggio delle tempistiche basato su calendari di eventi comparabili &mdash; attualmente nei tempi previsti</li>
+                            <li>Processo di autorizzazioni in corso; Jorge &egrave; in contatto con le autorit&agrave; locali, che si dimostrano collaborative</li>
+                            <li>I fornitori sono entusiasti di lavorare con l&rsquo;associazione</li>
+                            <li>Creazione di un database pubblico e riutilizzabile di informazioni sui fornitori per uso futuro</li>
+                            <li>I dipartimenti sono invitati a comunicare le proprie esigenze specifiche</li>
+                        </ul>
+
+                        <h3>Daniel &mdash; Risultati del sondaggio sui barrios</h3>
+                        <ul>
+                            <li>~100 risposte ricevute da capigruppo di barrio e membri dei campeggi</li>
+                            <li><strong>24 s&igrave; definitivi</strong>, 9 misti (s&igrave; + non so), 9 non so, 1 no</li>
+                            <li>Motivi comuni di incertezza: avvicendamento dei leader, l&rsquo;incertezza sull&rsquo;evento che crea una profezia che si autoavvera, domande logistiche, desiderio di un anno di pausa da parte di alcuni</li>
+                            <li>Domande chiave dagli intervistati: Ci sar&agrave; elettricit&agrave; nel sito? Come cambieranno le tariffe dei container? Ci saranno biglietti a reddito ridotto? Quando serve una risposta definitiva?</li>
+                            <li>Forte senso di urgenza &mdash; l&rsquo;incertezza sta spingendo alcune persone a impegnarsi in altri eventi</li>
+                            <li>Anche i campeggi indecisi hanno espresso sostegno per la realizzazione dell&rsquo;evento</li>
+                            <li>I risultati anonimi completi saranno pubblicati sul sito web</li>
+                        </ul>
+
+                        <h3>Peter &mdash; Dimostrazione dell&rsquo;applicazione Humans</h3>
+                        <ul>
+                            <li>Nuova applicazione personalizzata su <strong>humans.n.burn.camp</strong> per gestire volontari e appartenenza ai team</li>
+                            <li>Accesso tramite Google (necessario per l&rsquo;integrazione con Google Drive)</li>
+                            <li>Funzionalit&agrave;: creazione profilo, riconoscimento del consenso/delle politiche con tracciamento di audit, gestione dei team, controllo degli accessi alle risorse</li>
+                            <li>Gestisce automaticamente i permessi di Google Drive quando le persone entrano o escono dai team</li>
+                            <li>Versionamento delle politiche &mdash; quando le politiche vengono aggiornate, tutti i membri devono riaccettarle</li>
+                            <li>Previsto: informazioni di contatto di emergenza (visibili solo al consiglio), ruolo di coordinatore dei volontari</li>
+                            <li>Affronta le preoccupazioni GDPR centralizzando i dati personali anzich&eacute; disperderli in molteplici Google Docs</li>
+                            <li>Lancio previsto per domenica per una registrazione pi&ugrave; ampia</li>
+                        </ul>
+
+                        <h3>Kate &mdash; Gruppo di Lavoro sulla Governance</h3>
+                        <ul>
+                            <li>Iniziativa guidata dalla comunit&agrave; per strutturare la decisione go/no-go per il 2026</li>
+                            <li>Membri attuali: Kate ed Ella, supportate da Bambi in un ruolo di gestione progetto</li>
+                            <li>Si cercano 1&ndash;2 membri aggiuntivi con competenze in progettazione di processi o governance decentralizzata</li>
+                            <li>Obiettivo: un processo imparziale e credibilmente neutrale per garantire che la comunit&agrave; disponga delle informazioni pertinenti</li>
+                            <li>Elaborazione di un elenco di &laquo;non negoziabili&raquo; (condizioni che devono essere soddisfatte per un evento sicuro) rispetto a elementi importanti ma flessibili</li>
+                            <li>Potrebbe prevedere un approccio di sensemaking o assemblea cittadina, seguito da un voto strutturato</li>
+                            <li>Gli aggiornamenti saranno pubblicati nel canale governance su Discord</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Aggiornamento amministrativo e bancario</h3>
+                        <ul>
+                            <li>Costituzione dell&rsquo;associazione completata; il codice fiscale &egrave; stato emesso ed &egrave; in transito verso l&rsquo;avvocato</li>
+                            <li>L&rsquo;apertura del conto bancario &egrave; il prossimo passo una volta ricevuto fisicamente il documento del codice fiscale &mdash; previsto entro pochi giorni</li>
+                            <li>Una volta aperto il conto bancario: la vendita dei biglietti, i pagamenti ai fornitori e le donazioni diventano possibili</li>
+                            <li>L&rsquo;associazione sta lavorando per assicurarsi le risorse operative necessarie per l&rsquo;evento</li>
+                            <li>I requisiti di conformit&agrave; GDPR vengono rispettati con attenzione</li>
+                        </ul>
+
+                        <h3>Daniel &mdash; Adesioni ed elezioni del consiglio</h3>
+                        <ul>
+                            <li>I criteri di adesione sono ancora in fase di definizione &mdash; bilanciando inclusivit&agrave; con governance pratica (i requisiti di quorum implicano che un numero molto elevato di membri potrebbe impedire le decisioni)</li>
+                            <li>Approccio di democrazia rappresentativa in fase di valutazione: membri impegnati della comunit&agrave; che comprendono l&rsquo;evento</li>
+                            <li>L&rsquo;adesione all&rsquo;associazione NON &egrave; richiesta per partecipare, fare volontariato, guidare o assistere all&rsquo;evento</li>
+                            <li>Il consiglio si &egrave; impegnato a organizzare un&rsquo;elezione per membri aggiuntivi e pi&ugrave; diversificati</li>
+                            <li>Il processo richiede un periodo di preavviso di 45 giorni e membri integrati</li>
+                            <li>I membri della comunit&agrave; interessati a entrare nel consiglio sono invitati a farsi conoscere</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Nome dell&rsquo;evento</h3>
+                        <ul>
+                            <li>Il nome &laquo;Nowhere&raquo; non &egrave; disponibile per l&rsquo;associazione</li>
+                            <li>&Egrave; necessario un nome temporaneo per la vendita dei biglietti e le comunicazioni</li>
+                            <li>I membri della comunit&agrave; sono invitati a suggerire nomi tramite un modulo (condiviso su Discord, Telegram e altri canali)</li>
+                            <li>I migliori suggerimenti saranno sottoposti a votazione tra i volontari approvati registrati nell&rsquo;applicazione Humans</li>
+                        </ul>
+
+                        <h2>Domande chiave della comunit&agrave; e discussione</h2>
+
+                        <h3>Indipendenza dell&rsquo;associazione</h3>
+                        <p>Diversi membri della comunit&agrave; hanno chiesto informazioni sullo status giuridico dell&rsquo;associazione. Il consiglio ha confermato che l&rsquo;associazione &egrave; un&rsquo;entit&agrave; giuridica indipendente, istituita attraverso un processo elettorale democratico, e focalizzata sullo sviluppo della propria capacit&agrave; operativa.</p>
+
+                        <h3>Perch&eacute; un&rsquo;associazione?</h3>
+                        <p>Per chi si unisce alla conversazione per la prima volta: una struttura associativa &egrave; la forma giuridica appropriata per un evento comunitario gestito da volontari secondo il diritto spagnolo. L&rsquo;associazione &egrave; stata fondata tramite un&rsquo;elezione democratica nel dicembre 2025.</p>
+
+                        <h3>Perch&eacute; un nuovo nome?</h3>
+                        <p>Questo ha generato una discussione significativa. I membri della comunit&agrave; hanno espresso un forte attaccamento al nome &laquo;Nowhere&raquo;. Alcuni partecipanti alla riunione hanno indicato che un cambio di nome temporaneo potrebbe essere una misura di riduzione del rischio. Nel chat sono stati offerti molteplici suggerimenti creativi di nomi.</p>
+
+                        <h3>Accesso ai container</h3>
+                        <p>I membri della comunit&agrave; hanno sottolineato che i container che ospitano infrastrutture critiche (materiali da costruzione, attrezzature dei dipartimenti) sono importanti per un evento su vasta scala. Garantire l&rsquo;accesso ai container &egrave; una priorit&agrave; nella pianificazione operativa dell&rsquo;associazione.</p>
+
+                        <h3>Dimensione dell&rsquo;evento e prezzi</h3>
+                        <p>Discussione sulla possibilit&agrave; di ridurre le dimensioni dell&rsquo;evento quest&rsquo;anno. Il consiglio ha osservato che i costi fissi creano una scala minima sostenibile di circa 2.400&ndash;2.800 partecipanti. Il prezzo obiettivo del biglietto &egrave; di circa 275&nbsp;&euro; (media ponderata inclusi biglietti a reddito ridotto e VIP), simile a eventi comunitari comparabili. Il consiglio sta cercando attivamente modi per ridurre i costi, inclusa un&rsquo;aliquota IVA del 10% (rispetto al 21% precedente).</p>
+
+                        <h3>Reclutamento e continuit&agrave; dei responsabili</h3>
+                        <p>Un membro della comunit&agrave; ha chiesto informazioni sul reclutamento e la fidelizzazione dei responsabili, osservando che alcuni canali Discord sono poco attivi. Il consiglio ha riconosciuto che questa &egrave; una priorit&agrave; e ha illustrato i piani per l&rsquo;applicazione Humans per organizzare i team e per un coordinatore dei volontari per abbinare le persone ai ruoli. Una struttura dipartimentale &egrave; stata adottata provvisoriamente.</p>
+
+                        <h3>Tempistica di vendita dei biglietti</h3>
+                        <p>Negli anni precedenti, la vendita dei biglietti iniziava generalmente a febbraio o inizio marzo. La comunit&agrave; ha espresso urgenza sulla necessit&agrave; di avere una data di impegno chiara, poich&eacute; alcuni membri devono prenotare le ferie e stanno considerando eventi alternativi.</p>
+
+                        <h2>Espressioni della comunit&agrave;</h2>
+                        <ul>
+                            <li>Forte apprezzamento per il ritmo dei progressi e la professionalit&agrave; del consiglio</li>
+                            <li>Molteplici suggerimenti creativi di nomi per l&rsquo;evento nella chat</li>
+                            <li>Offerte di aiuto pratico (infrastrutture per campeggi, supporto alla costruzione)</li>
+                            <li>Desiderio di maggiori informazioni e canali di comunicazione pi&ugrave; chiari</li>
+                            <li>Suggerimento di utilizzare e-mail e WhatsApp insieme a Discord, poich&eacute; alcuni membri della comunit&agrave; trovano Discord disorientante</li>
+                        </ul>
+
+                        <h2>Date chiave menzionate</h2>
+                        <ul>
+                            <li><strong>Date dell&rsquo;evento (se avr&agrave; luogo):</strong> 7&ndash;12 luglio 2026</li>
+                            <li><strong>Allestimento:</strong> A partire da circa il 15 giugno</li>
+                            <li><strong>Smontaggio:</strong> Fino a circa il 22 luglio</li>
+                            <li><strong>Lancio dell&rsquo;applicazione Humans:</strong> Previsto per domenica</li>
+                            <li><strong>Conto bancario:</strong> Previsto entro pochi giorni</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ==================== DEUTSCH ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>~40+ Teilnehmende, darunter Vorstandsmitglieder, Verantwortliche, Barrio-Leiter und Community-Mitglieder</strong>
+                        <strong>Anwesende Vorstandsmitglieder:</strong> Daniel (Gastgeber), Pablo, Peter
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Vollst&auml;ndige Aufzeichnungen</h3>
+                        <ul>
+                            <li><a href="2026-02-12-community-transcript.html">Vollst&auml;ndige Sitzungsmitschrift</a></li>
+                            <li><a href="2026-02-12-community-chat.html">Vollst&auml;ndiges Chat-Protokoll</a></li>
+                            <li><a href="https://youtu.be/VaHcAnxq-Z0" target="_blank">Videoaufzeichnung</a> (vorbehaltlich der Pr&uuml;fung des Urheberrechts)</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>&Uuml;berblick</h2>
+                        <p>Zweite Gemeinschaftsversammlung der Nobodies Collective Asociaci&oacute;n (NCA). Die Versammlung umfasste ein Produktions-Update, die Ergebnisse der Barrio-Umfrage, eine Demonstration der neuen Freiwilligenverwaltungs-App und eine Vorstellung der gemeinschaftlich geleiteten Governance-Arbeitsgruppe. Ausf&uuml;hrliche Diskussion &uuml;ber den Veranstaltungsnamen, die betriebliche Bereitschaft und den Weg zur Go/No-Go-Entscheidung.</p>
+
+                        <h2>Pr&auml;sentationen</h2>
+
+                        <h3>Daniela &mdash; Produktions-Update</h3>
+                        <ul>
+                            <li>Daniela hat begonnen, eine Lieferantendatenbank aufzubauen und geeignete Anbieter anhand &ouml;ffentlich verf&uuml;gbarer Informationen zu kontaktieren</li>
+                            <li>Angebote f&uuml;r kritische Dienstleistungen eingegangen oder in Bearbeitung: Kabinen, Rotes Kreuz, Generatoren</li>
+                            <li>Zeitplanung basierend auf vergleichbaren Veranstaltungskalendern &mdash; derzeit im Zeitplan</li>
+                            <li>Genehmigungsverfahren l&auml;uft; Jorge steht in Kontakt mit den kooperativen lokalen Beh&ouml;rden</li>
+                            <li>Die Lieferanten sind begeistert, mit dem Verein zusammenzuarbeiten</li>
+                            <li>Erstellung einer &ouml;ffentlichen, wiederverwendbaren Lieferantendatenbank f&uuml;r zuk&uuml;nftige Nutzung</li>
+                            <li>Die Abteilungen werden ermutigt, ihre spezifischen Bed&uuml;rfnisse mitzuteilen</li>
+                        </ul>
+
+                        <h3>Daniel &mdash; Ergebnisse der Barrio-Umfrage</h3>
+                        <ul>
+                            <li>~100 Antworten von Barrio-Leitern und Camp-Mitgliedern eingegangen</li>
+                            <li><strong>24 eindeutig Ja</strong>, 9 gemischt (Ja + wei&szlig; nicht), 9 wei&szlig; nicht, 1 Nein</li>
+                            <li>H&auml;ufige Gr&uuml;nde f&uuml;r Unsicherheit: F&uuml;hrungswechsel, Veranstaltungsunsicherheit erzeugt eine sich selbst erf&uuml;llende Prophezeiung, logistische Fragen, Wunsch nach einem Pausenjahr bei einigen</li>
+                            <li>Zentrale Fragen der Befragten: Wird es Strom auf dem Gel&auml;nde geben? Wie werden sich die Container-Geb&uuml;hren &auml;ndern? Wird es erm&auml;&szlig;igte Tickets geben? Wann brauchen wir eine verbindliche Antwort?</li>
+                            <li>Starkes Gef&uuml;hl der Dringlichkeit &mdash; die Unsicherheit veranlasst einige, sich f&uuml;r andere Veranstaltungen zu entscheiden</li>
+                            <li>Selbst unentschlossene Camps haben ihre Unterst&uuml;tzung f&uuml;r die Durchf&uuml;hrung der Veranstaltung zum Ausdruck gebracht</li>
+                            <li>Die vollst&auml;ndigen anonymisierten Ergebnisse werden auf der Website ver&ouml;ffentlicht</li>
+                        </ul>
+
+                        <h3>Peter &mdash; Demonstration der Humans-App</h3>
+                        <ul>
+                            <li>Neue ma&szlig;geschneiderte Anwendung unter <strong>humans.n.burn.camp</strong> zur Verwaltung von Freiwilligen und Teammitgliedschaften</li>
+                            <li>Google-Anmeldung erforderlich (notwendig f&uuml;r die Google-Drive-Integration)</li>
+                            <li>Funktionen: Profilerstellung, Zustimmungs-/Richtlinienbestl&auml;tigung mit Audit-Protokoll, Teamverwaltung, Ressourcenzugriffskontrolle</li>
+                            <li>Verwaltet automatisch Google-Drive-Berechtigungen, wenn Personen Teams beitreten oder verlassen</li>
+                            <li>Richtlinien-Versionierung &mdash; bei Aktualisierung der Richtlinien m&uuml;ssen alle Mitglieder erneut zustimmen</li>
+                            <li>Geplant: Notfallkontaktinformationen (nur f&uuml;r den Vorstand sichtbar), Rolle des Freiwilligenkoordinators</li>
+                            <li>Adressiert DSGVO-Bedenken durch Zentralisierung personenbezogener Daten anstatt ihrer Verteilung &uuml;ber mehrere Google Docs</li>
+                            <li>Start f&uuml;r Sonntag erwartet zur breiteren Registrierung</li>
+                        </ul>
+
+                        <h3>Kate &mdash; Governance-Arbeitsgruppe</h3>
+                        <ul>
+                            <li>Gemeinschaftlich geleitete Initiative zur Strukturierung der Go/No-Go-Entscheidung f&uuml;r 2026</li>
+                            <li>Aktuelle Mitglieder: Kate und Ella, unterst&uuml;tzt von Bambi in einer Projektmanagement-Rolle</li>
+                            <li>Gesucht werden 1&ndash;2 weitere Mitglieder mit Expertise in Prozessgestaltung oder dezentraler Governance</li>
+                            <li>Ziel: ein unparteiischer, glaubw&uuml;rdig neutraler Prozess, um sicherzustellen, dass die Gemeinschaft &uuml;ber relevante Informationen verf&uuml;gt</li>
+                            <li>Erarbeitung einer Liste von &bdquo;Nicht-Verhandelbarem&ldquo; (Bedingungen, die f&uuml;r eine sichere Veranstaltung erf&uuml;llt sein m&uuml;ssen) im Vergleich zu wichtigen, aber flexiblen Punkten</li>
+                            <li>Kann einen Sensemaking- oder B&uuml;rgerversammlungs-Ansatz umfassen, gefolgt von einer strukturierten Abstimmung</li>
+                            <li>Updates werden im Governance-Kanal auf Discord ver&ouml;ffentlicht</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Verwaltungs- und Bank-Update</h3>
+                        <ul>
+                            <li>Gr&uuml;ndung des Vereins abgeschlossen; die Steuernummer wurde ausgestellt und befindet sich auf dem Weg zum Anwalt</li>
+                            <li>Die Er&ouml;ffnung des Bankkontos ist der n&auml;chste Schritt, sobald das Steuernummern-Dokument physisch eingetroffen ist &mdash; wird innerhalb von Tagen erwartet</li>
+                            <li>Sobald das Bankkonto er&ouml;ffnet ist: Ticketverkauf, Lieferantenzahlungen und Spenden werden m&ouml;glich</li>
+                            <li>Der Verein arbeitet daran, die f&uuml;r die Veranstaltung erforderlichen operativen Ressourcen zu sichern</li>
+                            <li>Die DSGVO-Anforderungen werden sorgf&auml;ltig eingehalten</li>
+                        </ul>
+
+                        <h3>Daniel &mdash; Mitgliedschaft und Vorstandswahlen</h3>
+                        <ul>
+                            <li>Mitgliedschaftskriterien werden noch definiert &mdash; Ausgleich zwischen Inklusivit&auml;t und praktischer Governance (Quorum-Anforderungen bedeuten, dass eine sehr gro&szlig;e Mitgliederzahl Entscheidungen verhindern k&ouml;nnte)</li>
+                            <li>Repr&auml;sentativ-demokratischer Ansatz wird gepr&uuml;ft: engagierte Community-Mitglieder, die die Veranstaltung verstehen</li>
+                            <li>Eine Vereinsmitgliedschaft ist NICHT erforderlich, um teilzunehmen, sich ehrenamtlich zu engagieren, Leitungsfunktionen zu &uuml;bernehmen oder die Veranstaltung zu besuchen</li>
+                            <li>Der Vorstand hat sich verpflichtet, eine Wahl f&uuml;r zus&auml;tzliche, vielf&auml;ltigere Vorstandsmitglieder durchzuf&uuml;hren</li>
+                            <li>Der Prozess erfordert eine 45-t&auml;gige Ank&uuml;ndigungsfrist und eingebundene Mitglieder</li>
+                            <li>Community-Mitglieder, die an einem Vorstandssitz interessiert sind, werden ermutigt, sich zu melden</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Veranstaltungsname</h3>
+                        <ul>
+                            <li>Der Name &bdquo;Nowhere&ldquo; steht dem Verein nicht zur Verf&uuml;gung</li>
+                            <li>Ein tempor&auml;rer Veranstaltungsname wird f&uuml;r den Ticketverkauf und die Kommunikation ben&ouml;tigt</li>
+                            <li>Community-Mitglieder sind eingeladen, &uuml;ber ein Formular Namensvorschl&auml;ge einzureichen (geteilt auf Discord, Telegram und anderen Kan&auml;len)</li>
+                            <li>Die besten Vorschl&auml;ge werden zur Abstimmung unter den zugelassenen Freiwilligen gestellt, die in der Humans-App registriert sind</li>
+                        </ul>
+
+                        <h2>Wichtige Fragen der Gemeinschaft und Diskussion</h2>
+
+                        <h3>Unabh&auml;ngigkeit des Vereins</h3>
+                        <p>Mehrere Community-Mitglieder fragten nach dem rechtlichen Status des Vereins. Der Vorstand best&auml;tigte, dass der Verein eine unabh&auml;ngige juristische Person ist, die durch einen demokratischen Wahlprozess gegr&uuml;ndet wurde und sich auf den Aufbau eigener operativer F&auml;higkeiten konzentriert.</p>
+
+                        <h3>Warum ein Verein?</h3>
+                        <p>F&uuml;r diejenigen, die zum ersten Mal an der Diskussion teilnehmen: Eine Vereinsstruktur ist die angemessene Rechtsform f&uuml;r eine ehrenamtlich organisierte Gemeinschaftsveranstaltung nach spanischem Recht. Der Verein wurde durch eine demokratische Wahl im Dezember 2025 gegr&uuml;ndet.</p>
+
+                        <h3>Warum ein neuer Name?</h3>
+                        <p>Dies f&uuml;hrte zu einer umfangreichen Diskussion. Community-Mitglieder brachten eine starke Verbundenheit mit dem Namen &bdquo;Nowhere&ldquo; zum Ausdruck. Einige Teilnehmende der Versammlung merkten an, dass ein tempor&auml;rer Namenswechsel eine Risikominderungsma&szlig;nahme sein k&ouml;nnte. Im Chat wurden zahlreiche kreative Namensvorschl&auml;ge gemacht.</p>
+
+                        <h3>Zugang zu Containern</h3>
+                        <p>Community-Mitglieder betonten, dass Container mit kritischer Infrastruktur (Baumaterialien, Abteilungsausr&uuml;stung) f&uuml;r eine gro&szlig; angelegte Veranstaltung wichtig sind. Die Sicherung des Containerzugangs ist eine Priorit&auml;t in der operativen Planung des Vereins.</p>
+
+                        <h3>Veranstaltungsgr&ouml;&szlig;e und Preisgestaltung</h3>
+                        <p>Diskussion dar&uuml;ber, ob die Veranstaltung dieses Jahr kleiner sein sollte. Der Vorstand wies darauf hin, dass Fixkosten eine Mindestgr&ouml;&szlig;e von etwa 2.400&ndash;2.800 Teilnehmenden erfordern. Der Zielpreis f&uuml;r Tickets liegt bei etwa 275&nbsp;&euro; (Mischkalkulation einschlie&szlig;lich erm&auml;&szlig;igter und VIP-Tickets), &auml;hnlich wie bei vergleichbaren Gemeinschaftsveranstaltungen. Der Vorstand sucht aktiv nach M&ouml;glichkeiten zur Kostensenkung, darunter ein Mehrwertsteuersatz von 10 % (gegen&uuml;ber zuvor 21 %).</p>
+
+                        <h3>Rekrutierung und Kontinuit&auml;t der Verantwortlichen</h3>
+                        <p>Ein Community-Mitglied fragte nach der Rekrutierung und Bindung von Verantwortlichen und bemerkte, dass einige Discord-Kan&auml;le ruhig sind. Der Vorstand erkannte dies als Priorit&auml;t an und skizzierte Pl&auml;ne f&uuml;r die Humans-App zur Team-Organisation und f&uuml;r einen Freiwilligenkoordinator zur Zuordnung von Personen zu Rollen. Eine Abteilungsstruktur wurde vorl&auml;ufig eingef&uuml;hrt.</p>
+
+                        <h3>Zeitplan f&uuml;r den Ticketverkauf</h3>
+                        <p>In fr&uuml;heren Jahren begann der Ticketverkauf &uuml;blicherweise im Februar oder Anfang M&auml;rz. Die Gemeinschaft brachte die Dringlichkeit zum Ausdruck, ein klares Datum f&uuml;r eine Zusage zu erhalten, da einige Mitglieder Urlaub buchen m&uuml;ssen und alternative Veranstaltungen in Betracht ziehen.</p>
+
+                        <h2>Stimmen der Gemeinschaft</h2>
+                        <ul>
+                            <li>Starke Anerkennung f&uuml;r das Tempo der Fortschritte und die Professionalit&auml;t des Vorstands</li>
+                            <li>Zahlreiche kreative Namensvorschl&auml;ge f&uuml;r die Veranstaltung im Chat</li>
+                            <li>Angebote praktischer Hilfe (Camp-Infrastruktur, Bau-Unterst&uuml;tzung)</li>
+                            <li>Wunsch nach mehr Informationen und klareren Kommunikationskan&auml;len</li>
+                            <li>Vorschlag, E-Mail und WhatsApp neben Discord zu nutzen, da einige Community-Mitglieder Discord als &uuml;berw&auml;ltigend empfinden</li>
+                        </ul>
+
+                        <h2>Genannte wichtige Termine</h2>
+                        <ul>
+                            <li><strong>Veranstaltungstermine (falls durchgef&uuml;hrt):</strong> 7.&ndash;12. Juli 2026</li>
+                            <li><strong>Aufbau:</strong> Beginn etwa am 15. Juni</li>
+                            <li><strong>Abbau:</strong> Abschluss etwa am 22. Juli</li>
+                            <li><strong>Start der Humans-App:</strong> Voraussichtlich Sonntag</li>
+                            <li><strong>Bankkonto:</strong> Innerhalb von Tagen erwartet</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
 
     <div id="shared-footer" data-prefix=".."></div>
     <script src="../footer.js"></script>
+
+    <script>
+document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        var lang = this.dataset.lang;
+        document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+        var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+        if (target) target.classList.add('active');
+    });
+});
+    </script>
 
     <script src="../script.js"></script>
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board Meeting - February 19, 2026 | Nobodies Collective</title>
+    <title>NCA Board Meeting Minutes - February 19, 2026 | Nobodies Collective</title>
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +28,12 @@
         .meeting-content th { background: var(--color-bg-secondary); font-weight: 600; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -40,155 +46,759 @@
                 <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
 
                 <div class="meeting-header">
-                    <h1>Board Meeting</h1>
+                    <h1>NCA Board Meeting Minutes</h1>
                     <div class="meeting-meta">
                         <span><strong>Date:</strong> February 19, 2026</span>
                         <span><strong>Duration:</strong> ~1.5 hours</span>
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Board members present:</strong> Ben, Chris, Daniel, Pablo, Peter, Ward (quorum met &mdash; 6 of 8 members)
-                    <br><strong>Non-board attendees:</strong> Pepe (legal advisor), Daniela (production consultant)
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Decisions</h2>
-                    <table>
-                        <thead>
-                            <tr><th>Decision</th><th>Context</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>30 new collaborators approved</td>
-                                <td>All candidates received at least four positive reviews from board members; accepted as non-voting collaborators</td>
-                            </tr>
-                            <tr>
-                                <td>Membership criteria agreed in principle</td>
-                                <td>Three months of meaningful contribution or one event as a lead; recency requirement applies; legal language to follow</td>
-                            </tr>
-                            <tr>
-                                <td>Art grants team to pause website migration for one week</td>
-                                <td>Potential intellectual property considerations require clarification before proceeding</td>
-                            </tr>
-                            <tr>
-                                <td>Obtain director liability and event insurance quotes</td>
-                                <td>D&amp;O insurance estimated at EUR 3,000&ndash;5,000/year; EUR 1M event liability cover recommended</td>
-                            </tr>
-                            <tr>
-                                <td>Collaborator application deferred pending consent lead&rsquo;s recommendation</td>
-                                <td>Individual case referred for advice before any decision is made</td>
-                            </tr>
-                            <tr>
-                                <td>Proceed with rank-choice voting for event name</td>
-                                <td>Vote to be sent to participants from the board election</td>
-                            </tr>
-                            <tr>
-                                <td>External discussions to continue next week</td>
-                                <td>Revised proposal sent and acknowledged</td>
-                            </tr>
-                            <tr>
-                                <td>Make preliminary rental inquiry for alternative event site</td>
-                                <td>Significant relocation effort requires viability check before committing resources</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                    <h2>Discussion Summary</h2>
+                    <div class="attendees">
+                        <strong>Board members present:</strong> Ben, Chris, Daniel, Pablo, Peter, Ward (quorum met &mdash; 6 of 8 members)
+                        <br><strong>Non-board attendees:</strong> Pepe (legal advisor), Daniela (production consultant)
+                    </div>
 
-                    <h3>1. Approval of Collaborators</h3>
-                    <p>The board reviewed and unanimously approved 30 individuals as collaborators of the association. All candidates received at least four positive reviews from board members. These individuals are accepted as non-voting collaborators; the congratulatory onboarding email clarifies this status.</p>
+                    <div class="meeting-content">
+                        <h2>Decisions</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Decision</th><th>Context</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>30 new collaborators approved</td>
+                                    <td>All candidates received at least four positive reviews from board members; accepted as non-voting collaborators</td>
+                                </tr>
+                                <tr>
+                                    <td>Membership criteria agreed in principle</td>
+                                    <td>Three months of meaningful contribution or one event as a lead; recency requirement applies; legal language to follow</td>
+                                </tr>
+                                <tr>
+                                    <td>Art grants team to pause website migration for one week</td>
+                                    <td>Potential intellectual property considerations require clarification before proceeding</td>
+                                </tr>
+                                <tr>
+                                    <td>Obtain director liability and event insurance quotes</td>
+                                    <td>D&amp;O insurance estimated at EUR 3,000&ndash;5,000/year; EUR 1M event liability cover recommended</td>
+                                </tr>
+                                <tr>
+                                    <td>Collaborator application deferred pending consent lead&rsquo;s recommendation</td>
+                                    <td>Individual case referred for advice before any decision is made</td>
+                                </tr>
+                                <tr>
+                                    <td>Proceed with rank-choice voting for event name</td>
+                                    <td>Vote to be sent to participants from the board election</td>
+                                </tr>
+                                <tr>
+                                    <td>External discussions to continue next week</td>
+                                    <td>Revised proposal sent and acknowledged</td>
+                                </tr>
+                                <tr>
+                                    <td>Make preliminary rental inquiry for alternative event site</td>
+                                    <td>Significant relocation effort requires viability check before committing resources</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                    <h3>2. Membership Criteria</h3>
-                    <p>The board discussed and agreed in principle to criteria for full voting membership in the association. After considering several options, the board adopted an inclusive, forward-looking approach:</p>
-                    <ul>
-                        <li>Three months of meaningful contribution in year-round operations, OR successful completion of one event as a lead</li>
-                        <li>A recency requirement applies</li>
-                        <li>A self-declaration of no conflicts of interest or disciplinary issues will be part of the application process</li>
-                    </ul>
-                    <p>The board intends to publish the finalised criteria shortly, and encourages the community to develop a permanent membership policy to be put to vote at the first General Assembly.</p>
+                        <h2>Discussion Summary</h2>
 
-                    <h3>3. Art Grant Website</h3>
-                    <p>The board discussed a request from the art grants team to copy the existing art grant website to NCA infrastructure. Due to potential intellectual property considerations, the board agreed to pause for one week to clarify ownership before proceeding. The team may create new content as an alternative.</p>
+                        <h3>1. Approval of Collaborators</h3>
+                        <p>The board reviewed and unanimously approved 30 individuals as collaborators of the association. All candidates received at least four positive reviews from board members. These individuals are accepted as non-voting collaborators; the congratulatory onboarding email clarifies this status.</p>
 
-                    <h3>4. Director Liability and Insurance</h3>
-                    <p>The board discussed director liability based on legal advice received from Spanish lawyers:</p>
-                    <ul>
-                        <li>Liability is standard for association directors; directors are protected as long as they are not negligent</li>
-                        <li>Recommended mitigations: internal rules allocating liability to negligent individuals, director liability insurance (estimated EUR 3,000&ndash;5,000/year), and event insurance (EUR 1M liability cover recommended)</li>
-                        <li>Additional insurance types to explore: accidental death and dismemberment (AD&amp;D) coverage for participants/volunteers, and volunteer insurance</li>
-                    </ul>
+                        <h3>2. Membership Criteria</h3>
+                        <p>The board discussed and agreed in principle to criteria for full voting membership in the association. After considering several options, the board adopted an inclusive, forward-looking approach:</p>
+                        <ul>
+                            <li>Three months of meaningful contribution in year-round operations, OR successful completion of one event as a lead</li>
+                            <li>A recency requirement applies</li>
+                            <li>A self-declaration of no conflicts of interest or disciplinary issues will be part of the application process</li>
+                        </ul>
+                        <p>The board intends to publish the finalised criteria shortly, and encourages the community to develop a permanent membership policy to be put to vote at the first General Assembly.</p>
 
-                    <h3>5. Collaborator Application &mdash; Individual Case</h3>
-                    <p>The board discussed a specific collaborator application. The matter was referred to the consent lead for advice before any decision is made.</p>
+                        <h3>3. Art Grant Website</h3>
+                        <p>The board discussed a request from the art grants team to copy the existing art grant website to NCA infrastructure. Due to potential intellectual property considerations, the board agreed to pause for one week to clarify ownership before proceeding. The team may create new content as an alternative.</p>
 
-                    <h3>6. Name Voting</h3>
-                    <p>The board agreed to proceed with a rank-choice voting tool for the alternative event name. The vote will be sent to the people who participated in the board election.</p>
+                        <h3>4. Director Liability and Insurance</h3>
+                        <p>The board discussed director liability based on legal advice received from Spanish lawyers:</p>
+                        <ul>
+                            <li>Liability is standard for association directors; directors are protected as long as they are not negligent</li>
+                            <li>Recommended mitigations: internal rules allocating liability to negligent individuals, director liability insurance (estimated EUR 3,000&ndash;5,000/year), and event insurance (EUR 1M liability cover recommended)</li>
+                            <li>Additional insurance types to explore: accidental death and dismemberment (AD&amp;D) coverage for participants/volunteers, and volunteer insurance</li>
+                        </ul>
 
-                    <h3>7. External Agreement Update</h3>
-                    <p>A revised proposal was sent and acknowledged. A follow-up meeting is planned for Monday.</p>
+                        <h3>5. Collaborator Application &mdash; Individual Case</h3>
+                        <p>The board discussed a specific collaborator application. The matter was referred to the consent lead for advice before any decision is made.</p>
 
-                    <h3>8. New Site Consideration</h3>
-                    <p>The board discussed the feasibility of an alternative event site. Given the significant effort required to relocate, the approach is to make a preliminary rental inquiry to the landowner to determine viability before committing further resources.</p>
+                        <h3>6. Name Voting</h3>
+                        <p>The board agreed to proceed with a rank-choice voting tool for the alternative event name. The vote will be sent to the people who participated in the board election.</p>
 
-                    <h3>9. Tax ID Status</h3>
-                    <p>The tax ID remains blocked. The board&rsquo;s financial advisor confirmed that obtaining the tax ID will unlock subsequent administrative steps. Daniel to follow up with his bank while in Barcelona.</p>
+                        <h3>7. External Agreement Update</h3>
+                        <p>A revised proposal was sent and acknowledged. A follow-up meeting is planned for Monday.</p>
 
-                    <h3>10. Legal Consultation</h3>
-                    <p>Pablo reported that a quote has been requested from the association&rsquo;s lawyers for a comprehensive set of organisational policies (Code of Conduct, privacy, consent, inclusion, media, ticketing, risk management, etc.). Expected cost approximately EUR 2,000, including follow-up support.</p>
+                        <h3>8. New Site Consideration</h3>
+                        <p>The board discussed the feasibility of an alternative event site. Given the significant effort required to relocate, the approach is to make a preliminary rental inquiry to the landowner to determine viability before committing further resources.</p>
 
-                    <h3>11. Go/No-Go Process</h3>
-                    <p>The governance working group is preparing an analysis package for the community. A non-binding poll is expected to open around 24&ndash;25 February for association members.</p>
+                        <h3>9. Tax ID Status</h3>
+                        <p>The tax ID remains blocked. The board&rsquo;s financial advisor confirmed that obtaining the tax ID will unlock subsequent administrative steps. Daniel to follow up with his bank while in Barcelona.</p>
 
-                    <h2>Action Items</h2>
-                    <table>
-                        <thead>
-                            <tr><th>Owner</th><th>Action</th><th>Deadline</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Pablo</td>
-                                <td>Confirm Monday external meeting</td>
-                                <td>Fri 20 Feb</td>
-                            </tr>
-                            <tr>
-                                <td>Peter</td>
-                                <td>Inform art grants team to pause website migration</td>
-                                <td>Immediate</td>
-                            </tr>
-                            <tr>
-                                <td>Pepe</td>
-                                <td>Finalise membership criteria with legal language</td>
-                                <td>Fri/Sat</td>
-                            </tr>
-                            <tr>
-                                <td>Pablo</td>
-                                <td>Set up rank-choice name voting tool</td>
-                                <td>Mon/Tue</td>
-                            </tr>
-                            <tr>
-                                <td>Pablo</td>
-                                <td>Preliminary rental inquiry for alternative site</td>
-                                <td>TBD</td>
-                            </tr>
-                            <tr>
-                                <td>Daniela</td>
-                                <td>Obtain insurance quotes</td>
-                                <td>Ongoing</td>
-                            </tr>
-                            <tr>
-                                <td>Daniel</td>
-                                <td>Consult consent lead re: deferred collaborator application</td>
-                                <td>This week</td>
-                            </tr>
-                            <tr>
-                                <td>Daniel</td>
-                                <td>Contact bank re: tax ID</td>
-                                <td>While in Barcelona</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <h3>10. Legal Consultation</h3>
+                        <p>Pablo reported that a quote has been requested from the association&rsquo;s lawyers for a comprehensive set of organisational policies (Code of Conduct, privacy, consent, inclusion, media, ticketing, risk management, etc.). Expected cost approximately EUR 2,000, including follow-up support.</p>
+
+                        <h3>11. Go/No-Go Process</h3>
+                        <p>The governance working group is preparing an analysis package for the community. A non-binding poll is expected to open around 24&ndash;25 February for association members.</p>
+
+                        <h2>Action Items</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Owner</th><th>Action</th><th>Deadline</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Confirm Monday external meeting</td>
+                                    <td>Fri 20 Feb</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Inform art grants team to pause website migration</td>
+                                    <td>Immediate</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Finalise membership criteria with legal language</td>
+                                    <td>Fri/Sat</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Set up rank-choice name voting tool</td>
+                                    <td>Mon/Tue</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Preliminary rental inquiry for alternative site</td>
+                                    <td>TBD</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniela</td>
+                                    <td>Obtain insurance quotes</td>
+                                    <td>Ongoing</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Consult consent lead re: deferred collaborator application</td>
+                                    <td>This week</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Contact bank re: tax ID</td>
+                                    <td>While in Barcelona</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Miembros de la junta presentes:</strong> Ben, Chris, Daniel, Pablo, Peter, Ward (qu&oacute;rum alcanzado &mdash; 6 de 8 miembros)
+                        <br><strong>Asistentes no pertenecientes a la junta:</strong> Pepe (asesor legal), Daniela (consultora de producci&oacute;n)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisiones</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Decisi&oacute;n</th><th>Contexto</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>30 nuevos colaboradores aprobados</td>
+                                    <td>Todos los candidatos recibieron al menos cuatro evaluaciones positivas de miembros de la junta; aceptados como colaboradores sin derecho a voto</td>
+                                </tr>
+                                <tr>
+                                    <td>Criterios de membres&iacute;a acordados en principio</td>
+                                    <td>Tres meses de contribuci&oacute;n significativa o un evento como l&iacute;der; aplica requisito de actividad reciente; redacci&oacute;n legal pendiente</td>
+                                </tr>
+                                <tr>
+                                    <td>Equipo de becas art&iacute;sticas debe pausar la migraci&oacute;n del sitio web durante una semana</td>
+                                    <td>Posibles consideraciones de propiedad intelectual requieren aclaraci&oacute;n antes de proceder</td>
+                                </tr>
+                                <tr>
+                                    <td>Obtener cotizaciones de seguro de responsabilidad de directores y del evento</td>
+                                    <td>Seguro D&amp;O estimado en 3.000&ndash;5.000 EUR/a&ntilde;o; se recomienda cobertura de responsabilidad del evento de 1M EUR</td>
+                                </tr>
+                                <tr>
+                                    <td>Solicitud de colaborador aplazada a la espera de la recomendaci&oacute;n del responsable de consentimiento</td>
+                                    <td>Caso individual remitido para asesoramiento antes de tomar cualquier decisi&oacute;n</td>
+                                </tr>
+                                <tr>
+                                    <td>Proceder con votaci&oacute;n por orden de preferencia para el nombre del evento</td>
+                                    <td>La votaci&oacute;n se enviar&aacute; a los participantes de la elecci&oacute;n de la junta</td>
+                                </tr>
+                                <tr>
+                                    <td>Las conversaciones externas continuar&aacute;n la pr&oacute;xima semana</td>
+                                    <td>Propuesta revisada enviada y aceptada</td>
+                                </tr>
+                                <tr>
+                                    <td>Realizar consulta preliminar de alquiler para un emplazamiento alternativo del evento</td>
+                                    <td>El esfuerzo significativo de reubicaci&oacute;n requiere verificaci&oacute;n de viabilidad antes de comprometer recursos</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Resumen de las Discusiones</h2>
+
+                        <h3>1. Aprobaci&oacute;n de Colaboradores</h3>
+                        <p>La junta revis&oacute; y aprob&oacute; por unanimidad a 30 personas como colaboradores de la asociaci&oacute;n. Todos los candidatos recibieron al menos cuatro evaluaciones positivas de miembros de la junta. Estas personas son aceptadas como colaboradores sin derecho a voto; el correo electr&oacute;nico de bienvenida aclara este estatus.</p>
+
+                        <h3>2. Criterios de Membres&iacute;a</h3>
+                        <p>La junta discuti&oacute; y acord&oacute; en principio los criterios para la membres&iacute;a plena con derecho a voto en la asociaci&oacute;n. Tras considerar varias opciones, la junta adopt&oacute; un enfoque inclusivo y orientado al futuro:</p>
+                        <ul>
+                            <li>Tres meses de contribuci&oacute;n significativa en operaciones durante todo el a&ntilde;o, O finalizaci&oacute;n exitosa de un evento como l&iacute;der</li>
+                            <li>Aplica un requisito de actividad reciente</li>
+                            <li>Una autodeclaraci&oacute;n de ausencia de conflictos de inter&eacute;s o problemas disciplinarios formar&aacute; parte del proceso de solicitud</li>
+                        </ul>
+                        <p>La junta tiene la intenci&oacute;n de publicar los criterios finalizados en breve y anima a la comunidad a desarrollar una pol&iacute;tica de membres&iacute;a permanente que se someta a votaci&oacute;n en la primera Asamblea General.</p>
+
+                        <h3>3. Sitio Web de Becas Art&iacute;sticas</h3>
+                        <p>La junta discuti&oacute; una solicitud del equipo de becas art&iacute;sticas para copiar el sitio web existente de becas art&iacute;sticas a la infraestructura de NCA. Debido a posibles consideraciones de propiedad intelectual, la junta acord&oacute; pausar durante una semana para aclarar la titularidad antes de proceder. El equipo puede crear contenido nuevo como alternativa.</p>
+
+                        <h3>4. Responsabilidad de Directores y Seguros</h3>
+                        <p>La junta discuti&oacute; la responsabilidad de los directores bas&aacute;ndose en el asesoramiento legal recibido de abogados espa&ntilde;oles:</p>
+                        <ul>
+                            <li>La responsabilidad es est&aacute;ndar para directores de asociaciones; los directores est&aacute;n protegidos siempre que no sean negligentes</li>
+                            <li>Mitigaciones recomendadas: normas internas que asignen la responsabilidad a personas negligentes, seguro de responsabilidad de directores (estimado en 3.000&ndash;5.000 EUR/a&ntilde;o) y seguro del evento (se recomienda cobertura de responsabilidad de 1M EUR)</li>
+                            <li>Tipos de seguro adicionales a explorar: cobertura por muerte accidental y desmembramiento (AD&amp;D) para participantes/voluntarios, y seguro de voluntarios</li>
+                        </ul>
+
+                        <h3>5. Solicitud de Colaborador &mdash; Caso Individual</h3>
+                        <p>La junta discuti&oacute; una solicitud espec&iacute;fica de colaborador. El asunto fue remitido al responsable de consentimiento para asesoramiento antes de tomar cualquier decisi&oacute;n.</p>
+
+                        <h3>6. Votaci&oacute;n del Nombre</h3>
+                        <p>La junta acord&oacute; proceder con una herramienta de votaci&oacute;n por orden de preferencia para el nombre alternativo del evento. La votaci&oacute;n se enviar&aacute; a las personas que participaron en la elecci&oacute;n de la junta.</p>
+
+                        <h3>7. Actualizaci&oacute;n del Acuerdo Externo</h3>
+                        <p>Se envi&oacute; una propuesta revisada que fue aceptada. Se ha planificado una reuni&oacute;n de seguimiento para el lunes.</p>
+
+                        <h3>8. Consideraci&oacute;n de Nuevo Emplazamiento</h3>
+                        <p>La junta discuti&oacute; la viabilidad de un emplazamiento alternativo para el evento. Dado el esfuerzo significativo requerido para la reubicaci&oacute;n, el enfoque es realizar una consulta preliminar de alquiler al propietario del terreno para determinar la viabilidad antes de comprometer m&aacute;s recursos.</p>
+
+                        <h3>9. Estado del NIF</h3>
+                        <p>El NIF sigue bloqueado. El asesor financiero de la junta confirm&oacute; que la obtenci&oacute;n del NIF desbloquear&aacute; los pasos administrativos posteriores. Daniel dar&aacute; seguimiento con su banco mientras est&eacute; en Barcelona.</p>
+
+                        <h3>10. Consulta Legal</h3>
+                        <p>Pablo inform&oacute; que se ha solicitado un presupuesto a los abogados de la asociaci&oacute;n para un conjunto integral de pol&iacute;ticas organizativas (C&oacute;digo de Conducta, privacidad, consentimiento, inclusi&oacute;n, medios, venta de entradas, gesti&oacute;n de riesgos, etc.). Coste estimado de aproximadamente 2.000 EUR, incluyendo soporte de seguimiento.</p>
+
+                        <h3>11. Proceso de Continuidad/No Continuidad</h3>
+                        <p>El grupo de trabajo de gobernanza est&aacute; preparando un paquete de an&aacute;lisis para la comunidad. Se espera que se abra una encuesta no vinculante alrededor del 24&ndash;25 de febrero para los miembros de la asociaci&oacute;n.</p>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Responsable</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Confirmar reuni&oacute;n externa del lunes</td>
+                                    <td>Vie 20 Feb</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Informar al equipo de becas art&iacute;sticas sobre la pausa en la migraci&oacute;n del sitio web</td>
+                                    <td>Inmediato</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Finalizar criterios de membres&iacute;a con redacci&oacute;n legal</td>
+                                    <td>Vie/S&aacute;b</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Configurar herramienta de votaci&oacute;n por orden de preferencia para el nombre</td>
+                                    <td>Lun/Mar</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Consulta preliminar de alquiler para emplazamiento alternativo</td>
+                                    <td>Por determinar</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniela</td>
+                                    <td>Obtener cotizaciones de seguros</td>
+                                    <td>En curso</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Consultar al responsable de consentimiento sobre la solicitud de colaborador aplazada</td>
+                                    <td>Esta semana</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Contactar al banco sobre el NIF</td>
+                                    <td>Mientras est&eacute; en Barcelona</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Membres du conseil pr&eacute;sents :</strong> Ben, Chris, Daniel, Pablo, Peter, Ward (quorum atteint &mdash; 6 membres sur 8)
+                        <br><strong>Participants hors conseil :</strong> Pepe (conseiller juridique), Daniela (consultante en production)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>D&eacute;cisions</h2>
+                        <table>
+                            <thead>
+                                <tr><th>D&eacute;cision</th><th>Contexte</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>30 nouveaux collaborateurs approuv&eacute;s</td>
+                                    <td>Tous les candidats ont re&ccedil;u au moins quatre &eacute;valuations positives des membres du conseil ; accept&eacute;s comme collaborateurs sans droit de vote</td>
+                                </tr>
+                                <tr>
+                                    <td>Crit&egrave;res d&rsquo;adh&eacute;sion approuv&eacute;s en principe</td>
+                                    <td>Trois mois de contribution significative ou un &eacute;v&eacute;nement en tant que responsable ; exigence de r&eacute;cence applicable ; r&eacute;daction juridique &agrave; suivre</td>
+                                </tr>
+                                <tr>
+                                    <td>&Eacute;quipe des subventions artistiques : pause d&rsquo;une semaine pour la migration du site web</td>
+                                    <td>Des consid&eacute;rations de propri&eacute;t&eacute; intellectuelle n&eacute;cessitent des &eacute;claircissements avant de poursuivre</td>
+                                </tr>
+                                <tr>
+                                    <td>Obtenir des devis d&rsquo;assurance responsabilit&eacute; des administrateurs et d&rsquo;assurance &eacute;v&eacute;nementielle</td>
+                                    <td>Assurance D&amp;O estim&eacute;e &agrave; 3 000&ndash;5 000 EUR/an ; couverture responsabilit&eacute; &eacute;v&eacute;nementielle de 1M EUR recommand&eacute;e</td>
+                                </tr>
+                                <tr>
+                                    <td>Candidature de collaborateur report&eacute;e en attente de la recommandation du responsable du consentement</td>
+                                    <td>Cas individuel renvoy&eacute; pour avis avant toute d&eacute;cision</td>
+                                </tr>
+                                <tr>
+                                    <td>Proc&eacute;der au vote par classement pr&eacute;f&eacute;rentiel pour le nom de l&rsquo;&eacute;v&eacute;nement</td>
+                                    <td>Le vote sera envoy&eacute; aux participants de l&rsquo;&eacute;lection du conseil</td>
+                                </tr>
+                                <tr>
+                                    <td>Les discussions externes se poursuivront la semaine prochaine</td>
+                                    <td>Proposition r&eacute;vis&eacute;e envoy&eacute;e et accept&eacute;e</td>
+                                </tr>
+                                <tr>
+                                    <td>Effectuer une demande de location pr&eacute;liminaire pour un site alternatif</td>
+                                    <td>L&rsquo;effort de d&eacute;localisation significatif n&eacute;cessite une v&eacute;rification de viabilit&eacute; avant d&rsquo;engager des ressources</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>R&eacute;sum&eacute; des Discussions</h2>
+
+                        <h3>1. Approbation des Collaborateurs</h3>
+                        <p>Le conseil a examin&eacute; et approuv&eacute; &agrave; l&rsquo;unanimit&eacute; 30 personnes en tant que collaborateurs de l&rsquo;association. Tous les candidats ont re&ccedil;u au moins quatre &eacute;valuations positives des membres du conseil. Ces personnes sont accept&eacute;es comme collaborateurs sans droit de vote ; le courriel d&rsquo;int&eacute;gration de f&eacute;licitations pr&eacute;cise ce statut.</p>
+
+                        <h3>2. Crit&egrave;res d&rsquo;Adh&eacute;sion</h3>
+                        <p>Le conseil a discut&eacute; et approuv&eacute; en principe les crit&egrave;res de pleine adh&eacute;sion avec droit de vote au sein de l&rsquo;association. Apr&egrave;s avoir examin&eacute; plusieurs options, le conseil a adopt&eacute; une approche inclusive et tourn&eacute;e vers l&rsquo;avenir :</p>
+                        <ul>
+                            <li>Trois mois de contribution significative dans les op&eacute;rations annuelles, OU r&eacute;alisation r&eacute;ussie d&rsquo;un &eacute;v&eacute;nement en tant que responsable</li>
+                            <li>Une exigence de r&eacute;cence s&rsquo;applique</li>
+                            <li>Une auto-d&eacute;claration d&rsquo;absence de conflits d&rsquo;int&eacute;r&ecirc;ts ou de probl&egrave;mes disciplinaires fera partie du processus de candidature</li>
+                        </ul>
+                        <p>Le conseil a l&rsquo;intention de publier les crit&egrave;res finalis&eacute;s sous peu et encourage la communaut&eacute; &agrave; &eacute;laborer une politique d&rsquo;adh&eacute;sion permanente qui sera soumise au vote lors de la premi&egrave;re Assembl&eacute;e G&eacute;n&eacute;rale.</p>
+
+                        <h3>3. Site Web des Subventions Artistiques</h3>
+                        <p>Le conseil a discut&eacute; d&rsquo;une demande de l&rsquo;&eacute;quipe des subventions artistiques pour copier le site web existant des subventions artistiques sur l&rsquo;infrastructure de NCA. En raison de consid&eacute;rations potentielles de propri&eacute;t&eacute; intellectuelle, le conseil a d&eacute;cid&eacute; de faire une pause d&rsquo;une semaine pour clarifier la propri&eacute;t&eacute; avant de poursuivre. L&rsquo;&eacute;quipe peut cr&eacute;er du nouveau contenu comme alternative.</p>
+
+                        <h3>4. Responsabilit&eacute; des Administrateurs et Assurances</h3>
+                        <p>Le conseil a discut&eacute; de la responsabilit&eacute; des administrateurs sur la base des conseils juridiques re&ccedil;us d&rsquo;avocats espagnols :</p>
+                        <ul>
+                            <li>La responsabilit&eacute; est standard pour les administrateurs d&rsquo;associations ; les administrateurs sont prot&eacute;g&eacute;s tant qu&rsquo;ils ne sont pas n&eacute;gligents</li>
+                            <li>Mesures d&rsquo;att&eacute;nuation recommand&eacute;es : r&egrave;gles internes attribuant la responsabilit&eacute; aux personnes n&eacute;gligentes, assurance responsabilit&eacute; des administrateurs (estim&eacute;e &agrave; 3 000&ndash;5 000 EUR/an) et assurance &eacute;v&eacute;nementielle (couverture responsabilit&eacute; de 1M EUR recommand&eacute;e)</li>
+                            <li>Types d&rsquo;assurance suppl&eacute;mentaires &agrave; explorer : couverture d&eacute;c&egrave;s accidentel et mutilation (AD&amp;D) pour les participants/b&eacute;n&eacute;voles, et assurance b&eacute;n&eacute;voles</li>
+                        </ul>
+
+                        <h3>5. Candidature de Collaborateur &mdash; Cas Individuel</h3>
+                        <p>Le conseil a discut&eacute; d&rsquo;une candidature sp&eacute;cifique de collaborateur. L&rsquo;affaire a &eacute;t&eacute; renvoy&eacute;e au responsable du consentement pour avis avant toute d&eacute;cision.</p>
+
+                        <h3>6. Vote pour le Nom</h3>
+                        <p>Le conseil a d&eacute;cid&eacute; de proc&eacute;der avec un outil de vote par classement pr&eacute;f&eacute;rentiel pour le nom alternatif de l&rsquo;&eacute;v&eacute;nement. Le vote sera envoy&eacute; aux personnes ayant particip&eacute; &agrave; l&rsquo;&eacute;lection du conseil.</p>
+
+                        <h3>7. Mise &agrave; Jour de l&rsquo;Accord Externe</h3>
+                        <p>Une proposition r&eacute;vis&eacute;e a &eacute;t&eacute; envoy&eacute;e et accept&eacute;e. Une r&eacute;union de suivi est pr&eacute;vue pour lundi.</p>
+
+                        <h3>8. &Eacute;tude d&rsquo;un Nouveau Site</h3>
+                        <p>Le conseil a discut&eacute; de la faisabilit&eacute; d&rsquo;un site alternatif pour l&rsquo;&eacute;v&eacute;nement. Compte tenu de l&rsquo;effort important requis pour un d&eacute;m&eacute;nagement, l&rsquo;approche consiste &agrave; effectuer une demande de location pr&eacute;liminaire au propri&eacute;taire du terrain afin de d&eacute;terminer la viabilit&eacute; avant d&rsquo;engager davantage de ressources.</p>
+
+                        <h3>9. &Eacute;tat du Num&eacute;ro d&rsquo;Identification Fiscale</h3>
+                        <p>Le num&eacute;ro d&rsquo;identification fiscale reste bloqu&eacute;. Le conseiller financier du conseil a confirm&eacute; que l&rsquo;obtention de ce num&eacute;ro d&eacute;bloquera les &eacute;tapes administratives suivantes. Daniel doit effectuer un suivi avec sa banque pendant son s&eacute;jour &agrave; Barcelone.</p>
+
+                        <h3>10. Consultation Juridique</h3>
+                        <p>Pablo a indiqu&eacute; qu&rsquo;un devis a &eacute;t&eacute; demand&eacute; aux avocats de l&rsquo;association pour un ensemble complet de politiques organisationnelles (Code de Conduite, vie priv&eacute;e, consentement, inclusion, m&eacute;dias, billetterie, gestion des risques, etc.). Co&ucirc;t estim&eacute; &agrave; environ 2 000 EUR, incluant le support de suivi.</p>
+
+                        <h3>11. Processus de Continuit&eacute;</h3>
+                        <p>Le groupe de travail sur la gouvernance pr&eacute;pare un dossier d&rsquo;analyse pour la communaut&eacute;. Un sondage non contraignant devrait ouvrir aux alentours du 24&ndash;25 f&eacute;vrier pour les membres de l&rsquo;association.</p>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Responsable</th><th>Action</th><th>&Eacute;ch&eacute;ance</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Confirmer la r&eacute;union externe de lundi</td>
+                                    <td>Ven 20 f&eacute;v</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Informer l&rsquo;&eacute;quipe des subventions artistiques de la pause de la migration du site web</td>
+                                    <td>Imm&eacute;diat</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Finaliser les crit&egrave;res d&rsquo;adh&eacute;sion avec la r&eacute;daction juridique</td>
+                                    <td>Ven/Sam</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Mettre en place l&rsquo;outil de vote par classement pr&eacute;f&eacute;rentiel pour le nom</td>
+                                    <td>Lun/Mar</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Demande de location pr&eacute;liminaire pour le site alternatif</td>
+                                    <td>&Agrave; d&eacute;terminer</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniela</td>
+                                    <td>Obtenir des devis d&rsquo;assurance</td>
+                                    <td>En cours</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Consulter le responsable du consentement concernant la candidature de collaborateur report&eacute;e</td>
+                                    <td>Cette semaine</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Contacter la banque concernant le num&eacute;ro d&rsquo;identification fiscale</td>
+                                    <td>Pendant son s&eacute;jour &agrave; Barcelone</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevale la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Membri del consiglio presenti:</strong> Ben, Chris, Daniel, Pablo, Peter, Ward (quorum raggiunto &mdash; 6 membri su 8)
+                        <br><strong>Partecipanti esterni al consiglio:</strong> Pepe (consulente legale), Daniela (consulente di produzione)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisioni</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Decisione</th><th>Contesto</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>30 nuovi collaboratori approvati</td>
+                                    <td>Tutti i candidati hanno ricevuto almeno quattro valutazioni positive dai membri del consiglio; accettati come collaboratori senza diritto di voto</td>
+                                </tr>
+                                <tr>
+                                    <td>Criteri di adesione concordati in linea di principio</td>
+                                    <td>Tre mesi di contributo significativo o un evento come responsabile; si applica il requisito di recenza; redazione legale a seguire</td>
+                                </tr>
+                                <tr>
+                                    <td>Il team delle sovvenzioni artistiche deve sospendere la migrazione del sito web per una settimana</td>
+                                    <td>Potenziali considerazioni sulla propriet&agrave; intellettuale richiedono chiarimenti prima di procedere</td>
+                                </tr>
+                                <tr>
+                                    <td>Ottenere preventivi per l&rsquo;assicurazione di responsabilit&agrave; degli amministratori e dell&rsquo;evento</td>
+                                    <td>Assicurazione D&amp;O stimata a 3.000&ndash;5.000 EUR/anno; copertura di responsabilit&agrave; dell&rsquo;evento di 1M EUR raccomandata</td>
+                                </tr>
+                                <tr>
+                                    <td>Candidatura di collaboratore rinviata in attesa della raccomandazione del responsabile del consenso</td>
+                                    <td>Caso individuale sottoposto a parere prima di qualsiasi decisione</td>
+                                </tr>
+                                <tr>
+                                    <td>Procedere con il voto a classifica preferenziale per il nome dell&rsquo;evento</td>
+                                    <td>Il voto sar&agrave; inviato ai partecipanti dell&rsquo;elezione del consiglio</td>
+                                </tr>
+                                <tr>
+                                    <td>Le discussioni esterne continueranno la prossima settimana</td>
+                                    <td>Proposta rivista inviata e accettata</td>
+                                </tr>
+                                <tr>
+                                    <td>Effettuare un&rsquo;indagine preliminare di affitto per un sito alternativo dell&rsquo;evento</td>
+                                    <td>Lo sforzo significativo di trasferimento richiede una verifica di fattibilit&agrave; prima di impegnare risorse</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Riepilogo delle Discussioni</h2>
+
+                        <h3>1. Approvazione dei Collaboratori</h3>
+                        <p>Il consiglio ha esaminato e approvato all&rsquo;unanimit&agrave; 30 persone come collaboratori dell&rsquo;associazione. Tutti i candidati hanno ricevuto almeno quattro valutazioni positive dai membri del consiglio. Queste persone sono accettate come collaboratori senza diritto di voto; l&rsquo;e-mail di benvenuto chiarisce questo status.</p>
+
+                        <h3>2. Criteri di Adesione</h3>
+                        <p>Il consiglio ha discusso e concordato in linea di principio i criteri per l&rsquo;adesione piena con diritto di voto nell&rsquo;associazione. Dopo aver esaminato diverse opzioni, il consiglio ha adottato un approccio inclusivo e orientato al futuro:</p>
+                        <ul>
+                            <li>Tre mesi di contributo significativo nelle operazioni annuali, OPPURE completamento con successo di un evento come responsabile</li>
+                            <li>Si applica un requisito di recenza</li>
+                            <li>Un&rsquo;autodichiarazione di assenza di conflitti di interesse o problemi disciplinari far&agrave; parte del processo di candidatura</li>
+                        </ul>
+                        <p>Il consiglio intende pubblicare i criteri finalizzati a breve e incoraggia la comunit&agrave; a sviluppare una politica di adesione permanente da sottoporre a votazione nella prima Assemblea Generale.</p>
+
+                        <h3>3. Sito Web delle Sovvenzioni Artistiche</h3>
+                        <p>Il consiglio ha discusso una richiesta del team delle sovvenzioni artistiche di copiare il sito web esistente delle sovvenzioni artistiche sull&rsquo;infrastruttura di NCA. A causa di potenziali considerazioni sulla propriet&agrave; intellettuale, il consiglio ha deciso di sospendere per una settimana per chiarire la titolarit&agrave; prima di procedere. Il team pu&ograve; creare nuovi contenuti come alternativa.</p>
+
+                        <h3>4. Responsabilit&agrave; degli Amministratori e Assicurazioni</h3>
+                        <p>Il consiglio ha discusso la responsabilit&agrave; degli amministratori sulla base della consulenza legale ricevuta da avvocati spagnoli:</p>
+                        <ul>
+                            <li>La responsabilit&agrave; &egrave; standard per gli amministratori di associazioni; gli amministratori sono protetti fintanto che non sono negligenti</li>
+                            <li>Misure di mitigazione raccomandate: regole interne che attribuiscono la responsabilit&agrave; alle persone negligenti, assicurazione di responsabilit&agrave; degli amministratori (stimata a 3.000&ndash;5.000 EUR/anno) e assicurazione dell&rsquo;evento (copertura di responsabilit&agrave; di 1M EUR raccomandata)</li>
+                            <li>Tipi di assicurazione aggiuntivi da esplorare: copertura per morte accidentale e smembramento (AD&amp;D) per partecipanti/volontari e assicurazione volontari</li>
+                        </ul>
+
+                        <h3>5. Candidatura di Collaboratore &mdash; Caso Individuale</h3>
+                        <p>Il consiglio ha discusso una candidatura specifica di collaboratore. La questione &egrave; stata sottoposta al responsabile del consenso per un parere prima di qualsiasi decisione.</p>
+
+                        <h3>6. Votazione del Nome</h3>
+                        <p>Il consiglio ha deciso di procedere con uno strumento di voto a classifica preferenziale per il nome alternativo dell&rsquo;evento. Il voto sar&agrave; inviato alle persone che hanno partecipato all&rsquo;elezione del consiglio.</p>
+
+                        <h3>7. Aggiornamento sull&rsquo;Accordo Esterno</h3>
+                        <p>&Egrave; stata inviata una proposta rivista che &egrave; stata accettata. Una riunione di follow-up &egrave; prevista per luned&igrave;.</p>
+
+                        <h3>8. Valutazione di un Nuovo Sito</h3>
+                        <p>Il consiglio ha discusso la fattibilit&agrave; di un sito alternativo per l&rsquo;evento. Dato lo sforzo significativo richiesto per il trasferimento, l&rsquo;approccio &egrave; quello di effettuare un&rsquo;indagine preliminare di affitto al proprietario del terreno per determinare la fattibilit&agrave; prima di impegnare ulteriori risorse.</p>
+
+                        <h3>9. Stato del Codice Fiscale</h3>
+                        <p>Il codice fiscale resta bloccato. Il consulente finanziario del consiglio ha confermato che l&rsquo;ottenimento del codice fiscale sbloccherr&agrave; i passaggi amministrativi successivi. Daniel dar&agrave; seguito con la sua banca durante la sua permanenza a Barcellona.</p>
+
+                        <h3>10. Consulenza Legale</h3>
+                        <p>Pablo ha riferito che &egrave; stato richiesto un preventivo agli avvocati dell&rsquo;associazione per un insieme completo di politiche organizzative (Codice di Condotta, privacy, consenso, inclusione, media, biglietteria, gestione dei rischi, ecc.). Costo previsto di circa 2.000 EUR, incluso il supporto di follow-up.</p>
+
+                        <h3>11. Processo di Continuit&agrave;</h3>
+                        <p>Il gruppo di lavoro sulla governance sta preparando un pacchetto di analisi per la comunit&agrave;. Si prevede l&rsquo;apertura di un sondaggio non vincolante intorno al 24&ndash;25 febbraio per i membri dell&rsquo;associazione.</p>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Responsabile</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Confermare la riunione esterna di luned&igrave;</td>
+                                    <td>Ven 20 feb</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Informare il team delle sovvenzioni artistiche sulla sospensione della migrazione del sito web</td>
+                                    <td>Immediato</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Finalizzare i criteri di adesione con la redazione legale</td>
+                                    <td>Ven/Sab</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Configurare lo strumento di voto a classifica preferenziale per il nome</td>
+                                    <td>Lun/Mar</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Indagine preliminare di affitto per il sito alternativo</td>
+                                    <td>Da determinare</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniela</td>
+                                    <td>Ottenere preventivi assicurativi</td>
+                                    <td>In corso</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Consultare il responsabile del consenso riguardo alla candidatura di collaboratore rinviata</td>
+                                    <td>Questa settimana</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Contattare la banca riguardo al codice fiscale</td>
+                                    <td>Durante la permanenza a Barcellona</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesende Vorstandsmitglieder:</strong> Ben, Chris, Daniel, Pablo, Peter, Ward (Beschlussf&auml;higkeit erreicht &mdash; 6 von 8 Mitgliedern)
+                        <br><strong>Teilnehmer au&szlig;erhalb des Vorstands:</strong> Pepe (Rechtsberater), Daniela (Produktionsberaterin)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Beschl&uuml;sse</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Beschluss</th><th>Kontext</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>30 neue Mitarbeiter genehmigt</td>
+                                    <td>Alle Kandidaten erhielten mindestens vier positive Bewertungen von Vorstandsmitgliedern; als Mitarbeiter ohne Stimmrecht aufgenommen</td>
+                                </tr>
+                                <tr>
+                                    <td>Mitgliedschaftskriterien grunds&auml;tzlich vereinbart</td>
+                                    <td>Drei Monate bedeutsamer Beitrag oder ein Event als Verantwortlicher; Aktualit&auml;tsanforderung gilt; rechtliche Formulierung folgt</td>
+                                </tr>
+                                <tr>
+                                    <td>Kunstf&ouml;rderungsteam soll Website-Migration f&uuml;r eine Woche pausieren</td>
+                                    <td>M&ouml;gliche urheberrechtliche Erw&auml;gungen erfordern Kl&auml;rung vor dem Fortfahren</td>
+                                </tr>
+                                <tr>
+                                    <td>Angebote f&uuml;r Gesch&auml;ftsf&uuml;hrerhaftpflicht- und Veranstaltungsversicherung einholen</td>
+                                    <td>D&amp;O-Versicherung gesch&auml;tzt auf 3.000&ndash;5.000 EUR/Jahr; Veranstaltungshaftpflichtdeckung von 1 Mio. EUR empfohlen</td>
+                                </tr>
+                                <tr>
+                                    <td>Mitarbeiter-Bewerbung verschoben bis zur Empfehlung des Einwilligungsverantwortlichen</td>
+                                    <td>Einzelfall zur Beratung &uuml;berwiesen, bevor eine Entscheidung getroffen wird</td>
+                                </tr>
+                                <tr>
+                                    <td>Abstimmung mit Rangfolge-Wahlverfahren f&uuml;r den Veranstaltungsnamen durchf&uuml;hren</td>
+                                    <td>Die Abstimmung wird an die Teilnehmer der Vorstandswahl gesendet</td>
+                                </tr>
+                                <tr>
+                                    <td>Externe Gespr&auml;che werden n&auml;chste Woche fortgesetzt</td>
+                                    <td>&Uuml;berarbeiteter Vorschlag gesendet und best&auml;tigt</td>
+                                </tr>
+                                <tr>
+                                    <td>Vorl&auml;ufige Mietanfrage f&uuml;r einen alternativen Veranstaltungsort stellen</td>
+                                    <td>Der erhebliche Umzugsaufwand erfordert eine Machbarkeitspr&uuml;fung vor der Bindung von Ressourcen</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Zusammenfassung der Diskussionen</h2>
+
+                        <h3>1. Genehmigung von Mitarbeitern</h3>
+                        <p>Der Vorstand pr&uuml;fte und genehmigte einstimmig 30 Personen als Mitarbeiter des Vereins. Alle Kandidaten erhielten mindestens vier positive Bewertungen von Vorstandsmitgliedern. Diese Personen werden als Mitarbeiter ohne Stimmrecht aufgenommen; die Begr&uuml;&szlig;ungs-E-Mail erl&auml;utert diesen Status.</p>
+
+                        <h3>2. Mitgliedschaftskriterien</h3>
+                        <p>Der Vorstand diskutierte und vereinbarte grunds&auml;tzlich Kriterien f&uuml;r die volle stimmberechtigte Mitgliedschaft im Verein. Nach Pr&uuml;fung mehrerer Optionen verfolgte der Vorstand einen inklusiven, zukunftsorientierten Ansatz:</p>
+                        <ul>
+                            <li>Drei Monate bedeutsamer Beitrag im Ganzjahresbetrieb ODER erfolgreicher Abschluss eines Events als Verantwortlicher</li>
+                            <li>Eine Aktualit&auml;tsanforderung gilt</li>
+                            <li>Eine Selbsterkl&auml;rung &uuml;ber das Fehlen von Interessenkonflikten oder Disziplinarangelegenheiten wird Teil des Bewerbungsverfahrens sein</li>
+                        </ul>
+                        <p>Der Vorstand beabsichtigt, die finalisierten Kriterien in K&uuml;rze zu ver&ouml;ffentlichen, und ermutigt die Gemeinschaft, eine dauerhafte Mitgliedschaftspolitik zu entwickeln, die auf der ersten Generalversammlung zur Abstimmung gestellt wird.</p>
+
+                        <h3>3. Website der Kunstf&ouml;rderung</h3>
+                        <p>Der Vorstand diskutierte eine Anfrage des Kunstf&ouml;rderungsteams, die bestehende Kunstf&ouml;rderungs-Website auf die NCA-Infrastruktur zu kopieren. Aufgrund m&ouml;glicher urheberrechtlicher Erw&auml;gungen beschloss der Vorstand, eine Woche zu pausieren, um die Eigentumsfrage vor dem Fortfahren zu kl&auml;ren. Das Team kann als Alternative neue Inhalte erstellen.</p>
+
+                        <h3>4. Gesch&auml;ftsf&uuml;hrerhaftung und Versicherungen</h3>
+                        <p>Der Vorstand diskutierte die Gesch&auml;ftsf&uuml;hrerhaftung auf Grundlage der von spanischen Anw&auml;lten erhaltenen Rechtsberatung:</p>
+                        <ul>
+                            <li>Die Haftung ist f&uuml;r Vereinsvorst&auml;nde Standard; Vorstandsmitglieder sind gesch&uuml;tzt, solange sie nicht fahrl&auml;ssig handeln</li>
+                            <li>Empfohlene Schutzma&szlig;nahmen: interne Regeln zur Haftungszuordnung an fahrl&auml;ssige Personen, Gesch&auml;ftsf&uuml;hrerhaftpflichtversicherung (gesch&auml;tzt auf 3.000&ndash;5.000 EUR/Jahr) und Veranstaltungsversicherung (Haftpflichtdeckung von 1 Mio. EUR empfohlen)</li>
+                            <li>Zus&auml;tzlich zu pr&uuml;fende Versicherungsarten: Unfalltod- und Verst&uuml;mmelungsversicherung (AD&amp;D) f&uuml;r Teilnehmer/Freiwillige sowie Freiwilligenversicherung</li>
+                        </ul>
+
+                        <h3>5. Mitarbeiter-Bewerbung &mdash; Einzelfall</h3>
+                        <p>Der Vorstand diskutierte eine spezifische Mitarbeiter-Bewerbung. Die Angelegenheit wurde zur Beratung an den Einwilligungsverantwortlichen &uuml;berwiesen, bevor eine Entscheidung getroffen wird.</p>
+
+                        <h3>6. Namensabstimmung</h3>
+                        <p>Der Vorstand beschloss, mit einem Rangfolge-Wahlverfahren f&uuml;r den alternativen Veranstaltungsnamen fortzufahren. Die Abstimmung wird an die Personen gesendet, die an der Vorstandswahl teilgenommen haben.</p>
+
+                        <h3>7. Aktualisierung der Externen Vereinbarung</h3>
+                        <p>Ein &uuml;berarbeiteter Vorschlag wurde gesendet und best&auml;tigt. Ein Folgetreffen ist f&uuml;r Montag geplant.</p>
+
+                        <h3>8. Pr&uuml;fung eines Neuen Standorts</h3>
+                        <p>Der Vorstand diskutierte die Machbarkeit eines alternativen Veranstaltungsortes. Angesichts des erheblichen Aufwands f&uuml;r einen Umzug besteht der Ansatz darin, eine vorl&auml;ufige Mietanfrage an den Grundst&uuml;ckseigent&uuml;mer zu richten, um die Machbarkeit zu ermitteln, bevor weitere Ressourcen gebunden werden.</p>
+
+                        <h3>9. Status der Steueridentifikationsnummer</h3>
+                        <p>Die Steueridentifikationsnummer bleibt blockiert. Der Finanzberater des Vorstands best&auml;tigte, dass die Erlangung der Steueridentifikationsnummer nachfolgende Verwaltungsschritte freischalten wird. Daniel wird sich w&auml;hrend seines Aufenthalts in Barcelona bei seiner Bank erkundigen.</p>
+
+                        <h3>10. Rechtsberatung</h3>
+                        <p>Pablo berichtete, dass ein Angebot von den Anw&auml;lten des Vereins f&uuml;r ein umfassendes Paket organisatorischer Richtlinien angefordert wurde (Verhaltenskodex, Datenschutz, Einwilligung, Inklusion, Medien, Ticketverkauf, Risikomanagement usw.). Voraussichtliche Kosten von etwa 2.000 EUR, einschlie&szlig;lich Folgeunterst&uuml;tzung.</p>
+
+                        <h3>11. Fortf&uuml;hrungsprozess</h3>
+                        <p>Die Arbeitsgruppe f&uuml;r Governance bereitet ein Analysepaket f&uuml;r die Gemeinschaft vor. Eine unverbindliche Umfrage soll voraussichtlich um den 24.&ndash;25. Februar f&uuml;r Vereinsmitglieder er&ouml;ffnet werden.</p>
+
+                        <h2>Aktionspunkte</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Verantwortlich</th><th>Aktion</th><th>Frist</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Externes Treffen am Montag best&auml;tigen</td>
+                                    <td>Fr 20. Feb</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Kunstf&ouml;rderungsteam &uuml;ber die Pause der Website-Migration informieren</td>
+                                    <td>Sofort</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Mitgliedschaftskriterien mit rechtlicher Formulierung finalisieren</td>
+                                    <td>Fr/Sa</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Rangfolge-Abstimmungstool f&uuml;r den Namen einrichten</td>
+                                    <td>Mo/Di</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Vorl&auml;ufige Mietanfrage f&uuml;r alternativen Standort</td>
+                                    <td>Noch festzulegen</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniela</td>
+                                    <td>Versicherungsangebote einholen</td>
+                                    <td>Laufend</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Einwilligungsverantwortlichen bez&uuml;glich der verschobenen Mitarbeiter-Bewerbung konsultieren</td>
+                                    <td>Diese Woche</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Bank bez&uuml;glich Steueridentifikationsnummer kontaktieren</td>
+                                    <td>W&auml;hrend des Aufenthalts in Barcelona</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -197,5 +807,18 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

@@ -28,6 +28,12 @@
         .meeting-content th { background: var(--color-bg-secondary); font-weight: 600; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -48,88 +54,452 @@
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Present:</strong> Daniel, Ward, Victor, Ben, Michelle, Peter, Pablo
-                    <br><strong>Absent:</strong> Chris
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Decisions</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Decision</th>
-                                <th>Context</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Survey to be sent to barrio leads to gauge community commitment for go/no-go decision</td>
-                                <td>To be finalised and distributed as soon as possible via available channels</td>
-                            </tr>
-                            <tr>
-                                <td>Four board members required to approve publication of sanitised board minutes</td>
-                                <td>Establishes quorum for transparency publications</td>
-                            </tr>
-                            <tr>
-                                <td>Approved 26 new applicants as collaborators of the association</td>
-                                <td>Collaborator status (no voting rights) as interim measure while membership process is formalised</td>
-                            </tr>
-                            <tr>
-                                <td>Board members to provide interest-free loans to cover initial consultant costs</td>
-                                <td>To bridge funding gap while bank account is being set up</td>
-                            </tr>
-                            <tr>
-                                <td>A departmental structure was adopted provisionally for event planning</td>
-                                <td>Pragmatic approach given time constraints; all appointments considered interim</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                    <h2>Discussion Summary</h2>
+                    <div class="attendees">
+                        <strong>Present:</strong> Daniel, Ward, Victor, Ben, Michelle, Peter, Pablo
+                        <br><strong>Absent:</strong> Chris
+                    </div>
 
-                    <h3>Community Survey for Go/No-Go Decision</h3>
-                    <p>The board discussed the need for a survey to gauge community commitment, particularly from barrio leads, to support a go/no-go decision for the 2026 event. Financial viability requires approximately 2,500 to 2,800 attendees. The board agreed to finalise and distribute the survey promptly. There was discussion about appropriate framing to ensure the survey is constructive and informative.</p>
+                    <div class="meeting-content">
+                        <h2>Decisions</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decision</th>
+                                    <th>Context</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Survey to be sent to barrio leads to gauge community commitment for go/no-go decision</td>
+                                    <td>To be finalised and distributed as soon as possible via available channels</td>
+                                </tr>
+                                <tr>
+                                    <td>Four board members required to approve publication of sanitised board minutes</td>
+                                    <td>Establishes quorum for transparency publications</td>
+                                </tr>
+                                <tr>
+                                    <td>Approved 26 new applicants as collaborators of the association</td>
+                                    <td>Collaborator status (no voting rights) as interim measure while membership process is formalised</td>
+                                </tr>
+                                <tr>
+                                    <td>Board members to provide interest-free loans to cover initial consultant costs</td>
+                                    <td>To bridge funding gap while bank account is being set up</td>
+                                </tr>
+                                <tr>
+                                    <td>A departmental structure was adopted provisionally for event planning</td>
+                                    <td>Pragmatic approach given time constraints; all appointments considered interim</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                    <h3>Meeting Logistics and Calendar Access</h3>
-                    <p>The board agreed that board email addresses should be used for all board business and event invitations, replacing personal email addresses. This ensures all board members have consistent access to meeting links and resources.</p>
+                        <h2>Discussion Summary</h2>
 
-                    <h3>Collaborator Applicants</h3>
-                    <p>Ben presented 26 new applicants for approval as collaborators. The board discussed the distinction between collaborator status (can participate in working groups and attend General Assembly meetings, but without voting rights) and full membership. The current approach prioritises getting people contributing quickly while the full membership process is established. The board approved all 26 applicants, noting the need to make the application form clearer about different types of involvement.</p>
+                        <h3>Community Survey for Go/No-Go Decision</h3>
+                        <p>The board discussed the need for a survey to gauge community commitment, particularly from barrio leads, to support a go/no-go decision for the 2026 event. Financial viability requires approximately 2,500 to 2,800 attendees. The board agreed to finalise and distribute the survey promptly. There was discussion about appropriate framing to ensure the survey is constructive and informative.</p>
 
-                    <h3>Exclusion Lists and GDPR Compliance</h3>
-                    <p>The board discussed existing exclusion lists and the requirements for managing them in a legally compliant manner. The board agreed that formal legal advice is needed to ensure GDPR compliance and proper governance of these sensitive records. Resolving this is a prerequisite for ticket sales. The board emphasised the importance of balancing community safety with data protection obligations.</p>
+                        <h3>Meeting Logistics and Calendar Access</h3>
+                        <p>The board agreed that board email addresses should be used for all board business and event invitations, replacing personal email addresses. This ensures all board members have consistent access to meeting links and resources.</p>
 
-                    <h3>Consultant Onboarding and Initial Funding</h3>
-                    <p>With the bank account still pending (awaiting the preliminary NIF), the board discussed how to fund the consultant's initial engagement. Two board members offered to provide interest-free personal loans to cover the first month. The board agreed this should be formally documented. A neutral statement will be included in published minutes noting that board members are providing interest-free loans to the association to support initial operations.</p>
+                        <h3>Collaborator Applicants</h3>
+                        <p>Ben presented 26 new applicants for approval as collaborators. The board discussed the distinction between collaborator status (can participate in working groups and attend General Assembly meetings, but without voting rights) and full membership. The current approach prioritises getting people contributing quickly while the full membership process is established. The board approved all 26 applicants, noting the need to make the application form clearer about different types of involvement.</p>
 
-                    <h3>Departmental Structure and MetaLeads Coordination</h3>
-                    <p>The board discussed the approach to organising departments and confirming MetaLeads (department heads). Given time constraints, the board agreed to use the existing departmental structure provisionally, with all appointments considered interim until a proper selection process is established. Ward volunteered to organise an initial meeting with MetaLeads to discuss budgets, role requirements, and recruitment priorities.</p>
+                        <h3>Exclusion Lists and GDPR Compliance</h3>
+                        <p>The board discussed existing exclusion lists and the requirements for managing them in a legally compliant manner. The board agreed that formal legal advice is needed to ensure GDPR compliance and proper governance of these sensitive records. Resolving this is a prerequisite for ticket sales. The board emphasised the importance of balancing community safety with data protection obligations.</p>
 
-                    <h3>Membership Criteria</h3>
-                    <p>The board began discussing criteria for full membership, including whether original electors should automatically become members and what qualifications or experience should be considered. This discussion was moved to Discord for asynchronous resolution due to time constraints.</p>
+                        <h3>Consultant Onboarding and Initial Funding</h3>
+                        <p>With the bank account still pending (awaiting the preliminary NIF), the board discussed how to fund the consultant&rsquo;s initial engagement. Two board members offered to provide interest-free personal loans to cover the first month. The board agreed this should be formally documented. A neutral statement will be included in published minutes noting that board members are providing interest-free loans to the association to support initial operations.</p>
 
-                    <h3>Data Protection in Organisational Communications</h3>
-                    <p>The board noted the importance of GDPR compliance when sharing information about individuals, even internally. Access to personal data should be limited to those who have agreed to the association's data protection policies (currently being developed).</p>
+                        <h3>Departmental Structure and MetaLeads Coordination</h3>
+                        <p>The board discussed the approach to organising departments and confirming MetaLeads (department heads). Given time constraints, the board agreed to use the existing departmental structure provisionally, with all appointments considered interim until a proper selection process is established. Ward volunteered to organise an initial meeting with MetaLeads to discuss budgets, role requirements, and recruitment priorities.</p>
 
-                    <h2>Action Items</h2>
-                    <ul>
-                        <li><strong>Pablo:</strong> Contact lawyers regarding the consultant contract; share consultant's freelance proposal with Michelle; finalise the community survey form and post for review; follow up on available funding sources</li>
-                        <li><strong>Daniel:</strong> Update event invitations to use board email addresses; ensure meeting notes include documentation of board member loans</li>
-                        <li><strong>Michelle:</strong> Assist with finalising the community survey form; get set up with board drive and account access</li>
-                        <li><strong>Peter:</strong> Provide initial funding as interest-free loan for consultant's first month; schedule kickoff meeting with the consultant</li>
-                        <li><strong>Ben:</strong> Onboard the 26 approved collaborators; prioritise and publish role requirements; coordinate with Ward on department assignments</li>
-                        <li><strong>Ward:</strong> Organise first MetaLeads coordination meeting and propose dates; coordinate with Ben on department assignments</li>
-                    </ul>
+                        <h3>Membership Criteria</h3>
+                        <p>The board began discussing criteria for full membership, including whether original electors should automatically become members and what qualifications or experience should be considered. This discussion was moved to Discord for asynchronous resolution due to time constraints.</p>
 
-                    <h2>Open Items for Future Meetings</h2>
-                    <ul>
-                        <li>Full membership criteria and process</li>
-                        <li>Community survey results and go/no-go decision</li>
-                        <li>Exclusion list policy (pending legal advice)</li>
-                        <li>GDPR policy finalisation</li>
-                    </ul>
+                        <h3>Data Protection in Organisational Communications</h3>
+                        <p>The board noted the importance of GDPR compliance when sharing information about individuals, even internally. Access to personal data should be limited to those who have agreed to the association&rsquo;s data protection policies (currently being developed).</p>
+
+                        <h2>Action Items</h2>
+                        <ul>
+                            <li><strong>Pablo:</strong> Contact lawyers regarding the consultant contract; share consultant&rsquo;s freelance proposal with Michelle; finalise the community survey form and post for review; follow up on available funding sources</li>
+                            <li><strong>Daniel:</strong> Update event invitations to use board email addresses; ensure meeting notes include documentation of board member loans</li>
+                            <li><strong>Michelle:</strong> Assist with finalising the community survey form; get set up with board drive and account access</li>
+                            <li><strong>Peter:</strong> Provide initial funding as interest-free loan for consultant&rsquo;s first month; schedule kickoff meeting with the consultant</li>
+                            <li><strong>Ben:</strong> Onboard the 26 approved collaborators; prioritise and publish role requirements; coordinate with Ward on department assignments</li>
+                            <li><strong>Ward:</strong> Organise first MetaLeads coordination meeting and propose dates; coordinate with Ben on department assignments</li>
+                        </ul>
+
+                        <h2>Open Items for Future Meetings</h2>
+                        <ul>
+                            <li>Full membership criteria and process</li>
+                            <li>Community survey results and go/no-go decision</li>
+                            <li>Exclusion list policy (pending legal advice)</li>
+                            <li>GDPR policy finalisation</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Presentes:</strong> Daniel, Ward, Victor, Ben, Michelle, Peter, Pablo
+                        <br><strong>Ausente:</strong> Chris
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisiones</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decisi&oacute;n</th>
+                                    <th>Contexto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Se enviar&aacute; una encuesta a los l&iacute;deres de barrio para medir el compromiso de la comunidad para la decisi&oacute;n de continuar o no</td>
+                                    <td>A finalizar y distribuir lo antes posible a trav&eacute;s de los canales disponibles</td>
+                                </tr>
+                                <tr>
+                                    <td>Se requieren cuatro miembros de la junta para aprobar la publicaci&oacute;n de actas sanitizadas</td>
+                                    <td>Establece el qu&oacute;rum para publicaciones de transparencia</td>
+                                </tr>
+                                <tr>
+                                    <td>Se aprobaron 26 nuevos solicitantes como colaboradores de la asociaci&oacute;n</td>
+                                    <td>Estatus de colaborador (sin derecho a voto) como medida provisional mientras se formaliza el proceso de membres&iacute;a</td>
+                                </tr>
+                                <tr>
+                                    <td>Los miembros de la junta proporcionar&aacute;n pr&eacute;stamos sin intereses para cubrir los costes iniciales del consultor</td>
+                                    <td>Para cubrir el d&eacute;ficit de financiaci&oacute;n mientras se establece la cuenta bancaria</td>
+                                </tr>
+                                <tr>
+                                    <td>Se adopt&oacute; provisionalmente una estructura departamental para la planificaci&oacute;n del evento</td>
+                                    <td>Enfoque pragm&aacute;tico dadas las limitaciones de tiempo; todos los nombramientos se consideran provisionales</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Resumen de Discusiones</h2>
+
+                        <h3>Encuesta Comunitaria para la Decisi&oacute;n de Continuar o No</h3>
+                        <p>La junta discuti&oacute; la necesidad de una encuesta para medir el compromiso de la comunidad, particularmente de los l&iacute;deres de barrio, para apoyar la decisi&oacute;n de continuar o no con el evento de 2026. La viabilidad financiera requiere aproximadamente entre 2.500 y 2.800 asistentes. La junta acord&oacute; finalizar y distribuir la encuesta con prontitud. Se discuti&oacute; el enfoque apropiado para asegurar que la encuesta sea constructiva e informativa.</p>
+
+                        <h3>Log&iacute;stica de Reuniones y Acceso al Calendario</h3>
+                        <p>La junta acord&oacute; que las direcciones de correo electr&oacute;nico de la junta deben usarse para todos los asuntos de la junta e invitaciones a eventos, reemplazando las direcciones de correo personales. Esto garantiza que todos los miembros de la junta tengan acceso consistente a los enlaces de reuniones y recursos.</p>
+
+                        <h3>Solicitantes de Colaborador</h3>
+                        <p>Ben present&oacute; 26 nuevos solicitantes para aprobaci&oacute;n como colaboradores. La junta discuti&oacute; la distinci&oacute;n entre el estatus de colaborador (puede participar en grupos de trabajo y asistir a reuniones de la Asamblea General, pero sin derecho a voto) y la membres&iacute;a plena. El enfoque actual prioriza que las personas contribuyan r&aacute;pidamente mientras se establece el proceso completo de membres&iacute;a. La junta aprob&oacute; a los 26 solicitantes, se&ntilde;alando la necesidad de hacer el formulario de solicitud m&aacute;s claro sobre los diferentes tipos de participaci&oacute;n.</p>
+
+                        <h3>Listas de Exclusi&oacute;n y Cumplimiento del RGPD</h3>
+                        <p>La junta discuti&oacute; las listas de exclusi&oacute;n existentes y los requisitos para gestionarlas de manera legalmente conforme. La junta acord&oacute; que se necesita asesoramiento legal formal para garantizar el cumplimiento del RGPD y la gobernanza adecuada de estos registros sensibles. Resolver esto es un requisito previo para la venta de entradas. La junta enfatiz&oacute; la importancia de equilibrar la seguridad de la comunidad con las obligaciones de protecci&oacute;n de datos.</p>
+
+                        <h3>Incorporaci&oacute;n del Consultor y Financiaci&oacute;n Inicial</h3>
+                        <p>Con la cuenta bancaria a&uacute;n pendiente (a la espera del NIF preliminar), la junta discuti&oacute; c&oacute;mo financiar el compromiso inicial del consultor. Dos miembros de la junta se ofrecieron a proporcionar pr&eacute;stamos personales sin intereses para cubrir el primer mes. La junta acord&oacute; que esto debe documentarse formalmente. Se incluir&aacute; una declaraci&oacute;n neutral en las actas publicadas indicando que los miembros de la junta est&aacute;n proporcionando pr&eacute;stamos sin intereses a la asociaci&oacute;n para apoyar las operaciones iniciales.</p>
+
+                        <h3>Estructura Departamental y Coordinaci&oacute;n de MetaLeads</h3>
+                        <p>La junta discuti&oacute; el enfoque para organizar departamentos y confirmar MetaLeads (jefes de departamento). Dadas las limitaciones de tiempo, la junta acord&oacute; usar la estructura departamental existente de forma provisional, con todos los nombramientos considerados provisionales hasta que se establezca un proceso de selecci&oacute;n adecuado. Ward se ofreci&oacute; voluntariamente para organizar una reuni&oacute;n inicial con los MetaLeads para discutir presupuestos, requisitos de roles y prioridades de contrataci&oacute;n.</p>
+
+                        <h3>Criterios de Membres&iacute;a</h3>
+                        <p>La junta comenz&oacute; a discutir los criterios para la membres&iacute;a plena, incluyendo si los electores originales deben convertirse autom&aacute;ticamente en miembros y qu&eacute; cualificaciones o experiencia deben considerarse. Esta discusi&oacute;n se traslad&oacute; a Discord para su resoluci&oacute;n asincr&oacute;nica debido a las limitaciones de tiempo.</p>
+
+                        <h3>Protecci&oacute;n de Datos en las Comunicaciones Organizacionales</h3>
+                        <p>La junta se&ntilde;al&oacute; la importancia del cumplimiento del RGPD al compartir informaci&oacute;n sobre personas, incluso internamente. El acceso a datos personales debe limitarse a aquellos que hayan aceptado las pol&iacute;ticas de protecci&oacute;n de datos de la asociaci&oacute;n (actualmente en desarrollo).</p>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <ul>
+                            <li><strong>Pablo:</strong> Contactar a los abogados sobre el contrato del consultor; compartir la propuesta de aut&oacute;nomo del consultor con Michelle; finalizar el formulario de la encuesta comunitaria y publicar para revisi&oacute;n; dar seguimiento a las fuentes de financiaci&oacute;n disponibles</li>
+                            <li><strong>Daniel:</strong> Actualizar las invitaciones a eventos para usar las direcciones de correo de la junta; asegurar que las actas incluyan la documentaci&oacute;n de los pr&eacute;stamos de los miembros de la junta</li>
+                            <li><strong>Michelle:</strong> Ayudar a finalizar el formulario de la encuesta comunitaria; configurar el acceso al drive y las cuentas de la junta</li>
+                            <li><strong>Peter:</strong> Proporcionar financiaci&oacute;n inicial como pr&eacute;stamo sin intereses para el primer mes del consultor; programar la reuni&oacute;n de inicio con el consultor</li>
+                            <li><strong>Ben:</strong> Incorporar a los 26 colaboradores aprobados; priorizar y publicar los requisitos de roles; coordinar con Ward en las asignaciones departamentales</li>
+                            <li><strong>Ward:</strong> Organizar la primera reuni&oacute;n de coordinaci&oacute;n de MetaLeads y proponer fechas; coordinar con Ben en las asignaciones departamentales</li>
+                        </ul>
+
+                        <h2>Puntos Pendientes para Futuras Reuniones</h2>
+                        <ul>
+                            <li>Criterios y proceso de membres&iacute;a plena</li>
+                            <li>Resultados de la encuesta comunitaria y decisi&oacute;n de continuar o no</li>
+                            <li>Pol&iacute;tica de listas de exclusi&oacute;n (pendiente de asesoramiento legal)</li>
+                            <li>Finalizaci&oacute;n de la pol&iacute;tica del RGPD</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sents :</strong> Daniel, Ward, Victor, Ben, Michelle, Peter, Pablo
+                        <br><strong>Absent :</strong> Chris
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>D&eacute;cisions</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>D&eacute;cision</th>
+                                    <th>Contexte</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Un sondage sera envoy&eacute; aux responsables de barrio pour &eacute;valuer l&rsquo;engagement de la communaut&eacute; en vue de la d&eacute;cision de continuer ou non</td>
+                                    <td>&Agrave; finaliser et distribuer d&egrave;s que possible via les canaux disponibles</td>
+                                </tr>
+                                <tr>
+                                    <td>Quatre membres du conseil sont requis pour approuver la publication des proc&egrave;s-verbaux &eacute;pur&eacute;s</td>
+                                    <td>&Eacute;tablit le quorum pour les publications de transparence</td>
+                                </tr>
+                                <tr>
+                                    <td>26 nouveaux candidats approuv&eacute;s en tant que collaborateurs de l&rsquo;association</td>
+                                    <td>Statut de collaborateur (sans droit de vote) comme mesure provisoire en attendant la formalisation du processus d&rsquo;adh&eacute;sion</td>
+                                </tr>
+                                <tr>
+                                    <td>Les membres du conseil fourniront des pr&ecirc;ts sans int&eacute;r&ecirc;ts pour couvrir les co&ucirc;ts initiaux du consultant</td>
+                                    <td>Pour combler le d&eacute;ficit de financement en attendant l&rsquo;ouverture du compte bancaire</td>
+                                </tr>
+                                <tr>
+                                    <td>Une structure d&eacute;partementale a &eacute;t&eacute; adopt&eacute;e provisoirement pour la planification de l&rsquo;&eacute;v&eacute;nement</td>
+                                    <td>Approche pragmatique compte tenu des contraintes de temps ; toutes les nominations sont consid&eacute;r&eacute;es comme provisoires</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>R&eacute;sum&eacute; des Discussions</h2>
+
+                        <h3>Sondage Communautaire pour la D&eacute;cision de Continuer ou Non</h3>
+                        <p>Le conseil a discut&eacute; de la n&eacute;cessit&eacute; d&rsquo;un sondage pour &eacute;valuer l&rsquo;engagement de la communaut&eacute;, en particulier des responsables de barrio, afin de soutenir la d&eacute;cision de continuer ou non l&rsquo;&eacute;v&eacute;nement de 2026. La viabilit&eacute; financi&egrave;re n&eacute;cessite environ 2 500 &agrave; 2 800 participants. Le conseil a convenu de finaliser et distribuer le sondage rapidement. La formulation appropri&eacute;e pour garantir un sondage constructif et informatif a &eacute;t&eacute; discut&eacute;e.</p>
+
+                        <h3>Logistique des R&eacute;unions et Acc&egrave;s au Calendrier</h3>
+                        <p>Le conseil a convenu que les adresses e-mail du conseil doivent &ecirc;tre utilis&eacute;es pour toutes les affaires du conseil et les invitations aux &eacute;v&eacute;nements, en remplacement des adresses e-mail personnelles. Cela garantit que tous les membres du conseil aient un acc&egrave;s coh&eacute;rent aux liens de r&eacute;union et aux ressources.</p>
+
+                        <h3>Candidats Collaborateurs</h3>
+                        <p>Ben a pr&eacute;sent&eacute; 26 nouveaux candidats pour approbation en tant que collaborateurs. Le conseil a discut&eacute; de la distinction entre le statut de collaborateur (peut participer aux groupes de travail et assister aux r&eacute;unions de l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale, mais sans droit de vote) et l&rsquo;adh&eacute;sion &agrave; part enti&egrave;re. L&rsquo;approche actuelle donne la priorit&eacute; &agrave; la contribution rapide des personnes pendant que le processus complet d&rsquo;adh&eacute;sion est &eacute;tabli. Le conseil a approuv&eacute; les 26 candidats, notant la n&eacute;cessit&eacute; de rendre le formulaire de candidature plus clair sur les diff&eacute;rents types d&rsquo;implication.</p>
+
+                        <h3>Listes d&rsquo;Exclusion et Conformit&eacute; au RGPD</h3>
+                        <p>Le conseil a discut&eacute; des listes d&rsquo;exclusion existantes et des exigences pour les g&eacute;rer de mani&egrave;re l&eacute;galement conforme. Le conseil a convenu qu&rsquo;un avis juridique formel est n&eacute;cessaire pour garantir la conformit&eacute; au RGPD et la bonne gouvernance de ces dossiers sensibles. R&eacute;soudre ce point est un pr&eacute;requis pour la vente de billets. Le conseil a soulign&eacute; l&rsquo;importance d&rsquo;&eacute;quilibrer la s&eacute;curit&eacute; de la communaut&eacute; avec les obligations de protection des donn&eacute;es.</p>
+
+                        <h3>Int&eacute;gration du Consultant et Financement Initial</h3>
+                        <p>Le compte bancaire &eacute;tant toujours en attente (dans l&rsquo;attente du NIF pr&eacute;liminaire), le conseil a discut&eacute; de la mani&egrave;re de financer l&rsquo;engagement initial du consultant. Deux membres du conseil ont propos&eacute; de fournir des pr&ecirc;ts personnels sans int&eacute;r&ecirc;ts pour couvrir le premier mois. Le conseil a convenu que cela devrait &ecirc;tre formellement document&eacute;. Une d&eacute;claration neutre sera incluse dans les proc&egrave;s-verbaux publi&eacute;s, indiquant que les membres du conseil fournissent des pr&ecirc;ts sans int&eacute;r&ecirc;ts &agrave; l&rsquo;association pour soutenir les op&eacute;rations initiales.</p>
+
+                        <h3>Structure D&eacute;partementale et Coordination des MetaLeads</h3>
+                        <p>Le conseil a discut&eacute; de l&rsquo;approche pour organiser les d&eacute;partements et confirmer les MetaLeads (responsables de d&eacute;partement). Compte tenu des contraintes de temps, le conseil a convenu d&rsquo;utiliser la structure d&eacute;partementale existante de mani&egrave;re provisoire, toutes les nominations &eacute;tant consid&eacute;r&eacute;es comme provisoires jusqu&rsquo;&agrave; l&rsquo;&eacute;tablissement d&rsquo;un processus de s&eacute;lection ad&eacute;quat. Ward s&rsquo;est port&eacute; volontaire pour organiser une r&eacute;union initiale avec les MetaLeads afin de discuter des budgets, des exigences de r&ocirc;les et des priorit&eacute;s de recrutement.</p>
+
+                        <h3>Crit&egrave;res d&rsquo;Adh&eacute;sion</h3>
+                        <p>Le conseil a commenc&eacute; &agrave; discuter des crit&egrave;res d&rsquo;adh&eacute;sion &agrave; part enti&egrave;re, y compris la question de savoir si les &eacute;lecteurs originaux devraient automatiquement devenir membres et quelles qualifications ou exp&eacute;riences devraient &ecirc;tre prises en compte. Cette discussion a &eacute;t&eacute; transf&eacute;r&eacute;e sur Discord pour une r&eacute;solution asynchrone en raison des contraintes de temps.</p>
+
+                        <h3>Protection des Donn&eacute;es dans les Communications Organisationnelles</h3>
+                        <p>Le conseil a not&eacute; l&rsquo;importance de la conformit&eacute; au RGPD lors du partage d&rsquo;informations sur des personnes, m&ecirc;me en interne. L&rsquo;acc&egrave;s aux donn&eacute;es personnelles devrait &ecirc;tre limit&eacute; aux personnes ayant accept&eacute; les politiques de protection des donn&eacute;es de l&rsquo;association (actuellement en cours d&rsquo;&eacute;laboration).</p>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <ul>
+                            <li><strong>Pablo :</strong> Contacter les avocats concernant le contrat du consultant ; partager la proposition de freelance du consultant avec Michelle ; finaliser le formulaire de sondage communautaire et le publier pour r&eacute;vision ; assurer le suivi des sources de financement disponibles</li>
+                            <li><strong>Daniel :</strong> Mettre &agrave; jour les invitations aux &eacute;v&eacute;nements pour utiliser les adresses e-mail du conseil ; s&rsquo;assurer que les notes de r&eacute;union incluent la documentation des pr&ecirc;ts des membres du conseil</li>
+                            <li><strong>Michelle :</strong> Aider &agrave; finaliser le formulaire de sondage communautaire ; obtenir l&rsquo;acc&egrave;s au drive et aux comptes du conseil</li>
+                            <li><strong>Peter :</strong> Fournir le financement initial sous forme de pr&ecirc;t sans int&eacute;r&ecirc;ts pour le premier mois du consultant ; planifier la r&eacute;union de lancement avec le consultant</li>
+                            <li><strong>Ben :</strong> Int&eacute;grer les 26 collaborateurs approuv&eacute;s ; prioriser et publier les exigences de r&ocirc;les ; coordonner avec Ward sur les affectations d&eacute;partementales</li>
+                            <li><strong>Ward :</strong> Organiser la premi&egrave;re r&eacute;union de coordination des MetaLeads et proposer des dates ; coordonner avec Ben sur les affectations d&eacute;partementales</li>
+                        </ul>
+
+                        <h2>Points en Suspens pour les Prochaines R&eacute;unions</h2>
+                        <ul>
+                            <li>Crit&egrave;res et processus d&rsquo;adh&eacute;sion &agrave; part enti&egrave;re</li>
+                            <li>R&eacute;sultats du sondage communautaire et d&eacute;cision de continuer ou non</li>
+                            <li>Politique de listes d&rsquo;exclusion (en attente d&rsquo;avis juridique)</li>
+                            <li>Finalisation de la politique RGPD</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presenti:</strong> Daniel, Ward, Victor, Ben, Michelle, Peter, Pablo
+                        <br><strong>Assente:</strong> Chris
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisioni</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decisione</th>
+                                    <th>Contesto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Un sondaggio sar&agrave; inviato ai responsabili di barrio per valutare l&rsquo;impegno della comunit&agrave; ai fini della decisione di procedere o meno</td>
+                                    <td>Da finalizzare e distribuire il prima possibile attraverso i canali disponibili</td>
+                                </tr>
+                                <tr>
+                                    <td>Quattro membri del consiglio sono necessari per approvare la pubblicazione dei verbali sanitizzati</td>
+                                    <td>Stabilisce il quorum per le pubblicazioni di trasparenza</td>
+                                </tr>
+                                <tr>
+                                    <td>Approvati 26 nuovi candidati come collaboratori dell&rsquo;associazione</td>
+                                    <td>Status di collaboratore (senza diritto di voto) come misura provvisoria in attesa della formalizzazione del processo di adesione</td>
+                                </tr>
+                                <tr>
+                                    <td>I membri del consiglio forniranno prestiti senza interessi per coprire i costi iniziali del consulente</td>
+                                    <td>Per colmare il divario di finanziamento in attesa dell&rsquo;apertura del conto bancario</td>
+                                </tr>
+                                <tr>
+                                    <td>Una struttura dipartimentale &egrave; stata adottata provvisoriamente per la pianificazione dell&rsquo;evento</td>
+                                    <td>Approccio pragmatico date le limitazioni di tempo; tutte le nomine sono considerate provvisorie</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Riepilogo delle Discussioni</h2>
+
+                        <h3>Sondaggio Comunitario per la Decisione di Procedere o Meno</h3>
+                        <p>Il consiglio ha discusso la necessit&agrave; di un sondaggio per valutare l&rsquo;impegno della comunit&agrave;, in particolare dei responsabili di barrio, a supporto della decisione di procedere o meno con l&rsquo;evento del 2026. La sostenibilit&agrave; finanziaria richiede circa 2.500&ndash;2.800 partecipanti. Il consiglio ha concordato di finalizzare e distribuire il sondaggio tempestivamente. Si &egrave; discussa la formulazione appropriata per garantire che il sondaggio sia costruttivo e informativo.</p>
+
+                        <h3>Logistica delle Riunioni e Accesso al Calendario</h3>
+                        <p>Il consiglio ha concordato che gli indirizzi e-mail del consiglio devono essere utilizzati per tutti gli affari del consiglio e gli inviti agli eventi, sostituendo gli indirizzi e-mail personali. Ci&ograve; garantisce che tutti i membri del consiglio abbiano un accesso coerente ai link delle riunioni e alle risorse.</p>
+
+                        <h3>Candidati Collaboratori</h3>
+                        <p>Ben ha presentato 26 nuovi candidati per l&rsquo;approvazione come collaboratori. Il consiglio ha discusso la distinzione tra lo status di collaboratore (pu&ograve; partecipare ai gruppi di lavoro e assistere alle riunioni dell&rsquo;Assemblea Generale, ma senza diritto di voto) e l&rsquo;adesione a pieno titolo. L&rsquo;approccio attuale d&agrave; priorit&agrave; al coinvolgimento rapido delle persone mentre si stabilisce il processo completo di adesione. Il consiglio ha approvato tutti i 26 candidati, rilevando la necessit&agrave; di rendere il modulo di candidatura pi&ugrave; chiaro sui diversi tipi di coinvolgimento.</p>
+
+                        <h3>Liste di Esclusione e Conformit&agrave; al GDPR</h3>
+                        <p>Il consiglio ha discusso le liste di esclusione esistenti e i requisiti per gestirle in modo legalmente conforme. Il consiglio ha concordato che &egrave; necessaria una consulenza legale formale per garantire la conformit&agrave; al GDPR e la corretta governance di questi registri sensibili. Risolvere questa questione &egrave; un prerequisito per la vendita dei biglietti. Il consiglio ha sottolineato l&rsquo;importanza di bilanciare la sicurezza della comunit&agrave; con gli obblighi di protezione dei dati.</p>
+
+                        <h3>Inserimento del Consulente e Finanziamento Iniziale</h3>
+                        <p>Con il conto bancario ancora in sospeso (in attesa del NIF preliminare), il consiglio ha discusso come finanziare l&rsquo;impegno iniziale del consulente. Due membri del consiglio si sono offerti di fornire prestiti personali senza interessi per coprire il primo mese. Il consiglio ha concordato che ci&ograve; debba essere formalmente documentato. Una dichiarazione neutrale sar&agrave; inclusa nei verbali pubblicati, indicando che i membri del consiglio stanno fornendo prestiti senza interessi all&rsquo;associazione per sostenere le operazioni iniziali.</p>
+
+                        <h3>Struttura Dipartimentale e Coordinamento dei MetaLeads</h3>
+                        <p>Il consiglio ha discusso l&rsquo;approccio per organizzare i dipartimenti e confermare i MetaLeads (responsabili di dipartimento). Date le limitazioni di tempo, il consiglio ha concordato di utilizzare la struttura dipartimentale esistente in modo provvisorio, con tutte le nomine considerate provvisorie fino alla definizione di un processo di selezione adeguato. Ward si &egrave; offerto volontario per organizzare una riunione iniziale con i MetaLeads per discutere budget, requisiti dei ruoli e priorit&agrave; di assunzione.</p>
+
+                        <h3>Criteri di Adesione</h3>
+                        <p>Il consiglio ha iniziato a discutere i criteri per l&rsquo;adesione a pieno titolo, incluso se gli elettori originali debbano diventare automaticamente membri e quali qualifiche o esperienze debbano essere considerate. Questa discussione &egrave; stata trasferita su Discord per una risoluzione asincrona a causa delle limitazioni di tempo.</p>
+
+                        <h3>Protezione dei Dati nelle Comunicazioni Organizzative</h3>
+                        <p>Il consiglio ha rilevato l&rsquo;importanza della conformit&agrave; al GDPR nella condivisione di informazioni sugli individui, anche internamente. L&rsquo;accesso ai dati personali dovrebbe essere limitato a coloro che hanno accettato le politiche di protezione dei dati dell&rsquo;associazione (attualmente in fase di sviluppo).</p>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <ul>
+                            <li><strong>Pablo:</strong> Contattare gli avvocati riguardo al contratto del consulente; condividere la proposta di lavoro autonomo del consulente con Michelle; finalizzare il modulo del sondaggio comunitario e pubblicare per revisione; seguire le fonti di finanziamento disponibili</li>
+                            <li><strong>Daniel:</strong> Aggiornare gli inviti agli eventi per utilizzare gli indirizzi e-mail del consiglio; assicurarsi che le note della riunione includano la documentazione dei prestiti dei membri del consiglio</li>
+                            <li><strong>Michelle:</strong> Assistere nella finalizzazione del modulo del sondaggio comunitario; ottenere l&rsquo;accesso al drive e agli account del consiglio</li>
+                            <li><strong>Peter:</strong> Fornire il finanziamento iniziale come prestito senza interessi per il primo mese del consulente; programmare la riunione di avvio con il consulente</li>
+                            <li><strong>Ben:</strong> Integrare i 26 collaboratori approvati; dare priorit&agrave; e pubblicare i requisiti dei ruoli; coordinarsi con Ward sulle assegnazioni dipartimentali</li>
+                            <li><strong>Ward:</strong> Organizzare la prima riunione di coordinamento dei MetaLeads e proporre date; coordinarsi con Ben sulle assegnazioni dipartimentali</li>
+                        </ul>
+
+                        <h2>Punti Aperti per le Prossime Riunioni</h2>
+                        <ul>
+                            <li>Criteri e processo di adesione a pieno titolo</li>
+                            <li>Risultati del sondaggio comunitario e decisione di procedere o meno</li>
+                            <li>Politica delle liste di esclusione (in attesa di consulenza legale)</li>
+                            <li>Finalizzazione della politica GDPR</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesend:</strong> Daniel, Ward, Victor, Ben, Michelle, Peter, Pablo
+                        <br><strong>Abwesend:</strong> Chris
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Beschl&uuml;sse</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Beschluss</th>
+                                    <th>Kontext</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Eine Umfrage soll an die Barrio-Leiter gesendet werden, um das Engagement der Gemeinschaft f&uuml;r die Entscheidung zur Fortf&uuml;hrung zu bewerten</td>
+                                    <td>Schnellstm&ouml;glich fertigzustellen und &uuml;ber verf&uuml;gbare Kan&auml;le zu verteilen</td>
+                                </tr>
+                                <tr>
+                                    <td>Vier Vorstandsmitglieder sind erforderlich, um die Ver&ouml;ffentlichung bereinigter Sitzungsprotokolle zu genehmigen</td>
+                                    <td>Legt das Quorum f&uuml;r Transparenzver&ouml;ffentlichungen fest</td>
+                                </tr>
+                                <tr>
+                                    <td>26 neue Bewerber als Mitarbeiter des Vereins genehmigt</td>
+                                    <td>Mitarbeiterstatus (ohne Stimmrecht) als &Uuml;bergangsl&ouml;sung w&auml;hrend der Mitgliedschaftsprozess formalisiert wird</td>
+                                </tr>
+                                <tr>
+                                    <td>Vorstandsmitglieder stellen zinslose Darlehen bereit, um die anf&auml;nglichen Beraterkosten zu decken</td>
+                                    <td>Zur &Uuml;berbr&uuml;ckung der Finanzierungsl&uuml;cke w&auml;hrend der Er&ouml;ffnung des Bankkontos</td>
+                                </tr>
+                                <tr>
+                                    <td>Eine Abteilungsstruktur wurde vorl&auml;ufig f&uuml;r die Veranstaltungsplanung angenommen</td>
+                                    <td>Pragmatischer Ansatz angesichts der Zeitbeschr&auml;nkungen; alle Ernennungen gelten als vorl&auml;ufig</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Zusammenfassung der Diskussionen</h2>
+
+                        <h3>Gemeinschaftsumfrage f&uuml;r die Entscheidung zur Fortf&uuml;hrung</h3>
+                        <p>Der Vorstand er&ouml;rterte die Notwendigkeit einer Umfrage zur Bewertung des Engagements der Gemeinschaft, insbesondere der Barrio-Leiter, um die Entscheidung zur Fortf&uuml;hrung der Veranstaltung 2026 zu unterst&uuml;tzen. Die finanzielle Tragf&auml;higkeit erfordert ungef&auml;hr 2.500 bis 2.800 Teilnehmer. Der Vorstand stimmte zu, die Umfrage z&uuml;gig fertigzustellen und zu verteilen. Es wurde &uuml;ber die angemessene Formulierung diskutiert, um sicherzustellen, dass die Umfrage konstruktiv und informativ ist.</p>
+
+                        <h3>Sitzungslogistik und Kalenderzugang</h3>
+                        <p>Der Vorstand vereinbarte, dass Vorstands-E-Mail-Adressen f&uuml;r alle Vorstandsangelegenheiten und Veranstaltungseinladungen verwendet werden sollen, anstelle pers&ouml;nlicher E-Mail-Adressen. Dies gew&auml;hrleistet, dass alle Vorstandsmitglieder einheitlichen Zugang zu Sitzungslinks und Ressourcen haben.</p>
+
+                        <h3>Mitarbeiterbewerber</h3>
+                        <p>Ben stellte 26 neue Bewerber zur Genehmigung als Mitarbeiter vor. Der Vorstand diskutierte den Unterschied zwischen dem Mitarbeiterstatus (kann an Arbeitsgruppen teilnehmen und an Sitzungen der Generalversammlung teilnehmen, jedoch ohne Stimmrecht) und der Vollmitgliedschaft. Der derzeitige Ansatz priorisiert die schnelle Einbindung von Personen, w&auml;hrend der vollst&auml;ndige Mitgliedschaftsprozess etabliert wird. Der Vorstand genehmigte alle 26 Bewerber und wies auf die Notwendigkeit hin, das Bewerbungsformular hinsichtlich der verschiedenen Arten der Beteiligung klarer zu gestalten.</p>
+
+                        <h3>Ausschlusslisten und DSGVO-Konformit&auml;t</h3>
+                        <p>Der Vorstand er&ouml;rterte bestehende Ausschlusslisten und die Anforderungen an deren rechtskonforme Verwaltung. Der Vorstand stimmte zu, dass eine formelle Rechtsberatung erforderlich ist, um die DSGVO-Konformit&auml;t und die ordnungsgem&auml;&szlig;e Verwaltung dieser sensiblen Daten sicherzustellen. Die L&ouml;sung dieser Frage ist eine Voraussetzung f&uuml;r den Ticketverkauf. Der Vorstand betonte die Bedeutung der Balance zwischen Gemeinschaftssicherheit und Datenschutzverpflichtungen.</p>
+
+                        <h3>Beratereinarbeitung und Erstfinanzierung</h3>
+                        <p>Da das Bankkonto noch aussteht (in Erwartung der vorl&auml;ufigen NIF), er&ouml;rterte der Vorstand die Finanzierung des Erstengagements des Beraters. Zwei Vorstandsmitglieder boten an, zinslose pers&ouml;nliche Darlehen zur Deckung des ersten Monats bereitzustellen. Der Vorstand stimmte zu, dass dies formell dokumentiert werden sollte. Eine neutrale Erkl&auml;rung wird in den ver&ouml;ffentlichten Protokollen enthalten sein, die darauf hinweist, dass Vorstandsmitglieder dem Verein zinslose Darlehen zur Unterst&uuml;tzung des laufenden Betriebs gew&auml;hren.</p>
+
+                        <h3>Abteilungsstruktur und MetaLeads-Koordination</h3>
+                        <p>Der Vorstand diskutierte den Ansatz zur Organisation der Abteilungen und Best&auml;tigung der MetaLeads (Abteilungsleiter). Angesichts der Zeitbeschr&auml;nkungen stimmte der Vorstand zu, die bestehende Abteilungsstruktur vorl&auml;ufig zu nutzen, wobei alle Ernennungen als vorl&auml;ufig gelten, bis ein ordnungsgem&auml;&szlig;es Auswahlverfahren eingerichtet ist. Ward erkl&auml;rte sich bereit, ein erstes Treffen mit den MetaLeads zu organisieren, um Budgets, Rollenanforderungen und Rekrutierungsprioritaten zu besprechen.</p>
+
+                        <h3>Mitgliedschaftskriterien</h3>
+                        <p>Der Vorstand begann mit der Er&ouml;rterung der Kriterien f&uuml;r die Vollmitgliedschaft, einschlie&szlig;lich der Frage, ob urspr&uuml;ngliche W&auml;hler automatisch Mitglieder werden sollten und welche Qualifikationen oder Erfahrungen ber&uuml;cksichtigt werden sollten. Diese Diskussion wurde aufgrund von Zeitbeschr&auml;nkungen f&uuml;r eine asynchrone L&ouml;sung auf Discord verlagert.</p>
+
+                        <h3>Datenschutz in der Organisationskommunikation</h3>
+                        <p>Der Vorstand wies auf die Bedeutung der DSGVO-Konformit&auml;t beim Austausch von Informationen &uuml;ber Einzelpersonen hin, auch intern. Der Zugang zu personenbezogenen Daten sollte auf diejenigen beschr&auml;nkt sein, die den Datenschutzrichtlinien des Vereins zugestimmt haben (derzeit in Entwicklung).</p>
+
+                        <h2>Ma&szlig;nahmen</h2>
+                        <ul>
+                            <li><strong>Pablo:</strong> Anw&auml;lte bez&uuml;glich des Beratervertrags kontaktieren; den Freelance-Vorschlag des Beraters mit Michelle teilen; das Formular der Gemeinschaftsumfrage fertigstellen und zur &Uuml;berpr&uuml;fung ver&ouml;ffentlichen; verf&uuml;gbare Finanzierungsquellen verfolgen</li>
+                            <li><strong>Daniel:</strong> Veranstaltungseinladungen aktualisieren, um Vorstands-E-Mail-Adressen zu verwenden; sicherstellen, dass die Sitzungsnotizen die Dokumentation der Vorstandsdarlehen enthalten</li>
+                            <li><strong>Michelle:</strong> Bei der Fertigstellung des Formulars der Gemeinschaftsumfrage helfen; Zugang zum Vorstandslaufwerk und zu den Konten einrichten</li>
+                            <li><strong>Peter:</strong> Erstfinanzierung als zinsloses Darlehen f&uuml;r den ersten Monat des Beraters bereitstellen; Auftakttreffen mit dem Berater planen</li>
+                            <li><strong>Ben:</strong> Die 26 genehmigten Mitarbeiter einarbeiten; Rollenanforderungen priorisieren und ver&ouml;ffentlichen; sich mit Ward bei den Abteilungszuweisungen abstimmen</li>
+                            <li><strong>Ward:</strong> Das erste MetaLeads-Koordinierungstreffen organisieren und Termine vorschlagen; sich mit Ben bei den Abteilungszuweisungen abstimmen</li>
+                        </ul>
+
+                        <h2>Offene Punkte f&uuml;r k&uuml;nftige Sitzungen</h2>
+                        <ul>
+                            <li>Kriterien und Verfahren f&uuml;r die Vollmitgliedschaft</li>
+                            <li>Ergebnisse der Gemeinschaftsumfrage und Entscheidung zur Fortf&uuml;hrung</li>
+                            <li>Ausschlusslistenpolitik (ausstehende Rechtsberatung)</li>
+                            <li>Finalisierung der DSGVO-Richtlinie</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -138,5 +508,18 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

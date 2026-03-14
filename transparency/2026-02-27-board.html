@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency Board Meeting - February 27, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -27,6 +28,12 @@
         .meeting-content th { background: var(--color-bg-secondary); font-weight: 600; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -46,48 +53,252 @@
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Board members present:</strong> Daniel, Pablo, Ben, Chris, Michelle (5 of 8 &mdash; quorum reached)
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Key Decisions</h2>
-                    <ol>
-                        <li><strong>Power of attorney for Pepe</strong> &mdash; Board approved granting power of attorney to Pepe to sign agreements on behalf of NCA, specifically for signing documents the following week while the president is travelling.</li>
-                        <li><strong>Resolution to open a bank account</strong> &mdash; Board approved opening a new bank account, with Daniel, Pablo, and Chris authorized to individually use the account.</li>
-                    </ol>
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                    <h2>Discussion Summary</h2>
+                    <div class="attendees">
+                        <strong>Board members present:</strong> Daniel, Pablo, Ben, Chris, Michelle (5 of 8 &mdash; quorum reached)
+                    </div>
 
-                    <h3>Meeting Minutes Ratification</h3>
-                    <p>The board discussed the need to formalize ratification of meeting minutes. Minutes should be signed by the president and secretary (or vice president and secretary), which has not been consistently done. The board proposed a monthly or bimonthly process where accumulated minutes are formally ratified and signed.</p>
+                    <div class="meeting-content">
+                        <h2>Key Decisions</h2>
+                        <ol>
+                            <li><strong>Power of attorney for Pepe</strong> &mdash; Board approved granting power of attorney to Pepe to sign agreements on behalf of NCA, specifically for signing documents the following week while the president is travelling.</li>
+                            <li><strong>Resolution to open a bank account</strong> &mdash; Board approved opening a new bank account, with Daniel, Pablo, and Chris authorized to individually use the account.</li>
+                        </ol>
 
-                    <h3>Bank Account Signatories</h3>
-                    <p>Daniel and Pablo were listed as initial authorized users. Chris was added during the meeting and will send his details to Ben to be included on the authorization.</p>
+                        <h2>Discussion Summary</h2>
 
-                    <h2>Action Items</h2>
-                    <table>
-                        <thead>
-                            <tr><th>Owner</th><th>Action</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Chris</td>
-                                <td>Send info to Ben for bank account authorization</td>
-                            </tr>
-                            <tr>
-                                <td>Ben</td>
-                                <td>Add Chris to authorized account users</td>
-                            </tr>
-                            <tr>
-                                <td>Daniel</td>
-                                <td>Ask Pepe about document format for minutes ratification</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <h3>Meeting Minutes Ratification</h3>
+                        <p>The board discussed the need to formalize ratification of meeting minutes. Minutes should be signed by the president and secretary (or vice president and secretary), which has not been consistently done. The board proposed a monthly or bimonthly process where accumulated minutes are formally ratified and signed.</p>
 
-                    <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Minutes prepared from meeting recording and AI-generated notes. Reviewed for accuracy.</p>
+                        <h3>Bank Account Signatories</h3>
+                        <p>Daniel and Pablo were listed as initial authorized users. Chris was added during the meeting and will send his details to Ben to be included on the authorization.</p>
+
+                        <h2>Action Items</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Owner</th><th>Action</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Chris</td>
+                                    <td>Send info to Ben for bank account authorization</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>Add Chris to authorized account users</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Ask Pepe about document format for minutes ratification</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Minutes prepared from meeting recording and AI-generated notes. Reviewed for accuracy.</p>
+                    </div>
                 </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Miembros de la junta presentes:</strong> Daniel, Pablo, Ben, Chris, Michelle (5 de 8 &mdash; qu&oacute;rum alcanzado)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisiones Clave</h2>
+                        <ol>
+                            <li><strong>Poder notarial para Pepe</strong> &mdash; La junta aprob&oacute; otorgar un poder notarial a Pepe para firmar acuerdos en nombre de NCA, espec&iacute;ficamente para firmar documentos la semana siguiente mientras el presidente est&aacute; de viaje.</li>
+                            <li><strong>Resoluci&oacute;n para abrir una cuenta bancaria</strong> &mdash; La junta aprob&oacute; la apertura de una nueva cuenta bancaria, con Daniel, Pablo y Chris autorizados para usar la cuenta individualmente.</li>
+                        </ol>
+
+                        <h2>Resumen de la Discusi&oacute;n</h2>
+
+                        <h3>Ratificaci&oacute;n de las Actas de Reuni&oacute;n</h3>
+                        <p>La junta discuti&oacute; la necesidad de formalizar la ratificaci&oacute;n de las actas de las reuniones. Las actas deben ser firmadas por el presidente y el secretario (o el vicepresidente y el secretario), lo cual no se ha hecho de manera consistente. La junta propuso un proceso mensual o bimensual en el que las actas acumuladas sean formalmente ratificadas y firmadas.</p>
+
+                        <h3>Firmantes de la Cuenta Bancaria</h3>
+                        <p>Daniel y Pablo fueron incluidos como usuarios autorizados iniciales. Chris fue a&ntilde;adido durante la reuni&oacute;n y enviar&aacute; sus datos a Ben para ser incluido en la autorizaci&oacute;n.</p>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Responsable</th><th>Acci&oacute;n</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Chris</td>
+                                    <td>Enviar informaci&oacute;n a Ben para la autorizaci&oacute;n de la cuenta bancaria</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>A&ntilde;adir a Chris como usuario autorizado de la cuenta</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Preguntar a Pepe sobre el formato de documento para la ratificaci&oacute;n de actas</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Actas preparadas a partir de la grabaci&oacute;n de la reuni&oacute;n y notas generadas por IA. Revisadas para verificar su precisi&oacute;n.</p>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Membres du conseil pr&eacute;sents :</strong> Daniel, Pablo, Ben, Chris, Michelle (5 sur 8 &mdash; quorum atteint)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>D&eacute;cisions Cl&eacute;s</h2>
+                        <ol>
+                            <li><strong>Procuration pour Pepe</strong> &mdash; Le conseil a approuv&eacute; l&rsquo;octroi d&rsquo;une procuration &agrave; Pepe pour signer des accords au nom de NCA, sp&eacute;cifiquement pour signer des documents la semaine suivante pendant que le pr&eacute;sident est en d&eacute;placement.</li>
+                            <li><strong>R&eacute;solution pour l&rsquo;ouverture d&rsquo;un compte bancaire</strong> &mdash; Le conseil a approuv&eacute; l&rsquo;ouverture d&rsquo;un nouveau compte bancaire, avec Daniel, Pablo et Chris autoris&eacute;s &agrave; utiliser le compte individuellement.</li>
+                        </ol>
+
+                        <h2>R&eacute;sum&eacute; des Discussions</h2>
+
+                        <h3>Ratification des Proc&egrave;s-Verbaux</h3>
+                        <p>Le conseil a discut&eacute; de la n&eacute;cessit&eacute; de formaliser la ratification des proc&egrave;s-verbaux des r&eacute;unions. Les proc&egrave;s-verbaux doivent &ecirc;tre sign&eacute;s par le pr&eacute;sident et le secr&eacute;taire (ou le vice-pr&eacute;sident et le secr&eacute;taire), ce qui n&rsquo;a pas &eacute;t&eacute; fait de mani&egrave;re syst&eacute;matique. Le conseil a propos&eacute; un processus mensuel ou bimensuel au cours duquel les proc&egrave;s-verbaux accumul&eacute;s seraient formellement ratifi&eacute;s et sign&eacute;s.</p>
+
+                        <h3>Signataires du Compte Bancaire</h3>
+                        <p>Daniel et Pablo ont &eacute;t&eacute; inscrits comme utilisateurs autoris&eacute;s initiaux. Chris a &eacute;t&eacute; ajout&eacute; pendant la r&eacute;union et enverra ses coordonn&eacute;es &agrave; Ben pour &ecirc;tre inclus dans l&rsquo;autorisation.</p>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Responsable</th><th>Action</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Chris</td>
+                                    <td>Envoyer ses informations &agrave; Ben pour l&rsquo;autorisation du compte bancaire</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>Ajouter Chris aux utilisateurs autoris&eacute;s du compte</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Demander &agrave; Pepe le format de document pour la ratification des proc&egrave;s-verbaux</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Proc&egrave;s-verbaux pr&eacute;par&eacute;s &agrave; partir de l&rsquo;enregistrement de la r&eacute;union et de notes g&eacute;n&eacute;r&eacute;es par IA. R&eacute;vis&eacute;s pour en v&eacute;rifier l&rsquo;exactitude.</p>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Membri del consiglio presenti:</strong> Daniel, Pablo, Ben, Chris, Michelle (5 su 8 &mdash; quorum raggiunto)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisioni Chiave</h2>
+                        <ol>
+                            <li><strong>Procura per Pepe</strong> &mdash; Il consiglio ha approvato il conferimento di una procura a Pepe per firmare accordi per conto di NCA, in particolare per firmare documenti la settimana successiva mentre il presidente &egrave; in viaggio.</li>
+                            <li><strong>Delibera per l&rsquo;apertura di un conto bancario</strong> &mdash; Il consiglio ha approvato l&rsquo;apertura di un nuovo conto bancario, con Daniel, Pablo e Chris autorizzati a utilizzare il conto individualmente.</li>
+                        </ol>
+
+                        <h2>Sintesi della Discussione</h2>
+
+                        <h3>Ratifica dei Verbali delle Riunioni</h3>
+                        <p>Il consiglio ha discusso la necessit&agrave; di formalizzare la ratifica dei verbali delle riunioni. I verbali devono essere firmati dal presidente e dal segretario (o dal vicepresidente e dal segretario), cosa che non &egrave; stata fatta in modo costante. Il consiglio ha proposto un processo mensile o bimestrale in cui i verbali accumulati vengano formalmente ratificati e firmati.</p>
+
+                        <h3>Firmatari del Conto Bancario</h3>
+                        <p>Daniel e Pablo sono stati indicati come utenti autorizzati iniziali. Chris &egrave; stato aggiunto durante la riunione e invier&agrave; i propri dati a Ben per essere incluso nell&rsquo;autorizzazione.</p>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Responsabile</th><th>Azione</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Chris</td>
+                                    <td>Inviare le informazioni a Ben per l&rsquo;autorizzazione del conto bancario</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>Aggiungere Chris agli utenti autorizzati del conto</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Chiedere a Pepe il formato del documento per la ratifica dei verbali</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Verbali preparati dalla registrazione della riunione e da note generate dall&rsquo;IA. Revisionati per verificarne l&rsquo;accuratezza.</p>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version ist die spanische Version ma&szlig;geblich.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesende Vorstandsmitglieder:</strong> Daniel, Pablo, Ben, Chris, Michelle (5 von 8 &mdash; Beschlussf&auml;higkeit erreicht)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Wichtige Beschl&uuml;sse</h2>
+                        <ol>
+                            <li><strong>Vollmacht f&uuml;r Pepe</strong> &mdash; Der Vorstand genehmigte die Erteilung einer Vollmacht an Pepe, um Vereinbarungen im Namen von NCA zu unterzeichnen, insbesondere f&uuml;r die Unterzeichnung von Dokumenten in der folgenden Woche, w&auml;hrend der Pr&auml;sident auf Reisen ist.</li>
+                            <li><strong>Beschluss zur Er&ouml;ffnung eines Bankkontos</strong> &mdash; Der Vorstand genehmigte die Er&ouml;ffnung eines neuen Bankkontos, wobei Daniel, Pablo und Chris einzeln zur Nutzung des Kontos berechtigt sind.</li>
+                        </ol>
+
+                        <h2>Zusammenfassung der Diskussion</h2>
+
+                        <h3>Ratifizierung der Sitzungsprotokolle</h3>
+                        <p>Der Vorstand er&ouml;rterte die Notwendigkeit, die Ratifizierung der Sitzungsprotokolle zu formalisieren. Die Protokolle sollten vom Pr&auml;sidenten und dem Sekret&auml;r (oder dem Vizepr&auml;sidenten und dem Sekret&auml;r) unterzeichnet werden, was bisher nicht konsequent geschehen ist. Der Vorstand schlug einen monatlichen oder zweimonatlichen Prozess vor, bei dem die angesammelten Protokolle formell ratifiziert und unterzeichnet werden.</p>
+
+                        <h3>Bevollm&auml;chtigte des Bankkontos</h3>
+                        <p>Daniel und Pablo wurden als erste bevollm&auml;chtigte Nutzer aufgef&uuml;hrt. Chris wurde w&auml;hrend der Sitzung hinzugef&uuml;gt und wird seine Daten an Ben senden, um in die Bevollm&auml;chtigung aufgenommen zu werden.</p>
+
+                        <h2>Aktionspunkte</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Verantwortlich</th><th>Aktion</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Chris</td>
+                                    <td>Informationen an Ben f&uuml;r die Bankkontoautorisierung senden</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>Chris als autorisierten Kontonutzer hinzuf&uuml;gen</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Pepe nach dem Dokumentenformat f&uuml;r die Protokollratifizierung fragen</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Protokoll erstellt aus der Sitzungsaufzeichnung und KI-generierten Notizen. Auf Richtigkeit &uuml;berpr&uuml;ft.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -96,5 +307,18 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

@@ -32,6 +32,12 @@
         .resource-links a { color: var(--color-accent); font-weight: 500; }
         .resource-links a:hover { text-decoration: underline; }
         .notice { background: #fff8e6; border: 1px solid #f0d060; padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; font-size: 0.95rem; color: #665500; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -51,132 +57,662 @@
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>~30-40 attendees including board members, leads, camp leads, and community members</strong>
-                    <strong>Board members present:</strong> Daniel, Chris, Ben, Pablo, Victor, Peter (Treasurer)
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="resource-links">
-                    <h3>Full Records</h3>
-                    <ul>
-                        <li><a href="2026-01-29-community-transcript.html">Full meeting transcript</a></li>
-                        <li><a href="2026-01-29-community-chat.html">Full chat log</a></li>
-                    </ul>
-                    <p style="margin: 0.75rem 0 0; font-size: 0.9rem; color: var(--color-text-muted);">
-                        We are considering whether and how to publish the video recording of this meeting as well.
-                    </p>
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>~30-40 attendees including board members, leads, camp leads, and community members</strong>
+                        <strong>Board members present:</strong> Daniel, Chris, Ben, Pablo, Victor, Peter (Treasurer)
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-01-29-community-transcript.html">Full meeting transcript</a></li>
+                            <li><a href="2026-01-29-community-chat.html">Full chat log</a></li>
+                        </ul>
+                        <p style="margin: 0.75rem 0 0; font-size: 0.9rem; color: var(--color-text-muted);">
+                            We are considering whether and how to publish the video recording of this meeting as well.
+                        </p>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Overview</h2>
+                        <p>First community meeting of the Nobodies Collective Asociaci&oacute;n (NCA). The board presented the association&rsquo;s formation, the plan for a 2026 event, and how to get involved. The meeting showed strong community willingness to contribute, but also surfaced questions about decision-making timelines, operational readiness, and how to get involved.</p>
+
+                        <h2>Board Presentations</h2>
+
+                        <h3>Daniel &mdash; Why We&rsquo;re Here</h3>
+                        <ul>
+                            <li>72 community members elected the 8-member board in December</li>
+                            <li>The association has been incorporated, tax ID filed, website created, bank account in progress</li>
+                            <li>Acknowledged the board doesn&rsquo;t yet properly represent community diversity &mdash; to be addressed</li>
+                            <li>The board handles legal/financial infrastructure; the community makes the event happen</li>
+                            <li>Called on attendees to help grow from 8 to 80 to 800 people involved</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Association Structure</h3>
+                        <ul>
+                            <li>NCA is a Spanish non-profit with no shareholders</li>
+                            <li>Board elections every 2 years with term limits</li>
+                            <li>Members can vote on major decisions (land purchase, statute changes)</li>
+                            <li>The association is building its own operational capability from scratch</li>
+                        </ul>
+
+                        <h3>Ben &mdash; How to Get Involved</h3>
+                        <ul>
+                            <li>The ~65 people who voted in the election will be onboarded as members next week</li>
+                            <li>Association membership will be opened gradually to maintain governance integrity</li>
+                            <li>Association membership is NOT required to contribute to the event (volunteer, lead, camp, art, etc.)</li>
+                            <li>Expression-of-interest form on nobodies.team</li>
+                            <li>Acknowledged the timeline is tight (~5 months) and that historically, tight timelines have only worked with existing infrastructure in place</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Land Update</h3>
+                        <ul>
+                            <li>A site has been selected (announced previously)</li>
+                            <li>~250 people have expressed interest in contributing to land purchase</li>
+                            <li>Nearly &euro;1M in community interest: ~&euro;900K in loans (at 2%, 4%, or 0% interest) and ~&euro;100K in donations</li>
+                            <li>Diversely sourced: 90%+ of contributions are &euro;1,000&ndash;5,000</li>
+                            <li>At &euro;750K purchase price, payback period would be 5&ndash;8 years</li>
+                            <li>Land is targeted for 2027, not 2026</li>
+                        </ul>
+
+                        <h2>Key Community Questions &amp; Concerns</h2>
+
+                        <h3>Go/No-Go Decision</h3>
+                        <p>Multiple attendees asked when and how a go/no-go decision would be made, and who makes it.</p>
+
+                        <h3>Creativity &amp; Budget Needs</h3>
+                        <p>The Creativity department raised that the art grant process needs to begin soon, which requires budget information. The Treasurer was identified as the contact for budget queries. No figures were available at the meeting.</p>
+
+                        <h3>Asset Procurement</h3>
+                        <p>Multiple questions about operational assets. The board stated:</p>
+                        <ul>
+                            <li>The association is exploring procurement of the assets it needs to run an event</li>
+                            <li>The goingnowhere.org website is not part of the association</li>
+                            <li>GDPR compliance is a priority for any data handling</li>
+                        </ul>
+
+                        <h3>Website &amp; Communications</h3>
+                        <p>Several attendees noted that some community members are unaware of the new association. Suggestions included improving the new website and broadening outreach. The board acknowledged the new website is basic and open-source, and welcomed contributions to improve it.</p>
+
+                        <h3>Lead Recruitment</h3>
+                        <p>The board stated that experienced community members are welcome to apply for roles, and that role selection will be more democratic going forward.</p>
+
+                        <h3>Membership Process</h3>
+                        <p>Some confusion about who is currently a member. The board clarified:</p>
+                        <ul>
+                            <li>Being on the call does not make someone a member</li>
+                            <li>Election voters will be formally onboarded first</li>
+                            <li>Criteria for broader membership will be proposed subsequently</li>
+                            <li>The association only legally came into existence recently, so formal membership was not previously possible</li>
+                        </ul>
+
+                        <h3>Assumptions About Participation</h3>
+                        <p>Ubertown stated they have reservations and practical reasons they may need to take a fallow year, and noted concern about assumptions that all camps and infrastructure providers are on board.</p>
+
+                        <h2>Community Spirit</h2>
+                        <p>Several attendees expressed appreciation for the community&rsquo;s history and enthusiasm for the association&rsquo;s direction. The board referred to &ldquo;an event in July&rdquo; as the event name is still being determined.</p>
+
+                        <h2>Community Commitments</h2>
+                        <ul>
+                            <li>Camp leads indicated they are already preparing their camps</li>
+                            <li>Build confirmed 100% participation</li>
+                            <li>Experienced comms leads indicated availability</li>
+                            <li>FIST (volunteer shift system) confirmed usable under its open-source AGPL3 license</li>
+                            <li>Previous low-income ticket coordinator offered to continue</li>
+                            <li>Multiple expressions of appreciation for the board&rsquo;s work and the community&rsquo;s history</li>
+                            <li>Land fundraising showed broad-based community support</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <ul>
+                            <li>Expression-of-interest form to go live on nobodies.team (Pablo, that evening)</li>
+                            <li>Onboard the ~65 election voters as association members (next week)</li>
+                            <li>Contact key leads and departments to assess availability</li>
+                            <li>Provide budget information to Creativity and other departments</li>
+                            <li>Continue asset procurement discussions</li>
+                            <li>Next community meeting: Wednesday, February 5, 2026</li>
+                            <li>Discord and Telegram channels shared for ongoing conversation</li>
+                        </ul>
+
+                        <h2>Attendees (from chat/transcript)</h2>
+                        <p><strong>Community members:</strong> Joao, Olli (Creativity), Kez, Atlas, Erin, Justin (Ubertown), Raffaela, Julia/Juc, Fran, Curious Creatures, Anna, Daniela, Shauna, ants, Caroline, Toma, Johann, Psilo, Somiatruites, Miguel, Peri, Uri-Lev, Marty, yllza, Frambu, Edo, Another Pablo, gregomon, Lynn</p>
+                    </div>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Overview</h2>
-                    <p>First community meeting of the Nobodies Collecting Asociaci&oacute;n (NCA). The board presented the association's formation, the plan for a 2026 event, and how to get involved. The meeting showed strong community willingness to contribute, but also surfaced questions about decision-making timelines, operational readiness, and how to get involved.</p>
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
 
-                    <h2>Board Presentations</h2>
+                    <div class="attendees">
+                        <strong>~30-40 asistentes incluyendo miembros de la junta, responsables, l&iacute;deres de campamento y miembros de la comunidad</strong>
+                        <strong>Miembros de la junta presentes:</strong> Daniel, Chris, Ben, Pablo, Victor, Peter (Tesorero)
+                    </div>
 
-                    <h3>Daniel &mdash; Why We're Here</h3>
-                    <ul>
-                        <li>72 community members elected the 8-member board in December</li>
-                        <li>The association has been incorporated, tax ID filed, website created, bank account in progress</li>
-                        <li>Acknowledged the board doesn't yet properly represent community diversity &mdash; to be addressed</li>
-                        <li>The board handles legal/financial infrastructure; the community makes the event happen</li>
-                        <li>Called on attendees to help grow from 8 to 80 to 800 people involved</li>
-                    </ul>
+                    <div class="resource-links">
+                        <h3>Registros completos</h3>
+                        <ul>
+                            <li><a href="2026-01-29-community-transcript.html">Transcripci&oacute;n completa de la reuni&oacute;n</a></li>
+                            <li><a href="2026-01-29-community-chat.html">Registro completo del chat</a></li>
+                        </ul>
+                        <p style="margin: 0.75rem 0 0; font-size: 0.9rem; color: var(--color-text-muted);">
+                            Estamos considerando si publicar y c&oacute;mo publicar la grabaci&oacute;n en v&iacute;deo de esta reuni&oacute;n.
+                        </p>
+                    </div>
 
-                    <h3>Pablo &mdash; Association Structure</h3>
-                    <ul>
-                        <li>NCA is a Spanish non-profit with no shareholders</li>
-                        <li>Board elections every 2 years with term limits</li>
-                        <li>Members can vote on major decisions (land purchase, statute changes)</li>
-                        <li>The association is building its own operational capability from scratch</li>
-                    </ul>
+                    <div class="meeting-content">
+                        <h2>Resumen</h2>
+                        <p>Primera reuni&oacute;n comunitaria de la Nobodies Collective Asociaci&oacute;n (NCA). La junta present&oacute; la formaci&oacute;n de la asociaci&oacute;n, el plan para un evento en 2026 y c&oacute;mo participar. La reuni&oacute;n mostr&oacute; una fuerte voluntad de contribuci&oacute;n por parte de la comunidad, pero tambi&eacute;n plante&oacute; preguntas sobre los plazos de toma de decisiones, la preparaci&oacute;n operativa y c&oacute;mo participar.</p>
 
-                    <h3>Ben &mdash; How to Get Involved</h3>
-                    <ul>
-                        <li>The ~65 people who voted in the election will be onboarded as members next week</li>
-                        <li>Association membership will be opened gradually to maintain governance integrity</li>
-                        <li>Association membership is NOT required to contribute to the event (volunteer, lead, camp, art, etc.)</li>
-                        <li>Expression-of-interest form on nobodies.team</li>
-                        <li>Acknowledged the timeline is tight (~5 months) and that historically, tight timelines have only worked with existing infrastructure in place</li>
-                    </ul>
+                        <h2>Presentaciones de la junta</h2>
 
-                    <h3>Pablo &mdash; Land Update</h3>
-                    <ul>
-                        <li>A site has been selected (announced previously)</li>
-                        <li>~250 people have expressed interest in contributing to land purchase</li>
-                        <li>Nearly &euro;1M in community interest: ~&euro;900K in loans (at 2%, 4%, or 0% interest) and ~&euro;100K in donations</li>
-                        <li>Diversely sourced: 90%+ of contributions are &euro;1,000&ndash;5,000</li>
-                        <li>At &euro;750K purchase price, payback period would be 5&ndash;8 years</li>
-                        <li>Land is targeted for 2027, not 2026</li>
-                    </ul>
+                        <h3>Daniel &mdash; Por qu&eacute; estamos aqu&iacute;</h3>
+                        <ul>
+                            <li>72 miembros de la comunidad eligieron la junta de 8 miembros en diciembre</li>
+                            <li>La asociaci&oacute;n ha sido constituida, se ha solicitado el NIF, se ha creado la web y la cuenta bancaria est&aacute; en tr&aacute;mite</li>
+                            <li>Se reconoci&oacute; que la junta a&uacute;n no representa adecuadamente la diversidad de la comunidad &mdash; a abordar</li>
+                            <li>La junta gestiona la infraestructura legal/financiera; la comunidad hace que el evento suceda</li>
+                            <li>Se hizo un llamamiento a los asistentes para ayudar a crecer de 8 a 80 a 800 personas involucradas</li>
+                        </ul>
 
-                    <h2>Key Community Questions &amp; Concerns</h2>
+                        <h3>Pablo &mdash; Estructura de la asociaci&oacute;n</h3>
+                        <ul>
+                            <li>NCA es una asociaci&oacute;n espa&ntilde;ola sin &aacute;nimo de lucro y sin accionistas</li>
+                            <li>Elecciones de la junta cada 2 a&ntilde;os con l&iacute;mite de mandatos</li>
+                            <li>Los miembros pueden votar sobre decisiones importantes (compra de terreno, cambios en los estatutos)</li>
+                            <li>La asociaci&oacute;n est&aacute; construyendo su propia capacidad operativa desde cero</li>
+                        </ul>
 
-                    <h3>Go/No-Go Decision</h3>
-                    <p>Multiple attendees asked when and how a go/no-go decision would be made, and who makes it.</p>
+                        <h3>Ben &mdash; C&oacute;mo participar</h3>
+                        <ul>
+                            <li>Las ~65 personas que votaron en la elecci&oacute;n ser&aacute;n incorporadas como miembros la pr&oacute;xima semana</li>
+                            <li>La membres&iacute;a de la asociaci&oacute;n se abrir&aacute; gradualmente para mantener la integridad de la gobernanza</li>
+                            <li>La membres&iacute;a de la asociaci&oacute;n NO es necesaria para contribuir al evento (voluntariado, liderazgo, campamento, arte, etc.)</li>
+                            <li>Formulario de expresi&oacute;n de inter&eacute;s en nobodies.team</li>
+                            <li>Se reconoci&oacute; que el plazo es ajustado (~5 meses) y que hist&oacute;ricamente, los plazos ajustados solo han funcionado con infraestructura existente</li>
+                        </ul>
 
-                    <h3>Creativity &amp; Budget Needs</h3>
-                    <p>The Creativity department raised that the art grant process needs to begin soon, which requires budget information. The Treasurer was identified as the contact for budget queries. No figures were available at the meeting.</p>
+                        <h3>Pablo &mdash; Actualizaci&oacute;n sobre el terreno</h3>
+                        <ul>
+                            <li>Se ha seleccionado un emplazamiento (anunciado previamente)</li>
+                            <li>~250 personas han expresado inter&eacute;s en contribuir a la compra del terreno</li>
+                            <li>Casi 1M&euro; en inter&eacute;s comunitario: ~900K&euro; en pr&eacute;stamos (al 2%, 4% o 0% de inter&eacute;s) y ~100K&euro; en donaciones</li>
+                            <li>Diversamente financiado: m&aacute;s del 90% de las contribuciones son de 1.000&ndash;5.000&euro;</li>
+                            <li>Con un precio de compra de 750K&euro;, el per&iacute;odo de amortizaci&oacute;n ser&iacute;a de 5&ndash;8 a&ntilde;os</li>
+                            <li>El terreno est&aacute; previsto para 2027, no para 2026</li>
+                        </ul>
 
-                    <h3>Asset Procurement</h3>
-                    <p>Multiple questions about operational assets. The board stated:</p>
-                    <ul>
-                        <li>The association is exploring procurement of the assets it needs to run an event</li>
-                        <li>The goingnowhere.org website is not part of the association</li>
-                        <li>GDPR compliance is a priority for any data handling</li>
-                    </ul>
+                        <h2>Preguntas y preocupaciones clave de la comunidad</h2>
 
-                    <h3>Website &amp; Communications</h3>
-                    <p>Several attendees noted that some community members are unaware of the new association. Suggestions included improving the new website and broadening outreach. The board acknowledged the new website is basic and open-source, and welcomed contributions to improve it.</p>
+                        <h3>Decisi&oacute;n de seguir adelante o no (Go/No-Go)</h3>
+                        <p>Varios asistentes preguntaron cu&aacute;ndo y c&oacute;mo se tomar&iacute;a una decisi&oacute;n de seguir adelante o no, y qui&eacute;n la tomar&iacute;a.</p>
 
-                    <h3>Lead Recruitment</h3>
-                    <p>The board stated that experienced community members are welcome to apply for roles, and that role selection will be more democratic going forward.</p>
+                        <h3>Creatividad y necesidades presupuestarias</h3>
+                        <p>El departamento de Creatividad plante&oacute; que el proceso de subvenciones art&iacute;sticas debe comenzar pronto, lo que requiere informaci&oacute;n presupuestaria. El Tesorero fue identificado como el contacto para consultas presupuestarias. No se dispuso de cifras en la reuni&oacute;n.</p>
 
-                    <h3>Membership Process</h3>
-                    <p>Some confusion about who is currently a member. The board clarified:</p>
-                    <ul>
-                        <li>Being on the call does not make someone a member</li>
-                        <li>Election voters will be formally onboarded first</li>
-                        <li>Criteria for broader membership will be proposed subsequently</li>
-                        <li>The association only legally came into existence recently, so formal membership was not previously possible</li>
-                    </ul>
+                        <h3>Adquisici&oacute;n de activos</h3>
+                        <p>M&uacute;ltiples preguntas sobre activos operativos. La junta declar&oacute;:</p>
+                        <ul>
+                            <li>La asociaci&oacute;n est&aacute; explorando la adquisici&oacute;n de los activos que necesita para organizar un evento</li>
+                            <li>El sitio web goingnowhere.org no forma parte de la asociaci&oacute;n</li>
+                            <li>El cumplimiento del RGPD es una prioridad para cualquier tratamiento de datos</li>
+                        </ul>
 
-                    <h3>Assumptions About Participation</h3>
-                    <p>Ubertown stated they have reservations and practical reasons they may need to take a fallow year, and noted concern about assumptions that all camps and infrastructure providers are on board.</p>
+                        <h3>Sitio web y comunicaciones</h3>
+                        <p>Varios asistentes se&ntilde;alaron que algunos miembros de la comunidad desconocen la nueva asociaci&oacute;n. Las sugerencias incluyeron mejorar el nuevo sitio web y ampliar la difusi&oacute;n. La junta reconoci&oacute; que el nuevo sitio web es b&aacute;sico y de c&oacute;digo abierto, y agradeci&oacute; contribuciones para mejorarlo.</p>
 
-                    <h2>Community Spirit</h2>
-                    <p>Several attendees expressed appreciation for the community&rsquo;s history and enthusiasm for the association&rsquo;s direction. The board referred to &ldquo;an event in July&rdquo; as the event name is still being determined.</p>
+                        <h3>Reclutamiento de responsables</h3>
+                        <p>La junta declar&oacute; que los miembros experimentados de la comunidad son bienvenidos a postularse para roles, y que la selecci&oacute;n de roles ser&aacute; m&aacute;s democr&aacute;tica en adelante.</p>
 
-                    <h2>Community Commitments</h2>
-                    <ul>
-                        <li>Camp leads indicated they are already preparing their camps</li>
-                        <li>Build confirmed 100% participation</li>
-                        <li>Experienced comms leads indicated availability</li>
-                        <li>FIST (volunteer shift system) confirmed usable under its open-source AGPL3 license</li>
-                        <li>Previous low-income ticket coordinator offered to continue</li>
-                        <li>Multiple expressions of appreciation for the board's work and the community's history</li>
-                        <li>Land fundraising showed broad-based community support</li>
-                    </ul>
+                        <h3>Proceso de membres&iacute;a</h3>
+                        <p>Cierta confusi&oacute;n sobre qui&eacute;n es actualmente miembro. La junta aclar&oacute;:</p>
+                        <ul>
+                            <li>Estar en la llamada no convierte a alguien en miembro</li>
+                            <li>Los votantes de la elecci&oacute;n ser&aacute;n incorporados formalmente primero</li>
+                            <li>Los criterios para una membres&iacute;a m&aacute;s amplia se propondr&aacute;n posteriormente</li>
+                            <li>La asociaci&oacute;n solo adquiri&oacute; existencia legal recientemente, por lo que la membres&iacute;a formal no era posible antes</li>
+                        </ul>
 
-                    <h2>Action Items</h2>
-                    <ul>
-                        <li>Expression-of-interest form to go live on nobodies.team (Pablo, that evening)</li>
-                        <li>Onboard the ~65 election voters as association members (next week)</li>
-                        <li>Contact key leads and departments to assess availability</li>
-                        <li>Provide budget information to Creativity and other departments</li>
-                        <li>Continue asset procurement discussions</li>
-                        <li>Next community meeting: Wednesday, February 5, 2026</li>
-                        <li>Discord and Telegram channels shared for ongoing conversation</li>
-                    </ul>
+                        <h3>Supuestos sobre la participaci&oacute;n</h3>
+                        <p>Ubertown declar&oacute; que tiene reservas y razones pr&aacute;cticas por las que podr&iacute;an necesitar tomarse un a&ntilde;o de descanso, y expres&oacute; preocupaci&oacute;n por los supuestos de que todos los campamentos y proveedores de infraestructura est&aacute;n a bordo.</p>
 
-                    <h2>Attendees (from chat/transcript)</h2>
-                    <p><strong>Community members:</strong> Joao, Olli (Creativity), Kez, Atlas, Erin, Justin (Ubertown), Raffaela, Julia/Juc, Fran, Curious Creatures, Anna, Daniela, Shauna, ants, Caroline, Toma, Johann, Psilo, Somiatruites, Miguel, Peri, Uri-Lev, Marty, yllza, Frambu, Edo, Another Pablo, gregomon, Lynn</p>
+                        <h2>Esp&iacute;ritu comunitario</h2>
+                        <p>Varios asistentes expresaron aprecio por la historia de la comunidad y entusiasmo por la direcci&oacute;n de la asociaci&oacute;n. La junta se refiri&oacute; a &laquo;un evento en julio&raquo; ya que el nombre del evento a&uacute;n se est&aacute; determinando.</p>
+
+                        <h2>Compromisos de la comunidad</h2>
+                        <ul>
+                            <li>Los l&iacute;deres de campamento indicaron que ya est&aacute;n preparando sus campamentos</li>
+                            <li>Build confirm&oacute; participaci&oacute;n al 100%</li>
+                            <li>L&iacute;deres experimentados de comunicaciones indicaron disponibilidad</li>
+                            <li>FIST (sistema de turnos de voluntariado) confirm&oacute; que es utilizable bajo su licencia de c&oacute;digo abierto AGPL3</li>
+                            <li>El anterior coordinador de entradas de bajo ingreso se ofreci&oacute; a continuar</li>
+                            <li>M&uacute;ltiples expresiones de aprecio por el trabajo de la junta y la historia de la comunidad</li>
+                            <li>La recaudaci&oacute;n de fondos para el terreno mostr&oacute; un amplio apoyo comunitario</li>
+                        </ul>
+
+                        <h2>Puntos de acci&oacute;n</h2>
+                        <ul>
+                            <li>Formulario de expresi&oacute;n de inter&eacute;s activo en nobodies.team (Pablo, esa misma noche)</li>
+                            <li>Incorporar a los ~65 votantes de la elecci&oacute;n como miembros de la asociaci&oacute;n (pr&oacute;xima semana)</li>
+                            <li>Contactar a los responsables clave y departamentos para evaluar disponibilidad</li>
+                            <li>Proporcionar informaci&oacute;n presupuestaria a Creatividad y otros departamentos</li>
+                            <li>Continuar las discusiones sobre adquisici&oacute;n de activos</li>
+                            <li>Pr&oacute;xima reuni&oacute;n comunitaria: mi&eacute;rcoles 5 de febrero de 2026</li>
+                            <li>Se compartieron canales de Discord y Telegram para la conversaci&oacute;n continua</li>
+                        </ul>
+
+                        <h2>Asistentes (del chat/transcripci&oacute;n)</h2>
+                        <p><strong>Miembros de la comunidad:</strong> Joao, Olli (Creativity), Kez, Atlas, Erin, Justin (Ubertown), Raffaela, Julia/Juc, Fran, Curious Creatures, Anna, Daniela, Shauna, ants, Caroline, Toma, Johann, Psilo, Somiatruites, Miguel, Peri, Uri-Lev, Marty, yllza, Frambu, Edo, Another Pablo, gregomon, Lynn</p>
+                    </div>
                 </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>~30-40 participants incluant des membres du conseil, des responsables, des chefs de camp et des membres de la communaut&eacute;</strong>
+                        <strong>Membres du conseil pr&eacute;sents :</strong> Daniel, Chris, Ben, Pablo, Victor, Peter (Tr&eacute;sorier)
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archives compl&egrave;tes</h3>
+                        <ul>
+                            <li><a href="2026-01-29-community-transcript.html">Transcription compl&egrave;te de la r&eacute;union</a></li>
+                            <li><a href="2026-01-29-community-chat.html">Journal complet du chat</a></li>
+                        </ul>
+                        <p style="margin: 0.75rem 0 0; font-size: 0.9rem; color: var(--color-text-muted);">
+                            Nous &eacute;tudions la possibilit&eacute; et les modalit&eacute;s de publication de l&rsquo;enregistrement vid&eacute;o de cette r&eacute;union.
+                        </p>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Aper&ccedil;u</h2>
+                        <p>Premi&egrave;re r&eacute;union communautaire de la Nobodies Collective Asociaci&oacute;n (NCA). Le conseil a pr&eacute;sent&eacute; la formation de l&rsquo;association, le plan pour un &eacute;v&eacute;nement en 2026 et comment s&rsquo;impliquer. La r&eacute;union a montr&eacute; une forte volont&eacute; de contribution de la communaut&eacute;, mais a &eacute;galement soulev&eacute; des questions sur les d&eacute;lais de prise de d&eacute;cision, la pr&eacute;paration op&eacute;rationnelle et les moyens de s&rsquo;impliquer.</p>
+
+                        <h2>Pr&eacute;sentations du conseil</h2>
+
+                        <h3>Daniel &mdash; Pourquoi nous sommes ici</h3>
+                        <ul>
+                            <li>72 membres de la communaut&eacute; ont &eacute;lu le conseil de 8 membres en d&eacute;cembre</li>
+                            <li>L&rsquo;association a &eacute;t&eacute; constitu&eacute;e, le num&eacute;ro fiscal d&eacute;pos&eacute;, le site web cr&eacute;&eacute;, le compte bancaire en cours</li>
+                            <li>Il a &eacute;t&eacute; reconnu que le conseil ne repr&eacute;sente pas encore correctement la diversit&eacute; de la communaut&eacute; &mdash; &agrave; traiter</li>
+                            <li>Le conseil g&egrave;re l&rsquo;infrastructure juridique et financi&egrave;re ; la communaut&eacute; fait vivre l&rsquo;&eacute;v&eacute;nement</li>
+                            <li>Appel aux participants pour aider &agrave; passer de 8 &agrave; 80 puis &agrave; 800 personnes impliqu&eacute;es</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Structure de l&rsquo;association</h3>
+                        <ul>
+                            <li>NCA est une association espagnole &agrave; but non lucratif sans actionnaires</li>
+                            <li>&Eacute;lections du conseil tous les 2 ans avec limitation de mandats</li>
+                            <li>Les membres peuvent voter sur les d&eacute;cisions majeures (achat de terrain, modifications des statuts)</li>
+                            <li>L&rsquo;association d&eacute;veloppe sa propre capacit&eacute; op&eacute;rationnelle &agrave; partir de z&eacute;ro</li>
+                        </ul>
+
+                        <h3>Ben &mdash; Comment s&rsquo;impliquer</h3>
+                        <ul>
+                            <li>Les ~65 personnes ayant vot&eacute; lors de l&rsquo;&eacute;lection seront int&eacute;gr&eacute;es comme membres la semaine suivante</li>
+                            <li>L&rsquo;adh&eacute;sion &agrave; l&rsquo;association sera ouverte progressivement pour pr&eacute;server l&rsquo;int&eacute;grit&eacute; de la gouvernance</li>
+                            <li>L&rsquo;adh&eacute;sion &agrave; l&rsquo;association n&rsquo;est PAS n&eacute;cessaire pour contribuer &agrave; l&rsquo;&eacute;v&eacute;nement (b&eacute;n&eacute;volat, responsabilit&eacute;s, camp, art, etc.)</li>
+                            <li>Formulaire d&rsquo;expression d&rsquo;int&eacute;r&ecirc;t sur nobodies.team</li>
+                            <li>Il a &eacute;t&eacute; reconnu que le calendrier est serr&eacute; (~5 mois) et qu&rsquo;historiquement, les calendriers serr&eacute;s n&rsquo;ont fonctionn&eacute; qu&rsquo;avec une infrastructure existante en place</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Mise &agrave; jour sur le terrain</h3>
+                        <ul>
+                            <li>Un site a &eacute;t&eacute; s&eacute;lectionn&eacute; (annonc&eacute; pr&eacute;c&eacute;demment)</li>
+                            <li>~250 personnes ont exprim&eacute; leur int&eacute;r&ecirc;t pour contribuer &agrave; l&rsquo;achat du terrain</li>
+                            <li>Pr&egrave;s d&rsquo;1M&euro; d&rsquo;int&eacute;r&ecirc;t communautaire : ~900K&euro; en pr&ecirc;ts (au taux de 2%, 4% ou 0%) et ~100K&euro; en dons</li>
+                            <li>Sources diversifi&eacute;es : plus de 90% des contributions sont de 1 000 &agrave; 5 000&euro;</li>
+                            <li>&Agrave; un prix d&rsquo;achat de 750K&euro;, la p&eacute;riode de remboursement serait de 5 &agrave; 8 ans</li>
+                            <li>Le terrain est pr&eacute;vu pour 2027, pas pour 2026</li>
+                        </ul>
+
+                        <h2>Questions et pr&eacute;occupations cl&eacute;s de la communaut&eacute;</h2>
+
+                        <h3>D&eacute;cision Go/No-Go</h3>
+                        <p>Plusieurs participants ont demand&eacute; quand et comment une d&eacute;cision go/no-go serait prise, et qui la prendrait.</p>
+
+                        <h3>Cr&eacute;ativit&eacute; et besoins budg&eacute;taires</h3>
+                        <p>Le d&eacute;partement Cr&eacute;ativit&eacute; a signal&eacute; que le processus de subventions artistiques doit d&eacute;marrer bient&ocirc;t, ce qui n&eacute;cessite des informations budg&eacute;taires. Le Tr&eacute;sorier a &eacute;t&eacute; identifi&eacute; comme contact pour les questions budg&eacute;taires. Aucun chiffre n&rsquo;&eacute;tait disponible lors de la r&eacute;union.</p>
+
+                        <h3>Acquisition d&rsquo;actifs</h3>
+                        <p>Multiples questions sur les actifs op&eacute;rationnels. Le conseil a d&eacute;clar&eacute; :</p>
+                        <ul>
+                            <li>L&rsquo;association explore l&rsquo;acquisition des actifs dont elle a besoin pour organiser un &eacute;v&eacute;nement</li>
+                            <li>Le site web goingnowhere.org ne fait pas partie de l&rsquo;association</li>
+                            <li>La conformit&eacute; au RGPD est une priorit&eacute; pour tout traitement de donn&eacute;es</li>
+                        </ul>
+
+                        <h3>Site web et communications</h3>
+                        <p>Plusieurs participants ont not&eacute; que certains membres de la communaut&eacute; ne connaissent pas la nouvelle association. Les suggestions comprenaient l&rsquo;am&eacute;lioration du nouveau site web et l&rsquo;&eacute;largissement de la diffusion. Le conseil a reconnu que le nouveau site web est basique et open-source, et a accueilli favorablement les contributions pour l&rsquo;am&eacute;liorer.</p>
+
+                        <h3>Recrutement de responsables</h3>
+                        <p>Le conseil a d&eacute;clar&eacute; que les membres exp&eacute;riment&eacute;s de la communaut&eacute; sont invit&eacute;s &agrave; postuler pour des r&ocirc;les, et que la s&eacute;lection des r&ocirc;les sera plus d&eacute;mocratique &agrave; l&rsquo;avenir.</p>
+
+                        <h3>Processus d&rsquo;adh&eacute;sion</h3>
+                        <p>Certaine confusion quant &agrave; qui est actuellement membre. Le conseil a clarifi&eacute; :</p>
+                        <ul>
+                            <li>&Ecirc;tre pr&eacute;sent &agrave; l&rsquo;appel ne fait pas de quelqu&rsquo;un un membre</li>
+                            <li>Les &eacute;lecteurs seront formellement int&eacute;gr&eacute;s en premier</li>
+                            <li>Les crit&egrave;res pour une adh&eacute;sion plus large seront propos&eacute;s par la suite</li>
+                            <li>L&rsquo;association n&rsquo;a acquis une existence l&eacute;gale que r&eacute;cemment, la qualit&eacute; de membre formelle n&rsquo;&eacute;tait donc pas possible auparavant</li>
+                        </ul>
+
+                        <h3>Hypoth&egrave;ses sur la participation</h3>
+                        <p>Ubertown a d&eacute;clar&eacute; avoir des r&eacute;serves et des raisons pratiques pouvant n&eacute;cessiter une ann&eacute;e de pause, et a exprim&eacute; des inqui&eacute;tudes concernant les hypoth&egrave;ses selon lesquelles tous les camps et fournisseurs d&rsquo;infrastructure seraient &agrave; bord.</p>
+
+                        <h2>Esprit communautaire</h2>
+                        <p>Plusieurs participants ont exprim&eacute; leur appr&eacute;ciation pour l&rsquo;histoire de la communaut&eacute; et leur enthousiasme pour la direction de l&rsquo;association. Le conseil s&rsquo;est r&eacute;f&eacute;r&eacute; &agrave; &laquo; un &eacute;v&eacute;nement en juillet &raquo; car le nom de l&rsquo;&eacute;v&eacute;nement est encore en cours de d&eacute;termination.</p>
+
+                        <h2>Engagements de la communaut&eacute;</h2>
+                        <ul>
+                            <li>Les chefs de camp ont indiqu&eacute; qu&rsquo;ils pr&eacute;parent d&eacute;j&agrave; leurs camps</li>
+                            <li>Build a confirm&eacute; une participation &agrave; 100%</li>
+                            <li>Des responsables communication exp&eacute;riment&eacute;s ont indiqu&eacute; leur disponibilit&eacute;</li>
+                            <li>FIST (syst&egrave;me de rotation des b&eacute;n&eacute;voles) a confirm&eacute; &ecirc;tre utilisable sous sa licence open-source AGPL3</li>
+                            <li>L&rsquo;ancien coordinateur des billets &agrave; tarif r&eacute;duit s&rsquo;est propos&eacute; de continuer</li>
+                            <li>Multiples expressions d&rsquo;appr&eacute;ciation pour le travail du conseil et l&rsquo;histoire de la communaut&eacute;</li>
+                            <li>La collecte de fonds pour le terrain a montr&eacute; un large soutien communautaire</li>
+                        </ul>
+
+                        <h2>Points d&rsquo;action</h2>
+                        <ul>
+                            <li>Formulaire d&rsquo;expression d&rsquo;int&eacute;r&ecirc;t mis en ligne sur nobodies.team (Pablo, le soir m&ecirc;me)</li>
+                            <li>Int&eacute;grer les ~65 &eacute;lecteurs comme membres de l&rsquo;association (la semaine suivante)</li>
+                            <li>Contacter les responsables cl&eacute;s et les d&eacute;partements pour &eacute;valuer la disponibilit&eacute;</li>
+                            <li>Fournir des informations budg&eacute;taires &agrave; Cr&eacute;ativit&eacute; et aux autres d&eacute;partements</li>
+                            <li>Poursuivre les discussions sur l&rsquo;acquisition d&rsquo;actifs</li>
+                            <li>Prochaine r&eacute;union communautaire : mercredi 5 f&eacute;vrier 2026</li>
+                            <li>Des canaux Discord et Telegram ont &eacute;t&eacute; partag&eacute;s pour la conversation continue</li>
+                        </ul>
+
+                        <h2>Participants (du chat/de la transcription)</h2>
+                        <p><strong>Membres de la communaut&eacute; :</strong> Joao, Olli (Creativity), Kez, Atlas, Erin, Justin (Ubertown), Raffaela, Julia/Juc, Fran, Curious Creatures, Anna, Daniela, Shauna, ants, Caroline, Toma, Johann, Psilo, Somiatruites, Miguel, Peri, Uri-Lev, Marty, yllza, Frambu, Edo, Another Pablo, gregomon, Lynn</p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>~30-40 partecipanti tra membri del consiglio, responsabili, capicampo e membri della comunit&agrave;</strong>
+                        <strong>Membri del consiglio presenti:</strong> Daniel, Chris, Ben, Pablo, Victor, Peter (Tesoriere)
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archivi completi</h3>
+                        <ul>
+                            <li><a href="2026-01-29-community-transcript.html">Trascrizione completa della riunione</a></li>
+                            <li><a href="2026-01-29-community-chat.html">Registro completo della chat</a></li>
+                        </ul>
+                        <p style="margin: 0.75rem 0 0; font-size: 0.9rem; color: var(--color-text-muted);">
+                            Stiamo valutando se e come pubblicare la registrazione video di questa riunione.
+                        </p>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Panoramica</h2>
+                        <p>Prima riunione comunitaria della Nobodies Collective Asociaci&oacute;n (NCA). Il consiglio ha presentato la formazione dell&rsquo;associazione, il piano per un evento nel 2026 e come partecipare. La riunione ha mostrato una forte volont&agrave; della comunit&agrave; di contribuire, ma ha anche sollevato domande sulle tempistiche decisionali, la prontezza operativa e come partecipare.</p>
+
+                        <h2>Presentazioni del consiglio</h2>
+
+                        <h3>Daniel &mdash; Perch&eacute; siamo qui</h3>
+                        <ul>
+                            <li>72 membri della comunit&agrave; hanno eletto il consiglio di 8 membri a dicembre</li>
+                            <li>L&rsquo;associazione &egrave; stata costituita, il codice fiscale depositato, il sito web creato, il conto bancario in corso</li>
+                            <li>&Egrave; stato riconosciuto che il consiglio non rappresenta ancora adeguatamente la diversit&agrave; della comunit&agrave; &mdash; da affrontare</li>
+                            <li>Il consiglio gestisce l&rsquo;infrastruttura legale/finanziaria; la comunit&agrave; realizza l&rsquo;evento</li>
+                            <li>Appello ai partecipanti per contribuire a crescere da 8 a 80 a 800 persone coinvolte</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Struttura dell&rsquo;associazione</h3>
+                        <ul>
+                            <li>NCA &egrave; un&rsquo;associazione spagnola senza scopo di lucro e senza azionisti</li>
+                            <li>Elezioni del consiglio ogni 2 anni con limiti di mandato</li>
+                            <li>I membri possono votare sulle decisioni importanti (acquisto del terreno, modifiche statutarie)</li>
+                            <li>L&rsquo;associazione sta costruendo la propria capacit&agrave; operativa da zero</li>
+                        </ul>
+
+                        <h3>Ben &mdash; Come partecipare</h3>
+                        <ul>
+                            <li>Le ~65 persone che hanno votato alle elezioni saranno integrate come membri la settimana successiva</li>
+                            <li>L&rsquo;adesione all&rsquo;associazione sar&agrave; aperta gradualmente per mantenere l&rsquo;integrit&agrave; della governance</li>
+                            <li>L&rsquo;adesione all&rsquo;associazione NON &egrave; necessaria per contribuire all&rsquo;evento (volontariato, responsabilit&agrave;, campo, arte, ecc.)</li>
+                            <li>Modulo di espressione di interesse su nobodies.team</li>
+                            <li>&Egrave; stato riconosciuto che i tempi sono stretti (~5 mesi) e che storicamente, le tempistiche strette hanno funzionato solo con infrastrutture gi&agrave; esistenti</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Aggiornamento sul terreno</h3>
+                        <ul>
+                            <li>&Egrave; stato selezionato un sito (annunciato in precedenza)</li>
+                            <li>~250 persone hanno espresso interesse a contribuire all&rsquo;acquisto del terreno</li>
+                            <li>Quasi 1M&euro; di interesse comunitario: ~900K&euro; in prestiti (al 2%, 4% o 0% di interesse) e ~100K&euro; in donazioni</li>
+                            <li>Fonti diversificate: oltre il 90% dei contributi &egrave; compreso tra 1.000 e 5.000&euro;</li>
+                            <li>A un prezzo di acquisto di 750K&euro;, il periodo di ammortamento sarebbe di 5&ndash;8 anni</li>
+                            <li>Il terreno &egrave; previsto per il 2027, non per il 2026</li>
+                        </ul>
+
+                        <h2>Domande e preoccupazioni chiave della comunit&agrave;</h2>
+
+                        <h3>Decisione Go/No-Go</h3>
+                        <p>Diversi partecipanti hanno chiesto quando e come verrebbe presa una decisione go/no-go, e chi la prenderebbe.</p>
+
+                        <h3>Creativit&agrave; e necessit&agrave; di bilancio</h3>
+                        <p>Il dipartimento Creativit&agrave; ha segnalato che il processo di sovvenzioni artistiche deve iniziare presto, il che richiede informazioni sul bilancio. Il Tesoriere &egrave; stato identificato come contatto per le questioni di bilancio. Nessuna cifra era disponibile alla riunione.</p>
+
+                        <h3>Acquisizione di risorse</h3>
+                        <p>Molteplici domande sulle risorse operative. Il consiglio ha dichiarato:</p>
+                        <ul>
+                            <li>L&rsquo;associazione sta esplorando l&rsquo;acquisizione delle risorse necessarie per organizzare un evento</li>
+                            <li>Il sito web goingnowhere.org non fa parte dell&rsquo;associazione</li>
+                            <li>La conformit&agrave; al GDPR &egrave; una priorit&agrave; per qualsiasi trattamento dei dati</li>
+                        </ul>
+
+                        <h3>Sito web e comunicazioni</h3>
+                        <p>Diversi partecipanti hanno notato che alcuni membri della comunit&agrave; non sono a conoscenza della nuova associazione. I suggerimenti includevano il miglioramento del nuovo sito web e l&rsquo;ampliamento della diffusione. Il consiglio ha riconosciuto che il nuovo sito web &egrave; basilare e open-source, e ha accolto con favore i contributi per migliorarlo.</p>
+
+                        <h3>Reclutamento di responsabili</h3>
+                        <p>Il consiglio ha dichiarato che i membri esperti della comunit&agrave; sono invitati a candidarsi per i ruoli, e che la selezione dei ruoli sar&agrave; pi&ugrave; democratica in futuro.</p>
+
+                        <h3>Processo di adesione</h3>
+                        <p>Una certa confusione su chi &egrave; attualmente membro. Il consiglio ha chiarito:</p>
+                        <ul>
+                            <li>Essere presenti alla chiamata non rende qualcuno un membro</li>
+                            <li>Gli elettori saranno formalmente integrati per primi</li>
+                            <li>I criteri per un&rsquo;adesione pi&ugrave; ampia saranno proposti successivamente</li>
+                            <li>L&rsquo;associazione ha acquisito esistenza legale solo di recente, quindi l&rsquo;adesione formale non era possibile in precedenza</li>
+                        </ul>
+
+                        <h3>Presupposti sulla partecipazione</h3>
+                        <p>Ubertown ha dichiarato di avere riserve e ragioni pratiche per cui potrebbe essere necessario prendersi un anno di pausa, e ha espresso preoccupazione per il presupposto che tutti i campi e i fornitori di infrastrutture siano a bordo.</p>
+
+                        <h2>Spirito comunitario</h2>
+                        <p>Diversi partecipanti hanno espresso apprezzamento per la storia della comunit&agrave; ed entusiasmo per la direzione dell&rsquo;associazione. Il consiglio si &egrave; riferito a &laquo;un evento a luglio&raquo; poich&eacute; il nome dell&rsquo;evento &egrave; ancora in fase di definizione.</p>
+
+                        <h2>Impegni della comunit&agrave;</h2>
+                        <ul>
+                            <li>I capicampo hanno indicato che stanno gi&agrave; preparando i loro campi</li>
+                            <li>Build ha confermato la partecipazione al 100%</li>
+                            <li>Responsabili comunicazione esperti hanno indicato disponibilit&agrave;</li>
+                            <li>FIST (sistema di turni per volontari) ha confermato di essere utilizzabile sotto la sua licenza open-source AGPL3</li>
+                            <li>Il precedente coordinatore dei biglietti a basso reddito si &egrave; offerto di continuare</li>
+                            <li>Molteplici espressioni di apprezzamento per il lavoro del consiglio e la storia della comunit&agrave;</li>
+                            <li>La raccolta fondi per il terreno ha mostrato un ampio sostegno comunitario</li>
+                        </ul>
+
+                        <h2>Punti d&rsquo;azione</h2>
+                        <ul>
+                            <li>Modulo di espressione di interesse attivo su nobodies.team (Pablo, quella sera stessa)</li>
+                            <li>Integrare i ~65 elettori come membri dell&rsquo;associazione (settimana successiva)</li>
+                            <li>Contattare i responsabili chiave e i dipartimenti per valutare la disponibilit&agrave;</li>
+                            <li>Fornire informazioni sul bilancio a Creativit&agrave; e agli altri dipartimenti</li>
+                            <li>Proseguire le discussioni sull&rsquo;acquisizione di risorse</li>
+                            <li>Prossima riunione comunitaria: mercoled&igrave; 5 febbraio 2026</li>
+                            <li>Canali Discord e Telegram condivisi per la conversazione continua</li>
+                        </ul>
+
+                        <h2>Partecipanti (dalla chat/trascrizione)</h2>
+                        <p><strong>Membri della comunit&agrave;:</strong> Joao, Olli (Creativity), Kez, Atlas, Erin, Justin (Ubertown), Raffaela, Julia/Juc, Fran, Curious Creatures, Anna, Daniela, Shauna, ants, Caroline, Toma, Johann, Psilo, Somiatruites, Miguel, Peri, Uri-Lev, Marty, yllza, Frambu, Edo, Another Pablo, gregomon, Lynn</p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>~30-40 Teilnehmende, darunter Vorstandsmitglieder, Verantwortliche, Camp-Leiter und Community-Mitglieder</strong>
+                        <strong>Anwesende Vorstandsmitglieder:</strong> Daniel, Chris, Ben, Pablo, Victor, Peter (Schatzmeister)
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Vollst&auml;ndige Aufzeichnungen</h3>
+                        <ul>
+                            <li><a href="2026-01-29-community-transcript.html">Vollst&auml;ndiges Sitzungsprotokoll</a></li>
+                            <li><a href="2026-01-29-community-chat.html">Vollst&auml;ndiges Chat-Protokoll</a></li>
+                        </ul>
+                        <p style="margin: 0.75rem 0 0; font-size: 0.9rem; color: var(--color-text-muted);">
+                            Wir pr&uuml;fen, ob und wie die Videoaufzeichnung dieser Sitzung ver&ouml;ffentlicht werden soll.
+                        </p>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>&Uuml;berblick</h2>
+                        <p>Erste Gemeinschaftssitzung der Nobodies Collective Asociaci&oacute;n (NCA). Der Vorstand pr&auml;sentierte die Gr&uuml;ndung des Vereins, den Plan f&uuml;r eine Veranstaltung 2026 und M&ouml;glichkeiten zur Beteiligung. Die Sitzung zeigte eine starke Bereitschaft der Gemeinschaft zur Mitwirkung, warf aber auch Fragen zu Entscheidungsfristen, operativer Bereitschaft und Beteiligungsm&ouml;glichkeiten auf.</p>
+
+                        <h2>Pr&auml;sentationen des Vorstands</h2>
+
+                        <h3>Daniel &mdash; Warum wir hier sind</h3>
+                        <ul>
+                            <li>72 Community-Mitglieder w&auml;hlten den 8-k&ouml;pfigen Vorstand im Dezember</li>
+                            <li>Der Verein wurde gegr&uuml;ndet, die Steuernummer beantragt, die Website erstellt, das Bankkonto ist in Bearbeitung</li>
+                            <li>Es wurde anerkannt, dass der Vorstand die Vielfalt der Gemeinschaft noch nicht angemessen repr&auml;sentiert &mdash; dies soll angegangen werden</li>
+                            <li>Der Vorstand k&uuml;mmert sich um die rechtliche/finanzielle Infrastruktur; die Gemeinschaft macht die Veranstaltung m&ouml;glich</li>
+                            <li>Aufruf an die Teilnehmenden, beim Wachstum von 8 auf 80 auf 800 beteiligte Personen zu helfen</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Vereinsstruktur</h3>
+                        <ul>
+                            <li>NCA ist ein spanischer gemeinn&uuml;tziger Verein ohne Anteilseigner</li>
+                            <li>Vorstandswahlen alle 2 Jahre mit Amtszeitbegrenzung</li>
+                            <li>Mitglieder k&ouml;nnen &uuml;ber wichtige Entscheidungen abstimmen (Grundst&uuml;ckskauf, Satzungs&auml;nderungen)</li>
+                            <li>Der Verein baut seine eigene operative F&auml;higkeit von Grund auf auf</li>
+                        </ul>
+
+                        <h3>Ben &mdash; Wie man sich beteiligt</h3>
+                        <ul>
+                            <li>Die ~65 Personen, die bei der Wahl abgestimmt haben, werden n&auml;chste Woche als Mitglieder aufgenommen</li>
+                            <li>Die Vereinsmitgliedschaft wird schrittweise ge&ouml;ffnet, um die Governance-Integrit&auml;t zu wahren</li>
+                            <li>Die Vereinsmitgliedschaft ist NICHT erforderlich, um zur Veranstaltung beizutragen (ehrenamtliche Arbeit, Leitung, Camp, Kunst usw.)</li>
+                            <li>Interessenbekundungsformular auf nobodies.team</li>
+                            <li>Es wurde anerkannt, dass der Zeitplan eng ist (~5 Monate) und dass historisch gesehen enge Zeitpl&auml;ne nur mit bestehender Infrastruktur funktioniert haben</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Grundst&uuml;cks-Update</h3>
+                        <ul>
+                            <li>Ein Standort wurde ausgew&auml;hlt (zuvor angek&uuml;ndigt)</li>
+                            <li>~250 Personen haben Interesse bekundet, zum Grundst&uuml;ckskauf beizutragen</li>
+                            <li>Fast 1 Mio.&euro; an gemeinschaftlichem Interesse: ~900K&euro; an Darlehen (zu 2%, 4% oder 0% Zinsen) und ~100K&euro; an Spenden</li>
+                            <li>Breit gef&auml;chert: &uuml;ber 90% der Beitr&auml;ge liegen zwischen 1.000 und 5.000&euro;</li>
+                            <li>Bei einem Kaufpreis von 750K&euro; w&auml;re die R&uuml;ckzahlungsdauer 5&ndash;8 Jahre</li>
+                            <li>Das Grundst&uuml;ck ist f&uuml;r 2027 geplant, nicht f&uuml;r 2026</li>
+                        </ul>
+
+                        <h2>Zentrale Fragen und Anliegen der Gemeinschaft</h2>
+
+                        <h3>Go/No-Go-Entscheidung</h3>
+                        <p>Mehrere Teilnehmende fragten, wann und wie eine Go/No-Go-Entscheidung getroffen w&uuml;rde und wer sie trifft.</p>
+
+                        <h3>Kreativit&auml;t und Budgetbedarf</h3>
+                        <p>Die Kreativit&auml;tsabteilung wies darauf hin, dass der Prozess f&uuml;r Kunstf&ouml;rderung bald beginnen muss, wof&uuml;r Budgetinformationen erforderlich sind. Der Schatzmeister wurde als Ansprechpartner f&uuml;r Budgetfragen benannt. Bei der Sitzung lagen keine Zahlen vor.</p>
+
+                        <h3>Beschaffung von Verm&ouml;genswerten</h3>
+                        <p>Mehrere Fragen zu operativen Verm&ouml;genswerten. Der Vorstand erkl&auml;rte:</p>
+                        <ul>
+                            <li>Der Verein pr&uuml;ft die Beschaffung der Verm&ouml;genswerte, die er f&uuml;r die Durchf&uuml;hrung einer Veranstaltung ben&ouml;tigt</li>
+                            <li>Die Website goingnowhere.org geh&ouml;rt nicht zum Verein</li>
+                            <li>Die Einhaltung der DSGVO hat bei jeder Datenverarbeitung Priorit&auml;t</li>
+                        </ul>
+
+                        <h3>Website und Kommunikation</h3>
+                        <p>Mehrere Teilnehmende wiesen darauf hin, dass einige Community-Mitglieder den neuen Verein nicht kennen. Vorschl&auml;ge umfassten die Verbesserung der neuen Website und die Ausweitung der &Ouml;ffentlichkeitsarbeit. Der Vorstand r&auml;umte ein, dass die neue Website einfach und Open-Source ist, und begr&uuml;&szlig;te Beitr&auml;ge zu ihrer Verbesserung.</p>
+
+                        <h3>Rekrutierung von Verantwortlichen</h3>
+                        <p>Der Vorstand erkl&auml;rte, dass erfahrene Community-Mitglieder sich gerne f&uuml;r Rollen bewerben k&ouml;nnen und dass die Rollenauswahl k&uuml;nftig demokratischer gestaltet wird.</p>
+
+                        <h3>Mitgliedschaftsprozess</h3>
+                        <p>Einige Verwirrung dar&uuml;ber, wer derzeit Mitglied ist. Der Vorstand stellte klar:</p>
+                        <ul>
+                            <li>Die Teilnahme am Gespr&auml;ch macht jemanden nicht zum Mitglied</li>
+                            <li>Die W&auml;hler werden zuerst formell aufgenommen</li>
+                            <li>Kriterien f&uuml;r eine breitere Mitgliedschaft werden anschlie&szlig;end vorgeschlagen</li>
+                            <li>Der Verein hat erst k&uuml;rzlich seine rechtliche Existenz erlangt, daher war eine formelle Mitgliedschaft zuvor nicht m&ouml;glich</li>
+                        </ul>
+
+                        <h3>Annahmen &uuml;ber die Beteiligung</h3>
+                        <p>Ubertown erkl&auml;rte, Vorbehalte und praktische Gr&uuml;nde zu haben, warum sie m&ouml;glicherweise ein Pausenjahr einlegen m&uuml;ssen, und &auml;u&szlig;erte Bedenken hinsichtlich der Annahme, dass alle Camps und Infrastrukturanbieter an Bord seien.</p>
+
+                        <h2>Gemeinschaftsgeist</h2>
+                        <p>Mehrere Teilnehmende brachten ihre Wertsch&auml;tzung f&uuml;r die Geschichte der Gemeinschaft und ihre Begeisterung f&uuml;r die Richtung des Vereins zum Ausdruck. Der Vorstand sprach von &bdquo;einer Veranstaltung im Juli&ldquo;, da der Name der Veranstaltung noch festgelegt wird.</p>
+
+                        <h2>Zusagen der Gemeinschaft</h2>
+                        <ul>
+                            <li>Camp-Leiter gaben an, dass sie bereits ihre Camps vorbereiten</li>
+                            <li>Build best&auml;tigte 100% Beteiligung</li>
+                            <li>Erfahrene Kommunikationsverantwortliche zeigten Verf&uuml;gbarkeit an</li>
+                            <li>FIST (Freiwilligen-Schichtsystem) best&auml;tigte die Nutzbarkeit unter seiner Open-Source-Lizenz AGPL3</li>
+                            <li>Der fr&uuml;here Koordinator f&uuml;r erm&auml;&szlig;igte Tickets bot an, weiterzumachen</li>
+                            <li>Zahlreiche Ausdr&uuml;cke der Wertsch&auml;tzung f&uuml;r die Arbeit des Vorstands und die Geschichte der Gemeinschaft</li>
+                            <li>Die Spendensammlung f&uuml;r das Grundst&uuml;ck zeigte breite Unterst&uuml;tzung aus der Gemeinschaft</li>
+                        </ul>
+
+                        <h2>Ma&szlig;nahmen</h2>
+                        <ul>
+                            <li>Interessenbekundungsformular auf nobodies.team aktiviert (Pablo, am selben Abend)</li>
+                            <li>Die ~65 W&auml;hler als Vereinsmitglieder aufnehmen (n&auml;chste Woche)</li>
+                            <li>Schl&uuml;sselverantwortliche und Abteilungen kontaktieren, um die Verf&uuml;gbarkeit zu bewerten</li>
+                            <li>Budgetinformationen f&uuml;r Kreativit&auml;t und andere Abteilungen bereitstellen</li>
+                            <li>Diskussionen zur Beschaffung von Verm&ouml;genswerten fortsetzen</li>
+                            <li>N&auml;chste Gemeinschaftssitzung: Mittwoch, 5. Februar 2026</li>
+                            <li>Discord- und Telegram-Kan&auml;le f&uuml;r den fortlaufenden Austausch geteilt</li>
+                        </ul>
+
+                        <h2>Teilnehmende (aus Chat/Protokoll)</h2>
+                        <p><strong>Community-Mitglieder:</strong> Joao, Olli (Creativity), Kez, Atlas, Erin, Justin (Ubertown), Raffaela, Julia/Juc, Fran, Curious Creatures, Anna, Daniela, Shauna, ants, Caroline, Toma, Johann, Psilo, Somiatruites, Miguel, Peri, Uri-Lev, Marty, yllza, Frambu, Edo, Another Pablo, gregomon, Lynn</p>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
 
     <div id="shared-footer" data-prefix=".."></div>
     <script src="../footer.js"></script>
+
+    <script>
+document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        var lang = this.dataset.lang;
+        document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+        var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+        if (target) target.classList.add('active');
+    });
+});
+    </script>
 
     <script src="../script.js"></script>
 </body>

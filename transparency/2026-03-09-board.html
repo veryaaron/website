@@ -45,6 +45,12 @@
         .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
         .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
         .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -63,100 +69,512 @@
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Board members present:</strong> Daniel T, Peter D, Michelle T, Ben D, Chris O, Ward D, Pablo V, Victor P
-                    <br><strong>Non-board attendees:</strong> Pepe C (Legal Counsel), Daniela M S (Production Manager)
-                    <br><strong>Facilitator:</strong> Chris O
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>1. Statute Amendment Vote</h2>
-                    <p>The board considered voting on proposed statute amendments prepared by Pepe C (including provisions for asynchronous and electronic voting). The vote was deferred as Peter D and Michelle T had not yet reviewed the proposed changes. The amendments are required in order to formally and legally accept the first batch of association collaborators.</p>
-                    <p><strong>Decision:</strong> Vote deferred. Board members to review before next meeting.</p>
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                    <h2>2. Bank Account Update</h2>
-                    <p>The association is officially registered with the Spanish government and holds a temporary NIF number. All required documentation has been submitted to Sabadell bank. Daniel T committed to visiting the bank daily until the account is opened.</p>
+                    <div class="attendees">
+                        <strong>Board members present:</strong> Daniel T, Peter D, Michelle T, Ben D, Chris O, Ward D, Pablo V, Victor P
+                        <br><strong>Non-board attendees:</strong> Pepe C (Legal Counsel), Daniela M S (Production Manager)
+                        <br><strong>Facilitator:</strong> Chris O
+                    </div>
 
-                    <h2>3. Ticketing Update</h2>
-                    <p>Ticket sales are targeted for Thursday/Friday of this week. Prerequisites discussed:</p>
-                    <ul>
-                        <li>FIST system deployment (not a blocker for initial sales, per Peter D)</li>
-                        <li>Event name (resolved, see below)</li>
-                        <li>Terms &amp; Conditions and refund policy (due Wednesday from Pepe C)</li>
-                        <li>Code of conduct</li>
-                        <li>Low-income ticket pricing (expected from Ripham (Fran))</li>
-                    </ul>
-                    <p>Daniela M S will project manage the ticket release process. Pablo V will investigate early entry ticketing options.</p>
+                    <div class="meeting-content">
+                        <h2>1. Statute Amendment Vote</h2>
+                        <p>The board considered voting on proposed statute amendments prepared by Pepe C (including provisions for asynchronous and electronic voting). The vote was deferred as Peter D and Michelle T had not yet reviewed the proposed changes. The amendments are required in order to formally and legally accept the first batch of association collaborators.</p>
+                        <p><strong>Decision:</strong> Vote deferred. Board members to review before next meeting.</p>
 
-                    <h2>4. Event Name</h2>
-                    <p>The board considered three candidate names: Elsewhere, Nobody&rsquo;s, and Nobody&rsquo;s Here. Following community polling and board discussion:</p>
-                    <p><strong>Decision:</strong> The event will be named <strong>&ldquo;Elsewhere&rdquo;</strong>, subject to trademark clearance.</p>
-                    <ul>
-                        <li>Vote: majority in favour; Pablo V did not vote as the majority was already reached</li>
-                        <li>Ward D requested their disagreement be formally noted, citing concern that the decision was based on emotional considerations rather than legal risk</li>
-                        <li>Pepe C will commence trademark clearance</li>
-                    </ul>
+                        <h2>2. Bank Account Update</h2>
+                        <p>The association is officially registered with the Spanish government and holds a temporary NIF number. All required documentation has been submitted to Sabadell bank. Daniel T committed to visiting the bank daily until the account is opened.</p>
 
-                    <h2>5. Event Site Location</h2>
-                    <p>The board discussed whether to hold the event at the current site or move to a new location.</p>
-                    <p><strong>Decision:</strong> The event will be held at the <strong>current (old) site</strong>.</p>
-                    <ul>
-                        <li>Vote: majority in favour; Pablo V abstained; Ward D voted against and requested their disagreement be formally noted</li>
-                        <li>Parallel planning for a new site for a 2027 event is ongoing; preparation would need to begin around June 2026</li>
-                    </ul>
+                        <h2>3. Ticketing Update</h2>
+                        <p>Ticket sales are targeted for Thursday/Friday of this week. Prerequisites discussed:</p>
+                        <ul>
+                            <li>FIST system deployment (not a blocker for initial sales, per Peter D)</li>
+                            <li>Event name (resolved, see below)</li>
+                            <li>Terms &amp; Conditions and refund policy (due Wednesday from Pepe C)</li>
+                            <li>Code of conduct</li>
+                            <li>Low-income ticket pricing (expected from Ripham (Fran))</li>
+                        </ul>
+                        <p>Daniela M S will project manage the ticket release process. Pablo V will investigate early entry ticketing options.</p>
 
-                    <h2>6. Production Transition</h2>
-                    <p>Daniela M S announced the transition from assessment to production mindset. A new process was agreed:</p>
-                    <ul>
-                        <li>Daniela will present 5 weekly board action items to delegate/distribute</li>
-                        <li>Goal: board to hand off 10 items per week, reducing bottleneck</li>
-                    </ul>
+                        <h2>4. Event Name</h2>
+                        <p>The board considered three candidate names: Elsewhere, Nobody&rsquo;s, and Nobody&rsquo;s Here. Following community polling and board discussion:</p>
+                        <p><strong>Decision:</strong> The event will be named <strong>&ldquo;Elsewhere&rdquo;</strong>, subject to trademark clearance.</p>
+                        <ul>
+                            <li>Vote: majority in favour; Pablo V did not vote as the majority was already reached</li>
+                            <li>Ward D requested their disagreement be formally noted, citing concern that the decision was based on emotional considerations rather than legal risk</li>
+                            <li>Pepe C will commence trademark clearance</li>
+                        </ul>
 
-                    <h2>7. Community Engagement</h2>
-                    <p>The board discussed an outreach strategy for community members with concerns about recent decisions:</p>
-                    <ul>
-                        <li>Daniel T proposed an inclusive call on all channels</li>
-                        <li>Michelle T proposed a risk register spreadsheet for community input</li>
-                        <li>Decision: hold off on posting the call until the spreadsheet is set up first</li>
-                    </ul>
+                        <h2>5. Event Site Location</h2>
+                        <p>The board discussed whether to hold the event at the current site or move to a new location.</p>
+                        <p><strong>Decision:</strong> The event will be held at the <strong>current site</strong>.</p>
+                        <ul>
+                            <li>Vote: majority in favour; Pablo V abstained; Ward D voted against and requested their disagreement be formally noted</li>
+                            <li>Parallel planning for a new site for a 2027 event is ongoing; preparation would need to begin around June 2026</li>
+                        </ul>
 
-                    <h2>8. Legal Update &mdash; Container Assets</h2>
-                    <p>A meeting is scheduled for Wednesday 2pm to discuss options for sourcing containers for the event. Legal counsel is reviewing arrangements to ensure compliance. Further details are restricted.</p>
+                        <h2>6. Production Update</h2>
+                        <p>Daniela M S announced the shift from assessment to production mindset. A new process was agreed:</p>
+                        <ul>
+                            <li>Daniela will present 5 weekly board action items to delegate/distribute</li>
+                            <li>Goal: board to hand off 10 items per week, reducing bottleneck</li>
+                        </ul>
 
-                    <h2>9. Board Documentation Policy</h2>
-                    <p>The board agreed to a three-tier classification system for documents:</p>
-                    <ul>
-                        <li><strong>Confidential</strong> &mdash; board only, not shared</li>
-                        <li><strong>Restricted</strong> &mdash; limited distribution</li>
-                        <li><strong>Public</strong> &mdash; majority of content</li>
-                    </ul>
-                    <p>Daniel T will implement a board confidential storage approach, with AI-assisted sanitisation for publicly shared minutes.</p>
+                        <h2>7. Community Engagement</h2>
+                        <p>The board discussed an outreach strategy for community members with concerns about recent decisions:</p>
+                        <ul>
+                            <li>Daniel T proposed an inclusive call on all channels</li>
+                            <li>Michelle T proposed a risk register spreadsheet for community input</li>
+                            <li>Decision: hold off on posting the call until the spreadsheet is set up first</li>
+                        </ul>
 
-                    <h2>10. Daniela M S Contractor Agreement</h2>
-                    <p><strong>Decision:</strong> Approved. Daniela M S&rsquo;s one-month contractor agreement for continued event organisation was approved unanimously. Rate confirmed as fair and consistent with previous work.</p>
+                        <h2>8. Legal Update &mdash; Container Assets</h2>
+                        <p>A meeting is scheduled for Wednesday 2pm to discuss options for sourcing containers for the event. Legal counsel is reviewing arrangements to ensure compliance. Further details are restricted.</p>
 
-                    <h2>Action Items</h2>
-                    <table class="action-table">
-                        <thead>
-                            <tr><th>Person</th><th>Action</th><th>Due</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Daniel T</td><td>Visit bank to progress account opening</td><td>Tue 10 Mar</td></tr>
-                            <tr><td>Peter D</td><td>Deploy FIST</td><td>Mon night</td></tr>
-                            <tr><td>Pepe C</td><td>Provide T&amp;Cs and refund policy</td><td>Wed 11 Mar</td></tr>
-                            <tr><td>Pepe C</td><td>Begin trademark clearance for &ldquo;Elsewhere&rdquo;</td><td>ASAP</td></tr>
-                            <tr><td>Pepe C</td><td>Send near-final container contract</td><td>Tonight</td></tr>
-                            <tr><td>Pablo V</td><td>Investigate early entry ticketing options</td><td>By Wed</td></tr>
-                            <tr><td>Daniela M S</td><td>Project manage ticket release</td><td>Ongoing</td></tr>
-                            <tr><td>Daniela M S</td><td>Email board with 5 key weekly management items</td><td>Soon</td></tr>
-                            <tr><td>Michelle T</td><td>Create risk register spreadsheet</td><td>Soon</td></tr>
-                            <tr><td>Daniel T</td><td>Post inclusive community call</td><td>TBD</td></tr>
-                            <tr><td>Daniel T</td><td>Implement board confidential drive</td><td>Ongoing</td></tr>
-                        </tbody>
-                    </table>
+                        <h2>9. Board Documentation Policy</h2>
+                        <p>The board agreed to a three-tier classification system for documents:</p>
+                        <ul>
+                            <li><strong>Confidential</strong> &mdash; board only, not shared</li>
+                            <li><strong>Restricted</strong> &mdash; limited distribution</li>
+                            <li><strong>Public</strong> &mdash; majority of content</li>
+                        </ul>
+                        <p>Daniel T will implement a board confidential storage approach, with AI-assisted sanitisation for publicly shared minutes.</p>
 
-                    <p><strong>Note:</strong> Ben D will be unavailable Wednesday through Sunday (meditation retreat).</p>
+                        <h2>10. Daniela M S Contractor Agreement</h2>
+                        <p><strong>Decision:</strong> Approved. Daniela M S&rsquo;s one-month contractor agreement for continued event organisation was approved unanimously. Rate confirmed as fair and consistent with previous work.</p>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Visit bank to progress account opening</td><td>Tue 10 Mar</td></tr>
+                                <tr><td>Peter D</td><td>Deploy FIST</td><td>Mon night</td></tr>
+                                <tr><td>Pepe C</td><td>Provide T&amp;Cs and refund policy</td><td>Wed 11 Mar</td></tr>
+                                <tr><td>Pepe C</td><td>Begin trademark clearance for &ldquo;Elsewhere&rdquo;</td><td>ASAP</td></tr>
+                                <tr><td>Pepe C</td><td>Send near-final container contract</td><td>Tonight</td></tr>
+                                <tr><td>Pablo V</td><td>Investigate early entry ticketing options</td><td>By Wed</td></tr>
+                                <tr><td>Daniela M S</td><td>Project manage ticket release</td><td>Ongoing</td></tr>
+                                <tr><td>Daniela M S</td><td>Email board with 5 key weekly management items</td><td>Soon</td></tr>
+                                <tr><td>Michelle T</td><td>Create risk register spreadsheet</td><td>Soon</td></tr>
+                                <tr><td>Daniel T</td><td>Post inclusive community call</td><td>TBD</td></tr>
+                                <tr><td>Daniel T</td><td>Implement board confidential drive</td><td>Ongoing</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><strong>Note:</strong> Ben D will be unavailable Wednesday through Sunday (meditation retreat).</p>
+                    </div>
                 </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Miembros de la junta presentes:</strong> Daniel T, Peter D, Michelle T, Ben D, Chris O, Ward D, Pablo V, Victor P
+                        <br><strong>Asistentes no pertenecientes a la junta:</strong> Pepe C (Asesor Legal), Daniela M S (Directora de Producci&oacute;n)
+                        <br><strong>Facilitador:</strong> Chris O
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Votaci&oacute;n sobre la Modificaci&oacute;n de Estatutos</h2>
+                        <p>La junta consider&oacute; votar sobre las modificaciones estatutarias propuestas y preparadas por Pepe C (incluyendo disposiciones para votaci&oacute;n asincr&oacute;nica y electr&oacute;nica). La votaci&oacute;n fue aplazada ya que Peter D y Michelle T a&uacute;n no hab&iacute;an revisado los cambios propuestos. Las modificaciones son necesarias para aceptar formal y legalmente al primer grupo de colaboradores de la asociaci&oacute;n.</p>
+                        <p><strong>Decisi&oacute;n:</strong> Votaci&oacute;n aplazada. Los miembros de la junta deben revisar antes de la pr&oacute;xima reuni&oacute;n.</p>
+
+                        <h2>2. Actualizaci&oacute;n de la Cuenta Bancaria</h2>
+                        <p>La asociaci&oacute;n est&aacute; oficialmente registrada ante el gobierno espa&ntilde;ol y posee un n&uacute;mero de NIF temporal. Toda la documentaci&oacute;n requerida ha sido presentada al banco Sabadell. Daniel T se comprometi&oacute; a visitar el banco diariamente hasta que la cuenta sea abierta.</p>
+
+                        <h2>3. Actualizaci&oacute;n sobre la Venta de Entradas</h2>
+                        <p>La venta de entradas est&aacute; prevista para el jueves/viernes de esta semana. Requisitos previos discutidos:</p>
+                        <ul>
+                            <li>Despliegue del sistema FIST (no es un bloqueante para las ventas iniciales, seg&uacute;n Peter D)</li>
+                            <li>Nombre del evento (resuelto, ver m&aacute;s abajo)</li>
+                            <li>T&eacute;rminos y condiciones y pol&iacute;tica de reembolso (para el mi&eacute;rcoles, a cargo de Pepe C)</li>
+                            <li>C&oacute;digo de conducta</li>
+                            <li>Precios de entradas de bajos ingresos (esperado de Ripham (Fran))</li>
+                        </ul>
+                        <p>Daniela M S gestionar&aacute; el proceso de lanzamiento de entradas. Pablo V investigar&aacute; opciones de entradas de acceso anticipado.</p>
+
+                        <h2>4. Nombre del Evento</h2>
+                        <p>La junta consider&oacute; tres nombres candidatos: Elsewhere, Nobody&rsquo;s y Nobody&rsquo;s Here. Tras la encuesta comunitaria y la discusi&oacute;n de la junta:</p>
+                        <p><strong>Decisi&oacute;n:</strong> El evento se llamar&aacute; <strong>&ldquo;Elsewhere&rdquo;</strong>, sujeto a verificaci&oacute;n de marca registrada.</p>
+                        <ul>
+                            <li>Votaci&oacute;n: mayor&iacute;a a favor; Pablo V no vot&oacute; ya que la mayor&iacute;a ya se hab&iacute;a alcanzado</li>
+                            <li>Ward D solicit&oacute; que su desacuerdo quedara formalmente registrado, expresando preocupaci&oacute;n por que la decisi&oacute;n se bas&oacute; en consideraciones emocionales en lugar de riesgo legal</li>
+                            <li>Pepe C iniciar&aacute; la verificaci&oacute;n de marca registrada</li>
+                        </ul>
+
+                        <h2>5. Ubicaci&oacute;n del Evento</h2>
+                        <p>La junta discuti&oacute; si celebrar el evento en el emplazamiento actual o trasladarse a una nueva ubicaci&oacute;n.</p>
+                        <p><strong>Decisi&oacute;n:</strong> El evento se celebrar&aacute; en el <strong>emplazamiento actual</strong>.</p>
+                        <ul>
+                            <li>Votaci&oacute;n: mayor&iacute;a a favor; Pablo V se abstuvo; Ward D vot&oacute; en contra y solicit&oacute; que su desacuerdo quedara formalmente registrado</li>
+                            <li>La planificaci&oacute;n paralela de un nuevo emplazamiento para un evento en 2027 est&aacute; en curso; la preparaci&oacute;n deber&iacute;a comenzar alrededor de junio de 2026</li>
+                        </ul>
+
+                        <h2>6. Actualizaci&oacute;n de Producci&oacute;n</h2>
+                        <p>Daniela M S anunci&oacute; el cambio de mentalidad de evaluaci&oacute;n a producci&oacute;n. Se acord&oacute; un nuevo proceso:</p>
+                        <ul>
+                            <li>Daniela presentar&aacute; 5 puntos de acci&oacute;n semanales a la junta para delegar/distribuir</li>
+                            <li>Objetivo: que la junta delegue 10 elementos por semana, reduciendo el cuello de botella</li>
+                        </ul>
+
+                        <h2>7. Participaci&oacute;n Comunitaria</h2>
+                        <p>La junta discuti&oacute; una estrategia de comunicaci&oacute;n para los miembros de la comunidad con inquietudes sobre decisiones recientes:</p>
+                        <ul>
+                            <li>Daniel T propuso una convocatoria inclusiva en todos los canales</li>
+                            <li>Michelle T propuso una hoja de c&aacute;lculo de registro de riesgos para la participaci&oacute;n comunitaria</li>
+                            <li>Decisi&oacute;n: posponer la publicaci&oacute;n de la convocatoria hasta que la hoja de c&aacute;lculo est&eacute; lista</li>
+                        </ul>
+
+                        <h2>8. Actualizaci&oacute;n Legal &mdash; Contenedores</h2>
+                        <p>Se ha programado una reuni&oacute;n para el mi&eacute;rcoles a las 14h para discutir opciones de obtenci&oacute;n de contenedores para el evento. El asesor legal est&aacute; revisando los acuerdos para garantizar el cumplimiento normativo. Los detalles adicionales son restringidos.</p>
+
+                        <h2>9. Pol&iacute;tica de Documentaci&oacute;n de la Junta</h2>
+                        <p>La junta acord&oacute; un sistema de clasificaci&oacute;n de tres niveles para los documentos:</p>
+                        <ul>
+                            <li><strong>Confidencial</strong> &mdash; solo junta, no se comparte</li>
+                            <li><strong>Restringido</strong> &mdash; distribuci&oacute;n limitada</li>
+                            <li><strong>P&uacute;blico</strong> &mdash; la mayor&iacute;a del contenido</li>
+                        </ul>
+                        <p>Daniel T implementar&aacute; un sistema de almacenamiento confidencial para la junta, con sanitizaci&oacute;n asistida por IA para las actas compartidas p&uacute;blicamente.</p>
+
+                        <h2>10. Contrato de Daniela M S</h2>
+                        <p><strong>Decisi&oacute;n:</strong> Aprobado. El contrato de un mes de Daniela M S para la organizaci&oacute;n del evento fue aprobado por unanimidad. La tarifa fue confirmada como justa y coherente con trabajos anteriores.</p>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Visitar el banco para avanzar con la apertura de cuenta</td><td>Mar 10 Mar</td></tr>
+                                <tr><td>Peter D</td><td>Desplegar FIST</td><td>Lunes noche</td></tr>
+                                <tr><td>Pepe C</td><td>Proporcionar T&eacute;rminos y Condiciones y pol&iacute;tica de reembolso</td><td>Mi&eacute; 11 Mar</td></tr>
+                                <tr><td>Pepe C</td><td>Iniciar verificaci&oacute;n de marca para &ldquo;Elsewhere&rdquo;</td><td>Lo antes posible</td></tr>
+                                <tr><td>Pepe C</td><td>Enviar contrato casi final de contenedores</td><td>Esta noche</td></tr>
+                                <tr><td>Pablo V</td><td>Investigar opciones de entradas de acceso anticipado</td><td>Para el mi&eacute;rcoles</td></tr>
+                                <tr><td>Daniela M S</td><td>Gestionar el lanzamiento de entradas</td><td>En curso</td></tr>
+                                <tr><td>Daniela M S</td><td>Enviar email a la junta con 5 puntos clave de gesti&oacute;n semanal</td><td>Pronto</td></tr>
+                                <tr><td>Michelle T</td><td>Crear hoja de c&aacute;lculo de registro de riesgos</td><td>Pronto</td></tr>
+                                <tr><td>Daniel T</td><td>Publicar convocatoria inclusiva para la comunidad</td><td>Por determinar</td></tr>
+                                <tr><td>Daniel T</td><td>Implementar almacenamiento confidencial de la junta</td><td>En curso</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><strong>Nota:</strong> Ben D no estar&aacute; disponible de mi&eacute;rcoles a domingo (retiro de meditaci&oacute;n).</p>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Membres du conseil pr&eacute;sents :</strong> Daniel T, Peter D, Michelle T, Ben D, Chris O, Ward D, Pablo V, Victor P
+                        <br><strong>Participants hors conseil :</strong> Pepe C (Conseiller juridique), Daniela M S (Directrice de production)
+                        <br><strong>Facilitateur :</strong> Chris O
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Vote sur la Modification des Statuts</h2>
+                        <p>Le conseil a envisag&eacute; de voter sur les modifications statutaires propos&eacute;es et pr&eacute;par&eacute;es par Pepe C (incluant des dispositions pour le vote asynchrone et &eacute;lectronique). Le vote a &eacute;t&eacute; report&eacute; car Peter D et Michelle T n&rsquo;avaient pas encore examin&eacute; les changements propos&eacute;s. Les modifications sont n&eacute;cessaires pour accepter formellement et l&eacute;galement le premier groupe de collaborateurs de l&rsquo;association.</p>
+                        <p><strong>D&eacute;cision :</strong> Vote report&eacute;. Les membres du conseil doivent examiner les modifications avant la prochaine r&eacute;union.</p>
+
+                        <h2>2. Mise &agrave; jour du Compte Bancaire</h2>
+                        <p>L&rsquo;association est officiellement enregistr&eacute;e aupr&egrave;s du gouvernement espagnol et d&eacute;tient un num&eacute;ro NIF temporaire. Toute la documentation requise a &eacute;t&eacute; soumise &agrave; la banque Sabadell. Daniel T s&rsquo;est engag&eacute; &agrave; se rendre &agrave; la banque quotidiennement jusqu&rsquo;&agrave; l&rsquo;ouverture du compte.</p>
+
+                        <h2>3. Mise &agrave; jour sur la Billetterie</h2>
+                        <p>La vente de billets est pr&eacute;vue pour jeudi/vendredi de cette semaine. Pr&eacute;requis discut&eacute;s :</p>
+                        <ul>
+                            <li>D&eacute;ploiement du syst&egrave;me FIST (pas bloquant pour les ventes initiales, selon Peter D)</li>
+                            <li>Nom de l&rsquo;&eacute;v&eacute;nement (r&eacute;solu, voir ci-dessous)</li>
+                            <li>Conditions g&eacute;n&eacute;rales et politique de remboursement (&agrave; fournir mercredi par Pepe C)</li>
+                            <li>Code de conduite</li>
+                            <li>Tarification des billets &agrave; revenus modestes (attendue de Ripham (Fran))</li>
+                        </ul>
+                        <p>Daniela M S g&eacute;rera le processus de lancement des billets. Pablo V &eacute;tudiera les options de billetterie pour acc&egrave;s anticip&eacute;.</p>
+
+                        <h2>4. Nom de l&rsquo;&Eacute;v&eacute;nement</h2>
+                        <p>Le conseil a examin&eacute; trois noms candidats : Elsewhere, Nobody&rsquo;s et Nobody&rsquo;s Here. Suite au sondage communautaire et &agrave; la discussion du conseil :</p>
+                        <p><strong>D&eacute;cision :</strong> L&rsquo;&eacute;v&eacute;nement sera nomm&eacute; <strong>&laquo; Elsewhere &raquo;</strong>, sous r&eacute;serve de v&eacute;rification de marque d&eacute;pos&eacute;e.</p>
+                        <ul>
+                            <li>Vote : majorit&eacute; en faveur ; Pablo V n&rsquo;a pas vot&eacute; car la majorit&eacute; &eacute;tait d&eacute;j&agrave; atteinte</li>
+                            <li>Ward D a demand&eacute; que son d&eacute;saccord soit formellement not&eacute;, exprimant sa pr&eacute;occupation que la d&eacute;cision reposait sur des consid&eacute;rations &eacute;motionnelles plut&ocirc;t que sur le risque juridique</li>
+                            <li>Pepe C commencera la v&eacute;rification de marque d&eacute;pos&eacute;e</li>
+                        </ul>
+
+                        <h2>5. Emplacement de l&rsquo;&Eacute;v&eacute;nement</h2>
+                        <p>Le conseil a discut&eacute; de la possibilit&eacute; d&rsquo;organiser l&rsquo;&eacute;v&eacute;nement sur le site actuel ou de se d&eacute;placer vers un nouvel emplacement.</p>
+                        <p><strong>D&eacute;cision :</strong> L&rsquo;&eacute;v&eacute;nement se tiendra sur le <strong>site actuel</strong>.</p>
+                        <ul>
+                            <li>Vote : majorit&eacute; en faveur ; Pablo V s&rsquo;est abstenu ; Ward D a vot&eacute; contre et a demand&eacute; que son d&eacute;saccord soit formellement not&eacute;</li>
+                            <li>La planification parall&egrave;le d&rsquo;un nouveau site pour un &eacute;v&eacute;nement en 2027 est en cours ; la pr&eacute;paration devrait commencer vers juin 2026</li>
+                        </ul>
+
+                        <h2>6. Mise &agrave; jour de la Production</h2>
+                        <p>Daniela M S a annonc&eacute; le passage d&rsquo;une logique d&rsquo;&eacute;valuation &agrave; une logique de production. Un nouveau processus a &eacute;t&eacute; convenu :</p>
+                        <ul>
+                            <li>Daniela pr&eacute;sentera 5 points d&rsquo;action hebdomadaires au conseil pour d&eacute;l&eacute;gation/distribution</li>
+                            <li>Objectif : que le conseil d&eacute;l&egrave;gue 10 &eacute;l&eacute;ments par semaine, r&eacute;duisant le goulet d&rsquo;&eacute;tranglement</li>
+                        </ul>
+
+                        <h2>7. Engagement Communautaire</h2>
+                        <p>Le conseil a discut&eacute; d&rsquo;une strat&eacute;gie de communication pour les membres de la communaut&eacute; ayant des pr&eacute;occupations concernant les d&eacute;cisions r&eacute;centes :</p>
+                        <ul>
+                            <li>Daniel T a propos&eacute; un appel inclusif sur tous les canaux</li>
+                            <li>Michelle T a propos&eacute; un tableur de registre des risques pour la participation communautaire</li>
+                            <li>D&eacute;cision : reporter la publication de l&rsquo;appel jusqu&rsquo;&agrave; ce que le tableur soit mis en place</li>
+                        </ul>
+
+                        <h2>8. Mise &agrave; jour Juridique &mdash; Conteneurs</h2>
+                        <p>Une r&eacute;union est pr&eacute;vue mercredi &agrave; 14h pour discuter des options d&rsquo;approvisionnement en conteneurs pour l&rsquo;&eacute;v&eacute;nement. Le conseiller juridique examine les dispositions pour garantir la conformit&eacute;. Les d&eacute;tails suppl&eacute;mentaires sont restreints.</p>
+
+                        <h2>9. Politique de Documentation du Conseil</h2>
+                        <p>Le conseil a convenu d&rsquo;un syst&egrave;me de classification &agrave; trois niveaux pour les documents :</p>
+                        <ul>
+                            <li><strong>Confidentiel</strong> &mdash; conseil uniquement, non partag&eacute;</li>
+                            <li><strong>Restreint</strong> &mdash; distribution limit&eacute;e</li>
+                            <li><strong>Public</strong> &mdash; majorit&eacute; du contenu</li>
+                        </ul>
+                        <p>Daniel T mettra en place un syst&egrave;me de stockage confidentiel pour le conseil, avec une anonymisation assist&eacute;e par IA pour les proc&egrave;s-verbaux partag&eacute;s publiquement.</p>
+
+                        <h2>10. Contrat de Daniela M S</h2>
+                        <p><strong>D&eacute;cision :</strong> Approuv&eacute;. Le contrat d&rsquo;un mois de Daniela M S pour l&rsquo;organisation de l&rsquo;&eacute;v&eacute;nement a &eacute;t&eacute; approuv&eacute; &agrave; l&rsquo;unanimit&eacute;. Le tarif a &eacute;t&eacute; confirm&eacute; comme &eacute;quitable et coh&eacute;rent avec les travaux pr&eacute;c&eacute;dents.</p>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>&Eacute;ch&eacute;ance</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Se rendre &agrave; la banque pour faire avancer l&rsquo;ouverture du compte</td><td>Mar 10 mars</td></tr>
+                                <tr><td>Peter D</td><td>D&eacute;ployer FIST</td><td>Lundi soir</td></tr>
+                                <tr><td>Pepe C</td><td>Fournir les conditions g&eacute;n&eacute;rales et la politique de remboursement</td><td>Mer 11 mars</td></tr>
+                                <tr><td>Pepe C</td><td>Commencer la v&eacute;rification de marque pour &laquo; Elsewhere &raquo;</td><td>D&egrave;s que possible</td></tr>
+                                <tr><td>Pepe C</td><td>Envoyer le contrat quasi-final pour les conteneurs</td><td>Ce soir</td></tr>
+                                <tr><td>Pablo V</td><td>&Eacute;tudier les options de billetterie pour acc&egrave;s anticip&eacute;</td><td>D&rsquo;ici mercredi</td></tr>
+                                <tr><td>Daniela M S</td><td>G&eacute;rer le lancement des billets</td><td>En cours</td></tr>
+                                <tr><td>Daniela M S</td><td>Envoyer un email au conseil avec 5 points cl&eacute;s de gestion hebdomadaire</td><td>Bient&ocirc;t</td></tr>
+                                <tr><td>Michelle T</td><td>Cr&eacute;er le tableur de registre des risques</td><td>Bient&ocirc;t</td></tr>
+                                <tr><td>Daniel T</td><td>Publier l&rsquo;appel communautaire inclusif</td><td>&Agrave; d&eacute;terminer</td></tr>
+                                <tr><td>Daniel T</td><td>Mettre en place le stockage confidentiel du conseil</td><td>En cours</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><strong>Note :</strong> Ben D sera indisponible de mercredi &agrave; dimanche (retraite de m&eacute;ditation).</p>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Membri del consiglio presenti:</strong> Daniel T, Peter D, Michelle T, Ben D, Chris O, Ward D, Pablo V, Victor P
+                        <br><strong>Partecipanti non appartenenti al consiglio:</strong> Pepe C (Consulente legale), Daniela M S (Direttrice di produzione)
+                        <br><strong>Facilitatore:</strong> Chris O
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Voto sulla Modifica dello Statuto</h2>
+                        <p>Il consiglio ha valutato di votare sulle modifiche statutarie proposte e preparate da Pepe C (incluse disposizioni per il voto asincrono ed elettronico). Il voto &egrave; stato rinviato poich&eacute; Peter D e Michelle T non avevano ancora esaminato le modifiche proposte. Le modifiche sono necessarie per accettare formalmente e legalmente il primo gruppo di collaboratori dell&rsquo;associazione.</p>
+                        <p><strong>Decisione:</strong> Voto rinviato. I membri del consiglio devono esaminare le modifiche prima della prossima riunione.</p>
+
+                        <h2>2. Aggiornamento sul Conto Bancario</h2>
+                        <p>L&rsquo;associazione &egrave; ufficialmente registrata presso il governo spagnolo e possiede un numero NIF temporaneo. Tutta la documentazione richiesta &egrave; stata presentata alla banca Sabadell. Daniel T si &egrave; impegnato a recarsi in banca quotidianamente fino all&rsquo;apertura del conto.</p>
+
+                        <h2>3. Aggiornamento sulla Biglietteria</h2>
+                        <p>La vendita dei biglietti &egrave; prevista per gioved&igrave;/venerd&igrave; di questa settimana. Prerequisiti discussi:</p>
+                        <ul>
+                            <li>Distribuzione del sistema FIST (non bloccante per le vendite iniziali, secondo Peter D)</li>
+                            <li>Nome dell&rsquo;evento (risolto, vedi sotto)</li>
+                            <li>Termini e condizioni e politica di rimborso (previsti per mercoled&igrave; da Pepe C)</li>
+                            <li>Codice di condotta</li>
+                            <li>Prezzi dei biglietti a basso reddito (attesi da Ripham (Fran))</li>
+                        </ul>
+                        <p>Daniela M S gestir&agrave; il processo di lancio dei biglietti. Pablo V indagher&agrave; sulle opzioni di biglietteria per l&rsquo;accesso anticipato.</p>
+
+                        <h2>4. Nome dell&rsquo;Evento</h2>
+                        <p>Il consiglio ha esaminato tre nomi candidati: Elsewhere, Nobody&rsquo;s e Nobody&rsquo;s Here. A seguito del sondaggio comunitario e della discussione del consiglio:</p>
+                        <p><strong>Decisione:</strong> L&rsquo;evento si chiamer&agrave; <strong>&ldquo;Elsewhere&rdquo;</strong>, subordinatamente alla verifica del marchio.</p>
+                        <ul>
+                            <li>Voto: maggioranza a favore; Pablo V non ha votato poich&eacute; la maggioranza era gi&agrave; raggiunta</li>
+                            <li>Ward D ha chiesto che il proprio disaccordo fosse formalmente registrato, esprimendo preoccupazione per il fatto che la decisione si basasse su considerazioni emotive anzich&eacute; sul rischio legale</li>
+                            <li>Pepe C avvier&agrave; la verifica del marchio</li>
+                        </ul>
+
+                        <h2>5. Ubicazione dell&rsquo;Evento</h2>
+                        <p>Il consiglio ha discusso se organizzare l&rsquo;evento nel sito attuale o spostarsi in una nuova ubicazione.</p>
+                        <p><strong>Decisione:</strong> L&rsquo;evento si terr&agrave; nel <strong>sito attuale</strong>.</p>
+                        <ul>
+                            <li>Voto: maggioranza a favore; Pablo V si &egrave; astenuto; Ward D ha votato contro e ha chiesto che il proprio disaccordo fosse formalmente registrato</li>
+                            <li>La pianificazione parallela di un nuovo sito per un evento nel 2027 &egrave; in corso; la preparazione dovrebbe iniziare intorno a giugno 2026</li>
+                        </ul>
+
+                        <h2>6. Aggiornamento sulla Produzione</h2>
+                        <p>Daniela M S ha annunciato il passaggio da una mentalit&agrave; di valutazione a una di produzione. &Egrave; stato concordato un nuovo processo:</p>
+                        <ul>
+                            <li>Daniela presenter&agrave; 5 punti d&rsquo;azione settimanali al consiglio da delegare/distribuire</li>
+                            <li>Obiettivo: il consiglio deleghi 10 elementi a settimana, riducendo il collo di bottiglia</li>
+                        </ul>
+
+                        <h2>7. Coinvolgimento della Comunit&agrave;</h2>
+                        <p>Il consiglio ha discusso una strategia di comunicazione per i membri della comunit&agrave; con preoccupazioni riguardo alle decisioni recenti:</p>
+                        <ul>
+                            <li>Daniel T ha proposto un appello inclusivo su tutti i canali</li>
+                            <li>Michelle T ha proposto un foglio di calcolo per il registro dei rischi per la partecipazione comunitaria</li>
+                            <li>Decisione: rimandare la pubblicazione dell&rsquo;appello fino a quando il foglio di calcolo non sar&agrave; pronto</li>
+                        </ul>
+
+                        <h2>8. Aggiornamento Legale &mdash; Contenitori</h2>
+                        <p>&Egrave; prevista una riunione per mercoled&igrave; alle 14:00 per discutere le opzioni di approvvigionamento di contenitori per l&rsquo;evento. Il consulente legale sta esaminando gli accordi per garantire la conformit&agrave;. Ulteriori dettagli sono riservati.</p>
+
+                        <h2>9. Politica di Documentazione del Consiglio</h2>
+                        <p>Il consiglio ha concordato un sistema di classificazione a tre livelli per i documenti:</p>
+                        <ul>
+                            <li><strong>Confidenziale</strong> &mdash; solo consiglio, non condiviso</li>
+                            <li><strong>Limitato</strong> &mdash; distribuzione limitata</li>
+                            <li><strong>Pubblico</strong> &mdash; la maggior parte dei contenuti</li>
+                        </ul>
+                        <p>Daniel T implementer&agrave; un sistema di archiviazione confidenziale per il consiglio, con anonimizzazione assistita da IA per i verbali condivisi pubblicamente.</p>
+
+                        <h2>10. Contratto di Daniela M S</h2>
+                        <p><strong>Decisione:</strong> Approvato. Il contratto di un mese di Daniela M S per l&rsquo;organizzazione dell&rsquo;evento &egrave; stato approvato all&rsquo;unanimit&agrave;. La tariffa &egrave; stata confermata come equa e coerente con i lavori precedenti.</p>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Recarsi in banca per far avanzare l&rsquo;apertura del conto</td><td>Mar 10 mar</td></tr>
+                                <tr><td>Peter D</td><td>Distribuire FIST</td><td>Luned&igrave; sera</td></tr>
+                                <tr><td>Pepe C</td><td>Fornire termini e condizioni e politica di rimborso</td><td>Mer 11 mar</td></tr>
+                                <tr><td>Pepe C</td><td>Avviare la verifica del marchio per &ldquo;Elsewhere&rdquo;</td><td>Al pi&ugrave; presto</td></tr>
+                                <tr><td>Pepe C</td><td>Inviare il contratto quasi definitivo per i contenitori</td><td>Stasera</td></tr>
+                                <tr><td>Pablo V</td><td>Indagare sulle opzioni di biglietteria per accesso anticipato</td><td>Entro mercoled&igrave;</td></tr>
+                                <tr><td>Daniela M S</td><td>Gestire il lancio dei biglietti</td><td>In corso</td></tr>
+                                <tr><td>Daniela M S</td><td>Inviare email al consiglio con 5 punti chiave di gestione settimanale</td><td>A breve</td></tr>
+                                <tr><td>Michelle T</td><td>Creare il foglio di calcolo del registro dei rischi</td><td>A breve</td></tr>
+                                <tr><td>Daniel T</td><td>Pubblicare l&rsquo;appello comunitario inclusivo</td><td>Da determinare</td></tr>
+                                <tr><td>Daniel T</td><td>Implementare l&rsquo;archiviazione confidenziale del consiglio</td><td>In corso</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><strong>Nota:</strong> Ben D non sar&agrave; disponibile da mercoled&igrave; a domenica (ritiro di meditazione).</p>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesende Vorstandsmitglieder:</strong> Daniel T, Peter D, Michelle T, Ben D, Chris O, Ward D, Pablo V, Victor P
+                        <br><strong>Teilnehmer au&szlig;erhalb des Vorstands:</strong> Pepe C (Rechtsberater), Daniela M S (Produktionsleiterin)
+                        <br><strong>Moderator:</strong> Chris O
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Abstimmung &uuml;ber die Satzungs&auml;nderung</h2>
+                        <p>Der Vorstand erwog eine Abstimmung &uuml;ber die von Pepe C vorbereiteten Satzungs&auml;nderungen (einschlie&szlig;lich Bestimmungen f&uuml;r asynchrone und elektronische Abstimmungen). Die Abstimmung wurde vertagt, da Peter D und Michelle T die vorgeschlagenen &Auml;nderungen noch nicht gepr&uuml;ft hatten. Die &Auml;nderungen sind erforderlich, um die erste Gruppe von Vereinsmitarbeitern formell und rechtlich aufzunehmen.</p>
+                        <p><strong>Beschluss:</strong> Abstimmung vertagt. Vorstandsmitglieder sollen die &Auml;nderungen vor der n&auml;chsten Sitzung pr&uuml;fen.</p>
+
+                        <h2>2. Aktualisierung zum Bankkonto</h2>
+                        <p>Der Verein ist offiziell bei der spanischen Regierung registriert und besitzt eine vorl&auml;ufige NIF-Nummer. Alle erforderlichen Unterlagen wurden bei der Sabadell-Bank eingereicht. Daniel T hat sich verpflichtet, die Bank t&auml;glich zu besuchen, bis das Konto er&ouml;ffnet ist.</p>
+
+                        <h2>3. Aktualisierung zum Ticketverkauf</h2>
+                        <p>Der Ticketverkauf ist f&uuml;r Donnerstag/Freitag dieser Woche geplant. Besprochene Voraussetzungen:</p>
+                        <ul>
+                            <li>Bereitstellung des FIST-Systems (kein Hindernis f&uuml;r den ersten Verkauf, laut Peter D)</li>
+                            <li>Name der Veranstaltung (gel&ouml;st, siehe unten)</li>
+                            <li>Allgemeine Gesch&auml;ftsbedingungen und R&uuml;ckerstattungsrichtlinie (bis Mittwoch von Pepe C)</li>
+                            <li>Verhaltenskodex</li>
+                            <li>Ticketpreise f&uuml;r einkommensschwache Teilnehmer (erwartet von Ripham (Fran))</li>
+                        </ul>
+                        <p>Daniela M S wird den Ticketverkaufsprozess leiten. Pablo V wird Optionen f&uuml;r Fr&uuml;hzugangstickets untersuchen.</p>
+
+                        <h2>4. Name der Veranstaltung</h2>
+                        <p>Der Vorstand pr&uuml;fte drei Namenskandidaten: Elsewhere, Nobody&rsquo;s und Nobody&rsquo;s Here. Nach einer Umfrage in der Gemeinschaft und Vorstandsdiskussion:</p>
+                        <p><strong>Beschluss:</strong> Die Veranstaltung wird <strong>&bdquo;Elsewhere&ldquo;</strong> hei&szlig;en, vorbehaltlich der Markenpr&uuml;fung.</p>
+                        <ul>
+                            <li>Abstimmung: Mehrheit daf&uuml;r; Pablo V hat nicht abgestimmt, da die Mehrheit bereits erreicht war</li>
+                            <li>Ward D bat darum, dass sein Widerspruch formell protokolliert wird, mit der Begr&uuml;ndung, dass die Entscheidung auf emotionalen Erw&auml;gungen statt auf rechtlichem Risiko beruhte</li>
+                            <li>Pepe C wird die Markenpr&uuml;fung einleiten</li>
+                        </ul>
+
+                        <h2>5. Veranstaltungsort</h2>
+                        <p>Der Vorstand diskutierte, ob die Veranstaltung am aktuellen Standort stattfinden oder an einen neuen Ort verlegt werden soll.</p>
+                        <p><strong>Beschluss:</strong> Die Veranstaltung findet am <strong>aktuellen Standort</strong> statt.</p>
+                        <ul>
+                            <li>Abstimmung: Mehrheit daf&uuml;r; Pablo V enthielt sich; Ward D stimmte dagegen und bat darum, dass sein Widerspruch formell protokolliert wird</li>
+                            <li>Die parallele Planung eines neuen Standorts f&uuml;r eine Veranstaltung 2027 l&auml;uft; die Vorbereitung m&uuml;sste etwa im Juni 2026 beginnen</li>
+                        </ul>
+
+                        <h2>6. Aktualisierung zur Produktion</h2>
+                        <p>Daniela M S k&uuml;ndigte den Wechsel von der Bewertungs- zur Produktionsphase an. Ein neuer Prozess wurde vereinbart:</p>
+                        <ul>
+                            <li>Daniela wird dem Vorstand w&ouml;chentlich 5 Aktionspunkte zur Delegation/Verteilung vorlegen</li>
+                            <li>Ziel: Der Vorstand soll 10 Aufgaben pro Woche delegieren, um Engp&auml;sse zu reduzieren</li>
+                        </ul>
+
+                        <h2>7. Gemeinschaftliches Engagement</h2>
+                        <p>Der Vorstand diskutierte eine Kommunikationsstrategie f&uuml;r Gemeinschaftsmitglieder mit Bedenken zu j&uuml;ngsten Entscheidungen:</p>
+                        <ul>
+                            <li>Daniel T schlug einen inklusiven Aufruf auf allen Kan&auml;len vor</li>
+                            <li>Michelle T schlug eine Risikoregister-Tabelle f&uuml;r die Beteiligung der Gemeinschaft vor</li>
+                            <li>Beschluss: Die Ver&ouml;ffentlichung des Aufrufs wird verschoben, bis die Tabelle eingerichtet ist</li>
+                        </ul>
+
+                        <h2>8. Rechtliche Aktualisierung &mdash; Container</h2>
+                        <p>F&uuml;r Mittwoch um 14 Uhr ist eine Besprechung geplant, um Optionen f&uuml;r die Beschaffung von Containern f&uuml;r die Veranstaltung zu er&ouml;rtern. Der Rechtsberater pr&uuml;ft die Vereinbarungen zur Sicherstellung der Compliance. Weitere Details sind vertraulich.</p>
+
+                        <h2>9. Dokumentationsrichtlinie des Vorstands</h2>
+                        <p>Der Vorstand einigte sich auf ein dreistufiges Klassifizierungssystem f&uuml;r Dokumente:</p>
+                        <ul>
+                            <li><strong>Vertraulich</strong> &mdash; nur Vorstand, wird nicht geteilt</li>
+                            <li><strong>Eingeschr&auml;nkt</strong> &mdash; begrenzte Verteilung</li>
+                            <li><strong>&Ouml;ffentlich</strong> &mdash; Gro&szlig;teil der Inhalte</li>
+                        </ul>
+                        <p>Daniel T wird ein vertrauliches Speichersystem f&uuml;r den Vorstand einrichten, mit KI-gest&uuml;tzter Anonymisierung f&uuml;r &ouml;ffentlich geteilte Protokolle.</p>
+
+                        <h2>10. Vertrag von Daniela M S</h2>
+                        <p><strong>Beschluss:</strong> Genehmigt. Der Einmonatsvertrag von Daniela M S f&uuml;r die Veranstaltungsorganisation wurde einstimmig genehmigt. Der Satz wurde als fair und im Einklang mit fr&uuml;heren Arbeiten best&auml;tigt.</p>
+
+                        <h2>Aktionspunkte</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Aktion</th><th>F&auml;llig</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Bank besuchen, um die Kontoer&ouml;ffnung voranzutreiben</td><td>Di 10. M&auml;rz</td></tr>
+                                <tr><td>Peter D</td><td>FIST bereitstellen</td><td>Montagabend</td></tr>
+                                <tr><td>Pepe C</td><td>AGB und R&uuml;ckerstattungsrichtlinie bereitstellen</td><td>Mi 11. M&auml;rz</td></tr>
+                                <tr><td>Pepe C</td><td>Markenpr&uuml;fung f&uuml;r &bdquo;Elsewhere&ldquo; einleiten</td><td>Schnellstm&ouml;glich</td></tr>
+                                <tr><td>Pepe C</td><td>Nahezu endg&uuml;ltigen Containervertrag senden</td><td>Heute Abend</td></tr>
+                                <tr><td>Pablo V</td><td>Optionen f&uuml;r Fr&uuml;hzugangstickets untersuchen</td><td>Bis Mittwoch</td></tr>
+                                <tr><td>Daniela M S</td><td>Ticketverkauf leiten</td><td>Laufend</td></tr>
+                                <tr><td>Daniela M S</td><td>Email an den Vorstand mit 5 wichtigen w&ouml;chentlichen Managementpunkten</td><td>Bald</td></tr>
+                                <tr><td>Michelle T</td><td>Risikoregister-Tabelle erstellen</td><td>Bald</td></tr>
+                                <tr><td>Daniel T</td><td>Inklusiven Gemeinschaftsaufruf ver&ouml;ffentlichen</td><td>Noch festzulegen</td></tr>
+                                <tr><td>Daniel T</td><td>Vertrauliches Speichersystem des Vorstands einrichten</td><td>Laufend</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><strong>Hinweis:</strong> Ben D wird von Mittwoch bis Sonntag nicht verf&uuml;gbar sein (Meditationsretreat).</p>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -165,5 +583,18 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

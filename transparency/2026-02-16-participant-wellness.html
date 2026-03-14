@@ -28,6 +28,12 @@
         .meeting-content th { background: var(--color-bg-secondary); font-weight: 600; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -46,61 +52,317 @@
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Attendees:</strong> Anna T., Daniel T., Chris T.O., Fran A., Tilke W., Yllza B., D MAC, Patrick L.
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Summary</h2>
-                    <p>The team discussed structural concerns and leadership transitions, with Daniel T. stepping down as Participant Wellness Meta Lead and Anna T. expressing willingness to take on the role. Key topics included Ohana House operations and potential child protection requirements, the automated low-income ticket system, Safer Space cabin protocols, and the possibility of integrating the vacant Harm Reduction lead role into the Inclusion team.</p>
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                    <h2>Discussion</h2>
+                    <div class="attendees">
+                        <strong>Attendees:</strong> Anna T., Daniel T., Chris T.O., Fran A., Tilke W., Yllza B., D MAC, Patrick L.
+                    </div>
 
-                    <h3>Leadership Transition</h3>
-                    <p>Daniel T. is stepping down as Participant Wellness Meta Lead due to capacity constraints. Anna T. is willing to take on the Meta Lead role with support; Daniel T. noted Anna T. is already outperforming him in coordination. The association board is mapping lead-level roles and will make gaps visible on the new website.</p>
+                    <div class="meeting-content">
+                        <h2>Summary</h2>
+                        <p>The team discussed structural concerns and leadership changes within the Participant Wellness area. Daniel T. is stepping back from the Participant Wellness Meta Lead role and Anna T. expressed willingness to take it on. Key topics included Ohana House operations and potential child protection requirements, the automated low-income ticket system, Safer Space cabin protocols, and the possibility of integrating the vacant Harm Reduction lead role into the Inclusion team.</p>
 
-                    <h3>Team Introductions and Roles</h3>
-                    <ul>
-                        <li><strong>Anna T.</strong> &mdash; Consent Lead; wants more connection among the team, previously felt like an &ldquo;isolated cog&rdquo;</li>
-                        <li><strong>Chris T.O.</strong> &mdash; Board member of new association; Malfare Lead (needs help with pre-event planning)</li>
-                        <li><strong>Fran A.</strong> &mdash; Low-Income Ticket Lead</li>
-                        <li><strong>Tilke W.</strong> &mdash; Inclusion Lead; also camp lead of HR Out</li>
-                        <li><strong>Yllza B.</strong> &mdash; Ohana House Lead (3 years)</li>
-                        <li><strong>D MAC</strong> &mdash; Welfare Co-Lead and Welfare Training Lead</li>
-                        <li><strong>Patrick L.</strong> &mdash; Has worked Malfare shift lead shifts; interested in helping with Malfare leadership</li>
-                    </ul>
+                        <h2>Discussion</h2>
 
-                    <h3>Welfare Team Structure</h3>
-                    <p>D MAC proposed three Welfare leads as ideal for &ldquo;rotational sanity&rdquo; and managing full shifts. Two leads proved too much for one person in past experience. Strong collaboration with Malfare last year was noted.</p>
+                        <h3>Leadership Change</h3>
+                        <p>Daniel T. is stepping back from the Participant Wellness Meta Lead role due to capacity constraints. Anna T. is willing to take on the Meta Lead role with support; Daniel T. noted Anna T. is already outperforming him in coordination. The NCA board is mapping lead-level roles and will make gaps visible on the new website.</p>
 
-                    <h3>Malfare Operations</h3>
-                    <p>Chris T.O. plans to run Malfare using established best practices, building out a leadership council. Priority: ensuring enough experienced personnel for &ldquo;overwatch&rdquo; roles (highest on-site escalation point). Most immediate need: pre-event administrative support, volunteer communications, shift planning, and training.</p>
+                        <h3>Team Introductions and Roles</h3>
+                        <ul>
+                            <li><strong>Anna T.</strong> &mdash; Consent Lead; wants more connection among the team, previously felt like an &ldquo;isolated cog&rdquo;</li>
+                            <li><strong>Chris T.O.</strong> &mdash; Board member of the association; Malfare Lead (needs help with pre-event planning)</li>
+                            <li><strong>Fran A.</strong> &mdash; Low-Income Ticket Lead</li>
+                            <li><strong>Tilke W.</strong> &mdash; Inclusion Lead; also camp lead of HR Out</li>
+                            <li><strong>Yllza B.</strong> &mdash; Ohana House Lead (3 years)</li>
+                            <li><strong>D MAC</strong> &mdash; Welfare Co-Lead and Welfare Training Lead</li>
+                            <li><strong>Patrick L.</strong> &mdash; Has worked Malfare shift lead shifts; interested in helping with Malfare leadership</li>
+                        </ul>
 
-                    <h3>Ohana House</h3>
-                    <p>Ohana House is a sober, safe, children-friendly decompression space (not a daycare), operating 9:00&ndash;17:00 with four volunteers. It offers children&rsquo;s books, toys, and crafting materials. Volunteer no-shows have been an issue.</p>
-                    <p>Anna T. raised concern about potential child protection certificate requirements, which could complicate volunteer recruitment. Yllza B. will draft a description of the space for legal review.</p>
+                        <h3>Welfare Team Structure</h3>
+                        <p>D MAC proposed three Welfare leads as ideal for &ldquo;rotational sanity&rdquo; and managing full shifts. Two leads proved too much for one person in past experience. Strong collaboration with Malfare last year was noted.</p>
 
-                    <h3>Ohana House and Welfare Collaboration</h3>
-                    <p>D MAC proposed using Ohana House as overflow/triage space for Welfare after 17:00. Yllza B. was happy to offer the space after hours. A suggested restructuring would remove the fence between Ohana House and Welfare and change door access for Welfare supervision.</p>
+                        <h3>Malfare Operations</h3>
+                        <p>Chris T.O. plans to run Malfare using established best practices, building out a leadership council. Priority: ensuring enough experienced personnel for &ldquo;overwatch&rdquo; roles (highest on-site escalation point). Most immediate need: pre-event administrative support, volunteer communications, shift planning, and training.</p>
 
-                    <h3>Safer Space Cabin</h3>
-                    <p>Anna T. noted a potential conflict of interest between running the space and reading post-event reports. The cabin was previously operated with dedicated drop-in hours; support outside those times went via Malfare or Welfare.</p>
-                    <p>Agreed protocol: Consent &ldquo;owns&rdquo; the cabin but makes it available for Malfare/Welfare triage needs, yielding if Consent requires it for a support case. Patrick L. suggested Welfare route requests through Malfare for a single point of entry and accountability.</p>
+                        <h3>Ohana House</h3>
+                        <p>Ohana House is a sober, safe, children-friendly decompression space (not a daycare), operating 9:00&ndash;17:00 with four volunteers. It offers children&rsquo;s books, toys, and crafting materials. Volunteer no-shows have been an issue.</p>
+                        <p>Anna T. raised concern about potential child protection certificate requirements, which could complicate volunteer recruitment. Yllza B. will draft a description of the space for legal review.</p>
 
-                    <h3>Low-Income Ticket System</h3>
-                    <p>The previous approach involved long personal emails and was labour-intensive with arbitrary decisions. The current system uses a Google form with weighted questions and automated scoring, reducing processing from 3&ndash;4 weeks to 30 minutes.</p>
-                    <p>Annual decisions needed: total number of tickets, batch timing, and question weighting. Two batches are currently used to prevent delays in code-to-ticket exchange. GDPR concern: sensitive personal information requires minimal people involved.</p>
-                    <p>Exception handling: leads sometimes request tickets for team members. Fran A. prefers either a set allocation per lead or extra points in the scoring system to maintain objectivity. Patrick L. stressed the need for some flexibility for crucial volunteers.</p>
+                        <h3>Ohana House and Welfare Collaboration</h3>
+                        <p>D MAC proposed using Ohana House as overflow/triage space for Welfare after 17:00. Yllza B. was happy to offer the space after hours. A suggested restructuring would remove the fence between Ohana House and Welfare and change door access for Welfare supervision.</p>
 
-                    <h3>Harm Reduction Lead</h3>
-                    <p>The role has been vacant for approximately 2 years. Tilke W. suggested integrating it into the Inclusion team. Historically the role focused on substances (AA/NA meetings). Tilke W. has broadened the scope to include noise health and safety; elements are already distributed across departments.</p>
+                        <h3>Safer Space Cabin</h3>
+                        <p>Anna T. noted a potential conflict of interest between running the space and reading post-event reports. The cabin was previously operated with dedicated drop-in hours; support outside those times went via Malfare or Welfare.</p>
+                        <p>Agreed protocol: Consent &ldquo;owns&rdquo; the cabin but makes it available for Malfare/Welfare triage needs, yielding if Consent requires it for a support case. Patrick L. suggested Welfare route requests through Malfare for a single point of entry and accountability.</p>
 
-                    <h3>Organisational Structure</h3>
-                    <p>Anna T. expressed preference for exploring horizontal structures over strict hierarchy, while acknowledging the Meta Lead role may be necessary for oversight and noticing vacant roles. Tilke W. agreed that pyramid structure can be useful for communication as the association gets established.</p>
+                        <h3>Low-Income Ticket System</h3>
+                        <p>The previous approach involved long personal emails and was labour-intensive with arbitrary decisions. The current system uses a Google form with weighted questions and automated scoring, reducing processing from 3&ndash;4 weeks to 30 minutes.</p>
+                        <p>Annual decisions needed: total number of tickets, batch timing, and question weighting. Two batches are currently used to prevent delays in code-to-ticket exchange. GDPR concern: sensitive personal information requires minimal people involved.</p>
+                        <p>Exception handling: leads sometimes request tickets for team members. Fran A. prefers either a set allocation per lead or extra points in the scoring system to maintain objectivity. Patrick L. stressed the need for some flexibility for crucial volunteers.</p>
 
-                    <h3>Budget</h3>
-                    <p>Anna T. offered to consolidate budget needs for Participant Wellness teams before liaising with the treasurer. Tilke W. noted Inclusion&rsquo;s budget was insufficient last year and suggested tiered budgeting (essentials vs. improvements). There was discussion of high-income tickets (offered previously), with current financial difficulties around setting up the association&rsquo;s finances.</p>
+                        <h3>Harm Reduction Lead</h3>
+                        <p>The role has been vacant for approximately 2 years. Tilke W. suggested integrating it into the Inclusion team. Historically the role focused on substances (AA/NA meetings). Tilke W. has broadened the scope to include noise health and safety; elements are already distributed across departments.</p>
+
+                        <h3>Organisational Structure</h3>
+                        <p>Anna T. expressed preference for exploring horizontal structures over strict hierarchy, while acknowledging the Meta Lead role may be necessary for oversight and noticing vacant roles. Tilke W. agreed that pyramid structure can be useful for communication as the association gets established.</p>
+
+                        <h3>Budget</h3>
+                        <p>Anna T. offered to consolidate budget needs for Participant Wellness teams before liaising with the treasurer. Tilke W. noted Inclusion&rsquo;s budget was insufficient last year and suggested tiered budgeting (essentials vs. improvements). There was discussion of high-income tickets (offered previously), with current financial difficulties around setting up the association&rsquo;s finances.</p>
+                    </div>
                 </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Asistentes:</strong> Anna T., Daniel T., Chris T.O., Fran A., Tilke W., Yllza B., D MAC, Patrick L.
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Resumen</h2>
+                        <p>El equipo debati&oacute; cuestiones estructurales y cambios de liderazgo dentro del &aacute;rea de Bienestar de Participantes. Daniel T. deja el puesto de Meta Lead de Bienestar de Participantes y Anna T. expres&oacute; su disposici&oacute;n a asumir el rol. Los temas clave incluyeron las operaciones de Ohana House y los posibles requisitos de protecci&oacute;n infantil, el sistema automatizado de entradas de bajos ingresos, los protocolos de la caba&ntilde;a Safer Space y la posibilidad de integrar el puesto vacante de l&iacute;der de Reducci&oacute;n de Da&ntilde;os en el equipo de Inclusi&oacute;n.</p>
+
+                        <h2>Debate</h2>
+
+                        <h3>Cambio de Liderazgo</h3>
+                        <p>Daniel T. deja el puesto de Meta Lead de Bienestar de Participantes debido a limitaciones de capacidad. Anna T. est&aacute; dispuesta a asumir el rol de Meta Lead con apoyo; Daniel T. se&ntilde;al&oacute; que Anna T. ya le supera en coordinaci&oacute;n. La junta de NCA est&aacute; mapeando los roles a nivel de lead y har&aacute; visibles las vacantes en la nueva p&aacute;gina web.</p>
+
+                        <h3>Presentaciones del Equipo y Roles</h3>
+                        <ul>
+                            <li><strong>Anna T.</strong> &mdash; Lead de Consentimiento; desea m&aacute;s conexi&oacute;n entre el equipo, anteriormente se sent&iacute;a como un &laquo;engranaje aislado&raquo;</li>
+                            <li><strong>Chris T.O.</strong> &mdash; Miembro de la junta de la asociaci&oacute;n; Lead de Malfare (necesita ayuda con la planificaci&oacute;n previa al evento)</li>
+                            <li><strong>Fran A.</strong> &mdash; Lead de Entradas de Bajos Ingresos</li>
+                            <li><strong>Tilke W.</strong> &mdash; Lead de Inclusi&oacute;n; tambi&eacute;n l&iacute;der de campamento de HR Out</li>
+                            <li><strong>Yllza B.</strong> &mdash; Lead de Ohana House (3 a&ntilde;os)</li>
+                            <li><strong>D MAC</strong> &mdash; Co-Lead de Welfare y Lead de Formaci&oacute;n de Welfare</li>
+                            <li><strong>Patrick L.</strong> &mdash; Ha trabajado como shift lead en Malfare; interesado en ayudar con el liderazgo de Malfare</li>
+                        </ul>
+
+                        <h3>Estructura del Equipo de Welfare</h3>
+                        <p>D MAC propuso tres leads de Welfare como lo ideal para la &laquo;cordura rotacional&raquo; y la gesti&oacute;n de turnos completos. Dos leads result&oacute; ser demasiado para una sola persona en experiencias anteriores. Se destac&oacute; la fuerte colaboraci&oacute;n con Malfare el a&ntilde;o pasado.</p>
+
+                        <h3>Operaciones de Malfare</h3>
+                        <p>Chris T.O. planea dirigir Malfare utilizando las mejores pr&aacute;cticas establecidas, creando un consejo de liderazgo. Prioridad: asegurar suficiente personal experimentado para roles de &laquo;overwatch&raquo; (punto m&aacute;s alto de escalamiento en el sitio). Necesidad m&aacute;s inmediata: apoyo administrativo previo al evento, comunicaciones con voluntarios, planificaci&oacute;n de turnos y formaci&oacute;n.</p>
+
+                        <h3>Ohana House</h3>
+                        <p>Ohana House es un espacio sobrio, seguro y amigable para ni&ntilde;os, pensado para la descompresi&oacute;n (no una guarder&iacute;a), que opera de 9:00 a 17:00 con cuatro voluntarios. Ofrece libros infantiles, juguetes y materiales de manualidades. Las ausencias de voluntarios han sido un problema.</p>
+                        <p>Anna T. plante&oacute; preocupaci&oacute;n por posibles requisitos de certificados de protecci&oacute;n infantil, lo que podr&iacute;a complicar el reclutamiento de voluntarios. Yllza B. redactar&aacute; una descripci&oacute;n del espacio para revisi&oacute;n legal.</p>
+
+                        <h3>Colaboraci&oacute;n entre Ohana House y Welfare</h3>
+                        <p>D MAC propuso usar Ohana House como espacio de desbordamiento/triaje para Welfare despu&eacute;s de las 17:00. Yllza B. acept&oacute; gustosamente ofrecer el espacio fuera de horario. Una reestructuraci&oacute;n sugerida eliminar&iacute;a la valla entre Ohana House y Welfare y cambiar&iacute;a el acceso de puertas para la supervisi&oacute;n de Welfare.</p>
+
+                        <h3>Caba&ntilde;a Safer Space</h3>
+                        <p>Anna T. se&ntilde;al&oacute; un posible conflicto de intereses entre gestionar el espacio y leer informes posteriores al evento. La caba&ntilde;a se operaba anteriormente con horarios dedicados de atenci&oacute;n sin cita; el apoyo fuera de esos horarios se canalizaba a trav&eacute;s de Malfare o Welfare.</p>
+                        <p>Protocolo acordado: Consentimiento &laquo;es due&ntilde;o&raquo; de la caba&ntilde;a pero la pone a disposici&oacute;n para las necesidades de triaje de Malfare/Welfare, cedi&eacute;ndola si Consentimiento la necesita para un caso de apoyo. Patrick L. sugiri&oacute; que Welfare canalice las solicitudes a trav&eacute;s de Malfare para un &uacute;nico punto de entrada y responsabilidad.</p>
+
+                        <h3>Sistema de Entradas de Bajos Ingresos</h3>
+                        <p>El enfoque anterior implicaba largos correos electr&oacute;nicos personales y era laborioso con decisiones arbitrarias. El sistema actual utiliza un formulario de Google con preguntas ponderadas y puntuaci&oacute;n automatizada, reduciendo el procesamiento de 3&ndash;4 semanas a 30 minutos.</p>
+                        <p>Decisiones anuales necesarias: n&uacute;mero total de entradas, calendario de lotes y ponderaci&oacute;n de preguntas. Actualmente se usan dos lotes para evitar retrasos en el canje de c&oacute;digos por entradas. Preocupaci&oacute;n RGPD: la informaci&oacute;n personal sensible requiere un m&iacute;nimo de personas involucradas.</p>
+                        <p>Gesti&oacute;n de excepciones: los leads a veces solicitan entradas para miembros de su equipo. Fran A. prefiere una asignaci&oacute;n fija por lead o puntos extra en el sistema de puntuaci&oacute;n para mantener la objetividad. Patrick L. subray&oacute; la necesidad de cierta flexibilidad para voluntarios cruciales.</p>
+
+                        <h3>Lead de Reducci&oacute;n de Da&ntilde;os</h3>
+                        <p>El puesto ha estado vacante durante aproximadamente 2 a&ntilde;os. Tilke W. sugiri&oacute; integrarlo en el equipo de Inclusi&oacute;n. Hist&oacute;ricamente, el rol se centraba en sustancias (reuniones de AA/NA). Tilke W. ha ampliado el alcance para incluir la salud y seguridad ac&uacute;stica; los elementos ya est&aacute;n distribuidos entre departamentos.</p>
+
+                        <h3>Estructura Organizativa</h3>
+                        <p>Anna T. expres&oacute; su preferencia por explorar estructuras horizontales en lugar de una jerarqu&iacute;a estricta, reconociendo al mismo tiempo que el rol de Meta Lead puede ser necesario para la supervisi&oacute;n y la detecci&oacute;n de vacantes. Tilke W. coincidi&oacute; en que la estructura piramidal puede ser &uacute;til para la comunicaci&oacute;n mientras la asociaci&oacute;n se establece.</p>
+
+                        <h3>Presupuesto</h3>
+                        <p>Anna T. se ofreci&oacute; a consolidar las necesidades presupuestarias de los equipos de Bienestar de Participantes antes de coordinarse con el tesorero. Tilke W. se&ntilde;al&oacute; que el presupuesto de Inclusi&oacute;n fue insuficiente el a&ntilde;o pasado y sugiri&oacute; un presupuesto escalonado (esenciales frente a mejoras). Se debati&oacute; sobre las entradas de altos ingresos (ofrecidas anteriormente), con las dificultades financieras actuales para establecer las finanzas de la asociaci&oacute;n.</p>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Participants :</strong> Anna T., Daniel T., Chris T.O., Fran A., Tilke W., Yllza B., D MAC, Patrick L.
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>R&eacute;sum&eacute;</h2>
+                        <p>L&rsquo;&eacute;quipe a discut&eacute; de pr&eacute;occupations structurelles et de changements de leadership au sein du domaine Bien-&ecirc;tre des Participants. Daniel T. quitte le r&ocirc;le de Meta Lead du Bien-&ecirc;tre des Participants et Anna T. a exprim&eacute; sa volont&eacute; de prendre le relais. Les sujets cl&eacute;s comprenaient le fonctionnement d&rsquo;Ohana House et les &eacute;ventuelles exigences de protection de l&rsquo;enfance, le syst&egrave;me automatis&eacute; de billets &agrave; revenus modestes, les protocoles de la cabine Safer Space et la possibilit&eacute; d&rsquo;int&eacute;grer le poste vacant de responsable R&eacute;duction des Risques dans l&rsquo;&eacute;quipe Inclusion.</p>
+
+                        <h2>Discussion</h2>
+
+                        <h3>Changement de Leadership</h3>
+                        <p>Daniel T. quitte le r&ocirc;le de Meta Lead du Bien-&ecirc;tre des Participants en raison de contraintes de capacit&eacute;. Anna T. est dispos&eacute;e &agrave; assumer le r&ocirc;le de Meta Lead avec du soutien ; Daniel T. a not&eacute; qu&rsquo;Anna T. le surpasse d&eacute;j&agrave; en coordination. Le conseil de NCA cartographie les r&ocirc;les de niveau lead et rendra les postes vacants visibles sur le nouveau site web.</p>
+
+                        <h3>Pr&eacute;sentations de l&rsquo;&Eacute;quipe et R&ocirc;les</h3>
+                        <ul>
+                            <li><strong>Anna T.</strong> &mdash; Responsable Consentement ; souhaite plus de connexion au sein de l&rsquo;&eacute;quipe, s&rsquo;est pr&eacute;c&eacute;demment sentie comme un &laquo; rouage isol&eacute; &raquo;</li>
+                            <li><strong>Chris T.O.</strong> &mdash; Membre du conseil de l&rsquo;association ; Responsable Malfare (a besoin d&rsquo;aide pour la planification pr&eacute;-&eacute;v&eacute;nement)</li>
+                            <li><strong>Fran A.</strong> &mdash; Responsable Billets &agrave; Revenus Modestes</li>
+                            <li><strong>Tilke W.</strong> &mdash; Responsable Inclusion ; &eacute;galement responsable du camp HR Out</li>
+                            <li><strong>Yllza B.</strong> &mdash; Responsable Ohana House (3 ans)</li>
+                            <li><strong>D MAC</strong> &mdash; Co-responsable Welfare et Responsable Formation Welfare</li>
+                            <li><strong>Patrick L.</strong> &mdash; A travaill&eacute; comme chef de quart Malfare ; int&eacute;ress&eacute; &agrave; aider au leadership de Malfare</li>
+                        </ul>
+
+                        <h3>Structure de l&rsquo;&Eacute;quipe Welfare</h3>
+                        <p>D MAC a propos&eacute; trois responsables Welfare comme id&eacute;al pour la &laquo; sant&eacute; mentale rotationnelle &raquo; et la gestion de quarts complets. Deux responsables se sont r&eacute;v&eacute;l&eacute;s trop lourds pour une seule personne par le pass&eacute;. La forte collaboration avec Malfare l&rsquo;ann&eacute;e derni&egrave;re a &eacute;t&eacute; not&eacute;e.</p>
+
+                        <h3>Op&eacute;rations de Malfare</h3>
+                        <p>Chris T.O. pr&eacute;voit de diriger Malfare en utilisant les meilleures pratiques &eacute;tablies, en constituant un conseil de leadership. Priorit&eacute; : s&rsquo;assurer d&rsquo;avoir suffisamment de personnel exp&eacute;riment&eacute; pour les r&ocirc;les de &laquo; surveillance &raquo; (point d&rsquo;escalade le plus &eacute;lev&eacute; sur site). Besoin le plus imm&eacute;diat : soutien administratif pr&eacute;-&eacute;v&eacute;nement, communication avec les b&eacute;n&eacute;voles, planification des quarts et formation.</p>
+
+                        <h3>Ohana House</h3>
+                        <p>Ohana House est un espace sobre, s&ucirc;r et adapt&eacute; aux enfants, con&ccedil;u pour la d&eacute;compression (pas une garderie), fonctionnant de 9h00 &agrave; 17h00 avec quatre b&eacute;n&eacute;voles. Il propose des livres pour enfants, des jouets et du mat&eacute;riel de bricolage. Les absences de b&eacute;n&eacute;voles ont pos&eacute; probl&egrave;me.</p>
+                        <p>Anna T. a soulev&eacute; une pr&eacute;occupation concernant d&rsquo;&eacute;ventuelles exigences de certificats de protection de l&rsquo;enfance, ce qui pourrait compliquer le recrutement de b&eacute;n&eacute;voles. Yllza B. r&eacute;digera une description de l&rsquo;espace pour examen juridique.</p>
+
+                        <h3>Collaboration entre Ohana House et Welfare</h3>
+                        <p>D MAC a propos&eacute; d&rsquo;utiliser Ohana House comme espace de d&eacute;bordement/triage pour Welfare apr&egrave;s 17h00. Yllza B. a accept&eacute; volontiers d&rsquo;offrir l&rsquo;espace en dehors des heures d&rsquo;ouverture. Une restructuration sugg&eacute;r&eacute;e supprimerait la cl&ocirc;ture entre Ohana House et Welfare et modifierait l&rsquo;acc&egrave;s par les portes pour la supervision de Welfare.</p>
+
+                        <h3>Cabine Safer Space</h3>
+                        <p>Anna T. a not&eacute; un potentiel conflit d&rsquo;int&eacute;r&ecirc;ts entre la gestion de l&rsquo;espace et la lecture des rapports post-&eacute;v&eacute;nement. La cabine &eacute;tait pr&eacute;c&eacute;demment op&eacute;r&eacute;e avec des heures d&eacute;di&eacute;es de permanence ; le soutien en dehors de ces heures passait par Malfare ou Welfare.</p>
+                        <p>Protocole convenu : Consentement &laquo; poss&egrave;de &raquo; la cabine mais la met &agrave; disposition pour les besoins de triage de Malfare/Welfare, c&eacute;dant si Consentement en a besoin pour un cas de soutien. Patrick L. a sugg&eacute;r&eacute; que Welfare achemine les demandes via Malfare pour un point d&rsquo;entr&eacute;e et de responsabilit&eacute; unique.</p>
+
+                        <h3>Syst&egrave;me de Billets &agrave; Revenus Modestes</h3>
+                        <p>L&rsquo;approche pr&eacute;c&eacute;dente impliquait de longs courriels personnels et &eacute;tait laborieuse avec des d&eacute;cisions arbitraires. Le syst&egrave;me actuel utilise un formulaire Google avec des questions pond&eacute;r&eacute;es et une notation automatis&eacute;e, r&eacute;duisant le traitement de 3&ndash;4 semaines &agrave; 30 minutes.</p>
+                        <p>D&eacute;cisions annuelles n&eacute;cessaires : nombre total de billets, calendrier des lots et pond&eacute;ration des questions. Deux lots sont actuellement utilis&eacute;s pour &eacute;viter les retards dans l&rsquo;&eacute;change code-billet. Pr&eacute;occupation RGPD : les informations personnelles sensibles n&eacute;cessitent un minimum de personnes impliqu&eacute;es.</p>
+                        <p>Gestion des exceptions : les responsables demandent parfois des billets pour les membres de leur &eacute;quipe. Fran A. pr&eacute;f&egrave;re soit une allocation fixe par responsable, soit des points suppl&eacute;mentaires dans le syst&egrave;me de notation pour maintenir l&rsquo;objectivit&eacute;. Patrick L. a soulign&eacute; la n&eacute;cessit&eacute; d&rsquo;une certaine flexibilit&eacute; pour les b&eacute;n&eacute;voles essentiels.</p>
+
+                        <h3>Responsable R&eacute;duction des Risques</h3>
+                        <p>Le poste est vacant depuis environ 2 ans. Tilke W. a sugg&eacute;r&eacute; de l&rsquo;int&eacute;grer &agrave; l&rsquo;&eacute;quipe Inclusion. Historiquement, le r&ocirc;le &eacute;tait centr&eacute; sur les substances (r&eacute;unions AA/NA). Tilke W. a &eacute;largi le p&eacute;rim&egrave;tre pour inclure la sant&eacute; et la s&eacute;curit&eacute; acoustiques ; les &eacute;l&eacute;ments sont d&eacute;j&agrave; r&eacute;partis entre les d&eacute;partements.</p>
+
+                        <h3>Structure Organisationnelle</h3>
+                        <p>Anna T. a exprim&eacute; sa pr&eacute;f&eacute;rence pour l&rsquo;exploration de structures horizontales plut&ocirc;t qu&rsquo;une hi&eacute;rarchie stricte, tout en reconnaissant que le r&ocirc;le de Meta Lead peut &ecirc;tre n&eacute;cessaire pour la supervision et la d&eacute;tection des postes vacants. Tilke W. a convenu que la structure pyramidale peut &ecirc;tre utile pour la communication pendant que l&rsquo;association s&rsquo;&eacute;tablit.</p>
+
+                        <h3>Budget</h3>
+                        <p>Anna T. a propos&eacute; de consolider les besoins budg&eacute;taires des &eacute;quipes de Bien-&ecirc;tre des Participants avant de se coordonner avec le tr&eacute;sorier. Tilke W. a not&eacute; que le budget d&rsquo;Inclusion &eacute;tait insuffisant l&rsquo;ann&eacute;e derni&egrave;re et a sugg&eacute;r&eacute; un budget &eacute;chelonn&eacute; (essentiels vs. am&eacute;liorations). Il y a eu une discussion sur les billets &agrave; hauts revenus (propos&eacute;s pr&eacute;c&eacute;demment), avec les difficult&eacute;s financi&egrave;res actuelles li&eacute;es &agrave; la mise en place des finances de l&rsquo;association.</p>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Partecipanti:</strong> Anna T., Daniel T., Chris T.O., Fran A., Tilke W., Yllza B., D MAC, Patrick L.
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Riepilogo</h2>
+                        <p>Il team ha discusso questioni strutturali e cambiamenti di leadership nell&rsquo;area del Benessere dei Partecipanti. Daniel T. lascia il ruolo di Meta Lead del Benessere dei Partecipanti e Anna T. ha espresso la volont&agrave; di assumere il ruolo. I temi chiave hanno incluso le operazioni di Ohana House e i potenziali requisiti di protezione dell&rsquo;infanzia, il sistema automatizzato di biglietti a basso reddito, i protocolli della cabina Safer Space e la possibilit&agrave; di integrare il ruolo vacante di responsabile Riduzione del Danno nel team Inclusione.</p>
+
+                        <h2>Discussione</h2>
+
+                        <h3>Cambio di Leadership</h3>
+                        <p>Daniel T. lascia il ruolo di Meta Lead del Benessere dei Partecipanti a causa di limiti di capacit&agrave;. Anna T. &egrave; disposta ad assumere il ruolo di Meta Lead con supporto; Daniel T. ha osservato che Anna T. lo sta gi&agrave; superando nel coordinamento. Il consiglio di NCA sta mappando i ruoli a livello di lead e render&agrave; visibili le posizioni vacanti sul nuovo sito web.</p>
+
+                        <h3>Presentazioni del Team e Ruoli</h3>
+                        <ul>
+                            <li><strong>Anna T.</strong> &mdash; Responsabile Consenso; desidera pi&ugrave; connessione all&rsquo;interno del team, in precedenza si sentiva come un &ldquo;ingranaggio isolato&rdquo;</li>
+                            <li><strong>Chris T.O.</strong> &mdash; Membro del consiglio dell&rsquo;associazione; Responsabile Malfare (necessita aiuto con la pianificazione pre-evento)</li>
+                            <li><strong>Fran A.</strong> &mdash; Responsabile Biglietti a Basso Reddito</li>
+                            <li><strong>Tilke W.</strong> &mdash; Responsabile Inclusione; anche responsabile del campo HR Out</li>
+                            <li><strong>Yllza B.</strong> &mdash; Responsabile Ohana House (3 anni)</li>
+                            <li><strong>D MAC</strong> &mdash; Co-responsabile Welfare e Responsabile Formazione Welfare</li>
+                            <li><strong>Patrick L.</strong> &mdash; Ha lavorato come shift lead in Malfare; interessato ad aiutare nella leadership di Malfare</li>
+                        </ul>
+
+                        <h3>Struttura del Team Welfare</h3>
+                        <p>D MAC ha proposto tre responsabili Welfare come ideale per la &ldquo;sanit&agrave; mentale a rotazione&rdquo; e la gestione di turni completi. Due responsabili si sono rivelati troppo per una sola persona in passato. &Egrave; stata evidenziata la forte collaborazione con Malfare l&rsquo;anno scorso.</p>
+
+                        <h3>Operazioni di Malfare</h3>
+                        <p>Chris T.O. prevede di dirigere Malfare utilizzando le migliori pratiche consolidate, creando un consiglio di leadership. Priorit&agrave;: garantire personale sufficiente ed esperto per i ruoli di &ldquo;sorveglianza&rdquo; (punto pi&ugrave; alto di escalation sul sito). Esigenza pi&ugrave; immediata: supporto amministrativo pre-evento, comunicazioni con i volontari, pianificazione dei turni e formazione.</p>
+
+                        <h3>Ohana House</h3>
+                        <p>Ohana House &egrave; uno spazio sobrio, sicuro e adatto ai bambini, pensato per la decompressione (non un asilo nido), operante dalle 9:00 alle 17:00 con quattro volontari. Offre libri per bambini, giocattoli e materiali per il fai-da-te. Le assenze dei volontari sono state un problema.</p>
+                        <p>Anna T. ha sollevato preoccupazioni riguardo a potenziali requisiti di certificati di protezione dell&rsquo;infanzia, che potrebbero complicare il reclutamento di volontari. Yllza B. redigir&agrave; una descrizione dello spazio per la revisione legale.</p>
+
+                        <h3>Collaborazione tra Ohana House e Welfare</h3>
+                        <p>D MAC ha proposto di utilizzare Ohana House come spazio di overflow/triage per Welfare dopo le 17:00. Yllza B. ha acconsentito volentieri a offrire lo spazio fuori orario. Una ristrutturazione suggerita eliminerebbe la recinzione tra Ohana House e Welfare e modificherebbe l&rsquo;accesso alle porte per la supervisione di Welfare.</p>
+
+                        <h3>Cabina Safer Space</h3>
+                        <p>Anna T. ha evidenziato un potenziale conflitto di interessi tra la gestione dello spazio e la lettura dei rapporti post-evento. La cabina era precedentemente gestita con orari dedicati di accesso libero; il supporto al di fuori di tali orari passava tramite Malfare o Welfare.</p>
+                        <p>Protocollo concordato: Consenso &ldquo;possiede&rdquo; la cabina ma la rende disponibile per le esigenze di triage di Malfare/Welfare, cedendola se Consenso ne ha bisogno per un caso di supporto. Patrick L. ha suggerito che Welfare indirizzi le richieste tramite Malfare per un unico punto di ingresso e responsabilit&agrave;.</p>
+
+                        <h3>Sistema di Biglietti a Basso Reddito</h3>
+                        <p>L&rsquo;approccio precedente prevedeva lunghe email personali ed era laborioso con decisioni arbitrarie. Il sistema attuale utilizza un modulo Google con domande ponderate e punteggio automatizzato, riducendo l&rsquo;elaborazione da 3&ndash;4 settimane a 30 minuti.</p>
+                        <p>Decisioni annuali necessarie: numero totale di biglietti, tempistica dei lotti e ponderazione delle domande. Attualmente si utilizzano due lotti per evitare ritardi nello scambio codice-biglietto. Preoccupazione GDPR: le informazioni personali sensibili richiedono un numero minimo di persone coinvolte.</p>
+                        <p>Gestione delle eccezioni: i responsabili a volte richiedono biglietti per i membri del loro team. Fran A. preferisce un&rsquo;allocazione fissa per responsabile o punti extra nel sistema di punteggio per mantenere l&rsquo;oggettivit&agrave;. Patrick L. ha sottolineato la necessit&agrave; di una certa flessibilit&agrave; per i volontari fondamentali.</p>
+
+                        <h3>Responsabile Riduzione del Danno</h3>
+                        <p>Il ruolo &egrave; vacante da circa 2 anni. Tilke W. ha suggerito di integrarlo nel team Inclusione. Storicamente il ruolo era incentrato sulle sostanze (riunioni AA/NA). Tilke W. ha ampliato l&rsquo;ambito per includere la salute e sicurezza acustica; gli elementi sono gi&agrave; distribuiti tra i dipartimenti.</p>
+
+                        <h3>Struttura Organizzativa</h3>
+                        <p>Anna T. ha espresso preferenza per l&rsquo;esplorazione di strutture orizzontali rispetto a una gerarchia rigida, riconoscendo al contempo che il ruolo di Meta Lead potrebbe essere necessario per la supervisione e l&rsquo;individuazione di posizioni vacanti. Tilke W. ha concordato che la struttura piramidale pu&ograve; essere utile per la comunicazione mentre l&rsquo;associazione si consolida.</p>
+
+                        <h3>Bilancio</h3>
+                        <p>Anna T. si &egrave; offerta di consolidare le esigenze di bilancio dei team di Benessere dei Partecipanti prima di coordinarsi con il tesoriere. Tilke W. ha osservato che il bilancio di Inclusione era insufficiente l&rsquo;anno scorso e ha suggerito un bilancio a livelli (essenziali vs. miglioramenti). Si &egrave; discusso dei biglietti ad alto reddito (proposti in precedenza), con le attuali difficolt&agrave; finanziarie legate alla creazione delle finanze dell&rsquo;associazione.</p>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Teilnehmende:</strong> Anna T., Daniel T., Chris T.O., Fran A., Tilke W., Yllza B., D MAC, Patrick L.
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Zusammenfassung</h2>
+                        <p>Das Team besprach strukturelle Anliegen und F&uuml;hrungswechsel im Bereich Teilnehmer-Wohlbefinden. Daniel T. tritt von der Rolle des Meta Lead f&uuml;r Teilnehmer-Wohlbefinden zur&uuml;ck und Anna T. erkl&auml;rte sich bereit, die Rolle zu &uuml;bernehmen. Zentrale Themen waren der Betrieb von Ohana House und m&ouml;gliche Anforderungen zum Kinderschutz, das automatisierte System f&uuml;r einkommensschwache Tickets, die Protokolle der Safer-Space-Kabine und die M&ouml;glichkeit, die vakante Rolle des Harm-Reduction-Leads in das Inklusions-Team zu integrieren.</p>
+
+                        <h2>Diskussion</h2>
+
+                        <h3>F&uuml;hrungswechsel</h3>
+                        <p>Daniel T. tritt von der Rolle des Meta Lead f&uuml;r Teilnehmer-Wohlbefinden aufgrund von Kapazit&auml;tsengp&auml;ssen zur&uuml;ck. Anna T. ist bereit, die Meta-Lead-Rolle mit Unterst&uuml;tzung zu &uuml;bernehmen; Daniel T. bemerkte, dass Anna T. ihn in der Koordination bereits &uuml;bertrifft. Der NCA-Vorstand kartiert die Rollen auf Lead-Ebene und wird Vakanzen auf der neuen Website sichtbar machen.</p>
+
+                        <h3>Teamvorstellungen und Rollen</h3>
+                        <ul>
+                            <li><strong>Anna T.</strong> &mdash; Consent Lead; w&uuml;nscht sich mehr Verbindung im Team, f&uuml;hlte sich zuvor wie ein &bdquo;isoliertes Zahnrad&ldquo;</li>
+                            <li><strong>Chris T.O.</strong> &mdash; Vorstandsmitglied des Vereins; Malfare Lead (ben&ouml;tigt Hilfe bei der Planung vor der Veranstaltung)</li>
+                            <li><strong>Fran A.</strong> &mdash; Lead f&uuml;r Einkommensschwache Tickets</li>
+                            <li><strong>Tilke W.</strong> &mdash; Inklusions-Lead; auch Camp-Lead von HR Out</li>
+                            <li><strong>Yllza B.</strong> &mdash; Ohana House Lead (3 Jahre)</li>
+                            <li><strong>D MAC</strong> &mdash; Co-Lead Welfare und Lead Welfare-Schulung</li>
+                            <li><strong>Patrick L.</strong> &mdash; Hat als Schicht-Lead bei Malfare gearbeitet; interessiert an der Mitarbeit in der Malfare-F&uuml;hrung</li>
+                        </ul>
+
+                        <h3>Struktur des Welfare-Teams</h3>
+                        <p>D MAC schlug drei Welfare-Leads als ideal f&uuml;r &bdquo;rotierende Zur&uuml;chnungf&auml;higkeit&ldquo; und die Verwaltung voller Schichten vor. Zwei Leads erwiesen sich in der Vergangenheit als zu viel f&uuml;r eine Person. Die starke Zusammenarbeit mit Malfare im letzten Jahr wurde hervorgehoben.</p>
+
+                        <h3>Malfare-Betrieb</h3>
+                        <p>Chris T.O. plant, Malfare unter Verwendung etablierter Best Practices zu f&uuml;hren und einen F&uuml;hrungsrat aufzubauen. Priorit&auml;t: gen&uuml;gend erfahrenes Personal f&uuml;r &bdquo;&Uuml;berwachungs&ldquo;-Rollen sicherstellen (h&ouml;chster Eskalationspunkt vor Ort). Dringendster Bedarf: administrative Unterst&uuml;tzung vor der Veranstaltung, Freiwilligenkommunikation, Schichtplanung und Schulung.</p>
+
+                        <h3>Ohana House</h3>
+                        <p>Ohana House ist ein n&uuml;chterner, sicherer und kinderfreundlicher Dekompressionsraum (keine Kindertagesst&auml;tte), der von 9:00 bis 17:00 Uhr mit vier Freiwilligen betrieben wird. Er bietet Kinderb&uuml;cher, Spielzeug und Bastelmaterialien. Das Nichterscheinen von Freiwilligen war ein Problem.</p>
+                        <p>Anna T. &auml;u&szlig;erte Bedenken hinsichtlich m&ouml;glicher Anforderungen an Kinderschutzzertifikate, die die Rekrutierung von Freiwilligen erschweren k&ouml;nnten. Yllza B. wird eine Beschreibung des Raumes f&uuml;r die rechtliche Pr&uuml;fung verfassen.</p>
+
+                        <h3>Zusammenarbeit zwischen Ohana House und Welfare</h3>
+                        <p>D MAC schlug vor, Ohana House nach 17:00 Uhr als &Uuml;berlauf-/Triage-Raum f&uuml;r Welfare zu nutzen. Yllza B. war gerne bereit, den Raum au&szlig;erhalb der Betriebszeiten anzubieten. Eine vorgeschlagene Umstrukturierung w&uuml;rde den Zaun zwischen Ohana House und Welfare entfernen und den T&uuml;rzugang f&uuml;r die Welfare-Aufsicht &auml;ndern.</p>
+
+                        <h3>Safer-Space-Kabine</h3>
+                        <p>Anna T. wies auf einen m&ouml;glichen Interessenkonflikt zwischen dem Betrieb des Raumes und dem Lesen von Berichten nach der Veranstaltung hin. Die Kabine wurde zuvor mit festen Sprechstunden betrieben; Unterst&uuml;tzung au&szlig;erhalb dieser Zeiten lief &uuml;ber Malfare oder Welfare.</p>
+                        <p>Vereinbartes Protokoll: Consent &bdquo;besitzt&ldquo; die Kabine, stellt sie aber f&uuml;r Triage-Bed&uuml;rfnisse von Malfare/Welfare zur Verf&uuml;gung und weicht zur&uuml;ck, wenn Consent sie f&uuml;r einen Unterst&uuml;tzungsfall ben&ouml;tigt. Patrick L. schlug vor, dass Welfare Anfragen &uuml;ber Malfare leitet, um einen einzigen Anlaufpunkt und Verantwortlichkeit zu schaffen.</p>
+
+                        <h3>System f&uuml;r Einkommensschwache Tickets</h3>
+                        <p>Der fr&uuml;here Ansatz umfasste lange pers&ouml;nliche E-Mails und war arbeitsintensiv mit willk&uuml;rlichen Entscheidungen. Das aktuelle System verwendet ein Google-Formular mit gewichteten Fragen und automatisierter Bewertung, wodurch die Bearbeitung von 3&ndash;4 Wochen auf 30 Minuten reduziert wird.</p>
+                        <p>J&auml;hrlich erforderliche Entscheidungen: Gesamtzahl der Tickets, Zeitplanung der Chargen und Fragengewichtung. Derzeit werden zwei Chargen verwendet, um Verz&ouml;gerungen beim Code-zu-Ticket-Tausch zu vermeiden. DSGVO-Bedenken: Sensible pers&ouml;nliche Informationen erfordern ein Minimum an beteiligten Personen.</p>
+                        <p>Ausnahmebehandlung: Leads fordern manchmal Tickets f&uuml;r Teammitglieder an. Fran A. bevorzugt entweder eine feste Zuteilung pro Lead oder Bonuspunkte im Bewertungssystem zur Wahrung der Objektivit&auml;t. Patrick L. betonte die Notwendigkeit einer gewissen Flexibilit&auml;t f&uuml;r entscheidende Freiwillige.</p>
+
+                        <h3>Harm-Reduction-Lead</h3>
+                        <p>Die Rolle ist seit etwa 2 Jahren vakant. Tilke W. schlug vor, sie in das Inklusions-Team zu integrieren. Historisch war die Rolle auf Substanzen ausgerichtet (AA/NA-Treffen). Tilke W. hat den Umfang erweitert, um L&auml;rmgesundheit und -sicherheit einzubeziehen; die Elemente sind bereits auf verschiedene Abteilungen verteilt.</p>
+
+                        <h3>Organisationsstruktur</h3>
+                        <p>Anna T. &auml;u&szlig;erte ihre Pr&auml;ferenz f&uuml;r die Erkundung horizontaler Strukturen gegen&uuml;ber strenger Hierarchie, r&auml;umte aber ein, dass die Meta-Lead-Rolle f&uuml;r die &Uuml;bersicht und das Erkennen vakanter Rollen notwendig sein k&ouml;nnte. Tilke W. stimmte zu, dass die Pyramidenstruktur f&uuml;r die Kommunikation n&uuml;tzlich sein kann, w&auml;hrend sich der Verein etabliert.</p>
+
+                        <h3>Haushalt</h3>
+                        <p>Anna T. bot an, die Haushaltsbed&uuml;rfnisse der Teams f&uuml;r Teilnehmer-Wohlbefinden zu konsolidieren, bevor sie sich mit dem Schatzmeister abstimmt. Tilke W. bemerkte, dass das Inklusions-Budget letztes Jahr unzureichend war, und schlug eine gestaffelte Budgetierung vor (Grundlegendes vs. Verbesserungen). Es wurde &uuml;ber Tickets f&uuml;r Besserverdienende diskutiert (zuvor angeboten), mit den aktuellen finanziellen Schwierigkeiten bei der Einrichtung der Vereinsfinanzen.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -109,5 +371,18 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

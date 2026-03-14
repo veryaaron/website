@@ -33,6 +33,12 @@
         .resource-links a:hover { text-decoration: underline; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 2rem; border-radius: 8px; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -52,140 +58,702 @@
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>67 attendees at peak, including board members, leads, and community members</strong>
-                    <strong>Board members present:</strong> Daniel (host), Pablo, Ben, Ward, Peter
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="resource-links">
-                    <h3>Full Records</h3>
-                    <ul>
-                        <li><a href="2026-02-19-community-transcript.html">Full meeting transcript</a></li>
-                        <li><a href="2026-02-19-community-chat.html">Meeting chat log</a></li>
-                        <li><a href="https://youtu.be/o9d0r_FHDi8" target="_blank">Video recording</a></li>
-                    </ul>
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>67 attendees at peak, including board members, leads, and community members</strong>
+                        <strong>Board members present:</strong> Daniel (host), Pablo, Ben, Ward, Peter
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-02-19-community-transcript.html">Full meeting transcript</a></li>
+                            <li><a href="2026-02-19-community-chat.html">Meeting chat log</a></li>
+                            <li><a href="https://youtu.be/o9d0r_FHDi8" target="_blank">Video recording</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/o9d0r_FHDi8" title="Community Meeting - February 19, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Overview</h2>
+                        <p>Third community meeting of the Nobodies Collective Asociaci&oacute;n (NCA). The meeting covered production progress on vendor management and financial planning, permit and compliance preparations, MetaLeads meeting updates, the Humans volunteer platform nearing launch, a legal update on asset procurement, the Governance Working Group&rsquo;s go/no-go decision process and timeline, collaborator onboarding progress, and a community vote on alternative event names.</p>
+
+                        <h2>Presentations</h2>
+
+                        <h3>Daniel &mdash; Vibe Update</h3>
+                        <ul>
+                            <li>The &ldquo;8 to 80&rdquo; phase is in full swing &mdash; strong energy and positive collaboration across areas</li>
+                            <li>The community may already be in the &ldquo;80 to 800&rdquo; phase given the number of active participants</li>
+                            <li>Meeting held on Google Meet instead of Zoom; noted that chat messages would not be saved</li>
+                        </ul>
+
+                        <h3>Daniela &mdash; Production Update</h3>
+                        <ul>
+                            <li>Those interested in lead roles should reach out directly while the Humans app is being finalized</li>
+                            <li>Planning to gather departmental needs so job descriptions can be created for specific roles</li>
+                            <li>Vendor management advancing &mdash; receiving more quotes, discussions ongoing with vendors responding positively</li>
+                            <li>Getting a clearer picture of initial financial needs and payment schedules</li>
+                            <li>Permit and compliance work started &mdash; reached out to the person responsible for the self-protection plan</li>
+                            <li>Looking at different levels of insurance: core protection (D&amp;O and event liability), plus potential group accident and volunteer insurance</li>
+                            <li>Site inspection preparation progressing, closely linked to permit day milestone; Jorge leading the effort this year</li>
+                            <li>Detailed checklist of 26 mini-checklists ready for permit day inspection</li>
+                        </ul>
+
+                        <h3>Ward &mdash; MetaLeads Meeting Update</h3>
+                        <ul>
+                            <li>MetaLeads meeting held on Tuesday was enthusiastic and went quickly</li>
+                            <li>Some teams are fully staffed; others (e.g. Cantina) need to recruit new people</li>
+                            <li>Discussion about changing the name from &ldquo;Metalit&rdquo; to something less corporate</li>
+                            <li>Roles that need to be filled will be shared soon</li>
+                        </ul>
+
+                        <h3>Peter &mdash; Humans Platform Update</h3>
+                        <ul>
+                            <li>Good review with Ben on onboarding workflow to ensure Humans follows a similar pattern</li>
+                            <li>Consolidated onboarding: association membership and volunteering combined into one form instead of two</li>
+                            <li>Platform manages human resources, links users to Google Drives and mailing lists, automates access permissions</li>
+                            <li>Handles compliance (GDPR) and auditing &mdash; knows who had access to what and when</li>
+                            <li>If someone steps down, allocated resources are automatically revoked</li>
+                            <li>Hoping to launch by Friday or Saturday</li>
+                            <li>QA testers will be notified to move over to production</li>
+                        </ul>
+
+                        <h3>Pepe &mdash; Legal Update on Asset Procurement</h3>
+                        <ul>
+                            <li>Progress on securing the operational assets needed for the event</li>
+                            <li>Hope to hear back within a day or two; documents could be in motion next week</li>
+                            <li>Aim to resolve all legal fine print within a couple of weeks</li>
+                            <li>Priority item: securing container access</li>
+                        </ul>
+
+                        <h3>Kate &mdash; Go/No-Go Decision Process</h3>
+                        <ul>
+                            <li>Governance Working Group formed around February 5 to design a non-partisan, objective process</li>
+                            <li>Focused on safety and financial viability &mdash; evaluating across eight key areas</li>
+                            <li>Conducting interviews and compiling an information pack for the community</li>
+                            <li>Information pack expected by end of the weekend</li>
+                            <li>Non-binding community poll opening on February 24th or 25th for association members</li>
+                            <li>Poll open for a few days; results will inform the board&rsquo;s final decision</li>
+                            <li>Observations so far: some polarization but strong willingness to understand other viewpoints</li>
+                            <li>Community members can DM Kate on Discord to share input</li>
+                        </ul>
+
+                        <h3>Ben &mdash; Collaborator Onboarding &amp; Membership</h3>
+                        <ul>
+                            <li>Board approved approximately 40 new collaborators, bringing total to 71 fully registered</li>
+                            <li>35 people still need to respond to the final onboarding form &mdash; check spam/junk email</li>
+                            <li>Overall: ~140 people in the pipeline (71 onboarded + 35 pending + 36 newly emailed + 8 board members)</li>
+                            <li>Everyone is being onboarded as collaborators first for speed</li>
+                            <li>Board established in-principle criteria for full voting membership (to be published soon)</li>
+                            <li>Once voting members are established, a General Assembly can be called where members can propose policies and changes</li>
+                            <li>Association membership is NOT required to attend the event</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Alternative Event Naming</h3>
+                        <ul>
+                            <li>Survey received about 300 name suggestions from ~100 respondents</li>
+                            <li>Top suggestions include &ldquo;Core Newer,&rdquo; &ldquo;Now Here,&rdquo; &ldquo;Somewhere,&rdquo; &ldquo;Elsewhere,&rdquo; and &ldquo;Everywhere&rdquo;</li>
+                            <li>Duplicates and obvious conflicts removed; some names discarded for legal reasons</li>
+                            <li>Ranked-choice vote to be sent to voting members by Monday or Tuesday at the latest</li>
+                            <li>Suggestions to be posted openly in Discord for transparency</li>
+                            <li>Final choice may need to account for legal considerations and DNS availability</li>
+                        </ul>
+
+                        <h2>Key Community Questions &amp; Discussion</h2>
+
+                        <h3>Containers</h3>
+                        <p>Multiple questions about the timeline for securing container access. Pepe confirmed this is the number one priority being actively accelerated. A clearer timeline is expected in a couple of weeks. The community was reminded that containers hold critical build infrastructure, though some teams have demonstrated they can build without knowing container contents.</p>
+
+                        <h3>Community Outreach</h3>
+                        <p>A community member asked about reaching out to the broader community. Pepe explained that GDPR compliance requires careful handling of mailing lists. Personal outreach (telling friends about the association) is not a GDPR issue and is encouraged.</p>
+
+                        <h3>Ticket Sales Timeline</h3>
+                        <p>Anna asked about the timeline for ticket sales and the event website. Daniel confirmed tickets will not go on sale until the go/no-go process is complete, providing at least until February 28&ndash;29. Participant wellness content (code of conduct, inclusion policies) needs to be on the website before sales begin. A separate event website will be needed once the event name is confirmed.</p>
+
+                        <h3>FIST Volunteer System</h3>
+                        <p>Ben F asked about using the open-source FIST software for volunteer task management. Peter confirmed the system is ready to deploy and could be launched quickly once a domain is available. There are some known issues to fix, potentially with AI assistance.</p>
+
+                        <h2>Action Items</h2>
+                        <ul>
+                            <li><strong>Daniela</strong> &mdash; Continue vendor meetings and check on optional first aid training for coordinators</li>
+                            <li><strong>Ward</strong> &mdash; Share roles that need to be filled soon</li>
+                            <li><strong>Pablo</strong> &mdash; Post name suggestions in Discord and set up ranked-choice vote by Monday/Tuesday</li>
+                            <li><strong>Peter</strong> &mdash; Notify QA testers to move to production; coordinate with Ben F on FIST</li>
+                            <li><strong>Ben D</strong> &mdash; Publish official membership criteria; check Raffaella&rsquo;s email and resend onboarding if needed</li>
+                            <li><strong>Kate</strong> &mdash; Share go/no-go timeline on Discord updates channel</li>
+                            <li><strong>Board</strong> &mdash; Determine earliest possible date for ticket sales and communicate it</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/o9d0r_FHDi8" title="Community Meeting - February 19, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>67 asistentes en el momento de mayor participaci&oacute;n, incluyendo miembros de la junta, responsables y miembros de la comunidad</strong>
+                        <strong>Miembros de la junta presentes:</strong> Daniel (anfitri&oacute;n), Pablo, Ben, Ward, Peter
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registros completos</h3>
+                        <ul>
+                            <li><a href="2026-02-19-community-transcript.html">Transcripci&oacute;n completa de la reuni&oacute;n</a></li>
+                            <li><a href="2026-02-19-community-chat.html">Registro del chat de la reuni&oacute;n</a></li>
+                            <li><a href="https://youtu.be/o9d0r_FHDi8" target="_blank">Grabaci&oacute;n en v&iacute;deo</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/o9d0r_FHDi8" title="Community Meeting - February 19, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Resumen</h2>
+                        <p>Tercera reuni&oacute;n comunitaria de la Nobodies Collective Asociaci&oacute;n (NCA). La reuni&oacute;n abord&oacute; el progreso de producci&oacute;n en gesti&oacute;n de proveedores y planificaci&oacute;n financiera, preparativos de permisos y cumplimiento normativo, actualizaciones de la reuni&oacute;n de MetaLeads, el pr&oacute;ximo lanzamiento de la plataforma de voluntariado Humans, una actualizaci&oacute;n legal sobre la adquisici&oacute;n de activos, el proceso y cronograma de la decisi&oacute;n go/no-go del Grupo de Trabajo de Gobernanza, el progreso en la incorporaci&oacute;n de colaboradores y una votaci&oacute;n comunitaria sobre nombres alternativos para el evento.</p>
+
+                        <h2>Presentaciones</h2>
+
+                        <h3>Daniel &mdash; Actualizaci&oacute;n de ambiente</h3>
+                        <ul>
+                            <li>La fase &ldquo;de 8 a 80&rdquo; est&aacute; en pleno apogeo &mdash; gran energ&iacute;a y colaboraci&oacute;n positiva en todas las &aacute;reas</li>
+                            <li>La comunidad podr&iacute;a estar ya en la fase &ldquo;de 80 a 800&rdquo; dado el n&uacute;mero de participantes activos</li>
+                            <li>Reuni&oacute;n celebrada en Google Meet en lugar de Zoom; se se&ntilde;al&oacute; que los mensajes del chat no se guardar&iacute;an</li>
+                        </ul>
+
+                        <h3>Daniela &mdash; Actualizaci&oacute;n de producci&oacute;n</h3>
+                        <ul>
+                            <li>Quienes est&eacute;n interesados en roles de liderazgo deben contactar directamente mientras se finaliza la aplicaci&oacute;n Humans</li>
+                            <li>Se planea recopilar las necesidades departamentales para crear descripciones de puestos para roles espec&iacute;ficos</li>
+                            <li>La gesti&oacute;n de proveedores avanza &mdash; se reciben m&aacute;s presupuestos, las conversaciones con proveedores contin&uacute;an de manera positiva</li>
+                            <li>Se obtiene una imagen m&aacute;s clara de las necesidades financieras iniciales y los calendarios de pago</li>
+                            <li>Se inici&oacute; el trabajo de permisos y cumplimiento normativo &mdash; se contact&oacute; a la persona responsable del plan de autoprotecci&oacute;n</li>
+                            <li>Se eval&uacute;an diferentes niveles de seguro: protecci&oacute;n b&aacute;sica (D&amp;O y responsabilidad civil del evento), m&aacute;s posible seguro colectivo de accidentes y seguro para voluntarios</li>
+                            <li>La preparaci&oacute;n de la inspecci&oacute;n del terreno avanza, estrechamente vinculada al hito del d&iacute;a de permisos; Jorge lidera el esfuerzo este a&ntilde;o</li>
+                            <li>Lista detallada de 26 mini-listas de verificaci&oacute;n preparada para la inspecci&oacute;n del d&iacute;a de permisos</li>
+                        </ul>
+
+                        <h3>Ward &mdash; Actualizaci&oacute;n de la reuni&oacute;n de MetaLeads</h3>
+                        <ul>
+                            <li>La reuni&oacute;n de MetaLeads del martes fue entusiasta y transcurri&oacute; r&aacute;pidamente</li>
+                            <li>Algunos equipos est&aacute;n completos; otros (p. ej., Cantina) necesitan reclutar nuevas personas</li>
+                            <li>Se discuti&oacute; cambiar el nombre de &ldquo;Metalit&rdquo; a algo menos corporativo</li>
+                            <li>Los roles que deben cubrirse se compartir&aacute;n pronto</li>
+                        </ul>
+
+                        <h3>Peter &mdash; Actualizaci&oacute;n de la plataforma Humans</h3>
+                        <ul>
+                            <li>Buena revisi&oacute;n con Ben sobre el flujo de incorporaci&oacute;n para asegurar que Humans siga un patr&oacute;n similar</li>
+                            <li>Incorporaci&oacute;n consolidada: membres&iacute;a de la asociaci&oacute;n y voluntariado combinados en un solo formulario en lugar de dos</li>
+                            <li>La plataforma gestiona recursos humanos, vincula usuarios a Google Drives y listas de correo, y automatiza permisos de acceso</li>
+                            <li>Gestiona cumplimiento (RGPD) y auditor&iacute;a &mdash; sabe qui&eacute;n tuvo acceso a qu&eacute; y cu&aacute;ndo</li>
+                            <li>Si alguien deja su puesto, los recursos asignados se revocan autom&aacute;ticamente</li>
+                            <li>Se espera lanzar el viernes o s&aacute;bado</li>
+                            <li>Los probadores de QA ser&aacute;n notificados para pasar a producci&oacute;n</li>
+                        </ul>
+
+                        <h3>Pepe &mdash; Actualizaci&oacute;n legal sobre adquisici&oacute;n de activos</h3>
+                        <ul>
+                            <li>Progreso en la obtenci&oacute;n de los activos operativos necesarios para el evento</li>
+                            <li>Se espera respuesta en uno o dos d&iacute;as; los documentos podr&iacute;an estar en movimiento la pr&oacute;xima semana</li>
+                            <li>Objetivo de resolver todos los detalles legales en un par de semanas</li>
+                            <li>Prioridad: asegurar el acceso a los contenedores</li>
+                        </ul>
+
+                        <h3>Kate &mdash; Proceso de decisi&oacute;n Go/No-Go</h3>
+                        <ul>
+                            <li>El Grupo de Trabajo de Gobernanza se form&oacute; alrededor del 5 de febrero para dise&ntilde;ar un proceso no partidista y objetivo</li>
+                            <li>Centrado en seguridad y viabilidad financiera &mdash; evaluando ocho &aacute;reas clave</li>
+                            <li>Realizando entrevistas y compilando un paquete informativo para la comunidad</li>
+                            <li>Paquete informativo esperado para el fin de semana</li>
+                            <li>Encuesta comunitaria no vinculante abierta el 24 o 25 de febrero para miembros de la asociaci&oacute;n</li>
+                            <li>Encuesta abierta durante unos d&iacute;as; los resultados informar&aacute;n la decisi&oacute;n final de la junta</li>
+                            <li>Observaciones hasta ahora: cierta polarizaci&oacute;n pero fuerte disposici&oacute;n a comprender otros puntos de vista</li>
+                            <li>Los miembros de la comunidad pueden enviar un mensaje directo a Kate en Discord para compartir sus opiniones</li>
+                        </ul>
+
+                        <h3>Ben &mdash; Incorporaci&oacute;n de colaboradores y membres&iacute;a</h3>
+                        <ul>
+                            <li>La junta aprob&oacute; aproximadamente 40 nuevos colaboradores, elevando el total a 71 completamente registrados</li>
+                            <li>35 personas a&uacute;n deben responder al formulario final de incorporaci&oacute;n &mdash; revisar correo no deseado/spam</li>
+                            <li>En total: ~140 personas en proceso (71 incorporados + 35 pendientes + 36 reci&eacute;n contactados por correo + 8 miembros de la junta)</li>
+                            <li>Todos est&aacute;n siendo incorporados primero como colaboradores por rapidez</li>
+                            <li>La junta estableci&oacute; criterios en principio para la membres&iacute;a con derecho a voto (se publicar&aacute;n pronto)</li>
+                            <li>Una vez establecidos los miembros con derecho a voto, se podr&aacute; convocar una Asamblea General donde los miembros puedan proponer pol&iacute;ticas y cambios</li>
+                            <li>La membres&iacute;a de la asociaci&oacute;n NO es necesaria para asistir al evento</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Nombres alternativos para el evento</h3>
+                        <ul>
+                            <li>La encuesta recibi&oacute; unas 300 sugerencias de nombres de ~100 encuestados</li>
+                            <li>Las principales sugerencias incluyen &ldquo;Core Newer&rdquo;, &ldquo;Now Here&rdquo;, &ldquo;Somewhere&rdquo;, &ldquo;Elsewhere&rdquo; y &ldquo;Everywhere&rdquo;</li>
+                            <li>Se eliminaron duplicados y conflictos obvios; algunos nombres descartados por razones legales</li>
+                            <li>Se enviar&aacute; una votaci&oacute;n por clasificaci&oacute;n preferencial a los miembros con derecho a voto el lunes o martes a m&aacute;s tardar</li>
+                            <li>Las sugerencias se publicar&aacute;n abiertamente en Discord por transparencia</li>
+                            <li>La elecci&oacute;n final podr&iacute;a tener que considerar cuestiones legales y disponibilidad de DNS</li>
+                        </ul>
+
+                        <h2>Preguntas clave de la comunidad y debate</h2>
+
+                        <h3>Contenedores</h3>
+                        <p>M&uacute;ltiples preguntas sobre el cronograma para asegurar el acceso a los contenedores. Pepe confirm&oacute; que esta es la prioridad n&uacute;mero uno y se est&aacute; acelerando activamente. Se espera un cronograma m&aacute;s claro en un par de semanas. Se record&oacute; a la comunidad que los contenedores albergan infraestructura cr&iacute;tica de construcci&oacute;n, aunque algunos equipos han demostrado que pueden construir sin conocer el contenido de los contenedores.</p>
+
+                        <h3>Difusi&oacute;n comunitaria</h3>
+                        <p>Un miembro de la comunidad pregunt&oacute; sobre c&oacute;mo contactar a la comunidad m&aacute;s amplia. Pepe explic&oacute; que el cumplimiento del RGPD requiere un manejo cuidadoso de las listas de correo. La difusi&oacute;n personal (contarle a amigos sobre la asociaci&oacute;n) no es un problema de RGPD y se fomenta.</p>
+
+                        <h3>Cronograma de venta de entradas</h3>
+                        <p>Anna pregunt&oacute; sobre el cronograma de venta de entradas y el sitio web del evento. Daniel confirm&oacute; que las entradas no se pondr&aacute;n a la venta hasta que se complete el proceso go/no-go, proporcionando plazo al menos hasta el 28&ndash;29 de febrero. El contenido de bienestar del participante (c&oacute;digo de conducta, pol&iacute;ticas de inclusi&oacute;n) debe estar en el sitio web antes de que comiencen las ventas. Se necesitar&aacute; un sitio web separado para el evento una vez que se confirme el nombre.</p>
+
+                        <h3>Sistema de voluntariado FIST</h3>
+                        <p>Ben F pregunt&oacute; sobre el uso del software de c&oacute;digo abierto FIST para la gesti&oacute;n de tareas de voluntarios. Peter confirm&oacute; que el sistema est&aacute; listo para desplegarse y podr&iacute;a lanzarse r&aacute;pidamente una vez que haya un dominio disponible. Hay algunos problemas conocidos por resolver, potencialmente con asistencia de IA.</p>
+
+                        <h2>Puntos de acci&oacute;n</h2>
+                        <ul>
+                            <li><strong>Daniela</strong> &mdash; Continuar reuniones con proveedores y verificar la formaci&oacute;n opcional en primeros auxilios para coordinadores</li>
+                            <li><strong>Ward</strong> &mdash; Compartir los roles que deben cubrirse pronto</li>
+                            <li><strong>Pablo</strong> &mdash; Publicar sugerencias de nombres en Discord y configurar la votaci&oacute;n por clasificaci&oacute;n preferencial para el lunes/martes</li>
+                            <li><strong>Peter</strong> &mdash; Notificar a los probadores de QA para pasar a producci&oacute;n; coordinar con Ben F sobre FIST</li>
+                            <li><strong>Ben D</strong> &mdash; Publicar los criterios oficiales de membres&iacute;a; verificar el correo de Raffaella y reenviar la incorporaci&oacute;n si es necesario</li>
+                            <li><strong>Kate</strong> &mdash; Compartir el cronograma go/no-go en el canal de actualizaciones de Discord</li>
+                            <li><strong>Junta</strong> &mdash; Determinar la fecha m&aacute;s temprana posible para la venta de entradas y comunicarla</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Overview</h2>
-                    <p>Third community meeting of the Nobodies Collective Asociaci&oacute;n (NCA). The meeting covered production progress on vendor management and financial planning, permit and compliance preparations, MetaLeads meeting updates, the Humans volunteer platform nearing launch, a legal update on asset procurement, the Governance Working Group&rsquo;s go/no-go decision process and timeline, collaborator onboarding progress, and a community vote on alternative event names.</p>
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
 
-                    <h2>Presentations</h2>
+                    <div class="attendees">
+                        <strong>67 participants au pic, incluant des membres du conseil, des responsables et des membres de la communaut&eacute;</strong>
+                        <strong>Membres du conseil pr&eacute;sents :</strong> Daniel (h&ocirc;te), Pablo, Ben, Ward, Peter
+                    </div>
 
-                    <h3>Daniel &mdash; Vibe Update</h3>
-                    <ul>
-                        <li>The &ldquo;8 to 80&rdquo; phase is in full swing &mdash; strong energy and positive collaboration across areas</li>
-                        <li>The community may already be in the &ldquo;80 to 800&rdquo; phase given the number of active participants</li>
-                        <li>Meeting held on Google Meet instead of Zoom; noted that chat messages would not be saved</li>
-                    </ul>
+                    <div class="resource-links">
+                        <h3>Archives compl&egrave;tes</h3>
+                        <ul>
+                            <li><a href="2026-02-19-community-transcript.html">Transcription compl&egrave;te de la r&eacute;union</a></li>
+                            <li><a href="2026-02-19-community-chat.html">Journal du chat de la r&eacute;union</a></li>
+                            <li><a href="https://youtu.be/o9d0r_FHDi8" target="_blank">Enregistrement vid&eacute;o</a></li>
+                        </ul>
+                    </div>
 
-                    <h3>Daniela &mdash; Production Update</h3>
-                    <ul>
-                        <li>Those interested in lead roles should reach out directly while the Humans app is being finalized</li>
-                        <li>Planning to gather departmental needs so job descriptions can be created for specific roles</li>
-                        <li>Vendor management advancing &mdash; receiving more quotes, discussions ongoing with vendors responding positively</li>
-                        <li>Getting a clearer picture of initial financial needs and payment schedules</li>
-                        <li>Permit and compliance work started &mdash; reached out to the person responsible for the self-protection plan</li>
-                        <li>Looking at different levels of insurance: core protection (D&amp;O and event liability), plus potential group accident and volunteer insurance</li>
-                        <li>Site inspection preparation progressing, closely linked to permit day milestone; Jorge leading the effort this year</li>
-                        <li>Detailed checklist of 26 mini-checklists ready for permit day inspection</li>
-                    </ul>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/o9d0r_FHDi8" title="Community Meeting - February 19, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
 
-                    <h3>Ward &mdash; MetaLeads Meeting Update</h3>
-                    <ul>
-                        <li>MetaLeads meeting held on Tuesday was enthusiastic and went quickly</li>
-                        <li>Some teams are fully staffed; others (e.g. Cantina) need to recruit new people</li>
-                        <li>Discussion about changing the name from &ldquo;Metalit&rdquo; to something less corporate</li>
-                        <li>Roles that need to be filled will be shared soon</li>
-                    </ul>
+                    <div class="meeting-content">
+                        <h2>Aper&ccedil;u</h2>
+                        <p>Troisi&egrave;me r&eacute;union communautaire de la Nobodies Collective Asociaci&oacute;n (NCA). La r&eacute;union a couvert les progr&egrave;s de production en gestion des fournisseurs et planification financi&egrave;re, les pr&eacute;paratifs de permis et de conformit&eacute;, les mises &agrave; jour de la r&eacute;union MetaLeads, le lancement imminent de la plateforme de b&eacute;n&eacute;volat Humans, une mise &agrave; jour juridique sur l&rsquo;acquisition d&rsquo;actifs, le processus et le calendrier de la d&eacute;cision go/no-go du Groupe de Travail sur la Gouvernance, les progr&egrave;s de l&rsquo;int&eacute;gration des collaborateurs et un vote communautaire sur des noms alternatifs pour l&rsquo;&eacute;v&eacute;nement.</p>
 
-                    <h3>Peter &mdash; Humans Platform Update</h3>
-                    <ul>
-                        <li>Good review with Ben on onboarding workflow to ensure Humans follows a similar pattern</li>
-                        <li>Consolidated onboarding: association membership and volunteering combined into one form instead of two</li>
-                        <li>Platform manages human resources, links users to Google Drives and mailing lists, automates access permissions</li>
-                        <li>Handles compliance (GDPR) and auditing &mdash; knows who had access to what and when</li>
-                        <li>If someone steps down, allocated resources are automatically revoked</li>
-                        <li>Hoping to launch by Friday or Saturday</li>
-                        <li>QA testers will be notified to move over to production</li>
-                    </ul>
+                        <h2>Pr&eacute;sentations</h2>
 
-                    <h3>Pepe &mdash; Legal Update on Asset Procurement</h3>
-                    <ul>
-                        <li>Progress on securing the operational assets needed for the event</li>
-                        <li>Hope to hear back within a day or two; documents could be in motion next week</li>
-                        <li>Aim to resolve all legal fine print within a couple of weeks</li>
-                        <li>Priority item: securing container access</li>
-                    </ul>
+                        <h3>Daniel &mdash; Mise &agrave; jour de l&rsquo;ambiance</h3>
+                        <ul>
+                            <li>La phase &laquo; de 8 &agrave; 80 &raquo; bat son plein &mdash; forte &eacute;nergie et collaboration positive dans tous les domaines</li>
+                            <li>La communaut&eacute; pourrait d&eacute;j&agrave; &ecirc;tre dans la phase &laquo; de 80 &agrave; 800 &raquo; vu le nombre de participants actifs</li>
+                            <li>R&eacute;union tenue sur Google Meet au lieu de Zoom ; not&eacute; que les messages du chat ne seraient pas sauvegard&eacute;s</li>
+                        </ul>
 
-                    <h3>Kate &mdash; Go/No-Go Decision Process</h3>
-                    <ul>
-                        <li>Governance Working Group formed around February 5 to design a non-partisan, objective process</li>
-                        <li>Focused on safety and financial viability &mdash; evaluating across eight key areas</li>
-                        <li>Conducting interviews and compiling an information pack for the community</li>
-                        <li>Information pack expected by end of the weekend</li>
-                        <li>Non-binding community poll opening on February 24th or 25th for association members</li>
-                        <li>Poll open for a few days; results will inform the board&rsquo;s final decision</li>
-                        <li>Observations so far: some polarization but strong willingness to understand other viewpoints</li>
-                        <li>Community members can DM Kate on Discord to share input</li>
-                    </ul>
+                        <h3>Daniela &mdash; Mise &agrave; jour de la production</h3>
+                        <ul>
+                            <li>Les personnes int&eacute;ress&eacute;es par des r&ocirc;les de responsable doivent contacter directement pendant que l&rsquo;application Humans est finalis&eacute;e</li>
+                            <li>Pr&eacute;voit de recueillir les besoins d&eacute;partementaux afin de cr&eacute;er des descriptions de postes pour des r&ocirc;les sp&eacute;cifiques</li>
+                            <li>La gestion des fournisseurs progresse &mdash; davantage de devis re&ccedil;us, discussions en cours avec des fournisseurs qui r&eacute;pondent positivement</li>
+                            <li>Image plus claire des besoins financiers initiaux et des calendriers de paiement</li>
+                            <li>Travail sur les permis et la conformit&eacute; entam&eacute; &mdash; contact pris avec la personne responsable du plan d&rsquo;autoprotection</li>
+                            <li>Examen de diff&eacute;rents niveaux d&rsquo;assurance : protection de base (D&amp;O et responsabilit&eacute; civile &eacute;v&eacute;nementielle), plus assurance collective accidents et assurance b&eacute;n&eacute;voles potentielles</li>
+                            <li>La pr&eacute;paration de l&rsquo;inspection du site progresse, &eacute;troitement li&eacute;e au jalon du jour des permis ; Jorge dirige l&rsquo;effort cette ann&eacute;e</li>
+                            <li>Liste d&eacute;taill&eacute;e de 26 mini-listes de v&eacute;rification pr&ecirc;te pour l&rsquo;inspection du jour des permis</li>
+                        </ul>
 
-                    <h3>Ben &mdash; Collaborator Onboarding &amp; Membership</h3>
-                    <ul>
-                        <li>Board approved approximately 40 new collaborators, bringing total to 71 fully registered</li>
-                        <li>35 people still need to respond to the final onboarding form &mdash; check spam/junk email</li>
-                        <li>Overall: ~140 people in the pipeline (71 onboarded + 35 pending + 36 newly emailed + 8 board members)</li>
-                        <li>Everyone is being onboarded as collaborators first for speed</li>
-                        <li>Board established in-principle criteria for full voting membership (to be published soon)</li>
-                        <li>Once voting members are established, a General Assembly can be called where members can propose policies and changes</li>
-                        <li>Association membership is NOT required to attend the event</li>
-                    </ul>
+                        <h3>Ward &mdash; Mise &agrave; jour de la r&eacute;union MetaLeads</h3>
+                        <ul>
+                            <li>La r&eacute;union MetaLeads de mardi &eacute;tait enthousiaste et s&rsquo;est d&eacute;roul&eacute;e rapidement</li>
+                            <li>Certaines &eacute;quipes sont au complet ; d&rsquo;autres (par ex. Cantina) doivent recruter de nouvelles personnes</li>
+                            <li>Discussion sur le changement de nom de &laquo; Metalit &raquo; vers quelque chose de moins corporatif</li>
+                            <li>Les r&ocirc;les &agrave; pourvoir seront communiqu&eacute;s prochainement</li>
+                        </ul>
 
-                    <h3>Pablo &mdash; Alternative Event Naming</h3>
-                    <ul>
-                        <li>Survey received about 300 name suggestions from ~100 respondents</li>
-                        <li>Top suggestions include &ldquo;Core Newer,&rdquo; &ldquo;Now Here,&rdquo; &ldquo;Somewhere,&rdquo; &ldquo;Elsewhere,&rdquo; and &ldquo;Everywhere&rdquo;</li>
-                        <li>Duplicates and obvious conflicts removed; some names discarded for legal reasons</li>
-                        <li>Ranked-choice vote to be sent to voting members by Monday or Tuesday at the latest</li>
-                        <li>Suggestions to be posted openly in Discord for transparency</li>
-                        <li>Final choice may need to account for legal considerations and DNS availability</li>
-                    </ul>
+                        <h3>Peter &mdash; Mise &agrave; jour de la plateforme Humans</h3>
+                        <ul>
+                            <li>Bonne revue avec Ben sur le flux d&rsquo;int&eacute;gration pour s&rsquo;assurer que Humans suit un sch&eacute;ma similaire</li>
+                            <li>Int&eacute;gration consolid&eacute;e : adh&eacute;sion &agrave; l&rsquo;association et b&eacute;n&eacute;volat combin&eacute;s en un seul formulaire au lieu de deux</li>
+                            <li>La plateforme g&egrave;re les ressources humaines, relie les utilisateurs aux Google Drives et listes de diffusion, automatise les permissions d&rsquo;acc&egrave;s</li>
+                            <li>G&egrave;re la conformit&eacute; (RGPD) et l&rsquo;audit &mdash; sait qui a eu acc&egrave;s &agrave; quoi et quand</li>
+                            <li>Si quelqu&rsquo;un quitte son poste, les ressources attribu&eacute;es sont automatiquement r&eacute;voqu&eacute;es</li>
+                            <li>Lancement esp&eacute;r&eacute; vendredi ou samedi</li>
+                            <li>Les testeurs QA seront notifi&eacute;s pour passer en production</li>
+                        </ul>
 
-                    <h2>Key Community Questions &amp; Discussion</h2>
+                        <h3>Pepe &mdash; Mise &agrave; jour juridique sur l&rsquo;acquisition d&rsquo;actifs</h3>
+                        <ul>
+                            <li>Progr&egrave;s dans l&rsquo;obtention des actifs op&eacute;rationnels n&eacute;cessaires pour l&rsquo;&eacute;v&eacute;nement</li>
+                            <li>R&eacute;ponse esp&eacute;r&eacute;e d&rsquo;ici un jour ou deux ; les documents pourraient &ecirc;tre en mouvement la semaine prochaine</li>
+                            <li>Objectif de r&eacute;soudre tous les d&eacute;tails juridiques en quelques semaines</li>
+                            <li>Priorit&eacute; : s&eacute;curiser l&rsquo;acc&egrave;s aux conteneurs</li>
+                        </ul>
 
-                    <h3>Containers</h3>
-                    <p>Multiple questions about the timeline for securing container access. Pepe confirmed this is the number one priority being actively accelerated. A clearer timeline is expected in a couple of weeks. The community was reminded that containers hold critical build infrastructure, though some teams have demonstrated they can build without knowing container contents.</p>
+                        <h3>Kate &mdash; Processus de d&eacute;cision Go/No-Go</h3>
+                        <ul>
+                            <li>Le Groupe de Travail sur la Gouvernance a &eacute;t&eacute; form&eacute; vers le 5 f&eacute;vrier pour concevoir un processus non partisan et objectif</li>
+                            <li>Ax&eacute; sur la s&eacute;curit&eacute; et la viabilit&eacute; financi&egrave;re &mdash; &eacute;valuation dans huit domaines cl&eacute;s</li>
+                            <li>Entretiens en cours et compilation d&rsquo;un dossier d&rsquo;information pour la communaut&eacute;</li>
+                            <li>Dossier d&rsquo;information attendu pour la fin du week-end</li>
+                            <li>Sondage communautaire non contraignant ouvert le 24 ou 25 f&eacute;vrier pour les membres de l&rsquo;association</li>
+                            <li>Sondage ouvert pendant quelques jours ; les r&eacute;sultats &eacute;claireront la d&eacute;cision finale du conseil</li>
+                            <li>Observations &agrave; ce jour : une certaine polarisation mais forte volont&eacute; de comprendre les autres points de vue</li>
+                            <li>Les membres de la communaut&eacute; peuvent envoyer un message priv&eacute; &agrave; Kate sur Discord pour partager leur avis</li>
+                        </ul>
 
-                    <h3>Community Outreach</h3>
-                    <p>A community member asked about reaching out to the broader community. Pepe explained that GDPR compliance requires careful handling of mailing lists. Personal outreach (telling friends about the association) is not a GDPR issue and is encouraged.</p>
+                        <h3>Ben &mdash; Int&eacute;gration des collaborateurs et adh&eacute;sion</h3>
+                        <ul>
+                            <li>Le conseil a approuv&eacute; environ 40 nouveaux collaborateurs, portant le total &agrave; 71 enti&egrave;rement enregistr&eacute;s</li>
+                            <li>35 personnes doivent encore r&eacute;pondre au formulaire final d&rsquo;int&eacute;gration &mdash; v&eacute;rifier les courriers ind&eacute;sirables/spam</li>
+                            <li>Au total : ~140 personnes dans le processus (71 int&eacute;gr&eacute;s + 35 en attente + 36 nouvellement contact&eacute;s + 8 membres du conseil)</li>
+                            <li>Tout le monde est int&eacute;gr&eacute; d&rsquo;abord en tant que collaborateur pour plus de rapidit&eacute;</li>
+                            <li>Le conseil a &eacute;tabli des crit&egrave;res de principe pour l&rsquo;adh&eacute;sion avec droit de vote (publication prochaine)</li>
+                            <li>Une fois les membres votants &eacute;tablis, une Assembl&eacute;e G&eacute;n&eacute;rale pourra &ecirc;tre convoqu&eacute;e o&ugrave; les membres pourront proposer des politiques et des changements</li>
+                            <li>L&rsquo;adh&eacute;sion &agrave; l&rsquo;association n&rsquo;est PAS requise pour assister &agrave; l&rsquo;&eacute;v&eacute;nement</li>
+                        </ul>
 
-                    <h3>Ticket Sales Timeline</h3>
-                    <p>Anna asked about the timeline for ticket sales and the event website. Daniel confirmed tickets will not go on sale until the go/no-go process is complete, providing at least until February 28&ndash;29. Participant wellness content (code of conduct, inclusion policies) needs to be on the website before sales begin. A separate event website will be needed once the event name is confirmed.</p>
+                        <h3>Pablo &mdash; Noms alternatifs pour l&rsquo;&eacute;v&eacute;nement</h3>
+                        <ul>
+                            <li>L&rsquo;enqu&ecirc;te a re&ccedil;u environ 300 suggestions de noms de ~100 r&eacute;pondants</li>
+                            <li>Les principales suggestions incluent &laquo; Core Newer &raquo;, &laquo; Now Here &raquo;, &laquo; Somewhere &raquo;, &laquo; Elsewhere &raquo; et &laquo; Everywhere &raquo;</li>
+                            <li>Les doublons et conflits &eacute;vidents ont &eacute;t&eacute; supprim&eacute;s ; certains noms &eacute;cart&eacute;s pour des raisons juridiques</li>
+                            <li>Un vote par classement pr&eacute;f&eacute;rentiel sera envoy&eacute; aux membres votants d&rsquo;ici lundi ou mardi au plus tard</li>
+                            <li>Les suggestions seront publi&eacute;es ouvertement sur Discord par souci de transparence</li>
+                            <li>Le choix final pourrait devoir tenir compte de consid&eacute;rations juridiques et de la disponibilit&eacute; DNS</li>
+                        </ul>
 
-                    <h3>FIST Volunteer System</h3>
-                    <p>Ben F asked about using the open-source FIST software for volunteer task management. Peter confirmed the system is ready to deploy and could be launched quickly once a domain is available. There are some known issues to fix, potentially with AI assistance.</p>
+                        <h2>Questions cl&eacute;s de la communaut&eacute; et discussion</h2>
 
-                    <h2>Action Items</h2>
-                    <ul>
-                        <li><strong>Daniela</strong> &mdash; Continue vendor meetings and check on optional first aid training for coordinators</li>
-                        <li><strong>Ward</strong> &mdash; Share roles that need to be filled soon</li>
-                        <li><strong>Pablo</strong> &mdash; Post name suggestions in Discord and set up ranked-choice vote by Monday/Tuesday</li>
-                        <li><strong>Peter</strong> &mdash; Notify QA testers to move to production; coordinate with Ben F on FIST</li>
-                        <li><strong>Ben D</strong> &mdash; Publish official membership criteria; check Raffaella&rsquo;s email and resend onboarding if needed</li>
-                        <li><strong>Kate</strong> &mdash; Share go/no-go timeline on Discord updates channel</li>
-                        <li><strong>Board</strong> &mdash; Determine earliest possible date for ticket sales and communicate it</li>
-                    </ul>
+                        <h3>Conteneurs</h3>
+                        <p>Nombreuses questions sur le calendrier d&rsquo;obtention de l&rsquo;acc&egrave;s aux conteneurs. Pepe a confirm&eacute; qu&rsquo;il s&rsquo;agit de la priorit&eacute; num&eacute;ro un, activement acc&eacute;l&eacute;r&eacute;e. Un calendrier plus pr&eacute;cis est attendu d&rsquo;ici quelques semaines. La communaut&eacute; a &eacute;t&eacute; rappel&eacute;e que les conteneurs abritent une infrastructure de construction critique, bien que certaines &eacute;quipes aient d&eacute;montr&eacute; qu&rsquo;elles peuvent construire sans conna&icirc;tre le contenu des conteneurs.</p>
+
+                        <h3>Sensibilisation communautaire</h3>
+                        <p>Un membre de la communaut&eacute; a demand&eacute; comment contacter la communaut&eacute; au sens large. Pepe a expliqu&eacute; que la conformit&eacute; au RGPD exige une gestion prudente des listes de diffusion. La sensibilisation personnelle (parler de l&rsquo;association &agrave; ses amis) ne pose pas de probl&egrave;me RGPD et est encourag&eacute;e.</p>
+
+                        <h3>Calendrier de vente des billets</h3>
+                        <p>Anna a demand&eacute; des informations sur le calendrier de vente des billets et le site web de l&rsquo;&eacute;v&eacute;nement. Daniel a confirm&eacute; que les billets ne seront pas mis en vente avant la fin du processus go/no-go, soit au moins jusqu&rsquo;au 28&ndash;29 f&eacute;vrier. Le contenu sur le bien-&ecirc;tre des participants (code de conduite, politiques d&rsquo;inclusion) doit &ecirc;tre sur le site web avant le d&eacute;but des ventes. Un site web s&eacute;par&eacute; pour l&rsquo;&eacute;v&eacute;nement sera n&eacute;cessaire une fois le nom confirm&eacute;.</p>
+
+                        <h3>Syst&egrave;me de b&eacute;n&eacute;volat FIST</h3>
+                        <p>Ben F a pos&eacute; des questions sur l&rsquo;utilisation du logiciel open source FIST pour la gestion des t&acirc;ches des b&eacute;n&eacute;voles. Peter a confirm&eacute; que le syst&egrave;me est pr&ecirc;t &agrave; &ecirc;tre d&eacute;ploy&eacute; et pourrait &ecirc;tre lanc&eacute; rapidement une fois un domaine disponible. Il y a quelques probl&egrave;mes connus &agrave; r&eacute;soudre, potentiellement avec l&rsquo;aide de l&rsquo;IA.</p>
+
+                        <h2>Points d&rsquo;action</h2>
+                        <ul>
+                            <li><strong>Daniela</strong> &mdash; Poursuivre les r&eacute;unions avec les fournisseurs et v&eacute;rifier la formation optionnelle en premiers secours pour les coordinateurs</li>
+                            <li><strong>Ward</strong> &mdash; Communiquer les r&ocirc;les &agrave; pourvoir prochainement</li>
+                            <li><strong>Pablo</strong> &mdash; Publier les suggestions de noms sur Discord et mettre en place le vote par classement pr&eacute;f&eacute;rentiel d&rsquo;ici lundi/mardi</li>
+                            <li><strong>Peter</strong> &mdash; Notifier les testeurs QA pour passer en production ; coordonner avec Ben F sur FIST</li>
+                            <li><strong>Ben D</strong> &mdash; Publier les crit&egrave;res officiels d&rsquo;adh&eacute;sion ; v&eacute;rifier l&rsquo;e-mail de Raffaella et renvoyer l&rsquo;int&eacute;gration si n&eacute;cessaire</li>
+                            <li><strong>Kate</strong> &mdash; Partager le calendrier go/no-go sur le canal des mises &agrave; jour Discord</li>
+                            <li><strong>Conseil</strong> &mdash; D&eacute;terminer la date la plus rapproch&eacute;e possible pour la vente de billets et la communiquer</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>67 partecipanti al picco, tra cui membri del consiglio, responsabili e membri della comunit&agrave;</strong>
+                        <strong>Membri del consiglio presenti:</strong> Daniel (ospite), Pablo, Ben, Ward, Peter
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archivi completi</h3>
+                        <ul>
+                            <li><a href="2026-02-19-community-transcript.html">Trascrizione completa della riunione</a></li>
+                            <li><a href="2026-02-19-community-chat.html">Registro della chat della riunione</a></li>
+                            <li><a href="https://youtu.be/o9d0r_FHDi8" target="_blank">Registrazione video</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/o9d0r_FHDi8" title="Community Meeting - February 19, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Panoramica</h2>
+                        <p>Terza riunione comunitaria della Nobodies Collective Asociaci&oacute;n (NCA). La riunione ha trattato i progressi della produzione nella gestione dei fornitori e nella pianificazione finanziaria, i preparativi per i permessi e la conformit&agrave; normativa, gli aggiornamenti dalla riunione MetaLeads, l&rsquo;imminente lancio della piattaforma di volontariato Humans, un aggiornamento legale sull&rsquo;acquisizione di beni, il processo e la tempistica della decisione go/no-go del Gruppo di Lavoro sulla Governance, i progressi nell&rsquo;inserimento dei collaboratori e una votazione comunitaria sui nomi alternativi per l&rsquo;evento.</p>
+
+                        <h2>Presentazioni</h2>
+
+                        <h3>Daniel &mdash; Aggiornamento sull&rsquo;atmosfera</h3>
+                        <ul>
+                            <li>La fase &ldquo;da 8 a 80&rdquo; &egrave; in pieno svolgimento &mdash; forte energia e collaborazione positiva in tutti i settori</li>
+                            <li>La comunit&agrave; potrebbe gi&agrave; trovarsi nella fase &ldquo;da 80 a 800&rdquo; dato il numero di partecipanti attivi</li>
+                            <li>Riunione tenuta su Google Meet invece di Zoom; notato che i messaggi della chat non sarebbero stati salvati</li>
+                        </ul>
+
+                        <h3>Daniela &mdash; Aggiornamento sulla produzione</h3>
+                        <ul>
+                            <li>Chi &egrave; interessato a ruoli di responsabilit&agrave; dovrebbe contattare direttamente mentre l&rsquo;app Humans viene finalizzata</li>
+                            <li>Si prevede di raccogliere le esigenze dipartimentali per creare descrizioni dei ruoli per posizioni specifiche</li>
+                            <li>La gestione dei fornitori avanza &mdash; pi&ugrave; preventivi ricevuti, discussioni in corso con fornitori che rispondono positivamente</li>
+                            <li>Quadro pi&ugrave; chiaro delle esigenze finanziarie iniziali e dei calendari di pagamento</li>
+                            <li>Avviato il lavoro su permessi e conformit&agrave; &mdash; contattata la persona responsabile del piano di autoprotezione</li>
+                            <li>Valutazione di diversi livelli assicurativi: protezione di base (D&amp;O e responsabilit&agrave; civile evento), pi&ugrave; potenziale assicurazione collettiva infortuni e assicurazione volontari</li>
+                            <li>La preparazione dell&rsquo;ispezione del sito procede, strettamente collegata alla pietra miliare del giorno dei permessi; Jorge guida lo sforzo quest&rsquo;anno</li>
+                            <li>Lista dettagliata di 26 mini-checklist pronta per l&rsquo;ispezione del giorno dei permessi</li>
+                        </ul>
+
+                        <h3>Ward &mdash; Aggiornamento dalla riunione MetaLeads</h3>
+                        <ul>
+                            <li>La riunione MetaLeads di marted&igrave; &egrave; stata entusiasta e si &egrave; svolta rapidamente</li>
+                            <li>Alcuni team sono al completo; altri (ad es. Cantina) devono reclutare nuove persone</li>
+                            <li>Discussione sul cambiamento del nome da &ldquo;Metalit&rdquo; a qualcosa di meno aziendale</li>
+                            <li>I ruoli da coprire verranno comunicati a breve</li>
+                        </ul>
+
+                        <h3>Peter &mdash; Aggiornamento sulla piattaforma Humans</h3>
+                        <ul>
+                            <li>Buona revisione con Ben sul flusso di inserimento per assicurare che Humans segua un modello simile</li>
+                            <li>Inserimento consolidato: iscrizione all&rsquo;associazione e volontariato combinati in un unico modulo invece di due</li>
+                            <li>La piattaforma gestisce le risorse umane, collega gli utenti a Google Drive e mailing list, automatizza i permessi di accesso</li>
+                            <li>Gestisce la conformit&agrave; (GDPR) e l&rsquo;audit &mdash; sa chi ha avuto accesso a cosa e quando</li>
+                            <li>Se qualcuno si dimette, le risorse assegnate vengono revocate automaticamente</li>
+                            <li>Lancio previsto per venerd&igrave; o sabato</li>
+                            <li>I tester QA saranno avvisati per passare alla produzione</li>
+                        </ul>
+
+                        <h3>Pepe &mdash; Aggiornamento legale sull&rsquo;acquisizione di beni</h3>
+                        <ul>
+                            <li>Progressi nell&rsquo;ottenimento dei beni operativi necessari per l&rsquo;evento</li>
+                            <li>Si spera di ricevere risposta entro un giorno o due; i documenti potrebbero essere in movimento la prossima settimana</li>
+                            <li>Obiettivo di risolvere tutti i dettagli legali entro un paio di settimane</li>
+                            <li>Priorit&agrave;: assicurare l&rsquo;accesso ai container</li>
+                        </ul>
+
+                        <h3>Kate &mdash; Processo decisionale Go/No-Go</h3>
+                        <ul>
+                            <li>Il Gruppo di Lavoro sulla Governance si &egrave; formato intorno al 5 febbraio per progettare un processo non partigiano e oggettivo</li>
+                            <li>Focalizzato su sicurezza e sostenibilit&agrave; finanziaria &mdash; valutazione in otto aree chiave</li>
+                            <li>Interviste in corso e compilazione di un pacchetto informativo per la comunit&agrave;</li>
+                            <li>Pacchetto informativo atteso entro la fine del weekend</li>
+                            <li>Sondaggio comunitario non vincolante in apertura il 24 o 25 febbraio per i membri dell&rsquo;associazione</li>
+                            <li>Sondaggio aperto per alcuni giorni; i risultati informeranno la decisione finale del consiglio</li>
+                            <li>Osservazioni finora: una certa polarizzazione ma forte disponibilit&agrave; a comprendere altri punti di vista</li>
+                            <li>I membri della comunit&agrave; possono inviare un messaggio privato a Kate su Discord per condividere il proprio parere</li>
+                        </ul>
+
+                        <h3>Ben &mdash; Inserimento collaboratori e iscrizione</h3>
+                        <ul>
+                            <li>Il consiglio ha approvato circa 40 nuovi collaboratori, portando il totale a 71 completamente registrati</li>
+                            <li>35 persone devono ancora rispondere al modulo finale di inserimento &mdash; controllare posta indesiderata/spam</li>
+                            <li>Complessivamente: ~140 persone nel processo (71 inseriti + 35 in attesa + 36 contattati di recente + 8 membri del consiglio)</li>
+                            <li>Tutti vengono inseriti prima come collaboratori per velocit&agrave;</li>
+                            <li>Il consiglio ha stabilito criteri di principio per l&rsquo;iscrizione con diritto di voto (pubblicazione imminente)</li>
+                            <li>Una volta stabiliti i membri votanti, potr&agrave; essere convocata un&rsquo;Assemblea Generale in cui i membri potranno proporre politiche e modifiche</li>
+                            <li>L&rsquo;iscrizione all&rsquo;associazione NON &egrave; necessaria per partecipare all&rsquo;evento</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Nomi alternativi per l&rsquo;evento</h3>
+                        <ul>
+                            <li>Il sondaggio ha ricevuto circa 300 suggerimenti di nomi da ~100 rispondenti</li>
+                            <li>I principali suggerimenti includono &ldquo;Core Newer&rdquo;, &ldquo;Now Here&rdquo;, &ldquo;Somewhere&rdquo;, &ldquo;Elsewhere&rdquo; e &ldquo;Everywhere&rdquo;</li>
+                            <li>Duplicati e conflitti evidenti rimossi; alcuni nomi scartati per motivi legali</li>
+                            <li>Una votazione a classifica preferenziale verr&agrave; inviata ai membri votanti entro luned&igrave; o marted&igrave; al pi&ugrave; tardi</li>
+                            <li>I suggerimenti saranno pubblicati apertamente su Discord per trasparenza</li>
+                            <li>La scelta finale potrebbe dover tenere conto di considerazioni legali e disponibilit&agrave; DNS</li>
+                        </ul>
+
+                        <h2>Domande chiave della comunit&agrave; e discussione</h2>
+
+                        <h3>Container</h3>
+                        <p>Numerose domande sulla tempistica per assicurare l&rsquo;accesso ai container. Pepe ha confermato che questa &egrave; la priorit&agrave; numero uno e viene attivamente accelerata. Una tempistica pi&ugrave; chiara &egrave; attesa entro un paio di settimane. Alla comunit&agrave; &egrave; stato ricordato che i container contengono infrastrutture di costruzione critiche, sebbene alcuni team abbiano dimostrato di poter costruire senza conoscere il contenuto dei container.</p>
+
+                        <h3>Sensibilizzazione comunitaria</h3>
+                        <p>Un membro della comunit&agrave; ha chiesto come contattare la comunit&agrave; pi&ugrave; ampia. Pepe ha spiegato che la conformit&agrave; al GDPR richiede una gestione attenta delle mailing list. La sensibilizzazione personale (parlare dell&rsquo;associazione agli amici) non &egrave; un problema GDPR ed &egrave; incoraggiata.</p>
+
+                        <h3>Tempistica della vendita biglietti</h3>
+                        <p>Anna ha chiesto informazioni sulla tempistica della vendita dei biglietti e sul sito web dell&rsquo;evento. Daniel ha confermato che i biglietti non saranno messi in vendita fino al completamento del processo go/no-go, garantendo almeno fino al 28&ndash;29 febbraio. I contenuti sul benessere dei partecipanti (codice di condotta, politiche di inclusione) devono essere sul sito web prima dell&rsquo;inizio delle vendite. Sar&agrave; necessario un sito web separato per l&rsquo;evento una volta confermato il nome.</p>
+
+                        <h3>Sistema di volontariato FIST</h3>
+                        <p>Ben F ha chiesto dell&rsquo;uso del software open source FIST per la gestione delle attivit&agrave; dei volontari. Peter ha confermato che il sistema &egrave; pronto per il deploy e potrebbe essere lanciato rapidamente una volta disponibile un dominio. Ci sono alcuni problemi noti da risolvere, potenzialmente con assistenza dell&rsquo;IA.</p>
+
+                        <h2>Punti d&rsquo;azione</h2>
+                        <ul>
+                            <li><strong>Daniela</strong> &mdash; Proseguire gli incontri con i fornitori e verificare la formazione opzionale in primo soccorso per i coordinatori</li>
+                            <li><strong>Ward</strong> &mdash; Comunicare i ruoli da coprire a breve</li>
+                            <li><strong>Pablo</strong> &mdash; Pubblicare i suggerimenti di nomi su Discord e configurare la votazione a classifica preferenziale entro luned&igrave;/marted&igrave;</li>
+                            <li><strong>Peter</strong> &mdash; Avvisare i tester QA per passare alla produzione; coordinarsi con Ben F su FIST</li>
+                            <li><strong>Ben D</strong> &mdash; Pubblicare i criteri ufficiali di iscrizione; verificare l&rsquo;email di Raffaella e reinviare l&rsquo;inserimento se necessario</li>
+                            <li><strong>Kate</strong> &mdash; Condividere la tempistica go/no-go sul canale aggiornamenti di Discord</li>
+                            <li><strong>Consiglio</strong> &mdash; Determinare la data pi&ugrave; prossima possibile per la vendita dei biglietti e comunicarla</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>67 Teilnehmende zum H&ouml;chststand, darunter Vorstandsmitglieder, Verantwortliche und Community-Mitglieder</strong>
+                        <strong>Anwesende Vorstandsmitglieder:</strong> Daniel (Gastgeber), Pablo, Ben, Ward, Peter
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Vollst&auml;ndige Aufzeichnungen</h3>
+                        <ul>
+                            <li><a href="2026-02-19-community-transcript.html">Vollst&auml;ndiges Sitzungsprotokoll</a></li>
+                            <li><a href="2026-02-19-community-chat.html">Chat-Protokoll der Sitzung</a></li>
+                            <li><a href="https://youtu.be/o9d0r_FHDi8" target="_blank">Videoaufzeichnung</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/o9d0r_FHDi8" title="Community Meeting - February 19, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>&Uuml;berblick</h2>
+                        <p>Dritte Community-Sitzung der Nobodies Collective Asociaci&oacute;n (NCA). Die Sitzung behandelte Produktionsfortschritte bei Lieferantenmanagement und Finanzplanung, Vorbereitungen f&uuml;r Genehmigungen und Compliance, Aktualisierungen vom MetaLeads-Treffen, den bevorstehenden Start der Freiwilligenplattform Humans, ein rechtliches Update zur Beschaffung von Betriebsmitteln, den Prozess und Zeitplan der Go/No-Go-Entscheidung der Governance-Arbeitsgruppe, Fortschritte beim Onboarding von Mitarbeitenden und eine Gemeinschaftsabstimmung &uuml;ber alternative Veranstaltungsnamen.</p>
+
+                        <h2>Pr&auml;sentationen</h2>
+
+                        <h3>Daniel &mdash; Stimmungs-Update</h3>
+                        <ul>
+                            <li>Die Phase &bdquo;von 8 auf 80&ldquo; ist in vollem Gange &mdash; starke Energie und positive Zusammenarbeit in allen Bereichen</li>
+                            <li>Die Community k&ouml;nnte sich angesichts der Anzahl aktiver Teilnehmender bereits in der Phase &bdquo;von 80 auf 800&ldquo; befinden</li>
+                            <li>Sitzung auf Google Meet statt Zoom abgehalten; es wurde darauf hingewiesen, dass Chat-Nachrichten nicht gespeichert w&uuml;rden</li>
+                        </ul>
+
+                        <h3>Daniela &mdash; Produktions-Update</h3>
+                        <ul>
+                            <li>Interessierte an F&uuml;hrungsrollen sollten sich direkt melden, w&auml;hrend die Humans-App fertiggestellt wird</li>
+                            <li>Geplant ist die Erfassung der Abteilungsbed&uuml;rfnisse, um Stellenbeschreibungen f&uuml;r spezifische Rollen zu erstellen</li>
+                            <li>Das Lieferantenmanagement schreitet voran &mdash; mehr Angebote eingegangen, Gespr&auml;che mit positiv reagierenden Lieferanten laufen</li>
+                            <li>Klareres Bild der anf&auml;nglichen Finanzbed&uuml;rfnisse und Zahlungspl&auml;ne</li>
+                            <li>Arbeiten an Genehmigungen und Compliance begonnen &mdash; Kontakt zur verantwortlichen Person f&uuml;r den Selbstschutzplan aufgenommen</li>
+                            <li>Pr&uuml;fung verschiedener Versicherungsstufen: Grundschutz (D&amp;O und Veranstaltungshaftpflicht), plus m&ouml;gliche Gruppenunfall- und Freiwilligenversicherung</li>
+                            <li>Die Vorbereitung der Gel&auml;ndeinspektion schreitet voran, eng verkn&uuml;pft mit dem Meilenstein des Genehmigungstages; Jorge leitet den Einsatz in diesem Jahr</li>
+                            <li>Detaillierte Checkliste mit 26 Mini-Checklisten f&uuml;r die Inspektion am Genehmigungstag bereit</li>
+                        </ul>
+
+                        <h3>Ward &mdash; Update vom MetaLeads-Treffen</h3>
+                        <ul>
+                            <li>Das MetaLeads-Treffen am Dienstag war enthusiastisch und verlief z&uuml;gig</li>
+                            <li>Einige Teams sind voll besetzt; andere (z. B. Cantina) m&uuml;ssen neue Leute rekrutieren</li>
+                            <li>Diskussion &uuml;ber die &Auml;nderung des Namens von &bdquo;Metalit&ldquo; zu etwas weniger Unternehmensbezogenem</li>
+                            <li>Zu besetzende Rollen werden in K&uuml;rze mitgeteilt</li>
+                        </ul>
+
+                        <h3>Peter &mdash; Update zur Humans-Plattform</h3>
+                        <ul>
+                            <li>Gute Abstimmung mit Ben zum Onboarding-Workflow, um sicherzustellen, dass Humans einem &auml;hnlichen Muster folgt</li>
+                            <li>Konsolidiertes Onboarding: Vereinsmitgliedschaft und Freiwilligenarbeit in einem Formular statt zwei zusammengefasst</li>
+                            <li>Die Plattform verwaltet Personalressourcen, verkn&uuml;pft Nutzende mit Google Drives und Mailinglisten, automatisiert Zugriffsberechtigungen</li>
+                            <li>Verwaltet Compliance (DSGVO) und Pr&uuml;fung &mdash; wei&szlig;, wer wann auf was Zugriff hatte</li>
+                            <li>Wenn jemand zur&uuml;cktritt, werden zugewiesene Ressourcen automatisch entzogen</li>
+                            <li>Start f&uuml;r Freitag oder Samstag erhofft</li>
+                            <li>QA-Testende werden benachrichtigt, zur Produktion zu wechseln</li>
+                        </ul>
+
+                        <h3>Pepe &mdash; Rechtliches Update zur Beschaffung von Betriebsmitteln</h3>
+                        <ul>
+                            <li>Fortschritte bei der Sicherung der f&uuml;r die Veranstaltung ben&ouml;tigten Betriebsmittel</li>
+                            <li>R&uuml;ckmeldung innerhalb von ein bis zwei Tagen erhofft; Dokumente k&ouml;nnten n&auml;chste Woche in Bewegung sein</li>
+                            <li>Ziel, alle rechtlichen Details innerhalb weniger Wochen zu kl&auml;ren</li>
+                            <li>Priorit&auml;t: Zugang zu den Containern sichern</li>
+                        </ul>
+
+                        <h3>Kate &mdash; Go/No-Go-Entscheidungsprozess</h3>
+                        <ul>
+                            <li>Die Governance-Arbeitsgruppe wurde um den 5. Februar gegr&uuml;ndet, um einen unparteiischen, objektiven Prozess zu entwerfen</li>
+                            <li>Fokus auf Sicherheit und finanzielle Tragf&auml;higkeit &mdash; Bewertung in acht Schl&uuml;sselbereichen</li>
+                            <li>Interviews werden gef&uuml;hrt und ein Informationspaket f&uuml;r die Community zusammengestellt</li>
+                            <li>Informationspaket bis Ende des Wochenendes erwartet</li>
+                            <li>Unverbindliche Community-Umfrage ab dem 24. oder 25. Februar f&uuml;r Vereinsmitglieder</li>
+                            <li>Umfrage einige Tage ge&ouml;ffnet; die Ergebnisse flie&szlig;en in die endg&uuml;ltige Entscheidung des Vorstands ein</li>
+                            <li>Bisherige Beobachtungen: gewisse Polarisierung, aber starke Bereitschaft, andere Standpunkte zu verstehen</li>
+                            <li>Community-Mitglieder k&ouml;nnen Kate auf Discord eine Direktnachricht senden, um ihre Meinung mitzuteilen</li>
+                        </ul>
+
+                        <h3>Ben &mdash; Onboarding von Mitarbeitenden und Mitgliedschaft</h3>
+                        <ul>
+                            <li>Der Vorstand hat etwa 40 neue Mitarbeitende genehmigt, womit die Gesamtzahl auf 71 vollst&auml;ndig Registrierte steigt</li>
+                            <li>35 Personen m&uuml;ssen noch auf das abschlie&szlig;ende Onboarding-Formular antworten &mdash; Spam-/Junk-Ordner pr&uuml;fen</li>
+                            <li>Insgesamt: ~140 Personen im Prozess (71 eingearbeitet + 35 ausstehend + 36 neu per E-Mail kontaktiert + 8 Vorstandsmitglieder)</li>
+                            <li>Alle werden zun&auml;chst als Mitarbeitende eingearbeitet, um Geschwindigkeit zu gewinnen</li>
+                            <li>Der Vorstand hat grunds&auml;tzliche Kriterien f&uuml;r die stimmberechtigte Mitgliedschaft festgelegt (Ver&ouml;ffentlichung in K&uuml;rze)</li>
+                            <li>Sobald die stimmberechtigten Mitglieder feststehen, kann eine Hauptversammlung einberufen werden, bei der Mitglieder Richtlinien und &Auml;nderungen vorschlagen k&ouml;nnen</li>
+                            <li>Die Vereinsmitgliedschaft ist NICHT erforderlich, um an der Veranstaltung teilzunehmen</li>
+                        </ul>
+
+                        <h3>Pablo &mdash; Alternative Veranstaltungsnamen</h3>
+                        <ul>
+                            <li>Die Umfrage erhielt etwa 300 Namensvorschl&auml;ge von ~100 Befragten</li>
+                            <li>Die h&auml;ufigsten Vorschl&auml;ge umfassen &bdquo;Core Newer&ldquo;, &bdquo;Now Here&ldquo;, &bdquo;Somewhere&ldquo;, &bdquo;Elsewhere&ldquo; und &bdquo;Everywhere&ldquo;</li>
+                            <li>Duplikate und offensichtliche Konflikte wurden entfernt; einige Namen aus rechtlichen Gr&uuml;nden verworfen</li>
+                            <li>Eine Rangfolgewahl wird sp&auml;testens bis Montag oder Dienstag an die stimmberechtigten Mitglieder versandt</li>
+                            <li>Die Vorschl&auml;ge werden offen auf Discord ver&ouml;ffentlicht, um Transparenz zu gew&auml;hrleisten</li>
+                            <li>Die endg&uuml;ltige Wahl muss m&ouml;glicherweise rechtliche Erw&auml;gungen und DNS-Verf&uuml;gbarkeit ber&uuml;cksichtigen</li>
+                        </ul>
+
+                        <h2>Wichtige Community-Fragen und Diskussion</h2>
+
+                        <h3>Container</h3>
+                        <p>Zahlreiche Fragen zum Zeitplan f&uuml;r die Sicherung des Containerzugangs. Pepe best&auml;tigte, dass dies die oberste Priorit&auml;t ist und aktiv beschleunigt wird. Ein klarerer Zeitplan wird in einigen Wochen erwartet. Die Community wurde daran erinnert, dass die Container wichtige Bauinfrastruktur enthalten, obwohl einige Teams gezeigt haben, dass sie auch ohne Kenntnis des Containerinhalts bauen k&ouml;nnen.</p>
+
+                        <h3>Community-Ansprache</h3>
+                        <p>Ein Community-Mitglied fragte nach der Kontaktaufnahme mit der breiteren Community. Pepe erkl&auml;rte, dass die DSGVO-Konformit&auml;t einen sorgf&auml;ltigen Umgang mit Mailinglisten erfordert. Pers&ouml;nliche Ansprache (Freunden vom Verein erz&auml;hlen) ist kein DSGVO-Problem und wird ermutigt.</p>
+
+                        <h3>Zeitplan f&uuml;r den Ticketverkauf</h3>
+                        <p>Anna fragte nach dem Zeitplan f&uuml;r den Ticketverkauf und die Veranstaltungswebsite. Daniel best&auml;tigte, dass Tickets nicht vor Abschluss des Go/No-Go-Prozesses in den Verkauf gehen, was mindestens bis zum 28.&ndash;29. Februar gew&auml;hrleistet ist. Inhalte zum Teilnehmerwohl (Verhaltenskodex, Inklusionsrichtlinien) m&uuml;ssen vor Verkaufsstart auf der Website stehen. Eine separate Veranstaltungswebsite wird ben&ouml;tigt, sobald der Name feststeht.</p>
+
+                        <h3>FIST-Freiwilligensystem</h3>
+                        <p>Ben F fragte nach der Nutzung der Open-Source-Software FIST f&uuml;r die Verwaltung von Freiwilligenaufgaben. Peter best&auml;tigte, dass das System einsatzbereit ist und schnell gestartet werden k&ouml;nnte, sobald eine Domain verf&uuml;gbar ist. Es gibt einige bekannte Probleme zu beheben, m&ouml;glicherweise mit KI-Unterst&uuml;tzung.</p>
+
+                        <h2>Ma&szlig;nahmenpunkte</h2>
+                        <ul>
+                            <li><strong>Daniela</strong> &mdash; Lieferantengespr&auml;che fortsetzen und optionale Erste-Hilfe-Schulung f&uuml;r Koordinatoren pr&uuml;fen</li>
+                            <li><strong>Ward</strong> &mdash; Zu besetzende Rollen in K&uuml;rze mitteilen</li>
+                            <li><strong>Pablo</strong> &mdash; Namensvorschl&auml;ge auf Discord ver&ouml;ffentlichen und Rangfolgewahl bis Montag/Dienstag einrichten</li>
+                            <li><strong>Peter</strong> &mdash; QA-Testende benachrichtigen, zur Produktion zu wechseln; mit Ben F zu FIST koordinieren</li>
+                            <li><strong>Ben D</strong> &mdash; Offizielle Mitgliedschaftskriterien ver&ouml;ffentlichen; Raffaellas E-Mail pr&uuml;fen und Onboarding bei Bedarf erneut senden</li>
+                            <li><strong>Kate</strong> &mdash; Go/No-Go-Zeitplan im Discord-Updates-Kanal teilen</li>
+                            <li><strong>Vorstand</strong> &mdash; Fr&uuml;hestm&ouml;glichen Termin f&uuml;r den Ticketverkauf bestimmen und kommunizieren</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
 
     <div id="shared-footer" data-prefix=".."></div>
     <script src="../footer.js"></script>
+
+    <script>
+document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        var lang = this.dataset.lang;
+        document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+        var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+        if (target) target.classList.add('active');
+    });
+});
+    </script>
 
     <script src="../script.js"></script>
 </body>

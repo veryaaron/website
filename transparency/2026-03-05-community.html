@@ -33,6 +33,12 @@
         .resource-links a:hover { text-decoration: underline; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 2rem; border-radius: 8px; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -52,152 +58,762 @@
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Chaired by Daniel T., with board members, leads, and ~75 community members at peak</strong>
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="resource-links">
-                    <h3>Full Records</h3>
-                    <ul>
-                        <li><a href="2026-03-05-community-transcript.html">Full meeting transcript</a></li>
-                        <li><a href="2026-03-05-community-chat.html">Meeting chat log</a></li>
-                        <li><a href="https://youtu.be/OWVelaMI4wg" target="_blank">Video recording</a></li>
-                    </ul>
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Chaired by Daniel T., with board members, leads, and ~75 community members at peak</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-03-05-community-transcript.html">Full meeting transcript</a></li>
+                            <li><a href="2026-03-05-community-chat.html">Meeting chat log</a></li>
+                            <li><a href="https://youtu.be/OWVelaMI4wg" target="_blank">Video recording</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/OWVelaMI4wg" title="Community Meeting - March 5, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Overview</h2>
+                        <p>Fifth community meeting of the Nobodies Collective Asociaci&oacute;n (NCA). Updates on event site options, organisational infrastructure, pre-production readiness, ticket sales strategy, the board&rsquo;s Go/No-Go statement, volunteer recruitment, and marketing.</p>
+
+                        <h2>Key Topics</h2>
+
+                        <h3>New Site Option (Pablo)</h3>
+                        <ul>
+                            <li>Presented a potential alternative site: larger area, lower cost (~10,000 EUR for 60% of the area)</li>
+                            <li>Would require significant infrastructure investment if used this year: lightning rods, land flattening, road construction, city planning adaptation, barrier and power system changes</li>
+                            <li>General consensus is to continue with the current site this year but hold a Meta Leads meeting to formally evaluate</li>
+                            <li>Future equipment purchases can be planned with the new site in mind</li>
+                        </ul>
+
+                        <h3>Legal and Organisational Infrastructure (Pepe)</h3>
+                        <ul>
+                            <li>Legal workstreams in progress: intellectual property guidelines (framework in 2&ndash;3 weeks), GDPR compliance (Pepe appointed Data Protection Officer), contractual arrangements for ticketing</li>
+                            <li>Detailed breakdown with 3&ndash;6 month timelines to be presented at next community call</li>
+                        </ul>
+
+                        <h3>Event Name</h3>
+                        <ul>
+                            <li>The community is choosing a name for the event (26 options, poll closing 6 March)</li>
+                            <li>Community members asked not to refer to the event using names belonging to other organisations</li>
+                        </ul>
+
+                        <h3>Membership vs. Collaborators Clarification</h3>
+                        <ul>
+                            <li>Association members must sign up on the NCA website</li>
+                            <li>Barrio members only need basic contact information</li>
+                            <li>FAQ posted on Discord explaining differences between members, collaborators, and volunteers</li>
+                        </ul>
+
+                        <h3>Shift to Pre-Production Mode (Daniela)</h3>
+                        <ul>
+                            <li>Symbolic shift from assessment phase to pre-production mode announced</li>
+                            <li>All leads and interested community members called upon to increase involvement</li>
+                            <li>Milestones and decision points to be defined the following week</li>
+                        </ul>
+
+                        <h3>Ticket Sales Strategy</h3>
+                        <ul>
+                            <li>Ticket launch targeted for the following week</li>
+                            <li>Urgency noted: competing events going on sale around the same time</li>
+                            <li>Relying on informal community networks for outreach</li>
+                            <li>Tiered pricing to incentivise early purchases being discussed but not finalised</li>
+                            <li>Organisation reserves the right to use tools like deadlines or caps if needed</li>
+                            <li>Refund policy for early buyers being developed, tied to ticketing milestones</li>
+                        </ul>
+
+                        <h3>Go/No-Go Statement (Ben)</h3>
+                        <ul>
+                            <li>Board released a detailed statement on Discord</li>
+                            <li>Decision to proceed was not taken lightly; full range of community opinions seriously considered</li>
+                            <li>Moving ahead viewed as an opportunity to build strong foundations for the association</li>
+                            <li>Board members noted their personal legal stakes, reinforcing commitment to responsible decision-making</li>
+                        </ul>
+
+                        <h3>Risk Management and Financial Planning</h3>
+                        <ul>
+                            <li>Potential scenarios discussed: pandemic, adverse legal advice, extremely low ticket sales</li>
+                            <li>Financial risk managed through tiered budgeting: scaling expenses based on actual ticket sales</li>
+                            <li>Milestones and decision points being defined the following week</li>
+                        </ul>
+
+                        <h3>Volunteer Recruitment</h3>
+                        <ul>
+                            <li>Focus on making it easier for new volunteers to find roles</li>
+                            <li>ClickUp list being updated with clickable role descriptions</li>
+                            <li>FIST volunteer platform to open before ticket sales</li>
+                            <li>Come &amp; Play downsizing camp activities to free capacity for NCA shifts</li>
+                            <li>Push planned for more volunteer sign-ups from camps</li>
+                        </ul>
+
+                        <h3>Marketing and Outreach</h3>
+                        <ul>
+                            <li>No budget for paid marketing currently</li>
+                            <li>All participants encouraged to act as ambassadors</li>
+                            <li>Gamified referral system suggested</li>
+                            <li>Logo competition underway; creative flyers suggested as grassroots tools</li>
+                        </ul>
+
+                        <h3>Communication Channels</h3>
+                        <ul>
+                            <li>NCA developing independent communication channels</li>
+                            <li>Community-led groups are fair game for individual posts</li>
+                            <li>Guidelines for communication channels being released by Pepe</li>
+                        </ul>
+
+                        <h3>Official Burning Man Regional Status (Michelle)</h3>
+                        <ul>
+                            <li>BM Regional status offers benefits including website listing, European Leadership Summit invitations, and potential support</li>
+                            <li>NCA exploring regional status; some members attending ELS in April</li>
+                        </ul>
+
+                        <h3>Transparency and Community Participation</h3>
+                        <ul>
+                            <li>Strong community engagement noted: ~75 people on weekly calls with real decision-making access</li>
+                            <li>Technical planning discussed: unified power grid, build optimisation, inter-grid communication, knowledge documentation</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <ul>
+                            <li><strong>Pepe</strong> &mdash; Prepare detailed legal workstreams breakdown with timelines for next call</li>
+                            <li><strong>Pepe</strong> &mdash; Release communication channel guidelines</li>
+                            <li><strong>Daniela</strong> &mdash; Coordinate volunteer meeting and resolve ClickUp issues</li>
+                            <li><strong>Daniela</strong> &mdash; Define pre-production milestones the following week</li>
+                            <li><strong>Daniel</strong> &mdash; Push for more volunteering from camps</li>
+                            <li><strong>Ward</strong> &mdash; Organise Meta Leads meeting to evaluate new site</li>
+                            <li><strong>Board</strong> &mdash; Finalise ticket pricing, quantity, and refund policy before launch</li>
+                        </ul>
+
+                        <h2>Next Steps</h2>
+                        <ul>
+                            <li>Ticket sales launch (target: following week)</li>
+                            <li>Name vote closes 6 March; chosen name to be announced</li>
+                            <li>Meta Leads meeting to evaluate site options</li>
+                            <li>Pre-production milestones and decision points defined</li>
+                            <li>FIST volunteer platform opens</li>
+                            <li>Board finalises tiered budgeting approach</li>
+                            <li>NCA explores official BM Regional status</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/OWVelaMI4wg" title="Community Meeting - March 5, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Presidida por Daniel T., con miembros de la junta, responsables de &aacute;rea y ~75 miembros de la comunidad en el momento de mayor asistencia</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registros completos</h3>
+                        <ul>
+                            <li><a href="2026-03-05-community-transcript.html">Transcripci&oacute;n completa de la reuni&oacute;n</a></li>
+                            <li><a href="2026-03-05-community-chat.html">Registro del chat de la reuni&oacute;n</a></li>
+                            <li><a href="https://youtu.be/OWVelaMI4wg" target="_blank">Grabaci&oacute;n en v&iacute;deo</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/OWVelaMI4wg" title="Community Meeting - March 5, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Resumen</h2>
+                        <p>Quinta reuni&oacute;n comunitaria de la Asociaci&oacute;n Nobodies Collective (NCA). Actualizaciones sobre opciones de emplazamiento del evento, infraestructura organizativa, preparaci&oacute;n para la preproducci&oacute;n, estrategia de venta de entradas, la declaraci&oacute;n de la junta sobre la decisi&oacute;n de seguir adelante o no (Go/No-Go), captaci&oacute;n de voluntarios y marketing.</p>
+
+                        <h2>Temas principales</h2>
+
+                        <h3>Nueva opci&oacute;n de emplazamiento (Pablo)</h3>
+                        <ul>
+                            <li>Se present&oacute; un posible emplazamiento alternativo: mayor superficie, menor coste (~10.000 EUR por el 60% del &aacute;rea)</li>
+                            <li>Requerir&iacute;a una inversi&oacute;n significativa en infraestructura si se utilizara este a&ntilde;o: pararrayos, nivelaci&oacute;n del terreno, construcci&oacute;n de caminos, adaptaci&oacute;n urban&iacute;stica, cambios en sistemas de barreras y electricidad</li>
+                            <li>El consenso general es continuar con el emplazamiento actual este a&ntilde;o, pero celebrar una reuni&oacute;n de Meta Leads para evaluarlo formalmente</li>
+                            <li>Las futuras compras de equipamiento pueden planificarse teniendo en cuenta el nuevo emplazamiento</li>
+                        </ul>
+
+                        <h3>Infraestructura legal y organizativa (Pepe)</h3>
+                        <ul>
+                            <li>L&iacute;neas de trabajo legales en curso: directrices de propiedad intelectual (marco en 2&ndash;3 semanas), cumplimiento del RGPD (Pepe designado como Delegado de Protecci&oacute;n de Datos), acuerdos contractuales para la venta de entradas</li>
+                            <li>Desglose detallado con plazos de 3&ndash;6 meses a presentar en la pr&oacute;xima convocatoria comunitaria</li>
+                        </ul>
+
+                        <h3>Nombre del evento</h3>
+                        <ul>
+                            <li>La comunidad est&aacute; eligiendo un nombre para el evento (26 opciones, votaci&oacute;n cerrando el 6 de marzo)</li>
+                            <li>Se pidi&oacute; a los miembros de la comunidad que no se refieran al evento utilizando nombres pertenecientes a otras organizaciones</li>
+                        </ul>
+
+                        <h3>Aclaraci&oacute;n sobre membres&iacute;a vs. colaboradores</h3>
+                        <ul>
+                            <li>Los miembros de la asociaci&oacute;n deben registrarse en la web de NCA</li>
+                            <li>Los miembros de barrio solo necesitan informaci&oacute;n de contacto b&aacute;sica</li>
+                            <li>Se public&oacute; un FAQ en Discord explicando las diferencias entre miembros, colaboradores y voluntarios</li>
+                        </ul>
+
+                        <h3>Cambio al modo de preproducci&oacute;n (Daniela)</h3>
+                        <ul>
+                            <li>Se anunci&oacute; el cambio simb&oacute;lico de la fase de evaluaci&oacute;n al modo de preproducci&oacute;n</li>
+                            <li>Se inst&oacute; a todos los responsables y miembros interesados de la comunidad a aumentar su participaci&oacute;n</li>
+                            <li>Los hitos y puntos de decisi&oacute;n se definir&aacute;n la semana siguiente</li>
+                        </ul>
+
+                        <h3>Estrategia de venta de entradas</h3>
+                        <ul>
+                            <li>Lanzamiento de entradas previsto para la semana siguiente</li>
+                            <li>Se not&oacute; la urgencia: eventos competidores salen a la venta en las mismas fechas</li>
+                            <li>Se depende de redes informales de la comunidad para la difusi&oacute;n</li>
+                            <li>Se discuti&oacute; un sistema de precios escalonados para incentivar las compras anticipadas, pero no se finaliz&oacute;</li>
+                            <li>La organizaci&oacute;n se reserva el derecho de utilizar herramientas como plazos l&iacute;mite o topes si fuera necesario</li>
+                            <li>Se est&aacute; desarrollando una pol&iacute;tica de reembolso para compradores anticipados, vinculada a los hitos de venta de entradas</li>
+                        </ul>
+
+                        <h3>Declaraci&oacute;n Go/No-Go (Ben)</h3>
+                        <ul>
+                            <li>La junta public&oacute; una declaraci&oacute;n detallada en Discord</li>
+                            <li>La decisi&oacute;n de seguir adelante no se tom&oacute; a la ligera; se consider&oacute; seriamente toda la gama de opiniones de la comunidad</li>
+                            <li>Seguir adelante se consider&oacute; como una oportunidad para construir bases s&oacute;lidas para la asociaci&oacute;n</li>
+                            <li>Los miembros de la junta se&ntilde;alaron sus responsabilidades legales personales, reforzando su compromiso con una toma de decisiones responsable</li>
+                        </ul>
+
+                        <h3>Gesti&oacute;n de riesgos y planificaci&oacute;n financiera</h3>
+                        <ul>
+                            <li>Se discutieron posibles escenarios: pandemia, asesoramiento legal desfavorable, ventas de entradas extremadamente bajas</li>
+                            <li>Riesgo financiero gestionado mediante presupuestos escalonados: ajustando gastos seg&uacute;n las ventas reales de entradas</li>
+                            <li>Los hitos y puntos de decisi&oacute;n se definir&aacute;n la semana siguiente</li>
+                        </ul>
+
+                        <h3>Captaci&oacute;n de voluntarios</h3>
+                        <ul>
+                            <li>Enfoque en facilitar que los nuevos voluntarios encuentren roles</li>
+                            <li>Se est&aacute; actualizando la lista de ClickUp con descripciones de roles clicables</li>
+                            <li>La plataforma de voluntarios FIST se abrir&aacute; antes de la venta de entradas</li>
+                            <li>Come &amp; Play reduce las actividades del campamento para liberar capacidad para los turnos de NCA</li>
+                            <li>Se planea impulsar m&aacute;s inscripciones de voluntarios desde los campamentos</li>
+                        </ul>
+
+                        <h3>Marketing y difusi&oacute;n</h3>
+                        <ul>
+                            <li>Actualmente no hay presupuesto para marketing de pago</li>
+                            <li>Se anima a todos los participantes a actuar como embajadores</li>
+                            <li>Se sugiri&oacute; un sistema de referidos gamificado</li>
+                            <li>Competici&oacute;n de logotipo en curso; se sugirieron folletos creativos como herramientas de difusi&oacute;n comunitaria</li>
+                        </ul>
+
+                        <h3>Canales de comunicaci&oacute;n</h3>
+                        <ul>
+                            <li>NCA est&aacute; desarrollando canales de comunicaci&oacute;n propios</li>
+                            <li>Los grupos liderados por la comunidad est&aacute;n abiertos a publicaciones individuales</li>
+                            <li>Pepe publicar&aacute; directrices para los canales de comunicaci&oacute;n</li>
+                        </ul>
+
+                        <h3>Estatus oficial como Regional de Burning Man (Michelle)</h3>
+                        <ul>
+                            <li>El estatus de BM Regional ofrece beneficios que incluyen listado en la web, invitaciones al European Leadership Summit y apoyo potencial</li>
+                            <li>NCA est&aacute; explorando el estatus regional; algunos miembros asistir&aacute;n al ELS en abril</li>
+                        </ul>
+
+                        <h3>Transparencia y participaci&oacute;n comunitaria</h3>
+                        <ul>
+                            <li>Se destac&oacute; la fuerte participaci&oacute;n comunitaria: ~75 personas en las llamadas semanales con acceso real a la toma de decisiones</li>
+                            <li>Se discuti&oacute; la planificaci&oacute;n t&eacute;cnica: red el&eacute;ctrica unificada, optimizaci&oacute;n del montaje, comunicaci&oacute;n entre redes, documentaci&oacute;n de conocimientos</li>
+                        </ul>
+
+                        <h2>Acciones a realizar</h2>
+                        <ul>
+                            <li><strong>Pepe</strong> &mdash; Preparar un desglose detallado de las l&iacute;neas de trabajo legales con plazos para la pr&oacute;xima convocatoria</li>
+                            <li><strong>Pepe</strong> &mdash; Publicar las directrices de los canales de comunicaci&oacute;n</li>
+                            <li><strong>Daniela</strong> &mdash; Coordinar la reuni&oacute;n de voluntarios y resolver los problemas con ClickUp</li>
+                            <li><strong>Daniela</strong> &mdash; Definir los hitos de preproducci&oacute;n la semana siguiente</li>
+                            <li><strong>Daniel</strong> &mdash; Impulsar m&aacute;s voluntariado desde los campamentos</li>
+                            <li><strong>Ward</strong> &mdash; Organizar la reuni&oacute;n de Meta Leads para evaluar el nuevo emplazamiento</li>
+                            <li><strong>Board</strong> &mdash; Finalizar precios de entradas, cantidad y pol&iacute;tica de reembolso antes del lanzamiento</li>
+                        </ul>
+
+                        <h2>Pr&oacute;ximos pasos</h2>
+                        <ul>
+                            <li>Lanzamiento de venta de entradas (objetivo: semana siguiente)</li>
+                            <li>La votaci&oacute;n del nombre se cierra el 6 de marzo; se anunciar&aacute; el nombre elegido</li>
+                            <li>Reuni&oacute;n de Meta Leads para evaluar las opciones de emplazamiento</li>
+                            <li>Definici&oacute;n de hitos de preproducci&oacute;n y puntos de decisi&oacute;n</li>
+                            <li>Apertura de la plataforma de voluntarios FIST</li>
+                            <li>La junta finaliza el enfoque de presupuesto escalonado</li>
+                            <li>NCA explora el estatus oficial de BM Regional</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Overview</h2>
-                    <p>Fifth community meeting of the Nobodies Collective Asociaci&oacute;n (NCA). Updates on event site options, organisational infrastructure, pre-production readiness, ticket sales strategy, the board&rsquo;s Go/No-Go statement, volunteer recruitment, and marketing.</p>
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
 
-                    <h2>Key Topics</h2>
+                    <div class="attendees">
+                        <strong>Pr&eacute;sid&eacute;e par Daniel T., avec les membres du conseil, les responsables et ~75 membres de la communaut&eacute; au pic de participation</strong>
+                    </div>
 
-                    <h3>New Site Option (Pablo)</h3>
-                    <ul>
-                        <li>Presented a potential alternative site: larger area, lower cost (~10,000 EUR for 60% of the area)</li>
-                        <li>Would require significant infrastructure investment if used this year: lightning rods, land flattening, road construction, city planning adaptation, barrier and power system changes</li>
-                        <li>General consensus is to continue with the current site this year but hold a Meta Leads meeting to formally evaluate</li>
-                        <li>Future equipment purchases can be planned with the new site in mind</li>
-                    </ul>
+                    <div class="resource-links">
+                        <h3>Archives compl&egrave;tes</h3>
+                        <ul>
+                            <li><a href="2026-03-05-community-transcript.html">Transcription compl&egrave;te de la r&eacute;union</a></li>
+                            <li><a href="2026-03-05-community-chat.html">Journal du chat de la r&eacute;union</a></li>
+                            <li><a href="https://youtu.be/OWVelaMI4wg" target="_blank">Enregistrement vid&eacute;o</a></li>
+                        </ul>
+                    </div>
 
-                    <h3>Legal and Organisational Infrastructure (Pepe)</h3>
-                    <ul>
-                        <li>Legal workstreams in progress: intellectual property guidelines (framework in 2&ndash;3 weeks), GDPR compliance (Pepe appointed Data Protection Officer), contractual arrangements for ticketing</li>
-                        <li>Detailed breakdown with 3&ndash;6 month timelines to be presented at next community call</li>
-                    </ul>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/OWVelaMI4wg" title="Community Meeting - March 5, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
 
-                    <h3>Event Name</h3>
-                    <ul>
-                        <li>The community is choosing a name for the event (26 options, poll closing 6 March)</li>
-                        <li>Community members asked not to refer to the event using names belonging to other organisations</li>
-                    </ul>
+                    <div class="meeting-content">
+                        <h2>Aper&ccedil;u</h2>
+                        <p>Cinqui&egrave;me r&eacute;union communautaire de la Nobodies Collective Asociaci&oacute;n (NCA). Mises &agrave; jour sur les options de site pour l&rsquo;&eacute;v&eacute;nement, l&rsquo;infrastructure organisationnelle, l&rsquo;&eacute;tat de pr&eacute;paration de la pr&eacute;production, la strat&eacute;gie de vente de billets, la d&eacute;claration Go/No-Go du conseil, le recrutement de b&eacute;n&eacute;voles et le marketing.</p>
 
-                    <h3>Membership vs. Collaborators Clarification</h3>
-                    <ul>
-                        <li>Association members must sign up on the NCA website</li>
-                        <li>Barrio members only need basic contact information</li>
-                        <li>FAQ posted on Discord explaining differences between members, collaborators, and volunteers</li>
-                    </ul>
+                        <h2>Sujets principaux</h2>
 
-                    <h3>Shift to Pre-Production Mode (Daniela)</h3>
-                    <ul>
-                        <li>Symbolic shift from assessment phase to pre-production mode announced</li>
-                        <li>All leads and interested community members called upon to increase involvement</li>
-                        <li>Milestones and decision points to be defined the following week</li>
-                    </ul>
+                        <h3>Nouvelle option de site (Pablo)</h3>
+                        <ul>
+                            <li>Pr&eacute;sentation d&rsquo;un site alternatif potentiel : plus grande superficie, co&ucirc;t inf&eacute;rieur (~10 000 EUR pour 60 % de la surface)</li>
+                            <li>N&eacute;cessiterait un investissement important en infrastructures en cas d&rsquo;utilisation cette ann&eacute;e : paratonnerres, nivellement du terrain, construction de routes, adaptation du plan d&rsquo;urbanisme, modifications des syst&egrave;mes de barri&egrave;res et d&rsquo;&eacute;lectricit&eacute;</li>
+                            <li>Le consensus g&eacute;n&eacute;ral est de continuer avec le site actuel cette ann&eacute;e, mais d&rsquo;organiser une r&eacute;union Meta Leads pour une &eacute;valuation formelle</li>
+                            <li>Les futurs achats d&rsquo;&eacute;quipement peuvent &ecirc;tre planifi&eacute;s en tenant compte du nouveau site</li>
+                        </ul>
 
-                    <h3>Ticket Sales Strategy</h3>
-                    <ul>
-                        <li>Ticket launch targeted for the following week</li>
-                        <li>Urgency noted: competing events going on sale around the same time</li>
-                        <li>Relying on informal community networks for outreach</li>
-                        <li>Tiered pricing to incentivise early purchases being discussed but not finalised</li>
-                        <li>Organisation reserves the right to use tools like deadlines or caps if needed</li>
-                        <li>Refund policy for early buyers being developed, tied to ticketing milestones</li>
-                    </ul>
+                        <h3>Infrastructure juridique et organisationnelle (Pepe)</h3>
+                        <ul>
+                            <li>Chantiers juridiques en cours : directives de propri&eacute;t&eacute; intellectuelle (cadre dans 2&ndash;3 semaines), conformit&eacute; RGPD (Pepe d&eacute;sign&eacute; D&eacute;l&eacute;gu&eacute; &agrave; la protection des donn&eacute;es), accords contractuels pour la billetterie</li>
+                            <li>Un d&eacute;tail avec des calendriers de 3&ndash;6 mois sera pr&eacute;sent&eacute; lors du prochain appel communautaire</li>
+                        </ul>
 
-                    <h3>Go/No-Go Statement (Ben)</h3>
-                    <ul>
-                        <li>Board released a detailed statement on Discord</li>
-                        <li>Decision to proceed was not taken lightly; full range of community opinions seriously considered</li>
-                        <li>Moving ahead viewed as an opportunity to build strong foundations for the association</li>
-                        <li>Board members noted their personal legal stakes, reinforcing commitment to responsible decision-making</li>
-                    </ul>
+                        <h3>Nom de l&rsquo;&eacute;v&eacute;nement</h3>
+                        <ul>
+                            <li>La communaut&eacute; choisit un nom pour l&rsquo;&eacute;v&eacute;nement (26 options, vote cl&ocirc;turant le 6 mars)</li>
+                            <li>Il a &eacute;t&eacute; demand&eacute; aux membres de la communaut&eacute; de ne pas d&eacute;signer l&rsquo;&eacute;v&eacute;nement en utilisant des noms appartenant &agrave; d&rsquo;autres organisations</li>
+                        </ul>
 
-                    <h3>Risk Management and Financial Planning</h3>
-                    <ul>
-                        <li>Potential scenarios discussed: pandemic, adverse legal advice, extremely low ticket sales</li>
-                        <li>Financial risk managed through tiered budgeting: scaling expenses based on actual ticket sales</li>
-                        <li>Milestones and decision points being defined the following week</li>
-                    </ul>
+                        <h3>Clarification membres vs. collaborateurs</h3>
+                        <ul>
+                            <li>Les membres de l&rsquo;association doivent s&rsquo;inscrire sur le site web de NCA</li>
+                            <li>Les membres de barrio n&rsquo;ont besoin que d&rsquo;informations de contact de base</li>
+                            <li>Une FAQ a &eacute;t&eacute; publi&eacute;e sur Discord expliquant les diff&eacute;rences entre membres, collaborateurs et b&eacute;n&eacute;voles</li>
+                        </ul>
 
-                    <h3>Volunteer Recruitment</h3>
-                    <ul>
-                        <li>Focus on making it easier for new volunteers to find roles</li>
-                        <li>ClickUp list being updated with clickable role descriptions</li>
-                        <li>FIST volunteer platform to open before ticket sales</li>
-                        <li>Come &amp; Play downsizing camp activities to free capacity for NCA shifts</li>
-                        <li>Push planned for more volunteer sign-ups from camps</li>
-                    </ul>
+                        <h3>Passage en mode pr&eacute;production (Daniela)</h3>
+                        <ul>
+                            <li>Annonce du passage symbolique de la phase d&rsquo;&eacute;valuation au mode pr&eacute;production</li>
+                            <li>Tous les responsables et membres int&eacute;ress&eacute;s de la communaut&eacute; appel&eacute;s &agrave; s&rsquo;impliquer davantage</li>
+                            <li>Les jalons et points de d&eacute;cision seront d&eacute;finis la semaine suivante</li>
+                        </ul>
 
-                    <h3>Marketing and Outreach</h3>
-                    <ul>
-                        <li>No budget for paid marketing currently</li>
-                        <li>All participants encouraged to act as ambassadors</li>
-                        <li>Gamified referral system suggested</li>
-                        <li>Logo competition underway; creative flyers suggested as grassroots tools</li>
-                    </ul>
+                        <h3>Strat&eacute;gie de vente de billets</h3>
+                        <ul>
+                            <li>Lancement de la billetterie pr&eacute;vu pour la semaine suivante</li>
+                            <li>Urgence not&eacute;e : des &eacute;v&eacute;nements concurrents mettent en vente leurs billets aux m&ecirc;mes dates</li>
+                            <li>Diffusion via les r&eacute;seaux informels de la communaut&eacute;</li>
+                            <li>Un syst&egrave;me de tarification progressive pour encourager les achats anticip&eacute;s a &eacute;t&eacute; discut&eacute; mais pas finalis&eacute;</li>
+                            <li>L&rsquo;organisation se r&eacute;serve le droit d&rsquo;utiliser des outils comme des dates limites ou des plafonds si n&eacute;cessaire</li>
+                            <li>Une politique de remboursement pour les acheteurs anticip&eacute;s est en cours de d&eacute;veloppement, li&eacute;e aux jalons de billetterie</li>
+                        </ul>
 
-                    <h3>Communication Channels</h3>
-                    <ul>
-                        <li>NCA developing independent communication channels</li>
-                        <li>Community-led groups are fair game for individual posts</li>
-                        <li>Guidelines for communication channels being released by Pepe</li>
-                    </ul>
+                        <h3>D&eacute;claration Go/No-Go (Ben)</h3>
+                        <ul>
+                            <li>Le conseil a publi&eacute; une d&eacute;claration d&eacute;taill&eacute;e sur Discord</li>
+                            <li>La d&eacute;cision de poursuivre n&rsquo;a pas &eacute;t&eacute; prise &agrave; la l&eacute;g&egrave;re ; l&rsquo;ensemble des opinions de la communaut&eacute; a &eacute;t&eacute; s&eacute;rieusement pris en compte</li>
+                            <li>Aller de l&rsquo;avant est consid&eacute;r&eacute; comme une opportunit&eacute; de construire des bases solides pour l&rsquo;association</li>
+                            <li>Les membres du conseil ont soulign&eacute; leurs responsabilit&eacute;s juridiques personnelles, renfor&ccedil;ant leur engagement envers une prise de d&eacute;cision responsable</li>
+                        </ul>
 
-                    <h3>Official Burning Man Regional Status (Michelle)</h3>
-                    <ul>
-                        <li>BM Regional status offers benefits including website listing, European Leadership Summit invitations, and potential support</li>
-                        <li>NCA exploring regional status; some members attending ELS in April</li>
-                    </ul>
+                        <h3>Gestion des risques et planification financi&egrave;re</h3>
+                        <ul>
+                            <li>Sc&eacute;narios potentiels discut&eacute;s : pand&eacute;mie, avis juridique d&eacute;favorable, ventes de billets extr&ecirc;mement faibles</li>
+                            <li>Risque financier g&eacute;r&eacute; par un budget progressif : ajustement des d&eacute;penses en fonction des ventes r&eacute;elles de billets</li>
+                            <li>Les jalons et points de d&eacute;cision seront d&eacute;finis la semaine suivante</li>
+                        </ul>
 
-                    <h3>Transparency and Community Participation</h3>
-                    <ul>
-                        <li>Strong community engagement noted: ~75 people on weekly calls with real decision-making access</li>
-                        <li>Technical planning discussed: unified power grid, build optimisation, inter-grid communication, knowledge documentation</li>
-                    </ul>
+                        <h3>Recrutement de b&eacute;n&eacute;voles</h3>
+                        <ul>
+                            <li>Accent mis sur la facilitation de la recherche de r&ocirc;les pour les nouveaux b&eacute;n&eacute;voles</li>
+                            <li>La liste ClickUp est mise &agrave; jour avec des descriptions de r&ocirc;les cliquables</li>
+                            <li>La plateforme de b&eacute;n&eacute;voles FIST ouvrira avant la mise en vente des billets</li>
+                            <li>Come &amp; Play r&eacute;duit les activit&eacute;s du camp pour lib&eacute;rer de la capacit&eacute; pour les cr&eacute;neaux NCA</li>
+                            <li>Campagne pr&eacute;vue pour obtenir davantage d&rsquo;inscriptions de b&eacute;n&eacute;voles via les camps</li>
+                        </ul>
 
-                    <h2>Action Items</h2>
-                    <ul>
-                        <li><strong>Pepe</strong> &mdash; Prepare detailed legal workstreams breakdown with timelines for next call</li>
-                        <li><strong>Pepe</strong> &mdash; Release communication channel guidelines</li>
-                        <li><strong>Daniela</strong> &mdash; Coordinate volunteer meeting and resolve ClickUp issues</li>
-                        <li><strong>Daniela</strong> &mdash; Define pre-production milestones the following week</li>
-                        <li><strong>Daniel</strong> &mdash; Push for more volunteering from camps</li>
-                        <li><strong>Ward</strong> &mdash; Organise Meta Leads meeting to evaluate new site</li>
-                        <li><strong>Board</strong> &mdash; Finalise ticket pricing, quantity, and refund policy before launch</li>
-                    </ul>
+                        <h3>Marketing et diffusion</h3>
+                        <ul>
+                            <li>Aucun budget pour le marketing payant actuellement</li>
+                            <li>Tous les participants encourag&eacute;s &agrave; agir en tant qu&rsquo;ambassadeurs</li>
+                            <li>Un syst&egrave;me de parrainage ludique a &eacute;t&eacute; sugg&eacute;r&eacute;</li>
+                            <li>Concours de logo en cours ; des flyers cr&eacute;atifs sugg&eacute;r&eacute;s comme outils de communication locale</li>
+                        </ul>
 
-                    <h2>Next Steps</h2>
-                    <ul>
-                        <li>Ticket sales launch (target: following week)</li>
-                        <li>Name vote closes 6 March; chosen name to be announced</li>
-                        <li>Meta Leads meeting to evaluate site options</li>
-                        <li>Pre-production milestones and decision points defined</li>
-                        <li>FIST volunteer platform opens</li>
-                        <li>Board finalises tiered budgeting approach</li>
-                        <li>NCA explores official BM Regional status</li>
-                    </ul>
+                        <h3>Canaux de communication</h3>
+                        <ul>
+                            <li>NCA d&eacute;veloppe ses propres canaux de communication</li>
+                            <li>Les groupes anim&eacute;s par la communaut&eacute; sont ouverts aux publications individuelles</li>
+                            <li>Des directives pour les canaux de communication seront publi&eacute;es par Pepe</li>
+                        </ul>
+
+                        <h3>Statut officiel de r&eacute;gional Burning Man (Michelle)</h3>
+                        <ul>
+                            <li>Le statut de BM Regional offre des avantages, notamment le r&eacute;f&eacute;rencement sur le site web, des invitations au European Leadership Summit et un soutien potentiel</li>
+                            <li>NCA explore le statut r&eacute;gional ; certains membres participeront &agrave; l&rsquo;ELS en avril</li>
+                        </ul>
+
+                        <h3>Transparence et participation communautaire</h3>
+                        <ul>
+                            <li>Forte participation communautaire constat&eacute;e : ~75 personnes lors des appels hebdomadaires avec un acc&egrave;s r&eacute;el &agrave; la prise de d&eacute;cision</li>
+                            <li>Planification technique discut&eacute;e : r&eacute;seau &eacute;lectrique unifi&eacute;, optimisation du montage, communication inter-r&eacute;seaux, documentation des connaissances</li>
+                        </ul>
+
+                        <h2>Actions &agrave; r&eacute;aliser</h2>
+                        <ul>
+                            <li><strong>Pepe</strong> &mdash; Pr&eacute;parer un d&eacute;tail des chantiers juridiques avec des calendriers pour le prochain appel</li>
+                            <li><strong>Pepe</strong> &mdash; Publier les directives des canaux de communication</li>
+                            <li><strong>Daniela</strong> &mdash; Coordonner la r&eacute;union des b&eacute;n&eacute;voles et r&eacute;soudre les probl&egrave;mes ClickUp</li>
+                            <li><strong>Daniela</strong> &mdash; D&eacute;finir les jalons de pr&eacute;production la semaine suivante</li>
+                            <li><strong>Daniel</strong> &mdash; Encourager davantage de b&eacute;n&eacute;volat de la part des camps</li>
+                            <li><strong>Ward</strong> &mdash; Organiser la r&eacute;union Meta Leads pour &eacute;valuer le nouveau site</li>
+                            <li><strong>Board</strong> &mdash; Finaliser la tarification des billets, les quantit&eacute;s et la politique de remboursement avant le lancement</li>
+                        </ul>
+
+                        <h2>Prochaines &eacute;tapes</h2>
+                        <ul>
+                            <li>Lancement de la vente de billets (objectif : semaine suivante)</li>
+                            <li>Le vote pour le nom se cl&ocirc;ture le 6 mars ; le nom choisi sera annonc&eacute;</li>
+                            <li>R&eacute;union Meta Leads pour &eacute;valuer les options de site</li>
+                            <li>D&eacute;finition des jalons de pr&eacute;production et des points de d&eacute;cision</li>
+                            <li>Ouverture de la plateforme de b&eacute;n&eacute;voles FIST</li>
+                            <li>Le conseil finalise l&rsquo;approche de budg&eacute;tisation progressive</li>
+                            <li>NCA explore le statut officiel de BM Regional</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presieduta da Daniel T., con i membri del consiglio, i responsabili e ~75 membri della comunit&agrave; al momento di massima partecipazione</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archivi completi</h3>
+                        <ul>
+                            <li><a href="2026-03-05-community-transcript.html">Trascrizione completa della riunione</a></li>
+                            <li><a href="2026-03-05-community-chat.html">Registro della chat della riunione</a></li>
+                            <li><a href="https://youtu.be/OWVelaMI4wg" target="_blank">Registrazione video</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/OWVelaMI4wg" title="Community Meeting - March 5, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Panoramica</h2>
+                        <p>Quinta riunione comunitaria della Nobodies Collective Asociaci&oacute;n (NCA). Aggiornamenti sulle opzioni di sito per l&rsquo;evento, infrastruttura organizzativa, stato di preparazione della pre-produzione, strategia di vendita dei biglietti, la dichiarazione Go/No-Go del consiglio, reclutamento di volontari e marketing.</p>
+
+                        <h2>Temi principali</h2>
+
+                        <h3>Nuova opzione di sito (Pablo)</h3>
+                        <ul>
+                            <li>Presentato un potenziale sito alternativo: superficie maggiore, costo inferiore (~10.000 EUR per il 60% dell&rsquo;area)</li>
+                            <li>Richiederebbe un investimento significativo in infrastrutture se utilizzato quest&rsquo;anno: parafulmini, livellamento del terreno, costruzione di strade, adeguamento urbanistico, modifiche ai sistemi di barriere e alimentazione elettrica</li>
+                            <li>Il consenso generale &egrave; di continuare con il sito attuale quest&rsquo;anno, ma organizzare una riunione Meta Leads per una valutazione formale</li>
+                            <li>Gli acquisti futuri di attrezzature possono essere pianificati tenendo conto del nuovo sito</li>
+                        </ul>
+
+                        <h3>Infrastruttura legale e organizzativa (Pepe)</h3>
+                        <ul>
+                            <li>Attivit&agrave; legali in corso: linee guida sulla propriet&agrave; intellettuale (quadro in 2&ndash;3 settimane), conformit&agrave; al GDPR (Pepe nominato Responsabile della Protezione dei Dati), accordi contrattuali per la biglietteria</li>
+                            <li>Dettaglio con tempistiche di 3&ndash;6 mesi da presentare nella prossima chiamata comunitaria</li>
+                        </ul>
+
+                        <h3>Nome dell&rsquo;evento</h3>
+                        <ul>
+                            <li>La comunit&agrave; sta scegliendo un nome per l&rsquo;evento (26 opzioni, votazione in chiusura il 6 marzo)</li>
+                            <li>&Egrave; stato chiesto ai membri della comunit&agrave; di non riferirsi all&rsquo;evento utilizzando nomi appartenenti ad altre organizzazioni</li>
+                        </ul>
+
+                        <h3>Chiarimento membri vs. collaboratori</h3>
+                        <ul>
+                            <li>I membri dell&rsquo;associazione devono iscriversi sul sito web di NCA</li>
+                            <li>I membri del barrio necessitano solo di informazioni di contatto di base</li>
+                            <li>&Egrave; stata pubblicata una FAQ su Discord che spiega le differenze tra membri, collaboratori e volontari</li>
+                        </ul>
+
+                        <h3>Passaggio alla modalit&agrave; di pre-produzione (Daniela)</h3>
+                        <ul>
+                            <li>Annunciato il passaggio simbolico dalla fase di valutazione alla modalit&agrave; di pre-produzione</li>
+                            <li>Tutti i responsabili e i membri interessati della comunit&agrave; invitati ad aumentare il proprio coinvolgimento</li>
+                            <li>Le tappe e i punti decisionali saranno definiti la settimana successiva</li>
+                        </ul>
+
+                        <h3>Strategia di vendita dei biglietti</h3>
+                        <ul>
+                            <li>Lancio della vendita dei biglietti previsto per la settimana successiva</li>
+                            <li>Urgenza segnalata: eventi concorrenti mettono in vendita i biglietti nello stesso periodo</li>
+                            <li>Si fa affidamento sulle reti informali della comunit&agrave; per la diffusione</li>
+                            <li>Discusso un sistema di prezzi progressivi per incentivare gli acquisti anticipati, ma non finalizzato</li>
+                            <li>L&rsquo;organizzazione si riserva il diritto di utilizzare strumenti come scadenze o limiti se necessario</li>
+                            <li>Politica di rimborso per gli acquirenti anticipati in fase di sviluppo, legata alle tappe della biglietteria</li>
+                        </ul>
+
+                        <h3>Dichiarazione Go/No-Go (Ben)</h3>
+                        <ul>
+                            <li>Il consiglio ha pubblicato una dichiarazione dettagliata su Discord</li>
+                            <li>La decisione di procedere non &egrave; stata presa alla leggera; l&rsquo;intera gamma di opinioni della comunit&agrave; &egrave; stata seriamente considerata</li>
+                            <li>Procedere &egrave; visto come un&rsquo;opportunit&agrave; per costruire basi solide per l&rsquo;associazione</li>
+                            <li>I membri del consiglio hanno sottolineato le loro responsabilit&agrave; legali personali, rafforzando l&rsquo;impegno per un processo decisionale responsabile</li>
+                        </ul>
+
+                        <h3>Gestione dei rischi e pianificazione finanziaria</h3>
+                        <ul>
+                            <li>Scenari potenziali discussi: pandemia, parere legale sfavorevole, vendite di biglietti estremamente basse</li>
+                            <li>Rischio finanziario gestito attraverso un bilancio progressivo: adeguamento delle spese in base alle vendite effettive dei biglietti</li>
+                            <li>Le tappe e i punti decisionali saranno definiti la settimana successiva</li>
+                        </ul>
+
+                        <h3>Reclutamento di volontari</h3>
+                        <ul>
+                            <li>Attenzione rivolta a facilitare la ricerca di ruoli per i nuovi volontari</li>
+                            <li>La lista ClickUp viene aggiornata con descrizioni dei ruoli cliccabili</li>
+                            <li>La piattaforma per volontari FIST aprir&agrave; prima della vendita dei biglietti</li>
+                            <li>Come &amp; Play riduce le attivit&agrave; del campo per liberare capacit&agrave; per i turni NCA</li>
+                            <li>Prevista una campagna per ottenere pi&ugrave; iscrizioni di volontari dai campi</li>
+                        </ul>
+
+                        <h3>Marketing e diffusione</h3>
+                        <ul>
+                            <li>Attualmente nessun budget per il marketing a pagamento</li>
+                            <li>Tutti i partecipanti incoraggiati ad agire come ambasciatori</li>
+                            <li>Suggerito un sistema di referral gamificato</li>
+                            <li>Concorso per il logo in corso; suggeriti volantini creativi come strumenti di comunicazione locale</li>
+                        </ul>
+
+                        <h3>Canali di comunicazione</h3>
+                        <ul>
+                            <li>NCA sta sviluppando i propri canali di comunicazione</li>
+                            <li>I gruppi gestiti dalla comunit&agrave; sono aperti alle pubblicazioni individuali</li>
+                            <li>Pepe pubblicher&agrave; le linee guida per i canali di comunicazione</li>
+                        </ul>
+
+                        <h3>Status ufficiale di regionale Burning Man (Michelle)</h3>
+                        <ul>
+                            <li>Lo status di BM Regional offre vantaggi tra cui la presenza sul sito web, inviti all&rsquo;European Leadership Summit e potenziale supporto</li>
+                            <li>NCA sta esplorando lo status regionale; alcuni membri parteciperanno all&rsquo;ELS in aprile</li>
+                        </ul>
+
+                        <h3>Trasparenza e partecipazione comunitaria</h3>
+                        <ul>
+                            <li>Forte partecipazione comunitaria rilevata: ~75 persone nelle chiamate settimanali con accesso reale al processo decisionale</li>
+                            <li>Pianificazione tecnica discussa: rete elettrica unificata, ottimizzazione del montaggio, comunicazione tra reti, documentazione delle conoscenze</li>
+                        </ul>
+
+                        <h2>Azioni da intraprendere</h2>
+                        <ul>
+                            <li><strong>Pepe</strong> &mdash; Preparare un dettaglio delle attivit&agrave; legali con tempistiche per la prossima chiamata</li>
+                            <li><strong>Pepe</strong> &mdash; Pubblicare le linee guida dei canali di comunicazione</li>
+                            <li><strong>Daniela</strong> &mdash; Coordinare la riunione dei volontari e risolvere i problemi con ClickUp</li>
+                            <li><strong>Daniela</strong> &mdash; Definire le tappe di pre-produzione la settimana successiva</li>
+                            <li><strong>Daniel</strong> &mdash; Promuovere maggiore volontariato da parte dei campi</li>
+                            <li><strong>Ward</strong> &mdash; Organizzare la riunione Meta Leads per valutare il nuovo sito</li>
+                            <li><strong>Board</strong> &mdash; Finalizzare i prezzi dei biglietti, le quantit&agrave; e la politica di rimborso prima del lancio</li>
+                        </ul>
+
+                        <h2>Prossimi passi</h2>
+                        <ul>
+                            <li>Lancio della vendita dei biglietti (obiettivo: settimana successiva)</li>
+                            <li>La votazione per il nome si chiude il 6 marzo; il nome scelto sar&agrave; annunciato</li>
+                            <li>Riunione Meta Leads per valutare le opzioni di sito</li>
+                            <li>Definizione delle tappe di pre-produzione e dei punti decisionali</li>
+                            <li>Apertura della piattaforma per volontari FIST</li>
+                            <li>Il consiglio finalizza l&rsquo;approccio di bilancio progressivo</li>
+                            <li>NCA esplora lo status ufficiale di BM Regional</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Geleitet von Daniel T., mit Vorstandsmitgliedern, Bereichsverantwortlichen und ~75 Community-Mitgliedern bei maximaler Teilnahme</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Vollst&auml;ndige Aufzeichnungen</h3>
+                        <ul>
+                            <li><a href="2026-03-05-community-transcript.html">Vollst&auml;ndige Sitzungsmitschrift</a></li>
+                            <li><a href="2026-03-05-community-chat.html">Chat-Protokoll der Sitzung</a></li>
+                            <li><a href="https://youtu.be/OWVelaMI4wg" target="_blank">Videoaufzeichnung</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/OWVelaMI4wg" title="Community Meeting - March 5, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>&Uuml;berblick</h2>
+                        <p>F&uuml;nftes Community-Meeting der Nobodies Collective Asociaci&oacute;n (NCA). Aktualisierungen zu Standortoptionen f&uuml;r die Veranstaltung, organisatorischer Infrastruktur, Vorproduktionsbereitschaft, Ticketverkaufsstrategie, der Go/No-Go-Erkl&auml;rung des Vorstands, Freiwilligenrekrutierung und Marketing.</p>
+
+                        <h2>Hauptthemen</h2>
+
+                        <h3>Neue Standortoption (Pablo)</h3>
+                        <ul>
+                            <li>Vorstellung eines m&ouml;glichen alternativen Standorts: gr&ouml;&szlig;ere Fl&auml;che, geringere Kosten (~10.000 EUR f&uuml;r 60 % der Fl&auml;che)</li>
+                            <li>W&uuml;rde bei Nutzung in diesem Jahr erhebliche Infrastrukturinvestitionen erfordern: Blitzableiter, Gel&auml;ndenivellierung, Stra&szlig;enbau, st&auml;dtebauliche Anpassung, &Auml;nderungen an Absperrungs- und Stromsystemen</li>
+                            <li>Der allgemeine Konsens ist, dieses Jahr mit dem aktuellen Standort fortzufahren, aber ein Meta-Leads-Treffen zur formellen Bewertung abzuhalten</li>
+                            <li>K&uuml;nftige Ausr&uuml;stungsk&auml;ufe k&ouml;nnen unter Ber&uuml;cksichtigung des neuen Standorts geplant werden</li>
+                        </ul>
+
+                        <h3>Rechtliche und organisatorische Infrastruktur (Pepe)</h3>
+                        <ul>
+                            <li>Laufende rechtliche Arbeitsbereiche: Richtlinien zum geistigen Eigentum (Rahmenwerk in 2&ndash;3 Wochen), DSGVO-Konformit&auml;t (Pepe als Datenschutzbeauftragter ernannt), vertragliche Vereinbarungen f&uuml;r den Ticketverkauf</li>
+                            <li>Detaillierte Aufschl&uuml;sselung mit Zeitpl&auml;nen von 3&ndash;6 Monaten wird beim n&auml;chsten Community-Call vorgestellt</li>
+                        </ul>
+
+                        <h3>Name der Veranstaltung</h3>
+                        <ul>
+                            <li>Die Community w&auml;hlt einen Namen f&uuml;r die Veranstaltung (26 Optionen, Abstimmung endet am 6. M&auml;rz)</li>
+                            <li>Community-Mitglieder wurden gebeten, die Veranstaltung nicht mit Namen zu bezeichnen, die anderen Organisationen geh&ouml;ren</li>
+                        </ul>
+
+                        <h3>Kl&auml;rung Mitglieder vs. Mitarbeiter</h3>
+                        <ul>
+                            <li>Vereinsmitglieder m&uuml;ssen sich auf der NCA-Website registrieren</li>
+                            <li>Barrio-Mitglieder ben&ouml;tigen nur grundlegende Kontaktdaten</li>
+                            <li>Auf Discord wurde eine FAQ ver&ouml;ffentlicht, die die Unterschiede zwischen Mitgliedern, Mitarbeitern und Freiwilligen erkl&auml;rt</li>
+                        </ul>
+
+                        <h3>Wechsel in den Vorproduktionsmodus (Daniela)</h3>
+                        <ul>
+                            <li>Symbolischer Wechsel von der Bewertungsphase zum Vorproduktionsmodus angek&uuml;ndigt</li>
+                            <li>Alle Bereichsverantwortlichen und interessierten Community-Mitglieder aufgerufen, ihr Engagement zu erh&ouml;hen</li>
+                            <li>Meilensteine und Entscheidungspunkte werden in der folgenden Woche definiert</li>
+                        </ul>
+
+                        <h3>Ticketverkaufsstrategie</h3>
+                        <ul>
+                            <li>Ticketstart f&uuml;r die folgende Woche geplant</li>
+                            <li>Dringlichkeit festgestellt: konkurrierende Veranstaltungen gehen im gleichen Zeitraum in den Verkauf</li>
+                            <li>Verbreitung &uuml;ber informelle Community-Netzwerke</li>
+                            <li>Ein gestaffeltes Preissystem zur F&ouml;rderung von Fr&uuml;hk&auml;ufen wurde diskutiert, aber nicht finalisiert</li>
+                            <li>Die Organisation beh&auml;lt sich das Recht vor, bei Bedarf Instrumente wie Fristen oder Obergrenzen einzusetzen</li>
+                            <li>Eine R&uuml;ckerstattungsrichtlinie f&uuml;r Fr&uuml;hk&auml;ufer wird entwickelt, gekn&uuml;pft an Ticketverkaufsmeilensteine</li>
+                        </ul>
+
+                        <h3>Go/No-Go-Erkl&auml;rung (Ben)</h3>
+                        <ul>
+                            <li>Der Vorstand hat eine ausf&uuml;hrliche Erkl&auml;rung auf Discord ver&ouml;ffentlicht</li>
+                            <li>Die Entscheidung weiterzumachen wurde nicht leichtfertig getroffen; die gesamte Bandbreite der Community-Meinungen wurde ernsthaft ber&uuml;cksichtigt</li>
+                            <li>Das Weitermachen wird als Chance gesehen, solide Grundlagen f&uuml;r den Verein zu schaffen</li>
+                            <li>Vorstandsmitglieder wiesen auf ihre pers&ouml;nliche rechtliche Verantwortung hin und bekr&auml;ftigten ihr Engagement f&uuml;r verantwortungsvolle Entscheidungsfindung</li>
+                        </ul>
+
+                        <h3>Risikomanagement und Finanzplanung</h3>
+                        <ul>
+                            <li>M&ouml;gliche Szenarien diskutiert: Pandemie, ung&uuml;nstige Rechtsberatung, extrem niedrige Ticketverk&auml;ufe</li>
+                            <li>Finanzielles Risiko durch gestaffelte Budgetierung gesteuert: Anpassung der Ausgaben an die tats&auml;chlichen Ticketverk&auml;ufe</li>
+                            <li>Meilensteine und Entscheidungspunkte werden in der folgenden Woche definiert</li>
+                        </ul>
+
+                        <h3>Rekrutierung von Freiwilligen</h3>
+                        <ul>
+                            <li>Fokus darauf, es neuen Freiwilligen leichter zu machen, Rollen zu finden</li>
+                            <li>Die ClickUp-Liste wird mit klickbaren Rollenbeschreibungen aktualisiert</li>
+                            <li>Die FIST-Freiwilligenplattform wird vor dem Ticketverkauf ge&ouml;ffnet</li>
+                            <li>Come &amp; Play reduziert Camp-Aktivit&auml;ten, um Kapazit&auml;ten f&uuml;r NCA-Schichten freizumachen</li>
+                            <li>Kampagne f&uuml;r mehr Freiwilligenanmeldungen aus den Camps geplant</li>
+                        </ul>
+
+                        <h3>Marketing und &Ouml;ffentlichkeitsarbeit</h3>
+                        <ul>
+                            <li>Derzeit kein Budget f&uuml;r bezahltes Marketing</li>
+                            <li>Alle Teilnehmer ermutigt, als Botschafter zu agieren</li>
+                            <li>Gamifiziertes Empfehlungssystem vorgeschlagen</li>
+                            <li>Logowettbewerb l&auml;uft; kreative Flyer als Basiskommunikationsmittel vorgeschlagen</li>
+                        </ul>
+
+                        <h3>Kommunikationskan&auml;le</h3>
+                        <ul>
+                            <li>NCA entwickelt eigene Kommunikationskan&auml;le</li>
+                            <li>Von der Community geleitete Gruppen stehen f&uuml;r individuelle Beitr&auml;ge offen</li>
+                            <li>Richtlinien f&uuml;r Kommunikationskan&auml;le werden von Pepe ver&ouml;ffentlicht</li>
+                        </ul>
+
+                        <h3>Offizieller Burning Man Regional-Status (Michelle)</h3>
+                        <ul>
+                            <li>Der BM-Regional-Status bietet Vorteile wie Website-Listung, Einladungen zum European Leadership Summit und potenzielle Unterst&uuml;tzung</li>
+                            <li>NCA erkundet den Regional-Status; einige Mitglieder nehmen im April am ELS teil</li>
+                        </ul>
+
+                        <h3>Transparenz und Community-Beteiligung</h3>
+                        <ul>
+                            <li>Starke Community-Beteiligung festgestellt: ~75 Personen bei den w&ouml;chentlichen Calls mit echtem Zugang zur Entscheidungsfindung</li>
+                            <li>Technische Planung diskutiert: einheitliches Stromnetz, Aufbauoptimierung, Kommunikation zwischen Netzen, Wissensdokumentation</li>
+                        </ul>
+
+                        <h2>Aufgaben</h2>
+                        <ul>
+                            <li><strong>Pepe</strong> &mdash; Detaillierte Aufschl&uuml;sselung der rechtlichen Arbeitsbereiche mit Zeitpl&auml;nen f&uuml;r den n&auml;chsten Call vorbereiten</li>
+                            <li><strong>Pepe</strong> &mdash; Richtlinien f&uuml;r Kommunikationskan&auml;le ver&ouml;ffentlichen</li>
+                            <li><strong>Daniela</strong> &mdash; Freiwilligentreffen koordinieren und ClickUp-Probleme l&ouml;sen</li>
+                            <li><strong>Daniela</strong> &mdash; Vorproduktionsmeilensteine in der folgenden Woche definieren</li>
+                            <li><strong>Daniel</strong> &mdash; Mehr Freiwilligenarbeit aus den Camps f&ouml;rdern</li>
+                            <li><strong>Ward</strong> &mdash; Meta-Leads-Treffen zur Bewertung des neuen Standorts organisieren</li>
+                            <li><strong>Board</strong> &mdash; Ticketpreise, Mengen und R&uuml;ckerstattungsrichtlinie vor dem Start finalisieren</li>
+                        </ul>
+
+                        <h2>N&auml;chste Schritte</h2>
+                        <ul>
+                            <li>Start des Ticketverkaufs (Ziel: folgende Woche)</li>
+                            <li>Namensabstimmung endet am 6. M&auml;rz; der gew&auml;hlte Name wird bekanntgegeben</li>
+                            <li>Meta-Leads-Treffen zur Bewertung der Standortoptionen</li>
+                            <li>Festlegung der Vorproduktionsmeilensteine und Entscheidungspunkte</li>
+                            <li>Er&ouml;ffnung der FIST-Freiwilligenplattform</li>
+                            <li>Der Vorstand finalisiert den gestaffelten Budgetierungsansatz</li>
+                            <li>NCA erkundet den offiziellen BM-Regional-Status</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
 
     <div id="shared-footer" data-prefix=".."></div>
     <script src="../footer.js"></script>
+
+    <script>
+document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        var lang = this.dataset.lang;
+        document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+        var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+        if (target) target.classList.add('active');
+    });
+});
+    </script>
 
     <script src="../script.js"></script>
 </body>

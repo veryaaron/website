@@ -28,6 +28,12 @@
         .meeting-content th { background: var(--color-bg-secondary); font-weight: 600; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -46,84 +52,432 @@
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Present:</strong> Daniel, Peter, Pablo, Ward, Victor, Chris, Ben (limited time)
-                    <br><strong>Absent:</strong> Michelle
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Decisions</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Decision</th>
-                                <th>Context</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Register a short domain for the association</td>
-                                <td>Digital infrastructure priority</td>
-                            </tr>
-                            <tr>
-                                <td>Adopt Google Workspace for email and collaboration</td>
-                                <td>Paid plan if needed; association's primary platform</td>
-                            </tr>
-                            <tr>
-                                <td>Adopt Discord for board communication and coordination</td>
-                                <td>Community already uses Discord; server created</td>
-                            </tr>
-                            <tr>
-                                <td>Land acquisition is not an association agenda item</td>
-                                <td>Must remain a separate, arms-length entity to protect association assets</td>
-                            </tr>
-                            <tr>
-                                <td>Default to existing event site for 2026; new land for 2027</td>
-                                <td>Reduces risk and simplifies planning</td>
-                            </tr>
-                            <tr>
-                                <td>Board intent: "Make the 2026 event happen if we can fill necessary roles"</td>
-                                <td>Confirms the board's standing position on the event</td>
-                            </tr>
-                            <tr>
-                                <td>External relations work group formed (3 members)</td>
-                                <td>Peter, Pablo, Chris to draft operational framework</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                    <h2>Discussion Summary</h2>
+                    <div class="attendees">
+                        <strong>Present:</strong> Daniel, Peter, Pablo, Ward, Victor, Chris, Ben (limited time)
+                        <br><strong>Absent:</strong> Michelle
+                    </div>
 
-                    <h3>Digital Infrastructure</h3>
-                    <p>The board agreed on core platforms: Google Workspace for email/collaboration, a short domain for the association, and Discord for day-to-day communication. A blog platform for publishing meeting minutes was proposed for transparency. The use of version control for official documents was discussed but deferred to the Secretary.</p>
+                    <div class="meeting-content">
+                        <h2>Decisions</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decision</th>
+                                    <th>Context</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Register a short domain for the association</td>
+                                    <td>Digital infrastructure priority</td>
+                                </tr>
+                                <tr>
+                                    <td>Adopt Google Workspace for email and collaboration</td>
+                                    <td>Paid plan if needed; association&rsquo;s primary platform</td>
+                                </tr>
+                                <tr>
+                                    <td>Adopt Discord for board communication and coordination</td>
+                                    <td>Community already uses Discord; server created</td>
+                                </tr>
+                                <tr>
+                                    <td>Land acquisition is not an association agenda item</td>
+                                    <td>Must remain a separate, arms-length entity to protect association assets</td>
+                                </tr>
+                                <tr>
+                                    <td>Default to existing event site for 2026; new land for 2027</td>
+                                    <td>Reduces risk and simplifies planning</td>
+                                </tr>
+                                <tr>
+                                    <td>Board intent: &ldquo;Make the 2026 event happen if we can fill necessary roles&rdquo;</td>
+                                    <td>Confirms the board&rsquo;s standing position on the event</td>
+                                </tr>
+                                <tr>
+                                    <td>External relations work group formed (3 members)</td>
+                                    <td>Peter, Pablo, Chris to draft operational framework</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                    <h3>Land Acquisition</h3>
-                    <p>A request was made for funds to engage lawyers for a land reservation agreement. The board determined that the land project must remain legally separate from the association to protect against potential claims. The board's position: the 2026 event will use the existing site, with new land infrastructure targeted for 2027.</p>
+                        <h2>Discussion Summary</h2>
 
-                    <h3>Event 2026</h3>
-                    <p>The board affirmed its intent to hold the event in 2026, contingent on filling necessary operational roles. Discussion included concerns about premature announcements before the association has a bank account and hired staff. The board agreed on cautious, positive communication.</p>
+                        <h3>Digital Infrastructure</h3>
+                        <p>The board agreed on core platforms: Google Workspace for email/collaboration, a short domain for the association, and Discord for day-to-day communication. A blog platform for publishing meeting minutes was proposed for transparency. The use of version control for official documents was discussed but deferred to the Secretary.</p>
 
-                    <h3>Statutes & External Relations</h3>
-                    <p>Statutes are nearly complete - final legal checks required, followed by signature logistics. The external relations work group (3 members) was formed to manage discussions with third parties on operational matters.</p>
+                        <h3>Land Acquisition</h3>
+                        <p>A request was made for funds to engage lawyers for a land reservation agreement. The board determined that the land project must remain legally separate from the association to protect against potential claims. The board&rsquo;s position: the 2026 event will use the existing site, with new land infrastructure targeted for 2027.</p>
 
-                    <h3>Event Operations Staffing</h3>
-                    <p>An experienced event operations coordinator is available and was identified as key for pre-event logistics. Legal review of their engagement status (freelancer vs. employee) is underway.</p>
+                        <h3>Event 2026</h3>
+                        <p>The board affirmed its intent to hold the event in 2026, contingent on filling necessary operational roles. Discussion included concerns about premature announcements before the association has a bank account and hired staff. The board agreed on cautious, positive communication.</p>
 
-                    <h2>Action Items</h2>
-                    <ul>
-                        <li><strong>Daniel:</strong> Confirm version control for record-keeping with Secretary</li>
-                        <li><strong>Pablo:</strong> Investigate legal status of engaging operations coordinator</li>
-                        <li><strong>Peter, Pablo, Chris:</strong> Draft operational framework for external discussions</li>
-                        <li><strong>Peter, Pablo:</strong> Finalize statutes and coordinate signature logistics</li>
-                    </ul>
+                        <h3>Statutes &amp; External Relations</h3>
+                        <p>Statutes are nearly complete &mdash; final legal checks required, followed by signature logistics. The external relations work group (3 members) was formed to manage discussions with third parties on operational matters.</p>
 
-                    <h2>Open Items for Future Meetings</h2>
-                    <ul>
-                        <li>Version control for official documents: Secretary's decision</li>
-                        <li>Voting tool: tabled until specific need arises</li>
-                        <li>Signature logistics: digital vs. physical signing</li>
-                    </ul>
+                        <h3>Event Operations Staffing</h3>
+                        <p>An experienced event operations coordinator is available and was identified as key for pre-event logistics. Legal review of their engagement status (freelancer vs. employee) is underway.</p>
+
+                        <h2>Action Items</h2>
+                        <ul>
+                            <li><strong>Daniel:</strong> Confirm version control for record-keeping with Secretary</li>
+                            <li><strong>Pablo:</strong> Investigate legal status of engaging operations coordinator</li>
+                            <li><strong>Peter, Pablo, Chris:</strong> Draft operational framework for external discussions</li>
+                            <li><strong>Peter, Pablo:</strong> Finalize statutes and coordinate signature logistics</li>
+                        </ul>
+
+                        <h2>Open Items for Future Meetings</h2>
+                        <ul>
+                            <li>Version control for official documents: Secretary&rsquo;s decision</li>
+                            <li>Voting tool: tabled until specific need arises</li>
+                            <li>Signature logistics: digital vs. physical signing</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Presentes:</strong> Daniel, Peter, Pablo, Ward, Victor, Chris, Ben (tiempo limitado)
+                        <br><strong>Ausente:</strong> Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisiones</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decisi&oacute;n</th>
+                                    <th>Contexto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Registrar un dominio corto para la asociaci&oacute;n</td>
+                                    <td>Prioridad de infraestructura digital</td>
+                                </tr>
+                                <tr>
+                                    <td>Adoptar Google Workspace para correo electr&oacute;nico y colaboraci&oacute;n</td>
+                                    <td>Plan de pago si es necesario; plataforma principal de la asociaci&oacute;n</td>
+                                </tr>
+                                <tr>
+                                    <td>Adoptar Discord para la comunicaci&oacute;n y coordinaci&oacute;n de la junta</td>
+                                    <td>La comunidad ya utiliza Discord; servidor creado</td>
+                                </tr>
+                                <tr>
+                                    <td>La adquisici&oacute;n de terrenos no es un punto de la agenda de la asociaci&oacute;n</td>
+                                    <td>Debe mantenerse como una entidad separada e independiente para proteger los activos de la asociaci&oacute;n</td>
+                                </tr>
+                                <tr>
+                                    <td>Usar el emplazamiento existente para el evento de 2026; nuevo terreno para 2027</td>
+                                    <td>Reduce el riesgo y simplifica la planificaci&oacute;n</td>
+                                </tr>
+                                <tr>
+                                    <td>Intenci&oacute;n de la junta: &laquo;Hacer que el evento de 2026 se realice si podemos cubrir los roles necesarios&raquo;</td>
+                                    <td>Confirma la posici&oacute;n permanente de la junta sobre el evento</td>
+                                </tr>
+                                <tr>
+                                    <td>Grupo de trabajo de relaciones externas formado (3 miembros)</td>
+                                    <td>Peter, Pablo, Chris elaborar&aacute;n el marco operativo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Resumen de la Discusi&oacute;n</h2>
+
+                        <h3>Infraestructura Digital</h3>
+                        <p>La junta acord&oacute; las plataformas principales: Google Workspace para correo electr&oacute;nico y colaboraci&oacute;n, un dominio corto para la asociaci&oacute;n y Discord para la comunicaci&oacute;n diaria. Se propuso una plataforma de blog para publicar las actas de las reuniones en aras de la transparencia. Se discuti&oacute; el uso de control de versiones para documentos oficiales, pero se dej&oacute; a decisi&oacute;n del Secretario.</p>
+
+                        <h3>Adquisici&oacute;n de Terrenos</h3>
+                        <p>Se solicit&oacute; fondos para contratar abogados para un acuerdo de reserva de terreno. La junta determin&oacute; que el proyecto de terreno debe mantenerse legalmente separado de la asociaci&oacute;n para protegerla de posibles reclamaciones. Posici&oacute;n de la junta: el evento de 2026 utilizar&aacute; el emplazamiento existente, con nueva infraestructura de terreno prevista para 2027.</p>
+
+                        <h3>Evento 2026</h3>
+                        <p>La junta afirm&oacute; su intenci&oacute;n de celebrar el evento en 2026, supeditado a cubrir los roles operativos necesarios. La discusi&oacute;n incluy&oacute; preocupaciones sobre anuncios prematuros antes de que la asociaci&oacute;n tenga una cuenta bancaria y personal contratado. La junta acord&oacute; una comunicaci&oacute;n cautelosa y positiva.</p>
+
+                        <h3>Estatutos y Relaciones Externas</h3>
+                        <p>Los estatutos est&aacute;n casi completos &mdash; se requieren las revisiones legales finales, seguidas de la log&iacute;stica de firmas. Se form&oacute; el grupo de trabajo de relaciones externas (3 miembros) para gestionar las discusiones con terceros sobre asuntos operativos.</p>
+
+                        <h3>Personal de Operaciones del Evento</h3>
+                        <p>Un coordinador de operaciones de eventos con experiencia est&aacute; disponible y fue identificado como clave para la log&iacute;stica previa al evento. La revisi&oacute;n legal de su situaci&oacute;n contractual (aut&oacute;nomo vs. empleado) est&aacute; en curso.</p>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <ul>
+                            <li><strong>Daniel:</strong> Confirmar el control de versiones para el registro de documentos con el Secretario</li>
+                            <li><strong>Pablo:</strong> Investigar la situaci&oacute;n legal de la contrataci&oacute;n del coordinador de operaciones</li>
+                            <li><strong>Peter, Pablo, Chris:</strong> Elaborar el marco operativo para las discusiones externas</li>
+                            <li><strong>Peter, Pablo:</strong> Finalizar los estatutos y coordinar la log&iacute;stica de firmas</li>
+                        </ul>
+
+                        <h2>Puntos Abiertos para Futuras Reuniones</h2>
+                        <ul>
+                            <li>Control de versiones para documentos oficiales: decisi&oacute;n del Secretario</li>
+                            <li>Herramienta de votaci&oacute;n: aplazado hasta que surja una necesidad espec&iacute;fica</li>
+                            <li>Log&iacute;stica de firmas: firma digital vs. f&iacute;sica</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sents :</strong> Daniel, Peter, Pablo, Ward, Victor, Chris, Ben (temps limit&eacute;)
+                        <br><strong>Absent :</strong> Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>D&eacute;cisions</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>D&eacute;cision</th>
+                                    <th>Contexte</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Enregistrer un domaine court pour l&rsquo;association</td>
+                                    <td>Priorit&eacute; d&rsquo;infrastructure num&eacute;rique</td>
+                                </tr>
+                                <tr>
+                                    <td>Adopter Google Workspace pour le courrier &eacute;lectronique et la collaboration</td>
+                                    <td>Plan payant si n&eacute;cessaire ; plateforme principale de l&rsquo;association</td>
+                                </tr>
+                                <tr>
+                                    <td>Adopter Discord pour la communication et la coordination du conseil</td>
+                                    <td>La communaut&eacute; utilise d&eacute;j&agrave; Discord ; serveur cr&eacute;&eacute;</td>
+                                </tr>
+                                <tr>
+                                    <td>L&rsquo;acquisition de terrain n&rsquo;est pas un point de l&rsquo;ordre du jour de l&rsquo;association</td>
+                                    <td>Doit rester une entit&eacute; s&eacute;par&eacute;e et ind&eacute;pendante pour prot&eacute;ger les actifs de l&rsquo;association</td>
+                                </tr>
+                                <tr>
+                                    <td>Utiliser le site existant pour l&rsquo;&eacute;v&eacute;nement 2026 ; nouveau terrain pour 2027</td>
+                                    <td>R&eacute;duit le risque et simplifie la planification</td>
+                                </tr>
+                                <tr>
+                                    <td>Intention du conseil : &laquo; Faire en sorte que l&rsquo;&eacute;v&eacute;nement 2026 ait lieu si nous pouvons pourvoir les r&ocirc;les n&eacute;cessaires &raquo;</td>
+                                    <td>Confirme la position permanente du conseil sur l&rsquo;&eacute;v&eacute;nement</td>
+                                </tr>
+                                <tr>
+                                    <td>Groupe de travail sur les relations ext&eacute;rieures form&eacute; (3 membres)</td>
+                                    <td>Peter, Pablo, Chris r&eacute;digeront le cadre op&eacute;rationnel</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>R&eacute;sum&eacute; des Discussions</h2>
+
+                        <h3>Infrastructure Num&eacute;rique</h3>
+                        <p>Le conseil a convenu des plateformes principales : Google Workspace pour le courrier &eacute;lectronique et la collaboration, un domaine court pour l&rsquo;association et Discord pour la communication quotidienne. Une plateforme de blog pour la publication des proc&egrave;s-verbaux a &eacute;t&eacute; propos&eacute;e pour la transparence. L&rsquo;utilisation du contr&ocirc;le de version pour les documents officiels a &eacute;t&eacute; discut&eacute;e mais d&eacute;f&eacute;r&eacute;e au Secr&eacute;taire.</p>
+
+                        <h3>Acquisition de Terrain</h3>
+                        <p>Une demande de fonds a &eacute;t&eacute; faite pour engager des avocats pour un accord de r&eacute;servation de terrain. Le conseil a d&eacute;termin&eacute; que le projet de terrain doit rester juridiquement s&eacute;par&eacute; de l&rsquo;association pour la prot&eacute;ger contre d&rsquo;&eacute;ventuelles r&eacute;clamations. Position du conseil : l&rsquo;&eacute;v&eacute;nement 2026 utilisera le site existant, avec une nouvelle infrastructure de terrain vis&eacute;e pour 2027.</p>
+
+                        <h3>&Eacute;v&eacute;nement 2026</h3>
+                        <p>Le conseil a affirm&eacute; son intention d&rsquo;organiser l&rsquo;&eacute;v&eacute;nement en 2026, sous r&eacute;serve de pourvoir les r&ocirc;les op&eacute;rationnels n&eacute;cessaires. La discussion a inclus des pr&eacute;occupations concernant des annonces pr&eacute;matur&eacute;es avant que l&rsquo;association ne dispose d&rsquo;un compte bancaire et de personnel embauch&eacute;. Le conseil a convenu d&rsquo;une communication prudente et positive.</p>
+
+                        <h3>Statuts et Relations Ext&eacute;rieures</h3>
+                        <p>Les statuts sont presque complets &mdash; les v&eacute;rifications juridiques finales sont n&eacute;cessaires, suivies de la logistique des signatures. Le groupe de travail sur les relations ext&eacute;rieures (3 membres) a &eacute;t&eacute; form&eacute; pour g&eacute;rer les discussions avec des tiers sur des questions op&eacute;rationnelles.</p>
+
+                        <h3>Personnel des Op&eacute;rations &Eacute;v&eacute;nementielles</h3>
+                        <p>Un coordinateur exp&eacute;riment&eacute; des op&eacute;rations &eacute;v&eacute;nementielles est disponible et a &eacute;t&eacute; identifi&eacute; comme essentiel pour la logistique pr&eacute;-&eacute;v&eacute;nement. L&rsquo;examen juridique de son statut d&rsquo;engagement (ind&eacute;pendant vs. salari&eacute;) est en cours.</p>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <ul>
+                            <li><strong>Daniel :</strong> Confirmer le contr&ocirc;le de version pour la tenue des archives avec le Secr&eacute;taire</li>
+                            <li><strong>Pablo :</strong> Examiner le statut juridique de l&rsquo;engagement du coordinateur des op&eacute;rations</li>
+                            <li><strong>Peter, Pablo, Chris :</strong> R&eacute;diger le cadre op&eacute;rationnel pour les discussions externes</li>
+                            <li><strong>Peter, Pablo :</strong> Finaliser les statuts et coordonner la logistique des signatures</li>
+                        </ul>
+
+                        <h2>Points Ouverts pour les Prochaines R&eacute;unions</h2>
+                        <ul>
+                            <li>Contr&ocirc;le de version pour les documents officiels : d&eacute;cision du Secr&eacute;taire</li>
+                            <li>Outil de vote : report&eacute; jusqu&rsquo;&agrave; ce qu&rsquo;un besoin sp&eacute;cifique se pr&eacute;sente</li>
+                            <li>Logistique des signatures : signature num&eacute;rique vs. physique</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presenti:</strong> Daniel, Peter, Pablo, Ward, Victor, Chris, Ben (tempo limitato)
+                        <br><strong>Assente:</strong> Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisioni</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decisione</th>
+                                    <th>Contesto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Registrare un dominio breve per l&rsquo;associazione</td>
+                                    <td>Priorit&agrave; di infrastruttura digitale</td>
+                                </tr>
+                                <tr>
+                                    <td>Adottare Google Workspace per email e collaborazione</td>
+                                    <td>Piano a pagamento se necessario; piattaforma principale dell&rsquo;associazione</td>
+                                </tr>
+                                <tr>
+                                    <td>Adottare Discord per la comunicazione e il coordinamento del consiglio</td>
+                                    <td>La comunit&agrave; utilizza gi&agrave; Discord; server creato</td>
+                                </tr>
+                                <tr>
+                                    <td>L&rsquo;acquisizione di terreni non &egrave; un punto all&rsquo;ordine del giorno dell&rsquo;associazione</td>
+                                    <td>Deve rimanere un&rsquo;entit&agrave; separata e indipendente per proteggere gli asset dell&rsquo;associazione</td>
+                                </tr>
+                                <tr>
+                                    <td>Utilizzare il sito esistente per l&rsquo;evento 2026; nuovo terreno per il 2027</td>
+                                    <td>Riduce il rischio e semplifica la pianificazione</td>
+                                </tr>
+                                <tr>
+                                    <td>Intenzione del consiglio: &ldquo;Realizzare l&rsquo;evento 2026 se riusciamo a coprire i ruoli necessari&rdquo;</td>
+                                    <td>Conferma la posizione permanente del consiglio sull&rsquo;evento</td>
+                                </tr>
+                                <tr>
+                                    <td>Gruppo di lavoro per le relazioni esterne formato (3 membri)</td>
+                                    <td>Peter, Pablo, Chris redigeranno il quadro operativo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Riepilogo della Discussione</h2>
+
+                        <h3>Infrastruttura Digitale</h3>
+                        <p>Il consiglio ha concordato sulle piattaforme principali: Google Workspace per email e collaborazione, un dominio breve per l&rsquo;associazione e Discord per la comunicazione quotidiana. &Egrave; stata proposta una piattaforma blog per la pubblicazione dei verbali delle riunioni a fini di trasparenza. L&rsquo;uso del controllo di versione per i documenti ufficiali &egrave; stato discusso ma rinviato al Segretario.</p>
+
+                        <h3>Acquisizione di Terreni</h3>
+                        <p>&Egrave; stata fatta una richiesta di fondi per ingaggiare avvocati per un accordo di prenotazione di terreno. Il consiglio ha stabilito che il progetto del terreno deve rimanere giuridicamente separato dall&rsquo;associazione per proteggerla da potenziali rivendicazioni. Posizione del consiglio: l&rsquo;evento 2026 utilizzer&agrave; il sito esistente, con una nuova infrastruttura di terreno prevista per il 2027.</p>
+
+                        <h3>Evento 2026</h3>
+                        <p>Il consiglio ha affermato la propria intenzione di organizzare l&rsquo;evento nel 2026, subordinatamente alla copertura dei ruoli operativi necessari. La discussione ha incluso preoccupazioni riguardo ad annunci prematuri prima che l&rsquo;associazione disponga di un conto bancario e di personale assunto. Il consiglio ha concordato una comunicazione prudente e positiva.</p>
+
+                        <h3>Statuto e Relazioni Esterne</h3>
+                        <p>Lo statuto &egrave; quasi completo &mdash; sono necessarie le verifiche legali finali, seguite dalla logistica delle firme. Il gruppo di lavoro per le relazioni esterne (3 membri) &egrave; stato formato per gestire le discussioni con terze parti su questioni operative.</p>
+
+                        <h3>Personale per le Operazioni dell&rsquo;Evento</h3>
+                        <p>Un coordinatore esperto delle operazioni per eventi &egrave; disponibile ed &egrave; stato identificato come fondamentale per la logistica pre-evento. La revisione legale del suo stato contrattuale (libero professionista vs. dipendente) &egrave; in corso.</p>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <ul>
+                            <li><strong>Daniel:</strong> Confermare il controllo di versione per la tenuta degli archivi con il Segretario</li>
+                            <li><strong>Pablo:</strong> Esaminare lo stato giuridico dell&rsquo;ingaggio del coordinatore delle operazioni</li>
+                            <li><strong>Peter, Pablo, Chris:</strong> Redigere il quadro operativo per le discussioni esterne</li>
+                            <li><strong>Peter, Pablo:</strong> Finalizzare lo statuto e coordinare la logistica delle firme</li>
+                        </ul>
+
+                        <h2>Punti Aperti per le Prossime Riunioni</h2>
+                        <ul>
+                            <li>Controllo di versione per i documenti ufficiali: decisione del Segretario</li>
+                            <li>Strumento di voto: rinviato fino a quando non sorga un&rsquo;esigenza specifica</li>
+                            <li>Logistica delle firme: firma digitale vs. fisica</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesend:</strong> Daniel, Peter, Pablo, Ward, Victor, Chris, Ben (begrenzte Zeit)
+                        <br><strong>Abwesend:</strong> Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Beschl&uuml;sse</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Beschluss</th>
+                                    <th>Kontext</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Eine kurze Domain f&uuml;r den Verein registrieren</td>
+                                    <td>Priorit&auml;t der digitalen Infrastruktur</td>
+                                </tr>
+                                <tr>
+                                    <td>Google Workspace f&uuml;r E-Mail und Zusammenarbeit einf&uuml;hren</td>
+                                    <td>Bezahlter Plan falls n&ouml;tig; Hauptplattform des Vereins</td>
+                                </tr>
+                                <tr>
+                                    <td>Discord f&uuml;r die Kommunikation und Koordination des Vorstands einf&uuml;hren</td>
+                                    <td>Die Gemeinschaft nutzt bereits Discord; Server erstellt</td>
+                                </tr>
+                                <tr>
+                                    <td>Grundst&uuml;ckserwerb ist kein Tagesordnungspunkt des Vereins</td>
+                                    <td>Muss als separate, unabh&auml;ngige Einheit bestehen bleiben, um die Verm&ouml;genswerte des Vereins zu sch&uuml;tzen</td>
+                                </tr>
+                                <tr>
+                                    <td>Bestehenden Veranstaltungsort f&uuml;r 2026 nutzen; neues Grundst&uuml;ck f&uuml;r 2027</td>
+                                    <td>Reduziert das Risiko und vereinfacht die Planung</td>
+                                </tr>
+                                <tr>
+                                    <td>Absicht des Vorstands: &bdquo;Die Veranstaltung 2026 durchf&uuml;hren, wenn wir die notwendigen Rollen besetzen k&ouml;nnen&ldquo;</td>
+                                    <td>Best&auml;tigt die st&auml;ndige Position des Vorstands zur Veranstaltung</td>
+                                </tr>
+                                <tr>
+                                    <td>Arbeitsgruppe f&uuml;r Beziehungen nach au&szlig;en gebildet (3 Mitglieder)</td>
+                                    <td>Peter, Pablo, Chris werden den operativen Rahmen entwerfen</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Zusammenfassung der Diskussion</h2>
+
+                        <h3>Digitale Infrastruktur</h3>
+                        <p>Der Vorstand einigte sich auf die Kernplattformen: Google Workspace f&uuml;r E-Mail und Zusammenarbeit, eine kurze Domain f&uuml;r den Verein und Discord f&uuml;r die t&auml;gliche Kommunikation. Eine Blog-Plattform zur Ver&ouml;ffentlichung von Sitzungsprotokollen wurde f&uuml;r die Transparenz vorgeschlagen. Die Nutzung von Versionskontrolle f&uuml;r offizielle Dokumente wurde besprochen, aber an den Sekret&auml;r verwiesen.</p>
+
+                        <h3>Grundst&uuml;ckserwerb</h3>
+                        <p>Es wurde eine Anfrage nach Mitteln gestellt, um Anw&auml;lte f&uuml;r einen Grundst&uuml;cksreservierungsvertrag zu beauftragen. Der Vorstand stellte fest, dass das Grundst&uuml;cksprojekt rechtlich vom Verein getrennt bleiben muss, um ihn vor m&ouml;glichen Anspr&uuml;chen zu sch&uuml;tzen. Position des Vorstands: Die Veranstaltung 2026 wird den bestehenden Standort nutzen, mit neuer Grundst&uuml;cksinfrastruktur f&uuml;r 2027 geplant.</p>
+
+                        <h3>Veranstaltung 2026</h3>
+                        <p>Der Vorstand bekr&auml;ftigte seine Absicht, die Veranstaltung 2026 abzuhalten, vorbehaltlich der Besetzung der notwendigen operativen Rollen. Die Diskussion umfasste Bedenken bez&uuml;glich verfruhter Ank&uuml;ndigungen, bevor der Verein &uuml;ber ein Bankkonto und eingestelltes Personal verf&uuml;gt. Der Vorstand einigte sich auf eine vorsichtige, positive Kommunikation.</p>
+
+                        <h3>Satzung und Au&szlig;enbeziehungen</h3>
+                        <p>Die Satzung ist nahezu fertiggestellt &mdash; abschlie&szlig;ende rechtliche Pr&uuml;fungen sind erforderlich, gefolgt von der Logistik der Unterzeichnung. Die Arbeitsgruppe f&uuml;r Au&szlig;enbeziehungen (3 Mitglieder) wurde gebildet, um Gespr&auml;che mit Dritten &uuml;ber operative Angelegenheiten zu f&uuml;hren.</p>
+
+                        <h3>Personal f&uuml;r den Veranstaltungsbetrieb</h3>
+                        <p>Ein erfahrener Koordinator f&uuml;r den Veranstaltungsbetrieb steht zur Verf&uuml;gung und wurde als Schl&uuml;sselperson f&uuml;r die Logistik vor der Veranstaltung identifiziert. Die rechtliche Pr&uuml;fung seines Besch&auml;ftigungsstatus (Freiberufler vs. Angestellter) ist im Gange.</p>
+
+                        <h2>Aktionspunkte</h2>
+                        <ul>
+                            <li><strong>Daniel:</strong> Versionskontrolle f&uuml;r die Aktenf&uuml;hrung mit dem Sekret&auml;r best&auml;tigen</li>
+                            <li><strong>Pablo:</strong> Rechtsstatus der Beauftragung des Betriebskoordinators untersuchen</li>
+                            <li><strong>Peter, Pablo, Chris:</strong> Operativen Rahmen f&uuml;r externe Gespr&auml;che entwerfen</li>
+                            <li><strong>Peter, Pablo:</strong> Satzung fertigstellen und Logistik der Unterzeichnung koordinieren</li>
+                        </ul>
+
+                        <h2>Offene Punkte f&uuml;r zuk&uuml;nftige Sitzungen</h2>
+                        <ul>
+                            <li>Versionskontrolle f&uuml;r offizielle Dokumente: Entscheidung des Sekret&auml;rs</li>
+                            <li>Abstimmungstool: vertagt, bis ein konkreter Bedarf entsteht</li>
+                            <li>Logistik der Unterzeichnung: digitale vs. physische Unterschrift</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -132,5 +486,18 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

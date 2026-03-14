@@ -28,6 +28,12 @@
         .meeting-content th { background: var(--color-bg-secondary); font-weight: 600; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -47,93 +53,466 @@
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Present:</strong> Daniel, Chris, Pablo, Peter, Ben, Ward, Victor, Michelle
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Decisions</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Decision</th>
-                                <th>Context</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Statutes amendment threshold: 50% quorum + 2/3 majority</td>
-                                <td>Balanced accessibility with protection against hasty changes</td>
-                            </tr>
-                            <tr>
-                                <td>General Assembly lead time reduced to 15 days</td>
-                                <td>Allows flexibility while ensuring advance notice and agenda distribution</td>
-                            </tr>
-                            <tr>
-                                <td>General Assembly may choose its own meeting leader</td>
-                                <td>Provides a check on presidential authority</td>
-                            </tr>
-                            <tr>
-                                <td>Budget provision retained as written</td>
-                                <td>Assembly approval of accounts releases the board from liability</td>
-                            </tr>
-                            <tr>
-                                <td>Board affirms intent to pursue the 2026 event</td>
-                                <td>Unanimous support; formal feasibility assessment to follow</td>
-                            </tr>
-                            <tr>
-                                <td>Twice-weekly board meetings for remainder of January</td>
-                                <td>High workload during formation period requires increased meeting cadence</td>
-                            </tr>
-                            <tr>
-                                <td>Postpone recruiting new board members until March</td>
-                                <td>Focus on immediate priorities first</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                    <h2>Discussion Summary</h2>
+                    <div class="attendees">
+                        <strong>Present:</strong> Daniel, Chris, Pablo, Peter, Ben, Ward, Victor, Michelle
+                    </div>
 
-                    <h3>Meeting Format</h3>
-                    <p>The board discussed structured facilitation models for meetings. After debate, the board agreed on the importance of advance agendas and in-meeting decision-making, without adopting a specific governance framework.</p>
+                    <div class="meeting-content">
+                        <h2>Decisions</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decision</th>
+                                    <th>Context</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Statutes amendment threshold: 50% quorum + 2/3 majority</td>
+                                    <td>Balanced accessibility with protection against hasty changes</td>
+                                </tr>
+                                <tr>
+                                    <td>General Assembly lead time reduced to 15 days</td>
+                                    <td>Allows flexibility while ensuring advance notice and agenda distribution</td>
+                                </tr>
+                                <tr>
+                                    <td>General Assembly may choose its own meeting leader</td>
+                                    <td>Provides a check on presidential authority</td>
+                                </tr>
+                                <tr>
+                                    <td>Budget provision retained as written</td>
+                                    <td>Assembly approval of accounts releases the board from liability</td>
+                                </tr>
+                                <tr>
+                                    <td>Board affirms intent to pursue the 2026 event</td>
+                                    <td>Unanimous support; formal feasibility assessment to follow</td>
+                                </tr>
+                                <tr>
+                                    <td>Twice-weekly board meetings for remainder of January</td>
+                                    <td>High workload during formation period requires increased meeting cadence</td>
+                                </tr>
+                                <tr>
+                                    <td>Postpone recruiting new board members until March</td>
+                                    <td>Focus on immediate priorities first</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                    <h3>Association Statutes</h3>
-                    <p>The board reviewed lawyer comments on the incorporation documents. Quorum, majority thresholds, General Assembly lead time, and meeting leadership were agreed. Board size (proposed maximum of 15) and term length remain open for offline discussion.</p>
+                        <h2>Discussion Summary</h2>
 
-                    <h3>Operational Setup</h3>
-                    <p>The board discussed the operational setup requirements for the association. The board acknowledged the need to build trust and working relationships with relevant stakeholders during this process.</p>
+                        <h3>Meeting Format</h3>
+                        <p>The board discussed structured facilitation models for meetings. After debate, the board agreed on the importance of advance agendas and in-meeting decision-making, without adopting a specific governance framework.</p>
 
-                    <h3>Event 2026 & Communication</h3>
-                    <p>The board unanimously supports pursuing a 2026 event. Communication to the community will be framed positively. A timeline with critical-path milestones and hard deadlines is needed.</p>
+                        <h3>Association Statutes</h3>
+                        <p>The board reviewed lawyer comments on the incorporation documents. Quorum, majority thresholds, General Assembly lead time, and meeting leadership were agreed. Board size (proposed maximum of 15) and term length remain open for offline discussion.</p>
 
-                    <h3>Working Groups & Roles</h3>
-                    <p>A Governance and Organizational Working Group was proposed. The board discussed consulting existing operational leads before making decisions that affect their work. The question of whether board members should also hold operational leadership roles was raised and deferred for future discussion.</p>
+                        <h3>Operational Setup</h3>
+                        <p>The board discussed the operational setup requirements for the association. The board acknowledged the need to build trust and working relationships with relevant stakeholders during this process.</p>
 
-                    <h3>Decision-Making Policy</h3>
-                    <p>The board agreed that any action taken on behalf of the board requires a vote. Individual actions in a personal capacity do not. A formal policy document with examples will be drafted.</p>
+                        <h3>Event 2026 &amp; Communication</h3>
+                        <p>The board unanimously supports pursuing a 2026 event. Communication to the community will be framed positively. A timeline with critical-path milestones and hard deadlines is needed.</p>
 
-                    <h2>Action Items</h2>
-                    <ul>
-                        <li><strong>Pablo:</strong> Finalize remaining statutes provisions (board size, term length)</li>
-                        <li><strong>Daniel:</strong> Draft decision-making policy document; Draft communication to community about the 2026 event; Schedule regular board meeting times</li>
-                        <li><strong>Victor:</strong> Draft employee/contractor role descriptions</li>
-                    </ul>
+                        <h3>Working Groups &amp; Roles</h3>
+                        <p>A Governance and Organizational Working Group was proposed. The board discussed consulting existing operational leads before making decisions that affect their work. The question of whether board members should also hold operational leadership roles was raised and deferred for future discussion.</p>
 
-                    <h2>Open Items for Future Meetings</h2>
-                    <ul>
-                        <li>Board size: maximum of 15 or lower?</li>
-                        <li>Term length: 2 vs 3 years?</li>
-                        <li>Term limits: retain or remove?</li>
-                        <li>Board members holding operational roles: conflict of interest?</li>
-                        <li>Legal implications of event naming</li>
-                    </ul>
+                        <h3>Decision-Making Policy</h3>
+                        <p>The board agreed that any action taken on behalf of the board requires a vote. Individual actions in a personal capacity do not. A formal policy document with examples will be drafted.</p>
+
+                        <h2>Action Items</h2>
+                        <ul>
+                            <li><strong>Pablo:</strong> Finalize remaining statutes provisions (board size, term length)</li>
+                            <li><strong>Daniel:</strong> Draft decision-making policy document; Draft communication to community about the 2026 event; Schedule regular board meeting times</li>
+                            <li><strong>Victor:</strong> Draft employee/contractor role descriptions</li>
+                        </ul>
+
+                        <h2>Open Items for Future Meetings</h2>
+                        <ul>
+                            <li>Board size: maximum of 15 or lower?</li>
+                            <li>Term length: 2 vs 3 years?</li>
+                            <li>Term limits: retain or remove?</li>
+                            <li>Board members holding operational roles: conflict of interest?</li>
+                            <li>Legal implications of event naming</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- ESPA&Ntilde;OL -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Presentes:</strong> Daniel, Chris, Pablo, Peter, Ben, Ward, Victor, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisiones</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decisi&oacute;n</th>
+                                    <th>Contexto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Umbral de modificaci&oacute;n de estatutos: qu&oacute;rum del 50% + mayor&iacute;a de 2/3</td>
+                                    <td>Equilibrio entre accesibilidad y protecci&oacute;n contra cambios precipitados</td>
+                                </tr>
+                                <tr>
+                                    <td>Plazo de convocatoria de la Asamblea General reducido a 15 d&iacute;as</td>
+                                    <td>Permite flexibilidad garantizando aviso previo y distribuci&oacute;n del orden del d&iacute;a</td>
+                                </tr>
+                                <tr>
+                                    <td>La Asamblea General puede elegir a su propio moderador</td>
+                                    <td>Proporciona un control sobre la autoridad presidencial</td>
+                                </tr>
+                                <tr>
+                                    <td>La disposici&oacute;n presupuestaria se mantiene tal como est&aacute; redactada</td>
+                                    <td>La aprobaci&oacute;n de las cuentas por la Asamblea libera a la junta de responsabilidad</td>
+                                </tr>
+                                <tr>
+                                    <td>La junta confirma su intenci&oacute;n de llevar a cabo el evento de 2026</td>
+                                    <td>Apoyo un&aacute;nime; se realizar&aacute; una evaluaci&oacute;n formal de viabilidad</td>
+                                </tr>
+                                <tr>
+                                    <td>Reuniones de la junta dos veces por semana durante el resto de enero</td>
+                                    <td>La alta carga de trabajo durante el per&iacute;odo de formaci&oacute;n requiere mayor frecuencia de reuniones</td>
+                                </tr>
+                                <tr>
+                                    <td>Posponer la incorporaci&oacute;n de nuevos miembros de la junta hasta marzo</td>
+                                    <td>Centrarse primero en las prioridades inmediatas</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Resumen de las Discusiones</h2>
+
+                        <h3>Formato de las Reuniones</h3>
+                        <p>La junta discuti&oacute; modelos de facilitaci&oacute;n estructurada para las reuniones. Tras el debate, la junta acord&oacute; la importancia de los &oacute;rdenes del d&iacute;a previos y la toma de decisiones durante las reuniones, sin adoptar un marco de gobernanza espec&iacute;fico.</p>
+
+                        <h3>Estatutos de la Asociaci&oacute;n</h3>
+                        <p>La junta revis&oacute; los comentarios del abogado sobre los documentos de constituci&oacute;n. Se acordaron el qu&oacute;rum, los umbrales de mayor&iacute;a, el plazo de convocatoria de la Asamblea General y la direcci&oacute;n de las reuniones. El tama&ntilde;o de la junta (m&aacute;ximo propuesto de 15) y la duraci&oacute;n del mandato quedan pendientes de discusi&oacute;n fuera de sesi&oacute;n.</p>
+
+                        <h3>Organizaci&oacute;n Operativa</h3>
+                        <p>La junta discuti&oacute; los requisitos de organizaci&oacute;n operativa de la asociaci&oacute;n. La junta reconoci&oacute; la necesidad de generar confianza y relaciones de trabajo con las partes interesadas relevantes durante este proceso.</p>
+
+                        <h3>Evento 2026 y Comunicaci&oacute;n</h3>
+                        <p>La junta apoya un&aacute;nimemente la realizaci&oacute;n de un evento en 2026. La comunicaci&oacute;n a la comunidad se enmarcar&aacute; de forma positiva. Se necesita un cronograma con hitos cr&iacute;ticos y plazos firmes.</p>
+
+                        <h3>Grupos de Trabajo y Roles</h3>
+                        <p>Se propuso un Grupo de Trabajo de Gobernanza y Organizaci&oacute;n. La junta discuti&oacute; la necesidad de consultar a los responsables operativos existentes antes de tomar decisiones que afecten a su trabajo. La cuesti&oacute;n de si los miembros de la junta deben ocupar tambi&eacute;n puestos de liderazgo operativo fue planteada y aplazada para futuras discusiones.</p>
+
+                        <h3>Pol&iacute;tica de Toma de Decisiones</h3>
+                        <p>La junta acord&oacute; que cualquier acci&oacute;n realizada en nombre de la junta requiere una votaci&oacute;n. Las acciones individuales a t&iacute;tulo personal no la requieren. Se redactar&aacute; un documento formal de pol&iacute;tica con ejemplos.</p>
+
+                        <h2>Acciones Pendientes</h2>
+                        <ul>
+                            <li><strong>Pablo:</strong> Finalizar las disposiciones restantes de los estatutos (tama&ntilde;o de la junta, duraci&oacute;n del mandato)</li>
+                            <li><strong>Daniel:</strong> Redactar documento de pol&iacute;tica de toma de decisiones; Redactar comunicaci&oacute;n a la comunidad sobre el evento de 2026; Programar horarios regulares de reuniones de la junta</li>
+                            <li><strong>Victor:</strong> Redactar descripciones de puestos de empleados/contratistas</li>
+                        </ul>
+
+                        <h2>Temas Pendientes para Futuras Reuniones</h2>
+                        <ul>
+                            <li>Tama&ntilde;o de la junta: &iquest;m&aacute;ximo de 15 o menor?</li>
+                            <li>Duraci&oacute;n del mandato: &iquest;2 o 3 a&ntilde;os?</li>
+                            <li>L&iacute;mites de mandato: &iquest;mantener o eliminar?</li>
+                            <li>Miembros de la junta con roles operativos: &iquest;conflicto de intereses?</li>
+                            <li>Implicaciones legales de la denominaci&oacute;n del evento</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FRAN&Ccedil;AIS -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaut.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sents :</strong> Daniel, Chris, Pablo, Peter, Ben, Ward, Victor, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>D&eacute;cisions</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>D&eacute;cision</th>
+                                    <th>Contexte</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Seuil de modification des statuts : quorum de 50% + majorit&eacute; des 2/3</td>
+                                    <td>&Eacute;quilibre entre accessibilit&eacute; et protection contre les modifications h&acirc;tives</td>
+                                </tr>
+                                <tr>
+                                    <td>D&eacute;lai de convocation de l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale r&eacute;duit &agrave; 15 jours</td>
+                                    <td>Permet la flexibilit&eacute; tout en garantissant un pr&eacute;avis et la distribution de l&rsquo;ordre du jour</td>
+                                </tr>
+                                <tr>
+                                    <td>L&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale peut choisir son propre mod&eacute;rateur</td>
+                                    <td>Fournit un contr&ocirc;le sur l&rsquo;autorit&eacute; pr&eacute;sidentielle</td>
+                                </tr>
+                                <tr>
+                                    <td>La disposition budg&eacute;taire est maintenue telle que r&eacute;dig&eacute;e</td>
+                                    <td>L&rsquo;approbation des comptes par l&rsquo;Assembl&eacute;e d&eacute;charge le conseil de sa responsabilit&eacute;</td>
+                                </tr>
+                                <tr>
+                                    <td>Le conseil confirme son intention d&rsquo;organiser l&rsquo;&eacute;v&eacute;nement 2026</td>
+                                    <td>Soutien unanime ; une &eacute;valuation formelle de faisabilit&eacute; suivra</td>
+                                </tr>
+                                <tr>
+                                    <td>R&eacute;unions du conseil deux fois par semaine pour le reste du mois de janvier</td>
+                                    <td>La charge de travail &eacute;lev&eacute;e durant la p&eacute;riode de formation n&eacute;cessite une cadence de r&eacute;unions accrue</td>
+                                </tr>
+                                <tr>
+                                    <td>Reporter le recrutement de nouveaux membres du conseil &agrave; mars</td>
+                                    <td>Se concentrer d&rsquo;abord sur les priorit&eacute;s imm&eacute;diates</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>R&eacute;sum&eacute; des Discussions</h2>
+
+                        <h3>Format des R&eacute;unions</h3>
+                        <p>Le conseil a discut&eacute; de mod&egrave;les de facilitation structur&eacute;e pour les r&eacute;unions. Apr&egrave;s d&eacute;bat, le conseil a convenu de l&rsquo;importance des ordres du jour pr&eacute;alables et de la prise de d&eacute;cisions en s&eacute;ance, sans adopter un cadre de gouvernance sp&eacute;cifique.</p>
+
+                        <h3>Statuts de l&rsquo;Association</h3>
+                        <p>Le conseil a examin&eacute; les commentaires de l&rsquo;avocat sur les documents de constitution. Le quorum, les seuils de majorit&eacute;, le d&eacute;lai de convocation de l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale et la direction des r&eacute;unions ont &eacute;t&eacute; convenus. La taille du conseil (maximum propos&eacute; de 15) et la dur&eacute;e du mandat restent &agrave; discuter hors s&eacute;ance.</p>
+
+                        <h3>Organisation Op&eacute;rationnelle</h3>
+                        <p>Le conseil a discut&eacute; des exigences d&rsquo;organisation op&eacute;rationnelle de l&rsquo;association. Le conseil a reconnu la n&eacute;cessit&eacute; de b&acirc;tir la confiance et des relations de travail avec les parties prenantes concern&eacute;es au cours de ce processus.</p>
+
+                        <h3>&Eacute;v&eacute;nement 2026 et Communication</h3>
+                        <p>Le conseil soutient &agrave; l&rsquo;unanimit&eacute; l&rsquo;organisation d&rsquo;un &eacute;v&eacute;nement en 2026. La communication &agrave; la communaut&eacute; sera formul&eacute;e de mani&egrave;re positive. Un calendrier avec des jalons critiques et des &eacute;ch&eacute;ances fermes est n&eacute;cessaire.</p>
+
+                        <h3>Groupes de Travail et R&ocirc;les</h3>
+                        <p>Un Groupe de Travail sur la Gouvernance et l&rsquo;Organisation a &eacute;t&eacute; propos&eacute;. Le conseil a discut&eacute; de la n&eacute;cessit&eacute; de consulter les responsables op&eacute;rationnels existants avant de prendre des d&eacute;cisions affectant leur travail. La question de savoir si les membres du conseil devraient &eacute;galement occuper des postes de direction op&eacute;rationnelle a &eacute;t&eacute; soulev&eacute;e et report&eacute;e &agrave; une discussion ult&eacute;rieure.</p>
+
+                        <h3>Politique de Prise de D&eacute;cisions</h3>
+                        <p>Le conseil a convenu que toute action entreprise au nom du conseil n&eacute;cessite un vote. Les actions individuelles &agrave; titre personnel n&rsquo;en n&eacute;cessitent pas. Un document de politique formel avec des exemples sera r&eacute;dig&eacute;.</p>
+
+                        <h2>Actions &agrave; Mener</h2>
+                        <ul>
+                            <li><strong>Pablo :</strong> Finaliser les dispositions restantes des statuts (taille du conseil, dur&eacute;e du mandat)</li>
+                            <li><strong>Daniel :</strong> R&eacute;diger le document de politique de prise de d&eacute;cisions ; R&eacute;diger la communication &agrave; la communaut&eacute; sur l&rsquo;&eacute;v&eacute;nement 2026 ; Planifier les horaires r&eacute;guliers des r&eacute;unions du conseil</li>
+                            <li><strong>Victor :</strong> R&eacute;diger les descriptions de postes employ&eacute;s/prestataires</li>
+                        </ul>
+
+                        <h2>Points en Suspens pour les Prochaines R&eacute;unions</h2>
+                        <ul>
+                            <li>Taille du conseil : maximum de 15 ou moins ?</li>
+                            <li>Dur&eacute;e du mandat : 2 ou 3 ans ?</li>
+                            <li>Limites de mandat : maintenir ou supprimer ?</li>
+                            <li>Membres du conseil occupant des r&ocirc;les op&eacute;rationnels : conflit d&rsquo;int&eacute;r&ecirc;ts ?</li>
+                            <li>Implications juridiques de la d&eacute;nomination de l&rsquo;&eacute;v&eacute;nement</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ITALIANO -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevale la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presenti:</strong> Daniel, Chris, Pablo, Peter, Ben, Ward, Victor, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisioni</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decisione</th>
+                                    <th>Contesto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Soglia di modifica degli statuti: quorum del 50% + maggioranza di 2/3</td>
+                                    <td>Equilibrio tra accessibilit&agrave; e protezione contro modifiche affrettate</td>
+                                </tr>
+                                <tr>
+                                    <td>Termine di convocazione dell&rsquo;Assemblea Generale ridotto a 15 giorni</td>
+                                    <td>Consente flessibilit&agrave; garantendo preavviso e distribuzione dell&rsquo;ordine del giorno</td>
+                                </tr>
+                                <tr>
+                                    <td>L&rsquo;Assemblea Generale pu&ograve; scegliere il proprio moderatore</td>
+                                    <td>Fornisce un controllo sull&rsquo;autorit&agrave; presidenziale</td>
+                                </tr>
+                                <tr>
+                                    <td>La disposizione di bilancio &egrave; mantenuta come redatta</td>
+                                    <td>L&rsquo;approvazione dei conti da parte dell&rsquo;Assemblea libera il consiglio dalla responsabilit&agrave;</td>
+                                </tr>
+                                <tr>
+                                    <td>Il consiglio conferma l&rsquo;intenzione di realizzare l&rsquo;evento 2026</td>
+                                    <td>Sostegno unanime; seguir&agrave; una valutazione formale di fattibilit&agrave;</td>
+                                </tr>
+                                <tr>
+                                    <td>Riunioni del consiglio due volte a settimana per il resto di gennaio</td>
+                                    <td>L&rsquo;elevato carico di lavoro durante il periodo di formazione richiede una maggiore frequenza delle riunioni</td>
+                                </tr>
+                                <tr>
+                                    <td>Rinviare il reclutamento di nuovi membri del consiglio a marzo</td>
+                                    <td>Concentrarsi prima sulle priorit&agrave; immediate</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Sintesi delle Discussioni</h2>
+
+                        <h3>Formato delle Riunioni</h3>
+                        <p>Il consiglio ha discusso modelli di facilitazione strutturata per le riunioni. Dopo il dibattito, il consiglio ha concordato sull&rsquo;importanza degli ordini del giorno preliminari e della presa di decisioni durante le riunioni, senza adottare un quadro di governance specifico.</p>
+
+                        <h3>Statuti dell&rsquo;Associazione</h3>
+                        <p>Il consiglio ha esaminato i commenti dell&rsquo;avvocato sui documenti di costituzione. Sono stati concordati il quorum, le soglie di maggioranza, il termine di convocazione dell&rsquo;Assemblea Generale e la direzione delle riunioni. La dimensione del consiglio (massimo proposto di 15) e la durata del mandato restano da discutere al di fuori della seduta.</p>
+
+                        <h3>Organizzazione Operativa</h3>
+                        <p>Il consiglio ha discusso i requisiti di organizzazione operativa dell&rsquo;associazione. Il consiglio ha riconosciuto la necessit&agrave; di costruire fiducia e rapporti di lavoro con le parti interessate durante questo processo.</p>
+
+                        <h3>Evento 2026 e Comunicazione</h3>
+                        <p>Il consiglio sostiene all&rsquo;unanimit&agrave; la realizzazione di un evento nel 2026. La comunicazione alla comunit&agrave; sar&agrave; formulata in modo positivo. &Egrave; necessario un calendario con tappe fondamentali e scadenze precise.</p>
+
+                        <h3>Gruppi di Lavoro e Ruoli</h3>
+                        <p>&Egrave; stato proposto un Gruppo di Lavoro su Governance e Organizzazione. Il consiglio ha discusso la necessit&agrave; di consultare i responsabili operativi esistenti prima di prendere decisioni che influiscano sul loro lavoro. La questione se i membri del consiglio debbano ricoprire anche ruoli di leadership operativa &egrave; stata sollevata e rinviata a una discussione futura.</p>
+
+                        <h3>Politica Decisionale</h3>
+                        <p>Il consiglio ha concordato che qualsiasi azione intrapresa a nome del consiglio richiede un voto. Le azioni individuali a titolo personale non lo richiedono. Verr&agrave; redatto un documento di politica formale con esempi.</p>
+
+                        <h2>Azioni da Intraprendere</h2>
+                        <ul>
+                            <li><strong>Pablo:</strong> Finalizzare le disposizioni restanti degli statuti (dimensione del consiglio, durata del mandato)</li>
+                            <li><strong>Daniel:</strong> Redigere il documento di politica decisionale; Redigere la comunicazione alla comunit&agrave; sull&rsquo;evento 2026; Programmare gli orari regolari delle riunioni del consiglio</li>
+                            <li><strong>Victor:</strong> Redigere le descrizioni dei ruoli per dipendenti/collaboratori</li>
+                        </ul>
+
+                        <h2>Punti Aperti per le Prossime Riunioni</h2>
+                        <ul>
+                            <li>Dimensione del consiglio: massimo 15 o inferiore?</li>
+                            <li>Durata del mandato: 2 o 3 anni?</li>
+                            <li>Limiti di mandato: mantenere o eliminare?</li>
+                            <li>Membri del consiglio con ruoli operativi: conflitto di interessi?</li>
+                            <li>Implicazioni legali della denominazione dell&rsquo;evento</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- DEUTSCH -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version ist die spanische Version ma&szlig;geblich.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesende:</strong> Daniel, Chris, Pablo, Peter, Ben, Ward, Victor, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Beschl&uuml;sse</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Beschluss</th>
+                                    <th>Kontext</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Schwelle f&uuml;r Satzungs&auml;nderungen: 50% Quorum + 2/3-Mehrheit</td>
+                                    <td>Ausgewogenheit zwischen Zug&auml;nglichkeit und Schutz vor &uuml;bereilten &Auml;nderungen</td>
+                                </tr>
+                                <tr>
+                                    <td>Einberufungsfrist der Generalversammlung auf 15 Tage verk&uuml;rzt</td>
+                                    <td>Erm&ouml;glicht Flexibilit&auml;t bei gleichzeitiger Gew&auml;hrleistung rechtzeitiger Benachrichtigung und Tagesordnungsverteilung</td>
+                                </tr>
+                                <tr>
+                                    <td>Die Generalversammlung kann ihren eigenen Versammlungsleiter w&auml;hlen</td>
+                                    <td>Bietet eine Kontrolle der pr&auml;sidialen Befugnisse</td>
+                                </tr>
+                                <tr>
+                                    <td>Die Haushaltsbestimmung bleibt wie verfasst bestehen</td>
+                                    <td>Die Genehmigung der Rechnungslegung durch die Versammlung entlastet den Vorstand von der Haftung</td>
+                                </tr>
+                                <tr>
+                                    <td>Der Vorstand bekr&auml;ftigt die Absicht, die Veranstaltung 2026 durchzuf&uuml;hren</td>
+                                    <td>Einstimmige Unterst&uuml;tzung; eine formale Machbarkeitsbewertung folgt</td>
+                                </tr>
+                                <tr>
+                                    <td>Zweimal w&ouml;chentliche Vorstandssitzungen f&uuml;r den Rest des Januars</td>
+                                    <td>Die hohe Arbeitsbelastung w&auml;hrend der Gr&uuml;ndungsphase erfordert eine erh&ouml;hte Sitzungsfrequenz</td>
+                                </tr>
+                                <tr>
+                                    <td>Rekrutierung neuer Vorstandsmitglieder auf M&auml;rz verschieben</td>
+                                    <td>Zun&auml;chst auf unmittelbare Priorit&auml;ten konzentrieren</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Zusammenfassung der Diskussionen</h2>
+
+                        <h3>Sitzungsformat</h3>
+                        <p>Der Vorstand er&ouml;rterte strukturierte Moderationsmodelle f&uuml;r Sitzungen. Nach der Debatte einigte sich der Vorstand auf die Bedeutung vorab verteilter Tagesordnungen und der Entscheidungsfindung w&auml;hrend der Sitzungen, ohne einen bestimmten Governance-Rahmen zu &uuml;bernehmen.</p>
+
+                        <h3>Vereinssatzung</h3>
+                        <p>Der Vorstand pr&uuml;fte die Anmerkungen des Anwalts zu den Gr&uuml;ndungsdokumenten. Quorum, Mehrheitsschwellen, Einberufungsfrist der Generalversammlung und Sitzungsleitung wurden vereinbart. Die Vorstandsgr&ouml;&szlig;e (vorgeschlagenes Maximum von 15) und die Amtsdauer bleiben zur Diskussion au&szlig;erhalb der Sitzung offen.</p>
+
+                        <h3>Operative Organisation</h3>
+                        <p>Der Vorstand er&ouml;rterte die Anforderungen an die operative Organisation des Vereins. Der Vorstand erkannte die Notwendigkeit an, w&auml;hrend dieses Prozesses Vertrauen und Arbeitsbeziehungen mit den relevanten Beteiligten aufzubauen.</p>
+
+                        <h3>Veranstaltung 2026 und Kommunikation</h3>
+                        <p>Der Vorstand unterst&uuml;tzt einstimmig die Durchf&uuml;hrung einer Veranstaltung im Jahr 2026. Die Kommunikation an die Gemeinschaft wird positiv formuliert. Ein Zeitplan mit kritischen Meilensteinen und festen Fristen ist erforderlich.</p>
+
+                        <h3>Arbeitsgruppen und Rollen</h3>
+                        <p>Eine Arbeitsgruppe f&uuml;r Governance und Organisation wurde vorgeschlagen. Der Vorstand er&ouml;rterte die Notwendigkeit, bestehende operative Verantwortliche zu konsultieren, bevor Entscheidungen getroffen werden, die ihre Arbeit betreffen. Die Frage, ob Vorstandsmitglieder auch operative F&uuml;hrungsrollen &uuml;bernehmen sollten, wurde aufgeworfen und auf eine k&uuml;nftige Diskussion vertagt.</p>
+
+                        <h3>Entscheidungsfindungspolitik</h3>
+                        <p>Der Vorstand vereinbarte, dass jede im Namen des Vorstands unternommene Handlung einer Abstimmung bedarf. Individuelle Handlungen in pers&ouml;nlicher Eigenschaft bed&uuml;rfen keiner Abstimmung. Ein formales Grundsatzdokument mit Beispielen wird erstellt.</p>
+
+                        <h2>Aufgaben</h2>
+                        <ul>
+                            <li><strong>Pablo:</strong> Verbleibende Satzungsbestimmungen finalisieren (Vorstandsgr&ouml;&szlig;e, Amtsdauer)</li>
+                            <li><strong>Daniel:</strong> Grundsatzdokument zur Entscheidungsfindung entwerfen; Kommunikation an die Gemeinschaft &uuml;ber die Veranstaltung 2026 entwerfen; Regelm&auml;&szlig;ige Vorstandssitzungstermine planen</li>
+                            <li><strong>Victor:</strong> Stellen-/Auftragnehmerbeschreibungen entwerfen</li>
+                        </ul>
+
+                        <h2>Offene Punkte f&uuml;r k&uuml;nftige Sitzungen</h2>
+                        <ul>
+                            <li>Vorstandsgr&ouml;&szlig;e: Maximum von 15 oder weniger?</li>
+                            <li>Amtsdauer: 2 oder 3 Jahre?</li>
+                            <li>Amtszeitbegrenzungen: beibehalten oder abschaffen?</li>
+                            <li>Vorstandsmitglieder mit operativen Rollen: Interessenkonflikt?</li>
+                            <li>Rechtliche Auswirkungen der Veranstaltungsbenennung</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
 
     <div id="shared-footer" data-prefix=".."></div>
     <script src="../footer.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 
     <script src="../script.js"></script>
 </body>

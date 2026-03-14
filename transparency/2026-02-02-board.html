@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board Meeting - February 2, 2026 | Nobodies Collective</title>
+    <title>NCA Board Meeting Minutes - February 2, 2026 | Nobodies Collective</title>
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +28,12 @@
         .meeting-content th { background: var(--color-bg-secondary); font-weight: 600; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -40,102 +46,494 @@
                 <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
 
                 <div class="meeting-header">
-                    <h1>Board Meeting</h1>
+                    <h1>NCA Board Meeting Minutes</h1>
                     <div class="meeting-meta">
                         <span><strong>Date:</strong> February 2, 2026</span>
                         <span><strong>Chair:</strong> Ben</span>
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Present:</strong> Daniel, Ben, Peter, Pablo, Ward
-                    <br><strong>Absent:</strong> Chris, Victor, Michelle
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Decisions</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Decision</th>
-                                <th>Context</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Use Discord + spreadsheet for task management</td>
-                                <td>Board consensus to maximize simple systems before adding complexity</td>
-                            </tr>
-                            <tr>
-                                <td>Publish sanitized AI meeting notes weekly on website</td>
-                                <td>For radical transparency; twice weekly publication</td>
-                            </tr>
-                            <tr>
-                                <td>Use estimated costs as starting point</td>
-                                <td>Communicate to leads with note it will be revised in a month</td>
-                            </tr>
-                            <tr>
-                                <td>Approved contributor's agreement and code of conduct</td>
-                                <td>Provisional until GA ratification; to be published on public GitHub</td>
-                            </tr>
-                            <tr>
-                                <td>Board members confirmed as association members</td>
-                                <td>Unanimous vote</td>
-                            </tr>
-                            <tr>
-                                <td>Approved multiple contributors as collaborators</td>
-                                <td>Prioritizing speed over formal membership process</td>
-                            </tr>
-                            <tr>
-                                <td>Approved engaging a consultant for one month</td>
-                                <td>To confirm vendors, prices, and event viability</td>
-                            </tr>
-                            <tr>
-                                <td>Publish association documents to public GitHub</td>
-                                <td>Statutes and founding documents</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                    <h2>Discussion Summary</h2>
+                    <div class="attendees">
+                        <strong>Present:</strong> Daniel, Ben, Peter, Pablo, Ward
+                        <br><strong>Absent:</strong> Chris, Victor, Michelle
+                    </div>
 
-                    <h3>Task Management System</h3>
-                    <p>The board discussed concerns about managing 50+ untracked tasks in Discord threads. The board agreed to use Discord for discussions combined with a shared spreadsheet for tracking, maximizing the simple system before considering more complex tools.</p>
+                    <div class="meeting-content">
+                        <h2>Decisions</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decision</th>
+                                    <th>Context</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Use Discord + spreadsheet for task management</td>
+                                    <td>Board consensus to maximize simple systems before adding complexity</td>
+                                </tr>
+                                <tr>
+                                    <td>Publish sanitized AI meeting notes weekly on website</td>
+                                    <td>For radical transparency; twice weekly publication</td>
+                                </tr>
+                                <tr>
+                                    <td>Use estimated costs as starting point</td>
+                                    <td>Communicate to leads with note it will be revised in a month</td>
+                                </tr>
+                                <tr>
+                                    <td>Approved contributor&rsquo;s agreement and code of conduct</td>
+                                    <td>Provisional until GA ratification; to be published on public GitHub</td>
+                                </tr>
+                                <tr>
+                                    <td>Board members confirmed as association members</td>
+                                    <td>Unanimous vote</td>
+                                </tr>
+                                <tr>
+                                    <td>Approved multiple contributors as collaborators</td>
+                                    <td>Prioritizing speed over formal membership process</td>
+                                </tr>
+                                <tr>
+                                    <td>Approved engaging a consultant for one month</td>
+                                    <td>To confirm vendors, prices, and event viability</td>
+                                </tr>
+                                <tr>
+                                    <td>Publish association documents to public GitHub</td>
+                                    <td>Statutes and founding documents</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                    <h3>Radical Transparency</h3>
-                    <p>The board emphasized the need to be radically transparent with the community. The board agreed to publish sanitized AI-generated meeting notes weekly/twice-weekly on the website to demonstrate momentum and openness.</p>
+                        <h2>Discussion Summary</h2>
 
-                    <h3>Budget Approach</h3>
-                    <p>Given time constraints, the board agreed to use estimated costs as a starting point, with the understanding that these would be revised within a month. Leads will be notified to expect adjustments.</p>
+                        <h3>Task Management System</h3>
+                        <p>The board discussed concerns about managing 50+ untracked tasks in Discord threads. The board agreed to use Discord for discussions combined with a shared spreadsheet for tracking, maximizing the simple system before considering more complex tools.</p>
 
-                    <h3>Collaborator Onboarding</h3>
-                    <p>The board approved a refined contributor's agreement and code of conduct (provisional until GA ratification). The board distinguished between collaborator status (immediate, for active contributors) and formal membership (requires more process). Multiple groups of contributors were approved as collaborators to accelerate work.</p>
+                        <h3>Radical Transparency</h3>
+                        <p>The board emphasized the need to be radically transparent with the community. The board agreed to publish sanitized AI-generated meeting notes weekly/twice-weekly on the website to demonstrate momentum and openness.</p>
 
-                    <h3>Consultant Engagement</h3>
-                    <p>The board agreed to engage a consultant for one month (20-30 hours/week) to quickly confirm vendors and assess event viability. Final cost clarification and vote scheduled for Thursday.</p>
+                        <h3>Budget Approach</h3>
+                        <p>Given time constraints, the board agreed to use estimated costs as a starting point, with the understanding that these would be revised within a month. Leads will be notified to expect adjustments.</p>
 
-                    <h3>Critical Path to Ticket Sales</h3>
-                    <p>The board identified the critical path to enabling ticket sales: bank accounts, payment system, provisional permits, emergency services coordination, site rental, and insurance. A Discord thread will be created to track all requirements. The board discussed monthly ticket price increases to incentivize early buying.</p>
+                        <h3>Collaborator Onboarding</h3>
+                        <p>The board approved a refined contributor&rsquo;s agreement and code of conduct (provisional until GA ratification). The board distinguished between collaborator status (immediate, for active contributors) and formal membership (requires more process). Multiple groups of contributors were approved as collaborators to accelerate work.</p>
 
-                    <h3>Contingency Planning</h3>
-                    <p>The board discussed contingency planning for critical infrastructure, specifically the possibility that Ubertown may skip a year and not provide power generation for barrios. The board agreed to operate under the assumption that Ubertown may not participate, requiring backup power plans to be developed.</p>
+                        <h3>Consultant Engagement</h3>
+                        <p>The board agreed to engage a consultant for one month (20&ndash;30 hours/week) to quickly confirm vendors and assess event viability. Final cost clarification and vote scheduled for Thursday.</p>
 
-                    <h2>Action Items</h2>
-                    <ul>
-                        <li><strong>Daniel:</strong> Contact consultant to clarify one-month engagement cost; Create FAQ about event status for transparency; Investigate provisional permits for ticket sales; Create Discord thread for ticket sales critical path</li>
-                        <li><strong>Ben:</strong> Work with Peter to understand GitHub documentation system; Reach out to newly approved collaborators for onboarding; Present batch of 30 electors for approval Thursday; Manage publication of sanitized meeting notes</li>
-                        <li><strong>Peter:</strong> Publish association docs (statutes, founding documents) to public GitHub; Add ticket sales requirements to Discord thread</li>
-                        <li><strong>Pablo:</strong> Contact leads and camps to assess event viability; Review documents from board members; Share meeting notes with relevant parties</li>
-                        <li><strong>All:</strong> Use estimated costs as starting point; expect revision in one month</li>
-                    </ul>
+                        <h3>Critical Path to Ticket Sales</h3>
+                        <p>The board identified the critical path to enabling ticket sales: bank accounts, payment system, provisional permits, emergency services coordination, site rental, and insurance. A Discord thread will be created to track all requirements. The board discussed monthly ticket price increases to incentivize early buying.</p>
 
-                    <h2>Open Items for Future Meetings</h2>
-                    <ul>
-                        <li>Areas of responsibility discussion</li>
-                        <li>Community meeting preparation</li>
-                        <li>Transition away from personal email accounts for official communications</li>
-                    </ul>
+                        <h3>Contingency Planning</h3>
+                        <p>The board discussed contingency planning for critical infrastructure, specifically the possibility that Ubertown may skip a year and not provide power generation for barrios. The board agreed to operate under the assumption that Ubertown may not participate, requiring backup power plans to be developed.</p>
+
+                        <h2>Action Items</h2>
+                        <ul>
+                            <li><strong>Daniel:</strong> Contact consultant to clarify one-month engagement cost; Create FAQ about event status for transparency; Investigate provisional permits for ticket sales; Create Discord thread for ticket sales critical path</li>
+                            <li><strong>Ben:</strong> Work with Peter to understand GitHub documentation system; Reach out to newly approved collaborators for onboarding; Present batch of 30 electors for approval Thursday; Manage publication of sanitized meeting notes</li>
+                            <li><strong>Peter:</strong> Publish association docs (statutes, founding documents) to public GitHub; Add ticket sales requirements to Discord thread</li>
+                            <li><strong>Pablo:</strong> Contact leads and camps to assess event viability; Review documents from board members; Share meeting notes with relevant parties</li>
+                            <li><strong>All:</strong> Use estimated costs as starting point; expect revision in one month</li>
+                        </ul>
+
+                        <h2>Open Items for Future Meetings</h2>
+                        <ul>
+                            <li>Areas of responsibility discussion</li>
+                            <li>Community meeting preparation</li>
+                            <li>Adopt dedicated email accounts for official communications</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Presentes:</strong> Daniel, Ben, Peter, Pablo, Ward
+                        <br><strong>Ausentes:</strong> Chris, Victor, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisiones</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decisi&oacute;n</th>
+                                    <th>Contexto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Usar Discord + hoja de c&aacute;lculo para la gesti&oacute;n de tareas</td>
+                                    <td>Consenso de la junta para maximizar los sistemas simples antes de a&ntilde;adir complejidad</td>
+                                </tr>
+                                <tr>
+                                    <td>Publicar notas de reuniones sanitizadas por IA semanalmente en el sitio web</td>
+                                    <td>Para transparencia radical; publicaci&oacute;n dos veces por semana</td>
+                                </tr>
+                                <tr>
+                                    <td>Usar costes estimados como punto de partida</td>
+                                    <td>Comunicar a los responsables con nota de que se revisar&aacute; en un mes</td>
+                                </tr>
+                                <tr>
+                                    <td>Aprobado el acuerdo de colaboradores y c&oacute;digo de conducta</td>
+                                    <td>Provisional hasta la ratificaci&oacute;n de la AG; se publicar&aacute; en GitHub p&uacute;blico</td>
+                                </tr>
+                                <tr>
+                                    <td>Miembros de la junta confirmados como miembros de la asociaci&oacute;n</td>
+                                    <td>Voto un&aacute;nime</td>
+                                </tr>
+                                <tr>
+                                    <td>Aprobados m&uacute;ltiples colaboradores</td>
+                                    <td>Priorizando la rapidez sobre el proceso formal de adhesi&oacute;n</td>
+                                </tr>
+                                <tr>
+                                    <td>Aprobada la contrataci&oacute;n de un consultor por un mes</td>
+                                    <td>Para confirmar proveedores, precios y viabilidad del evento</td>
+                                </tr>
+                                <tr>
+                                    <td>Publicar documentos de la asociaci&oacute;n en GitHub p&uacute;blico</td>
+                                    <td>Estatutos y documentos fundacionales</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Resumen de la Discusi&oacute;n</h2>
+
+                        <h3>Sistema de Gesti&oacute;n de Tareas</h3>
+                        <p>La junta discuti&oacute; las preocupaciones sobre la gesti&oacute;n de m&aacute;s de 50 tareas sin seguimiento en hilos de Discord. La junta acord&oacute; usar Discord para las discusiones combinado con una hoja de c&aacute;lculo compartida para el seguimiento, maximizando el sistema simple antes de considerar herramientas m&aacute;s complejas.</p>
+
+                        <h3>Transparencia Radical</h3>
+                        <p>La junta enfatiz&oacute; la necesidad de ser radicalmente transparentes con la comunidad. La junta acord&oacute; publicar notas de reuniones generadas por IA y sanitizadas semanal/bisemanalmente en el sitio web para demostrar impulso y apertura.</p>
+
+                        <h3>Enfoque Presupuestario</h3>
+                        <p>Dadas las limitaciones de tiempo, la junta acord&oacute; usar costes estimados como punto de partida, con el entendimiento de que se revisar&iacute;an en un mes. Se notificar&aacute; a los responsables para que esperen ajustes.</p>
+
+                        <h3>Incorporaci&oacute;n de Colaboradores</h3>
+                        <p>La junta aprob&oacute; un acuerdo de colaboradores refinado y un c&oacute;digo de conducta (provisional hasta la ratificaci&oacute;n de la AG). La junta distingui&oacute; entre el estatus de colaborador (inmediato, para contribuyentes activos) y la membres&iacute;a formal (requiere m&aacute;s proceso). Se aprobaron m&uacute;ltiples grupos de contribuyentes como colaboradores para acelerar el trabajo.</p>
+
+                        <h3>Contrataci&oacute;n del Consultor</h3>
+                        <p>La junta acord&oacute; contratar a un consultor por un mes (20&ndash;30 horas/semana) para confirmar r&aacute;pidamente los proveedores y evaluar la viabilidad del evento. La aclaraci&oacute;n final de costes y la votaci&oacute;n se programaron para el jueves.</p>
+
+                        <h3>Ruta Cr&iacute;tica para la Venta de Entradas</h3>
+                        <p>La junta identific&oacute; la ruta cr&iacute;tica para habilitar la venta de entradas: cuentas bancarias, sistema de pago, permisos provisionales, coordinaci&oacute;n de servicios de emergencia, alquiler del terreno y seguro. Se crear&aacute; un hilo en Discord para rastrear todos los requisitos. La junta discuti&oacute; aumentos mensuales del precio de las entradas para incentivar la compra anticipada.</p>
+
+                        <h3>Planificaci&oacute;n de Contingencias</h3>
+                        <p>La junta discuti&oacute; la planificaci&oacute;n de contingencias para infraestructura cr&iacute;tica, espec&iacute;ficamente la posibilidad de que Ubertown se tome un a&ntilde;o de descanso y no proporcione generaci&oacute;n de energ&iacute;a para los barrios. La junta acord&oacute; operar bajo el supuesto de que Ubertown podr&iacute;a no participar, lo que requiere desarrollar planes de energ&iacute;a de respaldo.</p>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <ul>
+                            <li><strong>Daniel:</strong> Contactar al consultor para aclarar el coste del compromiso de un mes; Crear FAQ sobre el estado del evento para transparencia; Investigar permisos provisionales para la venta de entradas; Crear hilo en Discord para la ruta cr&iacute;tica de venta de entradas</li>
+                            <li><strong>Ben:</strong> Trabajar con Peter para entender el sistema de documentaci&oacute;n de GitHub; Contactar a los colaboradores reci&eacute;n aprobados para su incorporaci&oacute;n; Presentar un lote de 30 electores para aprobaci&oacute;n el jueves; Gestionar la publicaci&oacute;n de notas de reuniones sanitizadas</li>
+                            <li><strong>Peter:</strong> Publicar documentos de la asociaci&oacute;n (estatutos, documentos fundacionales) en GitHub p&uacute;blico; A&ntilde;adir requisitos de venta de entradas al hilo de Discord</li>
+                            <li><strong>Pablo:</strong> Contactar a responsables y campamentos para evaluar la viabilidad del evento; Revisar documentos de los miembros de la junta; Compartir notas de reuniones con las partes relevantes</li>
+                            <li><strong>Todos:</strong> Usar costes estimados como punto de partida; esperar revisi&oacute;n en un mes</li>
+                        </ul>
+
+                        <h2>Puntos Pendientes para Futuras Reuniones</h2>
+                        <ul>
+                            <li>Discusi&oacute;n de &aacute;reas de responsabilidad</li>
+                            <li>Preparaci&oacute;n de la reuni&oacute;n comunitaria</li>
+                            <li>Adoptar cuentas de correo electr&oacute;nico dedicadas para comunicaciones oficiales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sents :</strong> Daniel, Ben, Peter, Pablo, Ward
+                        <br><strong>Absents :</strong> Chris, Victor, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>D&eacute;cisions</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>D&eacute;cision</th>
+                                    <th>Contexte</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Utiliser Discord + tableur pour la gestion des t&acirc;ches</td>
+                                    <td>Consensus du conseil pour maximiser les syst&egrave;mes simples avant d&rsquo;ajouter de la complexit&eacute;</td>
+                                </tr>
+                                <tr>
+                                    <td>Publier des notes de r&eacute;union anonymis&eacute;es par IA chaque semaine sur le site web</td>
+                                    <td>Pour une transparence radicale ; publication bihebdomadaire</td>
+                                </tr>
+                                <tr>
+                                    <td>Utiliser les co&ucirc;ts estim&eacute;s comme point de d&eacute;part</td>
+                                    <td>Communiquer aux responsables avec mention de r&eacute;vision dans un mois</td>
+                                </tr>
+                                <tr>
+                                    <td>Approuv&eacute; l&rsquo;accord de collaborateurs et le code de conduite</td>
+                                    <td>Provisoire jusqu&rsquo;&agrave; ratification par l&rsquo;AG ; &agrave; publier sur GitHub public</td>
+                                </tr>
+                                <tr>
+                                    <td>Membres du conseil confirm&eacute;s comme membres de l&rsquo;association</td>
+                                    <td>Vote &agrave; l&rsquo;unanimit&eacute;</td>
+                                </tr>
+                                <tr>
+                                    <td>Approuv&eacute; plusieurs contributeurs comme collaborateurs</td>
+                                    <td>Priorit&eacute; &agrave; la rapidit&eacute; plut&ocirc;t qu&rsquo;au processus formel d&rsquo;adh&eacute;sion</td>
+                                </tr>
+                                <tr>
+                                    <td>Approuv&eacute; l&rsquo;engagement d&rsquo;un consultant pour un mois</td>
+                                    <td>Pour confirmer les fournisseurs, les prix et la viabilit&eacute; de l&rsquo;&eacute;v&eacute;nement</td>
+                                </tr>
+                                <tr>
+                                    <td>Publier les documents de l&rsquo;association sur GitHub public</td>
+                                    <td>Statuts et documents fondateurs</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>R&eacute;sum&eacute; des Discussions</h2>
+
+                        <h3>Syst&egrave;me de Gestion des T&acirc;ches</h3>
+                        <p>Le conseil a discut&eacute; des pr&eacute;occupations concernant la gestion de plus de 50 t&acirc;ches non suivies dans les fils Discord. Le conseil a accept&eacute; d&rsquo;utiliser Discord pour les discussions combin&eacute; &agrave; un tableur partag&eacute; pour le suivi, maximisant le syst&egrave;me simple avant d&rsquo;envisager des outils plus complexes.</p>
+
+                        <h3>Transparence Radicale</h3>
+                        <p>Le conseil a soulign&eacute; la n&eacute;cessit&eacute; d&rsquo;&ecirc;tre radicalement transparent avec la communaut&eacute;. Le conseil a accept&eacute; de publier des notes de r&eacute;union g&eacute;n&eacute;r&eacute;es par IA et anonymis&eacute;es chaque semaine/deux fois par semaine sur le site web pour d&eacute;montrer l&rsquo;&eacute;lan et l&rsquo;ouverture.</p>
+
+                        <h3>Approche Budg&eacute;taire</h3>
+                        <p>&Eacute;tant donn&eacute; les contraintes de temps, le conseil a accept&eacute; d&rsquo;utiliser les co&ucirc;ts estim&eacute;s comme point de d&eacute;part, avec la compr&eacute;hension que ceux-ci seraient r&eacute;vis&eacute;s dans un mois. Les responsables seront inform&eacute;s de s&rsquo;attendre &agrave; des ajustements.</p>
+
+                        <h3>Int&eacute;gration des Collaborateurs</h3>
+                        <p>Le conseil a approuv&eacute; un accord de collaborateurs affin&eacute; et un code de conduite (provisoire jusqu&rsquo;&agrave; ratification par l&rsquo;AG). Le conseil a distingu&eacute; entre le statut de collaborateur (imm&eacute;diat, pour les contributeurs actifs) et l&rsquo;adh&eacute;sion formelle (n&eacute;cessite plus de processus). Plusieurs groupes de contributeurs ont &eacute;t&eacute; approuv&eacute;s comme collaborateurs pour acc&eacute;l&eacute;rer le travail.</p>
+
+                        <h3>Engagement du Consultant</h3>
+                        <p>Le conseil a accept&eacute; d&rsquo;engager un consultant pour un mois (20&ndash;30 heures/semaine) pour confirmer rapidement les fournisseurs et &eacute;valuer la viabilit&eacute; de l&rsquo;&eacute;v&eacute;nement. La clarification finale des co&ucirc;ts et le vote ont &eacute;t&eacute; programm&eacute;s pour jeudi.</p>
+
+                        <h3>Chemin Critique pour la Vente de Billets</h3>
+                        <p>Le conseil a identifi&eacute; le chemin critique pour permettre la vente de billets : comptes bancaires, syst&egrave;me de paiement, permis provisoires, coordination des services d&rsquo;urgence, location du terrain et assurance. Un fil Discord sera cr&eacute;&eacute; pour suivre toutes les exigences. Le conseil a discut&eacute; des augmentations mensuelles du prix des billets pour encourager l&rsquo;achat anticip&eacute;.</p>
+
+                        <h3>Planification de Contingence</h3>
+                        <p>Le conseil a discut&eacute; de la planification de contingence pour les infrastructures critiques, en particulier la possibilit&eacute; qu&rsquo;Ubertown fasse une pause d&rsquo;un an et ne fournisse pas de g&eacute;n&eacute;ration d&rsquo;&eacute;nergie pour les barrios. Le conseil a convenu d&rsquo;op&eacute;rer en partant du principe qu&rsquo;Ubertown pourrait ne pas participer, n&eacute;cessitant le d&eacute;veloppement de plans &eacute;nerg&eacute;tiques de secours.</p>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <ul>
+                            <li><strong>Daniel :</strong> Contacter le consultant pour clarifier le co&ucirc;t de l&rsquo;engagement d&rsquo;un mois ; Cr&eacute;er une FAQ sur l&rsquo;&eacute;tat de l&rsquo;&eacute;v&eacute;nement pour la transparence ; Investiguer les permis provisoires pour la vente de billets ; Cr&eacute;er un fil Discord pour le chemin critique de vente de billets</li>
+                            <li><strong>Ben :</strong> Travailler avec Peter pour comprendre le syst&egrave;me de documentation GitHub ; Contacter les collaborateurs nouvellement approuv&eacute;s pour leur int&eacute;gration ; Pr&eacute;senter un lot de 30 &eacute;lecteurs pour approbation jeudi ; G&eacute;rer la publication des notes de r&eacute;union anonymis&eacute;es</li>
+                            <li><strong>Peter :</strong> Publier les documents de l&rsquo;association (statuts, documents fondateurs) sur GitHub public ; Ajouter les exigences de vente de billets au fil Discord</li>
+                            <li><strong>Pablo :</strong> Contacter les responsables et les camps pour &eacute;valuer la viabilit&eacute; de l&rsquo;&eacute;v&eacute;nement ; Examiner les documents des membres du conseil ; Partager les notes de r&eacute;union avec les parties concern&eacute;es</li>
+                            <li><strong>Tous :</strong> Utiliser les co&ucirc;ts estim&eacute;s comme point de d&eacute;part ; r&eacute;vision attendue dans un mois</li>
+                        </ul>
+
+                        <h2>Points en Suspens pour les Prochaines R&eacute;unions</h2>
+                        <ul>
+                            <li>Discussion sur les domaines de responsabilit&eacute;</li>
+                            <li>Pr&eacute;paration de la r&eacute;union communautaire</li>
+                            <li>Adopter des comptes de messagerie d&eacute;di&eacute;s pour les communications officielles</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presenti:</strong> Daniel, Ben, Peter, Pablo, Ward
+                        <br><strong>Assenti:</strong> Chris, Victor, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisioni</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decisione</th>
+                                    <th>Contesto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Utilizzare Discord + foglio di calcolo per la gestione delle attivit&agrave;</td>
+                                    <td>Consenso del consiglio per massimizzare i sistemi semplici prima di aggiungere complessit&agrave;</td>
+                                </tr>
+                                <tr>
+                                    <td>Pubblicare note di riunione anonimizzate con IA settimanalmente sul sito web</td>
+                                    <td>Per una trasparenza radicale; pubblicazione bisettimanale</td>
+                                </tr>
+                                <tr>
+                                    <td>Utilizzare i costi stimati come punto di partenza</td>
+                                    <td>Comunicare ai responsabili con nota di revisione entro un mese</td>
+                                </tr>
+                                <tr>
+                                    <td>Approvato l&rsquo;accordo dei collaboratori e il codice di condotta</td>
+                                    <td>Provvisorio fino alla ratifica dell&rsquo;AG; da pubblicare su GitHub pubblico</td>
+                                </tr>
+                                <tr>
+                                    <td>Membri del consiglio confermati come membri dell&rsquo;associazione</td>
+                                    <td>Voto unanime</td>
+                                </tr>
+                                <tr>
+                                    <td>Approvati pi&ugrave; contributori come collaboratori</td>
+                                    <td>Priorit&agrave; alla rapidit&agrave; rispetto al processo formale di adesione</td>
+                                </tr>
+                                <tr>
+                                    <td>Approvato l&rsquo;incarico di un consulente per un mese</td>
+                                    <td>Per confermare fornitori, prezzi e fattibilit&agrave; dell&rsquo;evento</td>
+                                </tr>
+                                <tr>
+                                    <td>Pubblicare i documenti dell&rsquo;associazione su GitHub pubblico</td>
+                                    <td>Statuti e documenti fondativi</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Riepilogo della Discussione</h2>
+
+                        <h3>Sistema di Gestione delle Attivit&agrave;</h3>
+                        <p>Il consiglio ha discusso le preoccupazioni riguardo alla gestione di oltre 50 attivit&agrave; non monitorate nei thread di Discord. Il consiglio ha concordato di utilizzare Discord per le discussioni combinato con un foglio di calcolo condiviso per il monitoraggio, massimizzando il sistema semplice prima di considerare strumenti pi&ugrave; complessi.</p>
+
+                        <h3>Trasparenza Radicale</h3>
+                        <p>Il consiglio ha sottolineato la necessit&agrave; di essere radicalmente trasparenti con la comunit&agrave;. Il consiglio ha concordato di pubblicare note di riunione generate da IA e anonimizzate settimanalmente/bisettimanalmente sul sito web per dimostrare slancio e apertura.</p>
+
+                        <h3>Approccio al Bilancio</h3>
+                        <p>Date le limitazioni di tempo, il consiglio ha concordato di utilizzare i costi stimati come punto di partenza, con l&rsquo;intesa che sarebbero stati rivisti entro un mese. I responsabili saranno informati di aspettarsi degli aggiustamenti.</p>
+
+                        <h3>Inserimento dei Collaboratori</h3>
+                        <p>Il consiglio ha approvato un accordo dei collaboratori perfezionato e un codice di condotta (provvisorio fino alla ratifica dell&rsquo;AG). Il consiglio ha distinto tra lo status di collaboratore (immediato, per i contributori attivi) e l&rsquo;adesione formale (richiede pi&ugrave; processo). Pi&ugrave; gruppi di contributori sono stati approvati come collaboratori per accelerare il lavoro.</p>
+
+                        <h3>Incarico del Consulente</h3>
+                        <p>Il consiglio ha concordato di incaricare un consulente per un mese (20&ndash;30 ore/settimana) per confermare rapidamente i fornitori e valutare la fattibilit&agrave; dell&rsquo;evento. Il chiarimento finale dei costi e la votazione sono stati programmati per gioved&igrave;.</p>
+
+                        <h3>Percorso Critico per la Vendita dei Biglietti</h3>
+                        <p>Il consiglio ha identificato il percorso critico per abilitare la vendita dei biglietti: conti bancari, sistema di pagamento, permessi provvisori, coordinamento dei servizi di emergenza, affitto del terreno e assicurazione. Verr&agrave; creato un thread su Discord per monitorare tutti i requisiti. Il consiglio ha discusso aumenti mensili del prezzo dei biglietti per incentivare l&rsquo;acquisto anticipato.</p>
+
+                        <h3>Pianificazione di Emergenza</h3>
+                        <p>Il consiglio ha discusso la pianificazione di emergenza per le infrastrutture critiche, in particolare la possibilit&agrave; che Ubertown si prenda un anno di pausa e non fornisca la generazione di energia per i barrios. Il consiglio ha concordato di operare partendo dal presupposto che Ubertown potrebbe non partecipare, richiedendo lo sviluppo di piani energetici di riserva.</p>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <ul>
+                            <li><strong>Daniel:</strong> Contattare il consulente per chiarire il costo dell&rsquo;incarico di un mese; Creare FAQ sullo stato dell&rsquo;evento per la trasparenza; Indagare sui permessi provvisori per la vendita dei biglietti; Creare un thread su Discord per il percorso critico della vendita dei biglietti</li>
+                            <li><strong>Ben:</strong> Lavorare con Peter per comprendere il sistema di documentazione GitHub; Contattare i collaboratori appena approvati per il loro inserimento; Presentare un lotto di 30 elettori per l&rsquo;approvazione gioved&igrave;; Gestire la pubblicazione delle note di riunione anonimizzate</li>
+                            <li><strong>Peter:</strong> Pubblicare i documenti dell&rsquo;associazione (statuti, documenti fondativi) su GitHub pubblico; Aggiungere i requisiti di vendita dei biglietti al thread di Discord</li>
+                            <li><strong>Pablo:</strong> Contattare i responsabili e i campi per valutare la fattibilit&agrave; dell&rsquo;evento; Esaminare i documenti dei membri del consiglio; Condividere le note di riunione con le parti interessate</li>
+                            <li><strong>Tutti:</strong> Utilizzare i costi stimati come punto di partenza; revisione attesa entro un mese</li>
+                        </ul>
+
+                        <h2>Punti Aperti per le Prossime Riunioni</h2>
+                        <ul>
+                            <li>Discussione sulle aree di responsabilit&agrave;</li>
+                            <li>Preparazione della riunione comunitaria</li>
+                            <li>Adottare account di posta elettronica dedicati per le comunicazioni ufficiali</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Abweichungen zwischen dieser Version und der spanischen Version ist die spanische Version ma&szlig;geblich.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesend:</strong> Daniel, Ben, Peter, Pablo, Ward
+                        <br><strong>Abwesend:</strong> Chris, Victor, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Beschl&uuml;sse</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Beschluss</th>
+                                    <th>Kontext</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Discord + Tabelle f&uuml;r die Aufgabenverwaltung verwenden</td>
+                                    <td>Konsens des Vorstands, einfache Systeme auszusch&ouml;pfen, bevor Komplexit&auml;t hinzugef&uuml;gt wird</td>
+                                </tr>
+                                <tr>
+                                    <td>Anonymisierte KI-Sitzungsnotizen w&ouml;chentlich auf der Website ver&ouml;ffentlichen</td>
+                                    <td>F&uuml;r radikale Transparenz; zweimal w&ouml;chentliche Ver&ouml;ffentlichung</td>
+                                </tr>
+                                <tr>
+                                    <td>Gesch&auml;tzte Kosten als Ausgangspunkt verwenden</td>
+                                    <td>Den Verantwortlichen mitteilen, dass eine &Uuml;berpr&uuml;fung in einem Monat erfolgt</td>
+                                </tr>
+                                <tr>
+                                    <td>Mitarbeitervereinbarung und Verhaltenskodex genehmigt</td>
+                                    <td>Vorl&auml;ufig bis zur Ratifizierung durch die MV; auf &ouml;ffentlichem GitHub zu ver&ouml;ffentlichen</td>
+                                </tr>
+                                <tr>
+                                    <td>Vorstandsmitglieder als Vereinsmitglieder best&auml;tigt</td>
+                                    <td>Einstimmige Abstimmung</td>
+                                </tr>
+                                <tr>
+                                    <td>Mehrere Mitwirkende als Mitarbeiter genehmigt</td>
+                                    <td>Schnelligkeit vor formellem Aufnahmeverfahren priorisiert</td>
+                                </tr>
+                                <tr>
+                                    <td>Beauftragung eines Beraters f&uuml;r einen Monat genehmigt</td>
+                                    <td>Zur Best&auml;tigung von Anbietern, Preisen und Durchf&uuml;hrbarkeit der Veranstaltung</td>
+                                </tr>
+                                <tr>
+                                    <td>Vereinsdokumente auf &ouml;ffentlichem GitHub ver&ouml;ffentlichen</td>
+                                    <td>Satzung und Gr&uuml;ndungsdokumente</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Zusammenfassung der Diskussion</h2>
+
+                        <h3>Aufgabenverwaltungssystem</h3>
+                        <p>Der Vorstand diskutierte Bedenken bez&uuml;glich der Verwaltung von &uuml;ber 50 nicht nachverfolgten Aufgaben in Discord-Threads. Der Vorstand einigte sich darauf, Discord f&uuml;r Diskussionen in Kombination mit einer gemeinsamen Tabelle f&uuml;r die Nachverfolgung zu verwenden und das einfache System auszusch&ouml;pfen, bevor komplexere Werkzeuge in Betracht gezogen werden.</p>
+
+                        <h3>Radikale Transparenz</h3>
+                        <p>Der Vorstand betonte die Notwendigkeit, gegen&uuml;ber der Gemeinschaft radikal transparent zu sein. Der Vorstand einigte sich darauf, anonymisierte, KI-generierte Sitzungsnotizen w&ouml;chentlich/zweimal w&ouml;chentlich auf der Website zu ver&ouml;ffentlichen, um Dynamik und Offenheit zu demonstrieren.</p>
+
+                        <h3>Haushaltsansatz</h3>
+                        <p>Angesichts der Zeitbeschr&auml;nkungen einigte sich der Vorstand darauf, gesch&auml;tzte Kosten als Ausgangspunkt zu verwenden, mit dem Verst&auml;ndnis, dass diese innerhalb eines Monats &uuml;berpr&uuml;ft werden. Die Verantwortlichen werden informiert, Anpassungen zu erwarten.</p>
+
+                        <h3>Einarbeitung der Mitarbeiter</h3>
+                        <p>Der Vorstand genehmigte eine verfeinerte Mitarbeitervereinbarung und einen Verhaltenskodex (vorl&auml;ufig bis zur Ratifizierung durch die MV). Der Vorstand unterschied zwischen dem Mitarbeiterstatus (sofort, f&uuml;r aktive Mitwirkende) und der formellen Mitgliedschaft (erfordert mehr Verfahren). Mehrere Gruppen von Mitwirkenden wurden als Mitarbeiter genehmigt, um die Arbeit zu beschleunigen.</p>
+
+                        <h3>Beraterbeauftragung</h3>
+                        <p>Der Vorstand einigte sich darauf, einen Berater f&uuml;r einen Monat (20&ndash;30 Stunden/Woche) zu beauftragen, um schnell Anbieter zu best&auml;tigen und die Durchf&uuml;hrbarkeit der Veranstaltung zu bewerten. Die endg&uuml;ltige Kl&auml;rung der Kosten und die Abstimmung wurden f&uuml;r Donnerstag angesetzt.</p>
+
+                        <h3>Kritischer Pfad zum Ticketverkauf</h3>
+                        <p>Der Vorstand identifizierte den kritischen Pfad zur Erm&ouml;glichung des Ticketverkaufs: Bankkonten, Zahlungssystem, vorl&auml;ufige Genehmigungen, Koordination der Rettungsdienste, Gel&auml;ndemiete und Versicherung. Ein Discord-Thread wird erstellt, um alle Anforderungen zu verfolgen. Der Vorstand diskutierte monatliche Ticketpreiserh&ouml;hungen, um fr&uuml;hzeitigen Kauf zu f&ouml;rdern.</p>
+
+                        <h3>Notfallplanung</h3>
+                        <p>Der Vorstand diskutierte die Notfallplanung f&uuml;r kritische Infrastruktur, insbesondere die M&ouml;glichkeit, dass Ubertown ein Jahr aussetzt und keine Stromerzeugung f&uuml;r die Barrios bereitstellt. Der Vorstand einigte sich darauf, unter der Annahme zu arbeiten, dass Ubertown m&ouml;glicherweise nicht teilnimmt, was die Entwicklung von Notstrompl&auml;nen erfordert.</p>
+
+                        <h2>Ma&szlig;nahmen</h2>
+                        <ul>
+                            <li><strong>Daniel:</strong> Berater kontaktieren, um die Kosten des einmonatigen Auftrags zu kl&auml;ren; FAQ &uuml;ber den Veranstaltungsstatus f&uuml;r Transparenz erstellen; Vorl&auml;ufige Genehmigungen f&uuml;r den Ticketverkauf untersuchen; Discord-Thread f&uuml;r den kritischen Pfad des Ticketverkaufs erstellen</li>
+                            <li><strong>Ben:</strong> Mit Peter zusammenarbeiten, um das GitHub-Dokumentationssystem zu verstehen; Neu genehmigte Mitarbeiter f&uuml;r die Einarbeitung kontaktieren; Am Donnerstag einen Satz von 30 Wahlberechtigten zur Genehmigung vorlegen; Ver&ouml;ffentlichung der anonymisierten Sitzungsnotizen verwalten</li>
+                            <li><strong>Peter:</strong> Vereinsdokumente (Satzung, Gr&uuml;ndungsdokumente) auf &ouml;ffentlichem GitHub ver&ouml;ffentlichen; Anforderungen f&uuml;r den Ticketverkauf zum Discord-Thread hinzuf&uuml;gen</li>
+                            <li><strong>Pablo:</strong> Verantwortliche und Camps kontaktieren, um die Durchf&uuml;hrbarkeit der Veranstaltung zu bewerten; Dokumente der Vorstandsmitglieder pr&uuml;fen; Sitzungsnotizen mit den betreffenden Parteien teilen</li>
+                            <li><strong>Alle:</strong> Gesch&auml;tzte Kosten als Ausgangspunkt verwenden; &Uuml;berpr&uuml;fung in einem Monat erwartet</li>
+                        </ul>
+
+                        <h2>Offene Punkte f&uuml;r zuk&uuml;nftige Sitzungen</h2>
+                        <ul>
+                            <li>Diskussion &uuml;ber Verantwortungsbereiche</li>
+                            <li>Vorbereitung der Gemeinschaftsversammlung</li>
+                            <li>Dedizierte E-Mail-Konten f&uuml;r offizielle Kommunikation einf&uuml;hren</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -144,5 +542,18 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

@@ -33,6 +33,12 @@
         .resource-links a:hover { text-decoration: underline; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 2rem; border-radius: 8px; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -52,126 +58,632 @@
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Chaired by Chris Torris Olsen, with board members, leads, and community members</strong>
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="resource-links">
-                    <h3>Full Records</h3>
-                    <ul>
-                        <li><a href="2026-02-26-community-transcript.html">Full meeting transcript</a></li>
-                        <li><a href="2026-02-26-community-chat.html">Meeting chat log</a></li>
-                        <li><a href="https://youtu.be/AZqFkP9eoKw" target="_blank">Video recording</a></li>
-                    </ul>
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Chaired by Chris Torris Olsen, with board members, leads, and community members</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-02-26-community-transcript.html">Full meeting transcript</a></li>
+                            <li><a href="2026-02-26-community-chat.html">Meeting chat log</a></li>
+                            <li><a href="https://youtu.be/AZqFkP9eoKw" target="_blank">Video recording</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/AZqFkP9eoKw" title="Community Meeting - February 26, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Overview</h2>
+                        <p>Fourth community meeting of the Nobodies Collective Asociaci&oacute;n (NCA). The meeting covered progress on external relations and asset procurement, a successful test of the lower-cost Ticket Taylor ticketing platform, the upcoming event name rank-choice poll, a call for community help with organizational design and decentralization, the Governance Working Group&rsquo;s go/no-go information pack and community poll, legal clarifications on liability, a power team update, the Humans App launch, participant wellness and Code of Conduct progress, and financial risk mitigation planning.</p>
+
+                        <h2>Key Topics</h2>
+
+                        <h3>External Relations Update (Pepe)</h3>
+                        <ul>
+                            <li>Substantial progress on external discussions since the previous week</li>
+                            <li>Contracts currently under legal review</li>
+                            <li>In-person meetings with legal teams planned for the following week</li>
+                            <li>First draft of written communications expected the following day, with second versions over the weekend</li>
+                            <li>Goal: at least one contract signed by end of next week</li>
+                        </ul>
+
+                        <h3>Ticketing System Test (Pablo)</h3>
+                        <ul>
+                            <li>Successful test of the Ticket Taylor platform as a ticketing solution</li>
+                            <li>Drastically lower fees &mdash; potentially saving the organization \$10,000 to \$15,000</li>
+                            <li>Test account set up with the tax ID; test purchase using Apple Pay successfully processed through Stripe</li>
+                            <li>Card and Google Pay payments also supported</li>
+                        </ul>
+
+                        <h3>Event Name Poll (Pablo)</h3>
+                        <ul>
+                            <li>Not using the &ldquo;Nowhere&rdquo; name as the association does not have authorization to use it</li>
+                            <li>25&ndash;30 name suggestions collected from the community</li>
+                            <li>Rank-choice poll coming in the next few days for members onboarded in the Humans app</li>
+                            <li>Members will choose their top three options from the list</li>
+                        </ul>
+
+                        <h3>Decentralization &amp; Organizational Structure (Daniel)</h3>
+                        <ul>
+                            <li>Emphasized the non-hierarchical, participatory nature of the event</li>
+                            <li>The board operates by consensus &mdash; every vote has been unanimous</li>
+                            <li>Board intends to eventually step back from operational executive input, retaining only sign-off and external-facing roles</li>
+                            <li>Warned about the danger of power concentration and burnout caused by bootstrapping pressure</li>
+                            <li>Called for volunteers interested in organizational design, transparency, and decentralization</li>
+                            <li>Ben D volunteered as first point of contact for anyone wishing to contribute ideas</li>
+                        </ul>
+
+                        <h3>Go/No-Go Decision Process (Julian, Kate, Ella)</h3>
+                        <ul>
+                            <li>Governance Working Group conducted 33 interviews across 8 key areas over the past two weeks</li>
+                            <li>Findings summarized in an information pack sent by email to 168 registered association members</li>
+                            <li>Community poll open until 11:59 PM on Sunday night</li>
+                            <li>Poll is non-binding &mdash; results will inform the board&rsquo;s final decision</li>
+                            <li>Tyche read a statement from Justin (Ubertown) raising concerns about the document&rsquo;s neutrality, insufficient emphasis on existential risk, and the non-binding nature of the poll</li>
+                            <li>Kate explained that a binding General Assembly would take months to organize and was not feasible given time constraints</li>
+                        </ul>
+
+                        <h3>Legal Structure &amp; Liability (Pepe)</h3>
+                        <ul>
+                            <li>The association is a structurally distinct legal entity with its own management and no shareholders</li>
+                            <li>Under Spanish law, member liability is limited to financial contributions (i.e. the membership fee)</li>
+                            <li>Legal opinions on tax, data protection, and labour matters are being prepared</li>
+                        </ul>
+
+                        <h3>Power Team Update (Javi via audio)</h3>
+                        <ul>
+                            <li>New power group of approximately six people formed, many with relevant technical experience</li>
+                            <li>First meeting scheduled for next week after reviewing job descriptions</li>
+                            <li>Having experienced members in the group will facilitate progress</li>
+                        </ul>
+
+                        <h3>Humans App (Ben D)</h3>
+                        <ul>
+                            <li>Platform is now operational and serves as the official location for applications</li>
+                            <li>Current collaborators and members being migrated to the new platform</li>
+                            <li>Official criteria for voting membership finalized and to be posted on GitHub</li>
+                            <li>Community will have the opportunity to adjust criteria at the next General Assembly</li>
+                        </ul>
+
+                        <h3>Participant Wellness (Anna T)</h3>
+                        <ul>
+                            <li>Focus shifting from exclusively event attendees to also covering collaborators and association members</li>
+                            <li>Updating the participant Code of Conduct &mdash; draft to be shared in the participant wellness Discord group on Saturday for community input</li>
+                            <li>Seeking anyone with mediation experience or interest to help create policies and provide support for disputes</li>
+                        </ul>
+
+                        <h3>Financial Risk &amp; Refunds (Pepe)</h3>
+                        <ul>
+                            <li>Three-fold plan to mitigate financial risk: minimize non-refundable vendor deposits, expand revenue streams, and creative fundraising</li>
+                            <li>Fundraising event confirmed for April 11</li>
+                            <li>Aim to minimize payments until required &mdash; not much comes due before May</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <ul>
+                            <li><strong>Pablo</strong> &mdash; Send event name rank-choice poll in the next few days</li>
+                            <li><strong>Pablo</strong> &mdash; Share ticketing information with whoever leads ticketing</li>
+                            <li><strong>Ben</strong> &mdash; First point of contact for organizational design contributions</li>
+                            <li><strong>Ben</strong> &mdash; Organize meetings for organizational design and coordination structures</li>
+                            <li><strong>Anna</strong> &mdash; Share draft Code of Conduct in the participant wellness Discord group on Saturday</li>
+                            <li><strong>Pepe</strong> &mdash; Share full legal opinions (tax, data protection, labor risk) as the scaffolding for new operations is built</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/AZqFkP9eoKw" title="Community Meeting - February 26, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Presidida por Chris Torris Olsen, con miembros de la junta, responsables de &aacute;rea y miembros de la comunidad</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registros completos</h3>
+                        <ul>
+                            <li><a href="2026-02-26-community-transcript.html">Transcripci&oacute;n completa de la reuni&oacute;n</a></li>
+                            <li><a href="2026-02-26-community-chat.html">Registro del chat de la reuni&oacute;n</a></li>
+                            <li><a href="https://youtu.be/AZqFkP9eoKw" target="_blank">Grabaci&oacute;n en v&iacute;deo</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/AZqFkP9eoKw" title="Reuni&oacute;n comunitaria - 26 de febrero de 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Resumen general</h2>
+                        <p>Cuarta reuni&oacute;n comunitaria de la Nobodies Collective Asociaci&oacute;n (NCA). La reuni&oacute;n cubri&oacute; los avances en relaciones externas y adquisici&oacute;n de activos, una prueba exitosa de la plataforma de venta de entradas Ticket Taylor de menor coste, la pr&oacute;xima encuesta de elecci&oacute;n por orden de preferencia para el nombre del evento, un llamamiento a la ayuda comunitaria en dise&ntilde;o organizativo y descentralizaci&oacute;n, el paquete informativo y la encuesta comunitaria del Grupo de Trabajo de Gobernanza sobre la decisi&oacute;n de continuar o no, aclaraciones legales sobre responsabilidad, una actualizaci&oacute;n del equipo de energ&iacute;a, el lanzamiento de la Humans App, avances en bienestar de participantes y C&oacute;digo de Conducta, y planificaci&oacute;n de mitigaci&oacute;n de riesgos financieros.</p>
+
+                        <h2>Temas principales</h2>
+
+                        <h3>Actualizaci&oacute;n de relaciones externas (Pepe)</h3>
+                        <ul>
+                            <li>Avances sustanciales en las negociaciones externas desde la semana anterior</li>
+                            <li>Contratos actualmente en revisi&oacute;n legal</li>
+                            <li>Reuniones presenciales con equipos legales previstas para la semana siguiente</li>
+                            <li>Primer borrador de comunicaciones escritas previsto para el d&iacute;a siguiente, con segundas versiones durante el fin de semana</li>
+                            <li>Objetivo: al menos un contrato firmado para finales de la pr&oacute;xima semana</li>
+                        </ul>
+
+                        <h3>Prueba del sistema de venta de entradas (Pablo)</h3>
+                        <ul>
+                            <li>Prueba exitosa de la plataforma Ticket Taylor como soluci&oacute;n de venta de entradas</li>
+                            <li>Tarifas dr&aacute;sticamente m&aacute;s bajas &mdash; con un ahorro potencial de 10.000 a 15.000 &euro; para la organizaci&oacute;n</li>
+                            <li>Cuenta de prueba configurada con el NIF; compra de prueba con Apple Pay procesada correctamente a trav&eacute;s de Stripe</li>
+                            <li>Tambi&eacute;n se admiten pagos con tarjeta y Google Pay</li>
+                        </ul>
+
+                        <h3>Encuesta sobre el nombre del evento (Pablo)</h3>
+                        <ul>
+                            <li>No se utilizar&aacute; el nombre &laquo;Nowhere&raquo; ya que la asociaci&oacute;n no tiene autorizaci&oacute;n para usarlo</li>
+                            <li>25&ndash;30 sugerencias de nombres recogidas de la comunidad</li>
+                            <li>Encuesta de elecci&oacute;n por orden de preferencia en los pr&oacute;ximos d&iacute;as para los miembros registrados en la Humans App</li>
+                            <li>Los miembros elegir&aacute;n sus tres opciones preferidas de la lista</li>
+                        </ul>
+
+                        <h3>Descentralizaci&oacute;n y estructura organizativa (Daniel)</h3>
+                        <ul>
+                            <li>Se hizo hincapi&eacute; en la naturaleza no jer&aacute;rquica y participativa del evento</li>
+                            <li>La junta funciona por consenso &mdash; todas las votaciones han sido un&aacute;nimes</li>
+                            <li>La junta tiene la intenci&oacute;n de retirarse eventualmente de la participaci&oacute;n ejecutiva operativa, conservando &uacute;nicamente funciones de aprobaci&oacute;n y representaci&oacute;n externa</li>
+                            <li>Se advirti&oacute; sobre el peligro de la concentraci&oacute;n de poder y el agotamiento causado por la presi&oacute;n de la puesta en marcha</li>
+                            <li>Se hizo un llamamiento a voluntarios interesados en dise&ntilde;o organizativo, transparencia y descentralizaci&oacute;n</li>
+                            <li>Ben D se ofreci&oacute; como primer punto de contacto para cualquier persona que desee aportar ideas</li>
+                        </ul>
+
+                        <h3>Proceso de decisi&oacute;n de continuar o no (Julian, Kate, Ella)</h3>
+                        <ul>
+                            <li>El Grupo de Trabajo de Gobernanza realiz&oacute; 33 entrevistas en 8 &aacute;reas clave durante las dos semanas anteriores</li>
+                            <li>Las conclusiones se resumieron en un paquete informativo enviado por correo electr&oacute;nico a 168 miembros registrados de la asociaci&oacute;n</li>
+                            <li>Encuesta comunitaria abierta hasta las 23:59 del domingo por la noche</li>
+                            <li>La encuesta no es vinculante &mdash; los resultados servir&aacute;n de orientaci&oacute;n para la decisi&oacute;n final de la junta</li>
+                            <li>Tyche ley&oacute; una declaraci&oacute;n de Justin (Ubertown) expresando preocupaciones sobre la neutralidad del documento, la insuficiente &eacute;nfasis en el riesgo existencial y la naturaleza no vinculante de la encuesta</li>
+                            <li>Kate explic&oacute; que una Asamblea General vinculante tardar&iacute;a meses en organizarse y no era viable dadas las restricciones de tiempo</li>
+                        </ul>
+
+                        <h3>Estructura legal y responsabilidad (Pepe)</h3>
+                        <ul>
+                            <li>La asociaci&oacute;n es una entidad jur&iacute;dica estructuralmente diferenciada con su propia gesti&oacute;n y sin accionistas</li>
+                            <li>Seg&uacute;n la legislaci&oacute;n espa&ntilde;ola, la responsabilidad de los miembros se limita a las aportaciones econ&oacute;micas (es decir, la cuota de membres&iacute;a)</li>
+                            <li>Se est&aacute;n preparando dict&aacute;menes legales sobre fiscalidad, protecci&oacute;n de datos y cuestiones laborales</li>
+                        </ul>
+
+                        <h3>Actualizaci&oacute;n del equipo de energ&iacute;a (Javi por audio)</h3>
+                        <ul>
+                            <li>Nuevo grupo de energ&iacute;a formado por aproximadamente seis personas, muchas con experiencia t&eacute;cnica relevante</li>
+                            <li>Primera reuni&oacute;n programada para la semana siguiente tras revisar las descripciones de funciones</li>
+                            <li>Contar con miembros experimentados en el grupo facilitar&aacute; el avance</li>
+                        </ul>
+
+                        <h3>Humans App (Ben D)</h3>
+                        <ul>
+                            <li>La plataforma ya est&aacute; operativa y sirve como lugar oficial para las solicitudes</li>
+                            <li>Los colaboradores y miembros actuales est&aacute;n siendo migrados a la nueva plataforma</li>
+                            <li>Criterios oficiales de membres&iacute;a con derecho a voto finalizados y pendientes de publicaci&oacute;n en GitHub</li>
+                            <li>La comunidad tendr&aacute; la oportunidad de ajustar los criterios en la pr&oacute;xima Asamblea General</li>
+                        </ul>
+
+                        <h3>Bienestar de participantes (Anna T)</h3>
+                        <ul>
+                            <li>El enfoque se ampl&iacute;a de los asistentes exclusivamente al evento para cubrir tambi&eacute;n a colaboradores y miembros de la asociaci&oacute;n</li>
+                            <li>Actualizaci&oacute;n del C&oacute;digo de Conducta de participantes &mdash; el borrador se compartir&aacute; en el grupo de bienestar de participantes en Discord el s&aacute;bado para recibir comentarios de la comunidad</li>
+                            <li>Se busca a cualquier persona con experiencia o inter&eacute;s en mediaci&oacute;n para ayudar a crear pol&iacute;ticas y brindar apoyo en disputas</li>
+                        </ul>
+
+                        <h3>Riesgo financiero y reembolsos (Pepe)</h3>
+                        <ul>
+                            <li>Plan triple para mitigar el riesgo financiero: minimizar los dep&oacute;sitos no reembolsables a proveedores, ampliar las fuentes de ingresos y recaudaci&oacute;n de fondos creativa</li>
+                            <li>Evento de recaudaci&oacute;n de fondos confirmado para el 11 de abril</li>
+                            <li>Objetivo de minimizar los pagos hasta que sean necesarios &mdash; no vence mucho antes de mayo</li>
+                        </ul>
+
+                        <h2>Puntos de acci&oacute;n</h2>
+                        <ul>
+                            <li><strong>Pablo</strong> &mdash; Enviar la encuesta de elecci&oacute;n por orden de preferencia del nombre del evento en los pr&oacute;ximos d&iacute;as</li>
+                            <li><strong>Pablo</strong> &mdash; Compartir la informaci&oacute;n de venta de entradas con quien lidere la venta de entradas</li>
+                            <li><strong>Ben</strong> &mdash; Primer punto de contacto para contribuciones al dise&ntilde;o organizativo</li>
+                            <li><strong>Ben</strong> &mdash; Organizar reuniones sobre dise&ntilde;o organizativo y estructuras de coordinaci&oacute;n</li>
+                            <li><strong>Anna</strong> &mdash; Compartir el borrador del C&oacute;digo de Conducta en el grupo de bienestar de participantes en Discord el s&aacute;bado</li>
+                            <li><strong>Pepe</strong> &mdash; Compartir los dict&aacute;menes legales completos (fiscalidad, protecci&oacute;n de datos, riesgo laboral) a medida que se construye la estructura para las nuevas operaciones</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Overview</h2>
-                    <p>Fourth community meeting of the Nobodies Collective Asociaci&oacute;n (NCA). The meeting covered progress on external relations and asset procurement, a successful test of the lower-cost Ticket Taylor ticketing platform, the upcoming event name rank-choice poll, a call for community help with organizational design and decentralization, the Governance Working Group&rsquo;s go/no-go information pack and community poll, legal clarifications on liability, a power team update, the Humans App launch, participant wellness and Code of Conduct progress, and financial risk mitigation planning.</p>
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaut.</div>
 
-                    <h2>Key Topics</h2>
+                    <div class="attendees">
+                        <strong>Pr&eacute;sid&eacute;e par Chris Torris Olsen, avec des membres du conseil d&rsquo;administration, des responsables et des membres de la communaut&eacute;</strong>
+                    </div>
 
-                    <h3>External Relations Update (Pepe)</h3>
-                    <ul>
-                        <li>Substantial progress on external discussions since the previous week</li>
-                        <li>Contracts currently under legal review</li>
-                        <li>In-person meetings with legal teams planned for the following week</li>
-                        <li>First draft of written communications expected the following day, with second versions over the weekend</li>
-                        <li>Goal: at least one contract signed by end of next week</li>
-                    </ul>
+                    <div class="resource-links">
+                        <h3>Documents complets</h3>
+                        <ul>
+                            <li><a href="2026-02-26-community-transcript.html">Transcription int&eacute;grale de la r&eacute;union</a></li>
+                            <li><a href="2026-02-26-community-chat.html">Journal du chat de la r&eacute;union</a></li>
+                            <li><a href="https://youtu.be/AZqFkP9eoKw" target="_blank">Enregistrement vid&eacute;o</a></li>
+                        </ul>
+                    </div>
 
-                    <h3>Ticketing System Test (Pablo)</h3>
-                    <ul>
-                        <li>Successful test of the Ticket Taylor platform as a ticketing solution</li>
-                        <li>Drastically lower fees &mdash; potentially saving the organization \$10,000 to \$15,000</li>
-                        <li>Test account set up with the tax ID; test purchase using Apple Pay successfully processed through Stripe</li>
-                        <li>Card and Google Pay payments also supported</li>
-                    </ul>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/AZqFkP9eoKw" title="R&eacute;union communautaire - 26 f&eacute;vrier 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
 
-                    <h3>Event Name Poll (Pablo)</h3>
-                    <ul>
-                        <li>Not using the &ldquo;Nowhere&rdquo; name as the association does not have authorization to use it</li>
-                        <li>25&ndash;30 name suggestions collected from the community</li>
-                        <li>Rank-choice poll coming in the next few days for members onboarded in the Humans app</li>
-                        <li>Members will choose their top three options from the list</li>
-                    </ul>
+                    <div class="meeting-content">
+                        <h2>Aper&ccedil;u g&eacute;n&eacute;ral</h2>
+                        <p>Quatri&egrave;me r&eacute;union communautaire de la Nobodies Collective Asociaci&oacute;n (NCA). La r&eacute;union a couvert les progr&egrave;s en mati&egrave;re de relations ext&eacute;rieures et d&rsquo;acquisition d&rsquo;actifs, un test r&eacute;ussi de la plateforme de billetterie &agrave; moindre co&ucirc;t Ticket Taylor, le prochain scrutin &agrave; choix class&eacute; pour le nom de l&rsquo;&eacute;v&eacute;nement, un appel &agrave; l&rsquo;aide communautaire pour la conception organisationnelle et la d&eacute;centralisation, le dossier d&rsquo;information et le sondage communautaire du Groupe de travail sur la gouvernance concernant la d&eacute;cision de poursuivre ou non, des clarifications juridiques sur la responsabilit&eacute;, une mise &agrave; jour de l&rsquo;&eacute;quipe &eacute;nergie, le lancement de la Humans App, les avanc&eacute;es en mati&egrave;re de bien-&ecirc;tre des participants et du Code de conduite, et la planification de l&rsquo;att&eacute;nuation des risques financiers.</p>
 
-                    <h3>Decentralization &amp; Organizational Structure (Daniel)</h3>
-                    <ul>
-                        <li>Emphasized the non-hierarchical, participatory nature of the event</li>
-                        <li>The board operates by consensus &mdash; every vote has been unanimous</li>
-                        <li>Board intends to eventually step back from operational executive input, retaining only sign-off and external-facing roles</li>
-                        <li>Warned about the danger of power concentration and burnout caused by bootstrapping pressure</li>
-                        <li>Called for volunteers interested in organizational design, transparency, and decentralization</li>
-                        <li>Ben D volunteered as first point of contact for anyone wishing to contribute ideas</li>
-                    </ul>
+                        <h2>Sujets principaux</h2>
 
-                    <h3>Go/No-Go Decision Process (Julian, Kate, Ella)</h3>
-                    <ul>
-                        <li>Governance Working Group conducted 33 interviews across 8 key areas over the past two weeks</li>
-                        <li>Findings summarized in an information pack sent by email to 168 registered association members</li>
-                        <li>Community poll open until 11:59 PM on Sunday night</li>
-                        <li>Poll is non-binding &mdash; results will inform the board&rsquo;s final decision</li>
-                        <li>Tyche read a statement from Justin (Ubertown) raising concerns about the document&rsquo;s neutrality, insufficient emphasis on existential risk, and the non-binding nature of the poll</li>
-                        <li>Kate explained that a binding General Assembly would take months to organize and was not feasible given time constraints</li>
-                    </ul>
+                        <h3>Mise &agrave; jour des relations ext&eacute;rieures (Pepe)</h3>
+                        <ul>
+                            <li>Progr&egrave;s substantiels dans les discussions ext&eacute;rieures depuis la semaine pr&eacute;c&eacute;dente</li>
+                            <li>Contrats actuellement en cours de r&eacute;vision juridique</li>
+                            <li>R&eacute;unions en personne avec les &eacute;quipes juridiques pr&eacute;vues la semaine suivante</li>
+                            <li>Premier brouillon des communications &eacute;crites attendu le lendemain, avec des deuxi&egrave;mes versions pendant le week-end</li>
+                            <li>Objectif : au moins un contrat sign&eacute; d&rsquo;ici la fin de la semaine suivante</li>
+                        </ul>
 
-                    <h3>Legal Structure &amp; Liability (Pepe)</h3>
-                    <ul>
-                        <li>The association is a structurally distinct legal entity with its own management and no shareholders</li>
-                        <li>Under Spanish law, member liability is limited to financial contributions (i.e. the membership fee)</li>
-                        <li>Legal opinions on tax, data protection, and labour matters are being prepared</li>
-                    </ul>
+                        <h3>Test du syst&egrave;me de billetterie (Pablo)</h3>
+                        <ul>
+                            <li>Test r&eacute;ussi de la plateforme Ticket Taylor comme solution de billetterie</li>
+                            <li>Frais consid&eacute;rablement r&eacute;duits &mdash; &eacute;conomie potentielle de 10 000 &agrave; 15 000 &euro; pour l&rsquo;organisation</li>
+                            <li>Compte de test configur&eacute; avec le num&eacute;ro d&rsquo;identification fiscale ; achat test via Apple Pay trait&eacute; avec succ&egrave;s par Stripe</li>
+                            <li>Paiements par carte et Google Pay &eacute;galement accept&eacute;s</li>
+                        </ul>
 
-                    <h3>Power Team Update (Javi via audio)</h3>
-                    <ul>
-                        <li>New power group of approximately six people formed, many with relevant technical experience</li>
-                        <li>First meeting scheduled for next week after reviewing job descriptions</li>
-                        <li>Having experienced members in the group will facilitate progress</li>
-                    </ul>
+                        <h3>Sondage sur le nom de l&rsquo;&eacute;v&eacute;nement (Pablo)</h3>
+                        <ul>
+                            <li>Le nom &laquo; Nowhere &raquo; n&rsquo;est pas utilis&eacute; car l&rsquo;association n&rsquo;a pas l&rsquo;autorisation de l&rsquo;utiliser</li>
+                            <li>25 &agrave; 30 suggestions de noms recueillies aupr&egrave;s de la communaut&eacute;</li>
+                            <li>Scrutin &agrave; choix class&eacute; pr&eacute;vu dans les prochains jours pour les membres inscrits sur la Humans App</li>
+                            <li>Les membres choisiront leurs trois options pr&eacute;f&eacute;r&eacute;es dans la liste</li>
+                        </ul>
 
-                    <h3>Humans App (Ben D)</h3>
-                    <ul>
-                        <li>Platform is now operational and serves as the official location for applications</li>
-                        <li>Current collaborators and members being migrated to the new platform</li>
-                        <li>Official criteria for voting membership finalized and to be posted on GitHub</li>
-                        <li>Community will have the opportunity to adjust criteria at the next General Assembly</li>
-                    </ul>
+                        <h3>D&eacute;centralisation et structure organisationnelle (Daniel)</h3>
+                        <ul>
+                            <li>Accent mis sur la nature non hi&eacute;rarchique et participative de l&rsquo;&eacute;v&eacute;nement</li>
+                            <li>Le conseil d&rsquo;administration fonctionne par consensus &mdash; chaque vote a &eacute;t&eacute; unanime</li>
+                            <li>Le conseil a l&rsquo;intention de se retirer &agrave; terme de la participation ex&eacute;cutive op&eacute;rationnelle, ne conservant que les fonctions d&rsquo;approbation et de repr&eacute;sentation ext&eacute;rieure</li>
+                            <li>Mise en garde contre le danger de concentration du pouvoir et l&rsquo;&eacute;puisement caus&eacute; par la pression du d&eacute;marrage</li>
+                            <li>Appel aux volontaires int&eacute;ress&eacute;s par la conception organisationnelle, la transparence et la d&eacute;centralisation</li>
+                            <li>Ben D s&rsquo;est port&eacute; volontaire comme premier point de contact pour toute personne souhaitant apporter des id&eacute;es</li>
+                        </ul>
 
-                    <h3>Participant Wellness (Anna T)</h3>
-                    <ul>
-                        <li>Focus shifting from exclusively event attendees to also covering collaborators and association members</li>
-                        <li>Updating the participant Code of Conduct &mdash; draft to be shared in the participant wellness Discord group on Saturday for community input</li>
-                        <li>Seeking anyone with mediation experience or interest to help create policies and provide support for disputes</li>
-                    </ul>
+                        <h3>Processus de d&eacute;cision de poursuite ou non (Julian, Kate, Ella)</h3>
+                        <ul>
+                            <li>Le Groupe de travail sur la gouvernance a r&eacute;alis&eacute; 33 entretiens dans 8 domaines cl&eacute;s au cours des deux semaines pr&eacute;c&eacute;dentes</li>
+                            <li>Les conclusions ont &eacute;t&eacute; r&eacute;sum&eacute;es dans un dossier d&rsquo;information envoy&eacute; par courriel aux 168 membres enregistr&eacute;s de l&rsquo;association</li>
+                            <li>Sondage communautaire ouvert jusqu&rsquo;&agrave; 23h59 le dimanche soir</li>
+                            <li>Le sondage n&rsquo;est pas contraignant &mdash; les r&eacute;sultats orienteront la d&eacute;cision finale du conseil</li>
+                            <li>Tyche a lu une d&eacute;claration de Justin (Ubertown) exprimant des pr&eacute;occupations concernant la neutralit&eacute; du document, l&rsquo;accent insuffisant sur le risque existentiel et le caract&egrave;re non contraignant du sondage</li>
+                            <li>Kate a expliqu&eacute; qu&rsquo;une Assembl&eacute;e g&eacute;n&eacute;rale contraignante prendrait des mois &agrave; organiser et n&rsquo;&eacute;tait pas r&eacute;alisable vu les contraintes de temps</li>
+                        </ul>
 
-                    <h3>Financial Risk &amp; Refunds (Pepe)</h3>
-                    <ul>
-                        <li>Three-fold plan to mitigate financial risk: minimize non-refundable vendor deposits, expand revenue streams, and creative fundraising</li>
-                        <li>Fundraising event confirmed for April 11</li>
-                        <li>Aim to minimize payments until required &mdash; not much comes due before May</li>
-                    </ul>
+                        <h3>Structure juridique et responsabilit&eacute; (Pepe)</h3>
+                        <ul>
+                            <li>L&rsquo;association est une entit&eacute; juridique structurellement distincte avec sa propre direction et sans actionnaires</li>
+                            <li>En vertu du droit espagnol, la responsabilit&eacute; des membres est limit&eacute;e aux contributions financi&egrave;res (c&rsquo;est-&agrave;-dire la cotisation d&rsquo;adh&eacute;sion)</li>
+                            <li>Des avis juridiques sur la fiscalit&eacute;, la protection des donn&eacute;es et les questions de droit du travail sont en pr&eacute;paration</li>
+                        </ul>
 
-                    <h2>Action Items</h2>
-                    <ul>
-                        <li><strong>Pablo</strong> &mdash; Send event name rank-choice poll in the next few days</li>
-                        <li><strong>Pablo</strong> &mdash; Share ticketing information with whoever leads ticketing</li>
-                        <li><strong>Ben</strong> &mdash; First point of contact for organizational design contributions</li>
-                        <li><strong>Ben</strong> &mdash; Organize meetings for organizational design and coordination structures</li>
-                        <li><strong>Anna</strong> &mdash; Share draft Code of Conduct in the participant wellness Discord group on Saturday</li>
-                        <li><strong>Pepe</strong> &mdash; Share full legal opinions (tax, data protection, labor risk) as the scaffolding for new operations is built</li>
-                    </ul>
+                        <h3>Mise &agrave; jour de l&rsquo;&eacute;quipe &eacute;nergie (Javi par audio)</h3>
+                        <ul>
+                            <li>Nouveau groupe &eacute;nergie form&eacute; d&rsquo;environ six personnes, dont beaucoup ont une exp&eacute;rience technique pertinente</li>
+                            <li>Premi&egrave;re r&eacute;union pr&eacute;vue la semaine suivante apr&egrave;s examen des descriptions de poste</li>
+                            <li>La pr&eacute;sence de membres exp&eacute;riment&eacute;s dans le groupe facilitera les progr&egrave;s</li>
+                        </ul>
+
+                        <h3>Humans App (Ben D)</h3>
+                        <ul>
+                            <li>La plateforme est d&eacute;sormais op&eacute;rationnelle et sert de lieu officiel pour les candidatures</li>
+                            <li>Les collaborateurs et membres actuels sont en cours de migration vers la nouvelle plateforme</li>
+                            <li>Crit&egrave;res officiels d&rsquo;adh&eacute;sion avec droit de vote finalis&eacute;s et &agrave; publier sur GitHub</li>
+                            <li>La communaut&eacute; aura la possibilit&eacute; d&rsquo;ajuster les crit&egrave;res lors de la prochaine Assembl&eacute;e g&eacute;n&eacute;rale</li>
+                        </ul>
+
+                        <h3>Bien-&ecirc;tre des participants (Anna T)</h3>
+                        <ul>
+                            <li>L&rsquo;accent passe des participants &agrave; l&rsquo;&eacute;v&eacute;nement exclusivement pour couvrir &eacute;galement les collaborateurs et les membres de l&rsquo;association</li>
+                            <li>Mise &agrave; jour du Code de conduite des participants &mdash; le brouillon sera partag&eacute; dans le groupe de bien-&ecirc;tre des participants sur Discord le samedi pour recueillir les commentaires de la communaut&eacute;</li>
+                            <li>Recherche de toute personne ayant de l&rsquo;exp&eacute;rience ou un int&eacute;r&ecirc;t pour la m&eacute;diation afin d&rsquo;aider &agrave; cr&eacute;er des politiques et fournir un soutien en cas de litiges</li>
+                        </ul>
+
+                        <h3>Risque financier et remboursements (Pepe)</h3>
+                        <ul>
+                            <li>Plan en trois volets pour att&eacute;nuer le risque financier : minimiser les acomptes non remboursables aux fournisseurs, diversifier les sources de revenus et organiser des collectes de fonds cr&eacute;atives</li>
+                            <li>&Eacute;v&eacute;nement de collecte de fonds confirm&eacute; pour le 11 avril</li>
+                            <li>Objectif de minimiser les paiements jusqu&rsquo;&agrave; ce qu&rsquo;ils soient n&eacute;cessaires &mdash; peu d&rsquo;&eacute;ch&eacute;ances avant mai</li>
+                        </ul>
+
+                        <h2>Points d&rsquo;action</h2>
+                        <ul>
+                            <li><strong>Pablo</strong> &mdash; Envoyer le scrutin &agrave; choix class&eacute; pour le nom de l&rsquo;&eacute;v&eacute;nement dans les prochains jours</li>
+                            <li><strong>Pablo</strong> &mdash; Partager les informations de billetterie avec la personne responsable de la billetterie</li>
+                            <li><strong>Ben</strong> &mdash; Premier point de contact pour les contributions &agrave; la conception organisationnelle</li>
+                            <li><strong>Ben</strong> &mdash; Organiser des r&eacute;unions sur la conception organisationnelle et les structures de coordination</li>
+                            <li><strong>Anna</strong> &mdash; Partager le brouillon du Code de conduite dans le groupe de bien-&ecirc;tre des participants sur Discord le samedi</li>
+                            <li><strong>Pepe</strong> &mdash; Partager les avis juridiques complets (fiscalit&eacute;, protection des donn&eacute;es, risque li&eacute; au droit du travail) au fur et &agrave; mesure de la construction du cadre des nouvelles op&eacute;rations</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevale la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presieduta da Chris Torris Olsen, con membri del consiglio, responsabili e membri della comunit&agrave;</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Documenti completi</h3>
+                        <ul>
+                            <li><a href="2026-02-26-community-transcript.html">Trascrizione integrale della riunione</a></li>
+                            <li><a href="2026-02-26-community-chat.html">Registro della chat della riunione</a></li>
+                            <li><a href="https://youtu.be/AZqFkP9eoKw" target="_blank">Registrazione video</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/AZqFkP9eoKw" title="Riunione comunitaria - 26 febbraio 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Panoramica</h2>
+                        <p>Quarta riunione comunitaria della Nobodies Collective Asociaci&oacute;n (NCA). La riunione ha trattato i progressi nelle relazioni esterne e nell&rsquo;acquisizione di beni, un test riuscito della piattaforma di biglietteria a minor costo Ticket Taylor, il prossimo sondaggio a scelta classificata per il nome dell&rsquo;evento, un appello all&rsquo;aiuto della comunit&agrave; per la progettazione organizzativa e la decentralizzazione, il pacchetto informativo e il sondaggio comunitario del Gruppo di lavoro sulla governance riguardo alla decisione di procedere o meno, chiarimenti legali sulla responsabilit&agrave;, un aggiornamento del team energia, il lancio della Humans App, i progressi sul benessere dei partecipanti e il Codice di condotta, e la pianificazione della mitigazione del rischio finanziario.</p>
+
+                        <h2>Argomenti principali</h2>
+
+                        <h3>Aggiornamento sulle relazioni esterne (Pepe)</h3>
+                        <ul>
+                            <li>Progressi sostanziali nelle trattative esterne dalla settimana precedente</li>
+                            <li>Contratti attualmente in fase di revisione legale</li>
+                            <li>Incontri di persona con i team legali previsti per la settimana successiva</li>
+                            <li>Prima bozza delle comunicazioni scritte prevista per il giorno successivo, con seconde versioni nel fine settimana</li>
+                            <li>Obiettivo: almeno un contratto firmato entro la fine della settimana successiva</li>
+                        </ul>
+
+                        <h3>Test del sistema di biglietteria (Pablo)</h3>
+                        <ul>
+                            <li>Test riuscito della piattaforma Ticket Taylor come soluzione di biglietteria</li>
+                            <li>Commissioni drasticamente pi&ugrave; basse &mdash; potenziale risparmio di 10.000&ndash;15.000 &euro; per l&rsquo;organizzazione</li>
+                            <li>Account di prova configurato con il codice fiscale; acquisto di prova tramite Apple Pay elaborato con successo attraverso Stripe</li>
+                            <li>Anche i pagamenti con carta e Google Pay sono supportati</li>
+                        </ul>
+
+                        <h3>Sondaggio sul nome dell&rsquo;evento (Pablo)</h3>
+                        <ul>
+                            <li>Il nome &laquo;Nowhere&raquo; non viene utilizzato poich&eacute; l&rsquo;associazione non ha l&rsquo;autorizzazione a usarlo</li>
+                            <li>25&ndash;30 suggerimenti di nomi raccolti dalla comunit&agrave;</li>
+                            <li>Sondaggio a scelta classificata in arrivo nei prossimi giorni per i membri registrati sulla Humans App</li>
+                            <li>I membri sceglieranno le loro tre opzioni preferite dalla lista</li>
+                        </ul>
+
+                        <h3>Decentralizzazione e struttura organizzativa (Daniel)</h3>
+                        <ul>
+                            <li>Enfasi sulla natura non gerarchica e partecipativa dell&rsquo;evento</li>
+                            <li>Il consiglio opera per consenso &mdash; ogni voto &egrave; stato unanime</li>
+                            <li>Il consiglio intende ritirarsi gradualmente dalla partecipazione esecutiva operativa, mantenendo solo le funzioni di approvazione e di rappresentanza esterna</li>
+                            <li>Avvertimento sul pericolo della concentrazione di potere e dell&rsquo;esaurimento causato dalla pressione della fase di avvio</li>
+                            <li>Appello ai volontari interessati alla progettazione organizzativa, alla trasparenza e alla decentralizzazione</li>
+                            <li>Ben D si &egrave; offerto come primo punto di contatto per chiunque desideri contribuire con idee</li>
+                        </ul>
+
+                        <h3>Processo decisionale sul proseguimento (Julian, Kate, Ella)</h3>
+                        <ul>
+                            <li>Il Gruppo di lavoro sulla governance ha condotto 33 interviste in 8 aree chiave nelle due settimane precedenti</li>
+                            <li>I risultati sono stati riassunti in un pacchetto informativo inviato per e-mail ai 168 membri registrati dell&rsquo;associazione</li>
+                            <li>Sondaggio comunitario aperto fino alle 23:59 di domenica sera</li>
+                            <li>Il sondaggio non &egrave; vincolante &mdash; i risultati informeranno la decisione finale del consiglio</li>
+                            <li>Tyche ha letto una dichiarazione di Justin (Ubertown) che sollevava preoccupazioni sulla neutralit&agrave; del documento, l&rsquo;insufficiente enfasi sul rischio esistenziale e la natura non vincolante del sondaggio</li>
+                            <li>Kate ha spiegato che un&rsquo;Assemblea generale vincolante richiederebbe mesi per essere organizzata e non era praticabile dati i vincoli di tempo</li>
+                        </ul>
+
+                        <h3>Struttura giuridica e responsabilit&agrave; (Pepe)</h3>
+                        <ul>
+                            <li>L&rsquo;associazione &egrave; un&rsquo;entit&agrave; giuridica strutturalmente distinta con una propria gestione e senza azionisti</li>
+                            <li>Secondo il diritto spagnolo, la responsabilit&agrave; dei membri &egrave; limitata ai contributi finanziari (ovvero la quota associativa)</li>
+                            <li>Sono in preparazione pareri legali su fiscalit&agrave;, protezione dei dati e questioni lavoristiche</li>
+                        </ul>
+
+                        <h3>Aggiornamento del team energia (Javi tramite audio)</h3>
+                        <ul>
+                            <li>Nuovo gruppo energia formato da circa sei persone, molte con esperienza tecnica pertinente</li>
+                            <li>Prima riunione prevista per la settimana successiva dopo la revisione delle descrizioni delle mansioni</li>
+                            <li>La presenza di membri esperti nel gruppo faciliter&agrave; i progressi</li>
+                        </ul>
+
+                        <h3>Humans App (Ben D)</h3>
+                        <ul>
+                            <li>La piattaforma &egrave; ora operativa e funge da sede ufficiale per le candidature</li>
+                            <li>I collaboratori e i membri attuali sono in fase di migrazione alla nuova piattaforma</li>
+                            <li>Criteri ufficiali per l&rsquo;adesione con diritto di voto finalizzati e da pubblicare su GitHub</li>
+                            <li>La comunit&agrave; avr&agrave; l&rsquo;opportunit&agrave; di adeguare i criteri alla prossima Assemblea generale</li>
+                        </ul>
+
+                        <h3>Benessere dei partecipanti (Anna T)</h3>
+                        <ul>
+                            <li>L&rsquo;attenzione si estende dai soli partecipanti all&rsquo;evento per coprire anche collaboratori e membri dell&rsquo;associazione</li>
+                            <li>Aggiornamento del Codice di condotta dei partecipanti &mdash; la bozza sar&agrave; condivisa nel gruppo benessere partecipanti su Discord sabato per raccogliere i commenti della comunit&agrave;</li>
+                            <li>Si cercano persone con esperienza o interesse nella mediazione per aiutare a creare politiche e fornire supporto nelle controversie</li>
+                        </ul>
+
+                        <h3>Rischio finanziario e rimborsi (Pepe)</h3>
+                        <ul>
+                            <li>Piano in tre parti per mitigare il rischio finanziario: minimizzare gli acconti non rimborsabili ai fornitori, ampliare le fonti di entrate e raccolta fondi creativa</li>
+                            <li>Evento di raccolta fondi confermato per l&rsquo;11 aprile</li>
+                            <li>Obiettivo di ridurre al minimo i pagamenti fino a quando necessario &mdash; poco scade prima di maggio</li>
+                        </ul>
+
+                        <h2>Punti d&rsquo;azione</h2>
+                        <ul>
+                            <li><strong>Pablo</strong> &mdash; Inviare il sondaggio a scelta classificata per il nome dell&rsquo;evento nei prossimi giorni</li>
+                            <li><strong>Pablo</strong> &mdash; Condividere le informazioni sulla biglietteria con chi guida la biglietteria</li>
+                            <li><strong>Ben</strong> &mdash; Primo punto di contatto per i contributi alla progettazione organizzativa</li>
+                            <li><strong>Ben</strong> &mdash; Organizzare riunioni sulla progettazione organizzativa e le strutture di coordinamento</li>
+                            <li><strong>Anna</strong> &mdash; Condividere la bozza del Codice di condotta nel gruppo benessere partecipanti su Discord sabato</li>
+                            <li><strong>Pepe</strong> &mdash; Condividere i pareri legali completi (fiscalit&agrave;, protezione dei dati, rischio lavoristico) man mano che si costruisce l&rsquo;impalcatura per le nuove operazioni</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Unstimmigkeiten zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Geleitet von Chris Torris Olsen, mit Vorstandsmitgliedern, Verantwortlichen und Mitgliedern der Gemeinschaft</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Vollst&auml;ndige Unterlagen</h3>
+                        <ul>
+                            <li><a href="2026-02-26-community-transcript.html">Vollst&auml;ndiges Sitzungsprotokoll</a></li>
+                            <li><a href="2026-02-26-community-chat.html">Chat-Protokoll der Sitzung</a></li>
+                            <li><a href="https://youtu.be/AZqFkP9eoKw" target="_blank">Videoaufzeichnung</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/AZqFkP9eoKw" title="Gemeinschaftssitzung - 26. Februar 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>&Uuml;berblick</h2>
+                        <p>Vierte Gemeinschaftssitzung der Nobodies Collective Asociaci&oacute;n (NCA). Die Sitzung behandelte Fortschritte bei den Au&szlig;enbeziehungen und der Beschaffung von Verm&ouml;genswerten, einen erfolgreichen Test der kosteng&uuml;nstigeren Ticketing-Plattform Ticket Taylor, die bevorstehende Rangwahl-Abstimmung &uuml;ber den Veranstaltungsnamen, einen Aufruf zur Unterst&uuml;tzung der Gemeinschaft bei der Organisationsgestaltung und Dezentralisierung, das Informationspaket und die Gemeinschaftsumfrage der Governance-Arbeitsgruppe zur Entscheidung &uuml;ber die Fortf&uuml;hrung, rechtliche Kl&auml;rungen zur Haftung, ein Update des Energieteams, den Start der Humans App, Fortschritte beim Teilnehmerwohl und Verhaltenskodex sowie die Planung zur Minderung finanzieller Risiken.</p>
+
+                        <h2>Hauptthemen</h2>
+
+                        <h3>Update zu Au&szlig;enbeziehungen (Pepe)</h3>
+                        <ul>
+                            <li>Wesentliche Fortschritte bei den externen Gespr&auml;chen seit der Vorwoche</li>
+                            <li>Vertr&auml;ge befinden sich derzeit in der rechtlichen Pr&uuml;fung</li>
+                            <li>Pers&ouml;nliche Treffen mit Rechtsteams f&uuml;r die folgende Woche geplant</li>
+                            <li>Erster Entwurf der schriftlichen Mitteilungen f&uuml;r den n&auml;chsten Tag erwartet, mit zweiten Fassungen am Wochenende</li>
+                            <li>Ziel: mindestens ein unterzeichneter Vertrag bis Ende n&auml;chster Woche</li>
+                        </ul>
+
+                        <h3>Test des Ticketing-Systems (Pablo)</h3>
+                        <ul>
+                            <li>Erfolgreicher Test der Ticket-Taylor-Plattform als Ticketing-L&ouml;sung</li>
+                            <li>Drastisch niedrigere Geb&uuml;hren &mdash; potenzielle Einsparung von 10.000 bis 15.000 &euro; f&uuml;r die Organisation</li>
+                            <li>Testkonto mit der Steuernummer eingerichtet; Testkauf &uuml;ber Apple Pay erfolgreich &uuml;ber Stripe abgewickelt</li>
+                            <li>Karten- und Google-Pay-Zahlungen werden ebenfalls unterst&uuml;tzt</li>
+                        </ul>
+
+                        <h3>Abstimmung &uuml;ber den Veranstaltungsnamen (Pablo)</h3>
+                        <ul>
+                            <li>Der Name &bdquo;Nowhere&ldquo; wird nicht verwendet, da die Vereinigung keine Genehmigung zur Nutzung hat</li>
+                            <li>25&ndash;30 Namensvorschl&auml;ge aus der Gemeinschaft gesammelt</li>
+                            <li>Rangwahl-Abstimmung in den n&auml;chsten Tagen f&uuml;r Mitglieder, die in der Humans App registriert sind</li>
+                            <li>Mitglieder w&auml;hlen ihre drei bevorzugten Optionen aus der Liste</li>
+                        </ul>
+
+                        <h3>Dezentralisierung und Organisationsstruktur (Daniel)</h3>
+                        <ul>
+                            <li>Betonung des nicht-hierarchischen, partizipativen Charakters der Veranstaltung</li>
+                            <li>Der Vorstand arbeitet im Konsens &mdash; jede Abstimmung war einstimmig</li>
+                            <li>Der Vorstand beabsichtigt, sich letztlich aus der operativen Exekutivbeteiligung zur&uuml;ckzuziehen und nur Genehmigungs- und Au&szlig;envertretungsfunktionen beizubehalten</li>
+                            <li>Warnung vor der Gefahr der Machtkonzentration und Ersch&ouml;pfung durch den Druck der Aufbauphase</li>
+                            <li>Aufruf an Freiwillige mit Interesse an Organisationsgestaltung, Transparenz und Dezentralisierung</li>
+                            <li>Ben D meldete sich als erster Ansprechpartner f&uuml;r alle, die Ideen einbringen m&ouml;chten</li>
+                        </ul>
+
+                        <h3>Entscheidungsprozess zur Fortf&uuml;hrung (Julian, Kate, Ella)</h3>
+                        <ul>
+                            <li>Die Governance-Arbeitsgruppe f&uuml;hrte in den vorangegangenen zwei Wochen 33 Interviews in 8 Schl&uuml;sselbereichen durch</li>
+                            <li>Die Ergebnisse wurden in einem Informationspaket zusammengefasst und per E-Mail an 168 registrierte Vereinigungsmitglieder versandt</li>
+                            <li>Gemeinschaftsumfrage ge&ouml;ffnet bis Sonntag 23:59 Uhr</li>
+                            <li>Die Umfrage ist nicht bindend &mdash; die Ergebnisse flie&szlig;en in die endg&uuml;ltige Entscheidung des Vorstands ein</li>
+                            <li>Tyche verlas eine Erkl&auml;rung von Justin (Ubertown), die Bedenken hinsichtlich der Neutralit&auml;t des Dokuments, der unzureichenden Betonung existenzieller Risiken und des nicht bindenden Charakters der Umfrage &auml;u&szlig;erte</li>
+                            <li>Kate erkl&auml;rte, dass eine bindende Generalversammlung Monate zur Organisation ben&ouml;tigen w&uuml;rde und angesichts der Zeitbeschr&auml;nkungen nicht machbar sei</li>
+                        </ul>
+
+                        <h3>Rechtsstruktur und Haftung (Pepe)</h3>
+                        <ul>
+                            <li>Die Vereinigung ist eine strukturell eigenst&auml;ndige juristische Person mit eigener Gesch&auml;ftsf&uuml;hrung und ohne Gesellschafter</li>
+                            <li>Nach spanischem Recht ist die Haftung der Mitglieder auf finanzielle Beitr&auml;ge beschr&auml;nkt (d.h. den Mitgliedsbeitrag)</li>
+                            <li>Rechtsgutachten zu Steuer-, Datenschutz- und Arbeitsrechtsfragen werden vorbereitet</li>
+                        </ul>
+
+                        <h3>Update des Energieteams (Javi per Audio)</h3>
+                        <ul>
+                            <li>Neue Energiegruppe mit etwa sechs Personen gebildet, viele mit einschl&auml;giger technischer Erfahrung</li>
+                            <li>Erstes Treffen f&uuml;r die n&auml;chste Woche nach Durchsicht der Stellenbeschreibungen geplant</li>
+                            <li>Erfahrene Mitglieder in der Gruppe werden den Fortschritt erleichtern</li>
+                        </ul>
+
+                        <h3>Humans App (Ben D)</h3>
+                        <ul>
+                            <li>Die Plattform ist nun betriebsbereit und dient als offizielle Anlaufstelle f&uuml;r Bewerbungen</li>
+                            <li>Aktuelle Mitarbeiter und Mitglieder werden auf die neue Plattform migriert</li>
+                            <li>Offizielle Kriterien f&uuml;r die stimmberechtigte Mitgliedschaft finalisiert und zur Ver&ouml;ffentlichung auf GitHub vorgesehen</li>
+                            <li>Die Gemeinschaft wird die M&ouml;glichkeit haben, die Kriterien bei der n&auml;chsten Generalversammlung anzupassen</li>
+                        </ul>
+
+                        <h3>Teilnehmerwohl (Anna T)</h3>
+                        <ul>
+                            <li>Der Fokus erweitert sich von ausschlie&szlig;lich Veranstaltungsteilnehmern auf Mitarbeiter und Vereinigungsmitglieder</li>
+                            <li>Aktualisierung des Verhaltenskodex f&uuml;r Teilnehmer &mdash; der Entwurf wird am Samstag in der Teilnehmerwohl-Gruppe auf Discord geteilt, um Feedback der Gemeinschaft einzuholen</li>
+                            <li>Gesucht werden Personen mit Mediationserfahrung oder -interesse, um bei der Erstellung von Richtlinien und der Unterst&uuml;tzung bei Streitf&auml;llen zu helfen</li>
+                        </ul>
+
+                        <h3>Finanzielles Risiko und R&uuml;ckerstattungen (Pepe)</h3>
+                        <ul>
+                            <li>Dreifacher Plan zur Minderung des finanziellen Risikos: Minimierung nicht erstattungsf&auml;higer Lieferantenanzahlungen, Erweiterung der Einnahmequellen und kreative Spendensammlung</li>
+                            <li>Fundraising-Veranstaltung f&uuml;r den 11. April best&auml;tigt</li>
+                            <li>Ziel, Zahlungen bis zur Notwendigkeit zu minimieren &mdash; vor Mai wird nicht viel f&auml;llig</li>
+                        </ul>
+
+                        <h2>Ma&szlig;nahmen</h2>
+                        <ul>
+                            <li><strong>Pablo</strong> &mdash; Rangwahl-Abstimmung zum Veranstaltungsnamen in den n&auml;chsten Tagen versenden</li>
+                            <li><strong>Pablo</strong> &mdash; Ticketing-Informationen mit der f&uuml;r Ticketing verantwortlichen Person teilen</li>
+                            <li><strong>Ben</strong> &mdash; Erster Ansprechpartner f&uuml;r Beitr&auml;ge zur Organisationsgestaltung</li>
+                            <li><strong>Ben</strong> &mdash; Treffen zur Organisationsgestaltung und Koordinationsstrukturen organisieren</li>
+                            <li><strong>Anna</strong> &mdash; Entwurf des Verhaltenskodex am Samstag in der Teilnehmerwohl-Gruppe auf Discord teilen</li>
+                            <li><strong>Pepe</strong> &mdash; Vollst&auml;ndige Rechtsgutachten (Steuer, Datenschutz, Arbeitsrechtsrisiko) teilen, w&auml;hrend das Ger&uuml;st f&uuml;r die neuen Aktivit&auml;ten aufgebaut wird</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
 
     <div id="shared-footer" data-prefix=".."></div>
     <script src="../footer.js"></script>
+
+    <script>
+document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        var lang = this.dataset.lang;
+        document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+        var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+        if (target) target.classList.add('active');
+    });
+});
+    </script>
 
     <script src="../script.js"></script>
 </body>

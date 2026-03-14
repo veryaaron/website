@@ -28,6 +28,12 @@
         .meeting-content th { background: var(--color-bg-secondary); font-weight: 600; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -47,94 +53,471 @@
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Present:</strong> Daniel, Ben, Chris, Pablo, Peter, Ward, Victor
-                    <br><strong>Absent:</strong> Michelle
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Decisions</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Decision</th>
-                                <th>Context</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Table event naming discussion; focus on defining requirements for trademark use</td>
-                                <td>Continue discussion asynchronously</td>
-                            </tr>
-                            <tr>
-                                <td>Operational roadmap: Pablo to synthesize all inputs into milestone proposal</td>
-                                <td>For discussion at upcoming community call</td>
-                            </tr>
-                            <tr>
-                                <td>Managed membership growth</td>
-                                <td>Deliberate, small numbers initially to protect organizational governance</td>
-                            </tr>
-                            <tr>
-                                <td>Re-sign board documents to correct term length error</td>
-                                <td>4-year terms were signed in error; agreed terms are 2 years</td>
-                            </tr>
-                            <tr>
-                                <td>Build & Strike and City Planning identified as critical early roles</td>
-                                <td>Volunteers already confirmed for Build & Strike; City Planning needed by end of March</td>
-                            </tr>
-                            <tr>
-                                <td>Community call scheduled (Thursday)</td>
-                                <td>Ben to MC; positive origin story structure</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                    <h2>Discussion Summary</h2>
+                    <div class="attendees">
+                        <strong>Present:</strong> Daniel, Ben, Chris, Pablo, Peter, Ward, Victor
+                        <br><strong>Absent:</strong> Michelle
+                    </div>
 
-                    <h3>Operational Roadmap</h3>
-                    <p>The board discussed event naming requirements, including governance, financial readiness, and operational capability criteria. The board agreed to create an operational roadmap with verifiable milestones. Ticket sales could proceed once a trademark license is obtained - latest early March.</p>
+                    <div class="meeting-content">
+                        <h2>Decisions</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decision</th>
+                                    <th>Context</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Table event naming discussion; focus on defining requirements for trademark use</td>
+                                    <td>Continue discussion asynchronously</td>
+                                </tr>
+                                <tr>
+                                    <td>Operational roadmap: Pablo to synthesize all inputs into milestone proposal</td>
+                                    <td>For discussion at upcoming community call</td>
+                                </tr>
+                                <tr>
+                                    <td>Managed membership growth</td>
+                                    <td>Deliberate, small numbers initially to protect organizational governance</td>
+                                </tr>
+                                <tr>
+                                    <td>Re-sign board documents to correct term length error</td>
+                                    <td>4-year terms were signed in error; agreed terms are 2 years</td>
+                                </tr>
+                                <tr>
+                                    <td>Build &amp; Strike and City Planning identified as critical early roles</td>
+                                    <td>Volunteers already confirmed for Build &amp; Strike; City Planning needed by end of March</td>
+                                </tr>
+                                <tr>
+                                    <td>Community call scheduled (Thursday)</td>
+                                    <td>Ben to MC; positive origin story structure</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                    <h3>Event Naming & Trademark</h3>
-                    <p>The board discussed risks of selling tickets under the existing event name before a formal agreement is in place. If the name were rescinded after ticket sales, refunds would be required. Some members suggested using an alternative name initially. The board tabled the decision to focus on meeting the requirements first.</p>
+                        <h2>Discussion Summary</h2>
 
-                    <h3>Membership Criteria</h3>
-                    <p>The board discussed recruitment of new members. To protect organizational governance, the board agreed on managed growth - careful vetting of applicants with deliberate expansion. Volunteers and collaborators do not need to be members to contribute. Detailed membership criteria proposals to be drafted in coming weeks.</p>
+                        <h3>Operational Roadmap</h3>
+                        <p>The board discussed event naming requirements, including governance, financial readiness, and operational capability criteria. The board agreed to create an operational roadmap with verifiable milestones. Ticket sales could proceed once a trademark license is obtained &mdash; latest early March.</p>
 
-                    <h3>Board Terms Document Error</h3>
-                    <p>A versioning error resulted in board members signing a document with 4-year terms and 8-year limits, rather than the agreed 2-year terms. The board unanimously agreed to re-sign the correct version.</p>
+                        <h3>Event Naming &amp; Trademark</h3>
+                        <p>The board discussed risks of selling tickets under the existing event name before a formal agreement is in place. If the name were rescinded after ticket sales, refunds would be required. Some members suggested using an alternative name initially. The board tabled the decision to focus on meeting the requirements first.</p>
 
-                    <h3>Critical Operational Roles</h3>
-                    <p>The board reviewed the organizational structure and prioritized roles. Build & Strike has confirmed volunteers. City Planning work begins end of March. Creativity leadership and finance coordination are high-demand areas. Purchasing timelines were reviewed (end of March to mid-May).</p>
+                        <h3>Membership Criteria</h3>
+                        <p>The board discussed recruitment of new members. To protect organizational governance, the board agreed on managed growth &mdash; careful vetting of applicants with deliberate expansion. Volunteers and collaborators do not need to be members to contribute. Detailed membership criteria proposals to be drafted in coming weeks.</p>
 
-                    <h3>Inclusion & Community Standards</h3>
-                    <p>The board discussed whether to adopt external exclusion lists. The board agreed that the association should define its own transparent processes for inclusion and exclusion, rather than adopting external decisions without due process.</p>
+                        <h3>Board Terms Document Error</h3>
+                        <p>A versioning error resulted in board members signing a document with 4-year terms and 8-year limits, rather than the agreed 2-year terms. The board unanimously agreed to re-sign the correct version.</p>
 
-                    <h3>Community Call Preparation</h3>
-                    <p>Structure: positive origin story (recent democratic elections) -> event planning and role applications -> brief land update -> moderated Q&A. Calls to action: volunteer for roles, spread the word. An expression of interest form will be created. The website mailing list will be fixed.</p>
+                        <h3>Critical Operational Roles</h3>
+                        <p>The board reviewed the organizational structure and prioritized roles. Build &amp; Strike has confirmed volunteers. City Planning work begins end of March. Creativity leadership and finance coordination are high-demand areas. Purchasing timelines were reviewed (end of March to mid-May).</p>
 
-                    <h2>Action Items</h2>
-                    <ul>
-                        <li><strong>Pablo:</strong> Synthesize operational roadmap with milestones; Circulate corrected board terms document for re-signing</li>
-                        <li><strong>Chris:</strong> Draft membership criteria proposals</li>
-                        <li><strong>Ben:</strong> Draft new member onboarding process; MC community call</li>
-                        <li><strong>Daniel:</strong> Facilitate next board meeting</li>
-                        <li><strong>All:</strong> Add detail to operational roadmap in their areas</li>
-                    </ul>
+                        <h3>Inclusion &amp; Community Standards</h3>
+                        <p>The board discussed whether to adopt external exclusion lists. The board agreed that the association should define its own transparent processes for inclusion and exclusion, rather than adopting external decisions without due process.</p>
 
-                    <h2>Open Items for Future Meetings</h2>
-                    <ul>
-                        <li>Event name: proceed with existing name or alternative?</li>
-                        <li>Membership criteria: formal proposals for decision</li>
-                        <li>Consultant hiring for event operations</li>
-                        <li>Document and IP procurement process</li>
-                    </ul>
+                        <h3>Community Call Preparation</h3>
+                        <p>Structure: positive origin story (recent democratic elections) &rarr; event planning and role applications &rarr; brief land update &rarr; moderated Q&amp;A. Calls to action: volunteer for roles, spread the word. An expression of interest form will be created. The website mailing list will be fixed.</p>
+
+                        <h2>Action Items</h2>
+                        <ul>
+                            <li><strong>Pablo:</strong> Synthesize operational roadmap with milestones; Circulate corrected board terms document for re-signing</li>
+                            <li><strong>Chris:</strong> Draft membership criteria proposals</li>
+                            <li><strong>Ben:</strong> Draft new member onboarding process; MC community call</li>
+                            <li><strong>Daniel:</strong> Facilitate next board meeting</li>
+                            <li><strong>All:</strong> Add detail to operational roadmap in their areas</li>
+                        </ul>
+
+                        <h2>Open Items for Future Meetings</h2>
+                        <ul>
+                            <li>Event name: proceed with existing name or alternative?</li>
+                            <li>Membership criteria: formal proposals for decision</li>
+                            <li>Consultant hiring for event operations</li>
+                            <li>Document and IP procurement process</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Presentes:</strong> Daniel, Ben, Chris, Pablo, Peter, Ward, Victor
+                        <br><strong>Ausente:</strong> Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisiones</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decisi&oacute;n</th>
+                                    <th>Contexto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Aplazar la discusi&oacute;n sobre el nombre del evento; centrarse en definir los requisitos para el uso de la marca</td>
+                                    <td>Continuar la discusi&oacute;n de forma asincr&oacute;nica</td>
+                                </tr>
+                                <tr>
+                                    <td>Hoja de ruta operativa: Pablo sintetizar&aacute; todas las aportaciones en una propuesta de hitos</td>
+                                    <td>Para discusi&oacute;n en la pr&oacute;xima convocatoria comunitaria</td>
+                                </tr>
+                                <tr>
+                                    <td>Crecimiento gestionado de la membres&iacute;a</td>
+                                    <td>Deliberado, n&uacute;meros peque&ntilde;os inicialmente para proteger la gobernanza organizacional</td>
+                                </tr>
+                                <tr>
+                                    <td>Re-firmar los documentos de la junta para corregir el error en la duraci&oacute;n del mandato</td>
+                                    <td>Se firmaron mandatos de 4 a&ntilde;os por error; los mandatos acordados son de 2 a&ntilde;os</td>
+                                </tr>
+                                <tr>
+                                    <td>Build &amp; Strike y City Planning identificados como roles cr&iacute;ticos iniciales</td>
+                                    <td>Voluntarios ya confirmados para Build &amp; Strike; City Planning necesario para finales de marzo</td>
+                                </tr>
+                                <tr>
+                                    <td>Convocatoria comunitaria programada (jueves)</td>
+                                    <td>Ben como maestro de ceremonias; estructura de historia de origen positiva</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Resumen de la Discusi&oacute;n</h2>
+
+                        <h3>Hoja de Ruta Operativa</h3>
+                        <p>La junta discuti&oacute; los requisitos para el nombre del evento, incluyendo gobernanza, preparaci&oacute;n financiera y criterios de capacidad operativa. La junta acord&oacute; crear una hoja de ruta operativa con hitos verificables. La venta de entradas podr&iacute;a proceder una vez obtenida una licencia de marca &mdash; como m&aacute;ximo a principios de marzo.</p>
+
+                        <h3>Nombre del Evento y Marca</h3>
+                        <p>La junta discuti&oacute; los riesgos de vender entradas bajo el nombre de evento existente antes de que exista un acuerdo formal. Si el nombre fuera revocado despu&eacute;s de la venta de entradas, ser&iacute;an necesarios reembolsos. Algunos miembros sugirieron usar un nombre alternativo inicialmente. La junta aplaz&oacute; la decisi&oacute;n para centrarse primero en cumplir los requisitos.</p>
+
+                        <h3>Criterios de Membres&iacute;a</h3>
+                        <p>La junta discuti&oacute; la captaci&oacute;n de nuevos miembros. Para proteger la gobernanza organizacional, la junta acord&oacute; un crecimiento gestionado &mdash; evaluaci&oacute;n cuidadosa de los solicitantes con una expansi&oacute;n deliberada. Los voluntarios y colaboradores no necesitan ser miembros para contribuir. Se redactar&aacute;n propuestas detalladas de criterios de membres&iacute;a en las pr&oacute;ximas semanas.</p>
+
+                        <h3>Error en el Documento de Mandatos de la Junta</h3>
+                        <p>Un error de versionado result&oacute; en que los miembros de la junta firmaran un documento con mandatos de 4 a&ntilde;os y l&iacute;mites de 8 a&ntilde;os, en lugar de los mandatos de 2 a&ntilde;os acordados. La junta acord&oacute; por unanimidad re-firmar la versi&oacute;n correcta.</p>
+
+                        <h3>Roles Operativos Cr&iacute;ticos</h3>
+                        <p>La junta revis&oacute; la estructura organizacional y prioriz&oacute; los roles. Build &amp; Strike tiene voluntarios confirmados. El trabajo de City Planning comienza a finales de marzo. El liderazgo creativo y la coordinaci&oacute;n financiera son &aacute;reas de alta demanda. Se revisaron los plazos de compras (de finales de marzo a mediados de mayo).</p>
+
+                        <h3>Inclusi&oacute;n y Est&aacute;ndares Comunitarios</h3>
+                        <p>La junta discuti&oacute; si adoptar listas de exclusi&oacute;n externas. La junta acord&oacute; que la asociaci&oacute;n debe definir sus propios procesos transparentes de inclusi&oacute;n y exclusi&oacute;n, en lugar de adoptar decisiones externas sin el debido proceso.</p>
+
+                        <h3>Preparaci&oacute;n de la Convocatoria Comunitaria</h3>
+                        <p>Estructura: historia de origen positiva (elecciones democr&aacute;ticas recientes) &rarr; planificaci&oacute;n del evento y solicitudes de roles &rarr; breve actualizaci&oacute;n sobre el terreno &rarr; preguntas y respuestas moderadas. Llamadas a la acci&oacute;n: ser voluntario para roles, difundir la informaci&oacute;n. Se crear&aacute; un formulario de expresi&oacute;n de inter&eacute;s. Se arreglar&aacute; la lista de correo del sitio web.</p>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <ul>
+                            <li><strong>Pablo:</strong> Sintetizar la hoja de ruta operativa con hitos; Circular el documento corregido de mandatos de la junta para re-firma</li>
+                            <li><strong>Chris:</strong> Redactar propuestas de criterios de membres&iacute;a</li>
+                            <li><strong>Ben:</strong> Redactar proceso de incorporaci&oacute;n de nuevos miembros; Maestro de ceremonias de la convocatoria comunitaria</li>
+                            <li><strong>Daniel:</strong> Facilitar la pr&oacute;xima reuni&oacute;n de la junta</li>
+                            <li><strong>Todos:</strong> A&ntilde;adir detalle a la hoja de ruta operativa en sus &aacute;reas</li>
+                        </ul>
+
+                        <h2>Temas Pendientes para Futuras Reuniones</h2>
+                        <ul>
+                            <li>Nombre del evento: &iquest;proceder con el nombre existente o una alternativa?</li>
+                            <li>Criterios de membres&iacute;a: propuestas formales para decisi&oacute;n</li>
+                            <li>Contrataci&oacute;n de consultor para operaciones del evento</li>
+                            <li>Proceso de documentaci&oacute;n y adquisici&oacute;n de PI</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sents :</strong> Daniel, Ben, Chris, Pablo, Peter, Ward, Victor
+                        <br><strong>Absent :</strong> Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>D&eacute;cisions</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>D&eacute;cision</th>
+                                    <th>Contexte</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Reporter la discussion sur le nom de l&rsquo;&eacute;v&eacute;nement ; se concentrer sur la d&eacute;finition des exigences pour l&rsquo;utilisation de la marque</td>
+                                    <td>Poursuivre la discussion de mani&egrave;re asynchrone</td>
+                                </tr>
+                                <tr>
+                                    <td>Feuille de route op&eacute;rationnelle : Pablo synth&eacute;tisera toutes les contributions en une proposition de jalons</td>
+                                    <td>Pour discussion lors du prochain appel communautaire</td>
+                                </tr>
+                                <tr>
+                                    <td>Croissance g&eacute;r&eacute;e des adh&eacute;sions</td>
+                                    <td>D&eacute;lib&eacute;r&eacute;e, petits nombres initialement pour prot&eacute;ger la gouvernance organisationnelle</td>
+                                </tr>
+                                <tr>
+                                    <td>Re-signer les documents du conseil pour corriger l&rsquo;erreur de dur&eacute;e de mandat</td>
+                                    <td>Des mandats de 4 ans ont &eacute;t&eacute; sign&eacute;s par erreur ; les mandats convenus sont de 2 ans</td>
+                                </tr>
+                                <tr>
+                                    <td>Build &amp; Strike et City Planning identifi&eacute;s comme r&ocirc;les critiques initiaux</td>
+                                    <td>B&eacute;n&eacute;voles d&eacute;j&agrave; confirm&eacute;s pour Build &amp; Strike ; City Planning n&eacute;cessaire d&rsquo;ici fin mars</td>
+                                </tr>
+                                <tr>
+                                    <td>Appel communautaire programm&eacute; (jeudi)</td>
+                                    <td>Ben comme ma&icirc;tre de c&eacute;r&eacute;monie ; structure d&rsquo;histoire d&rsquo;origine positive</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>R&eacute;sum&eacute; des Discussions</h2>
+
+                        <h3>Feuille de Route Op&eacute;rationnelle</h3>
+                        <p>Le conseil a discut&eacute; des exigences pour le nom de l&rsquo;&eacute;v&eacute;nement, y compris la gouvernance, la pr&eacute;paration financi&egrave;re et les crit&egrave;res de capacit&eacute; op&eacute;rationnelle. Le conseil a convenu de cr&eacute;er une feuille de route op&eacute;rationnelle avec des jalons v&eacute;rifiables. La vente de billets pourrait proc&eacute;der une fois la licence de marque obtenue &mdash; au plus tard d&eacute;but mars.</p>
+
+                        <h3>Nom de l&rsquo;&Eacute;v&eacute;nement et Marque</h3>
+                        <p>Le conseil a discut&eacute; des risques li&eacute;s &agrave; la vente de billets sous le nom d&rsquo;&eacute;v&eacute;nement existant avant qu&rsquo;un accord formel ne soit en place. Si le nom &eacute;tait r&eacute;voqu&eacute; apr&egrave;s la vente de billets, des remboursements seraient n&eacute;cessaires. Certains membres ont sugg&eacute;r&eacute; d&rsquo;utiliser un nom alternatif dans un premier temps. Le conseil a report&eacute; la d&eacute;cision pour se concentrer d&rsquo;abord sur le respect des exigences.</p>
+
+                        <h3>Crit&egrave;res d&rsquo;Adh&eacute;sion</h3>
+                        <p>Le conseil a discut&eacute; du recrutement de nouveaux membres. Pour prot&eacute;ger la gouvernance organisationnelle, le conseil a convenu d&rsquo;une croissance g&eacute;r&eacute;e &mdash; &eacute;valuation rigoureuse des candidats avec une expansion d&eacute;lib&eacute;r&eacute;e. Les b&eacute;n&eacute;voles et collaborateurs n&rsquo;ont pas besoin d&rsquo;&ecirc;tre membres pour contribuer. Des propositions d&eacute;taill&eacute;es de crit&egrave;res d&rsquo;adh&eacute;sion seront r&eacute;dig&eacute;es dans les semaines &agrave; venir.</p>
+
+                        <h3>Erreur dans le Document des Mandats du Conseil</h3>
+                        <p>Une erreur de versionnage a conduit les membres du conseil &agrave; signer un document avec des mandats de 4 ans et des limites de 8 ans, au lieu des mandats de 2 ans convenus. Le conseil a unanimement accept&eacute; de re-signer la version correcte.</p>
+
+                        <h3>R&ocirc;les Op&eacute;rationnels Critiques</h3>
+                        <p>Le conseil a examin&eacute; la structure organisationnelle et hi&eacute;rarchis&eacute; les r&ocirc;les. Build &amp; Strike a des b&eacute;n&eacute;voles confirm&eacute;s. Le travail de City Planning commence fin mars. Le leadership cr&eacute;atif et la coordination financi&egrave;re sont des domaines tr&egrave;s demand&eacute;s. Les d&eacute;lais d&rsquo;achat ont &eacute;t&eacute; examin&eacute;s (de fin mars &agrave; mi-mai).</p>
+
+                        <h3>Inclusion et Normes Communautaires</h3>
+                        <p>Le conseil a discut&eacute; de l&rsquo;adoption &eacute;ventuelle de listes d&rsquo;exclusion externes. Le conseil a convenu que l&rsquo;association devrait d&eacute;finir ses propres processus transparents d&rsquo;inclusion et d&rsquo;exclusion, plut&ocirc;t que d&rsquo;adopter des d&eacute;cisions externes sans proc&eacute;dure r&eacute;guli&egrave;re.</p>
+
+                        <h3>Pr&eacute;paration de l&rsquo;Appel Communautaire</h3>
+                        <p>Structure : histoire d&rsquo;origine positive (&eacute;lections d&eacute;mocratiques r&eacute;centes) &rarr; planification de l&rsquo;&eacute;v&eacute;nement et candidatures aux r&ocirc;les &rarr; br&egrave;ve mise &agrave; jour sur le terrain &rarr; questions-r&eacute;ponses mod&eacute;r&eacute;es. Appels &agrave; l&rsquo;action : se porter b&eacute;n&eacute;vole pour des r&ocirc;les, faire passer le mot. Un formulaire d&rsquo;expression d&rsquo;int&eacute;r&ecirc;t sera cr&eacute;&eacute;. La liste de diffusion du site web sera corrig&eacute;e.</p>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <ul>
+                            <li><strong>Pablo :</strong> Synth&eacute;tiser la feuille de route op&eacute;rationnelle avec des jalons ; Faire circuler le document corrig&eacute; des mandats du conseil pour re-signature</li>
+                            <li><strong>Chris :</strong> R&eacute;diger des propositions de crit&egrave;res d&rsquo;adh&eacute;sion</li>
+                            <li><strong>Ben :</strong> R&eacute;diger le processus d&rsquo;int&eacute;gration des nouveaux membres ; Ma&icirc;tre de c&eacute;r&eacute;monie de l&rsquo;appel communautaire</li>
+                            <li><strong>Daniel :</strong> Faciliter la prochaine r&eacute;union du conseil</li>
+                            <li><strong>Tous :</strong> Ajouter des d&eacute;tails &agrave; la feuille de route op&eacute;rationnelle dans leurs domaines</li>
+                        </ul>
+
+                        <h2>Points Ouverts pour les R&eacute;unions Futures</h2>
+                        <ul>
+                            <li>Nom de l&rsquo;&eacute;v&eacute;nement : proc&eacute;der avec le nom existant ou une alternative ?</li>
+                            <li>Crit&egrave;res d&rsquo;adh&eacute;sion : propositions formelles pour d&eacute;cision</li>
+                            <li>Embauche d&rsquo;un consultant pour les op&eacute;rations de l&rsquo;&eacute;v&eacute;nement</li>
+                            <li>Processus de documentation et d&rsquo;acquisition de PI</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presenti:</strong> Daniel, Ben, Chris, Pablo, Peter, Ward, Victor
+                        <br><strong>Assente:</strong> Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisioni</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decisione</th>
+                                    <th>Contesto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Rinviare la discussione sulla denominazione dell&rsquo;evento; concentrarsi sulla definizione dei requisiti per l&rsquo;uso del marchio</td>
+                                    <td>Proseguire la discussione in modo asincrono</td>
+                                </tr>
+                                <tr>
+                                    <td>Roadmap operativa: Pablo sintetizzer&agrave; tutti i contributi in una proposta di tappe</td>
+                                    <td>Da discutere nella prossima riunione comunitaria</td>
+                                </tr>
+                                <tr>
+                                    <td>Crescita gestita delle adesioni</td>
+                                    <td>Deliberata, numeri piccoli inizialmente per proteggere la governance organizzativa</td>
+                                </tr>
+                                <tr>
+                                    <td>Ri-firmare i documenti del consiglio per correggere l&rsquo;errore sulla durata del mandato</td>
+                                    <td>Mandati di 4 anni firmati per errore; i mandati concordati sono di 2 anni</td>
+                                </tr>
+                                <tr>
+                                    <td>Build &amp; Strike e City Planning identificati come ruoli critici iniziali</td>
+                                    <td>Volontari gi&agrave; confermati per Build &amp; Strike; City Planning necessario entro fine marzo</td>
+                                </tr>
+                                <tr>
+                                    <td>Riunione comunitaria programmata (gioved&igrave;)</td>
+                                    <td>Ben come moderatore; struttura narrativa positiva delle origini</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Sintesi della Discussione</h2>
+
+                        <h3>Roadmap Operativa</h3>
+                        <p>Il consiglio ha discusso i requisiti per la denominazione dell&rsquo;evento, inclusa la governance, la preparazione finanziaria e i criteri di capacit&agrave; operativa. Il consiglio ha concordato di creare una roadmap operativa con tappe verificabili. La vendita dei biglietti potrebbe procedere una volta ottenuta la licenza del marchio &mdash; al pi&ugrave; tardi a inizio marzo.</p>
+
+                        <h3>Denominazione dell&rsquo;Evento e Marchio</h3>
+                        <p>Il consiglio ha discusso i rischi della vendita di biglietti con il nome dell&rsquo;evento esistente prima che un accordo formale sia in vigore. Se il nome fosse revocato dopo la vendita dei biglietti, sarebbero necessari rimborsi. Alcuni membri hanno suggerito di utilizzare un nome alternativo inizialmente. Il consiglio ha rinviato la decisione per concentrarsi prima sul soddisfacimento dei requisiti.</p>
+
+                        <h3>Criteri di Adesione</h3>
+                        <p>Il consiglio ha discusso il reclutamento di nuovi membri. Per proteggere la governance organizzativa, il consiglio ha concordato una crescita gestita &mdash; valutazione attenta dei candidati con un&rsquo;espansione deliberata. I volontari e i collaboratori non devono essere membri per contribuire. Proposte dettagliate sui criteri di adesione saranno redatte nelle prossime settimane.</p>
+
+                        <h3>Errore nel Documento dei Mandati del Consiglio</h3>
+                        <p>Un errore di versionamento ha portato i membri del consiglio a firmare un documento con mandati di 4 anni e limiti di 8 anni, invece dei mandati di 2 anni concordati. Il consiglio ha unanimemente concordato di ri-firmare la versione corretta.</p>
+
+                        <h3>Ruoli Operativi Critici</h3>
+                        <p>Il consiglio ha esaminato la struttura organizzativa e dato priorit&agrave; ai ruoli. Build &amp; Strike ha volontari confermati. Il lavoro di City Planning inizia a fine marzo. La leadership creativa e il coordinamento finanziario sono aree ad alta domanda. Le tempistiche degli acquisti sono state esaminate (da fine marzo a met&agrave; maggio).</p>
+
+                        <h3>Inclusione e Standard Comunitari</h3>
+                        <p>Il consiglio ha discusso se adottare liste di esclusione esterne. Il consiglio ha concordato che l&rsquo;associazione dovrebbe definire i propri processi trasparenti di inclusione ed esclusione, piuttosto che adottare decisioni esterne senza il giusto processo.</p>
+
+                        <h3>Preparazione della Riunione Comunitaria</h3>
+                        <p>Struttura: storia delle origini positiva (recenti elezioni democratiche) &rarr; pianificazione dell&rsquo;evento e candidature per i ruoli &rarr; breve aggiornamento sul terreno &rarr; domande e risposte moderate. Inviti all&rsquo;azione: fare volontariato per i ruoli, diffondere la voce. Sar&agrave; creato un modulo di espressione d&rsquo;interesse. La mailing list del sito web sar&agrave; corretta.</p>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <ul>
+                            <li><strong>Pablo:</strong> Sintetizzare la roadmap operativa con tappe; Far circolare il documento corretto dei mandati del consiglio per la ri-firma</li>
+                            <li><strong>Chris:</strong> Redigere proposte sui criteri di adesione</li>
+                            <li><strong>Ben:</strong> Redigere il processo di inserimento dei nuovi membri; Moderare la riunione comunitaria</li>
+                            <li><strong>Daniel:</strong> Facilitare la prossima riunione del consiglio</li>
+                            <li><strong>Tutti:</strong> Aggiungere dettagli alla roadmap operativa nelle proprie aree</li>
+                        </ul>
+
+                        <h2>Punti Aperti per le Riunioni Future</h2>
+                        <ul>
+                            <li>Nome dell&rsquo;evento: procedere con il nome esistente o un&rsquo;alternativa?</li>
+                            <li>Criteri di adesione: proposte formali per decisione</li>
+                            <li>Assunzione di consulente per le operazioni dell&rsquo;evento</li>
+                            <li>Processo di documentazione e acquisizione di PI</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version ist die spanische Version ma&szlig;geblich.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesend:</strong> Daniel, Ben, Chris, Pablo, Peter, Ward, Victor
+                        <br><strong>Abwesend:</strong> Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Beschl&uuml;sse</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Beschluss</th>
+                                    <th>Kontext</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Diskussion &uuml;ber die Veranstaltungsbenennung vertagen; Fokus auf die Definition der Anforderungen f&uuml;r die Markennutzung</td>
+                                    <td>Diskussion asynchron fortsetzen</td>
+                                </tr>
+                                <tr>
+                                    <td>Operative Roadmap: Pablo wird alle Beitr&auml;ge zu einem Meilensteinvorschlag zusammenfassen</td>
+                                    <td>Zur Diskussion beim n&auml;chsten Community-Treffen</td>
+                                </tr>
+                                <tr>
+                                    <td>Gesteuertes Mitgliederwachstum</td>
+                                    <td>Bewusst, anf&auml;nglich kleine Zahlen zum Schutz der organisatorischen Governance</td>
+                                </tr>
+                                <tr>
+                                    <td>Vorstandsdokumente erneut unterzeichnen zur Korrektur des Amtszeitfehlers</td>
+                                    <td>4-j&auml;hrige Amtszeiten wurden irrt&uuml;mlich unterzeichnet; vereinbarte Amtszeiten betragen 2 Jahre</td>
+                                </tr>
+                                <tr>
+                                    <td>Build &amp; Strike und City Planning als kritische fr&uuml;he Rollen identifiziert</td>
+                                    <td>Freiwillige bereits f&uuml;r Build &amp; Strike best&auml;tigt; City Planning bis Ende M&auml;rz erforderlich</td>
+                                </tr>
+                                <tr>
+                                    <td>Community-Treffen geplant (Donnerstag)</td>
+                                    <td>Ben als Moderator; positive Ursprungsgeschichte als Struktur</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Zusammenfassung der Diskussion</h2>
+
+                        <h3>Operative Roadmap</h3>
+                        <p>Der Vorstand diskutierte die Anforderungen f&uuml;r die Veranstaltungsbenennung, einschlie&szlig;lich Governance, finanzieller Bereitschaft und operativer F&auml;higkeitskriterien. Der Vorstand vereinbarte, eine operative Roadmap mit &uuml;berpr&uuml;fbaren Meilensteinen zu erstellen. Der Ticketverkauf k&ouml;nnte beginnen, sobald eine Markenlizenz erhalten wird &mdash; sp&auml;testens Anfang M&auml;rz.</p>
+
+                        <h3>Veranstaltungsname und Marke</h3>
+                        <p>Der Vorstand diskutierte die Risiken des Ticketverkaufs unter dem bestehenden Veranstaltungsnamen, bevor eine formelle Vereinbarung besteht. Wenn der Name nach dem Ticketverkauf widerrufen w&uuml;rde, w&auml;ren R&uuml;ckerstattungen erforderlich. Einige Mitglieder schlugen vor, zun&auml;chst einen alternativen Namen zu verwenden. Der Vorstand vertagte die Entscheidung, um sich zun&auml;chst auf die Erf&uuml;llung der Anforderungen zu konzentrieren.</p>
+
+                        <h3>Mitgliedschaftskriterien</h3>
+                        <p>Der Vorstand diskutierte die Aufnahme neuer Mitglieder. Zum Schutz der organisatorischen Governance einigte sich der Vorstand auf gesteuertes Wachstum &mdash; sorgf&auml;ltige Pr&uuml;fung der Bewerber bei bewusster Erweiterung. Freiwillige und Mitarbeiter m&uuml;ssen keine Mitglieder sein, um beizutragen. Detaillierte Vorschl&auml;ge f&uuml;r Mitgliedschaftskriterien werden in den kommenden Wochen ausgearbeitet.</p>
+
+                        <h3>Fehler im Dokument der Vorstandsmandate</h3>
+                        <p>Ein Versionierungsfehler f&uuml;hrte dazu, dass Vorstandsmitglieder ein Dokument mit 4-j&auml;hrigen Amtszeiten und 8-j&auml;hrigen Grenzen unterzeichneten, anstatt der vereinbarten 2-j&auml;hrigen Amtszeiten. Der Vorstand stimmte einstimmig zu, die korrekte Version erneut zu unterzeichnen.</p>
+
+                        <h3>Kritische Operative Rollen</h3>
+                        <p>Der Vorstand &uuml;berpr&uuml;fte die Organisationsstruktur und priorisierte Rollen. Build &amp; Strike hat best&auml;tigte Freiwillige. Die Arbeit f&uuml;r City Planning beginnt Ende M&auml;rz. Kreative F&uuml;hrung und Finanzkoordination sind stark nachgefragte Bereiche. Beschaffungsfristen wurden &uuml;berpr&uuml;ft (Ende M&auml;rz bis Mitte Mai).</p>
+
+                        <h3>Inklusion und Gemeinschaftsstandards</h3>
+                        <p>Der Vorstand diskutierte, ob externe Ausschlusslisten &uuml;bernommen werden sollten. Der Vorstand vereinbarte, dass die Vereinigung eigene transparente Prozesse f&uuml;r Inklusion und Exklusion definieren sollte, anstatt externe Entscheidungen ohne ordnungsgem&auml;&szlig;es Verfahren zu &uuml;bernehmen.</p>
+
+                        <h3>Vorbereitung des Community-Treffens</h3>
+                        <p>Struktur: positive Ursprungsgeschichte (j&uuml;ngste demokratische Wahlen) &rarr; Veranstaltungsplanung und Rollenbewerbungen &rarr; kurzes Update zum Gel&auml;nde &rarr; moderierte Frage-und-Antwort-Runde. Handlungsaufrufe: sich freiwillig f&uuml;r Rollen melden, die Nachricht verbreiten. Ein Formular zur Interessensbekundung wird erstellt. Die Mailingliste der Website wird repariert.</p>
+
+                        <h2>Aufgaben</h2>
+                        <ul>
+                            <li><strong>Pablo:</strong> Operative Roadmap mit Meilensteinen zusammenfassen; Korrigiertes Dokument der Vorstandsmandate zur erneuten Unterzeichnung in Umlauf bringen</li>
+                            <li><strong>Chris:</strong> Vorschl&auml;ge f&uuml;r Mitgliedschaftskriterien ausarbeiten</li>
+                            <li><strong>Ben:</strong> Prozess f&uuml;r die Aufnahme neuer Mitglieder entwerfen; Community-Treffen moderieren</li>
+                            <li><strong>Daniel:</strong> N&auml;chste Vorstandssitzung leiten</li>
+                            <li><strong>Alle:</strong> Details zur operativen Roadmap in ihren Bereichen erg&auml;nzen</li>
+                        </ul>
+
+                        <h2>Offene Punkte f&uuml;r zuk&uuml;nftige Sitzungen</h2>
+                        <ul>
+                            <li>Veranstaltungsname: mit dem bestehenden Namen fortfahren oder eine Alternative?</li>
+                            <li>Mitgliedschaftskriterien: formelle Vorschl&auml;ge zur Entscheidung</li>
+                            <li>Einstellung eines Beraters f&uuml;r Veranstaltungsoperationen</li>
+                            <li>Dokumentations- und IP-Beschaffungsprozess</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
 
     <div id="shared-footer" data-prefix=".."></div>
     <script src="../footer.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 
     <script src="../script.js"></script>
 </body>

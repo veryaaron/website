@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board Meeting - February 23, 2026 | Nobodies Collective</title>
+    <title>NCA Board Meeting Minutes - February 23, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -28,6 +29,12 @@
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
         .meeting-note { background: #fef9e7; border-left: 4px solid #f0c040; padding: 1rem 1.5rem; border-radius: 0 8px 8px 0; margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.6; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -40,126 +47,618 @@
                 <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
 
                 <div class="meeting-header">
-                    <h1>Board Meeting</h1>
+                    <h1>NCA Board Meeting Minutes</h1>
                     <div class="meeting-meta">
                         <span><strong>Date:</strong> Monday 23 February 2026, 18:55 CET</span>
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Board members present:</strong> Ben, Chris, Daniel, Michelle, Pablo, Peter, Victor, Ward (full quorum &mdash; 8 of 8 members)
-                    <br><strong>Non-board attendees:</strong> Daniela (production consultant), Pepe (legal advisor)
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="meeting-note">
-                    The meeting started without quorum, as several board members were engaged in a parallel meeting regarding external discussions. Some excellent tunes were played via Google Meet while waiting for the rest of the board to join. Once all members arrived, the session proceeded as an update and discussion meeting; no formal decisions were taken.
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Board members present:</strong> Ben, Chris, Daniel, Michelle, Pablo, Peter, Victor, Ward (full quorum &mdash; 8 of 8 members)
+                        <br><strong>Non-board attendees:</strong> Daniela (production consultant), Pepe (legal advisor)
+                    </div>
+
+                    <div class="meeting-note">
+                        The meeting started without quorum, as several board members were engaged in a parallel meeting regarding external discussions. Some excellent tunes were played via Google Meet while waiting for the rest of the board to join. Once all members arrived, the session proceeded as an update and discussion meeting; no formal decisions were taken.
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Discussion Summary</h2>
+
+                        <h3>1. External Discussions Update</h3>
+                        <p>External discussions are progressing. A community update is being prepared.</p>
+
+                        <h3>2. Power Infrastructure</h3>
+                        <p>Daniela reported that Javi is proposing to unify all power systems and step into the power management role, with support from Justin (Ubertown) and Garden of Joy. This involves gathering technical knowledge for the power systems and obtaining quotes for the grids.</p>
+                        <p>Victor, who has been working on power system documentation, requested to be included on power-related communications.</p>
+
+                        <h3>3. Humans Application Update</h3>
+                        <p>Peter reported that all changes requested by Ben have been rolled out. The platform now supports a voting mechanism for collaborator and asociado applications. Key points:</p>
+                        <ul>
+                            <li>A consent check gates entry into the system; a decision is needed on who checks the &ldquo;do not enter&rdquo; list.</li>
+                            <li>When a decision is finalised, individual votes are erased for data minimisation; official decisions should be recorded in board minutes.</li>
+                            <li>Approximately 70 existing collaborators still need to onboard themselves.</li>
+                            <li>Batching application reviews (rather than daily checks) is permissible under the 30-day review window in the statutes.</li>
+                        </ul>
+
+                        <h3>4. Bylaws Amendment &mdash; Asynchronous Voting</h3>
+                        <p>Pepe introduced the need to amend the bylaws to allow asynchronous voting, noting that the current statutes require physical attendance to vote. This applies to both board votes and assembly votes. Amending the bylaws requires a General Assembly Meeting with a two-week to one-month notice period.</p>
+                        <p>Ben noted that onboarding to the platform is separate from formal member registration, and that if quorum is not reached at the first assembly call, a second call can proceed with whoever attends.</p>
+
+                        <h3>5. NIF (Tax ID) Retrieval</h3>
+                        <p>The tax ID likely exists but was lost in the mail. Pablo will send the necessary documents so that Daniel can query the tax office in person. Once the NIF is obtained, Pablo will dedicate time to contacting banks.</p>
+
+                        <h3>6. Event Permitting Process</h3>
+                        <p>Daniela reported on a meeting with Natalia from Comarca regarding the permit process:</p>
+                        <ul>
+                            <li>The permit application is due 30 days before the event via an online form with an official Spanish certificate.</li>
+                            <li>A final safety runbook is required, approved on permit day after an on-site check.</li>
+                            <li>Comarca does not charge for the permit. The association is responsible for a small environmental tax (approximately EUR 2,000).</li>
+                            <li>Separate agreements with the local mayor&rsquo;s office involve per-camper payments and road repair negotiations.</li>
+                            <li>For the new private land, the Comarca permit would still be required, but the mayor&rsquo;s office permit would not; however, the town would then be less obligated to fund road repairs.</li>
+                        </ul>
+
+                        <h3>7. Go/No-Go Timing</h3>
+                        <p>The board discussed the timing of the go/no-go process. Some members advocated delaying by a few days to reflect recent positive developments (container procurement, NIF progress). Others argued that immediate communication of progress reduces community anxiety more effectively than waiting for a comprehensive update.</p>
+                        <p>The consensus was to prioritise reducing uncertainty as quickly as possible &mdash; sharing positive progress now while continuing to finalise outstanding items.</p>
+
+                        <h3>8. Mini Burn Contingency</h3>
+                        <p>An evaluation of a smaller event scenario (1,000&ndash;1,500 attendees) was raised as a potential contingency. While the idea of reframing the event around camping and working groups generated some interest, the board considered this a lower priority at present given the positive momentum on containers and other fronts.</p>
+                        <p>The board agreed that resolving the container situation would likely lead the production team to proceed with the regular event. If containers are secured, the main financial risk becomes ticket sales.</p>
+
+                        <h2>Action Items</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Owner</th><th>Action</th><th>Deadline</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Chris</td>
+                                    <td>Draft community update statement</td>
+                                    <td>Thu community meeting</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Set up email reminders and approval notifications for Humans app</td>
+                                    <td>Ongoing</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Coordinate with Ben on teams within Humans app</td>
+                                    <td>Ongoing</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Draft bylaws amendments for async voting and send to lawyers</td>
+                                    <td>TBD</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Share bylaws amendment roadmap and timeline</td>
+                                    <td>Mon morning</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Send tax office documents and instructions to Daniel</td>
+                                    <td>Mon</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Visit tax office to retrieve NIF</td>
+                                    <td>This week</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Contact banks once NIF is obtained</td>
+                                    <td>After NIF</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniela</td>
+                                    <td>Obtain safety runbook cost/timeline estimate for new site</td>
+                                    <td>Ongoing</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniela</td>
+                                    <td>Continue gathering power infrastructure quotes</td>
+                                    <td>Ongoing</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Minutes prepared from meeting recording and AI-generated notes. Reviewed for accuracy.</p>
+                    </div>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Discussion Summary</h2>
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Miembros de la junta presentes:</strong> Ben, Chris, Daniel, Michelle, Pablo, Peter, Victor, Ward (qu&oacute;rum completo &mdash; 8 de 8 miembros)
+                        <br><strong>Asistentes no pertenecientes a la junta:</strong> Daniela (consultora de producci&oacute;n), Pepe (asesor legal)
+                    </div>
 
-                    <h3>1. External Discussions Update</h3>
-                    <p>External discussions are progressing. A community update is being prepared.</p>
+                    <div class="meeting-note">
+                        La reuni&oacute;n comenz&oacute; sin qu&oacute;rum, ya que varios miembros de la junta estaban participando en una reuni&oacute;n paralela sobre discusiones externas. Se reprodujeron algunas excelentes canciones a trav&eacute;s de Google Meet mientras se esperaba la llegada del resto de la junta. Una vez que todos los miembros se unieron, la sesi&oacute;n continu&oacute; como una reuni&oacute;n de actualizaci&oacute;n y discusi&oacute;n; no se tomaron decisiones formales.
+                    </div>
 
-                    <h3>2. Power Infrastructure</h3>
-                    <p>Daniela reported that Javi is proposing to unify all power systems and step into the power management role, with support from Justin (Ubertown) and Garden of Joy. This involves gathering technical knowledge for the power systems and obtaining quotes for the grids.</p>
-                    <p>Victor, who has been working on power system documentation, requested to be included on power-related communications.</p>
+                    <div class="meeting-content">
+                        <h2>Resumen de la Discusi&oacute;n</h2>
 
-                    <h3>3. Humans Application Update</h3>
-                    <p>Peter reported that all changes requested by Ben have been rolled out. The platform now supports a voting mechanism for collaborator and asociado applications. Key points:</p>
-                    <ul>
-                        <li>A consent check gates entry into the system; a decision is needed on who checks the &ldquo;do not enter&rdquo; list.</li>
-                        <li>When a decision is finalised, individual votes are erased for data minimisation; official decisions should be recorded in board minutes.</li>
-                        <li>Approximately 70 existing collaborators still need to onboard themselves.</li>
-                        <li>Batching application reviews (rather than daily checks) is permissible under the 30-day review window in the statutes.</li>
-                    </ul>
+                        <h3>1. Actualizaci&oacute;n sobre Discusiones Externas</h3>
+                        <p>Las discusiones externas est&aacute;n avanzando. Se est&aacute; preparando una actualizaci&oacute;n para la comunidad.</p>
 
-                    <h3>4. Bylaws Amendment &mdash; Asynchronous Voting</h3>
-                    <p>Pepe introduced the need to amend the bylaws to allow asynchronous voting, noting that the current statutes require physical attendance to vote. This applies to both board votes and assembly votes. Amending the bylaws requires a General Assembly Meeting with a two-week to one-month notice period.</p>
-                    <p>Ben noted that onboarding to the platform is separate from formal member registration, and that if quorum is not reached at the first assembly call, a second call can proceed with whoever attends.</p>
+                        <h3>2. Infraestructura El&eacute;ctrica</h3>
+                        <p>Daniela inform&oacute; que Javi propone unificar todos los sistemas el&eacute;ctricos y asumir el papel de gesti&oacute;n de energ&iacute;a, con el apoyo de Justin (Ubertown) y Garden of Joy. Esto implica recopilar conocimientos t&eacute;cnicos sobre los sistemas el&eacute;ctricos y obtener presupuestos para las redes.</p>
+                        <p>Victor, que ha estado trabajando en la documentaci&oacute;n de los sistemas el&eacute;ctricos, solicit&oacute; ser incluido en las comunicaciones relacionadas con la energ&iacute;a.</p>
 
-                    <h3>5. NIF (Tax ID) Retrieval</h3>
-                    <p>The tax ID likely exists but was lost in the mail. Pablo will send the necessary documents so that Daniel can query the tax office in person. Once the NIF is obtained, Pablo will dedicate time to contacting banks.</p>
+                        <h3>3. Actualizaci&oacute;n de la Aplicaci&oacute;n Humans</h3>
+                        <p>Peter inform&oacute; que todos los cambios solicitados por Ben se han implementado. La plataforma ahora admite un mecanismo de votaci&oacute;n para las solicitudes de colaboradores y asociados. Puntos clave:</p>
+                        <ul>
+                            <li>Una verificaci&oacute;n de consentimiento controla la entrada al sistema; se necesita una decisi&oacute;n sobre qui&eacute;n revisa la lista de &ldquo;no admitir&rdquo;.</li>
+                            <li>Cuando se finaliza una decisi&oacute;n, los votos individuales se eliminan por minimizaci&oacute;n de datos; las decisiones oficiales deben registrarse en las actas de la junta.</li>
+                            <li>Aproximadamente 70 colaboradores existentes a&uacute;n necesitan registrarse en la plataforma.</li>
+                            <li>Revisar las solicitudes por lotes (en lugar de verificaciones diarias) est&aacute; permitido bajo la ventana de revisi&oacute;n de 30 d&iacute;as de los estatutos.</li>
+                        </ul>
 
-                    <h3>6. Event Permitting Process</h3>
-                    <p>Daniela reported on a meeting with Natalia from Comarca regarding the permit process:</p>
-                    <ul>
-                        <li>The permit application is due 30 days before the event via an online form with an official Spanish certificate.</li>
-                        <li>A final safety runbook is required, approved on permit day after an on-site check.</li>
-                        <li>Comarca does not charge for the permit. The association is responsible for a small environmental tax (approximately EUR 2,000).</li>
-                        <li>Separate agreements with the local mayor&rsquo;s office involve per-camper payments and road repair negotiations.</li>
-                        <li>For the new private land, the Comarca permit would still be required, but the mayor&rsquo;s office permit would not; however, the town would then be less obligated to fund road repairs.</li>
-                    </ul>
+                        <h3>4. Modificaci&oacute;n de Estatutos &mdash; Votaci&oacute;n As&iacute;ncrona</h3>
+                        <p>Pepe present&oacute; la necesidad de modificar los estatutos para permitir la votaci&oacute;n as&iacute;ncrona, se&ntilde;alando que los estatutos actuales requieren asistencia f&iacute;sica para votar. Esto se aplica tanto a las votaciones de la junta como a las de la asamblea. La modificaci&oacute;n de los estatutos requiere una Asamblea General con un per&iacute;odo de aviso de dos semanas a un mes.</p>
+                        <p>Ben se&ntilde;al&oacute; que el registro en la plataforma es independiente del registro formal de miembros, y que si no se alcanza el qu&oacute;rum en la primera convocatoria de la asamblea, una segunda convocatoria puede proceder con quienes asistan.</p>
 
-                    <h3>7. Go/No-Go Timing</h3>
-                    <p>The board discussed the timing of the go/no-go process. Some members advocated delaying by a few days to reflect recent positive developments (container procurement, NIF progress). Others argued that immediate communication of progress reduces community anxiety more effectively than waiting for a comprehensive update.</p>
-                    <p>The consensus was to prioritise reducing uncertainty as quickly as possible &mdash; sharing positive progress now while continuing to finalise outstanding items.</p>
+                        <h3>5. Obtenci&oacute;n del NIF (N&uacute;mero de Identificaci&oacute;n Fiscal)</h3>
+                        <p>El NIF probablemente existe pero se perdi&oacute; en el correo. Pablo enviar&aacute; los documentos necesarios para que Daniel pueda consultar la oficina de Hacienda en persona. Una vez obtenido el NIF, Pablo dedicar&aacute; tiempo a contactar bancos.</p>
 
-                    <h3>8. Mini Burn Contingency</h3>
-                    <p>An evaluation of a smaller event scenario (1,000&ndash;1,500 attendees) was raised as a potential contingency. While the idea of reframing the event around camping and working groups generated some interest, the board considered this a lower priority at present given the positive momentum on containers and other fronts.</p>
-                    <p>The board agreed that resolving the container situation would likely lead the production team to proceed with the regular event. If containers are secured, the main financial risk becomes ticket sales.</p>
+                        <h3>6. Proceso de Permisos del Evento</h3>
+                        <p>Daniela inform&oacute; sobre una reuni&oacute;n con Natalia de la Comarca respecto al proceso de permisos:</p>
+                        <ul>
+                            <li>La solicitud de permiso debe presentarse 30 d&iacute;as antes del evento mediante un formulario en l&iacute;nea con un certificado oficial espa&ntilde;ol.</li>
+                            <li>Se requiere un manual de seguridad final, aprobado el d&iacute;a del permiso tras una inspecci&oacute;n in situ.</li>
+                            <li>La Comarca no cobra por el permiso. La asociaci&oacute;n es responsable de un peque&ntilde;o impuesto medioambiental (aproximadamente 2.000 EUR).</li>
+                            <li>Los acuerdos independientes con la oficina del alcalde local implican pagos por campista y negociaciones de reparaci&oacute;n de carreteras.</li>
+                            <li>Para el nuevo terreno privado, el permiso de la Comarca seguir&iacute;a siendo necesario, pero el permiso de la oficina del alcalde no; sin embargo, el municipio tendr&iacute;a entonces menos obligaci&oacute;n de financiar las reparaciones de carreteras.</li>
+                        </ul>
 
-                    <h2>Action Items</h2>
-                    <table>
-                        <thead>
-                            <tr><th>Owner</th><th>Action</th><th>Deadline</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Chris</td>
-                                <td>Draft community update statement</td>
-                                <td>Thu community meeting</td>
-                            </tr>
-                            <tr>
-                                <td>Peter</td>
-                                <td>Set up email reminders and approval notifications for Humans app</td>
-                                <td>Ongoing</td>
-                            </tr>
-                            <tr>
-                                <td>Peter</td>
-                                <td>Coordinate with Ben on teams within Humans app</td>
-                                <td>Ongoing</td>
-                            </tr>
-                            <tr>
-                                <td>Pepe</td>
-                                <td>Draft bylaws amendments for async voting and send to lawyers</td>
-                                <td>TBD</td>
-                            </tr>
-                            <tr>
-                                <td>Pepe</td>
-                                <td>Share bylaws amendment roadmap and timeline</td>
-                                <td>Mon morning</td>
-                            </tr>
-                            <tr>
-                                <td>Pablo</td>
-                                <td>Send tax office documents and instructions to Daniel</td>
-                                <td>Mon</td>
-                            </tr>
-                            <tr>
-                                <td>Daniel</td>
-                                <td>Visit tax office to retrieve NIF</td>
-                                <td>This week</td>
-                            </tr>
-                            <tr>
-                                <td>Pablo</td>
-                                <td>Contact banks once NIF is obtained</td>
-                                <td>After NIF</td>
-                            </tr>
-                            <tr>
-                                <td>Daniela</td>
-                                <td>Obtain safety runbook cost/timeline estimate for new site</td>
-                                <td>Ongoing</td>
-                            </tr>
-                            <tr>
-                                <td>Daniela</td>
-                                <td>Continue gathering power infrastructure quotes</td>
-                                <td>Ongoing</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <h3>7. Calendario de Decisi&oacute;n Go/No-Go</h3>
+                        <p>La junta discuti&oacute; el calendario del proceso de decisi&oacute;n go/no-go. Algunos miembros abogaron por retrasar unos d&iacute;as para reflejar los desarrollos positivos recientes (adquisici&oacute;n de contenedores, progreso del NIF). Otros argumentaron que la comunicaci&oacute;n inmediata del progreso reduce la ansiedad de la comunidad de manera m&aacute;s efectiva que esperar a una actualizaci&oacute;n completa.</p>
+                        <p>El consenso fue priorizar la reducci&oacute;n de la incertidumbre lo m&aacute;s r&aacute;pido posible &mdash; compartiendo el progreso positivo ahora mientras se contin&uacute;an finalizando los elementos pendientes.</p>
 
-                    <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Minutes prepared from meeting recording and AI-generated notes. Reviewed for accuracy.</p>
+                        <h3>8. Contingencia de Mini Burn</h3>
+                        <p>Se plante&oacute; una evaluaci&oacute;n de un escenario de evento m&aacute;s peque&ntilde;o (1.000&ndash;1.500 asistentes) como posible contingencia. Aunque la idea de replantear el evento en torno al camping y los grupos de trabajo gener&oacute; cierto inter&eacute;s, la junta consider&oacute; esto como una prioridad menor en este momento dado el impulso positivo en contenedores y otros frentes.</p>
+                        <p>La junta acord&oacute; que resolver la situaci&oacute;n de los contenedores probablemente llevar&iacute;a al equipo de producci&oacute;n a proceder con el evento regular. Si se aseguran los contenedores, el principal riesgo financiero pasa a ser la venta de entradas.</p>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Responsable</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Chris</td>
+                                    <td>Redactar comunicado de actualizaci&oacute;n para la comunidad</td>
+                                    <td>Reuni&oacute;n comunitaria del jueves</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Configurar recordatorios por correo y notificaciones de aprobaci&oacute;n para la aplicaci&oacute;n Humans</td>
+                                    <td>En curso</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Coordinar con Ben sobre los equipos dentro de la aplicaci&oacute;n Humans</td>
+                                    <td>En curso</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Redactar las modificaciones de estatutos para votaci&oacute;n as&iacute;ncrona y enviar a los abogados</td>
+                                    <td>Por determinar</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Compartir la hoja de ruta y el calendario de modificaci&oacute;n de estatutos</td>
+                                    <td>Lunes por la ma&ntilde;ana</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Enviar documentos e instrucciones de la oficina tributaria a Daniel</td>
+                                    <td>Lunes</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Visitar la oficina tributaria para obtener el NIF</td>
+                                    <td>Esta semana</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Contactar bancos una vez obtenido el NIF</td>
+                                    <td>Despu&eacute;s del NIF</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniela</td>
+                                    <td>Obtener estimaci&oacute;n de coste/plazo del manual de seguridad para el nuevo emplazamiento</td>
+                                    <td>En curso</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniela</td>
+                                    <td>Continuar recopilando presupuestos de infraestructura el&eacute;ctrica</td>
+                                    <td>En curso</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Actas preparadas a partir de la grabaci&oacute;n de la reuni&oacute;n y notas generadas por IA. Revisadas para verificar su precisi&oacute;n.</p>
+                    </div>
                 </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Membres du conseil pr&eacute;sents :</strong> Ben, Chris, Daniel, Michelle, Pablo, Peter, Victor, Ward (quorum complet &mdash; 8 sur 8 membres)
+                        <br><strong>Participants hors conseil :</strong> Daniela (consultante en production), Pepe (conseiller juridique)
+                    </div>
+
+                    <div class="meeting-note">
+                        La r&eacute;union a commenc&eacute; sans quorum, car plusieurs membres du conseil &eacute;taient engag&eacute;s dans une r&eacute;union parall&egrave;le concernant des discussions externes. D&rsquo;excellentes musiques ont &eacute;t&eacute; diffus&eacute;es via Google Meet en attendant l&rsquo;arriv&eacute;e du reste du conseil. Une fois tous les membres pr&eacute;sents, la session s&rsquo;est poursuivie sous forme de r&eacute;union d&rsquo;information et de discussion ; aucune d&eacute;cision formelle n&rsquo;a &eacute;t&eacute; prise.
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>R&eacute;sum&eacute; des Discussions</h2>
+
+                        <h3>1. Mise &agrave; jour sur les Discussions Externes</h3>
+                        <p>Les discussions externes progressent. Une mise &agrave; jour pour la communaut&eacute; est en pr&eacute;paration.</p>
+
+                        <h3>2. Infrastructure &Eacute;lectrique</h3>
+                        <p>Daniela a rapport&eacute; que Javi propose d&rsquo;unifier tous les syst&egrave;mes &eacute;lectriques et d&rsquo;assumer le r&ocirc;le de gestion de l&rsquo;&eacute;nergie, avec le soutien de Justin (Ubertown) et Garden of Joy. Cela implique de rassembler les connaissances techniques sur les syst&egrave;mes &eacute;lectriques et d&rsquo;obtenir des devis pour les r&eacute;seaux.</p>
+                        <p>Victor, qui travaille sur la documentation des syst&egrave;mes &eacute;lectriques, a demand&eacute; &agrave; &ecirc;tre inclus dans les communications li&eacute;es &agrave; l&rsquo;&eacute;nergie.</p>
+
+                        <h3>3. Mise &agrave; jour de l&rsquo;Application Humans</h3>
+                        <p>Peter a rapport&eacute; que tous les changements demand&eacute;s par Ben ont &eacute;t&eacute; d&eacute;ploy&eacute;s. La plateforme prend d&eacute;sormais en charge un m&eacute;canisme de vote pour les candidatures de collaborateurs et d&rsquo;asociados. Points cl&eacute;s :</p>
+                        <ul>
+                            <li>Une v&eacute;rification de consentement contr&ocirc;le l&rsquo;entr&eacute;e dans le syst&egrave;me ; une d&eacute;cision est n&eacute;cessaire sur qui v&eacute;rifie la liste &laquo; ne pas admettre &raquo;.</li>
+                            <li>Lorsqu&rsquo;une d&eacute;cision est finalis&eacute;e, les votes individuels sont effac&eacute;s par minimisation des donn&eacute;es ; les d&eacute;cisions officielles doivent &ecirc;tre consign&eacute;es dans les proc&egrave;s-verbaux du conseil.</li>
+                            <li>Environ 70 collaborateurs existants doivent encore s&rsquo;inscrire sur la plateforme.</li>
+                            <li>Le traitement group&eacute; des candidatures (plut&ocirc;t que des v&eacute;rifications quotidiennes) est autoris&eacute; dans le cadre de la fen&ecirc;tre de r&eacute;vision de 30 jours pr&eacute;vue par les statuts.</li>
+                        </ul>
+
+                        <h3>4. Modification des Statuts &mdash; Vote Asynchrone</h3>
+                        <p>Pepe a pr&eacute;sent&eacute; la n&eacute;cessit&eacute; de modifier les statuts pour permettre le vote asynchrone, notant que les statuts actuels exigent la pr&eacute;sence physique pour voter. Cela s&rsquo;applique tant aux votes du conseil qu&rsquo;aux votes de l&rsquo;assembl&eacute;e. La modification des statuts n&eacute;cessite une Assembl&eacute;e G&eacute;n&eacute;rale avec un pr&eacute;avis de deux semaines &agrave; un mois.</p>
+                        <p>Ben a not&eacute; que l&rsquo;inscription sur la plateforme est distincte de l&rsquo;enregistrement formel des membres, et que si le quorum n&rsquo;est pas atteint lors de la premi&egrave;re convocation de l&rsquo;assembl&eacute;e, une deuxi&egrave;me convocation peut se tenir avec les personnes pr&eacute;sentes.</p>
+
+                        <h3>5. Obtention du NIF (Num&eacute;ro d&rsquo;Identification Fiscale)</h3>
+                        <p>Le NIF existe probablement mais a &eacute;t&eacute; perdu dans le courrier. Pablo enverra les documents n&eacute;cessaires pour que Daniel puisse se renseigner aupr&egrave;s du bureau des imp&ocirc;ts en personne. Une fois le NIF obtenu, Pablo consacrera du temps &agrave; contacter les banques.</p>
+
+                        <h3>6. Processus d&rsquo;Autorisation de l&rsquo;&Eacute;v&eacute;nement</h3>
+                        <p>Daniela a fait un compte rendu d&rsquo;une r&eacute;union avec Natalia de la Comarca concernant le processus d&rsquo;autorisation :</p>
+                        <ul>
+                            <li>La demande de permis doit &ecirc;tre d&eacute;pos&eacute;e 30 jours avant l&rsquo;&eacute;v&eacute;nement via un formulaire en ligne avec un certificat officiel espagnol.</li>
+                            <li>Un manuel de s&eacute;curit&eacute; final est requis, approuv&eacute; le jour du permis apr&egrave;s une inspection sur site.</li>
+                            <li>La Comarca ne facture pas le permis. L&rsquo;association est responsable d&rsquo;une petite taxe environnementale (environ 2 000 EUR).</li>
+                            <li>Des accords s&eacute;par&eacute;s avec la mairie locale impliquent des paiements par campeur et des n&eacute;gociations pour la r&eacute;paration des routes.</li>
+                            <li>Pour le nouveau terrain priv&eacute;, le permis de la Comarca resterait n&eacute;cessaire, mais celui de la mairie ne le serait pas ; cependant, la commune serait alors moins tenue de financer les r&eacute;parations routi&egrave;res.</li>
+                        </ul>
+
+                        <h3>7. Calendrier de D&eacute;cision Go/No-Go</h3>
+                        <p>Le conseil a discut&eacute; du calendrier du processus de d&eacute;cision go/no-go. Certains membres ont plaid&eacute; pour un report de quelques jours afin de refl&eacute;ter les d&eacute;veloppements positifs r&eacute;cents (acquisition de conteneurs, progr&egrave;s du NIF). D&rsquo;autres ont argu&eacute; qu&rsquo;une communication imm&eacute;diate des progr&egrave;s r&eacute;duit l&rsquo;anxi&eacute;t&eacute; de la communaut&eacute; plus efficacement qu&rsquo;une attente pour une mise &agrave; jour compl&egrave;te.</p>
+                        <p>Le consensus a &eacute;t&eacute; de prioriser la r&eacute;duction de l&rsquo;incertitude aussi rapidement que possible &mdash; en partageant les progr&egrave;s positifs maintenant tout en continuant &agrave; finaliser les points en suspens.</p>
+
+                        <h3>8. Contingence Mini Burn</h3>
+                        <p>Une &eacute;valuation d&rsquo;un sc&eacute;nario d&rsquo;&eacute;v&eacute;nement plus petit (1 000&ndash;1 500 participants) a &eacute;t&eacute; soulev&eacute;e comme contingence potentielle. Bien que l&rsquo;id&eacute;e de recadrer l&rsquo;&eacute;v&eacute;nement autour du camping et des groupes de travail ait suscit&eacute; un certain int&eacute;r&ecirc;t, le conseil a consid&eacute;r&eacute; cela comme une priorit&eacute; moindre &agrave; l&rsquo;heure actuelle, compte tenu de la dynamique positive sur les conteneurs et autres fronts.</p>
+                        <p>Le conseil a convenu que la r&eacute;solution de la situation des conteneurs am&egrave;nerait probablement l&rsquo;&eacute;quipe de production &agrave; proc&eacute;der avec l&rsquo;&eacute;v&eacute;nement r&eacute;gulier. Si les conteneurs sont s&eacute;curis&eacute;s, le principal risque financier devient la vente de billets.</p>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Responsable</th><th>Action</th><th>D&eacute;lai</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Chris</td>
+                                    <td>R&eacute;diger le communiqu&eacute; de mise &agrave; jour pour la communaut&eacute;</td>
+                                    <td>R&eacute;union communautaire du jeudi</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Configurer les rappels par courriel et les notifications d&rsquo;approbation pour l&rsquo;application Humans</td>
+                                    <td>En cours</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Coordonner avec Ben sur les &eacute;quipes au sein de l&rsquo;application Humans</td>
+                                    <td>En cours</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>R&eacute;diger les modifications des statuts pour le vote asynchrone et les envoyer aux avocats</td>
+                                    <td>&Agrave; d&eacute;terminer</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Partager la feuille de route et le calendrier de modification des statuts</td>
+                                    <td>Lundi matin</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Envoyer les documents et instructions du bureau des imp&ocirc;ts &agrave; Daniel</td>
+                                    <td>Lundi</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Se rendre au bureau des imp&ocirc;ts pour r&eacute;cup&eacute;rer le NIF</td>
+                                    <td>Cette semaine</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Contacter les banques une fois le NIF obtenu</td>
+                                    <td>Apr&egrave;s le NIF</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniela</td>
+                                    <td>Obtenir une estimation de co&ucirc;t/d&eacute;lai pour le manuel de s&eacute;curit&eacute; du nouveau site</td>
+                                    <td>En cours</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniela</td>
+                                    <td>Continuer &agrave; recueillir des devis pour l&rsquo;infrastructure &eacute;lectrique</td>
+                                    <td>En cours</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Proc&egrave;s-verbal pr&eacute;par&eacute; &agrave; partir de l&rsquo;enregistrement de la r&eacute;union et de notes g&eacute;n&eacute;r&eacute;es par IA. R&eacute;vis&eacute; pour en v&eacute;rifier l&rsquo;exactitude.</p>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Membri del consiglio presenti:</strong> Ben, Chris, Daniel, Michelle, Pablo, Peter, Victor, Ward (quorum completo &mdash; 8 su 8 membri)
+                        <br><strong>Partecipanti non appartenenti al consiglio:</strong> Daniela (consulente di produzione), Pepe (consulente legale)
+                    </div>
+
+                    <div class="meeting-note">
+                        La riunione &egrave; iniziata senza quorum, poich&eacute; diversi membri del consiglio erano impegnati in una riunione parallela riguardante discussioni esterne. Sono stati riprodotti alcuni brani eccellenti tramite Google Meet in attesa dell&rsquo;arrivo del resto del consiglio. Una volta che tutti i membri si sono uniti, la sessione &egrave; proseguita come riunione di aggiornamento e discussione; non sono state prese decisioni formali.
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Riepilogo delle Discussioni</h2>
+
+                        <h3>1. Aggiornamento sulle Discussioni Esterne</h3>
+                        <p>Le discussioni esterne stanno progredendo. Si sta preparando un aggiornamento per la comunit&agrave;.</p>
+
+                        <h3>2. Infrastruttura Elettrica</h3>
+                        <p>Daniela ha riferito che Javi propone di unificare tutti i sistemi elettrici e di assumere il ruolo di gestione dell&rsquo;energia, con il supporto di Justin (Ubertown) e Garden of Joy. Ci&ograve; comporta la raccolta di conoscenze tecniche sui sistemi elettrici e l&rsquo;ottenimento di preventivi per le reti.</p>
+                        <p>Victor, che ha lavorato sulla documentazione dei sistemi elettrici, ha chiesto di essere incluso nelle comunicazioni relative all&rsquo;energia.</p>
+
+                        <h3>3. Aggiornamento dell&rsquo;Applicazione Humans</h3>
+                        <p>Peter ha riferito che tutte le modifiche richieste da Ben sono state implementate. La piattaforma ora supporta un meccanismo di voto per le candidature di collaboratori e asociados. Punti chiave:</p>
+                        <ul>
+                            <li>Un controllo di consenso regola l&rsquo;accesso al sistema; &egrave; necessaria una decisione su chi verifica l&rsquo;elenco &ldquo;non ammettere&rdquo;.</li>
+                            <li>Quando una decisione viene finalizzata, i voti individuali vengono cancellati per minimizzazione dei dati; le decisioni ufficiali devono essere registrate nei verbali del consiglio.</li>
+                            <li>Circa 70 collaboratori esistenti devono ancora registrarsi sulla piattaforma.</li>
+                            <li>La revisione delle candidature a blocchi (anzich&eacute; controlli giornalieri) &egrave; consentita nell&rsquo;ambito della finestra di revisione di 30 giorni prevista dagli statuti.</li>
+                        </ul>
+
+                        <h3>4. Modifica dello Statuto &mdash; Voto Asincrono</h3>
+                        <p>Pepe ha presentato la necessit&agrave; di modificare lo statuto per consentire il voto asincrono, notando che gli statuti attuali richiedono la presenza fisica per votare. Ci&ograve; si applica sia ai voti del consiglio sia a quelli dell&rsquo;assemblea. La modifica dello statuto richiede un&rsquo;Assemblea Generale con un preavviso da due settimane a un mese.</p>
+                        <p>Ben ha osservato che la registrazione sulla piattaforma &egrave; separata dalla registrazione formale dei membri, e che se il quorum non viene raggiunto alla prima convocazione dell&rsquo;assemblea, una seconda convocazione pu&ograve; procedere con i presenti.</p>
+
+                        <h3>5. Ottenimento del NIF (Codice Fiscale)</h3>
+                        <p>Il NIF probabilmente esiste ma &egrave; stato smarrito nella posta. Pablo invier&agrave; i documenti necessari affinch&eacute; Daniel possa rivolgersi all&rsquo;ufficio delle imposte di persona. Una volta ottenuto il NIF, Pablo dedicher&agrave; tempo a contattare le banche.</p>
+
+                        <h3>6. Processo di Autorizzazione dell&rsquo;Evento</h3>
+                        <p>Daniela ha riferito su un incontro con Natalia della Comarca riguardo al processo di autorizzazione:</p>
+                        <ul>
+                            <li>La domanda di permesso deve essere presentata 30 giorni prima dell&rsquo;evento tramite un modulo online con un certificato ufficiale spagnolo.</li>
+                            <li>&Egrave; richiesto un manuale di sicurezza finale, approvato il giorno del permesso dopo un&rsquo;ispezione in loco.</li>
+                            <li>La Comarca non addebita costi per il permesso. L&rsquo;associazione &egrave; responsabile di una piccola tassa ambientale (circa 2.000 EUR).</li>
+                            <li>Accordi separati con l&rsquo;ufficio del sindaco locale prevedono pagamenti per campeggiatore e negoziazioni per la riparazione delle strade.</li>
+                            <li>Per il nuovo terreno privato, il permesso della Comarca sarebbe comunque necessario, ma quello dell&rsquo;ufficio del sindaco no; tuttavia, il comune sarebbe meno obbligato a finanziare le riparazioni stradali.</li>
+                        </ul>
+
+                        <h3>7. Tempistica della Decisione Go/No-Go</h3>
+                        <p>Il consiglio ha discusso la tempistica del processo decisionale go/no-go. Alcuni membri hanno sostenuto di ritardare di qualche giorno per riflettere gli sviluppi positivi recenti (approvvigionamento di container, progresso del NIF). Altri hanno argomentato che la comunicazione immediata dei progressi riduce l&rsquo;ansia della comunit&agrave; in modo pi&ugrave; efficace rispetto all&rsquo;attesa di un aggiornamento completo.</p>
+                        <p>Il consenso &egrave; stato di dare priorit&agrave; alla riduzione dell&rsquo;incertezza il pi&ugrave; rapidamente possibile &mdash; condividendo i progressi positivi ora, continuando al contempo a finalizzare gli elementi in sospeso.</p>
+
+                        <h3>8. Contingenza Mini Burn</h3>
+                        <p>&Egrave; stata sollevata una valutazione di uno scenario di evento pi&ugrave; piccolo (1.000&ndash;1.500 partecipanti) come potenziale contingenza. Sebbene l&rsquo;idea di riformulare l&rsquo;evento attorno al campeggio e ai gruppi di lavoro abbia suscitato un certo interesse, il consiglio ha considerato questa una priorit&agrave; inferiore al momento, dato lo slancio positivo sui container e altri fronti.</p>
+                        <p>Il consiglio ha concordato che risolvere la situazione dei container porterebbe probabilmente il team di produzione a procedere con l&rsquo;evento regolare. Se i container vengono assicurati, il principale rischio finanziario diventa la vendita dei biglietti.</p>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Responsabile</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Chris</td>
+                                    <td>Redigere il comunicato di aggiornamento per la comunit&agrave;</td>
+                                    <td>Riunione comunitaria di gioved&igrave;</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Configurare promemoria email e notifiche di approvazione per l&rsquo;applicazione Humans</td>
+                                    <td>In corso</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Coordinare con Ben sui team all&rsquo;interno dell&rsquo;applicazione Humans</td>
+                                    <td>In corso</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Redigere le modifiche statutarie per il voto asincrono e inviarle agli avvocati</td>
+                                    <td>Da determinare</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Condividere la roadmap e il calendario delle modifiche statutarie</td>
+                                    <td>Luned&igrave; mattina</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Inviare i documenti e le istruzioni dell&rsquo;ufficio delle imposte a Daniel</td>
+                                    <td>Luned&igrave;</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Recarsi all&rsquo;ufficio delle imposte per ottenere il NIF</td>
+                                    <td>Questa settimana</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Contattare le banche una volta ottenuto il NIF</td>
+                                    <td>Dopo il NIF</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniela</td>
+                                    <td>Ottenere una stima di costo/tempistica per il manuale di sicurezza del nuovo sito</td>
+                                    <td>In corso</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniela</td>
+                                    <td>Continuare a raccogliere preventivi per l&rsquo;infrastruttura elettrica</td>
+                                    <td>In corso</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Verbale preparato dalla registrazione della riunione e da note generate dall&rsquo;IA. Revisionato per verificarne l&rsquo;accuratezza.</p>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesende Vorstandsmitglieder:</strong> Ben, Chris, Daniel, Michelle, Pablo, Peter, Victor, Ward (vollst&auml;ndiges Quorum &mdash; 8 von 8 Mitgliedern)
+                        <br><strong>Teilnehmer au&szlig;erhalb des Vorstands:</strong> Daniela (Produktionsberaterin), Pepe (Rechtsberater)
+                    </div>
+
+                    <div class="meeting-note">
+                        Die Sitzung begann ohne Quorum, da mehrere Vorstandsmitglieder an einer parallelen Besprechung zu externen Diskussionen teilnahmen. &Uuml;ber Google Meet wurden einige hervorragende Musikst&uuml;cke abgespielt, w&auml;hrend auf die &uuml;brigen Vorstandsmitglieder gewartet wurde. Sobald alle Mitglieder eingetroffen waren, wurde die Sitzung als Informations- und Diskussionssitzung fortgef&uuml;hrt; es wurden keine formellen Beschl&uuml;sse gefasst.
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Zusammenfassung der Diskussionen</h2>
+
+                        <h3>1. Aktualisierung zu Externen Gespr&auml;chen</h3>
+                        <p>Die externen Gespr&auml;che schreiten voran. Eine Aktualisierung f&uuml;r die Gemeinschaft wird vorbereitet.</p>
+
+                        <h3>2. Strominfrastruktur</h3>
+                        <p>Daniela berichtete, dass Javi vorschl&auml;gt, alle Stromsysteme zu vereinheitlichen und die Rolle der Energieverwaltung zu &uuml;bernehmen, mit Unterst&uuml;tzung von Justin (Ubertown) und Garden of Joy. Dies umfasst die Sammlung von technischem Wissen &uuml;ber die Stromsysteme und die Einholung von Angeboten f&uuml;r die Netze.</p>
+                        <p>Victor, der an der Dokumentation der Stromsysteme gearbeitet hat, bat darum, in die energiebezogene Kommunikation einbezogen zu werden.</p>
+
+                        <h3>3. Aktualisierung der Humans-Anwendung</h3>
+                        <p>Peter berichtete, dass alle von Ben angeforderten &Auml;nderungen umgesetzt wurden. Die Plattform unterst&uuml;tzt nun einen Abstimmungsmechanismus f&uuml;r Bewerbungen von Mitarbeitern und Asociados. Wichtige Punkte:</p>
+                        <ul>
+                            <li>Eine Zustimmungspr&uuml;fung regelt den Zugang zum System; eine Entscheidung ist erforderlich, wer die &bdquo;Nicht-Zulassen&ldquo;-Liste &uuml;berpr&uuml;ft.</li>
+                            <li>Wenn eine Entscheidung abgeschlossen ist, werden die einzelnen Stimmen zur Datenminimierung gel&ouml;scht; offizielle Entscheidungen sollten in den Vorstandsprotokollen festgehalten werden.</li>
+                            <li>Etwa 70 bestehende Mitarbeiter m&uuml;ssen sich noch auf der Plattform registrieren.</li>
+                            <li>Die Bearbeitung von Bewerbungen in Chargen (anstelle t&auml;glicher Pr&uuml;fungen) ist im Rahmen des 30-t&auml;gigen Pr&uuml;fungsfensters der Satzung zul&auml;ssig.</li>
+                        </ul>
+
+                        <h3>4. Satzungs&auml;nderung &mdash; Asynchrone Abstimmung</h3>
+                        <p>Pepe stellte die Notwendigkeit vor, die Satzung zu &auml;ndern, um asynchrone Abstimmungen zu erm&ouml;glichen, und wies darauf hin, dass die aktuelle Satzung physische Anwesenheit zur Abstimmung erfordert. Dies gilt sowohl f&uuml;r Vorstandsabstimmungen als auch f&uuml;r Versammlungsabstimmungen. Die Satzungs&auml;nderung erfordert eine Mitgliederversammlung mit einer Ank&uuml;ndigungsfrist von zwei Wochen bis einem Monat.</p>
+                        <p>Ben merkte an, dass die Registrierung auf der Plattform von der formellen Mitgliedsregistrierung getrennt ist, und dass bei Nichterreichen des Quorums bei der ersten Versammlungseinladung eine zweite Einladung mit den Anwesenden fortfahren kann.</p>
+
+                        <h3>5. Beschaffung der NIF (Steueridentifikationsnummer)</h3>
+                        <p>Die NIF existiert wahrscheinlich, ist aber auf dem Postweg verloren gegangen. Pablo wird die erforderlichen Unterlagen senden, damit Daniel pers&ouml;nlich beim Finanzamt nachfragen kann. Sobald die NIF vorliegt, wird Pablo sich der Kontaktaufnahme mit Banken widmen.</p>
+
+                        <h3>6. Genehmigungsverfahren f&uuml;r die Veranstaltung</h3>
+                        <p>Daniela berichtete &uuml;ber ein Treffen mit Natalia von der Comarca zum Genehmigungsverfahren:</p>
+                        <ul>
+                            <li>Der Genehmigungsantrag muss 30 Tage vor der Veranstaltung &uuml;ber ein Online-Formular mit einem offiziellen spanischen Zertifikat eingereicht werden.</li>
+                            <li>Ein abschlie&szlig;endes Sicherheitshandbuch ist erforderlich, das am Genehmigungstag nach einer Vor-Ort-Pr&uuml;fung genehmigt wird.</li>
+                            <li>Die Comarca erhebt keine Geb&uuml;hr f&uuml;r die Genehmigung. Der Verein ist f&uuml;r eine geringe Umweltsteuer verantwortlich (ca. 2.000 EUR).</li>
+                            <li>Separate Vereinbarungen mit dem &ouml;rtlichen B&uuml;rgermeisteramt beinhalten Zahlungen pro Camper und Verhandlungen &uuml;ber Stra&szlig;enreparaturen.</li>
+                            <li>F&uuml;r das neue Privatgel&auml;nde w&auml;re die Genehmigung der Comarca weiterhin erforderlich, die des B&uuml;rgermeisteramts jedoch nicht; allerdings w&auml;re die Gemeinde dann weniger verpflichtet, Stra&szlig;enreparaturen zu finanzieren.</li>
+                        </ul>
+
+                        <h3>7. Zeitplan der Go/No-Go-Entscheidung</h3>
+                        <p>Der Vorstand diskutierte den Zeitplan des Go/No-Go-Prozesses. Einige Mitglieder plädierten f&uuml;r eine Verschiebung um einige Tage, um die j&uuml;ngsten positiven Entwicklungen widerzuspiegeln (Containerbeschaffung, NIF-Fortschritt). Andere argumentierten, dass eine sofortige Kommunikation der Fortschritte die Besorgnis der Gemeinschaft wirksamer verringert als das Warten auf eine umfassende Aktualisierung.</p>
+                        <p>Der Konsens war, die Verringerung der Unsicherheit so schnell wie m&ouml;glich zu priorisieren &mdash; positive Fortschritte jetzt zu teilen und gleichzeitig die offenen Punkte weiter abzuschlie&szlig;en.</p>
+
+                        <h3>8. Mini-Burn-Notfallplan</h3>
+                        <p>Eine Bewertung eines kleineren Veranstaltungsszenarios (1.000&ndash;1.500 Teilnehmer) wurde als m&ouml;glicher Notfallplan aufgeworfen. W&auml;hrend die Idee, die Veranstaltung um Camping und Arbeitsgruppen herum umzugestalten, auf ein gewisses Interesse stie&szlig;, betrachtete der Vorstand dies angesichts der positiven Dynamik bei Containern und anderen Bereichen als derzeit niedrigere Priorit&auml;t.</p>
+                        <p>Der Vorstand stimmte zu, dass die L&ouml;sung der Containersituation das Produktionsteam wahrscheinlich dazu bringen w&uuml;rde, mit der regul&auml;ren Veranstaltung fortzufahren. Wenn die Container gesichert werden, wird das Hauptfinanzrisiko der Ticketverkauf.</p>
+
+                        <h2>Ma&szlig;nahmen</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Verantwortlich</th><th>Ma&szlig;nahme</th><th>Frist</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Chris</td>
+                                    <td>Entwurf einer Aktualisierungsmitteilung f&uuml;r die Gemeinschaft</td>
+                                    <td>Gemeinschaftstreffen am Donnerstag</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>E-Mail-Erinnerungen und Genehmigungsbenachrichtigungen f&uuml;r die Humans-App einrichten</td>
+                                    <td>Laufend</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Koordination mit Ben zu Teams innerhalb der Humans-App</td>
+                                    <td>Laufend</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Satzungs&auml;nderungen f&uuml;r asynchrone Abstimmung entwerfen und an die Anw&auml;lte senden</td>
+                                    <td>Noch festzulegen</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Fahrplan und Zeitplan der Satzungs&auml;nderung teilen</td>
+                                    <td>Montagmorgen</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Unterlagen und Anweisungen des Finanzamts an Daniel senden</td>
+                                    <td>Montag</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Das Finanzamt aufsuchen, um die NIF abzurufen</td>
+                                    <td>Diese Woche</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Banken kontaktieren, sobald die NIF vorliegt</td>
+                                    <td>Nach der NIF</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniela</td>
+                                    <td>Kosten-/Zeitsch&auml;tzung f&uuml;r das Sicherheitshandbuch des neuen Standorts einholen</td>
+                                    <td>Laufend</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniela</td>
+                                    <td>Weiterhin Angebote f&uuml;r die Strominfrastruktur einholen</td>
+                                    <td>Laufend</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Protokoll erstellt aus der Sitzungsaufzeichnung und KI-generierten Notizen. Auf Richtigkeit &uuml;berpr&uuml;ft.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -168,5 +667,18 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

@@ -29,6 +29,12 @@
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
         .notice { background: #fff8e6; border: 1px solid #f0d060; padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; font-size: 0.95rem; color: #665500; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -48,59 +54,307 @@
                     </div>
                 </div>
 
-                <div class="notice">
-                    This meeting did not reach quorum (5 of 8 members required). The board proceeded as a working session; decisions noted below are to be ratified at the next quorate meeting.
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="attendees">
-                    <strong>Present:</strong> Daniel, Peter, Pablo, Michelle
-                    <br><strong>Absent:</strong> Ben, Chris, Ward, Victor
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="notice">
+                        This meeting did not reach quorum (5 of 8 members required). The board proceeded as a working session; decisions noted below are to be ratified at the next quorate meeting.
+                    </div>
+
+                    <div class="attendees">
+                        <strong>Present:</strong> Daniel, Peter, Pablo, Michelle
+                        <br><strong>Absent:</strong> Ben, Chris, Ward, Victor
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Discussion Summary</h2>
+
+                        <h3>Operational Status</h3>
+                        <p>The board discussed the status of key operational requirements. Three priority items were identified: community communication channels, containers (operational tools and infrastructure), and event naming. The board agreed to engage the association&rsquo;s GDPR advisor to help draft legally compliant approaches for personal data matters.</p>
+
+                        <h3>Community Meeting Preparation</h3>
+                        <p>The board reviewed and finalised the agenda for the community meeting scheduled immediately after. Agenda items included: production update, barrio survey results presentation, Humans app demo, Governance Working Group update, operational update, bank account status, and membership recruitment.</p>
+
+                        <h3>Consultant Attendance at Board Meetings</h3>
+                        <p>The board discussed inviting the production consultant to attend board meetings to stay informed about decisions affecting event operations. It was agreed to invite her to the Monday meeting first, then evaluate whether attendance at both weekly meetings would be useful.</p>
+
+                        <h3>Communications Lead Access</h3>
+                        <p>The board discussed providing the Communications lead with access to board-level documents and conversations so they can handle external communications more effectively. Concerns were raised about personal data security on the board drive. The board agreed that a proper handling policy for personal data needs to be drafted before granting broader access.</p>
+
+                        <h3>Community FAQ</h3>
+                        <p>The board agreed on the urgent need to publish a Frequently Asked Questions document to address information gaps in the community. The approach will be to start with a minimal FAQ and add questions iteratively as the community raises them. Each new answer would go through the standard review process.</p>
+
+                        <h3>Board Expansion and Diversity</h3>
+                        <p>The board discussed its commitment to recruiting more diverse board members. Under the current statutes, the board can call a special assembly to elect additional members, with a required 45-day notice period. The board agreed to communicate to the community that candidates are welcome to express interest, so the election process can be initiated when appropriate.</p>
+
+                        <h3>Event Name Selection</h3>
+                        <p>The association needs an event name for ticket sales. The board agreed on a process: (1) open a form for community name suggestions, (2) select the top sensible options, and (3) hold a vote among approved volunteers registered in the Humans app. The form would be shared at the community meeting.</p>
+
+                        <h3>Donations</h3>
+                        <p>A suggestion to include a call for donations was postponed until the association&rsquo;s bank account is operational, expected within the next week.</p>
+
+                        <h2>Action Items</h2>
+                        <ul>
+                            <li><strong>Peter:</strong> Ask GDPR advisor about drafting a PII handling policy for non-board members needing access to sensitive documents</li>
+                            <li><strong>Daniel:</strong> Refresh the anonymised FAQ draft and share with Peter and Pablo for urgent publication</li>
+                            <li><strong>Daniel:</strong> Publish anonymised barrio survey results on the website after sharing at the community meeting</li>
+                            <li><strong>Pablo:</strong> Create a form for community event name suggestions</li>
+                        </ul>
+
+                        <h2>Open Items for Future Meetings</h2>
+                        <ul>
+                            <li>Asset procurement progress</li>
+                            <li>Event name vote (once suggestions are collected)</li>
+                            <li>Bank account confirmation</li>
+                            <li>Full membership criteria</li>
+                            <li>Board expansion election timeline</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Discussion Summary</h2>
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="notice">
+                        Esta reuni&oacute;n no alcanz&oacute; qu&oacute;rum (se requieren 5 de 8 miembros). La junta procedi&oacute; como sesi&oacute;n de trabajo; las decisiones indicadas a continuaci&oacute;n deber&aacute;n ser ratificadas en la pr&oacute;xima reuni&oacute;n con qu&oacute;rum.
+                    </div>
 
-                    <h3>Operational Status</h3>
-                    <p>The board discussed the status of key operational requirements. Three priority items were identified: community communication channels, containers (operational tools and infrastructure), and event naming. The board agreed to engage the association's GDPR advisor to help draft legally compliant approaches for personal data matters.</p>
+                    <div class="attendees">
+                        <strong>Presentes:</strong> Daniel, Peter, Pablo, Michelle
+                        <br><strong>Ausentes:</strong> Ben, Chris, Ward, Victor
+                    </div>
 
-                    <h3>Community Meeting Preparation</h3>
-                    <p>The board reviewed and finalised the agenda for the community meeting scheduled immediately after. Agenda items included: production update, barrio survey results presentation, Humans app demo, Governance Working Group update, operational update, bank account status, and membership recruitment.</p>
+                    <div class="meeting-content">
+                        <h2>Resumen de la Discusi&oacute;n</h2>
 
-                    <h3>Consultant Attendance at Board Meetings</h3>
-                    <p>The board discussed inviting the production consultant to attend board meetings to stay informed about decisions affecting event operations. It was agreed to invite her to the Monday meeting first, then evaluate whether attendance at both weekly meetings would be useful.</p>
+                        <h3>Estado Operativo</h3>
+                        <p>La junta discuti&oacute; el estado de los requisitos operativos clave. Se identificaron tres elementos prioritarios: canales de comunicaci&oacute;n comunitaria, contenedores (herramientas operativas e infraestructura) y nombre del evento. La junta acord&oacute; contratar al asesor de RGPD de la asociaci&oacute;n para ayudar a redactar enfoques legalmente conformes para asuntos de datos personales.</p>
 
-                    <h3>Communications Lead Access</h3>
-                    <p>The board discussed providing the Communications lead with access to board-level documents and conversations so they can handle external communications more effectively. Concerns were raised about personal data security on the board drive. The board agreed that a proper handling policy for personal data needs to be drafted before granting broader access.</p>
+                        <h3>Preparaci&oacute;n de la Reuni&oacute;n Comunitaria</h3>
+                        <p>La junta revis&oacute; y finaliz&oacute; la agenda para la reuni&oacute;n comunitaria programada inmediatamente despu&eacute;s. Los puntos del orden del d&iacute;a incluyeron: actualizaci&oacute;n de producci&oacute;n, presentaci&oacute;n de resultados de la encuesta de barrios, demostraci&oacute;n de la app Humans, actualizaci&oacute;n del Grupo de Trabajo de Gobernanza, actualizaci&oacute;n operativa, estado de la cuenta bancaria y captaci&oacute;n de socios.</p>
 
-                    <h3>Community FAQ</h3>
-                    <p>The board agreed on the urgent need to publish a Frequently Asked Questions document to address information gaps in the community. The approach will be to start with a minimal FAQ and add questions iteratively as the community raises them. Each new answer would go through the standard review process.</p>
+                        <h3>Asistencia de Consultora a las Reuniones de la Junta</h3>
+                        <p>La junta discuti&oacute; invitar a la consultora de producci&oacute;n a asistir a las reuniones de la junta para mantenerse informada sobre las decisiones que afectan a las operaciones del evento. Se acord&oacute; invitarla primero a la reuni&oacute;n del lunes y luego evaluar si la asistencia a ambas reuniones semanales ser&iacute;a &uacute;til.</p>
 
-                    <h3>Board Expansion and Diversity</h3>
-                    <p>The board discussed its commitment to recruiting more diverse board members. Under the current statutes, the board can call a special assembly to elect additional members, with a required 45-day notice period. The board agreed to communicate to the community that candidates are welcome to express interest, so the election process can be initiated when appropriate.</p>
+                        <h3>Acceso del Responsable de Comunicaciones</h3>
+                        <p>La junta discuti&oacute; proporcionar al responsable de comunicaciones acceso a documentos y conversaciones a nivel de junta para que pueda gestionar las comunicaciones externas de manera m&aacute;s eficaz. Se plantearon preocupaciones sobre la seguridad de los datos personales en el drive de la junta. La junta acord&oacute; que es necesario redactar una pol&iacute;tica adecuada de tratamiento de datos personales antes de conceder un acceso m&aacute;s amplio.</p>
 
-                    <h3>Event Name Selection</h3>
-                    <p>Without access to the &ldquo;Nowhere&rdquo; trademark, the association needs an event name for ticket sales. The board agreed on a process: (1) open a form for community name suggestions, (2) select the top sensible options, and (3) hold a vote among approved volunteers registered in the Humans app. The form would be shared at the community meeting.</p>
+                        <h3>FAQ Comunitario</h3>
+                        <p>La junta acord&oacute; la necesidad urgente de publicar un documento de Preguntas Frecuentes para abordar las lagunas de informaci&oacute;n en la comunidad. El enfoque ser&aacute; comenzar con un FAQ m&iacute;nimo y a&ntilde;adir preguntas de forma iterativa a medida que la comunidad las plantee. Cada nueva respuesta pasar&iacute;a por el proceso est&aacute;ndar de revisi&oacute;n.</p>
 
-                    <h3>Donations</h3>
-                    <p>A suggestion to include a call for donations was postponed until the association's bank account is operational, expected within the next week.</p>
+                        <h3>Ampliaci&oacute;n y Diversidad de la Junta</h3>
+                        <p>La junta discuti&oacute; su compromiso de reclutar miembros m&aacute;s diversos para la junta. Seg&uacute;n los estatutos actuales, la junta puede convocar una asamblea especial para elegir miembros adicionales, con un plazo de preaviso obligatorio de 45 d&iacute;as. La junta acord&oacute; comunicar a la comunidad que los candidatos son bienvenidos a expresar su inter&eacute;s, para que el proceso electoral pueda iniciarse cuando sea apropiado.</p>
 
-                    <h2>Action Items</h2>
-                    <ul>
-                        <li><strong>Peter:</strong> Ask GDPR advisor about drafting a PII handling policy for non-board members needing access to sensitive documents</li>
-                        <li><strong>Daniel:</strong> Refresh the anonymised FAQ draft and share with Peter and Pablo for urgent publication</li>
-                        <li><strong>Daniel:</strong> Publish anonymised barrio survey results on the website after sharing at the community meeting</li>
-                        <li><strong>Pablo:</strong> Create a form for community event name suggestions</li>
-                    </ul>
+                        <h3>Selecci&oacute;n del Nombre del Evento</h3>
+                        <p>La asociaci&oacute;n necesita un nombre de evento para la venta de entradas. La junta acord&oacute; un proceso: (1) abrir un formulario para sugerencias de nombres de la comunidad, (2) seleccionar las mejores opciones sensatas y (3) celebrar una votaci&oacute;n entre los voluntarios aprobados registrados en la app Humans. El formulario se compartir&iacute;a en la reuni&oacute;n comunitaria.</p>
 
-                    <h2>Open Items for Future Meetings</h2>
-                    <ul>
-                        <li>Asset procurement progress</li>
-                        <li>Event name vote (once suggestions are collected)</li>
-                        <li>Bank account confirmation</li>
-                        <li>Full membership criteria</li>
-                        <li>Board expansion election timeline</li>
-                    </ul>
+                        <h3>Donaciones</h3>
+                        <p>Se pospuso una sugerencia de incluir una convocatoria de donaciones hasta que la cuenta bancaria de la asociaci&oacute;n est&eacute; operativa, lo que se espera para la pr&oacute;xima semana.</p>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <ul>
+                            <li><strong>Peter:</strong> Consultar al asesor de RGPD sobre la redacci&oacute;n de una pol&iacute;tica de tratamiento de datos personales para miembros no pertenecientes a la junta que necesiten acceso a documentos sensibles</li>
+                            <li><strong>Daniel:</strong> Actualizar el borrador anonimizado de FAQ y compartirlo con Peter y Pablo para su publicaci&oacute;n urgente</li>
+                            <li><strong>Daniel:</strong> Publicar los resultados anonimizados de la encuesta de barrios en el sitio web despu&eacute;s de compartirlos en la reuni&oacute;n comunitaria</li>
+                            <li><strong>Pablo:</strong> Crear un formulario para sugerencias de nombres de evento de la comunidad</li>
+                        </ul>
+
+                        <h2>Puntos Abiertos para Futuras Reuniones</h2>
+                        <ul>
+                            <li>Progreso en la adquisici&oacute;n de activos</li>
+                            <li>Votaci&oacute;n del nombre del evento (una vez recogidas las sugerencias)</li>
+                            <li>Confirmaci&oacute;n de la cuenta bancaria</li>
+                            <li>Criterios de membres&iacute;a plena</li>
+                            <li>Calendario de elecci&oacute;n para la ampliaci&oacute;n de la junta</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="notice">
+                        Cette r&eacute;union n&rsquo;a pas atteint le quorum (5 membres sur 8 requis). Le conseil a proc&eacute;d&eacute; en tant que session de travail ; les d&eacute;cisions indiqu&eacute;es ci-dessous devront &ecirc;tre ratifi&eacute;es lors de la prochaine r&eacute;union avec quorum.
+                    </div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sents :</strong> Daniel, Peter, Pablo, Michelle
+                        <br><strong>Absents :</strong> Ben, Chris, Ward, Victor
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>R&eacute;sum&eacute; des Discussions</h2>
+
+                        <h3>&Eacute;tat Op&eacute;rationnel</h3>
+                        <p>Le conseil a discut&eacute; de l&rsquo;&eacute;tat des exigences op&eacute;rationnelles cl&eacute;s. Trois &eacute;l&eacute;ments prioritaires ont &eacute;t&eacute; identifi&eacute;s : les canaux de communication communautaire, les conteneurs (outils op&eacute;rationnels et infrastructure) et le nom de l&rsquo;&eacute;v&eacute;nement. Le conseil a convenu de faire appel au conseiller RGPD de l&rsquo;association pour aider &agrave; r&eacute;diger des approches juridiquement conformes en mati&egrave;re de donn&eacute;es personnelles.</p>
+
+                        <h3>Pr&eacute;paration de la R&eacute;union Communautaire</h3>
+                        <p>Le conseil a examin&eacute; et finalis&eacute; l&rsquo;ordre du jour de la r&eacute;union communautaire pr&eacute;vue imm&eacute;diatement apr&egrave;s. Les points de l&rsquo;ordre du jour comprenaient : mise &agrave; jour de la production, pr&eacute;sentation des r&eacute;sultats de l&rsquo;enqu&ecirc;te sur les barrios, d&eacute;monstration de l&rsquo;application Humans, mise &agrave; jour du Groupe de Travail sur la Gouvernance, mise &agrave; jour op&eacute;rationnelle, &eacute;tat du compte bancaire et recrutement de membres.</p>
+
+                        <h3>Pr&eacute;sence de la Consultante aux R&eacute;unions du Conseil</h3>
+                        <p>Le conseil a discut&eacute; de l&rsquo;invitation de la consultante en production aux r&eacute;unions du conseil afin qu&rsquo;elle reste inform&eacute;e des d&eacute;cisions affectant les op&eacute;rations de l&rsquo;&eacute;v&eacute;nement. Il a &eacute;t&eacute; convenu de l&rsquo;inviter d&rsquo;abord &agrave; la r&eacute;union du lundi, puis d&rsquo;&eacute;valuer si sa pr&eacute;sence aux deux r&eacute;unions hebdomadaires serait utile.</p>
+
+                        <h3>Acc&egrave;s du Responsable des Communications</h3>
+                        <p>Le conseil a discut&eacute; de l&rsquo;octroi au responsable des communications d&rsquo;un acc&egrave;s aux documents et conversations du conseil afin qu&rsquo;il puisse g&eacute;rer les communications externes plus efficacement. Des pr&eacute;occupations ont &eacute;t&eacute; soulev&eacute;es concernant la s&eacute;curit&eacute; des donn&eacute;es personnelles sur le drive du conseil. Le conseil a convenu qu&rsquo;une politique ad&eacute;quate de traitement des donn&eacute;es personnelles doit &ecirc;tre r&eacute;dig&eacute;e avant d&rsquo;accorder un acc&egrave;s plus large.</p>
+
+                        <h3>FAQ Communautaire</h3>
+                        <p>Le conseil a convenu de la n&eacute;cessit&eacute; urgente de publier un document de Questions Fr&eacute;quentes pour combler les lacunes d&rsquo;information dans la communaut&eacute;. L&rsquo;approche consistera &agrave; commencer par une FAQ minimale et &agrave; ajouter des questions de mani&egrave;re it&eacute;rative &agrave; mesure que la communaut&eacute; les soul&egrave;ve. Chaque nouvelle r&eacute;ponse passerait par le processus de r&eacute;vision standard.</p>
+
+                        <h3>&Eacute;largissement et Diversit&eacute; du Conseil</h3>
+                        <p>Le conseil a discut&eacute; de son engagement &agrave; recruter des membres plus diversifi&eacute;s. En vertu des statuts actuels, le conseil peut convoquer une assembl&eacute;e sp&eacute;ciale pour &eacute;lire des membres suppl&eacute;mentaires, avec un d&eacute;lai de pr&eacute;avis obligatoire de 45 jours. Le conseil a convenu de communiquer &agrave; la communaut&eacute; que les candidats sont invit&eacute;s &agrave; manifester leur int&eacute;r&ecirc;t, afin que le processus &eacute;lectoral puisse &ecirc;tre lanc&eacute; le moment venu.</p>
+
+                        <h3>S&eacute;lection du Nom de l&rsquo;&Eacute;v&eacute;nement</h3>
+                        <p>L&rsquo;association a besoin d&rsquo;un nom d&rsquo;&eacute;v&eacute;nement pour la vente de billets. Le conseil a convenu d&rsquo;un processus : (1) ouvrir un formulaire pour les suggestions de noms de la communaut&eacute;, (2) s&eacute;lectionner les meilleures options pertinentes, et (3) organiser un vote parmi les b&eacute;n&eacute;voles approuv&eacute;s inscrits dans l&rsquo;application Humans. Le formulaire serait partag&eacute; lors de la r&eacute;union communautaire.</p>
+
+                        <h3>Dons</h3>
+                        <p>Une suggestion d&rsquo;inclure un appel aux dons a &eacute;t&eacute; report&eacute;e jusqu&rsquo;&agrave; ce que le compte bancaire de l&rsquo;association soit op&eacute;rationnel, ce qui est attendu dans la semaine &agrave; venir.</p>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <ul>
+                            <li><strong>Peter :</strong> Consulter le conseiller RGPD sur la r&eacute;daction d&rsquo;une politique de traitement des donn&eacute;es personnelles pour les membres non-conseil ayant besoin d&rsquo;acc&egrave;s aux documents sensibles</li>
+                            <li><strong>Daniel :</strong> Actualiser le brouillon anonymis&eacute; de la FAQ et le partager avec Peter et Pablo pour publication urgente</li>
+                            <li><strong>Daniel :</strong> Publier les r&eacute;sultats anonymis&eacute;s de l&rsquo;enqu&ecirc;te sur les barrios sur le site web apr&egrave;s les avoir pr&eacute;sent&eacute;s &agrave; la r&eacute;union communautaire</li>
+                            <li><strong>Pablo :</strong> Cr&eacute;er un formulaire pour les suggestions de noms d&rsquo;&eacute;v&eacute;nement de la communaut&eacute;</li>
+                        </ul>
+
+                        <h2>Points Ouverts pour les R&eacute;unions Futures</h2>
+                        <ul>
+                            <li>Progr&egrave;s de l&rsquo;acquisition d&rsquo;actifs</li>
+                            <li>Vote sur le nom de l&rsquo;&eacute;v&eacute;nement (une fois les suggestions collect&eacute;es)</li>
+                            <li>Confirmation du compte bancaire</li>
+                            <li>Crit&egrave;res de membres&iacute;a compl&egrave;te</li>
+                            <li>Calendrier de l&rsquo;&eacute;lection pour l&rsquo;&eacute;largissement du conseil</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="notice">
+                        Questa riunione non ha raggiunto il quorum (richiesti 5 su 8 membri). Il consiglio ha proceduto come sessione di lavoro; le decisioni indicate di seguito dovranno essere ratificate nella prossima riunione con quorum.
+                    </div>
+
+                    <div class="attendees">
+                        <strong>Presenti:</strong> Daniel, Peter, Pablo, Michelle
+                        <br><strong>Assenti:</strong> Ben, Chris, Ward, Victor
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Riepilogo della Discussione</h2>
+
+                        <h3>Stato Operativo</h3>
+                        <p>Il consiglio ha discusso lo stato dei requisiti operativi chiave. Sono stati identificati tre elementi prioritari: canali di comunicazione comunitaria, container (strumenti operativi e infrastruttura) e nome dell&rsquo;evento. Il consiglio ha concordato di coinvolgere il consulente GDPR dell&rsquo;associazione per aiutare a redigere approcci legalmente conformi per le questioni relative ai dati personali.</p>
+
+                        <h3>Preparazione della Riunione Comunitaria</h3>
+                        <p>Il consiglio ha esaminato e finalizzato l&rsquo;ordine del giorno per la riunione comunitaria programmata subito dopo. I punti all&rsquo;ordine del giorno includevano: aggiornamento sulla produzione, presentazione dei risultati del sondaggio sui barrios, dimostrazione dell&rsquo;app Humans, aggiornamento del Gruppo di Lavoro sulla Governance, aggiornamento operativo, stato del conto bancario e reclutamento di membri.</p>
+
+                        <h3>Partecipazione della Consulente alle Riunioni del Consiglio</h3>
+                        <p>Il consiglio ha discusso l&rsquo;invito alla consulente di produzione a partecipare alle riunioni del consiglio per rimanere informata sulle decisioni che riguardano le operazioni dell&rsquo;evento. Si &egrave; concordato di invitarla prima alla riunione del luned&iacute;, poi valutare se la partecipazione a entrambe le riunioni settimanali sarebbe utile.</p>
+
+                        <h3>Accesso del Responsabile delle Comunicazioni</h3>
+                        <p>Il consiglio ha discusso la possibilit&agrave; di fornire al responsabile delle comunicazioni l&rsquo;accesso ai documenti e alle conversazioni a livello di consiglio, affinch&eacute; possa gestire le comunicazioni esterne in modo pi&ugrave; efficace. Sono state sollevate preoccupazioni sulla sicurezza dei dati personali sul drive del consiglio. Il consiglio ha concordato che &egrave; necessario redigere una politica adeguata per il trattamento dei dati personali prima di concedere un accesso pi&ugrave; ampio.</p>
+
+                        <h3>FAQ Comunitarie</h3>
+                        <p>Il consiglio ha concordato sull&rsquo;urgente necessit&agrave; di pubblicare un documento di Domande Frequenti per colmare le lacune informative nella comunit&agrave;. L&rsquo;approccio consister&agrave; nell&rsquo;iniziare con una FAQ minima e aggiungere domande in modo iterativo man mano che la comunit&agrave; le solleva. Ogni nuova risposta passerebbe attraverso il processo di revisione standard.</p>
+
+                        <h3>Ampliamento e Diversit&agrave; del Consiglio</h3>
+                        <p>Il consiglio ha discusso il proprio impegno a reclutare membri pi&ugrave; diversificati. Secondo gli statuti attuali, il consiglio pu&ograve; convocare un&rsquo;assemblea speciale per eleggere membri aggiuntivi, con un preavviso obbligatorio di 45 giorni. Il consiglio ha concordato di comunicare alla comunit&agrave; che i candidati sono benvenuti a manifestare il proprio interesse, affinch&eacute; il processo elettorale possa essere avviato al momento opportuno.</p>
+
+                        <h3>Selezione del Nome dell&rsquo;Evento</h3>
+                        <p>L&rsquo;associazione ha bisogno di un nome per l&rsquo;evento ai fini della vendita dei biglietti. Il consiglio ha concordato un processo: (1) aprire un modulo per le proposte di nomi dalla comunit&agrave;, (2) selezionare le migliori opzioni sensate e (3) tenere una votazione tra i volontari approvati registrati nell&rsquo;app Humans. Il modulo sarebbe stato condiviso durante la riunione comunitaria.</p>
+
+                        <h3>Donazioni</h3>
+                        <p>La proposta di includere una richiesta di donazioni &egrave; stata rinviata fino a quando il conto bancario dell&rsquo;associazione non sar&agrave; operativo, previsto entro la settimana successiva.</p>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <ul>
+                            <li><strong>Peter:</strong> Consultare il consulente GDPR sulla redazione di una politica di trattamento dei dati personali per i membri non appartenenti al consiglio che necessitano di accesso a documenti sensibili</li>
+                            <li><strong>Daniel:</strong> Aggiornare la bozza anonimizzata delle FAQ e condividerla con Peter e Pablo per la pubblicazione urgente</li>
+                            <li><strong>Daniel:</strong> Pubblicare i risultati anonimizzati del sondaggio sui barrios sul sito web dopo averli presentati alla riunione comunitaria</li>
+                            <li><strong>Pablo:</strong> Creare un modulo per le proposte di nomi dell&rsquo;evento dalla comunit&agrave;</li>
+                        </ul>
+
+                        <h2>Punti Aperti per le Riunioni Future</h2>
+                        <ul>
+                            <li>Progresso nell&rsquo;acquisizione degli asset</li>
+                            <li>Votazione sul nome dell&rsquo;evento (una volta raccolte le proposte)</li>
+                            <li>Conferma del conto bancario</li>
+                            <li>Criteri di adesione completa</li>
+                            <li>Calendario dell&rsquo;elezione per l&rsquo;ampliamento del consiglio</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version ist die spanische Version ma&szlig;geblich.</div>
+
+                    <div class="notice">
+                        Diese Sitzung hat das Quorum nicht erreicht (5 von 8 Mitgliedern erforderlich). Der Vorstand hat als Arbeitssitzung fortgefahren; die unten aufgef&uuml;hrten Beschl&uuml;sse m&uuml;ssen in der n&auml;chsten beschlussf&auml;higen Sitzung ratifiziert werden.
+                    </div>
+
+                    <div class="attendees">
+                        <strong>Anwesend:</strong> Daniel, Peter, Pablo, Michelle
+                        <br><strong>Abwesend:</strong> Ben, Chris, Ward, Victor
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Zusammenfassung der Diskussion</h2>
+
+                        <h3>Operativer Status</h3>
+                        <p>Der Vorstand besprach den Stand der wichtigsten operativen Anforderungen. Drei vorrangige Punkte wurden identifiziert: kommunale Kommunikationskan&auml;le, Container (Betriebsmittel und Infrastruktur) und Eventbenennung. Der Vorstand beschloss, den DSGVO-Berater des Vereins hinzuzuziehen, um bei der Erstellung rechtlich konformer Ans&auml;tze f&uuml;r personenbezogene Daten zu helfen.</p>
+
+                        <h3>Vorbereitung der Gemeinschaftsversammlung</h3>
+                        <p>Der Vorstand &uuml;berpr&uuml;fte und finalisierte die Tagesordnung f&uuml;r die unmittelbar anschlie&szlig;ende Gemeinschaftsversammlung. Die Tagesordnungspunkte umfassten: Produktionsupdate, Pr&auml;sentation der Barrio-Umfrageergebnisse, Demo der Humans-App, Update der Governance-Arbeitsgruppe, operatives Update, Status des Bankkontos und Mitgliedergewinnung.</p>
+
+                        <h3>Teilnahme der Beraterin an Vorstandssitzungen</h3>
+                        <p>Der Vorstand besprach die Einladung der Produktionsberaterin zu Vorstandssitzungen, damit sie &uuml;ber Entscheidungen informiert bleibt, die den Veranstaltungsbetrieb betreffen. Man einigte sich darauf, sie zun&auml;chst zur Montagssitzung einzuladen und dann zu beurteilen, ob die Teilnahme an beiden w&ouml;chentlichen Sitzungen n&uuml;tzlich w&auml;re.</p>
+
+                        <h3>Zugang f&uuml;r den Kommunikationsverantwortlichen</h3>
+                        <p>Der Vorstand besprach die M&ouml;glichkeit, dem Kommunikationsverantwortlichen Zugang zu Dokumenten und Gespr&auml;chen auf Vorstandsebene zu gew&auml;hren, damit er die externe Kommunikation effektiver handhaben kann. Es wurden Bedenken hinsichtlich der Sicherheit personenbezogener Daten auf dem Vorstandslaufwerk ge&auml;u&szlig;ert. Der Vorstand einigte sich darauf, dass eine angemessene Richtlinie zum Umgang mit personenbezogenen Daten erarbeitet werden muss, bevor ein breiterer Zugang gew&auml;hrt wird.</p>
+
+                        <h3>Gemeinschafts-FAQ</h3>
+                        <p>Der Vorstand stimmte &uuml;ber die dringende Notwendigkeit &uuml;berein, ein Dokument mit h&auml;ufig gestellten Fragen zu ver&ouml;ffentlichen, um Informationsl&uuml;cken in der Gemeinschaft zu schlie&szlig;en. Der Ansatz wird sein, mit einer minimalen FAQ zu beginnen und Fragen iterativ hinzuzuf&uuml;gen, sobald die Gemeinschaft sie stellt. Jede neue Antwort w&uuml;rde den standardm&auml;&szlig;igen &Uuml;berpr&uuml;fungsprozess durchlaufen.</p>
+
+                        <h3>Erweiterung und Diversit&auml;t des Vorstands</h3>
+                        <p>Der Vorstand besprach sein Engagement f&uuml;r die Gewinnung vielf&auml;ltigerer Vorstandsmitglieder. Gem&auml;&szlig; den aktuellen Statuten kann der Vorstand eine Sonderversammlung einberufen, um zus&auml;tzliche Mitglieder zu w&auml;hlen, mit einer vorgeschriebenen Vorlaufzeit von 45 Tagen. Der Vorstand einigte sich darauf, der Gemeinschaft mitzuteilen, dass Kandidaten willkommen sind, ihr Interesse zu bekunden, damit der Wahlprozess zum geeigneten Zeitpunkt eingeleitet werden kann.</p>
+
+                        <h3>Auswahl des Eventnamens</h3>
+                        <p>Der Verein ben&ouml;tigt einen Eventnamen f&uuml;r den Ticketverkauf. Der Vorstand einigte sich auf ein Verfahren: (1) ein Formular f&uuml;r Namensvorschl&auml;ge aus der Gemeinschaft &ouml;ffnen, (2) die besten sinnvollen Optionen ausw&auml;hlen und (3) eine Abstimmung unter den zugelassenen Freiwilligen durchf&uuml;hren, die in der Humans-App registriert sind. Das Formular w&uuml;rde bei der Gemeinschaftsversammlung geteilt werden.</p>
+
+                        <h3>Spenden</h3>
+                        <p>Ein Vorschlag, einen Spendenaufruf aufzunehmen, wurde verschoben, bis das Bankkonto des Vereins betriebsbereit ist, was innerhalb der n&auml;chsten Woche erwartet wird.</p>
+
+                        <h2>Ma&szlig;nahmen</h2>
+                        <ul>
+                            <li><strong>Peter:</strong> Den DSGVO-Berater nach der Erstellung einer Richtlinie zum Umgang mit personenbezogenen Daten f&uuml;r Nicht-Vorstandsmitglieder fragen, die Zugang zu sensiblen Dokumenten ben&ouml;tigen</li>
+                            <li><strong>Daniel:</strong> Den anonymisierten FAQ-Entwurf aktualisieren und mit Peter und Pablo zur dringenden Ver&ouml;ffentlichung teilen</li>
+                            <li><strong>Daniel:</strong> Anonymisierte Barrio-Umfrageergebnisse auf der Website ver&ouml;ffentlichen, nachdem sie bei der Gemeinschaftsversammlung vorgestellt wurden</li>
+                            <li><strong>Pablo:</strong> Ein Formular f&uuml;r Namensvorschl&auml;ge der Gemeinschaft f&uuml;r das Event erstellen</li>
+                        </ul>
+
+                        <h2>Offene Punkte f&uuml;r zuk&uuml;nftige Sitzungen</h2>
+                        <ul>
+                            <li>Fortschritt bei der Beschaffung von Betriebsmitteln</li>
+                            <li>Abstimmung &uuml;ber den Eventnamen (sobald die Vorschl&auml;ge gesammelt sind)</li>
+                            <li>Best&auml;tigung des Bankkontos</li>
+                            <li>Vollst&auml;ndige Mitgliedschaftskriterien</li>
+                            <li>Zeitplan f&uuml;r die Wahl zur Vorstandserweiterung</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -109,5 +363,18 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

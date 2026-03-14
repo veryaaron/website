@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board Meeting - February 26, 2026 | Nobodies Collective</title>
+    <title>NCA Board Meeting Minutes - February 26, 2026 | Nobodies Collective</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -27,6 +27,12 @@
         .meeting-content th { background: var(--color-bg-secondary); font-weight: 600; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -39,99 +45,479 @@
                 <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
 
                 <div class="meeting-header">
-                    <h1>Board Meeting</h1>
+                    <h1>NCA Board Meeting Minutes</h1>
                     <div class="meeting-meta">
                         <span><strong>Date:</strong> Thursday 26 February 2026, 18:53 CET</span>
                         <span><strong>Duration:</strong> ~1 hour</span>
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Board members present:</strong> Daniel, Pablo, Ben, Chris, Victor, Michelle, Peter
-                    <br><strong>Non-board attendees:</strong> Daniela (production consultant), Pepe (legal advisor)
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Key Decisions</h2>
-                    <ol>
-                        <li><strong>Approve all pending collaborator applications</strong> &mdash; Board unanimously approved all individuals currently pending on the collaborator list.</li>
-                        <li><strong>Event name poll to proceed</strong> &mdash; Name poll to be sent via OPA Vote to the same recipient list as the go/no-go poll, as soon as practical.</li>
-                        <li><strong>Application approval process</strong> &mdash; Going forward, only the Secretary (Ben) will execute final approvals on the membership platform to prevent administrative errors.</li>
-                        <li><strong>Ticketing strategy deferred</strong> &mdash; The board acknowledged ticketing pricing and refund policy as a complex topic requiring dedicated future discussion.</li>
-                    </ol>
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                    <h2>Discussion Summary</h2>
+                    <div class="attendees">
+                        <strong>Board members present:</strong> Daniel, Pablo, Ben, Chris, Victor, Michelle, Peter
+                        <br><strong>Non-board attendees:</strong> Daniela (production consultant), Pepe (legal advisor)
+                    </div>
 
-                    <h3>1. Bylaws Amendment</h3>
-                    <p>The bylaws amendment to enable asynchronous voting is in progress. A draft is expected shortly. Until statutory changes are implemented, formal voting on association membership is paused.</p>
+                    <div class="meeting-content">
+                        <h2>Key Decisions</h2>
+                        <ol>
+                            <li><strong>Approve all pending collaborator applications</strong> &mdash; Board unanimously approved all individuals currently pending on the collaborator list.</li>
+                            <li><strong>Event name poll to proceed</strong> &mdash; Name poll to be sent via OPA Vote to the same recipient list as the go/no-go poll, as soon as practical.</li>
+                            <li><strong>Application approval process</strong> &mdash; Going forward, only the Secretary (Ben) will execute final approvals on the membership platform to prevent administrative errors.</li>
+                            <li><strong>Ticketing strategy deferred</strong> &mdash; The board acknowledged ticketing pricing and refund policy as a complex topic requiring dedicated future discussion.</li>
+                        </ol>
 
-                    <h3>2. Organizational Decentralization</h3>
-                    <p>The board discussed the challenge of centralization &mdash; with board members becoming overwhelmed by the volume of work and communications, creating an unintended bottleneck. Proposed solutions include:</p>
-                    <ul>
-                        <li>Immediate: delegation and empowering team leads</li>
-                        <li>Short-term: building a volunteer management team</li>
-                        <li>Long-term: organizational design for decentralized coordination structures</li>
-                        <li>Creating an &ldquo;internal comms&rdquo; function to distribute communication load</li>
-                    </ul>
-                    <p>The board agreed to ask the community for help at the evening&rsquo;s community meeting.</p>
+                        <h2>Discussion Summary</h2>
 
-                    <h3>3. External Relations</h3>
-                    <p>The board agreed that Pepe will lead and coordinate external relations, given his legal expertise, clarity of communication, and constructive approach.</p>
+                        <h3>1. Bylaws Amendment</h3>
+                        <p>The bylaws amendment to enable asynchronous voting is in progress. A draft is expected shortly. Until statutory changes are implemented, formal voting on association membership is paused.</p>
 
-                    <h3>4. Collaborator &amp; Membership Management</h3>
-                    <p>The platform for managing membership (Humans) is now live and has replaced the previous Typeform-based application process. All links have been updated. An administrative error resulted in two people receiving incorrect welcome messages; the board confirmed no statutory approvals were affected, and the individuals are being notified.</p>
+                        <h3>2. Organizational Decentralization</h3>
+                        <p>The board discussed the challenge of centralization &mdash; with board members becoming overwhelmed by the volume of work and communications, creating an unintended bottleneck. Proposed solutions include:</p>
+                        <ul>
+                            <li>Immediate: delegation and empowering team leads</li>
+                            <li>Short-term: building a volunteer management team</li>
+                            <li>Long-term: organizational design for decentralized coordination structures</li>
+                            <li>Creating an &ldquo;internal comms&rdquo; function to distribute communication load</li>
+                        </ul>
+                        <p>The board agreed to ask the community for help at the evening&rsquo;s community meeting.</p>
 
-                    <h3>5. Go/No-Go Poll</h3>
-                    <p>The go/no-go community poll was sent out earlier in the day and is running until Sunday night. Results will be reviewed by the board after the poll closes.</p>
+                        <h3>3. External Relations</h3>
+                        <p>The board agreed that Pepe will lead and coordinate external relations, given his legal expertise, clarity of communication, and constructive approach.</p>
 
-                    <h3>6. Event Name Poll</h3>
-                    <p>The board approved sending a rank-choice name poll for the event. Approximately 300 name suggestions were received and narrowed to a shortlist. The poll will be sent to the same list that received the go/no-go poll.</p>
+                        <h3>4. Collaborator &amp; Membership Management</h3>
+                        <p>The platform for managing membership (Humans) is now live and has replaced the previous Typeform-based application process. All links have been updated. An administrative error resulted in two people receiving incorrect welcome messages; the board confirmed no statutory approvals were affected, and the individuals are being notified.</p>
 
-                    <h3>7. Ticket Sales &amp; Pricing</h3>
-                    <p>The board discussed preliminary ticket sales projections:</p>
-                    <ul>
-                        <li>Target: approximately 1,000 tickets sold by end of April to be on track</li>
-                        <li>May 1 identified as a potential last-chance evaluation point before major expenses are committed</li>
-                        <li>100% refund policy is required under Spanish law for public events</li>
-                        <li>The art/creativity budget presents a timing challenge (commitments made early, spending occurs later)</li>
-                    </ul>
-                    <p>The board acknowledged this requires a more in-depth discussion and will be revisited.</p>
+                        <h3>5. Go/No-Go Poll</h3>
+                        <p>The go/no-go community poll was sent out earlier in the day and is running until Sunday night. Results will be reviewed by the board after the poll closes.</p>
 
-                    <h2>Action Items</h2>
-                    <table>
-                        <thead>
-                            <tr><th>Owner</th><th>Action</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Ben</td>
-                                <td>Send event name poll</td>
-                            </tr>
-                            <tr>
-                                <td>Ben</td>
-                                <td>Process pending collaborator approvals</td>
-                            </tr>
-                            <tr>
-                                <td>Peter</td>
-                                <td>Develop ticket sales projections</td>
-                            </tr>
-                            <tr>
-                                <td>Pepe</td>
-                                <td>Research refund policy feasibility</td>
-                            </tr>
-                            <tr>
-                                <td>Ben / Daniela</td>
-                                <td>Coordinate metalead role name poll</td>
-                            </tr>
-                            <tr>
-                                <td>Pablo</td>
-                                <td>Notify accidentally approved individuals of clerical error</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <h3>6. Event Name Poll</h3>
+                        <p>The board approved sending a rank-choice name poll for the event. Approximately 300 name suggestions were received and narrowed to a shortlist. The poll will be sent to the same list that received the go/no-go poll.</p>
 
-                    <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Minutes prepared from meeting recording and AI-generated notes. Reviewed for accuracy.</p>
+                        <h3>7. Ticket Sales &amp; Pricing</h3>
+                        <p>The board discussed preliminary ticket sales projections:</p>
+                        <ul>
+                            <li>Target: approximately 1,000 tickets sold by end of April to be on track</li>
+                            <li>May 1 identified as a potential last-chance evaluation point before major expenses are committed</li>
+                            <li>100% refund policy is required under Spanish law for public events</li>
+                            <li>The art/creativity budget presents a timing challenge (commitments made early, spending occurs later)</li>
+                        </ul>
+                        <p>The board acknowledged this requires a more in-depth discussion and will be revisited.</p>
+
+                        <h2>Action Items</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Owner</th><th>Action</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>Send event name poll</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>Process pending collaborator approvals</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Develop ticket sales projections</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Research refund policy feasibility</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben / Daniela</td>
+                                    <td>Coordinate metalead role name poll</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Notify accidentally approved individuals of clerical error</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Minutes prepared from meeting recording and AI-generated notes. Reviewed for accuracy.</p>
+                    </div>
                 </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Miembros de la junta presentes:</strong> Daniel, Pablo, Ben, Chris, Victor, Michelle, Peter
+                        <br><strong>Asistentes no pertenecientes a la junta:</strong> Daniela (consultora de producci&oacute;n), Pepe (asesor legal)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisiones Clave</h2>
+                        <ol>
+                            <li><strong>Aprobar todas las solicitudes de colaboradores pendientes</strong> &mdash; La junta aprob&oacute; por unanimidad a todas las personas actualmente pendientes en la lista de colaboradores.</li>
+                            <li><strong>Proceder con la encuesta del nombre del evento</strong> &mdash; La encuesta de nombre se enviar&aacute; a trav&eacute;s de OPA Vote a la misma lista de destinatarios que la encuesta de viabilidad, lo antes posible.</li>
+                            <li><strong>Proceso de aprobaci&oacute;n de solicitudes</strong> &mdash; En adelante, solo el Secretario (Ben) ejecutar&aacute; las aprobaciones finales en la plataforma de membres&iacute;a para prevenir errores administrativos.</li>
+                            <li><strong>Estrategia de venta de entradas aplazada</strong> &mdash; La junta reconoci&oacute; que los precios de las entradas y la pol&iacute;tica de reembolso son un tema complejo que requiere una discusi&oacute;n futura dedicada.</li>
+                        </ol>
+
+                        <h2>Resumen de la Discusi&oacute;n</h2>
+
+                        <h3>1. Modificaci&oacute;n de los Estatutos</h3>
+                        <p>La modificaci&oacute;n de los estatutos para habilitar la votaci&oacute;n asincr&oacute;nica est&aacute; en curso. Se espera un borrador en breve. Hasta que se implementen los cambios estatutarios, la votaci&oacute;n formal sobre la membres&iacute;a de la asociaci&oacute;n est&aacute; en pausa.</p>
+
+                        <h3>2. Descentralizaci&oacute;n Organizativa</h3>
+                        <p>La junta discuti&oacute; el desaf&iacute;o de la centralizaci&oacute;n &mdash; con los miembros de la junta abrumados por el volumen de trabajo y comunicaciones, creando un cuello de botella no intencionado. Las soluciones propuestas incluyen:</p>
+                        <ul>
+                            <li>Inmediato: delegaci&oacute;n y empoderamiento de los l&iacute;deres de equipo</li>
+                            <li>Corto plazo: construir un equipo de gesti&oacute;n de voluntarios</li>
+                            <li>Largo plazo: dise&ntilde;o organizativo para estructuras de coordinaci&oacute;n descentralizadas</li>
+                            <li>Crear una funci&oacute;n de &ldquo;comunicaciones internas&rdquo; para distribuir la carga de comunicaci&oacute;n</li>
+                        </ul>
+                        <p>La junta acord&oacute; pedir ayuda a la comunidad en la reuni&oacute;n comunitaria de la noche.</p>
+
+                        <h3>3. Relaciones Externas</h3>
+                        <p>La junta acord&oacute; que Pepe liderar&aacute; y coordinar&aacute; las relaciones externas, dada su experiencia legal, claridad de comunicaci&oacute;n y enfoque constructivo.</p>
+
+                        <h3>4. Gesti&oacute;n de Colaboradores y Membres&iacute;a</h3>
+                        <p>La plataforma para gestionar la membres&iacute;a (Humans) ya est&aacute; activa y ha reemplazado el proceso de solicitud anterior basado en Typeform. Todos los enlaces han sido actualizados. Un error administrativo result&oacute; en que dos personas recibieran mensajes de bienvenida incorrectos; la junta confirm&oacute; que no se vieron afectadas las aprobaciones estatutarias, y se est&aacute; notificando a las personas afectadas.</p>
+
+                        <h3>5. Encuesta de Viabilidad</h3>
+                        <p>La encuesta comunitaria de viabilidad fue enviada m&aacute;s temprano en el d&iacute;a y estar&aacute; abierta hasta el domingo por la noche. Los resultados ser&aacute;n revisados por la junta despu&eacute;s del cierre de la encuesta.</p>
+
+                        <h3>6. Encuesta del Nombre del Evento</h3>
+                        <p>La junta aprob&oacute; el env&iacute;o de una encuesta de clasificaci&oacute;n por preferencia para el nombre del evento. Se recibieron aproximadamente 300 sugerencias de nombres que se redujeron a una lista corta. La encuesta se enviar&aacute; a la misma lista que recibi&oacute; la encuesta de viabilidad.</p>
+
+                        <h3>7. Venta de Entradas y Precios</h3>
+                        <p>La junta discuti&oacute; las proyecciones preliminares de venta de entradas:</p>
+                        <ul>
+                            <li>Objetivo: aproximadamente 1.000 entradas vendidas para finales de abril para estar en el camino correcto</li>
+                            <li>El 1 de mayo identificado como un posible punto de evaluaci&oacute;n de &uacute;ltima oportunidad antes de comprometer gastos importantes</li>
+                            <li>Se requiere una pol&iacute;tica de reembolso del 100% seg&uacute;n la legislaci&oacute;n espa&ntilde;ola para eventos p&uacute;blicos</li>
+                            <li>El presupuesto de arte/creatividad presenta un desaf&iacute;o de temporalidad (los compromisos se hacen temprano, el gasto ocurre despu&eacute;s)</li>
+                        </ul>
+                        <p>La junta reconoci&oacute; que esto requiere una discusi&oacute;n m&aacute;s profunda y ser&aacute; revisado.</p>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Responsable</th><th>Acci&oacute;n</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>Enviar encuesta del nombre del evento</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>Procesar aprobaciones pendientes de colaboradores</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Desarrollar proyecciones de venta de entradas</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Investigar la viabilidad de la pol&iacute;tica de reembolso</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben / Daniela</td>
+                                    <td>Coordinar encuesta del nombre del rol de metalead</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Notificar a las personas aprobadas accidentalmente del error administrativo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Actas preparadas a partir de la grabaci&oacute;n de la reuni&oacute;n y notas generadas por IA. Revisadas para verificar su precisi&oacute;n.</p>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Membres du conseil pr&eacute;sents :</strong> Daniel, Pablo, Ben, Chris, Victor, Michelle, Peter
+                        <br><strong>Participants non membres du conseil :</strong> Daniela (consultante en production), Pepe (conseiller juridique)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>D&eacute;cisions Cl&eacute;s</h2>
+                        <ol>
+                            <li><strong>Approbation de toutes les candidatures de collaborateurs en attente</strong> &mdash; Le conseil a approuv&eacute; &agrave; l&rsquo;unanimit&eacute; toutes les personnes actuellement en attente sur la liste des collaborateurs.</li>
+                            <li><strong>Lancement du sondage sur le nom de l&rsquo;&eacute;v&eacute;nement</strong> &mdash; Le sondage de nom sera envoy&eacute; via OPA Vote &agrave; la m&ecirc;me liste de destinataires que le sondage de faisabilit&eacute;, d&egrave;s que possible.</li>
+                            <li><strong>Processus d&rsquo;approbation des candidatures</strong> &mdash; D&eacute;sormais, seul le Secr&eacute;taire (Ben) ex&eacute;cutera les approbations finales sur la plateforme de membres pour pr&eacute;venir les erreurs administratives.</li>
+                            <li><strong>Strat&eacute;gie de billetterie report&eacute;e</strong> &mdash; Le conseil a reconnu que la tarification des billets et la politique de remboursement sont un sujet complexe n&eacute;cessitant une discussion future d&eacute;di&eacute;e.</li>
+                        </ol>
+
+                        <h2>R&eacute;sum&eacute; des Discussions</h2>
+
+                        <h3>1. Modification des Statuts</h3>
+                        <p>La modification des statuts pour permettre le vote asynchrone est en cours. Un projet est attendu prochainement. Jusqu&rsquo;&agrave; la mise en &oelig;uvre des changements statutaires, le vote formel sur l&rsquo;adh&eacute;sion &agrave; l&rsquo;association est suspendu.</p>
+
+                        <h3>2. D&eacute;centralisation Organisationnelle</h3>
+                        <p>Le conseil a discut&eacute; du d&eacute;fi de la centralisation &mdash; les membres du conseil &eacute;tant d&eacute;bord&eacute;s par le volume de travail et de communications, cr&eacute;ant un goulot d&rsquo;&eacute;tranglement involontaire. Les solutions propos&eacute;es comprennent :</p>
+                        <ul>
+                            <li>Imm&eacute;diat : d&eacute;l&eacute;gation et autonomisation des responsables d&rsquo;&eacute;quipe</li>
+                            <li>Court terme : constitution d&rsquo;une &eacute;quipe de gestion des b&eacute;n&eacute;voles</li>
+                            <li>Long terme : conception organisationnelle pour des structures de coordination d&eacute;centralis&eacute;es</li>
+                            <li>Cr&eacute;ation d&rsquo;une fonction de &laquo; communications internes &raquo; pour r&eacute;partir la charge de communication</li>
+                        </ul>
+                        <p>Le conseil a convenu de demander l&rsquo;aide de la communaut&eacute; lors de la r&eacute;union communautaire du soir.</p>
+
+                        <h3>3. Relations Ext&eacute;rieures</h3>
+                        <p>Le conseil a convenu que Pepe dirigera et coordonnera les relations ext&eacute;rieures, compte tenu de son expertise juridique, de sa clart&eacute; de communication et de son approche constructive.</p>
+
+                        <h3>4. Gestion des Collaborateurs et des Membres</h3>
+                        <p>La plateforme de gestion des adh&eacute;sions (Humans) est d&eacute;sormais active et a remplac&eacute; l&rsquo;ancien processus de candidature bas&eacute; sur Typeform. Tous les liens ont &eacute;t&eacute; mis &agrave; jour. Une erreur administrative a entra&icirc;n&eacute; l&rsquo;envoi de messages de bienvenue incorrects &agrave; deux personnes ; le conseil a confirm&eacute; qu&rsquo;aucune approbation statutaire n&rsquo;a &eacute;t&eacute; affect&eacute;e, et les personnes concern&eacute;es sont en cours de notification.</p>
+
+                        <h3>5. Sondage de Faisabilit&eacute;</h3>
+                        <p>Le sondage communautaire de faisabilit&eacute; a &eacute;t&eacute; envoy&eacute; plus t&ocirc;t dans la journ&eacute;e et sera ouvert jusqu&rsquo;&agrave; dimanche soir. Les r&eacute;sultats seront examin&eacute;s par le conseil apr&egrave;s la cl&ocirc;ture du sondage.</p>
+
+                        <h3>6. Sondage sur le Nom de l&rsquo;&Eacute;v&eacute;nement</h3>
+                        <p>Le conseil a approuv&eacute; l&rsquo;envoi d&rsquo;un sondage &agrave; choix class&eacute; pour le nom de l&rsquo;&eacute;v&eacute;nement. Environ 300 suggestions de noms ont &eacute;t&eacute; re&ccedil;ues et r&eacute;duites &agrave; une liste restreinte. Le sondage sera envoy&eacute; &agrave; la m&ecirc;me liste qui a re&ccedil;u le sondage de faisabilit&eacute;.</p>
+
+                        <h3>7. Vente de Billets et Tarification</h3>
+                        <p>Le conseil a discut&eacute; des projections pr&eacute;liminaires de vente de billets :</p>
+                        <ul>
+                            <li>Objectif : environ 1 000 billets vendus d&rsquo;ici fin avril pour &ecirc;tre dans les temps</li>
+                            <li>Le 1er mai identifi&eacute; comme un point d&rsquo;&eacute;valuation potentiel de derni&egrave;re chance avant l&rsquo;engagement de d&eacute;penses majeures</li>
+                            <li>Une politique de remboursement &agrave; 100 % est requise en vertu de la l&eacute;gislation espagnole pour les &eacute;v&eacute;nements publics</li>
+                            <li>Le budget art/cr&eacute;ativit&eacute; pr&eacute;sente un d&eacute;fi de temporalit&eacute; (les engagements sont pris t&ocirc;t, les d&eacute;penses interviennent plus tard)</li>
+                        </ul>
+                        <p>Le conseil a reconnu que cela n&eacute;cessite une discussion plus approfondie et sera r&eacute;examin&eacute;.</p>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Responsable</th><th>Action</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>Envoyer le sondage sur le nom de l&rsquo;&eacute;v&eacute;nement</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>Traiter les approbations de collaborateurs en attente</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>D&eacute;velopper les projections de vente de billets</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>&Eacute;tudier la faisabilit&eacute; de la politique de remboursement</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben / Daniela</td>
+                                    <td>Coordonner le sondage sur le nom du r&ocirc;le de metalead</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Notifier les personnes approuv&eacute;es par erreur de l&rsquo;erreur administrative</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Proc&egrave;s-verbal pr&eacute;par&eacute; &agrave; partir de l&rsquo;enregistrement de la r&eacute;union et de notes g&eacute;n&eacute;r&eacute;es par IA. V&eacute;rifi&eacute; pour exactitude.</p>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Membri del consiglio presenti:</strong> Daniel, Pablo, Ben, Chris, Victor, Michelle, Peter
+                        <br><strong>Partecipanti non membri del consiglio:</strong> Daniela (consulente di produzione), Pepe (consulente legale)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisioni Chiave</h2>
+                        <ol>
+                            <li><strong>Approvazione di tutte le candidature di collaboratori in sospeso</strong> &mdash; Il consiglio ha approvato all&rsquo;unanimit&agrave; tutte le persone attualmente in sospeso nella lista dei collaboratori.</li>
+                            <li><strong>Procedere con il sondaggio sul nome dell&rsquo;evento</strong> &mdash; Il sondaggio sul nome sar&agrave; inviato tramite OPA Vote alla stessa lista di destinatari del sondaggio di fattibilit&agrave;, il prima possibile.</li>
+                            <li><strong>Processo di approvazione delle candidature</strong> &mdash; D&rsquo;ora in poi, solo il Segretario (Ben) eseguir&agrave; le approvazioni finali sulla piattaforma di adesione per prevenire errori amministrativi.</li>
+                            <li><strong>Strategia di biglietteria rinviata</strong> &mdash; Il consiglio ha riconosciuto che i prezzi dei biglietti e la politica di rimborso sono un argomento complesso che richiede una discussione futura dedicata.</li>
+                        </ol>
+
+                        <h2>Riepilogo della Discussione</h2>
+
+                        <h3>1. Modifica dello Statuto</h3>
+                        <p>La modifica dello statuto per abilitare il voto asincrono &egrave; in corso. Una bozza &egrave; attesa a breve. Fino all&rsquo;attuazione delle modifiche statutarie, il voto formale sull&rsquo;adesione all&rsquo;associazione &egrave; sospeso.</p>
+
+                        <h3>2. Decentralizzazione Organizzativa</h3>
+                        <p>Il consiglio ha discusso la sfida della centralizzazione &mdash; con i membri del consiglio sopraffatti dal volume di lavoro e comunicazioni, creando un collo di bottiglia involontario. Le soluzioni proposte includono:</p>
+                        <ul>
+                            <li>Immediato: delega e responsabilizzazione dei responsabili di gruppo</li>
+                            <li>Breve termine: costruzione di un team di gestione dei volontari</li>
+                            <li>Lungo termine: progettazione organizzativa per strutture di coordinamento decentralizzate</li>
+                            <li>Creazione di una funzione di &ldquo;comunicazioni interne&rdquo; per distribuire il carico comunicativo</li>
+                        </ul>
+                        <p>Il consiglio ha concordato di chiedere aiuto alla comunit&agrave; durante la riunione comunitaria della serata.</p>
+
+                        <h3>3. Relazioni Esterne</h3>
+                        <p>Il consiglio ha concordato che Pepe guider&agrave; e coordiner&agrave; le relazioni esterne, data la sua competenza legale, chiarezza comunicativa e approccio costruttivo.</p>
+
+                        <h3>4. Gestione dei Collaboratori e dell&rsquo;Adesione</h3>
+                        <p>La piattaforma per la gestione delle adesioni (Humans) &egrave; ora attiva e ha sostituito il precedente processo di candidatura basato su Typeform. Tutti i link sono stati aggiornati. Un errore amministrativo ha portato due persone a ricevere messaggi di benvenuto errati; il consiglio ha confermato che nessuna approvazione statutaria &egrave; stata compromessa, e le persone interessate sono in fase di notifica.</p>
+
+                        <h3>5. Sondaggio di Fattibilit&agrave;</h3>
+                        <p>Il sondaggio comunitario di fattibilit&agrave; &egrave; stato inviato nella giornata e sar&agrave; aperto fino a domenica sera. I risultati saranno esaminati dal consiglio dopo la chiusura del sondaggio.</p>
+
+                        <h3>6. Sondaggio sul Nome dell&rsquo;Evento</h3>
+                        <p>Il consiglio ha approvato l&rsquo;invio di un sondaggio a scelta classificata per il nome dell&rsquo;evento. Sono state ricevute circa 300 proposte di nomi, ridotte a una lista ristretta. Il sondaggio sar&agrave; inviato alla stessa lista che ha ricevuto il sondaggio di fattibilit&agrave;.</p>
+
+                        <h3>7. Vendita Biglietti e Prezzi</h3>
+                        <p>Il consiglio ha discusso le proiezioni preliminari di vendita dei biglietti:</p>
+                        <ul>
+                            <li>Obiettivo: circa 1.000 biglietti venduti entro la fine di aprile per essere in linea</li>
+                            <li>Il 1&deg; maggio identificato come potenziale punto di valutazione dell&rsquo;ultima possibilit&agrave; prima di impegnare spese importanti</li>
+                            <li>&Egrave; richiesta una politica di rimborso al 100% ai sensi della legislazione spagnola per gli eventi pubblici</li>
+                            <li>Il budget arte/creativit&agrave; presenta una sfida temporale (gli impegni vengono presi presto, la spesa avviene pi&ugrave; tardi)</li>
+                        </ul>
+                        <p>Il consiglio ha riconosciuto che ci&ograve; richiede una discussione pi&ugrave; approfondita e sar&agrave; riesaminato.</p>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Responsabile</th><th>Azione</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>Inviare il sondaggio sul nome dell&rsquo;evento</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>Elaborare le approvazioni dei collaboratori in sospeso</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Sviluppare le proiezioni di vendita dei biglietti</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Ricercare la fattibilit&agrave; della politica di rimborso</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben / Daniela</td>
+                                    <td>Coordinare il sondaggio sul nome del ruolo di metalead</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Notificare le persone approvate per errore dell&rsquo;errore amministrativo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Verbale preparato dalla registrazione della riunione e da note generate dall&rsquo;IA. Verificato per accuratezza.</p>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesende Vorstandsmitglieder:</strong> Daniel, Pablo, Ben, Chris, Victor, Michelle, Peter
+                        <br><strong>Teilnehmer au&szlig;erhalb des Vorstands:</strong> Daniela (Produktionsberaterin), Pepe (Rechtsberater)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Wichtige Beschl&uuml;sse</h2>
+                        <ol>
+                            <li><strong>Genehmigung aller ausstehenden Kollaborateur-Antr&auml;ge</strong> &mdash; Der Vorstand genehmigte einstimmig alle Personen, die derzeit auf der Kollaborateursliste ausstehen.</li>
+                            <li><strong>Umfrage zum Veranstaltungsnamen wird durchgef&uuml;hrt</strong> &mdash; Die Namensumfrage wird &uuml;ber OPA Vote an dieselbe Empf&auml;ngerliste wie die Machbarkeitsumfrage gesendet, sobald es praktikabel ist.</li>
+                            <li><strong>Antrags-Genehmigungsprozess</strong> &mdash; K&uuml;nftig wird nur der Sekret&auml;r (Ben) die endg&uuml;ltigen Genehmigungen auf der Mitgliedschaftsplattform durchf&uuml;hren, um Verwaltungsfehler zu vermeiden.</li>
+                            <li><strong>Ticketing-Strategie vertagt</strong> &mdash; Der Vorstand erkannte an, dass Ticketpreise und R&uuml;ckerstattungsrichtlinien ein komplexes Thema sind, das eine gesonderte zuk&uuml;nftige Diskussion erfordert.</li>
+                        </ol>
+
+                        <h2>Zusammenfassung der Diskussion</h2>
+
+                        <h3>1. Satzungs&auml;nderung</h3>
+                        <p>Die Satzungs&auml;nderung zur Erm&ouml;glichung asynchroner Abstimmungen ist in Arbeit. Ein Entwurf wird in K&uuml;rze erwartet. Bis zur Umsetzung der statutarischen &Auml;nderungen ist die formelle Abstimmung &uuml;ber die Vereinsmitgliedschaft ausgesetzt.</p>
+
+                        <h3>2. Organisatorische Dezentralisierung</h3>
+                        <p>Der Vorstand diskutierte die Herausforderung der Zentralisierung &mdash; mit Vorstandsmitgliedern, die durch das Arbeits- und Kommunikationsvolumen &uuml;berfordert sind und einen unbeabsichtigten Engpass schaffen. Vorgeschlagene L&ouml;sungen umfassen:</p>
+                        <ul>
+                            <li>Sofort: Delegation und St&auml;rkung der Teamleiter</li>
+                            <li>Kurzfristig: Aufbau eines Freiwilligen-Management-Teams</li>
+                            <li>Langfristig: Organisationsdesign f&uuml;r dezentrale Koordinationsstrukturen</li>
+                            <li>Schaffung einer Funktion f&uuml;r &bdquo;interne Kommunikation&ldquo;, um die Kommunikationslast zu verteilen</li>
+                        </ul>
+                        <p>Der Vorstand beschloss, die Gemeinschaft bei der abendlichen Gemeinschaftsversammlung um Hilfe zu bitten.</p>
+
+                        <h3>3. Au&szlig;enbeziehungen</h3>
+                        <p>Der Vorstand beschloss, dass Pepe die Au&szlig;enbeziehungen leiten und koordinieren wird, angesichts seiner juristischen Expertise, kommunikativen Klarheit und konstruktiven Herangehensweise.</p>
+
+                        <h3>4. Kollaborateur- und Mitgliederverwaltung</h3>
+                        <p>Die Plattform zur Mitgliederverwaltung (Humans) ist nun aktiv und hat den fr&uuml;heren Bewerbungsprozess &uuml;ber Typeform ersetzt. Alle Links wurden aktualisiert. Ein Verwaltungsfehler f&uuml;hrte dazu, dass zwei Personen falsche Willkommensnachrichten erhielten; der Vorstand best&auml;tigte, dass keine statutarischen Genehmigungen betroffen waren, und die betroffenen Personen werden benachrichtigt.</p>
+
+                        <h3>5. Machbarkeitsumfrage</h3>
+                        <p>Die gemeinschaftliche Machbarkeitsumfrage wurde fr&uuml;her am Tag versendet und l&auml;uft bis Sonntagabend. Die Ergebnisse werden nach Abschluss der Umfrage vom Vorstand &uuml;berpr&uuml;ft.</p>
+
+                        <h3>6. Umfrage zum Veranstaltungsnamen</h3>
+                        <p>Der Vorstand genehmigte den Versand einer Rangfolge-Umfrage f&uuml;r den Veranstaltungsnamen. Etwa 300 Namensvorschl&auml;ge gingen ein und wurden auf eine Shortlist reduziert. Die Umfrage wird an dieselbe Liste gesendet, die die Machbarkeitsumfrage erhalten hat.</p>
+
+                        <h3>7. Ticketverkauf und Preisgestaltung</h3>
+                        <p>Der Vorstand besprach vorl&auml;ufige Ticketverkaufsprognosen:</p>
+                        <ul>
+                            <li>Ziel: etwa 1.000 verkaufte Tickets bis Ende April, um im Zeitplan zu liegen</li>
+                            <li>Der 1. Mai als m&ouml;glicher letzter Bewertungszeitpunkt identifiziert, bevor gr&ouml;&szlig;ere Ausgaben eingegangen werden</li>
+                            <li>Eine 100%ige R&uuml;ckerstattungsrichtlinie ist nach spanischem Recht f&uuml;r &ouml;ffentliche Veranstaltungen erforderlich</li>
+                            <li>Das Kunst-/Kreativit&auml;tsbudget stellt eine zeitliche Herausforderung dar (Verpflichtungen werden fr&uuml;h eingegangen, Ausgaben fallen sp&auml;ter an)</li>
+                        </ul>
+                        <p>Der Vorstand erkannte an, dass dies eine eingehendere Diskussion erfordert und erneut aufgegriffen wird.</p>
+
+                        <h2>Ma&szlig;nahmen</h2>
+                        <table>
+                            <thead>
+                                <tr><th>Verantwortlich</th><th>Ma&szlig;nahme</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>Umfrage zum Veranstaltungsnamen versenden</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>Ausstehende Kollaborateur-Genehmigungen bearbeiten</td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Ticketverkaufsprognosen entwickeln</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepe</td>
+                                    <td>Durchf&uuml;hrbarkeit der R&uuml;ckerstattungsrichtlinie untersuchen</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben / Daniela</td>
+                                    <td>Umfrage zum Metalead-Rollennamen koordinieren</td>
+                                </tr>
+                                <tr>
+                                    <td>Pablo</td>
+                                    <td>Versehentlich genehmigte Personen &uuml;ber den Verwaltungsfehler benachrichtigen</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="margin-top: 2rem; font-style: italic; color: var(--color-text-muted);">Protokoll erstellt aus der Aufzeichnung der Sitzung und KI-generierten Notizen. Auf Richtigkeit &uuml;berpr&uuml;ft.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -140,5 +526,18 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

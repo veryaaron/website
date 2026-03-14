@@ -28,6 +28,12 @@
         .meeting-content th { background: var(--color-bg-secondary); font-weight: 600; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -48,94 +54,482 @@
                     </div>
                 </div>
 
-                <div class="attendees">
-                    <strong>Present:</strong> Daniel, Chris, Pablo, Peter, Ward (joined late)
-                    <br><strong>Absent:</strong> Ben, Victor, Michelle
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
                 </div>
 
-                <div class="meeting-content">
-                    <h2>Decisions</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Decision</th>
-                                <th>Context</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Confirmed volunteer Data Protection Officer (DPO) appointment</td>
-                                <td>Subject to board approval and creation of a formal authorisation document</td>
-                            </tr>
-                            <tr>
-                                <td>Ward and Pablo to explore MetaLeads selection and approval process with Ben</td>
-                                <td>Aim to have a list of needed roles by the next community meeting</td>
-                            </tr>
-                            <tr>
-                                <td>Approved consultant proposal subject to lawyer review</td>
-                                <td>Contract to be reviewed by lawyers before signing</td>
-                            </tr>
-                            <tr>
-                                <td>Agreed on 10% VAT strategy for ticket sales</td>
-                                <td>Saves approximately &euro;50,000 compared to standard rate</td>
-                            </tr>
-                            <tr>
-                                <td>Power contingency planning delegated to operational leads</td>
-                                <td>Not a direct board responsibility; to be handled by Power and Build leads</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                    <h2>Discussion Summary</h2>
+                    <div class="attendees">
+                        <strong>Present:</strong> Daniel, Chris, Pablo, Peter, Ward (joined late)
+                        <br><strong>Absent:</strong> Ben, Victor, Michelle
+                    </div>
 
-                    <h3>Community Meeting Review</h3>
-                    <p>The board reviewed the previous evening's community meeting, which was described as calm and positive. The budget presentation was highlighted as building community confidence in the organisation's financial management.</p>
+                    <div class="meeting-content">
+                        <h2>Decisions</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decision</th>
+                                    <th>Context</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Confirmed volunteer Data Protection Officer (DPO) appointment</td>
+                                    <td>Subject to board approval and creation of a formal authorisation document</td>
+                                </tr>
+                                <tr>
+                                    <td>Ward and Pablo to explore MetaLeads selection and approval process with Ben</td>
+                                    <td>Aim to have a list of needed roles by the next community meeting</td>
+                                </tr>
+                                <tr>
+                                    <td>Approved consultant proposal subject to lawyer review</td>
+                                    <td>Contract to be reviewed by lawyers before signing</td>
+                                </tr>
+                                <tr>
+                                    <td>Agreed on 10% VAT strategy for ticket sales</td>
+                                    <td>Saves approximately &euro;50,000 compared to standard rate</td>
+                                </tr>
+                                <tr>
+                                    <td>Power contingency planning delegated to operational leads</td>
+                                    <td>Not a direct board responsibility; to be handled by Power and Build leads</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                    <h3>GDPR and Data Protection Officer</h3>
-                    <p>A volunteer with corporate legal experience has offered to serve as the association's DPO. The board approved proceeding with the appointment, subject to a formal document authorising the role and responsibilities, to be signed by both parties. A dedicated privacy email address will be created for GDPR requests.</p>
+                        <h2>Discussion Summary</h2>
 
-                    <h3>MetaLeads Selection Process</h3>
-                    <p>The board discussed the need for a formal process for selecting and approving MetaLeads (department heads). Considerations included: how to handle multiple applicants for the same role, the possibility of co-leads, and the importance of relevant experience. Historically, positions had job descriptions posted online and candidates applied. Ward and Pablo will explore the process with Ben and aim to produce a list of roles needed by the next community meeting.</p>
+                        <h3>Community Meeting Review</h3>
+                        <p>The board reviewed the previous evening&rsquo;s community meeting, which was described as calm and positive. The budget presentation was highlighted as building community confidence in the organisation&rsquo;s financial management.</p>
 
-                    <h3>Asset Procurement</h3>
-                    <p>The board discussed ongoing asset procurement efforts. The Treasurer will request specific documents needed for budget planning.</p>
+                        <h3>GDPR and Data Protection Officer</h3>
+                        <p>A volunteer with corporate legal experience has offered to serve as the association&rsquo;s DPO. The board approved proceeding with the appointment, subject to a formal document authorising the role and responsibilities, to be signed by both parties. A dedicated privacy email address will be created for GDPR requests.</p>
 
-                    <h3>Consultant Engagement</h3>
-                    <p>The board approved the consultant's proposal for a one-month engagement to confirm vendors, pricing, and event viability. The Treasurer offered to front the initial payment pending the bank account setup. The contract will be reviewed by lawyers before finalisation.</p>
+                        <h3>MetaLeads Selection Process</h3>
+                        <p>The board discussed the need for a formal process for selecting and approving MetaLeads (department heads). Considerations included: how to handle multiple applicants for the same role, the possibility of co-leads, and the importance of relevant experience. Historically, positions had job descriptions posted online and candidates applied. Ward and Pablo will explore the process with Ben and aim to produce a list of roles needed by the next community meeting.</p>
 
-                    <h3>VAT Strategy</h3>
-                    <p>The lawyers confirmed support for a 10% VAT rate on ticket sales, resulting in approximately &euro;50,000 in savings. The board discussed the possibility of eventually moving to a membership model (similar to other burns) once the association achieves formal nonprofit status, which can be applied for after two years.</p>
+                        <h3>Asset Procurement</h3>
+                        <p>The board discussed ongoing asset procurement efforts. The Treasurer will request specific documents needed for budget planning.</p>
 
-                    <h3>Early Funding Discussion</h3>
-                    <p>The board discussed options for generating initial funding before ticket sales open, including accepting donations and offering advance tickets for the next event. No final decision was made; further discussion scheduled for the following week.</p>
+                        <h3>Consultant Engagement</h3>
+                        <p>The board approved the consultant&rsquo;s proposal for a one-month engagement to confirm vendors, pricing, and event viability. The Treasurer offered to front the initial payment pending the bank account setup. The contract will be reviewed by lawyers before finalisation.</p>
 
-                    <h3>Bank Account Status</h3>
-                    <p>The bank account remains the top priority. The association is waiting for the preliminary NIF (tax identification number) from the government. Once received, the bank account can be opened.</p>
+                        <h3>VAT Strategy</h3>
+                        <p>The lawyers confirmed support for a 10% VAT rate on ticket sales, resulting in approximately &euro;50,000 in savings. The board discussed the possibility of eventually moving to a membership model (similar to other burns) once the association achieves formal nonprofit status, which can be applied for after two years.</p>
 
-                    <h3>Area Responsibilities and Lead Tracking</h3>
-                    <p>The board agreed to create a public document on the association drive listing all departments and roles, allowing community members to see what positions are available and add their information. Ward will create this listing all departments and roles.</p>
+                        <h3>Early Funding Discussion</h3>
+                        <p>The board discussed options for generating initial funding before ticket sales open, including accepting donations and offering advance tickets for the next event. No final decision was made; further discussion scheduled for the following week.</p>
 
-                    <h3>Profile Management Application</h3>
-                    <p>The Treasurer presented a newly developed application to manage member profiles, team affiliations, access to shared resources, and compliance with privacy policies. The board agreed it should undergo a security review before deployment. The aim is to have it publicly hosted by the following week.</p>
+                        <h3>Bank Account Status</h3>
+                        <p>The bank account remains the top priority. The association is waiting for the preliminary NIF (tax identification number) from the government. Once received, the bank account can be opened.</p>
 
-                    <h3>Operational Readiness</h3>
-                    <p>The operational readiness tracker is progressing, with sections covering departmental readiness and general tasks such as funding and budgets.</p>
+                        <h3>Area Responsibilities and Lead Tracking</h3>
+                        <p>The board agreed to create a public document on the association drive listing all departments and roles, allowing community members to see what positions are available and add their information. Ward will create this listing all departments and roles.</p>
 
-                    <h2>Action Items</h2>
-                    <ul>
-                        <li><strong>Chris:</strong> Proceed with DPO appointment and task the volunteer with getting started; clarify legal package coverage with existing lawyers</li>
-                        <li><strong>Pablo:</strong> Contact lawyers to ask about GDPR support and contract review for the consultant; open Discord thread on MetaLeads selection process to gather input from Ben; follow up on preliminary NIF status with accountants</li>
-                        <li><strong>Peter:</strong> Set up a GDPR email alias for the DPO; request specific budget documents for planning purposes; schedule kickoff meeting with the consultant once contract is approved; get profile management application hosted publicly for next week</li>
-                        <li><strong>Ward:</strong> Create public document listing departments and available roles; explore MetaLeads selection process with Pablo and Ben</li>
-                    </ul>
+                        <h3>Profile Management Application</h3>
+                        <p>The Treasurer presented a newly developed application to manage member profiles, team affiliations, access to shared resources, and compliance with privacy policies. The board agreed it should undergo a security review before deployment. The aim is to have it publicly hosted by the following week.</p>
 
-                    <h2>Open Items for Future Meetings</h2>
-                    <ul>
-                        <li>MetaLeads selection process finalisation</li>
-                        <li>Early funding / donation approach decision</li>
-                        <li>Community meeting preparation</li>
-                    </ul>
+                        <h3>Operational Readiness</h3>
+                        <p>The operational readiness tracker is progressing, with sections covering departmental readiness and general tasks such as funding and budgets.</p>
+
+                        <h2>Action Items</h2>
+                        <ul>
+                            <li><strong>Chris:</strong> Proceed with DPO appointment and task the volunteer with getting started; clarify legal package coverage with existing lawyers</li>
+                            <li><strong>Pablo:</strong> Contact lawyers to ask about GDPR support and contract review for the consultant; open Discord thread on MetaLeads selection process to gather input from Ben; follow up on preliminary NIF status with accountants</li>
+                            <li><strong>Peter:</strong> Set up a GDPR email alias for the DPO; request specific budget documents for planning purposes; schedule kickoff meeting with the consultant once contract is approved; get profile management application hosted publicly for next week</li>
+                            <li><strong>Ward:</strong> Create public document listing departments and available roles; explore MetaLeads selection process with Pablo and Ben</li>
+                        </ul>
+
+                        <h2>Open Items for Future Meetings</h2>
+                        <ul>
+                            <li>MetaLeads selection process finalisation</li>
+                            <li>Early funding / donation approach decision</li>
+                            <li>Community meeting preparation</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Presentes:</strong> Daniel, Chris, Pablo, Peter, Ward (se incorpor&oacute; tarde)
+                        <br><strong>Ausentes:</strong> Ben, Victor, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisiones</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decisi&oacute;n</th>
+                                    <th>Contexto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Confirmado el nombramiento de un Delegado de Protecci&oacute;n de Datos (DPO) voluntario</td>
+                                    <td>Sujeto a la aprobaci&oacute;n de la junta y la creaci&oacute;n de un documento formal de autorizaci&oacute;n</td>
+                                </tr>
+                                <tr>
+                                    <td>Ward y Pablo explorar&aacute;n el proceso de selecci&oacute;n y aprobaci&oacute;n de MetaLeads con Ben</td>
+                                    <td>Objetivo de tener una lista de roles necesarios para la pr&oacute;xima reuni&oacute;n comunitaria</td>
+                                </tr>
+                                <tr>
+                                    <td>Aprobada la propuesta del consultor sujeta a revisi&oacute;n legal</td>
+                                    <td>El contrato ser&aacute; revisado por los abogados antes de la firma</td>
+                                </tr>
+                                <tr>
+                                    <td>Acordada la estrategia de IVA del 10% para la venta de entradas</td>
+                                    <td>Ahorro de aproximadamente &euro;50.000 en comparaci&oacute;n con la tasa est&aacute;ndar</td>
+                                </tr>
+                                <tr>
+                                    <td>Planificaci&oacute;n de contingencia energ&eacute;tica delegada a los responsables operativos</td>
+                                    <td>No es responsabilidad directa de la junta; ser&aacute; gestionado por los responsables de Energ&iacute;a y Construcci&oacute;n</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Resumen de la Discusi&oacute;n</h2>
+
+                        <h3>Revisi&oacute;n de la Reuni&oacute;n Comunitaria</h3>
+                        <p>La junta revis&oacute; la reuni&oacute;n comunitaria de la noche anterior, que fue descrita como tranquila y positiva. Se destac&oacute; que la presentaci&oacute;n del presupuesto gener&oacute; confianza en la comunidad respecto a la gesti&oacute;n financiera de la organizaci&oacute;n.</p>
+
+                        <h3>RGPD y Delegado de Protecci&oacute;n de Datos</h3>
+                        <p>Un voluntario con experiencia en derecho corporativo se ha ofrecido para ejercer como DPO de la asociaci&oacute;n. La junta aprob&oacute; proceder con el nombramiento, sujeto a un documento formal que autorice el rol y las responsabilidades, a ser firmado por ambas partes. Se crear&aacute; una direcci&oacute;n de correo electr&oacute;nico espec&iacute;fica para solicitudes del RGPD.</p>
+
+                        <h3>Proceso de Selecci&oacute;n de MetaLeads</h3>
+                        <p>La junta discuti&oacute; la necesidad de un proceso formal para seleccionar y aprobar a los MetaLeads (jefes de departamento). Las consideraciones incluyeron: c&oacute;mo gestionar m&uacute;ltiples candidatos para el mismo puesto, la posibilidad de co-l&iacute;deres y la importancia de la experiencia relevante. Hist&oacute;ricamente, los puestos ten&iacute;an descripciones publicadas en l&iacute;nea y los candidatos presentaban su solicitud. Ward y Pablo explorar&aacute;n el proceso con Ben y buscar&aacute;n producir una lista de roles necesarios para la pr&oacute;xima reuni&oacute;n comunitaria.</p>
+
+                        <h3>Adquisici&oacute;n de Activos</h3>
+                        <p>La junta discuti&oacute; los esfuerzos en curso de adquisici&oacute;n de activos. El Tesorero solicitar&aacute; los documentos espec&iacute;ficos necesarios para la planificaci&oacute;n presupuestaria.</p>
+
+                        <h3>Contrataci&oacute;n de Consultor</h3>
+                        <p>La junta aprob&oacute; la propuesta del consultor para un compromiso de un mes para confirmar proveedores, precios y viabilidad del evento. El Tesorero se ofreci&oacute; a adelantar el pago inicial mientras se configura la cuenta bancaria. El contrato ser&aacute; revisado por los abogados antes de su finalizaci&oacute;n.</p>
+
+                        <h3>Estrategia de IVA</h3>
+                        <p>Los abogados confirmaron el apoyo a una tasa de IVA del 10% en la venta de entradas, lo que resulta en un ahorro de aproximadamente &euro;50.000. La junta discuti&oacute; la posibilidad de pasar eventualmente a un modelo de membres&iacute;a (similar a otros burns) una vez que la asociaci&oacute;n obtenga el estatus formal de entidad sin &aacute;nimo de lucro, que puede solicitarse despu&eacute;s de dos a&ntilde;os.</p>
+
+                        <h3>Discusi&oacute;n sobre Financiaci&oacute;n Inicial</h3>
+                        <p>La junta discuti&oacute; opciones para generar financiaci&oacute;n inicial antes de que se abra la venta de entradas, incluyendo aceptar donaciones y ofrecer entradas anticipadas para el pr&oacute;ximo evento. No se tom&oacute; una decisi&oacute;n final; se program&oacute; una discusi&oacute;n adicional para la semana siguiente.</p>
+
+                        <h3>Estado de la Cuenta Bancaria</h3>
+                        <p>La cuenta bancaria sigue siendo la m&aacute;xima prioridad. La asociaci&oacute;n est&aacute; esperando el NIF provisional (n&uacute;mero de identificaci&oacute;n fiscal) del gobierno. Una vez recibido, se podr&aacute; abrir la cuenta bancaria.</p>
+
+                        <h3>&Aacute;reas de Responsabilidad y Seguimiento de L&iacute;deres</h3>
+                        <p>La junta acord&oacute; crear un documento p&uacute;blico en el drive de la asociaci&oacute;n que liste todos los departamentos y roles, permitiendo a los miembros de la comunidad ver qu&eacute; puestos est&aacute;n disponibles y a&ntilde;adir su informaci&oacute;n. Ward crear&aacute; este listado de todos los departamentos y roles.</p>
+
+                        <h3>Aplicaci&oacute;n de Gesti&oacute;n de Perfiles</h3>
+                        <p>El Tesorero present&oacute; una aplicaci&oacute;n reci&eacute;n desarrollada para gestionar perfiles de miembros, afiliaciones de equipos, acceso a recursos compartidos y cumplimiento de pol&iacute;ticas de privacidad. La junta acord&oacute; que deber&iacute;a someterse a una revisi&oacute;n de seguridad antes de su despliegue. El objetivo es tenerla alojada p&uacute;blicamente para la semana siguiente.</p>
+
+                        <h3>Preparaci&oacute;n Operativa</h3>
+                        <p>El seguimiento de preparaci&oacute;n operativa avanza, con secciones que cubren la preparaci&oacute;n departamental y tareas generales como financiaci&oacute;n y presupuestos.</p>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <ul>
+                            <li><strong>Chris:</strong> Proceder con el nombramiento del DPO y encargar al voluntario que comience; aclarar la cobertura del paquete legal con los abogados actuales</li>
+                            <li><strong>Pablo:</strong> Contactar a los abogados para preguntar sobre el apoyo en RGPD y la revisi&oacute;n del contrato del consultor; abrir un hilo en Discord sobre el proceso de selecci&oacute;n de MetaLeads para recopilar opiniones de Ben; hacer seguimiento del estado del NIF provisional con los contables</li>
+                            <li><strong>Peter:</strong> Configurar un alias de correo electr&oacute;nico para el RGPD para el DPO; solicitar documentos presupuestarios espec&iacute;ficos para fines de planificaci&oacute;n; programar reuni&oacute;n de inicio con el consultor una vez aprobado el contrato; alojar p&uacute;blicamente la aplicaci&oacute;n de gesti&oacute;n de perfiles para la pr&oacute;xima semana</li>
+                            <li><strong>Ward:</strong> Crear un documento p&uacute;blico que liste los departamentos y roles disponibles; explorar el proceso de selecci&oacute;n de MetaLeads con Pablo y Ben</li>
+                        </ul>
+
+                        <h2>Temas Pendientes para Futuras Reuniones</h2>
+                        <ul>
+                            <li>Finalizaci&oacute;n del proceso de selecci&oacute;n de MetaLeads</li>
+                            <li>Decisi&oacute;n sobre el enfoque de financiaci&oacute;n inicial / donaciones</li>
+                            <li>Preparaci&oacute;n de la reuni&oacute;n comunitaria</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sents :</strong> Daniel, Chris, Pablo, Peter, Ward (arriv&eacute; en retard)
+                        <br><strong>Absents :</strong> Ben, Victor, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>D&eacute;cisions</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>D&eacute;cision</th>
+                                    <th>Contexte</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Confirm&eacute; la nomination d&rsquo;un D&eacute;l&eacute;gu&eacute; &agrave; la Protection des Donn&eacute;es (DPO) b&eacute;n&eacute;vole</td>
+                                    <td>Sous r&eacute;serve de l&rsquo;approbation du conseil et de la cr&eacute;ation d&rsquo;un document formel d&rsquo;autorisation</td>
+                                </tr>
+                                <tr>
+                                    <td>Ward et Pablo exploreront le processus de s&eacute;lection et d&rsquo;approbation des MetaLeads avec Ben</td>
+                                    <td>Objectif d&rsquo;avoir une liste des r&ocirc;les n&eacute;cessaires pour la prochaine r&eacute;union communautaire</td>
+                                </tr>
+                                <tr>
+                                    <td>Proposition du consultant approuv&eacute;e sous r&eacute;serve d&rsquo;examen juridique</td>
+                                    <td>Le contrat sera examin&eacute; par les avocats avant signature</td>
+                                </tr>
+                                <tr>
+                                    <td>Accord sur la strat&eacute;gie de TVA &agrave; 10% pour la vente de billets</td>
+                                    <td>&Eacute;conomie d&rsquo;environ &euro;50 000 par rapport au taux standard</td>
+                                </tr>
+                                <tr>
+                                    <td>Planification de contingence &eacute;nerg&eacute;tique d&eacute;l&eacute;gu&eacute;e aux responsables op&eacute;rationnels</td>
+                                    <td>Pas une responsabilit&eacute; directe du conseil ; &agrave; g&eacute;rer par les responsables &Eacute;nergie et Construction</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>R&eacute;sum&eacute; des Discussions</h2>
+
+                        <h3>Revue de la R&eacute;union Communautaire</h3>
+                        <p>Le conseil a examin&eacute; la r&eacute;union communautaire de la veille au soir, d&eacute;crite comme calme et positive. La pr&eacute;sentation du budget a &eacute;t&eacute; soulign&eacute;e comme renfor&ccedil;ant la confiance de la communaut&eacute; dans la gestion financi&egrave;re de l&rsquo;organisation.</p>
+
+                        <h3>RGPD et D&eacute;l&eacute;gu&eacute; &agrave; la Protection des Donn&eacute;es</h3>
+                        <p>Un b&eacute;n&eacute;vole ayant une exp&eacute;rience en droit des affaires s&rsquo;est propos&eacute; pour exercer les fonctions de DPO de l&rsquo;association. Le conseil a approuv&eacute; la d&eacute;marche, sous r&eacute;serve d&rsquo;un document formel autorisant le r&ocirc;le et les responsabilit&eacute;s, &agrave; signer par les deux parties. Une adresse e-mail d&eacute;di&eacute;e &agrave; la protection de la vie priv&eacute;e sera cr&eacute;&eacute;e pour les demandes RGPD.</p>
+
+                        <h3>Processus de S&eacute;lection des MetaLeads</h3>
+                        <p>Le conseil a discut&eacute; de la n&eacute;cessit&eacute; d&rsquo;un processus formel pour s&eacute;lectionner et approuver les MetaLeads (responsables de d&eacute;partement). Les consid&eacute;rations comprenaient : comment g&eacute;rer plusieurs candidats pour le m&ecirc;me poste, la possibilit&eacute; de co-responsables et l&rsquo;importance de l&rsquo;exp&eacute;rience pertinente. Historiquement, les postes faisaient l&rsquo;objet de descriptions publi&eacute;es en ligne et les candidats postulaient. Ward et Pablo exploreront le processus avec Ben et viseront &agrave; produire une liste des r&ocirc;les n&eacute;cessaires pour la prochaine r&eacute;union communautaire.</p>
+
+                        <h3>Acquisition d&rsquo;Actifs</h3>
+                        <p>Le conseil a discut&eacute; des efforts en cours d&rsquo;acquisition d&rsquo;actifs. Le Tr&eacute;sorier demandera les documents sp&eacute;cifiques n&eacute;cessaires &agrave; la planification budg&eacute;taire.</p>
+
+                        <h3>Engagement du Consultant</h3>
+                        <p>Le conseil a approuv&eacute; la proposition du consultant pour un engagement d&rsquo;un mois afin de confirmer les fournisseurs, les tarifs et la viabilit&eacute; de l&rsquo;&eacute;v&eacute;nement. Le Tr&eacute;sorier s&rsquo;est propos&eacute; pour avancer le paiement initial en attendant l&rsquo;ouverture du compte bancaire. Le contrat sera examin&eacute; par les avocats avant finalisation.</p>
+
+                        <h3>Strat&eacute;gie de TVA</h3>
+                        <p>Les avocats ont confirm&eacute; le soutien &agrave; un taux de TVA de 10% sur la vente de billets, ce qui repr&eacute;sente une &eacute;conomie d&rsquo;environ &euro;50 000. Le conseil a discut&eacute; de la possibilit&eacute; de passer &agrave; terme &agrave; un mod&egrave;le d&rsquo;adh&eacute;sion (similaire &agrave; d&rsquo;autres burns) une fois que l&rsquo;association aura obtenu le statut formel d&rsquo;organisme &agrave; but non lucratif, qui peut &ecirc;tre demand&eacute; apr&egrave;s deux ans.</p>
+
+                        <h3>Discussion sur le Financement Initial</h3>
+                        <p>Le conseil a discut&eacute; des options pour g&eacute;n&eacute;rer un financement initial avant l&rsquo;ouverture de la vente de billets, notamment l&rsquo;acceptation de dons et l&rsquo;offre de billets anticip&eacute;s pour le prochain &eacute;v&eacute;nement. Aucune d&eacute;cision finale n&rsquo;a &eacute;t&eacute; prise ; une discussion suppl&eacute;mentaire est pr&eacute;vue pour la semaine suivante.</p>
+
+                        <h3>&Eacute;tat du Compte Bancaire</h3>
+                        <p>Le compte bancaire reste la priorit&eacute; absolue. L&rsquo;association attend le NIF provisoire (num&eacute;ro d&rsquo;identification fiscale) du gouvernement. Une fois re&ccedil;u, le compte bancaire pourra &ecirc;tre ouvert.</p>
+
+                        <h3>Domaines de Responsabilit&eacute; et Suivi des Responsables</h3>
+                        <p>Le conseil a convenu de cr&eacute;er un document public sur le drive de l&rsquo;association listant tous les d&eacute;partements et r&ocirc;les, permettant aux membres de la communaut&eacute; de voir quels postes sont disponibles et d&rsquo;ajouter leurs informations. Ward cr&eacute;era ce listing de tous les d&eacute;partements et r&ocirc;les.</p>
+
+                        <h3>Application de Gestion des Profils</h3>
+                        <p>Le Tr&eacute;sorier a pr&eacute;sent&eacute; une application nouvellement d&eacute;velopp&eacute;e pour g&eacute;rer les profils des membres, les affiliations d&rsquo;&eacute;quipe, l&rsquo;acc&egrave;s aux ressources partag&eacute;es et la conformit&eacute; aux politiques de confidentialit&eacute;. Le conseil a convenu qu&rsquo;elle devrait faire l&rsquo;objet d&rsquo;un audit de s&eacute;curit&eacute; avant son d&eacute;ploiement. L&rsquo;objectif est de la mettre en ligne publiquement d&rsquo;ici la semaine suivante.</p>
+
+                        <h3>Pr&eacute;paration Op&eacute;rationnelle</h3>
+                        <p>Le suivi de pr&eacute;paration op&eacute;rationnelle progresse, avec des sections couvrant la pr&eacute;paration d&eacute;partementale et les t&acirc;ches g&eacute;n&eacute;rales telles que le financement et les budgets.</p>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <ul>
+                            <li><strong>Chris :</strong> Proc&eacute;der &agrave; la nomination du DPO et charger le b&eacute;n&eacute;vole de commencer ; clarifier la couverture du forfait juridique avec les avocats actuels</li>
+                            <li><strong>Pablo :</strong> Contacter les avocats pour demander un soutien RGPD et l&rsquo;examen du contrat du consultant ; ouvrir un fil Discord sur le processus de s&eacute;lection des MetaLeads pour recueillir l&rsquo;avis de Ben ; faire le suivi de l&rsquo;&eacute;tat du NIF provisoire aupr&egrave;s des comptables</li>
+                            <li><strong>Peter :</strong> Configurer un alias e-mail RGPD pour le DPO ; demander des documents budg&eacute;taires sp&eacute;cifiques pour la planification ; programmer la r&eacute;union de lancement avec le consultant une fois le contrat approuv&eacute; ; mettre l&rsquo;application de gestion des profils en ligne publiquement pour la semaine prochaine</li>
+                            <li><strong>Ward :</strong> Cr&eacute;er un document public listant les d&eacute;partements et r&ocirc;les disponibles ; explorer le processus de s&eacute;lection des MetaLeads avec Pablo et Ben</li>
+                        </ul>
+
+                        <h2>Points Ouverts pour les Prochaines R&eacute;unions</h2>
+                        <ul>
+                            <li>Finalisation du processus de s&eacute;lection des MetaLeads</li>
+                            <li>D&eacute;cision sur l&rsquo;approche de financement initial / dons</li>
+                            <li>Pr&eacute;paration de la r&eacute;union communautaire</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presenti:</strong> Daniel, Chris, Pablo, Peter, Ward (arrivato in ritardo)
+                        <br><strong>Assenti:</strong> Ben, Victor, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Decisioni</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Decisione</th>
+                                    <th>Contesto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Confermata la nomina di un Responsabile della Protezione dei Dati (DPO) volontario</td>
+                                    <td>Soggetta all&rsquo;approvazione del consiglio e alla creazione di un documento formale di autorizzazione</td>
+                                </tr>
+                                <tr>
+                                    <td>Ward e Pablo esploreranno il processo di selezione e approvazione dei MetaLeads con Ben</td>
+                                    <td>Obiettivo di avere un elenco dei ruoli necessari entro la prossima riunione comunitaria</td>
+                                </tr>
+                                <tr>
+                                    <td>Approvata la proposta del consulente previa revisione legale</td>
+                                    <td>Il contratto sar&agrave; esaminato dagli avvocati prima della firma</td>
+                                </tr>
+                                <tr>
+                                    <td>Concordata la strategia IVA al 10% per la vendita dei biglietti</td>
+                                    <td>Risparmio di circa &euro;50.000 rispetto all&rsquo;aliquota standard</td>
+                                </tr>
+                                <tr>
+                                    <td>Pianificazione di contingenza energetica delegata ai responsabili operativi</td>
+                                    <td>Non &egrave; una responsabilit&agrave; diretta del consiglio; sar&agrave; gestita dai responsabili Energia e Costruzione</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Sintesi della Discussione</h2>
+
+                        <h3>Revisione della Riunione Comunitaria</h3>
+                        <p>Il consiglio ha esaminato la riunione comunitaria della sera precedente, descritta come tranquilla e positiva. La presentazione del bilancio &egrave; stata evidenziata come elemento che ha rafforzato la fiducia della comunit&agrave; nella gestione finanziaria dell&rsquo;organizzazione.</p>
+
+                        <h3>GDPR e Responsabile della Protezione dei Dati</h3>
+                        <p>Un volontario con esperienza in diritto societario si &egrave; offerto di servire come DPO dell&rsquo;associazione. Il consiglio ha approvato di procedere con la nomina, subordinatamente a un documento formale che autorizzi il ruolo e le responsabilit&agrave;, da firmare da entrambe le parti. Sar&agrave; creato un indirizzo e-mail dedicato alla privacy per le richieste GDPR.</p>
+
+                        <h3>Processo di Selezione dei MetaLeads</h3>
+                        <p>Il consiglio ha discusso la necessit&agrave; di un processo formale per selezionare e approvare i MetaLeads (responsabili di dipartimento). Le considerazioni includevano: come gestire pi&ugrave; candidati per lo stesso ruolo, la possibilit&agrave; di co-responsabili e l&rsquo;importanza dell&rsquo;esperienza rilevante. Storicamente, le posizioni avevano descrizioni pubblicate online e i candidati presentavano domanda. Ward e Pablo esploreranno il processo con Ben e mireranno a produrre un elenco dei ruoli necessari entro la prossima riunione comunitaria.</p>
+
+                        <h3>Approvvigionamento di Beni</h3>
+                        <p>Il consiglio ha discusso gli sforzi in corso per l&rsquo;approvvigionamento di beni. Il Tesoriere richieder&agrave; i documenti specifici necessari per la pianificazione del bilancio.</p>
+
+                        <h3>Incarico del Consulente</h3>
+                        <p>Il consiglio ha approvato la proposta del consulente per un incarico di un mese per confermare i fornitori, i prezzi e la fattibilit&agrave; dell&rsquo;evento. Il Tesoriere si &egrave; offerto di anticipare il pagamento iniziale in attesa dell&rsquo;apertura del conto bancario. Il contratto sar&agrave; esaminato dagli avvocati prima della finalizzazione.</p>
+
+                        <h3>Strategia IVA</h3>
+                        <p>Gli avvocati hanno confermato il supporto per un&rsquo;aliquota IVA del 10% sulla vendita dei biglietti, con un risparmio di circa &euro;50.000. Il consiglio ha discusso la possibilit&agrave; di passare eventualmente a un modello di adesione (simile ad altri burn) una volta che l&rsquo;associazione avr&agrave; ottenuto lo status formale di organizzazione senza scopo di lucro, richiedibile dopo due anni.</p>
+
+                        <h3>Discussione sul Finanziamento Iniziale</h3>
+                        <p>Il consiglio ha discusso opzioni per generare finanziamenti iniziali prima dell&rsquo;apertura della vendita dei biglietti, tra cui accettare donazioni e offrire biglietti anticipati per il prossimo evento. Non &egrave; stata presa una decisione finale; &egrave; stata programmata un&rsquo;ulteriore discussione per la settimana successiva.</p>
+
+                        <h3>Stato del Conto Bancario</h3>
+                        <p>Il conto bancario rimane la priorit&agrave; assoluta. L&rsquo;associazione &egrave; in attesa del NIF provvisorio (numero di identificazione fiscale) dal governo. Una volta ricevuto, il conto bancario potr&agrave; essere aperto.</p>
+
+                        <h3>Aree di Responsabilit&agrave; e Monitoraggio dei Responsabili</h3>
+                        <p>Il consiglio ha concordato di creare un documento pubblico sul drive dell&rsquo;associazione che elenchi tutti i dipartimenti e i ruoli, consentendo ai membri della comunit&agrave; di vedere quali posizioni sono disponibili e aggiungere le proprie informazioni. Ward creer&agrave; questo elenco di tutti i dipartimenti e ruoli.</p>
+
+                        <h3>Applicazione di Gestione dei Profili</h3>
+                        <p>Il Tesoriere ha presentato un&rsquo;applicazione appena sviluppata per gestire i profili dei membri, le affiliazioni ai team, l&rsquo;accesso alle risorse condivise e la conformit&agrave; alle politiche sulla privacy. Il consiglio ha concordato che dovrebbe essere sottoposta a una revisione di sicurezza prima del deploy. L&rsquo;obiettivo &egrave; renderla disponibile pubblicamente entro la settimana successiva.</p>
+
+                        <h3>Prontezza Operativa</h3>
+                        <p>Il monitoraggio della prontezza operativa sta procedendo, con sezioni che coprono la prontezza dipartimentale e compiti generali come finanziamento e bilanci.</p>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <ul>
+                            <li><strong>Chris:</strong> Procedere con la nomina del DPO e incaricare il volontario di iniziare; chiarire la copertura del pacchetto legale con gli avvocati attuali</li>
+                            <li><strong>Pablo:</strong> Contattare gli avvocati per chiedere supporto GDPR e revisione del contratto del consulente; aprire un thread su Discord sul processo di selezione dei MetaLeads per raccogliere input da Ben; fare il follow-up sullo stato del NIF provvisorio con i commercialisti</li>
+                            <li><strong>Peter:</strong> Configurare un alias e-mail GDPR per il DPO; richiedere documenti di bilancio specifici per la pianificazione; programmare la riunione di avvio con il consulente una volta approvato il contratto; rendere l&rsquo;applicazione di gestione profili disponibile pubblicamente per la settimana prossima</li>
+                            <li><strong>Ward:</strong> Creare un documento pubblico che elenchi i dipartimenti e i ruoli disponibili; esplorare il processo di selezione dei MetaLeads con Pablo e Ben</li>
+                        </ul>
+
+                        <h2>Punti Aperti per le Prossime Riunioni</h2>
+                        <ul>
+                            <li>Finalizzazione del processo di selezione dei MetaLeads</li>
+                            <li>Decisione sull&rsquo;approccio al finanziamento iniziale / donazioni</li>
+                            <li>Preparazione della riunione comunitaria</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version ist die spanische Version ma&szlig;geblich.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesend:</strong> Daniel, Chris, Pablo, Peter, Ward (sp&auml;ter dazugesto&szlig;en)
+                        <br><strong>Abwesend:</strong> Ben, Victor, Michelle
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Beschl&uuml;sse</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Beschluss</th>
+                                    <th>Kontext</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ernennung eines ehrenamtlichen Datenschutzbeauftragten (DSB) best&auml;tigt</td>
+                                    <td>Vorbehaltlich der Genehmigung des Vorstands und der Erstellung eines formellen Autorisierungsdokuments</td>
+                                </tr>
+                                <tr>
+                                    <td>Ward und Pablo werden den Auswahl- und Genehmigungsprozess f&uuml;r MetaLeads mit Ben erkunden</td>
+                                    <td>Ziel ist eine Liste der ben&ouml;tigten Rollen bis zur n&auml;chsten Gemeinschaftsversammlung</td>
+                                </tr>
+                                <tr>
+                                    <td>Beratervorschlag vorbehaltlich der anwaltlichen Pr&uuml;fung genehmigt</td>
+                                    <td>Der Vertrag wird vor der Unterzeichnung von Anw&auml;lten gepr&uuml;ft</td>
+                                </tr>
+                                <tr>
+                                    <td>Einigung auf eine 10%-Mehrwertsteuerstrategie f&uuml;r den Ticketverkauf</td>
+                                    <td>Einsparung von etwa &euro;50.000 im Vergleich zum Standardsatz</td>
+                                </tr>
+                                <tr>
+                                    <td>Notfallplanung f&uuml;r Stromversorgung an die operativen Verantwortlichen delegiert</td>
+                                    <td>Keine direkte Vorstandsverantwortung; wird von den Verantwortlichen f&uuml;r Strom und Bau &uuml;bernommen</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Zusammenfassung der Diskussion</h2>
+
+                        <h3>&Uuml;berpr&uuml;fung der Gemeinschaftsversammlung</h3>
+                        <p>Der Vorstand besprach die Gemeinschaftsversammlung des Vorabends, die als ruhig und positiv beschrieben wurde. Die Budgetpr&auml;sentation wurde als vertrauensbildend f&uuml;r die Gemeinschaft hinsichtlich der Finanzverwaltung der Organisation hervorgehoben.</p>
+
+                        <h3>DSGVO und Datenschutzbeauftragter</h3>
+                        <p>Ein Freiwilliger mit Erfahrung im Unternehmensrecht hat sich angeboten, als DSB der Vereinigung zu fungieren. Der Vorstand genehmigte das Vorgehen, vorbehaltlich eines formellen Dokuments, das die Rolle und Verantwortlichkeiten autorisiert und von beiden Seiten zu unterzeichnen ist. Eine dedizierte E-Mail-Adresse f&uuml;r Datenschutzanfragen wird eingerichtet.</p>
+
+                        <h3>Auswahlprozess f&uuml;r MetaLeads</h3>
+                        <p>Der Vorstand er&ouml;rterte die Notwendigkeit eines formellen Prozesses zur Auswahl und Genehmigung von MetaLeads (Abteilungsleiter). Zu den &Uuml;berlegungen geh&ouml;rten: wie mit mehreren Bewerbern f&uuml;r dieselbe Rolle umzugehen ist, die M&ouml;glichkeit von Co-Leitern und die Bedeutung relevanter Erfahrung. Historisch gesehen wurden Stellenbeschreibungen online ver&ouml;ffentlicht und Kandidaten bewarben sich. Ward und Pablo werden den Prozess mit Ben erkunden und darauf abzielen, eine Liste der ben&ouml;tigten Rollen f&uuml;r die n&auml;chste Gemeinschaftsversammlung zu erstellen.</p>
+
+                        <h3>Beschaffung von Verm&ouml;genswerten</h3>
+                        <p>Der Vorstand besprach die laufenden Bem&uuml;hungen zur Beschaffung von Verm&ouml;genswerten. Der Schatzmeister wird die f&uuml;r die Budgetplanung erforderlichen spezifischen Dokumente anfordern.</p>
+
+                        <h3>Beraterengagement</h3>
+                        <p>Der Vorstand genehmigte den Vorschlag des Beraters f&uuml;r einen einmonatigen Einsatz zur Best&auml;tigung von Lieferanten, Preisen und der Durchf&uuml;hrbarkeit der Veranstaltung. Der Schatzmeister bot an, die Erstzahlung vorzustrecken, bis das Bankkonto eingerichtet ist. Der Vertrag wird vor der Fertigstellung von Anw&auml;lten gepr&uuml;ft.</p>
+
+                        <h3>Mehrwertsteuerstrategie</h3>
+                        <p>Die Anw&auml;lte best&auml;tigten die Unterst&uuml;tzung f&uuml;r einen Mehrwertsteuersatz von 10% auf den Ticketverkauf, was zu Einsparungen von etwa &euro;50.000 f&uuml;hrt. Der Vorstand diskutierte die M&ouml;glichkeit, langfristig auf ein Mitgliedschaftsmodell umzustellen (&auml;hnlich wie bei anderen Burns), sobald die Vereinigung den formellen gemeinn&uuml;tzigen Status erlangt, der nach zwei Jahren beantragt werden kann.</p>
+
+                        <h3>Diskussion &uuml;ber Anfangsfinanzierung</h3>
+                        <p>Der Vorstand diskutierte Optionen zur Generierung einer Anfangsfinanzierung vor Er&ouml;ffnung des Ticketverkaufs, darunter die Annahme von Spenden und das Angebot von Vorverkaufstickets f&uuml;r die n&auml;chste Veranstaltung. Es wurde keine endg&uuml;ltige Entscheidung getroffen; eine weitere Diskussion wurde f&uuml;r die folgende Woche angesetzt.</p>
+
+                        <h3>Status des Bankkontos</h3>
+                        <p>Das Bankkonto bleibt die oberste Priorit&auml;t. Die Vereinigung wartet auf die vorl&auml;ufige NIF (Steueridentifikationsnummer) von der Regierung. Nach Erhalt kann das Bankkonto er&ouml;ffnet werden.</p>
+
+                        <h3>Verantwortungsbereiche und Leiter-Tracking</h3>
+                        <p>Der Vorstand einigte sich darauf, ein &ouml;ffentliches Dokument auf dem Drive der Vereinigung zu erstellen, das alle Abteilungen und Rollen auflistet und es Gemeinschaftsmitgliedern erm&ouml;glicht, verf&uuml;gbare Positionen einzusehen und ihre Informationen hinzuzuf&uuml;gen. Ward wird diese Auflistung aller Abteilungen und Rollen erstellen.</p>
+
+                        <h3>Anwendung zur Profilverwaltung</h3>
+                        <p>Der Schatzmeister pr&auml;sentierte eine neu entwickelte Anwendung zur Verwaltung von Mitgliedsprofilen, Teamzugeh&ouml;rigkeiten, Zugang zu gemeinsamen Ressourcen und Einhaltung von Datenschutzrichtlinien. Der Vorstand stimmte zu, dass sie vor der Bereitstellung einer Sicherheits&uuml;berpr&uuml;fung unterzogen werden sollte. Das Ziel ist, sie bis zur folgenden Woche &ouml;ffentlich zu hosten.</p>
+
+                        <h3>Operative Bereitschaft</h3>
+                        <p>Das Tracking der operativen Bereitschaft schreitet voran, mit Abschnitten zur Abteilungsbereitschaft und allgemeinen Aufgaben wie Finanzierung und Budgets.</p>
+
+                        <h2>Aktionspunkte</h2>
+                        <ul>
+                            <li><strong>Chris:</strong> Mit der Ernennung des DSB fortfahren und den Freiwilligen mit dem Beginn beauftragen; die Abdeckung des Rechtspakets mit den aktuellen Anw&auml;lten kl&auml;ren</li>
+                            <li><strong>Pablo:</strong> Anw&auml;lte kontaktieren, um nach DSGVO-Unterst&uuml;tzung und Vertrags&uuml;berpr&uuml;fung f&uuml;r den Berater zu fragen; Discord-Thread zum MetaLeads-Auswahlprozess er&ouml;ffnen, um Bens Meinung einzuholen; den Status der vorl&auml;ufigen NIF bei den Steuerberatern nachverfolgen</li>
+                            <li><strong>Peter:</strong> Einen DSGVO-E-Mail-Alias f&uuml;r den DSB einrichten; spezifische Budgetdokumente f&uuml;r Planungszwecke anfordern; Kick-off-Meeting mit dem Berater planen, sobald der Vertrag genehmigt ist; die Profilverwaltungsanwendung f&uuml;r n&auml;chste Woche &ouml;ffentlich hosten</li>
+                            <li><strong>Ward:</strong> &Ouml;ffentliches Dokument erstellen, das Abteilungen und verf&uuml;gbare Rollen auflistet; den MetaLeads-Auswahlprozess mit Pablo und Ben erkunden</li>
+                        </ul>
+
+                        <h2>Offene Punkte f&uuml;r k&uuml;nftige Sitzungen</h2>
+                        <ul>
+                            <li>Finalisierung des MetaLeads-Auswahlprozesses</li>
+                            <li>Entscheidung zum Ansatz f&uuml;r Anfangsfinanzierung / Spenden</li>
+                            <li>Vorbereitung der Gemeinschaftsversammlung</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -144,5 +538,18 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>
