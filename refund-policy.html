@@ -103,6 +103,47 @@
                 padding: 6rem 0 3rem;
             }
         }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .lang-toggle button {
+            padding: 0.75rem 1.5rem;
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid var(--color-border);
+            background: var(--color-bg-alt);
+            color: var(--color-text-muted);
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active,
+        .lang-toggle button:hover {
+            background: var(--color-accent);
+            border-color: var(--color-accent);
+            color: #fff;
+        }
+
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+
+        .lang-note {
+            font-style: italic;
+            color: var(--color-text-muted);
+            margin-bottom: 2rem;
+            padding: 1rem 1.5rem;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -118,43 +159,252 @@
                 <p class="legal-intro">Elsewhere 2026</p>
             </div>
 
-            <div class="legal-content">
-                <section class="legal-section">
-                    <h2>Can I get a refund if I can&rsquo;t attend?</h2>
-                    <p>In general, tickets for Elsewhere are not refundable.</p>
-                    <p>Elsewhere is a community-run event organized by volunteers and supported by participant contributions. Once tickets are sold, the funds are used to prepare the event: securing the site, arranging infrastructure, and supporting the many elements that make the gathering possible.</p>
-                    <p>Because of this, tickets cannot normally be refunded if you decide not to attend.</p>
-                    <p>You agree not to initiate a payment dispute or chargeback with your payment provider in violation of this Refund Policy. Initiating a chargeback without a valid legal basis may result in cancellation of the associated ticket and restriction from future participation in the Event.</p>
-                </section>
+            <div class="lang-toggle">
+                <button class="active" data-lang="en">English</button>
+                <button data-lang="es">Espa&ntilde;ol</button>
+                <button data-lang="fr">Fran&ccedil;ais</button>
+                <button data-lang="it">Italiano</button>
+                <button data-lang="de">Deutsch</button>
+            </div>
 
-                <section class="legal-section">
-                    <h2>What should I do if I can&rsquo;t make it?</h2>
-                    <p>If you can no longer attend, you can transfer your ticket to someone else.</p>
-                    <p>Ticket transfers are allowed until the day before the event begins. Transfers are free, unless the ticketing platform charges a small processing fee.</p>
-                    <p>This is usually the easiest solution and helps another participant join the event.</p>
-                </section>
+            <!-- ENGLISH -->
+            <div class="lang-content active" data-lang="en">
+                <div class="legal-content">
+                    <p class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</p>
 
-                <section class="legal-section">
-                    <h2>What happens if the event cannot take place?</h2>
-                    <p>Very rarely, circumstances outside the organizers&rsquo; control may prevent the event from happening. This could include things like extreme weather conditions, safety concerns, or government restrictions.</p>
-                    <p>If Elsewhere cannot take place, ticket holders will be offered options such as:</p>
-                    <ul>
-                        <li>donating the value of their ticket to support the association, or</li>
-                        <li>using the ticket value toward participation in a future edition of the event.</li>
-                    </ul>
-                    <p>If this situation arises, we will communicate the available options clearly through our official communication channels.</p>
-                </section>
+                    <section class="legal-section">
+                        <h2>Can I get a refund if I can&rsquo;t attend?</h2>
+                        <p>In general, tickets for Elsewhere are not refundable.</p>
+                        <p>Elsewhere is a community-run event organized by volunteers and supported by participant contributions. Once tickets are sold, the funds are used to prepare the event: securing the site, arranging infrastructure, and supporting the many elements that make the gathering possible.</p>
+                        <p>Because of this, tickets cannot normally be refunded if you decide not to attend.</p>
+                        <p>You agree not to initiate a payment dispute or chargeback with your payment provider in violation of this Refund Policy. Initiating a chargeback without a valid legal basis may result in cancellation of the associated ticket and restriction from future participation in the Event.</p>
+                    </section>
 
-                <section class="legal-section">
-                    <h2>Why is the policy like this?</h2>
-                    <p>Elsewhere is not a commercial festival. It is a temporary community created by participants and supported by the work of many volunteers.</p>
-                    <p>The refund policy helps ensure that the event can be planned responsibly and that the shared effort of everyone involved can continue.</p>
-                </section>
+                    <section class="legal-section">
+                        <h2>What should I do if I can&rsquo;t make it?</h2>
+                        <p>If you can no longer attend, you can transfer your ticket to someone else.</p>
+                        <p>Ticket transfers are allowed until the day before the event begins. Transfers are free, unless the ticketing platform charges a small processing fee.</p>
+                        <p>This is usually the easiest solution and helps another participant join the event.</p>
+                    </section>
 
-                <div class="legal-contact">
-                    <p>Questions about this policy? Contact <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
+                    <section class="legal-section">
+                        <h2>What happens if the event cannot take place?</h2>
+                        <p>Very rarely, circumstances outside the organizers&rsquo; control may prevent the event from happening. This could include things like extreme weather conditions, safety concerns, or government restrictions.</p>
+                        <p>If Elsewhere cannot take place, ticket holders will be offered options such as:</p>
+                        <ul>
+                            <li>donating the value of their ticket to support the association, or</li>
+                            <li>using the ticket value toward participation in a future edition of the event.</li>
+                        </ul>
+                        <p>If this situation arises, we will communicate the available options clearly through our official communication channels.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Why is the policy like this?</h2>
+                        <p>Elsewhere is not a commercial festival. It is a temporary community created by participants and supported by the work of many volunteers.</p>
+                        <p>The refund policy helps ensure that the event can be planned responsibly and that the shared effort of everyone involved can continue.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Questions?</h2>
+                        <p>If you have any questions about this policy, please contact us.</p>
+                    </section>
+
+                    <div class="legal-contact">
+                        <p>Questions about this policy? Contact <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
+                    </div>
                 </div>
             </div>
+
+            <!-- SPANISH -->
+            <div class="lang-content" data-lang="es">
+                <div class="legal-content">
+                    <section class="legal-section">
+                        <h2>&iquest;Puedo obtener un reembolso si no puedo asistir?</h2>
+                        <p>En general, las entradas para Elsewhere no son reembolsables.</p>
+                        <p>Elsewhere es un evento comunitario organizado por voluntarios y financiado mediante las contribuciones de los participantes. Una vez vendidas las entradas, los fondos se destinan a la preparaci&oacute;n del evento: asegurar el emplazamiento, organizar la infraestructura y apoyar los numerosos elementos que hacen posible el encuentro.</p>
+                        <p>Por este motivo, las entradas no pueden reembolsarse normalmente si decides no asistir.</p>
+                        <p>Te comprometes a no iniciar una disputa de pago ni una devoluci&oacute;n de cargo con tu proveedor de pagos en violaci&oacute;n de esta Pol&iacute;tica de Reembolso. Iniciar una devoluci&oacute;n de cargo sin una base legal v&aacute;lida puede resultar en la cancelaci&oacute;n de la entrada asociada y la restricci&oacute;n de la participaci&oacute;n futura en el Evento.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>&iquest;Qu&eacute; debo hacer si no puedo asistir?</h2>
+                        <p>Si ya no puedes asistir, puedes transferir tu entrada a otra persona.</p>
+                        <p>Las transferencias de entradas est&aacute;n permitidas hasta el d&iacute;a anterior al inicio del evento. Las transferencias son gratuitas, a menos que la plataforma de venta de entradas cobre una peque&ntilde;a tarifa de procesamiento.</p>
+                        <p>Esta suele ser la soluci&oacute;n m&aacute;s sencilla y permite que otro participante se una al evento.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>&iquest;Qu&eacute; sucede si el evento no puede llevarse a cabo?</h2>
+                        <p>En muy raras ocasiones, circunstancias fuera del control de los organizadores pueden impedir la celebraci&oacute;n del evento. Esto podr&iacute;a incluir situaciones como condiciones meteorol&oacute;gicas extremas, problemas de seguridad o restricciones gubernamentales.</p>
+                        <p>Si Elsewhere no puede llevarse a cabo, se ofrecer&aacute;n a los titulares de las entradas opciones como:</p>
+                        <ul>
+                            <li>donar el valor de su entrada para apoyar a la asociaci&oacute;n, o</li>
+                            <li>utilizar el valor de la entrada para participar en una futura edici&oacute;n del evento.</li>
+                        </ul>
+                        <p>Si se produce esta situaci&oacute;n, comunicaremos las opciones disponibles de forma clara a trav&eacute;s de nuestros canales oficiales de comunicaci&oacute;n.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>&iquest;Por qu&eacute; esta pol&iacute;tica es as&iacute;?</h2>
+                        <p>Elsewhere no es un festival comercial. Es una comunidad temporal creada por los participantes y sostenida por el trabajo de muchos voluntarios.</p>
+                        <p>La pol&iacute;tica de reembolso ayuda a garantizar que el evento pueda planificarse de manera responsable y que el esfuerzo compartido de todos los involucrados pueda continuar.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>&iquest;Preguntas?</h2>
+                        <p>Si tienes alguna pregunta sobre esta pol&iacute;tica, no dudes en contactarnos.</p>
+                    </section>
+
+                    <div class="legal-contact">
+                        <p>&iquest;Preguntas sobre esta pol&iacute;tica? Contacta con <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FRENCH -->
+            <div class="lang-content" data-lang="fr">
+                <div class="legal-content">
+                    <p class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</p>
+
+                    <section class="legal-section">
+                        <h2>Puis-je obtenir un remboursement si je ne peux pas participer&nbsp;?</h2>
+                        <p>En r&egrave;gle g&eacute;n&eacute;rale, les billets pour Elsewhere ne sont pas remboursables.</p>
+                        <p>Elsewhere est un &eacute;v&eacute;nement communautaire organis&eacute; par des b&eacute;n&eacute;voles et financ&eacute; par les contributions des participants. Une fois les billets vendus, les fonds sont utilis&eacute;s pour pr&eacute;parer l&rsquo;&eacute;v&eacute;nement&nbsp;: s&eacute;curiser le site, mettre en place les infrastructures et soutenir les nombreux &eacute;l&eacute;ments qui rendent le rassemblement possible.</p>
+                        <p>Pour cette raison, les billets ne peuvent normalement pas &ecirc;tre rembours&eacute;s si vous d&eacute;cidez de ne pas participer.</p>
+                        <p>Vous vous engagez &agrave; ne pas initier de litige de paiement ni de r&eacute;trofacturation aupr&egrave;s de votre prestataire de paiement en violation de la pr&eacute;sente Politique de Remboursement. Initier une r&eacute;trofacturation sans base l&eacute;gale valide peut entra&icirc;ner l&rsquo;annulation du billet concern&eacute; et une restriction de participation aux futures &eacute;ditions de l&rsquo;&Eacute;v&eacute;nement.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Que dois-je faire si je ne peux pas venir&nbsp;?</h2>
+                        <p>Si vous ne pouvez plus participer, vous pouvez transf&eacute;rer votre billet &agrave; une autre personne.</p>
+                        <p>Les transferts de billets sont autoris&eacute;s jusqu&rsquo;au jour pr&eacute;c&eacute;dant le d&eacute;but de l&rsquo;&eacute;v&eacute;nement. Les transferts sont gratuits, sauf si la plateforme de billetterie facture de petits frais de traitement.</p>
+                        <p>C&rsquo;est g&eacute;n&eacute;ralement la solution la plus simple et cela permet &agrave; un autre participant de rejoindre l&rsquo;&eacute;v&eacute;nement.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Que se passe-t-il si l&rsquo;&eacute;v&eacute;nement ne peut pas avoir lieu&nbsp;?</h2>
+                        <p>Tr&egrave;s rarement, des circonstances ind&eacute;pendantes de la volont&eacute; des organisateurs peuvent emp&ecirc;cher la tenue de l&rsquo;&eacute;v&eacute;nement. Cela peut inclure des conditions m&eacute;t&eacute;orologiques extr&ecirc;mes, des probl&egrave;mes de s&eacute;curit&eacute; ou des restrictions gouvernementales.</p>
+                        <p>Si Elsewhere ne peut pas avoir lieu, les d&eacute;tenteurs de billets se verront proposer des options telles que&nbsp;:</p>
+                        <ul>
+                            <li>faire don de la valeur de leur billet pour soutenir l&rsquo;association, ou</li>
+                            <li>utiliser la valeur du billet pour participer &agrave; une future &eacute;dition de l&rsquo;&eacute;v&eacute;nement.</li>
+                        </ul>
+                        <p>Si cette situation se pr&eacute;sente, nous communiquerons clairement les options disponibles par le biais de nos canaux de communication officiels.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Pourquoi cette politique est-elle ainsi&nbsp;?</h2>
+                        <p>Elsewhere n&rsquo;est pas un festival commercial. C&rsquo;est une communaut&eacute; temporaire cr&eacute;&eacute;e par les participants et soutenue par le travail de nombreux b&eacute;n&eacute;voles.</p>
+                        <p>La politique de remboursement contribue &agrave; garantir que l&rsquo;&eacute;v&eacute;nement puisse &ecirc;tre organis&eacute; de mani&egrave;re responsable et que l&rsquo;effort collectif de toutes les personnes impliqu&eacute;es puisse se poursuivre.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Des questions&nbsp;?</h2>
+                        <p>Si vous avez des questions concernant cette politique, n&rsquo;h&eacute;sitez pas &agrave; nous contacter.</p>
+                    </section>
+
+                    <div class="legal-contact">
+                        <p>Des questions sur cette politique&nbsp;? Contactez <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITALIAN -->
+            <div class="lang-content" data-lang="it">
+                <div class="legal-content">
+                    <p class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</p>
+
+                    <section class="legal-section">
+                        <h2>Posso ottenere un rimborso se non posso partecipare?</h2>
+                        <p>In generale, i biglietti per Elsewhere non sono rimborsabili.</p>
+                        <p>Elsewhere &egrave; un evento comunitario organizzato da volontari e sostenuto dai contributi dei partecipanti. Una volta venduti i biglietti, i fondi vengono utilizzati per preparare l&rsquo;evento: assicurare il sito, organizzare le infrastrutture e supportare i numerosi elementi che rendono possibile l&rsquo;incontro.</p>
+                        <p>Per questo motivo, i biglietti non possono normalmente essere rimborsati se si decide di non partecipare.</p>
+                        <p>L&rsquo;utente si impegna a non avviare una contestazione del pagamento o uno storno con il proprio fornitore di servizi di pagamento in violazione della presente Politica di Rimborso. Avviare uno storno senza una base giuridica valida pu&ograve; comportare la cancellazione del biglietto associato e la restrizione dalla partecipazione futura all&rsquo;Evento.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Cosa devo fare se non posso partecipare?</h2>
+                        <p>Se non puoi pi&ugrave; partecipare, puoi trasferire il tuo biglietto a un&rsquo;altra persona.</p>
+                        <p>I trasferimenti dei biglietti sono consentiti fino al giorno precedente l&rsquo;inizio dell&rsquo;evento. I trasferimenti sono gratuiti, a meno che la piattaforma di biglietteria addebiti una piccola commissione di elaborazione.</p>
+                        <p>Questa &egrave; di solito la soluzione pi&ugrave; semplice e consente a un altro partecipante di unirsi all&rsquo;evento.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Cosa succede se l&rsquo;evento non pu&ograve; aver luogo?</h2>
+                        <p>Molto raramente, circostanze al di fuori del controllo degli organizzatori possono impedire lo svolgimento dell&rsquo;evento. Ci&ograve; potrebbe includere condizioni meteorologiche estreme, problemi di sicurezza o restrizioni governative.</p>
+                        <p>Se Elsewhere non pu&ograve; aver luogo, ai titolari dei biglietti verranno offerte opzioni come:</p>
+                        <ul>
+                            <li>donare il valore del proprio biglietto per sostenere l&rsquo;associazione, oppure</li>
+                            <li>utilizzare il valore del biglietto per la partecipazione a una futura edizione dell&rsquo;evento.</li>
+                        </ul>
+                        <p>Se si verifica questa situazione, comunicheremo chiaramente le opzioni disponibili attraverso i nostri canali di comunicazione ufficiali.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Perch&eacute; la politica &egrave; cos&igrave;?</h2>
+                        <p>Elsewhere non &egrave; un festival commerciale. &Egrave; una comunit&agrave; temporanea creata dai partecipanti e sostenuta dal lavoro di molti volontari.</p>
+                        <p>La politica di rimborso contribuisce a garantire che l&rsquo;evento possa essere pianificato in modo responsabile e che lo sforzo condiviso di tutti i coinvolti possa continuare.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Domande?</h2>
+                        <p>Se hai domande su questa politica, non esitare a contattarci.</p>
+                    </section>
+
+                    <div class="legal-contact">
+                        <p>Domande su questa politica? Contatta <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GERMAN -->
+            <div class="lang-content" data-lang="de">
+                <div class="legal-content">
+                    <p class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</p>
+
+                    <section class="legal-section">
+                        <h2>Kann ich eine R&uuml;ckerstattung erhalten, wenn ich nicht teilnehmen kann?</h2>
+                        <p>Grunds&auml;tzlich sind Tickets f&uuml;r Elsewhere nicht erstattungsf&auml;hig.</p>
+                        <p>Elsewhere ist eine gemeinschaftlich organisierte Veranstaltung, die von Freiwilligen organisiert und durch die Beitr&auml;ge der Teilnehmer finanziert wird. Sobald Tickets verkauft sind, werden die Mittel f&uuml;r die Vorbereitung der Veranstaltung verwendet: Sicherung des Gel&auml;ndes, Aufbau der Infrastruktur und Unterst&uuml;tzung der vielen Elemente, die das Zusammenkommen erm&ouml;glichen.</p>
+                        <p>Aus diesem Grund k&ouml;nnen Tickets normalerweise nicht erstattet werden, wenn Sie sich entscheiden, nicht teilzunehmen.</p>
+                        <p>Sie verpflichten sich, keine Zahlungsstreitigkeit oder R&uuml;ckbuchung bei Ihrem Zahlungsanbieter unter Versto&szlig; gegen diese R&uuml;ckerstattungsrichtlinie einzuleiten. Die Einleitung einer R&uuml;ckbuchung ohne g&uuml;ltige Rechtsgrundlage kann zur Stornierung des zugeh&ouml;rigen Tickets und zum Ausschluss von der zuk&uuml;nftigen Teilnahme an der Veranstaltung f&uuml;hren.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Was soll ich tun, wenn ich nicht kommen kann?</h2>
+                        <p>Wenn Sie nicht mehr teilnehmen k&ouml;nnen, k&ouml;nnen Sie Ihr Ticket an eine andere Person &uuml;bertragen.</p>
+                        <p>Ticket&uuml;bertragungen sind bis zum Tag vor Beginn der Veranstaltung m&ouml;glich. &Uuml;bertragungen sind kostenlos, es sei denn, die Ticketing-Plattform erhebt eine geringe Bearbeitungsgeb&uuml;hr.</p>
+                        <p>Dies ist in der Regel die einfachste L&ouml;sung und erm&ouml;glicht es einem anderen Teilnehmer, an der Veranstaltung teilzunehmen.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Was passiert, wenn die Veranstaltung nicht stattfinden kann?</h2>
+                        <p>In sehr seltenen F&auml;llen k&ouml;nnen Umst&auml;nde au&szlig;erhalb der Kontrolle der Organisatoren die Durchf&uuml;hrung der Veranstaltung verhindern. Dazu k&ouml;nnten extreme Wetterbedingungen, Sicherheitsbedenken oder beh&ouml;rdliche Einschr&auml;nkungen geh&ouml;ren.</p>
+                        <p>Wenn Elsewhere nicht stattfinden kann, werden den Ticketinhabern Optionen wie die folgenden angeboten:</p>
+                        <ul>
+                            <li>den Wert ihres Tickets als Spende zur Unterst&uuml;tzung des Vereins einzusetzen, oder</li>
+                            <li>den Ticketwert f&uuml;r die Teilnahme an einer zuk&uuml;nftigen Ausgabe der Veranstaltung zu verwenden.</li>
+                        </ul>
+                        <p>Sollte diese Situation eintreten, werden wir die verf&uuml;gbaren Optionen klar &uuml;ber unsere offiziellen Kommunikationskan&auml;le mitteilen.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Warum ist die Richtlinie so gestaltet?</h2>
+                        <p>Elsewhere ist kein kommerzielles Festival. Es ist eine tempor&auml;re Gemeinschaft, die von den Teilnehmern geschaffen und durch die Arbeit vieler Freiwilliger getragen wird.</p>
+                        <p>Die R&uuml;ckerstattungsrichtlinie tr&auml;gt dazu bei, dass die Veranstaltung verantwortungsvoll geplant werden kann und dass die gemeinsame Anstrengung aller Beteiligten fortgesetzt werden kann.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Fragen?</h2>
+                        <p>Wenn Sie Fragen zu dieser Richtlinie haben, kontaktieren Sie uns bitte.</p>
+                    </section>
+
+                    <div class="legal-contact">
+                        <p>Fragen zu dieser Richtlinie? Kontaktieren Sie <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -162,5 +412,17 @@
     <script src="footer.js"></script>
 
     <script src="script.js"></script>
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

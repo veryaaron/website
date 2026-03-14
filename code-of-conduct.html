@@ -114,6 +114,47 @@
             margin-bottom: 0;
         }
 
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .lang-toggle button {
+            padding: 0.75rem 1.5rem;
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid var(--color-border);
+            background: var(--color-bg-alt);
+            color: var(--color-text-muted);
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active,
+        .lang-toggle button:hover {
+            background: var(--color-accent);
+            border-color: var(--color-accent);
+            color: #fff;
+        }
+
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+
+        .lang-note {
+            font-style: italic;
+            color: var(--color-text-muted);
+            margin-bottom: 2rem;
+            padding: 1rem 1.5rem;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+        }
+
         @media (max-width: 768px) {
             .coc-page {
                 padding: 6rem 0 3rem;
@@ -133,91 +174,465 @@
                 <h1>Participant Code of Conduct</h1>
             </div>
 
+            <div class="lang-toggle">
+                <button class="active" data-lang="en">English</button>
+                <button data-lang="es">Espa&ntilde;ol</button>
+                <button data-lang="fr">Fran&ccedil;ais</button>
+                <button data-lang="it">Italiano</button>
+                <button data-lang="de">Deutsch</button>
+            </div>
+
             <div class="coc-content">
-                <section class="coc-section">
-                    <h2>What is the Code of Conduct?</h2>
-                    <p>When buying a ticket for the event, applying to become a collaborator or member of the NCA, all participants agree to abide by this Code of Conduct.</p>
-                    <p>To ensure that this community is a safe, supportive, and inclusive environment for everyone, the Code of Conduct sets clear expectations of standards of behaviour.</p>
-                </section>
 
-                <section class="coc-section">
-                    <h2>Where does the Code of Conduct apply?</h2>
-                    <ul>
-                        <li>On-site &mdash; during the event, build and strike</li>
-                        <li>At official in person and online planning meetings, events, or gatherings</li>
-                        <li>In communications between organisers and volunteers, such as online planning meetings and emails</li>
-                        <li>To communications and comments on official social media channels</li>
-                    </ul>
-                </section>
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                <section class="coc-section">
-                    <h2>We will not tolerate:</h2>
-                    <ul>
-                        <li>Name calling, mental or verbal abuse, bullying, or intimidation</li>
-                        <li>Physical abuse, hostile behaviour, threatening behaviour, or the use of weapons</li>
-                        <li>Threatening harm towards oneself or others</li>
-                        <li>Discrimination or harassment on the grounds of sex, gender, sexual orientation, race, religion or belief, nationality, language(s) spoken, disability, age or any other characteristic</li>
-                        <li>Stalking</li>
-                        <li>Sexual harassment, unwelcome sexual attention, or unwanted physical contact</li>
-                        <li>Sexual activity in public spaces or anywhere not explicitly designated for such activity</li>
-                        <li>Repeated breaking of Elsewhere&rsquo;s Sound Policy, including breaking of the morning amplified sound curfew</li>
-                        <li>Any animals onsite (aside from assistance animals with prior written agreement)</li>
-                        <li>The taking and/or sharing of photographs or video without the consent of everyone captured</li>
-                        <li>The use of drones</li>
-                        <li>Behaviour that wastes excessive amounts of resources and/or the time of volunteers, or puts the event at risk in any way</li>
-                        <li>Any illegal activity</li>
-                        <li>Workshop leadership that does not take adequate care that the above do not happen</li>
-                    </ul>
-                </section>
+                    <section class="coc-section">
+                        <h2>What is the Code of Conduct?</h2>
+                        <p>When buying a ticket for the event, applying to become a collaborator or member of the NCA, all participants agree to abide by this Code of Conduct.</p>
+                        <p>To ensure that this community is a safe, supportive, and inclusive environment for everyone, the Code of Conduct sets clear expectations of standards of behaviour.</p>
+                    </section>
 
-                <section class="coc-section">
-                    <h2>Consent</h2>
-                    <p>Consent is an agreement between people, entered into voluntarily, to do something specific together. All participants are expected to understand and practise the principles of consent and consent breaches are taken very seriously.</p>
+                    <section class="coc-section">
+                        <h2>Where does the Code of Conduct apply?</h2>
+                        <ul>
+                            <li>On-site &mdash; during the event, build and strike</li>
+                            <li>At official in person and online planning meetings, events, or gatherings</li>
+                            <li>In communications between organisers and volunteers, such as online planning meetings and emails</li>
+                            <li>To communications and comments on official social media channels</li>
+                        </ul>
+                    </section>
 
-                    <h3>Consent applies to:</h3>
-                    <ul>
-                        <li>Physical contact, from non-sexual touching and hugging to sexual contact</li>
-                        <li>Borrowing camp or personal items</li>
-                        <li>Gifting; the receiver must be fully informed as to what they are accepting</li>
-                        <li>Accessing private space in camps or personal living space</li>
-                        <li>Sexual activity or consensual violence where bystanders may witness it</li>
-                        <li>Taking and/or sharing photographs and video</li>
-                        <li>Allocation of responsibilities, projects, and tasks</li>
-                    </ul>
+                    <section class="coc-section">
+                        <h2>We will not tolerate:</h2>
+                        <ul>
+                            <li>Name calling, mental or verbal abuse, bullying, or intimidation</li>
+                            <li>Physical abuse, hostile behaviour, threatening behaviour, or the use of weapons</li>
+                            <li>Threatening harm towards oneself or others</li>
+                            <li>Discrimination or harassment on the grounds of sex, gender, sexual orientation, race, religion or belief, nationality, language(s) spoken, disability, age or any other characteristic</li>
+                            <li>Stalking</li>
+                            <li>Sexual harassment, unwelcome sexual attention, or unwanted physical contact</li>
+                            <li>Sexual activity in public spaces or anywhere not explicitly designated for such activity</li>
+                            <li>Repeated breaking of Elsewhere&rsquo;s Sound Policy, including breaking of the morning amplified sound curfew</li>
+                            <li>Any animals onsite (aside from assistance animals with prior written agreement)</li>
+                            <li>The taking and/or sharing of photographs or video without the consent of everyone captured</li>
+                            <li>The use of drones</li>
+                            <li>Behaviour that wastes excessive amounts of resources and/or the time of volunteers, or puts the event at risk in any way</li>
+                            <li>Any illegal activity</li>
+                            <li>Workshop leadership that does not take adequate care that the above do not happen</li>
+                        </ul>
+                    </section>
 
-                    <h3>Consent must be:</h3>
-                    <ul>
-                        <li><strong>Freely Given</strong> &mdash; this means not coerced, pressured or reliant on specific conditions</li>
-                        <li><strong>Informed</strong> &mdash; all those involved must know what is going to happen in as much detail as is necessary to them</li>
-                        <li><strong>Reversible</strong> &mdash; consent can be withdrawn (or downgraded) at any time, without needing justification</li>
-                        <li><strong>Enthusiastic</strong> &mdash; you&rsquo;re looking for a massive YES to continue. Anything less should be considered a No until you get clarification</li>
-                        <li><strong>Specific</strong> &mdash; just because someone consents to one activity does not mean they consent to anything else</li>
-                    </ul>
-                </section>
+                    <section class="coc-section">
+                        <h2>Consent</h2>
+                        <p>Consent is an agreement between people, entered into voluntarily, to do something specific together. All participants are expected to understand and practise the principles of consent and consent breaches are taken very seriously.</p>
 
-                <section class="coc-section">
-                    <h2>Community Standards</h2>
-                    <ul>
-                        <li><strong>Respectful Interactions</strong> &mdash; Try to understand each other&rsquo;s cultures, opinions, and motivations. Respect each other&rsquo;s rights and treat people with the same respect and dignity you would want to receive from them.</li>
-                        <li><strong>Communicate and Collaborate</strong> &mdash; We are a community of many languages. Try your best to find inclusive ways to communicate with each other, include others, and collaborate on your projects and work.</li>
-                        <li><strong>Look After Each Other</strong> &mdash; the event can be a rollercoaster of emotions and experiences. If you see a fellow participant in need, ask them what they need and how you can help. Support each other and new members in learning about our event and community.</li>
-                        <li><strong>Look After Yourself</strong> &mdash; the Monegros desert can be a challenging and harsh environment. Take care to look after yourself both mentally and physically, and ask for help when you need it. Eat, sleep, hydrate. Know your boundaries and allow yourself to express them. Respect the boundaries of others.</li>
-                        <li><strong>Leave No Trace</strong> &mdash; Set an example for others at the event; ensure your camp area is tidy, help keep the site clean, pick up MOOP (Matter Out Of Place) even if it isn&rsquo;t yours, and share why being part of a Leave No Trace event is so important.</li>
-                    </ul>
-                </section>
+                        <h3>Consent applies to:</h3>
+                        <ul>
+                            <li>Physical contact, from non-sexual touching and hugging to sexual contact</li>
+                            <li>Borrowing camp or personal items</li>
+                            <li>Gifting; the receiver must be fully informed as to what they are accepting</li>
+                            <li>Accessing private space in camps or personal living space</li>
+                            <li>Sexual activity or consensual violence where bystanders may witness it</li>
+                            <li>Taking and/or sharing photographs and video</li>
+                            <li>Allocation of responsibilities, projects, and tasks</li>
+                        </ul>
 
-                <div class="coc-reporting">
-                    <h3>Reporting a Consent Violation</h3>
-                    <p>If you&rsquo;ve experienced a consent violation at Elsewhere, a related gathering, or in communications with other participants, we would like to hear about it.</p>
-                    <p>Throughout the event, there will be ways to report this (like an anonymous reporting box, forms available at Welfare and Malfare, and a web form).</p>
-                    <p>The information for how to do this will always be available on this page. Please bear with us while we put the infrastructure together to enable this.</p>
+                        <h3>Consent must be:</h3>
+                        <ul>
+                            <li><strong>Freely Given</strong> &mdash; this means not coerced, pressured or reliant on specific conditions</li>
+                            <li><strong>Informed</strong> &mdash; all those involved must know what is going to happen in as much detail as is necessary to them</li>
+                            <li><strong>Reversible</strong> &mdash; consent can be withdrawn (or downgraded) at any time, without needing justification</li>
+                            <li><strong>Enthusiastic</strong> &mdash; you&rsquo;re looking for a massive YES to continue. Anything less should be considered a No until you get clarification</li>
+                            <li><strong>Specific</strong> &mdash; just because someone consents to one activity does not mean they consent to anything else</li>
+                        </ul>
+                    </section>
 
-                    <h3>What we will do with that information</h3>
-                    <p>Because we have limited resources, in many cases we may not be able to do anything other than record the issue. But it&rsquo;s still worth sending the report if you feel your consent has been violated, because multiple &ldquo;minor&rdquo; reports about a single person can point to a pattern of behaviour worth addressing. If there is a pattern of multiple issues around the same participant, or if there is one severe enough problem, and we have the resources, we will do our best to address it through a thorough, inclusive and supportive consent process aimed at reducing the incidence of consent violations at Elsewhere.</p>
+                    <section class="coc-section">
+                        <h2>Community Standards</h2>
+                        <ul>
+                            <li><strong>Respectful Interactions</strong> &mdash; Try to understand each other&rsquo;s cultures, opinions, and motivations. Respect each other&rsquo;s rights and treat people with the same respect and dignity you would want to receive from them.</li>
+                            <li><strong>Communicate and Collaborate</strong> &mdash; We are a community of many languages. Try your best to find inclusive ways to communicate with each other, include others, and collaborate on your projects and work.</li>
+                            <li><strong>Look After Each Other</strong> &mdash; the event can be a rollercoaster of emotions and experiences. If you see a fellow participant in need, ask them what they need and how you can help. Support each other and new members in learning about our event and community.</li>
+                            <li><strong>Look After Yourself</strong> &mdash; the Monegros desert can be a challenging and harsh environment. Take care to look after yourself both mentally and physically, and ask for help when you need it. Eat, sleep, hydrate. Know your boundaries and allow yourself to express them. Respect the boundaries of others.</li>
+                            <li><strong>Leave No Trace</strong> &mdash; Set an example for others at the event; ensure your camp area is tidy, help keep the site clean, pick up MOOP (Matter Out Of Place) even if it isn&rsquo;t yours, and share why being part of a Leave No Trace event is so important.</li>
+                        </ul>
+                    </section>
 
-                    <h3>If you want to help with this</h3>
-                    <p>Please get in touch with Anna Tam in the <a href="https://discord.gg/Xmj6YbFwSM" target="_blank" style="color: rgba(255, 255, 255, 0.95); text-decoration: underline;">#participant-wellness</a> channel on Discord, or in a private message.</p>
+                    <div class="coc-reporting">
+                        <h3>Reporting a Consent Violation</h3>
+                        <p>If you&rsquo;ve experienced a consent violation at Elsewhere, a related gathering, or in communications with other participants, we would like to hear about it.</p>
+                        <p>Throughout the event, there will be ways to report this (like an anonymous reporting box, forms available at Welfare and Malfare, and a web form).</p>
+                        <p>The information for how to do this will always be available on this page. Please bear with us while we put the infrastructure together to enable this.</p>
+
+                        <h3>What we will do with that information</h3>
+                        <p>Because we have limited resources, in many cases we may not be able to do anything other than record the issue. But it&rsquo;s still worth sending the report if you feel your consent has been violated, because multiple &ldquo;minor&rdquo; reports about a single person can point to a pattern of behaviour worth addressing. If there is a pattern of multiple issues around the same participant, or if there is one severe enough problem, and we have the resources, we will do our best to address it through a thorough, inclusive and supportive consent process aimed at reducing the incidence of consent violations at Elsewhere.</p>
+
+                        <h3>If you want to help with this</h3>
+                        <p>Please get in touch with Anna Tam in the <a href="https://discord.gg/Xmj6YbFwSM" target="_blank" style="color: rgba(255, 255, 255, 0.95); text-decoration: underline;">#participant-wellness</a> channel on Discord, or in a private message.</p>
+                    </div>
                 </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+
+                    <section class="coc-section">
+                        <h2>&iquest;Qu&eacute; es el C&oacute;digo de Conducta?</h2>
+                        <p>Al comprar una entrada para el evento, solicitar ser colaborador/a o miembro de la NCA, todos los participantes aceptan cumplir con este C&oacute;digo de Conducta.</p>
+                        <p>Para garantizar que esta comunidad sea un entorno seguro, solidario e inclusivo para todos, el C&oacute;digo de Conducta establece expectativas claras sobre los est&aacute;ndares de comportamiento.</p>
+                    </section>
+
+                    <section class="coc-section">
+                        <h2>&iquest;D&oacute;nde se aplica el C&oacute;digo de Conducta?</h2>
+                        <ul>
+                            <li>En el lugar del evento &mdash; durante el evento, el montaje y el desmontaje</li>
+                            <li>En reuniones oficiales presenciales y en l&iacute;nea de planificaci&oacute;n, eventos o encuentros</li>
+                            <li>En las comunicaciones entre organizadores y voluntarios, como reuniones de planificaci&oacute;n en l&iacute;nea y correos electr&oacute;nicos</li>
+                            <li>En las comunicaciones y comentarios en los canales oficiales de redes sociales</li>
+                        </ul>
+                    </section>
+
+                    <section class="coc-section">
+                        <h2>No toleraremos:</h2>
+                        <ul>
+                            <li>Insultos, abuso mental o verbal, acoso o intimidaci&oacute;n</li>
+                            <li>Abuso f&iacute;sico, comportamiento hostil, comportamiento amenazante o el uso de armas</li>
+                            <li>Amenazas de da&ntilde;o hacia uno mismo o hacia otros</li>
+                            <li>Discriminaci&oacute;n o acoso por motivos de sexo, g&eacute;nero, orientaci&oacute;n sexual, raza, religi&oacute;n o creencias, nacionalidad, idioma(s) hablado(s), discapacidad, edad o cualquier otra caracter&iacute;stica</li>
+                            <li>Acecho</li>
+                            <li>Acoso sexual, atenci&oacute;n sexual no deseada o contacto f&iacute;sico no deseado</li>
+                            <li>Actividad sexual en espacios p&uacute;blicos o en cualquier lugar no designado expl&iacute;citamente para dicha actividad</li>
+                            <li>Incumplimiento reiterado de la Pol&iacute;tica de Sonido de Elsewhere, incluyendo el incumplimiento del toque de queda matutino de sonido amplificado</li>
+                            <li>Cualquier animal en el recinto (salvo animales de asistencia con acuerdo previo por escrito)</li>
+                            <li>La toma y/o difusi&oacute;n de fotograf&iacute;as o v&iacute;deos sin el consentimiento de todas las personas captadas</li>
+                            <li>El uso de drones</li>
+                            <li>Comportamiento que desperdicie cantidades excesivas de recursos y/o el tiempo de los voluntarios, o que ponga en riesgo el evento de cualquier manera</li>
+                            <li>Cualquier actividad ilegal</li>
+                            <li>Liderazgo de talleres que no tome las medidas adecuadas para que lo anterior no ocurra</li>
+                        </ul>
+                    </section>
+
+                    <section class="coc-section">
+                        <h2>Consentimiento</h2>
+                        <p>El consentimiento es un acuerdo entre personas, celebrado voluntariamente, para hacer algo espec&iacute;fico juntas. Se espera que todos los participantes comprendan y practiquen los principios del consentimiento, y las violaciones del consentimiento se toman muy en serio.</p>
+
+                        <h3>El consentimiento se aplica a:</h3>
+                        <ul>
+                            <li>Contacto f&iacute;sico, desde el contacto no sexual y los abrazos hasta el contacto sexual</li>
+                            <li>Pr&eacute;stamo de objetos del campamento o personales</li>
+                            <li>Regalos; el receptor debe estar plenamente informado de lo que est&aacute; aceptando</li>
+                            <li>Acceso a espacios privados en los campamentos o al espacio de vivienda personal</li>
+                            <li>Actividad sexual o violencia consensuada donde los transeúntes puedan presenciarla</li>
+                            <li>La toma y/o difusi&oacute;n de fotograf&iacute;as y v&iacute;deos</li>
+                            <li>La asignaci&oacute;n de responsabilidades, proyectos y tareas</li>
+                        </ul>
+
+                        <h3>El consentimiento debe ser:</h3>
+                        <ul>
+                            <li><strong>Dado libremente</strong> &mdash; esto significa que no debe ser coaccionado, presionado ni depender de condiciones espec&iacute;ficas</li>
+                            <li><strong>Informado</strong> &mdash; todas las personas involucradas deben saber qu&eacute; va a suceder con todo el detalle que les sea necesario</li>
+                            <li><strong>Reversible</strong> &mdash; el consentimiento puede retirarse (o reducirse) en cualquier momento, sin necesidad de justificaci&oacute;n</li>
+                            <li><strong>Entusiasta</strong> &mdash; buscas un S&Iacute; rotundo para continuar. Cualquier cosa menor debe considerarse un No hasta que obtengas una aclaraci&oacute;n</li>
+                            <li><strong>Espec&iacute;fico</strong> &mdash; que alguien consienta una actividad no significa que consienta cualquier otra</li>
+                        </ul>
+                    </section>
+
+                    <section class="coc-section">
+                        <h2>Est&aacute;ndares de la Comunidad</h2>
+                        <ul>
+                            <li><strong>Interacciones Respetuosas</strong> &mdash; Intenta comprender las culturas, opiniones y motivaciones de los dem&aacute;s. Respeta los derechos de los dem&aacute;s y trata a las personas con el mismo respeto y dignidad que te gustar&iacute;a recibir de ellas.</li>
+                            <li><strong>Comunica y Colabora</strong> &mdash; Somos una comunidad de muchos idiomas. Haz tu mejor esfuerzo por encontrar formas inclusivas de comunicarte con los dem&aacute;s, incluir a otros y colaborar en tus proyectos y trabajo.</li>
+                            <li><strong>Cuida de los Dem&aacute;s</strong> &mdash; El evento puede ser una monta&ntilde;a rusa de emociones y experiencias. Si ves a un participante que necesita ayuda, preg&uacute;ntale qu&eacute; necesita y c&oacute;mo puedes ayudar. Ap&oacute;yense mutuamente y ayuden a los nuevos miembros a conocer nuestro evento y comunidad.</li>
+                            <li><strong>Cu&iacute;date a Ti Mismo/a</strong> &mdash; El desierto de los Monegros puede ser un entorno desafiante y duro. Procura cuidarte tanto mental como f&iacute;sicamente, y pide ayuda cuando la necesites. Come, duerme, hidr&aacute;tate. Conoce tus l&iacute;mites y perm&iacute;tete expresarlos. Respeta los l&iacute;mites de los dem&aacute;s.</li>
+                            <li><strong>No Dejes Rastro</strong> &mdash; Da ejemplo a los dem&aacute;s en el evento; aseg&uacute;rate de que tu zona de campamento est&eacute; ordenada, ayuda a mantener el lugar limpio, recoge MOOP (Materia Fuera de Lugar) aunque no sea tuya, y comparte por qu&eacute; es tan importante formar parte de un evento sin rastro.</li>
+                        </ul>
+                    </section>
+
+                    <div class="coc-reporting">
+                        <h3>Denunciar una Violaci&oacute;n del Consentimiento</h3>
+                        <p>Si has experimentado una violaci&oacute;n del consentimiento en Elsewhere, en un encuentro relacionado o en comunicaciones con otros participantes, nos gustar&iacute;a saberlo.</p>
+                        <p>Durante el evento, habr&aacute; formas de denunciar esto (como un buz&oacute;n de denuncias an&oacute;nimo, formularios disponibles en Welfare y Malfare, y un formulario web).</p>
+                        <p>La informaci&oacute;n sobre c&oacute;mo hacerlo siempre estar&aacute; disponible en esta p&aacute;gina. Por favor, ten paciencia mientras preparamos la infraestructura necesaria para habilitarlo.</p>
+
+                        <h3>Qu&eacute; haremos con esa informaci&oacute;n</h3>
+                        <p>Debido a que tenemos recursos limitados, en muchos casos es posible que no podamos hacer m&aacute;s que registrar el problema. Pero a&uacute;n as&iacute; vale la pena enviar la denuncia si sientes que tu consentimiento ha sido violado, porque m&uacute;ltiples denuncias &laquo;menores&raquo; sobre una misma persona pueden se&ntilde;alar un patr&oacute;n de comportamiento que vale la pena abordar. Si existe un patr&oacute;n de m&uacute;ltiples problemas en torno al mismo participante, o si hay un problema lo suficientemente grave, y tenemos los recursos, haremos nuestro mejor esfuerzo para abordarlo a trav&eacute;s de un proceso de consentimiento exhaustivo, inclusivo y de apoyo, orientado a reducir la incidencia de violaciones del consentimiento en Elsewhere.</p>
+
+                        <h3>Si quieres ayudar con esto</h3>
+                        <p>Por favor, ponte en contacto con Anna Tam en el canal <a href="https://discord.gg/Xmj6YbFwSM" target="_blank" style="color: rgba(255, 255, 255, 0.95); text-decoration: underline;">#participant-wellness</a> de Discord, o en un mensaje privado.</p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <section class="coc-section">
+                        <h2>Qu&rsquo;est-ce que le Code de Conduite ?</h2>
+                        <p>En achetant un billet pour l&rsquo;&eacute;v&eacute;nement, en postulant pour devenir collaborateur ou membre de la NCA, tous les participants acceptent de respecter ce Code de Conduite.</p>
+                        <p>Afin de garantir que cette communaut&eacute; soit un environnement s&ucirc;r, solidaire et inclusif pour tous, le Code de Conduite &eacute;tablit des attentes claires en mati&egrave;re de normes de comportement.</p>
+                    </section>
+
+                    <section class="coc-section">
+                        <h2>O&ugrave; le Code de Conduite s&rsquo;applique-t-il ?</h2>
+                        <ul>
+                            <li>Sur le site &mdash; pendant l&rsquo;&eacute;v&eacute;nement, le montage et le d&eacute;montage</li>
+                            <li>Lors des r&eacute;unions officielles de planification en pr&eacute;sentiel et en ligne, des &eacute;v&eacute;nements ou des rassemblements</li>
+                            <li>Dans les communications entre organisateurs et b&eacute;n&eacute;voles, telles que les r&eacute;unions de planification en ligne et les courriels</li>
+                            <li>Aux communications et commentaires sur les canaux officiels des r&eacute;seaux sociaux</li>
+                        </ul>
+                    </section>
+
+                    <section class="coc-section">
+                        <h2>Nous ne tol&eacute;rerons pas :</h2>
+                        <ul>
+                            <li>Les insultes, les abus mentaux ou verbaux, le harc&egrave;lement ou l&rsquo;intimidation</li>
+                            <li>Les abus physiques, les comportements hostiles, les comportements mena&ccedil;ants ou l&rsquo;utilisation d&rsquo;armes</li>
+                            <li>Les menaces de pr&eacute;judice envers soi-m&ecirc;me ou autrui</li>
+                            <li>La discrimination ou le harc&egrave;lement fond&eacute;(e) sur le sexe, le genre, l&rsquo;orientation sexuelle, la race, la religion ou les croyances, la nationalit&eacute;, la ou les langue(s) parl&eacute;e(s), le handicap, l&rsquo;&acirc;ge ou toute autre caract&eacute;ristique</li>
+                            <li>Le harc&egrave;lement obsessionnel (stalking)</li>
+                            <li>Le harc&egrave;lement sexuel, l&rsquo;attention sexuelle non sollicit&eacute;e ou le contact physique non d&eacute;sir&eacute;</li>
+                            <li>L&rsquo;activit&eacute; sexuelle dans les espaces publics ou dans tout lieu non explicitement d&eacute;sign&eacute; &agrave; cet effet</li>
+                            <li>Le non-respect r&eacute;p&eacute;t&eacute; de la Politique Sonore d&rsquo;Elsewhere, y compris le non-respect du couvre-feu matinal du son amplifi&eacute;</li>
+                            <li>Tout animal sur le site (sauf les animaux d&rsquo;assistance avec un accord &eacute;crit pr&eacute;alable)</li>
+                            <li>La prise et/ou le partage de photographies ou de vid&eacute;os sans le consentement de toutes les personnes captur&eacute;es</li>
+                            <li>L&rsquo;utilisation de drones</li>
+                            <li>Un comportement qui gaspille des quantit&eacute;s excessives de ressources et/ou le temps des b&eacute;n&eacute;voles, ou qui met l&rsquo;&eacute;v&eacute;nement en danger de quelque mani&egrave;re que ce soit</li>
+                            <li>Toute activit&eacute; ill&eacute;gale</li>
+                            <li>L&rsquo;animation d&rsquo;ateliers qui ne prend pas les mesures ad&eacute;quates pour que ce qui pr&eacute;c&egrave;de ne se produise pas</li>
+                        </ul>
+                    </section>
+
+                    <section class="coc-section">
+                        <h2>Consentement</h2>
+                        <p>Le consentement est un accord entre des personnes, conclu volontairement, pour faire quelque chose de sp&eacute;cifique ensemble. Tous les participants sont tenus de comprendre et de pratiquer les principes du consentement, et les violations du consentement sont prises tr&egrave;s au s&eacute;rieux.</p>
+
+                        <h3>Le consentement s&rsquo;applique &agrave; :</h3>
+                        <ul>
+                            <li>Le contact physique, du toucher non sexuel et des c&acirc;lins au contact sexuel</li>
+                            <li>L&rsquo;emprunt d&rsquo;objets du camp ou d&rsquo;effets personnels</li>
+                            <li>Les cadeaux ; le destinataire doit &ecirc;tre pleinement inform&eacute; de ce qu&rsquo;il accepte</li>
+                            <li>L&rsquo;acc&egrave;s aux espaces priv&eacute;s dans les camps ou &agrave; l&rsquo;espace de vie personnel</li>
+                            <li>L&rsquo;activit&eacute; sexuelle ou la violence consensuelle l&agrave; o&ugrave; des passants pourraient en &ecirc;tre t&eacute;moins</li>
+                            <li>La prise et/ou le partage de photographies et de vid&eacute;os</li>
+                            <li>L&rsquo;attribution de responsabilit&eacute;s, de projets et de t&acirc;ches</li>
+                        </ul>
+
+                        <h3>Le consentement doit &ecirc;tre :</h3>
+                        <ul>
+                            <li><strong>Donn&eacute; librement</strong> &mdash; cela signifie qu&rsquo;il ne doit pas &ecirc;tre obtenu par la contrainte, la pression ou d&eacute;pendre de conditions sp&eacute;cifiques</li>
+                            <li><strong>&Eacute;clair&eacute;</strong> &mdash; toutes les personnes impliqu&eacute;es doivent savoir ce qui va se passer avec autant de d&eacute;tails qu&rsquo;il leur est n&eacute;cessaire</li>
+                            <li><strong>R&eacute;versible</strong> &mdash; le consentement peut &ecirc;tre retir&eacute; (ou r&eacute;duit) &agrave; tout moment, sans avoir &agrave; se justifier</li>
+                            <li><strong>Enthousiaste</strong> &mdash; vous cherchez un OUI massif pour continuer. Tout ce qui est moindre doit &ecirc;tre consid&eacute;r&eacute; comme un Non jusqu&rsquo;&agrave; ce que vous obteniez une clarification</li>
+                            <li><strong>Sp&eacute;cifique</strong> &mdash; ce n&rsquo;est pas parce qu&rsquo;une personne consent &agrave; une activit&eacute; qu&rsquo;elle consent &agrave; toute autre chose</li>
+                        </ul>
+                    </section>
+
+                    <section class="coc-section">
+                        <h2>Normes Communautaires</h2>
+                        <ul>
+                            <li><strong>Interactions Respectueuses</strong> &mdash; Essayez de comprendre les cultures, les opinions et les motivations des autres. Respectez les droits des autres et traitez les gens avec le m&ecirc;me respect et la m&ecirc;me dignit&eacute; que vous aimeriez recevoir d&rsquo;eux.</li>
+                            <li><strong>Communiquez et Collaborez</strong> &mdash; Nous sommes une communaut&eacute; multilingue. Faites de votre mieux pour trouver des moyens inclusifs de communiquer entre vous, d&rsquo;inclure les autres et de collaborer sur vos projets et votre travail.</li>
+                            <li><strong>Prenez Soin des Autres</strong> &mdash; L&rsquo;&eacute;v&eacute;nement peut &ecirc;tre une montagne russe d&rsquo;&eacute;motions et d&rsquo;exp&eacute;riences. Si vous voyez un participant dans le besoin, demandez-lui ce dont il a besoin et comment vous pouvez l&rsquo;aider. Soutenez-vous mutuellement et aidez les nouveaux membres &agrave; d&eacute;couvrir notre &eacute;v&eacute;nement et notre communaut&eacute;.</li>
+                            <li><strong>Prenez Soin de Vous</strong> &mdash; Le d&eacute;sert des Monegros peut &ecirc;tre un environnement difficile et rude. Veillez &agrave; prendre soin de vous tant mentalement que physiquement, et demandez de l&rsquo;aide quand vous en avez besoin. Mangez, dormez, hydratez-vous. Connaissez vos limites et permettez-vous de les exprimer. Respectez les limites des autres.</li>
+                            <li><strong>Ne Laissez Aucune Trace</strong> &mdash; Montrez l&rsquo;exemple aux autres lors de l&rsquo;&eacute;v&eacute;nement ; assurez-vous que votre zone de campement est rang&eacute;e, aidez &agrave; garder le site propre, ramassez les MOOP (Mati&egrave;re Hors de sa Place) m&ecirc;me si ce n&rsquo;est pas la v&ocirc;tre, et expliquez pourquoi participer &agrave; un &eacute;v&eacute;nement sans trace est si important.</li>
+                        </ul>
+                    </section>
+
+                    <div class="coc-reporting">
+                        <h3>Signaler une Violation du Consentement</h3>
+                        <p>Si vous avez subi une violation du consentement &agrave; Elsewhere, lors d&rsquo;un rassemblement associ&eacute; ou dans des communications avec d&rsquo;autres participants, nous aimerions en &ecirc;tre inform&eacute;s.</p>
+                        <p>Tout au long de l&rsquo;&eacute;v&eacute;nement, il y aura des moyens de le signaler (comme une bo&icirc;te de signalement anonyme, des formulaires disponibles au Welfare et au Malfare, et un formulaire en ligne).</p>
+                        <p>Les informations sur la mani&egrave;re de proc&eacute;der seront toujours disponibles sur cette page. Merci de patienter pendant que nous mettons en place l&rsquo;infrastructure n&eacute;cessaire.</p>
+
+                        <h3>Ce que nous ferons de ces informations</h3>
+                        <p>En raison de nos ressources limit&eacute;es, dans de nombreux cas, nous ne pourrons peut-&ecirc;tre rien faire d&rsquo;autre qu&rsquo;enregistrer le probl&egrave;me. Mais il vaut quand m&ecirc;me la peine d&rsquo;envoyer le signalement si vous estimez que votre consentement a &eacute;t&eacute; viol&eacute;, car plusieurs signalements &laquo; mineurs &raquo; concernant une m&ecirc;me personne peuvent r&eacute;v&eacute;ler un sch&eacute;ma de comportement qui m&eacute;rite d&rsquo;&ecirc;tre trait&eacute;. S&rsquo;il existe un sch&eacute;ma de probl&egrave;mes multiples autour d&rsquo;un m&ecirc;me participant, ou si un probl&egrave;me est suffisamment grave, et que nous en avons les moyens, nous ferons de notre mieux pour le traiter &agrave; travers un processus de consentement approfondi, inclusif et bienveillant, visant &agrave; r&eacute;duire l&rsquo;incidence des violations du consentement &agrave; Elsewhere.</p>
+
+                        <h3>Si vous souhaitez aider</h3>
+                        <p>Veuillez contacter Anna Tam sur le canal <a href="https://discord.gg/Xmj6YbFwSM" target="_blank" style="color: rgba(255, 255, 255, 0.95); text-decoration: underline;">#participant-wellness</a> sur Discord, ou par message priv&eacute;.</p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <section class="coc-section">
+                        <h2>Che cos&rsquo;&egrave; il Codice di Condotta?</h2>
+                        <p>Acquistando un biglietto per l&rsquo;evento, candidandosi a diventare collaboratore o membro della NCA, tutti i partecipanti accettano di rispettare questo Codice di Condotta.</p>
+                        <p>Per garantire che questa comunit&agrave; sia un ambiente sicuro, solidale e inclusivo per tutti, il Codice di Condotta stabilisce aspettative chiare sugli standard di comportamento.</p>
+                    </section>
+
+                    <section class="coc-section">
+                        <h2>Dove si applica il Codice di Condotta?</h2>
+                        <ul>
+                            <li>Sul sito &mdash; durante l&rsquo;evento, il montaggio e lo smontaggio</li>
+                            <li>Nelle riunioni ufficiali di pianificazione in presenza e online, eventi o incontri</li>
+                            <li>Nelle comunicazioni tra organizzatori e volontari, come le riunioni di pianificazione online e le email</li>
+                            <li>Nelle comunicazioni e nei commenti sui canali ufficiali dei social media</li>
+                        </ul>
+                    </section>
+
+                    <section class="coc-section">
+                        <h2>Non tollereremo:</h2>
+                        <ul>
+                            <li>Insulti, abuso mentale o verbale, bullismo o intimidazione</li>
+                            <li>Abuso fisico, comportamento ostile, comportamento minaccioso o l&rsquo;uso di armi</li>
+                            <li>Minacce di danno verso s&eacute; stessi o altri</li>
+                            <li>Discriminazione o molestie basate su sesso, genere, orientamento sessuale, razza, religione o credo, nazionalit&agrave;, lingua/e parlata/e, disabilit&agrave;, et&agrave; o qualsiasi altra caratteristica</li>
+                            <li>Stalking</li>
+                            <li>Molestie sessuali, attenzioni sessuali indesiderate o contatto fisico non voluto</li>
+                            <li>Attivit&agrave; sessuale in spazi pubblici o in qualsiasi luogo non esplicitamente designato per tale attivit&agrave;</li>
+                            <li>Violazione ripetuta della Politica del Suono di Elsewhere, inclusa la violazione del coprifuoco mattutino del suono amplificato</li>
+                            <li>Qualsiasi animale nel sito (ad eccezione degli animali di assistenza con previo accordo scritto)</li>
+                            <li>Lo scatto e/o la condivisione di fotografie o video senza il consenso di tutte le persone riprese</li>
+                            <li>L&rsquo;uso di droni</li>
+                            <li>Comportamenti che sprechino quantit&agrave; eccessive di risorse e/o il tempo dei volontari, o che mettano a rischio l&rsquo;evento in qualsiasi modo</li>
+                            <li>Qualsiasi attivit&agrave; illegale</li>
+                            <li>Conduzione di laboratori che non prenda le misure adeguate affinch&eacute; quanto sopra non si verifichi</li>
+                        </ul>
+                    </section>
+
+                    <section class="coc-section">
+                        <h2>Consenso</h2>
+                        <p>Il consenso &egrave; un accordo tra persone, stipulato volontariamente, per fare qualcosa di specifico insieme. Tutti i partecipanti sono tenuti a comprendere e praticare i principi del consenso, e le violazioni del consenso vengono prese molto seriamente.</p>
+
+                        <h3>Il consenso si applica a:</h3>
+                        <ul>
+                            <li>Il contatto fisico, dal tocco non sessuale e gli abbracci al contatto sessuale</li>
+                            <li>Il prestito di oggetti del campo o personali</li>
+                            <li>I regali; il destinatario deve essere pienamente informato di ci&ograve; che sta accettando</li>
+                            <li>L&rsquo;accesso agli spazi privati nei campi o allo spazio abitativo personale</li>
+                            <li>Attivit&agrave; sessuale o violenza consensuale dove i passanti potrebbero assistere</li>
+                            <li>Lo scatto e/o la condivisione di fotografie e video</li>
+                            <li>L&rsquo;assegnazione di responsabilit&agrave;, progetti e compiti</li>
+                        </ul>
+
+                        <h3>Il consenso deve essere:</h3>
+                        <ul>
+                            <li><strong>Dato liberamente</strong> &mdash; ci&ograve; significa che non deve essere ottenuto con coercizione, pressione o dipendere da condizioni specifiche</li>
+                            <li><strong>Informato</strong> &mdash; tutte le persone coinvolte devono sapere cosa accadr&agrave; con tutti i dettagli necessari</li>
+                            <li><strong>Reversibile</strong> &mdash; il consenso pu&ograve; essere ritirato (o ridotto) in qualsiasi momento, senza bisogno di giustificazione</li>
+                            <li><strong>Entusiasta</strong> &mdash; stai cercando un S&Igrave; convinto per continuare. Qualsiasi cosa di meno dovrebbe essere considerata un No fino a quando non ottieni un chiarimento</li>
+                            <li><strong>Specifico</strong> &mdash; il fatto che qualcuno acconsenta a un&rsquo;attivit&agrave; non significa che acconsenta a qualsiasi altra cosa</li>
+                        </ul>
+                    </section>
+
+                    <section class="coc-section">
+                        <h2>Standard della Comunit&agrave;</h2>
+                        <ul>
+                            <li><strong>Interazioni Rispettose</strong> &mdash; Cerca di comprendere le culture, le opinioni e le motivazioni degli altri. Rispetta i diritti degli altri e tratta le persone con lo stesso rispetto e la stessa dignit&agrave; che vorresti ricevere da loro.</li>
+                            <li><strong>Comunica e Collabora</strong> &mdash; Siamo una comunit&agrave; multilingue. Fai del tuo meglio per trovare modi inclusivi di comunicare tra di voi, includere gli altri e collaborare ai vostri progetti e al vostro lavoro.</li>
+                            <li><strong>Prenditi Cura degli Altri</strong> &mdash; L&rsquo;evento pu&ograve; essere un&rsquo;altalena di emozioni ed esperienze. Se vedi un partecipante in difficolt&agrave;, chiedigli di cosa ha bisogno e come puoi aiutare. Sostenetevi a vicenda e aiutate i nuovi membri a conoscere il nostro evento e la nostra comunit&agrave;.</li>
+                            <li><strong>Prenditi Cura di Te Stesso/a</strong> &mdash; Il deserto dei Monegros pu&ograve; essere un ambiente impegnativo e duro. Abbi cura di te stesso sia mentalmente che fisicamente, e chiedi aiuto quando ne hai bisogno. Mangia, dormi, idratati. Conosci i tuoi limiti e permettiti di esprimerli. Rispetta i limiti degli altri.</li>
+                            <li><strong>Non Lasciare Traccia</strong> &mdash; Dai l&rsquo;esempio agli altri durante l&rsquo;evento; assicurati che la tua area di campeggio sia ordinata, aiuta a mantenere il sito pulito, raccogli i MOOP (Materia Fuori Posto) anche se non sono tuoi, e condividi perch&eacute; far parte di un evento senza traccia &egrave; cos&igrave; importante.</li>
+                        </ul>
+                    </section>
+
+                    <div class="coc-reporting">
+                        <h3>Segnalare una Violazione del Consenso</h3>
+                        <p>Se hai subito una violazione del consenso a Elsewhere, durante un incontro correlato o nelle comunicazioni con altri partecipanti, vorremmo esserne informati.</p>
+                        <p>Durante l&rsquo;evento, ci saranno modi per segnalarlo (come una cassetta di segnalazione anonima, moduli disponibili al Welfare e al Malfare, e un modulo online).</p>
+                        <p>Le informazioni su come fare saranno sempre disponibili su questa pagina. Vi preghiamo di pazientare mentre mettiamo in piedi l&rsquo;infrastruttura necessaria.</p>
+
+                        <h3>Cosa faremo con queste informazioni</h3>
+                        <p>A causa delle nostre risorse limitate, in molti casi potremmo non essere in grado di fare altro che registrare il problema. Ma vale comunque la pena inviare la segnalazione se ritieni che il tuo consenso sia stato violato, perch&eacute; molteplici segnalazioni &laquo;minori&raquo; riguardanti una singola persona possono indicare un modello di comportamento che merita di essere affrontato. Se esiste un modello di problemi multipli attorno allo stesso partecipante, o se c&rsquo;&egrave; un problema sufficientemente grave, e ne abbiamo le risorse, faremo del nostro meglio per affrontarlo attraverso un processo di consenso approfondito, inclusivo e di supporto, volto a ridurre l&rsquo;incidenza delle violazioni del consenso a Elsewhere.</p>
+
+                        <h3>Se vuoi dare una mano</h3>
+                        <p>Contatta Anna Tam nel canale <a href="https://discord.gg/Xmj6YbFwSM" target="_blank" style="color: rgba(255, 255, 255, 0.95); text-decoration: underline;">#participant-wellness</a> su Discord, o tramite messaggio privato.</p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <section class="coc-section">
+                        <h2>Was ist der Verhaltenskodex?</h2>
+                        <p>Beim Kauf eines Tickets f&uuml;r die Veranstaltung, bei der Bewerbung als Mitarbeiter/in oder Mitglied der NCA stimmen alle Teilnehmer zu, diesen Verhaltenskodex einzuhalten.</p>
+                        <p>Um sicherzustellen, dass diese Gemeinschaft ein sicheres, unterst&uuml;tzendes und inklusives Umfeld f&uuml;r alle ist, legt der Verhaltenskodex klare Erwartungen an Verhaltensstandards fest.</p>
+                    </section>
+
+                    <section class="coc-section">
+                        <h2>Wo gilt der Verhaltenskodex?</h2>
+                        <ul>
+                            <li>Vor Ort &mdash; w&auml;hrend der Veranstaltung, des Aufbaus und des Abbaus</li>
+                            <li>Bei offiziellen Planungstreffen in Pr&auml;senz und online, Veranstaltungen oder Zusammenk&uuml;nften</li>
+                            <li>In der Kommunikation zwischen Organisatoren und Freiwilligen, wie z.B. Online-Planungstreffen und E-Mails</li>
+                            <li>F&uuml;r Kommunikation und Kommentare auf offiziellen Social-Media-Kan&auml;len</li>
+                        </ul>
+                    </section>
+
+                    <section class="coc-section">
+                        <h2>Wir werden Folgendes nicht tolerieren:</h2>
+                        <ul>
+                            <li>Beschimpfungen, psychischen oder verbalen Missbrauch, Mobbing oder Einsch&uuml;chterung</li>
+                            <li>K&ouml;rperlichen Missbrauch, feindseliges Verhalten, bedrohliches Verhalten oder den Einsatz von Waffen</li>
+                            <li>Androhung von Schaden gegen sich selbst oder andere</li>
+                            <li>Diskriminierung oder Bel&auml;stigung aufgrund von Geschlecht, Gender, sexueller Orientierung, Rasse, Religion oder Weltanschauung, Nationalit&auml;t, gesprochene(r) Sprache(n), Behinderung, Alter oder jeder anderen Eigenschaft</li>
+                            <li>Stalking</li>
+                            <li>Sexuelle Bel&auml;stigung, unerw&uuml;nschte sexuelle Aufmerksamkeit oder unerw&uuml;nschter K&ouml;rperkontakt</li>
+                            <li>Sexuelle Aktivit&auml;ten in &ouml;ffentlichen Bereichen oder an Orten, die nicht ausdr&uuml;cklich f&uuml;r solche Aktivit&auml;ten vorgesehen sind</li>
+                            <li>Wiederholte Verst&ouml;&szlig;e gegen die Lautst&auml;rkerichtlinie von Elsewhere, einschlie&szlig;lich Verst&ouml;&szlig;e gegen die morgendliche Sperrzeit f&uuml;r verst&auml;rkten Klang</li>
+                            <li>Jegliche Tiere auf dem Gel&auml;nde (au&szlig;er Assistenztiere mit vorheriger schriftlicher Vereinbarung)</li>
+                            <li>Das Aufnehmen und/oder Teilen von Fotos oder Videos ohne die Zustimmung aller abgebildeten Personen</li>
+                            <li>Die Verwendung von Drohnen</li>
+                            <li>Verhalten, das &uuml;berm&auml;&szlig;ige Mengen an Ressourcen und/oder die Zeit der Freiwilligen verschwendet oder die Veranstaltung in irgendeiner Weise gef&auml;hrdet</li>
+                            <li>Jede illegale Aktivit&auml;t</li>
+                            <li>Workshop-Leitung, die nicht angemessen daf&uuml;r sorgt, dass das Obengenannte nicht vorkommt</li>
+                        </ul>
+                    </section>
+
+                    <section class="coc-section">
+                        <h2>Einverst&auml;ndnis (Consent)</h2>
+                        <p>Einverst&auml;ndnis ist eine freiwillig getroffene Vereinbarung zwischen Personen, etwas Bestimmtes gemeinsam zu tun. Von allen Teilnehmern wird erwartet, dass sie die Grunds&auml;tze des Einverst&auml;ndnisses verstehen und praktizieren. Verst&ouml;&szlig;e gegen das Einverst&auml;ndnis werden sehr ernst genommen.</p>
+
+                        <h3>Einverst&auml;ndnis gilt f&uuml;r:</h3>
+                        <ul>
+                            <li>K&ouml;rperlichen Kontakt, von nicht-sexuellen Ber&uuml;hrungen und Umarmungen bis hin zu sexuellem Kontakt</li>
+                            <li>Das Ausleihen von Camp- oder pers&ouml;nlichen Gegenst&auml;nden</li>
+                            <li>Geschenke; der Empf&auml;nger muss vollst&auml;ndig dar&uuml;ber informiert sein, was er annimmt</li>
+                            <li>Den Zugang zu privaten R&auml;umen in Camps oder zum pers&ouml;nlichen Wohnbereich</li>
+                            <li>Sexuelle Aktivit&auml;ten oder einvernehmliche Gewalt, bei denen Zuschauer Zeugen werden k&ouml;nnten</li>
+                            <li>Das Aufnehmen und/oder Teilen von Fotos und Videos</li>
+                            <li>Die Zuweisung von Verantwortlichkeiten, Projekten und Aufgaben</li>
+                        </ul>
+
+                        <h3>Einverst&auml;ndnis muss sein:</h3>
+                        <ul>
+                            <li><strong>Freiwillig gegeben</strong> &mdash; das bedeutet, nicht erzwungen, unter Druck gesetzt oder an bestimmte Bedingungen gekn&uuml;pft</li>
+                            <li><strong>Informiert</strong> &mdash; alle Beteiligten m&uuml;ssen wissen, was passieren wird, und zwar in dem Ma&szlig;e an Detail, das f&uuml;r sie notwendig ist</li>
+                            <li><strong>Widerrufbar</strong> &mdash; das Einverst&auml;ndnis kann jederzeit zur&uuml;ckgezogen (oder eingeschr&auml;nkt) werden, ohne dass eine Begr&uuml;ndung erforderlich ist</li>
+                            <li><strong>Enthusiastisch</strong> &mdash; du suchst nach einem klaren JA, um fortzufahren. Alles Geringere sollte als Nein betrachtet werden, bis du eine Kl&auml;rung erh&auml;ltst</li>
+                            <li><strong>Spezifisch</strong> &mdash; nur weil jemand einer Aktivit&auml;t zustimmt, bedeutet das nicht, dass er/sie allem anderen zustimmt</li>
+                        </ul>
+                    </section>
+
+                    <section class="coc-section">
+                        <h2>Gemeinschaftsstandards</h2>
+                        <ul>
+                            <li><strong>Respektvoller Umgang</strong> &mdash; Versuche, die Kulturen, Meinungen und Motivationen anderer zu verstehen. Respektiere die Rechte anderer und behandle Menschen mit dem gleichen Respekt und der gleichen W&uuml;rde, die du von ihnen erhalten m&ouml;chtest.</li>
+                            <li><strong>Kommuniziere und Arbeite Zusammen</strong> &mdash; Wir sind eine Gemeinschaft vieler Sprachen. Gib dein Bestes, inklusive Wege zu finden, miteinander zu kommunizieren, andere einzubeziehen und an euren Projekten und eurer Arbeit zusammenzuarbeiten.</li>
+                            <li><strong>K&uuml;mmere Dich um Andere</strong> &mdash; Die Veranstaltung kann eine Achterbahn der Emotionen und Erfahrungen sein. Wenn du einen Teilnehmer in Not siehst, frage ihn, was er braucht und wie du helfen kannst. Unterst&uuml;tzt euch gegenseitig und helft neuen Mitgliedern, unsere Veranstaltung und Gemeinschaft kennenzulernen.</li>
+                            <li><strong>K&uuml;mmere Dich um Dich Selbst</strong> &mdash; Die W&uuml;ste von Monegros kann eine herausfordernde und raue Umgebung sein. Achte darauf, sowohl mental als auch k&ouml;rperlich auf dich zu achten, und bitte um Hilfe, wenn du sie brauchst. Iss, schlaf, trinke ausreichend. Kenne deine Grenzen und erlaube dir, sie auszudr&uuml;cken. Respektiere die Grenzen anderer.</li>
+                            <li><strong>Hinterlasse Keine Spuren</strong> &mdash; Gehe mit gutem Beispiel voran; sorge daf&uuml;r, dass dein Campbereich ordentlich ist, hilf, das Gel&auml;nde sauber zu halten, sammle MOOP (Material Au&szlig;erhalb Seines Platzes) auf, auch wenn es nicht deines ist, und teile mit, warum es so wichtig ist, Teil einer Veranstaltung ohne Spuren zu sein.</li>
+                        </ul>
+                    </section>
+
+                    <div class="coc-reporting">
+                        <h3>Eine Einverst&auml;ndnisverletzung Melden</h3>
+                        <p>Wenn du eine Einverst&auml;ndnisverletzung bei Elsewhere, bei einem zugeh&ouml;rigen Treffen oder in der Kommunikation mit anderen Teilnehmern erlebt hast, m&ouml;chten wir davon erfahren.</p>
+                        <p>W&auml;hrend der Veranstaltung wird es M&ouml;glichkeiten geben, dies zu melden (wie eine anonyme Meldebox, Formulare bei Welfare und Malfare und ein Webformular).</p>
+                        <p>Die Informationen dazu werden immer auf dieser Seite verf&uuml;gbar sein. Bitte habt Geduld, w&auml;hrend wir die daf&uuml;r notwendige Infrastruktur aufbauen.</p>
+
+                        <h3>Was wir mit diesen Informationen tun</h3>
+                        <p>Da unsere Ressourcen begrenzt sind, k&ouml;nnen wir in vielen F&auml;llen m&ouml;glicherweise nichts anderes tun als das Problem zu dokumentieren. Aber es lohnt sich trotzdem, die Meldung zu senden, wenn du das Gef&uuml;hl hast, dass dein Einverst&auml;ndnis verletzt wurde, denn mehrere &bdquo;kleinere&ldquo; Meldungen &uuml;ber eine einzelne Person k&ouml;nnen auf ein Verhaltensmuster hinweisen, das es wert ist, angegangen zu werden. Wenn es ein Muster mehrerer Probleme rund um denselben Teilnehmer gibt oder wenn ein Problem schwerwiegend genug ist und wir die Ressourcen haben, werden wir unser Bestes tun, es durch einen gr&uuml;ndlichen, inklusiven und unterst&uuml;tzenden Einverst&auml;ndnisprozess anzugehen, der darauf abzielt, das Auftreten von Einverst&auml;ndnisverletzungen bei Elsewhere zu reduzieren.</p>
+
+                        <h3>Wenn du dabei helfen m&ouml;chtest</h3>
+                        <p>Bitte kontaktiere Anna Tam im <a href="https://discord.gg/Xmj6YbFwSM" target="_blank" style="color: rgba(255, 255, 255, 0.95); text-decoration: underline;">#participant-wellness</a>-Kanal auf Discord oder per Privatnachricht.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>
@@ -226,5 +641,17 @@
     <script src="footer.js"></script>
 
     <script src="script.js"></script>
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>
