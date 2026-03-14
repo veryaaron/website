@@ -115,6 +115,67 @@
         animEls.forEach(function(el) { observer.observe(el); });
     }
 
+    // Hero Glitch Text
+    function initGlitchText() {
+        var hero = document.querySelector('.hero');
+        if (!hero) return;
+
+        // Respect reduced motion
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var words = ['ELSEWHERE', 'BURN', 'ELSEWHERE BURN', 'BURN ELSEWHERE'];
+        var blendModes = ['difference', 'exclusion', 'color-dodge', 'hard-light', 'overlay'];
+        var glitchColors = ['#fff', '#0ff', '#f0f', '#ff0', '#fff', '#fff'];
+        var glitchStyles = ['', 'glitch-aberration', 'glitch-ghost', 'glitch-scan'];
+
+        function flash() {
+            var text = words[Math.floor(Math.random() * words.length)];
+            var el = document.createElement('div');
+            el.className = 'glitch-flash';
+
+            // Add a random glitch variant
+            var style = glitchStyles[Math.floor(Math.random() * glitchStyles.length)];
+            if (style) el.classList.add(style);
+
+            el.textContent = text;
+
+            // Random position within hero
+            el.style.top = (10 + Math.random() * 65) + '%';
+            el.style.left = (5 + Math.random() * 50) + '%';
+
+            // Random blend mode and color
+            el.style.mixBlendMode = blendModes[Math.floor(Math.random() * blendModes.length)];
+            el.style.color = glitchColors[Math.floor(Math.random() * glitchColors.length)];
+
+            // Random transform
+            var skew = (Math.random() - 0.5) * 15;
+            var scale = 0.7 + Math.random() * 0.8;
+            var rotate = (Math.random() - 0.5) * 8;
+            el.style.transform = 'skew(' + skew + 'deg) scale(' + scale + ') rotate(' + rotate + 'deg)';
+
+            // Random font size
+            el.style.fontSize = (2.5 + Math.random() * 4.5) + 'rem';
+
+            // Random opacity
+            el.style.opacity = 0.4 + Math.random() * 0.6;
+
+            hero.appendChild(el);
+
+            // Remove after flash
+            var duration = 200 + Math.random() * 400;
+            setTimeout(function() {
+                if (el.parentNode) el.parentNode.removeChild(el);
+            }, duration);
+
+            // Schedule next flash
+            var nextDelay = 1500 + Math.random() * 4000;
+            setTimeout(flash, nextDelay);
+        }
+
+        // Start after a short delay
+        setTimeout(flash, 2000);
+    }
+
     // Init
     function init() {
         initMobileNav();
@@ -122,6 +183,7 @@
         initSlideshow();
         initHeaderScroll();
         initScrollAnimations();
+        initGlitchText();
     }
 
     if (document.readyState === 'loading') {

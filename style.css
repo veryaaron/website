@@ -1570,4 +1570,57 @@ h4 { font-size: 1.15rem; }
         transform: none !important;
         transition: none !important;
     }
+    .glitch-flash {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   Hero Glitch Text
+   ========================================================================== */
+
+.glitch-flash {
+    position: absolute;
+    z-index: 0;
+    font-family: 'Permanent Marker', cursive;
+    pointer-events: none;
+    white-space: nowrap;
+    line-height: 1;
+    letter-spacing: 0.05em;
+}
+
+/* Chromatic aberration variant */
+.glitch-flash.glitch-aberration {
+    text-shadow:
+        3px 0 rgba(255, 0, 80, 0.7),
+        -3px 0 rgba(0, 255, 200, 0.7);
+}
+
+/* Double ghost variant */
+.glitch-flash.glitch-ghost {
+    text-shadow:
+        0 0 20px rgba(255, 255, 255, 0.6),
+        0 0 40px rgba(255, 255, 255, 0.3);
+}
+
+/* Scanline variant */
+.glitch-flash.glitch-scan {
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.3) 2px,
+        rgba(0, 0, 0, 0.3) 4px
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow:
+        2px 1px rgba(255, 0, 80, 0.5),
+        -2px -1px rgba(0, 200, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    .glitch-flash {
+        font-size: clamp(1.5rem, 8vw, 3rem) !important;
+    }
 }
