@@ -250,6 +250,118 @@
         setTimeout(flash, 2000);
     }
 
+    // Promo Image Glitch
+    function initPromoGlitch() {
+        var container = document.querySelector('.about-promo');
+        if (!container) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var mainImg = container.querySelector('img');
+        var originalSrc = mainImg.src;
+        var glitchSrcs = [
+            'images/glitch-1.png',
+            'images/glitch-2.png',
+            'images/glitch-3.png',
+            'images/glitch-4.png',
+            'images/glitch-5.png'
+        ];
+        var allSrcs = [originalSrc].concat(glitchSrcs.map(function(s) {
+            return new URL(s, window.location.href).href;
+        }));
+
+        // Preload all glitch images
+        glitchSrcs.forEach(function(src) {
+            var img = new Image();
+            img.src = src;
+        });
+
+        // Make container position:relative for overlay positioning
+        container.style.position = 'relative';
+
+        function randomGlitchSrc() {
+            return glitchSrcs[Math.floor(Math.random() * glitchSrcs.length)];
+        }
+
+        // Simple swap: replace image for ~500ms
+        function simpleSwap() {
+            mainImg.src = randomGlitchSrc();
+            setTimeout(function() {
+                mainImg.src = originalSrc;
+            }, 400 + Math.random() * 200);
+        }
+
+        // Chromatic burst: show all 6 images layered with offsets, drifting apart
+        function chromaticBurst() {
+            var blendModes = ['difference', 'exclusion', 'color-dodge', 'hard-light'];
+            var overlays = [];
+
+            allSrcs.forEach(function(src, i) {
+                if (i === 0) return; // skip original, it's already showing
+
+                var img = document.createElement('img');
+                img.src = src;
+                img.style.position = 'absolute';
+                img.style.top = '0';
+                img.style.left = '0';
+                img.style.width = '100%';
+                img.style.height = '100%';
+                img.style.objectFit = 'cover';
+                img.style.mixBlendMode = blendModes[Math.floor(Math.random() * blendModes.length)];
+                img.style.opacity = '0.7';
+                img.style.pointerEvents = 'none';
+
+                // Random initial offset 5-10px
+                var dx = (Math.random() < 0.5 ? -1 : 1) * (5 + Math.random() * 5);
+                var dy = (Math.random() < 0.5 ? -1 : 1) * (5 + Math.random() * 5);
+                img.style.transform = 'translate(' + dx + 'px, ' + dy + 'px)';
+                img.style.transition = 'transform 1.5s ease-out, opacity 0.3s ease';
+
+                // Drift direction (2-4 px/s extra over ~1.5s)
+                var driftX = dx + (dx > 0 ? 1 : -1) * (3 + Math.random() * 3);
+                var driftY = dy + (dy > 0 ? 1 : -1) * (3 + Math.random() * 3);
+
+                container.appendChild(img);
+                overlays.push({ el: img, driftX: driftX, driftY: driftY });
+            });
+
+            // Also swap main image to a glitch variant
+            mainImg.src = randomGlitchSrc();
+
+            // Start drift
+            requestAnimationFrame(function() {
+                overlays.forEach(function(o) {
+                    o.el.style.transform = 'translate(' + o.driftX + 'px, ' + o.driftY + 'px)';
+                });
+            });
+
+            // Fade out and remove after ~1.2s
+            setTimeout(function() {
+                overlays.forEach(function(o) {
+                    o.el.style.opacity = '0';
+                });
+                mainImg.src = originalSrc;
+                setTimeout(function() {
+                    overlays.forEach(function(o) {
+                        if (o.el.parentNode) o.el.parentNode.removeChild(o.el);
+                    });
+                }, 350);
+            }, 1200);
+        }
+
+        function glitch() {
+            if (Math.random() < 0.2) {
+                chromaticBurst();
+            } else {
+                simpleSwap();
+            }
+
+            var nextDelay = 3000 + Math.random() * 12000;
+            setTimeout(glitch, nextDelay);
+        }
+
+        setTimeout(glitch, 3000);
+    }
+
     // Init
     function init() {
         initMobileNav();
@@ -258,6 +370,7 @@
         initHeaderScroll();
         initScrollAnimations();
         initGlitchText();
+        initPromoGlitch();
     }
 
     if (document.readyState === 'loading') {
