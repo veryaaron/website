@@ -1,0 +1,244 @@
+// Activity log data for Elsewhere / Nobodies Collective Association
+// Each entry: { date: "YYYY-MM-DD", source: "Team", text: "Update text" }
+// Sorted chronologically, newest first for display
+var UPDATES_DATA = [
+    // === March 17 ===
+    {"date": "2026-03-17", "source": "Tech", "text": "VIM (volunteer shift system) aka FIST (\ud83e\udd14) being merged into the Humans app as a single platform"},
+    {"date": "2026-03-17", "source": "Community", "text": "Volunteers FAQ being assembled to answer common questions about shifts and participation"},
+    {"date": "2026-03-17", "source": "Comms", "text": "Activity log section added to homepage and updates page for ongoing internal comms"},
+
+    // === March 16 ===
+    {"date": "2026-03-16", "source": "Community", "text": "NCA representatives confirmed for Burning Man European Leadership Summit in April"},
+    {"date": "2026-03-16", "source": "Comms", "text": "\"Burn\" removed from website text across all pages following trademark discussion"},
+    {"date": "2026-03-16", "source": "Production", "text": "Work started on converting budget to weekly cash flow plan aligned with event timeline"},
+    {"date": "2026-03-16", "source": "Finance", "text": "Bank account opening in final stages \u2014 daily in-person follow-ups at the branch"},
+    {"date": "2026-03-16", "source": "Tech", "text": "Humans app live with barrio pages, discount code management, email tools, and auto drive permissions"},
+    {"date": "2026-03-16", "source": "Governance", "text": "Async voting amendment being extracted for standalone vote \u2014 to unblock new membership"},
+    {"date": "2026-03-16", "source": "Legal", "text": "Pro bono EU IP lawyer volunteers to help with trademark questions"},
+    {"date": "2026-03-16", "source": "Comms", "text": "Board minutes now shared with Comms lead after each meeting to improve coordination"},
+    {"date": "2026-03-16", "source": "Comms", "text": "Comms vision discussed: proactive hype generation and community storytelling"},
+    {"date": "2026-03-16", "source": "Board", "text": "Board decided to prioritize Directors & Officers liability insurance procurement"},
+    {"date": "2026-03-16", "source": "Comms", "text": "March 12 board meeting and community meeting notes published to transparency page"},
+
+    // === March 15 ===
+    {"date": "2026-03-15", "source": "Comms", "text": "Homepage ticket section redesigned with clearer pricing tiers and VIP explanation"},
+    {"date": "2026-03-15", "source": "Comms", "text": "Elsewhere promo image with glitch effects added to homepage"},
+    {"date": "2026-03-15", "source": "Comms", "text": "Ticket discount code FAQ and dedicated ticketing section added to website"},
+
+    // === March 14 ===
+    {"date": "2026-03-14", "source": "Ticketing", "text": "Ticket sales launched on Ticket Tailor with Stripe integration for Elsewhere 2026"},
+    {"date": "2026-03-14", "source": "Legal", "text": "Terms & Conditions, Refund Policy, and Privacy Policy published on website"},
+    {"date": "2026-03-14", "source": "Legal", "text": "Privacy Policy broadened to cover all NCA websites and services, not just tickets"},
+    {"date": "2026-03-14", "source": "Legal", "text": "Ticket transfer and refund policy finalized: no refunds; roll-forward option if event cancelled"},
+    {"date": "2026-03-14", "source": "Comms", "text": "5-language switcher added to Code of Conduct, T&Cs, Refund Policy, and Privacy Policy"},
+    {"date": "2026-03-14", "source": "Comms", "text": "5-language switcher added to all 26 transparency meeting summary pages"},
+    {"date": "2026-03-14", "source": "Comms", "text": "Survival Guide placeholder page created with footer link"},
+    {"date": "2026-03-14", "source": "Tech", "text": "200 individual discount codes created for registered volunteers on Humans platform"},
+
+    // === March 13 ===
+    {"date": "2026-03-13", "source": "Comms", "text": "Website fully rebranded around \u2018Elsewhere\u2019 \u2014 shared header/footer extracted across all pages"},
+    {"date": "2026-03-13", "source": "Legal", "text": "Participant Code of Conduct published on website with incident reporting section"},
+    {"date": "2026-03-13", "source": "Comms", "text": "Join and volunteer redirect pages created for easy sharing"},
+    {"date": "2026-03-13", "source": "Comms", "text": "Automated barrio outreach campaign launched \u2014 20+ camps contacted"},
+    {"date": "2026-03-13", "source": "Community", "text": "Ellen introduced as new barrio support lead, heading a 5-person outreach team"},
+    {"date": "2026-03-13", "source": "Legal", "text": "T&Cs document drafted and shared for publication alongside Code of Conduct"},
+
+    // === March 12 ===
+    {"date": "2026-03-12", "source": "Community", "text": "Community call: event name \u2018Elsewhere\u2019 officially announced \u2014 ~75 attendees"},
+    {"date": "2026-03-12", "source": "Tech", "text": "Volunteer Information Manager (VIM) integration with Humans app underway"},
+    {"date": "2026-03-12", "source": "Tech", "text": "Humans app updated with barrio registration, shift creation, consent tracking"},
+    {"date": "2026-03-12", "source": "Production", "text": "Coordinators secured for all but one department; leads still needed in some areas"},
+    {"date": "2026-03-12", "source": "Ticketing", "text": "Ticket platform selected: Ticket Tailor + Stripe for sales and payment processing"},
+    {"date": "2026-03-12", "source": "Finance", "text": "Non-taxable donation method confirmed alongside ticket purchases"},
+    {"date": "2026-03-12", "source": "Finance", "text": "Bank account opening progressing with Sabadell; identity verification submitted"},
+
+    // === March 11 ===
+    {"date": "2026-03-11", "source": "Ticketing", "text": "Aaron onboarded as ticketing lead with full system walkthrough from Bruce"},
+    {"date": "2026-03-11", "source": "Ticketing", "text": "Ticket types defined: regular, tiered VIP, low-income, carer, youth, vehicle"},
+    {"date": "2026-03-11", "source": "Welfare", "text": "Call for consent team volunteers posted; Safer Space Lead identified as critical vacancy"},
+
+    // === March 10 ===
+    {"date": "2026-03-10", "source": "Comms", "text": "March 9 board meeting minutes published on transparency page"},
+
+    // === March 9 ===
+    {"date": "2026-03-09", "source": "Board", "text": "Association officially registered with government \u2014 temporary NIF received"},
+    {"date": "2026-03-09", "source": "Governance", "text": "Event officially named \u2018Elsewhere\u2019 by board vote following community polling"},
+    {"date": "2026-03-09", "source": "Governance", "text": "Event location confirmed in Monegros, Spain for July 2026"},
+    {"date": "2026-03-09", "source": "Governance", "text": "Classified documentation framework established \u2014 public, restricted, confidential tiers"},
+    {"date": "2026-03-09", "source": "Tech", "text": "Volunteer shift system deployed on new server for shift management"},
+    {"date": "2026-03-09", "source": "Production", "text": "Daniela\u2019s contractor agreement renewed for continued event organization"},
+
+    // === March 8 ===
+    {"date": "2026-03-08", "source": "Production", "text": "Weekly priority system launched: production sends 5 key blockers to board each week"},
+    {"date": "2026-03-08", "source": "Board", "text": "Sync call held to align production priorities and board-community communication"},
+
+    // === March 6 ===
+    {"date": "2026-03-06", "source": "Comms", "text": "5 new FAQ items added from community call questions; sections restructured"},
+    {"date": "2026-03-06", "source": "Comms", "text": "Full Go/No-Go statement published as standalone page linked from FAQ"},
+    {"date": "2026-03-06", "source": "Comms", "text": "March 5 board meeting and community call notes published to transparency page"},
+    {"date": "2026-03-06", "source": "Finance", "text": "NCA confirmed in official government registry; bank notified to proceed with account"},
+    {"date": "2026-03-06", "source": "Production", "text": "Daniela beginning local stakeholder outreach: comarca contacts and local partners"},
+
+    // === March 5 ===
+    {"date": "2026-03-05", "source": "Community", "text": "Largest community call yet: ~75 attendees for legal and production updates"},
+    {"date": "2026-03-05", "source": "Comms", "text": "Logo contest announced \u2014 community invited to submit vector designs after name reveal"},
+    {"date": "2026-03-05", "source": "Production", "text": "Shift from assessment to pre-production mode \u2014 milestones being set"},
+    {"date": "2026-03-05", "source": "Legal", "text": "Specialist lawyers advise on organizational structuring and risk mitigation"},
+    {"date": "2026-03-05", "source": "Comms", "text": "Standing comms item added to every board meeting agenda"},
+    {"date": "2026-03-05", "source": "Community", "text": "Event naming contest underway with 26 options; community survey voting open"},
+    {"date": "2026-03-05", "source": "Comms", "text": "Language tightened across all published board meeting summaries and FAQ"},
+
+    // === March 4 ===
+    {"date": "2026-03-04", "source": "Comms", "text": "FAQ expanded: 7 new questions, GO announcement banner, linked table of contents"},
+    {"date": "2026-03-04", "source": "Comms", "text": "Comms structure proposed: NCA and Comms post independently; Comms owns Instagram"},
+
+    // === March 3 ===
+    {"date": "2026-03-03", "source": "Comms", "text": "March 2 board minutes published on transparency page"},
+    {"date": "2026-03-03", "source": "Comms", "text": "Community meeting transcripts updated with higher-quality audio transcription"},
+
+    // === March 2 ===
+    {"date": "2026-03-02", "source": "Board", "text": "GO decision: community event confirmed for Monegros, Spain, July 7\u201312, 2026"},
+    {"date": "2026-03-02", "source": "Governance", "text": "Community go/no-go vote result: 65% yes with 67% participation \u2014 board ratifies"},
+    {"date": "2026-03-02", "source": "Finance", "text": "Legal retainer approved covering code of conduct, GDPR, T&Cs, and policies"},
+    {"date": "2026-03-02", "source": "Production", "text": "Production coordinator contract confirmed for continued event organization"},
+    {"date": "2026-03-02", "source": "Finance", "text": "Board members offer personal interest-free loans to cover first legal installments"},
+
+    // === March 1 ===
+    {"date": "2026-03-01", "source": "Comms", "text": "Burning Man HQ reaches out about European Leadership Summit \u2014 NCA invited"},
+
+    // === February 27 ===
+    {"date": "2026-02-27", "source": "Governance", "text": "Emergency board meeting: power of attorney granted for contract signing"},
+    {"date": "2026-02-27", "source": "Finance", "text": "Bank account opening resolution passed \u2014 three signatories authorized"},
+    {"date": "2026-02-27", "source": "Comms", "text": "Feb 26 board and community meeting notes published to transparency page"},
+    {"date": "2026-02-27", "source": "Tech", "text": "Humans app link replaces Typeform for volunteer applications on website"},
+
+    // === February 26 ===
+    {"date": "2026-02-26", "source": "Community", "text": "Community call: ticketing platform tested successfully, saving thousands in fees"},
+    {"date": "2026-02-26", "source": "Ticketing", "text": "Ticket Tailor + Stripe integration tested \u2014 successful test purchase completed"},
+    {"date": "2026-02-26", "source": "Governance", "text": "Go/no-go info pack released \u2014 33 interviews across 8 assessment areas"},
+    {"date": "2026-02-26", "source": "Governance", "text": "Go/no-go community poll sent to 168 registered association members"},
+    {"date": "2026-02-26", "source": "Legal", "text": "Legal counsel confirms low liability risk for association members under Spanish law"},
+    {"date": "2026-02-26", "source": "Production", "text": "Power team formed: Javi confirmed as lead with ~6 experienced volunteers"},
+    {"date": "2026-02-26", "source": "Governance", "text": "Official voting membership criteria finalized and published to GitHub"},
+    {"date": "2026-02-26", "source": "Welfare", "text": "Participant wellness expanding scope to cover collaborators and members pre-event"},
+    {"date": "2026-02-26", "source": "Community", "text": "Fundraising event for Curious Creatures scheduled for April 11th"},
+
+    // === February 25 ===
+    {"date": "2026-02-25", "source": "Tech", "text": "Humans participant platform launched at humans.nobodies.team"},
+    {"date": "2026-02-25", "source": "Comms", "text": "Feb 23 board meeting notes published to transparency page"},
+
+    // === February 23 ===
+    {"date": "2026-02-23", "source": "Finance", "text": "Tax ID confirmed \u2014 bank account process unblocked"},
+
+    // === February 22 ===
+    {"date": "2026-02-22", "source": "Community", "text": "300 name suggestions received for new event; top 25 shortlisted for ranked-choice vote"},
+
+    // === February 20 ===
+    {"date": "2026-02-20", "source": "Comms", "text": "Homepage redesigned: hero newsletter signup, simplified nav, reorganized join section"},
+{"date": "2026-02-20", "source": "Comms", "text": "Feb 19 board meeting and community call notes published to transparency page"},
+
+    // === February 19 ===
+    {"date": "2026-02-19", "source": "Community", "text": "Community call: production updates, naming contest, and go/no-go process explained"},
+    {"date": "2026-02-19", "source": "Governance", "text": "30 new collaborators approved \u2014 total registered collaborators reaches 71"},
+    {"date": "2026-02-19", "source": "Governance", "text": "Ranked-choice voting tool set up for community event name selection"},
+    {"date": "2026-02-19", "source": "Legal", "text": "Bylaws amendment process initiated to enable asynchronous electronic voting"},
+    {"date": "2026-02-19", "source": "Governance", "text": "Membership criteria drafted: 3 months contribution or one event as lead qualifies"},
+    {"date": "2026-02-19", "source": "Legal", "text": "D&O insurance and event liability insurance quotes being gathered"},
+    {"date": "2026-02-19", "source": "Production", "text": "Site inspection preparations underway; local government relationships confirmed strong"},
+    {"date": "2026-02-19", "source": "Comms", "text": "MetaLeads and Participant Wellness meeting notes published to transparency page"},
+
+    // === February 17 ===
+    {"date": "2026-02-17", "source": "Production", "text": "First coordinators meeting held \u2014 all departments check in on budgets and staffing"},
+    {"date": "2026-02-17", "source": "Welfare", "text": "Participant Wellness fully staffed: med, consent, welfare, and inclusion leads confirmed"},
+    {"date": "2026-02-17", "source": "Tech", "text": "Humans app operational \u2014 team management and compliance tracking live"},
+    {"date": "2026-02-17", "source": "Comms", "text": "Communications team formed \u2014 newsletter and social outreach beginning"},
+    {"date": "2026-02-17", "source": "Production", "text": "Master vendor engagement underway; compiling timeline for all key milestones"},
+    {"date": "2026-02-17", "source": "Tech", "text": "Volunteer shift system confirmed open source; preparing deployment to new server"},
+    {"date": "2026-02-17", "source": "Comms", "text": "FAQ page launched with key dates timeline and clickable resource links"},
+    {"date": "2026-02-17", "source": "Comms", "text": "Feb 16 board meeting notes published to transparency page"},
+
+    // === February 16 ===
+    {"date": "2026-02-16", "source": "Production", "text": "Production coordinator confirms event is operationally viable for July 2026"},
+    {"date": "2026-02-16", "source": "Production", "text": "Master timeline created with milestones from placements through strike"},
+    {"date": "2026-02-16", "source": "Production", "text": "Crew list document created for tracking department members, roles, and arrival dates"},
+    {"date": "2026-02-16", "source": "Comms", "text": "Planning calls switched from Zoom to Google Meet"},
+
+    // === February 13 ===
+    {"date": "2026-02-13", "source": "Community", "text": "Barrio survey results published for community transparency"},
+    {"date": "2026-02-13", "source": "Comms", "text": "Feb 12 board meeting, community meeting, and barrio survey published to website"},
+    {"date": "2026-02-13", "source": "Board", "text": "Community FAQ publication agreed as urgent priority to fill information void"},
+
+    // === February 12 ===
+    {"date": "2026-02-12", "source": "Comms", "text": "Event name selection process launched \u2014 community invited to suggest names"},
+    {"date": "2026-02-12", "source": "Board", "text": "Daniela approved to attend board meetings as non-voting production advisor"},
+    {"date": "2026-02-12", "source": "Comms", "text": "Shauna added to board information access for better external comms coordination"},
+
+    // === February 10 ===
+    {"date": "2026-02-10", "source": "Governance", "text": "Kate recruited to lead independent community go/no-go decision process"},
+    {"date": "2026-02-10", "source": "Community", "text": "Daniel gathered contact details from 37 different barrios through personal outreach"},
+    {"date": "2026-02-10", "source": "Comms", "text": "Board meeting notes for Feb 5, 6, 9 published to transparency page"},
+
+    // === February 9 ===
+    {"date": "2026-02-09", "source": "Governance", "text": "Community survey launched to gauge commitment for go/no-go decision"},
+    {"date": "2026-02-09", "source": "Governance", "text": "26 new collaborator applicants approved \u2014 onboarding accelerated"},
+    {"date": "2026-02-09", "source": "Finance", "text": "Board members provide interest-free loans to cover initial operating costs"},
+    {"date": "2026-02-09", "source": "Production", "text": "Ward to organize first MetaLeads meeting; departmental structure adopted provisionally"},
+    {"date": "2026-02-09", "source": "Governance", "text": "Four board members now required to approve sanitized board minutes for publication"},
+
+    // === February 5 ===
+    {"date": "2026-02-05", "source": "Comms", "text": "Desert/sand colour palette applied to website design"},
+    {"date": "2026-02-05", "source": "Comms", "text": "Jan 29 community meeting notes with full transcript and chat log published"},
+    {"date": "2026-02-05", "source": "Comms", "text": "Last names removed from all published attendee lists for privacy"},
+    {"date": "2026-02-05", "source": "Legal", "text": "Volunteer Data Protection Officer confirmed \u2014 corporate lawyer joins pro bono"},
+    {"date": "2026-02-05", "source": "Finance", "text": "10% VAT strategy confirmed with lawyers, saving significant costs"},
+    {"date": "2026-02-05", "source": "Tech", "text": "Profile management app presented to automate member tracking and compliance"},
+    {"date": "2026-02-05", "source": "Community", "text": "Public document created showing all available lead positions"},
+    {"date": "2026-02-05", "source": "Governance", "text": "Board confirmed authority to select and approve Meta Leads"},
+
+    // === February 4 ===
+    {"date": "2026-02-04", "source": "Tech", "text": "Peter built account management app with Claude in 6 hours for member roles and GDPR"},
+    {"date": "2026-02-04", "source": "Finance", "text": "First draft budget presentation prepared for community meeting"},
+    {"date": "2026-02-04", "source": "Comms", "text": "Website updated: photo slideshow replaces animated background, planning calls listed"},
+
+    // === February 3 ===
+    {"date": "2026-02-03", "source": "Production", "text": "Daniela hired as production coordinator \u2014 event planning expertise secured"},
+    {"date": "2026-02-03", "source": "Production", "text": "Immediate priorities set: secure cabins, toilets, and essential vendor contracts"},
+    {"date": "2026-02-03", "source": "Comms", "text": "Transparency section launched on website with January board meeting notes"},
+
+    // === February 2 ===
+    {"date": "2026-02-02", "source": "Governance", "text": "Contributor agreement and code of conduct approved by the board"},
+    {"date": "2026-02-02", "source": "Governance", "text": "First batch of collaborators approved: coordinators, camp leads, key volunteers"},
+    {"date": "2026-02-02", "source": "Production", "text": "Board agrees to hire production coordinator to assess event viability"},
+    {"date": "2026-02-02", "source": "Comms", "text": "Board commits to publishing sanitized meeting notes for transparency"},
+    {"date": "2026-02-02", "source": "Governance", "text": "Radical transparency policy adopted; weekly publication of meeting notes agreed"},
+    {"date": "2026-02-02", "source": "Tech", "text": "Two GitHub repositories approved: one public for legal docs, one internal for policies"},
+    {"date": "2026-02-02", "source": "Board", "text": "Task management: Discord plus shared spreadsheet adopted for simplicity"},
+
+    // === January 29 ===
+    {"date": "2026-01-29", "source": "Community", "text": "First community meeting held \u2014 Chris MCed, Daniel delivered intro, Pablo gave land update"},
+    {"date": "2026-01-29", "source": "Finance", "text": "Three board members authorized to manage the new bank account"},
+    {"date": "2026-01-29", "source": "Legal", "text": "GDPR ownership assigned \u2014 board member volunteers to lead data protection"},
+    {"date": "2026-01-29", "source": "Tech", "text": "Public and internal GitHub repositories created for association documents"},
+    {"date": "2026-01-29", "source": "Comms", "text": "Newsletter form and official MailerLite embed set up on website"},
+    {"date": "2026-01-29", "source": "Comms", "text": "Lead application form goes live via Typeform link on website"},
+
+    // === January 24 ===
+    {"date": "2026-01-24", "source": "Comms", "text": "Website copy updated to reflect this year\u2019s gathering \u2014 first public-facing language set"},
+
+    // === January 19 ===
+    {"date": "2026-01-19", "source": "Board", "text": "Event location confirmed in Monegros desert for 2026"},
+    {"date": "2026-01-19", "source": "Tech", "text": "Discord server set up as primary coordination platform"},
+    {"date": "2026-01-19", "source": "Governance", "text": "Domain registered and Google Workspace set up for the association"},
+    {"date": "2026-01-19", "source": "Governance", "text": "Blog platform planned for publishing meeting minutes to the community"},
+
+    // === January 17 ===
+    {"date": "2026-01-17", "source": "Legal", "text": "Prerequisites outlined: legal constitution, bylaws, bank account, Stripe setup needed"},
+
+    // === January 15 ===
+    {"date": "2026-01-15", "source": "Governance", "text": "NCA board holds its first official meeting \u2014 Daniel confirmed as chair per statutes"},
+    {"date": "2026-01-15", "source": "Governance", "text": "Quorum rules set: 50% + two-thirds majority for statute changes"},
+    {"date": "2026-01-15", "source": "Governance", "text": "General Assembly lead time changed from one month to 15 days for flexibility"},
+    {"date": "2026-01-15", "source": "Governance", "text": "Unanimous board support confirmed for pursuing an event in 2026"},
+    {"date": "2026-01-15", "source": "Board", "text": "Daniel proposed Holacracy-inspired facilitation model for tactical meetings"},
+    {"date": "2026-01-15", "source": "Governance", "text": "Board agreed to seek new members starting in March"}
+];
