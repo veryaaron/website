@@ -6,17 +6,16 @@ var USEFUL_LINKS_CATEGORIES = [
             {
                 icon: 'person',
                 title: 'Humans',
-                description: 'Your backstage pass. Join, apply, exist.',
+                description: 'Your backstage pass. Register, join teams, apply to roles, soon volunteering system.',
                 url: 'https://humans.nobodies.team/',
                 accent: '#c2703e'
             },
             {
                 icon: 'ticket',
                 title: 'Tickets',
-                description: 'Your way in. No ticket, no dust.',
+                description: 'Your way in. No ticket, no dust. Low-income tickets coming soon!',
                 url: 'https://tickets.nobodies.team/events/nobodiescollective/2089167',
-                accent: '#c9922a',
-                note: 'Low-income tickets coming soon.'
+                accent: '#c9922a'
             }
         ]
     },
@@ -27,7 +26,7 @@ var USEFUL_LINKS_CATEGORIES = [
             {
                 icon: 'discord',
                 title: 'Discord',
-                description: 'The main campfire. Talk, ask, lurk.',
+                description: 'The main campfire. Talk, ask, lurk, find your people.',
                 url: 'https://discord.gg/bFvUHQWJ',
                 accent: '#7289DA',
                 featured: true
@@ -35,21 +34,21 @@ var USEFUL_LINKS_CATEGORIES = [
             {
                 icon: 'whatsapp',
                 title: 'WhatsApp',
-                description: 'Announcements only. No talking. Just signals from above.',
+                description: 'Announcements only. Quick updates, no replies.',
                 url: 'https://chat.whatsapp.com/HXJTO6nevLw9QlORlkHxY0?mode=gi_c',
                 accent: '#4AA86A'
             },
             {
                 icon: 'telegram',
                 title: 'Telegram',
-                description: 'Broadcasts from the void.',
+                description: 'More announcements channel. We are everywhere, and Elsewhere.',
                 url: 'https://t.me/nobodiescollective',
                 accent: '#5B9BC5'
             },
             {
                 icon: 'instagram',
                 title: 'Instagram',
-                description: "We have to pretend we are social. Let's build something anyway.",
+                description: 'We pretend to be social. Help us building community.',
                 url: 'https://www.instagram.com/elsewhere.burn/',
                 accent: '#C06090'
             }
@@ -62,15 +61,15 @@ var USEFUL_LINKS_CATEGORIES = [
             {
                 icon: 'drive',
                 title: 'Drive',
-                description: 'Docs and shared chaos. Access required.',
+                description: 'Docs, files, shared chaos. Join the NCA or apply to a team and we\'ll give you access.',
                 url: null,
                 accent: '#6B8EC5'
             },
             {
                 icon: 'clickup',
                 title: 'ClickUp',
-                description: 'Where things pretend to be organized.',
-                url: null,
+                description: 'Tasks, projects, things to do. We are chaotic but we try our best.',
+                url: 'https://sharing.clickup.com/90152347870/l/h/6-901521156810-1/69b1bf9a027a2d4',
                 accent: '#8B78D4'
             }
         ]
