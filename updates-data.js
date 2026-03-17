@@ -3,6 +3,7 @@
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
     // === March 17 ===
+    {"date": "2026-03-17", "source": "Ticketing", "text": "<a href=\"low-income-tickets.html\">Low-income ticket policy and process published</a>"},
     {"date": "2026-03-17", "source": "Community", "text": "Barrio registration is open! Register your camp at <a href=\"https://humans.nobodies.team/Barrios\" target=\"_blank\">humans.nobodies.team/Barrios</a>"},
     {"date": "2026-03-17", "source": "Welfare", "text": "Consent team will hold European-consent-coordination deep dive session at ELS"},
     {"date": "2026-03-17", "source": "Tech", "text": "VIM (Volunteer Information Management) aka FIST (\ud83e\udd14) being merged into the Humans app as a single platform"},

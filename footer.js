@@ -35,6 +35,7 @@
                         '<a href="' + prefix + '/code-of-conduct.html">Code of Conduct</a>' +
                         '<a href="' + prefix + '/terms.html">Terms &amp; Conditions</a>' +
                         '<a href="' + prefix + '/refund-policy.html">Refund Policy</a>' +
+                        '<a href="' + prefix + '/low-income-tickets.html">Low-Income Tickets</a>' +
                         '<a href="' + prefix + '/privacy-policy.html">Privacy Policy</a>' +
                         '<a href="' + prefix + '/survival-guide.html">Survival Guide</a>' +
                     '</div>' +
