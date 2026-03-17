@@ -54,9 +54,9 @@
                 <h1>Elsewhere</h1>
                 <p class="hero-location">Tickets are now on sale! Public sale coming soon</p>
                 <div class="hero-newsletter" id="mlb2-hero" >
-                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/subscribe" data-code="" method="post" target="_blank">
+                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/subscribe" data-code="" method="post">
                         <div class="hero-newsletter-row">
-                            <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                            <input aria-label="email" aria-required="true" required type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
                             <input type="hidden" name="ml-submit" value="1">
                             <button type="submit" class="btn btn-primary">Notify Me!</button>
                         </div>
@@ -157,10 +157,10 @@
 
                 <div class="ticket-subscribe anim anim-fade-up">
                     <p>Subscribe to receive the public ticket announcement and other important updates.</p>
-                    <form class="ml-block-form ticket-subscribe-form" action="https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/subscribe" data-code="" method="post" target="_blank" novalidate>
+                    <form class="ml-block-form ticket-subscribe-form" action="https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/subscribe" data-code="" method="post">
                         <div class="ticket-subscribe-row">
                             <label for="ticket-email" class="sr-only">Email address</label>
-                            <input id="ticket-email" aria-label="Email address" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                            <input id="ticket-email" aria-label="Email address" aria-required="true" required type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
                             <input type="hidden" name="ml-submit" value="1">
                             <button type="submit" class="btn btn-primary">Subscribe</button>
                         </div>
@@ -419,14 +419,18 @@
                 var $ = ml_jQuery || jQuery;
                 $('.ml-subscribe-form-36155024 .row-success').show();
                 $('.ml-subscribe-form-36155024 .row-form').hide();
-                // Hero newsletter form
+                showHeroSuccess();
+                showTicketSuccess();
+            }
+            function showHeroSuccess() {
                 var heroSuccess = document.querySelector('.hero-newsletter-success');
                 var heroForm = document.querySelector('.hero-newsletter form');
                 if (heroSuccess && heroForm) {
                     heroForm.style.display = 'none';
                     heroSuccess.style.display = 'block';
                 }
-                // Tickets section subscribe form
+            }
+            function showTicketSuccess() {
                 var ticketsSuccess = document.querySelector('.ticket-subscribe-success');
                 var ticketsForm = document.querySelector('.ticket-subscribe-form');
                 if (ticketsSuccess && ticketsForm) {
@@ -434,6 +438,44 @@
                     ticketsSuccess.style.display = 'block';
                 }
             }
+            function handleMailerLiteSubmit(form, onSuccess) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var email = form.querySelector('input[name="fields[email]"]').value;
+                    if (!email) return;
+                    var btn = form.querySelector('button[type="submit"]');
+                    btn.disabled = true;
+                    btn.textContent = 'Subscribing...';
+                    var url = form.action;
+                    var params = new URLSearchParams(new FormData(form));
+                    fetch(url, {
+                        method: 'POST',
+                        body: params,
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+                    })
+                    .then(function(r) { return r.json(); })
+                    .then(function(data) {
+                        if (data.success) {
+                            onSuccess();
+                        } else {
+                            btn.disabled = false;
+                            btn.textContent = 'Try again';
+                            alert('Subscription failed. Please check your email and try again.');
+                        }
+                    })
+                    .catch(function() {
+                        btn.disabled = false;
+                        btn.textContent = 'Try again';
+                        alert('Something went wrong. Please try again.');
+                    });
+                });
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                var heroForm = document.querySelector('.hero-newsletter form');
+                if (heroForm) handleMailerLiteSubmit(heroForm, showHeroSuccess);
+                var ticketForm = document.querySelector('.ticket-subscribe-form');
+                if (ticketForm) handleMailerLiteSubmit(ticketForm, showTicketSuccess);
+            });
         </script>
         <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
         <script>fetch("https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/takel")</script>

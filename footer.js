@@ -38,8 +38,12 @@
                         '<a href="' + prefix + '/code-of-conduct.html">Code of Conduct</a>' +
                         '<a href="' + prefix + '/terms.html">Terms &amp; Conditions</a>' +
                         '<a href="' + prefix + '/refund-policy.html">Refund Policy</a>' +
-                        '<a href="' + prefix + '/low-income-tickets.html">Low-Income Tickets</a>' +
+                        '<a href="' + prefix + '/participant-agreement.html">Participant Agreement</a>' +
+                        '<a href="' + prefix + '/public-health-policy.html">Public Health Policy</a>' +
+                        '<a href="' + prefix + '/privacy-notice.html">Privacy Notice</a>' +
+                        '<a href="' + prefix + '/media-image-rights.html">Media &amp; Image Policy</a>' +
                         '<a href="' + prefix + '/privacy-policy.html">Privacy Policy</a>' +
+                        '<a href="' + prefix + '/low-income-tickets.html">Low-Income Tickets</a>' +
                     '</div>' +
                     '<div class="footer-volunteer">' +
                         '<h4>Volunteer</h4>' +
