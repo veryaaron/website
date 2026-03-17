@@ -9,6 +9,14 @@ var USEFUL_LINKS_CATEGORIES = [
                 description: 'Your backstage pass. Join, apply, exist.',
                 url: 'https://humans.nobodies.team/',
                 accent: '#c2703e'
+            },
+            {
+                icon: '🎟️',
+                title: 'Tickets',
+                description: 'Your way in. No ticket, no dust.',
+                url: 'https://tickets.nobodies.team/events/nobodiescollective/2089167',
+                accent: '#c9922a',
+                note: 'Low-income tickets coming soon.'
             }
         ]
     },
@@ -37,6 +45,13 @@ var USEFUL_LINKS_CATEGORIES = [
                 description: 'Broadcasts from the void.',
                 url: 'https://t.me/nobodiescollective',
                 accent: '#5B9BC5'
+            },
+            {
+                icon: '📸',
+                title: 'Instagram',
+                description: "We have to pretend we are social. Let's build something anyway.",
+                url: 'https://www.instagram.com/elsewhere.burn/',
+                accent: '#C06090'
             }
         ]
     },
@@ -59,27 +74,6 @@ var USEFUL_LINKS_CATEGORIES = [
                 url: null,
                 accent: '#8B78D4',
                 comingSoon: true
-            }
-        ]
-    },
-    {
-        id: 'tickets',
-        label: 'Tickets & Info',
-        cards: [
-            {
-                icon: '🎟️',
-                title: 'Tickets',
-                description: 'Your way in. No ticket, no dust.',
-                url: 'https://tickets.nobodies.team/events/nobodiescollective/2089167',
-                accent: '#c9922a',
-                note: 'Low-income tickets coming soon.'
-            },
-            {
-                icon: '📸',
-                title: 'Instagram',
-                description: "We have to pretend we are social. Let's build something anyway.",
-                url: 'https://www.instagram.com/elsewhere.burn/',
-                accent: '#C06090'
             }
         ]
     },
