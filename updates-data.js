@@ -14,7 +14,7 @@ var UPDATES_DATA = [
     {"date": "2026-03-16", "source": "Comms", "text": "\"Burn\" removed from website text across all pages following trademark discussion"},
     {"date": "2026-03-16", "source": "Production", "text": "Work started on converting budget to weekly cash flow plan aligned with event timeline"},
     {"date": "2026-03-16", "source": "Finance", "text": "Bank account opening in final stages \u2014 daily in-person follow-ups at the branch"},
-    {"date": "2026-03-16", "source": "Tech", "text": "Humans app live with barrio pages, discount code management, email tools, and auto drive permissions"},
+    {"date": "2026-03-16", "source": "Tech", "text": "Humans app live with barrio pages, voucher code management, email tools, and auto drive permissions"},
     {"date": "2026-03-16", "source": "Governance", "text": "Async voting amendment being extracted for standalone vote \u2014 to unblock new membership"},
     {"date": "2026-03-16", "source": "Legal", "text": "Pro bono EU IP lawyer volunteers to help with trademark questions"},
     {"date": "2026-03-16", "source": "Comms", "text": "Board minutes now shared with Comms lead after each meeting to improve coordination"},
@@ -25,7 +25,7 @@ var UPDATES_DATA = [
     // === March 15 ===
     {"date": "2026-03-15", "source": "Comms", "text": "Homepage ticket section redesigned with clearer pricing tiers and VIP explanation"},
     {"date": "2026-03-15", "source": "Comms", "text": "Elsewhere promo image with glitch effects added to homepage"},
-    {"date": "2026-03-15", "source": "Comms", "text": "Ticket discount code FAQ and dedicated ticketing section added to website"},
+    {"date": "2026-03-15", "source": "Comms", "text": "Ticket voucher code FAQ and dedicated ticketing section added to website"},
 
     // === March 14 ===
     {"date": "2026-03-14", "source": "Ticketing", "text": "Ticket sales launched on Ticket Tailor with Stripe integration for Elsewhere 2026"},
@@ -35,7 +35,7 @@ var UPDATES_DATA = [
     {"date": "2026-03-14", "source": "Comms", "text": "5-language switcher added to Code of Conduct, T&Cs, Refund Policy, and Privacy Policy"},
     {"date": "2026-03-14", "source": "Comms", "text": "5-language switcher added to all 26 transparency meeting summary pages"},
     {"date": "2026-03-14", "source": "Comms", "text": "Survival Guide placeholder page created with footer link"},
-    {"date": "2026-03-14", "source": "Tech", "text": "200 individual discount codes created for registered volunteers on Humans platform"},
+    {"date": "2026-03-14", "source": "Tech", "text": "200 individual voucher codes created for registered volunteers on Humans platform"},
 
     // === March 13 ===
     {"date": "2026-03-13", "source": "Comms", "text": "Website fully rebranded around \u2018Elsewhere\u2019 \u2014 shared header/footer extracted across all pages"},
