@@ -3,6 +3,7 @@
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
     // === March 18 ===
+    {"date": "2026-03-18", "source": "Comms", "text": "Tickets page fully rewritten with pricing waves, alternative ticket paths, and important info section"},
     {"date": "2026-03-18", "source": "Ticketing", "text": "Translated new ticketing legal docs to multiple languages"},
 
     // === March 17 ===
