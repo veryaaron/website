@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consent | Elsewhere &mdash; by Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .consent-page {
+            padding: 8rem 0 4rem;
+        }
+
+        .consent-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .consent-header h1 {
+            margin-bottom: 1rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+
+        .consent-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .consent-intro {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: var(--color-text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .consent-intro p {
+            margin-bottom: 1rem;
+        }
+
+        .consent-intro strong {
+            color: var(--color-text);
+        }
+
+        .consent-section {
+            margin-top: 3rem;
+        }
+
+        .consent-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+        }
+
+        .consent-section h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+            color: var(--color-text);
+        }
+
+        .consent-section p {
+            color: var(--color-text-muted);
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+
+        .consent-section ul {
+            color: var(--color-text-muted);
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+        }
+
+        .consent-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .consent-section li strong {
+            color: var(--color-text);
+        }
+
+        .fires-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .fires-list li {
+            padding: 1rem 1.25rem;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid var(--color-accent);
+            background: var(--color-bg-alt);
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .fires-list li strong {
+            display: block;
+            font-size: 1.05rem;
+            margin-bottom: 0.35rem;
+            color: var(--color-text);
+        }
+
+        .consent-callout {
+            margin-top: 3rem;
+            padding: 2rem 2.5rem;
+            background: #3d4a35;
+            border-radius: var(--radius);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .consent-callout h2,
+        .consent-callout h3 {
+            color: #fff;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            border: none;
+            padding: 0;
+        }
+
+        .consent-callout h3 {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+        }
+
+        .consent-callout p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0.75rem;
+        }
+
+        .consent-callout ul {
+            color: rgba(255, 255, 255, 0.9);
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .consent-callout li {
+            margin-bottom: 0.5rem;
+        }
+
+        .consent-callout p:last-child,
+        .consent-callout ul:last-child { margin-bottom: 0; }
+
+        .consent-callout a {
+            color: rgba(255, 255, 255, 0.95);
+            text-decoration: underline;
+        }
+
+        .consent-resources {
+            margin-top: 3rem;
+        }
+
+        .consent-resources h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+        }
+
+        .resource-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .resource-list li {
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .resource-list li span.resource-title {
+            color: var(--color-text);
+            font-weight: 500;
+        }
+
+        .coming-soon {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-accent);
+            background: rgba(194, 112, 62, 0.1);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .consent-coc-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--color-accent);
+            color: #fff;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+        .consent-coc-link:hover {
+            background: #e08040;
+            color: #fff;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .lang-toggle button {
+            padding: 0.75rem 1.5rem;
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid var(--color-border);
+            background: var(--color-bg-alt);
+            color: var(--color-text-muted);
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active,
+        .lang-toggle button:hover {
+            background: var(--color-accent);
+            border-color: var(--color-accent);
+            color: #fff;
+        }
+
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+
+        .lang-note {
+            font-style: italic;
+            color: var(--color-text-muted);
+            margin-bottom: 2rem;
+            padding: 1rem 1.5rem;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .consent-page {
+                padding: 6rem 0 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="consent-page">
+        <div class="container">
+            <a href="/" class="back-link">Back to Home</a>
+
+            <div class="consent-header">
+                <h1>Consent</h1>
+            </div>
+
+            <div class="lang-toggle">
+                <button class="active" data-lang="en">English</button>
+                <button data-lang="es">Espa&ntilde;ol</button>
+                <button data-lang="fr">Fran&ccedil;ais</button>
+                <button data-lang="it">Italiano</button>
+                <button data-lang="de">Deutsch</button>
+            </div>
+
+            <div class="consent-content">
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+
+                    <div class="consent-intro">
+                        <p><strong>Anything wonderful can be terrible if given without consent.</strong> This includes sexual experiences, food, any form of touch, helping with a task, having your photo taken or shared with others&hellip; even a cool spray of water!</p>
+                        <p>What feels great for you right now could be exactly what another person does <strong>not</strong> want, or what you would not appreciate for yourself, in a different setting. It is horrible to realize that what you gave with good intentions may have been experienced with pain. Just take the extra step and check.</p>
+                        <p>Someone on the playa would likely want and appreciate what you have to offer, or wants to offer what you want to receive. Find them, talk with them, and have fun!</p>
+                    </div>
+
+                    <section class="consent-section">
+                        <h2>What is Consent?</h2>
+                        <p><strong>Give only what&rsquo;s appreciated, take only what&rsquo;s offered.</strong></p>
+                        <p>As a community with diverse perspectives, backgrounds, and communication styles, it&rsquo;s best to use clear verbal communication to make sure everyone&rsquo;s boundaries are understood and respected.</p>
+                        <p>Consent can be described in five qualities &mdash; <strong>Freely Given, Informed, Reversible, Enthusiastic, Specific (FIRES)</strong> &mdash; if they&rsquo;re all there, you&rsquo;re in consent:</p>
+
+                        <ul class="fires-list">
+                            <li>
+                                <strong>Freely Given</strong>
+                                If someone doesn&rsquo;t feel able to say no, they can&rsquo;t say yes. This means we need to ask with no pressure, and we need to be mindful of the pressure people can feel when there is a power imbalance present such as when one person is in a position of leadership or one person is, for example, bigger. Our capacity to say no is also reduced when we are unconscious, intoxicated, exhausted, upset or in a trauma response (particularly freeze and fawn). We need to be mindful of everyone&rsquo;s state when we ask for consent &mdash; can they take in information and make decisions?
+                            </li>
+                            <li>
+                                <strong>Informed</strong>
+                                Communicate clearly what your desire is and invite questions &mdash; this is really going to help avoid disappointment or negative feelings later. Everyone involved needs to know what is going to happen in as much detail as is necessary to them in order to make a decision.
+                            </li>
+                            <li>
+                                <strong>Reversible</strong>
+                                Consent can be withdrawn or downgraded at any time, without needing justification. Sometimes the activity doesn&rsquo;t feel as good as we imagined it would. Continuing anything that doesn&rsquo;t feel good is being out of consent. Check in regularly to be sure everyone is still in consent.
+                            </li>
+                            <li>
+                                <strong>Enthusiastic</strong>
+                                You&rsquo;re looking for an active willingness to engage in the proposed activity. An enthusiastic, embodied YES. Anything less should be considered a No until you get clarification. A fawn response, silence, passivity or lack of resistance is a No.
+                            </li>
+                            <li>
+                                <strong>Specific</strong>
+                                Just because someone consents to one activity does not mean they consent to anything else. If you want to change or escalate the activity, ask first. And there needs to be consent from everyone involved &mdash; if you want to join a group interaction, first make sure every person gives consent.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="consent-resources">
+                        <h2>For More Information</h2>
+                        <ul class="resource-list">
+                            <li><span class="resource-title">Guide to Navigating Sex+ Spaces at Burns</span> <span class="coming-soon">Coming Soon</span></li>
+                            <li><span class="resource-title">Relationship Survival Guide</span> <span class="coming-soon">Coming Soon</span></li>
+                            <li><span class="resource-title">Barrios Consent Guide</span> <span class="coming-soon">Coming Soon</span></li>
+                            <li><span class="resource-title">Safe Workshop Guide</span> <span class="coming-soon">Coming Soon</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="consent-callout" style="margin-top: 3rem;">
+                        <h2>At the Event</h2>
+
+                        <h3>Consent Tuesday</h3>
+                        <p>A dedicated day during the event to focus on consent awareness and education.</p>
+
+                        <h3>If You Experience a Consent Violation</h3>
+                        <ul>
+                            <li>A Nomad or anyone around can help</li>
+                            <li><strong>Welfare Enough</strong> is open 24/7 for emotional support</li>
+                            <li><strong>Malfare</strong> is open 24/7 to assist with injuries, safety concerns, and interpersonal conflicts in confidentiality</li>
+                        </ul>
+
+                        <h3>Safer Space</h3>
+                        <p>The Safer Space is a private, comfortable, air conditioned cabin specifically designed for listening to you without being disturbed. In this environment we invite you to have a confidential support talk with a volunteer who has special skills and training in consent support.</p>
+                        <p>Anybody who feels impacted after a consent breach (whatever it is, not only sexual or physical assaults) is very welcome to have a confidential chat in the Safer Space.</p>
+                    </div>
+
+                    <section class="consent-section">
+                        <h2>Reporting</h2>
+                        <p>There is a Report Form that can be used to report any behaviour outside the <a href="code-of-conduct.html">Participant Code of Conduct</a> or which concerns you.</p>
+                        <p style="margin-bottom: 1.5rem;"><span class="coming-soon">Report Form Coming Soon</span></p>
+                        <p>At the event, Report Forms are available at Welfare, at the Yellow Tent in the freecamping zone, from barrio consent leads, and at the Safer Space. There are also QR codes in every toilet for online reporting.</p>
+
+                        <h3>What Happens When We Receive a Report?</h3>
+                        <p>During the event, the reporting boxes are checked by the Consent Leads to make sure we take any actions that are needed to keep everyone safe.</p>
+                        <p>After the event, two Consent Session Leads who have signed a confidentiality agreement read the reports. We categorise the reports with reference to the Participant Code of Conduct &mdash; the agreement everyone made as to how they would interact with each other when they bought a ticket or joined the community on <a href="https://humans.nobodies.team" target="_blank">humans.nobodies.team</a> &mdash; and our colour code system.</p>
+                        <p>The Consent Leads decide what actions to take on each report to help prevent another similar situation in the future &mdash; there could be learning for workshop leads or barrios in how they hold a space, what resources from Consent Education team could better support the community, exploration with specific individuals, an exploration of new ways the event can communicate, shape its spaces etc.</p>
+
+                        <h3>Consent Sessions</h3>
+                        <p>If the following criteria are met, the Consent Session Team offer Consent Sessions with a reported person:</p>
+                        <ul>
+                            <li>The report is submitted directly by a participant impacted by a breach of the Participant Code of Conduct</li>
+                            <li>We are able to identify the reporter and the reported person</li>
+                            <li>The event happened on site, at any other official event, or on any official online space</li>
+                            <li>The people involved all bought a ticket for the last event</li>
+                            <li>The reporter agrees for the team to share the minimum of data with the reported person necessary to hold the sessions</li>
+                            <li>There are 2 blue code reports from 2 different people about the reported person, or 1 orange or red code report</li>
+                        </ul>
+                        <p>Through the Consent Sessions we explore what happened, the learning that can come from that both individually and collectively, and aim to create a Participation Agreement that enables the reported person to participate at the next event whilst balancing the need of the community to feel safe.</p>
+                    </section>
+
+                    <p style="margin-top: 2rem;">
+                        <a href="code-of-conduct.html" class="consent-coc-link">Read the Participant Code of Conduct &rarr;</a>
+                    </p>
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+
+                    <div class="consent-intro">
+                        <p><strong>Cualquier cosa maravillosa puede ser terrible si se da sin consentimiento.</strong> Esto incluye experiencias sexuales, comida, cualquier forma de contacto, ayudar con una tarea, que te hagan o compartan fotos&hellip; &iexcl;incluso un refrescante chorro de agua!</p>
+                        <p>Lo que a ti te sienta genial ahora mismo podr&iacute;a ser exactamente lo que otra persona <strong>no</strong> quiere, o lo que t&uacute; no apreciar&iacute;as en un contexto diferente. Es horrible darte cuenta de que lo que diste con buena intenci&oacute;n pudo ser experimentado con dolor. Solo da el paso extra y pregunta.</p>
+                        <p>Alguien en la playa probablemente quiera y aprecie lo que tienes para ofrecer, o quiera ofrecer lo que t&uacute; deseas recibir. Enc&uacute;entralos, habla con ellos y &iexcl;divi&eacute;rtete!</p>
+                    </div>
+
+                    <section class="consent-section">
+                        <h2>&iquest;Qu&eacute; es el Consentimiento?</h2>
+                        <p><strong>Da solo lo que se aprecia, toma solo lo que se ofrece.</strong></p>
+                        <p>Como comunidad con diversas perspectivas, or&iacute;genes y estilos de comunicaci&oacute;n, lo mejor es usar una comunicaci&oacute;n verbal clara para asegurarnos de que los l&iacute;mites de todos sean comprendidos y respetados.</p>
+                        <p>El consentimiento se puede describir con cinco cualidades &mdash; <strong>Dado Libremente, Informado, Reversible, Entusiasta, Espec&iacute;fico (FIRES)</strong> &mdash; si est&aacute;n todas presentes, est&aacute;s en consentimiento:</p>
+
+                        <ul class="fires-list">
+                            <li>
+                                <strong>Dado Libremente</strong>
+                                Si alguien no se siente capaz de decir que no, no puede decir que s&iacute;. Esto significa que debemos preguntar sin presi&oacute;n, y debemos ser conscientes de la presi&oacute;n que las personas pueden sentir cuando hay un desequilibrio de poder, como cuando una persona est&aacute; en posici&oacute;n de liderazgo o es, por ejemplo, m&aacute;s grande. Nuestra capacidad de decir no tambi&eacute;n se reduce cuando estamos inconscientes, intoxicados, agotados, alterados o en una respuesta traum&aacute;tica (particularmente la paralizaci&oacute;n y la complacencia). Debemos ser conscientes del estado de todos cuando pedimos consentimiento &mdash; &iquest;pueden procesar informaci&oacute;n y tomar decisiones?
+                            </li>
+                            <li>
+                                <strong>Informado</strong>
+                                Comunica claramente cu&aacute;l es tu deseo e invita preguntas &mdash; esto realmente va a ayudar a evitar decepciones o sentimientos negativos despu&eacute;s. Todos los involucrados necesitan saber qu&eacute; va a pasar con tanto detalle como les sea necesario para tomar una decisi&oacute;n.
+                            </li>
+                            <li>
+                                <strong>Reversible</strong>
+                                El consentimiento puede retirarse o reducirse en cualquier momento, sin necesidad de justificaci&oacute;n. A veces la actividad no se siente tan bien como la imaginamos. Continuar algo que no se siente bien es estar fuera del consentimiento. Verifica regularmente que todos sigan en consentimiento.
+                            </li>
+                            <li>
+                                <strong>Entusiasta</strong>
+                                Buscas una disposici&oacute;n activa para participar en la actividad propuesta. Un S&Iacute; entusiasta y corporalizado. Cualquier cosa menos debe considerarse un No hasta que obtengas una aclaraci&oacute;n. Una respuesta de complacencia, silencio, pasividad o falta de resistencia es un No.
+                            </li>
+                            <li>
+                                <strong>Espec&iacute;fico</strong>
+                                Que alguien consienta una actividad no significa que consienta cualquier otra cosa. Si quieres cambiar o escalar la actividad, pregunta primero. Y se necesita el consentimiento de todos los involucrados &mdash; si quieres unirte a una interacci&oacute;n grupal, primero aseg&uacute;rate de que cada persona d&eacute; su consentimiento.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="consent-resources">
+                        <h2>M&aacute;s Informaci&oacute;n</h2>
+                        <ul class="resource-list">
+                            <li><span class="resource-title">Gu&iacute;a para Navegar Espacios Sex+ en Burns</span> <span class="coming-soon">Pr&oacute;ximamente</span></li>
+                            <li><span class="resource-title">Gu&iacute;a de Supervivencia para Relaciones</span> <span class="coming-soon">Pr&oacute;ximamente</span></li>
+                            <li><span class="resource-title">Gu&iacute;a de Consentimiento para Barrios</span> <span class="coming-soon">Pr&oacute;ximamente</span></li>
+                            <li><span class="resource-title">Gu&iacute;a para Talleres Seguros</span> <span class="coming-soon">Pr&oacute;ximamente</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="consent-callout" style="margin-top: 3rem;">
+                        <h2>En el Evento</h2>
+
+                        <h3>Martes del Consentimiento</h3>
+                        <p>Un d&iacute;a dedicado durante el evento para centrarse en la concienciaci&oacute;n y educaci&oacute;n sobre el consentimiento.</p>
+
+                        <h3>Si Experimentas una Violaci&oacute;n del Consentimiento</h3>
+                        <ul>
+                            <li>Un N&oacute;mada o cualquier persona cercana puede ayudar</li>
+                            <li><strong>Welfare Enough</strong> est&aacute; abierto 24/7 para apoyo emocional</li>
+                            <li><strong>Malfare</strong> est&aacute; abierto 24/7 para asistir con lesiones, preocupaciones de seguridad y conflictos interpersonales en confidencialidad</li>
+                        </ul>
+
+                        <h3>Espacio Seguro (Safer Space)</h3>
+                        <p>El Espacio Seguro es una cabina privada, c&oacute;moda y con aire acondicionado, dise&ntilde;ada espec&iacute;ficamente para escucharte sin ser molestado. En este entorno te invitamos a tener una conversaci&oacute;n confidencial de apoyo con un voluntario que tiene habilidades especiales y formaci&oacute;n en apoyo al consentimiento.</p>
+                        <p>Cualquier persona que se sienta afectada despu&eacute;s de una violaci&oacute;n del consentimiento (sea lo que sea, no solo agresiones sexuales o f&iacute;sicas) es muy bienvenida a tener una charla confidencial en el Espacio Seguro.</p>
+                    </div>
+
+                    <section class="consent-section">
+                        <h2>Denuncias</h2>
+                        <p>Existe un Formulario de Denuncia que puede utilizarse para reportar cualquier comportamiento fuera del <a href="code-of-conduct.html">C&oacute;digo de Conducta del Participante</a> o que te preocupe.</p>
+                        <p style="margin-bottom: 1.5rem;"><span class="coming-soon">Formulario de Denuncia Pr&oacute;ximamente</span></p>
+                        <p>En el evento, los Formularios de Denuncia est&aacute;n disponibles en Welfare, en la Carpa Amarilla de la zona de acampada libre, con los l&iacute;deres de consentimiento de los barrios y en el Espacio Seguro. Tambi&eacute;n hay c&oacute;digos QR en cada ba&ntilde;o para denuncias en l&iacute;nea.</p>
+
+                        <h3>&iquest;Qu&eacute; Pasa Cuando Recibimos una Denuncia?</h3>
+                        <p>Durante el evento, los buzones de denuncias son revisados por los L&iacute;deres de Consentimiento para asegurarse de que tomamos las acciones necesarias para mantener a todos seguros.</p>
+                        <p>Despu&eacute;s del evento, dos L&iacute;deres de Sesiones de Consentimiento que han firmado un acuerdo de confidencialidad leen las denuncias. Categorizamos las denuncias con referencia al C&oacute;digo de Conducta del Participante &mdash; el acuerdo que todos hicieron sobre c&oacute;mo interactuar&iacute;an entre s&iacute; al comprar una entrada o unirse a la comunidad en <a href="https://humans.nobodies.team" target="_blank">humans.nobodies.team</a> &mdash; y nuestro sistema de c&oacute;digos de colores.</p>
+                        <p>Los L&iacute;deres de Consentimiento deciden qu&eacute; acciones tomar sobre cada denuncia para ayudar a prevenir otra situaci&oacute;n similar en el futuro &mdash; puede haber aprendizajes para l&iacute;deres de talleres o barrios sobre c&oacute;mo gestionan un espacio, qu&eacute; recursos del equipo de Educaci&oacute;n en Consentimiento podr&iacute;an apoyar mejor a la comunidad, exploraci&oacute;n con individuos espec&iacute;ficos, una exploraci&oacute;n de nuevas formas en que el evento puede comunicar, dar forma a sus espacios, etc.</p>
+
+                        <h3>Sesiones de Consentimiento</h3>
+                        <p>Si se cumplen los siguientes criterios, el Equipo de Sesiones de Consentimiento ofrece Sesiones de Consentimiento con una persona denunciada:</p>
+                        <ul>
+                            <li>La denuncia es presentada directamente por un participante afectado por una violaci&oacute;n del C&oacute;digo de Conducta del Participante</li>
+                            <li>Podemos identificar al denunciante y a la persona denunciada</li>
+                            <li>El evento ocurri&oacute; en el sitio, en cualquier otro evento oficial o en cualquier espacio oficial en l&iacute;nea</li>
+                            <li>Las personas involucradas compraron una entrada para el &uacute;ltimo evento</li>
+                            <li>El denunciante acepta que el equipo comparta el m&iacute;nimo de datos con la persona denunciada necesario para llevar a cabo las sesiones</li>
+                            <li>Hay 2 denuncias de c&oacute;digo azul de 2 personas diferentes sobre la persona denunciada, o 1 denuncia de c&oacute;digo naranja o rojo</li>
+                        </ul>
+                        <p>A trav&eacute;s de las Sesiones de Consentimiento exploramos lo que sucedi&oacute;, el aprendizaje que puede surgir tanto individual como colectivamente, y buscamos crear un Acuerdo de Participaci&oacute;n que permita a la persona denunciada participar en el pr&oacute;ximo evento mientras se equilibra la necesidad de la comunidad de sentirse segura.</p>
+                    </section>
+
+                    <p style="margin-top: 2rem;">
+                        <a href="code-of-conduct.html" class="consent-coc-link">Leer el C&oacute;digo de Conducta del Participante &rarr;</a>
+                    </p>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="consent-intro">
+                        <p><strong>Tout ce qui est merveilleux peut &ecirc;tre terrible s&rsquo;il est donn&eacute; sans consentement.</strong> Cela inclut les exp&eacute;riences sexuelles, la nourriture, toute forme de contact, l&rsquo;aide &agrave; une t&acirc;che, le fait d&rsquo;&ecirc;tre photographi&eacute; ou que vos photos soient partag&eacute;es&hellip; m&ecirc;me un jet d&rsquo;eau rafra&icirc;chissant !</p>
+                        <p>Ce qui vous fait du bien en ce moment pourrait &ecirc;tre exactement ce qu&rsquo;une autre personne ne veut <strong>pas</strong>, ou ce que vous n&rsquo;appr&eacute;cieriez pas vous-m&ecirc;me dans un contexte diff&eacute;rent. C&rsquo;est horrible de r&eacute;aliser que ce que vous avez donn&eacute; avec de bonnes intentions a pu &ecirc;tre v&eacute;cu avec douleur. Faites simplement l&rsquo;effort suppl&eacute;mentaire de v&eacute;rifier.</p>
+                        <p>Quelqu&rsquo;un sur la playa voudrait probablement ce que vous avez &agrave; offrir, ou veut offrir ce que vous souhaitez recevoir. Trouvez-les, parlez avec eux et amusez-vous !</p>
+                    </div>
+
+                    <section class="consent-section">
+                        <h2>Qu&rsquo;est-ce que le Consentement ?</h2>
+                        <p><strong>Ne donnez que ce qui est appr&eacute;ci&eacute;, ne prenez que ce qui est offert.</strong></p>
+                        <p>En tant que communaut&eacute; aux perspectives, origines et styles de communication divers, il est pr&eacute;f&eacute;rable d&rsquo;utiliser une communication verbale claire pour s&rsquo;assurer que les limites de chacun sont comprises et respect&eacute;es.</p>
+                        <p>Le consentement peut &ecirc;tre d&eacute;crit par cinq qualit&eacute;s &mdash; <strong>Donn&eacute; Librement, &Eacute;clair&eacute;, R&eacute;versible, Enthousiaste, Sp&eacute;cifique (FIRES)</strong> &mdash; si elles sont toutes pr&eacute;sentes, vous &ecirc;tes en consentement :</p>
+
+                        <ul class="fires-list">
+                            <li>
+                                <strong>Donn&eacute; Librement</strong>
+                                Si quelqu&rsquo;un ne se sent pas capable de dire non, il ne peut pas dire oui. Cela signifie que nous devons demander sans pression, et &ecirc;tre conscients de la pression que les gens peuvent ressentir lorsqu&rsquo;il y a un d&eacute;s&eacute;quilibre de pouvoir, par exemple quand une personne est en position de leadership ou est physiquement plus imposante. Notre capacit&eacute; &agrave; dire non est &eacute;galement r&eacute;duite lorsque nous sommes inconscients, intoxiqu&eacute;s, &eacute;puis&eacute;s, perturb&eacute;s ou en r&eacute;ponse traumatique (particuli&egrave;rement le gel et la complaisance). Nous devons &ecirc;tre attentifs &agrave; l&rsquo;&eacute;tat de chacun lorsque nous demandons le consentement &mdash; peuvent-ils traiter l&rsquo;information et prendre des d&eacute;cisions ?
+                            </li>
+                            <li>
+                                <strong>&Eacute;clair&eacute;</strong>
+                                Communiquez clairement votre d&eacute;sir et invitez les questions &mdash; cela va vraiment aider &agrave; &eacute;viter les d&eacute;ceptions ou les sentiments n&eacute;gatifs par la suite. Toutes les personnes impliqu&eacute;es doivent savoir ce qui va se passer avec autant de d&eacute;tails qu&rsquo;il leur est n&eacute;cessaire pour prendre une d&eacute;cision.
+                            </li>
+                            <li>
+                                <strong>R&eacute;versible</strong>
+                                Le consentement peut &ecirc;tre retir&eacute; ou r&eacute;duit &agrave; tout moment, sans avoir besoin de justification. Parfois, l&rsquo;activit&eacute; ne se sent pas aussi bien que nous l&rsquo;avions imagin&eacute;. Continuer quelque chose qui ne fait pas du bien, c&rsquo;est &ecirc;tre hors consentement. V&eacute;rifiez r&eacute;guli&egrave;rement que tout le monde est toujours en consentement.
+                            </li>
+                            <li>
+                                <strong>Enthousiaste</strong>
+                                Vous recherchez une volont&eacute; active de participer &agrave; l&rsquo;activit&eacute; propos&eacute;e. Un OUI enthousiaste et incarn&eacute;. Tout ce qui est moindre doit &ecirc;tre consid&eacute;r&eacute; comme un Non jusqu&rsquo;&agrave; ce que vous obteniez une clarification. Une r&eacute;ponse de complaisance, le silence, la passivit&eacute; ou l&rsquo;absence de r&eacute;sistance est un Non.
+                            </li>
+                            <li>
+                                <strong>Sp&eacute;cifique</strong>
+                                Ce n&rsquo;est pas parce que quelqu&rsquo;un consent &agrave; une activit&eacute; qu&rsquo;il consent &agrave; autre chose. Si vous voulez changer ou intensifier l&rsquo;activit&eacute;, demandez d&rsquo;abord. Et il faut le consentement de toutes les personnes impliqu&eacute;es &mdash; si vous voulez rejoindre une interaction de groupe, assurez-vous d&rsquo;abord que chaque personne donne son consentement.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="consent-resources">
+                        <h2>Pour Plus d&rsquo;Informations</h2>
+                        <ul class="resource-list">
+                            <li><span class="resource-title">Guide pour naviguer dans les espaces Sex+ aux Burns</span> <span class="coming-soon">Bient&ocirc;t</span></li>
+                            <li><span class="resource-title">Guide de survie pour les relations</span> <span class="coming-soon">Bient&ocirc;t</span></li>
+                            <li><span class="resource-title">Guide de consentement pour les barrios</span> <span class="coming-soon">Bient&ocirc;t</span></li>
+                            <li><span class="resource-title">Guide pour des ateliers s&ucirc;rs</span> <span class="coming-soon">Bient&ocirc;t</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="consent-callout" style="margin-top: 3rem;">
+                        <h2>&Agrave; l&rsquo;&Eacute;v&eacute;nement</h2>
+
+                        <h3>Mardi du Consentement</h3>
+                        <p>Une journ&eacute;e d&eacute;di&eacute;e pendant l&rsquo;&eacute;v&eacute;nement pour se concentrer sur la sensibilisation et l&rsquo;&eacute;ducation au consentement.</p>
+
+                        <h3>Si Vous Vivez une Violation du Consentement</h3>
+                        <ul>
+                            <li>Un Nomade ou toute personne autour de vous peut aider</li>
+                            <li><strong>Welfare Enough</strong> est ouvert 24h/24 pour le soutien &eacute;motionnel</li>
+                            <li><strong>Malfare</strong> est ouvert 24h/24 pour aider en cas de blessures, de pr&eacute;occupations de s&eacute;curit&eacute; et de conflits interpersonnels en toute confidentialit&eacute;</li>
+                        </ul>
+
+                        <h3>Espace Plus S&ucirc;r (Safer Space)</h3>
+                        <p>L&rsquo;Espace Plus S&ucirc;r est une cabine priv&eacute;e, confortable et climatis&eacute;e, sp&eacute;cialement con&ccedil;ue pour vous &eacute;couter sans &ecirc;tre d&eacute;rang&eacute;. Dans cet environnement, nous vous invitons &agrave; avoir une conversation confidentielle de soutien avec un b&eacute;n&eacute;vole ayant des comp&eacute;tences sp&eacute;ciales et une formation en soutien au consentement.</p>
+                        <p>Toute personne qui se sent affect&eacute;e apr&egrave;s une violation du consentement (quelle qu&rsquo;elle soit, pas seulement les agressions sexuelles ou physiques) est tr&egrave;s bienvenue pour avoir une conversation confidentielle dans l&rsquo;Espace Plus S&ucirc;r.</p>
+                    </div>
+
+                    <section class="consent-section">
+                        <h2>Signalement</h2>
+                        <p>Il existe un Formulaire de Signalement qui peut &ecirc;tre utilis&eacute; pour signaler tout comportement en dehors du <a href="code-of-conduct.html">Code de Conduite du Participant</a> ou qui vous pr&eacute;occupe.</p>
+                        <p style="margin-bottom: 1.5rem;"><span class="coming-soon">Formulaire de Signalement Bient&ocirc;t Disponible</span></p>
+                        <p>&Agrave; l&rsquo;&eacute;v&eacute;nement, les Formulaires de Signalement sont disponibles au Welfare, &agrave; la Tente Jaune dans la zone de camping libre, aupr&egrave;s des responsables consentement des barrios et &agrave; l&rsquo;Espace Plus S&ucirc;r. Il y a aussi des codes QR dans chaque toilette pour le signalement en ligne.</p>
+
+                        <h3>Que Se Passe-t-il Quand Nous Recevons un Signalement ?</h3>
+                        <p>Pendant l&rsquo;&eacute;v&eacute;nement, les bo&icirc;tes de signalement sont v&eacute;rifi&eacute;es par les Responsables Consentement pour s&rsquo;assurer que nous prenons les mesures n&eacute;cessaires pour assurer la s&eacute;curit&eacute; de tous.</p>
+                        <p>Apr&egrave;s l&rsquo;&eacute;v&eacute;nement, deux Responsables de Sessions de Consentement ayant sign&eacute; un accord de confidentialit&eacute; lisent les signalements. Nous cat&eacute;gorisons les signalements en r&eacute;f&eacute;rence au Code de Conduite du Participant &mdash; l&rsquo;accord que chacun a fait sur la mani&egrave;re d&rsquo;interagir en achetant un billet ou en rejoignant la communaut&eacute; sur <a href="https://humans.nobodies.team" target="_blank">humans.nobodies.team</a> &mdash; et notre syst&egrave;me de codes couleur.</p>
+                        <p>Les Responsables Consentement d&eacute;cident des actions &agrave; prendre sur chaque signalement pour aider &agrave; pr&eacute;venir une situation similaire &agrave; l&rsquo;avenir.</p>
+
+                        <h3>Sessions de Consentement</h3>
+                        <p>Si les crit&egrave;res suivants sont remplis, l&rsquo;&Eacute;quipe de Sessions de Consentement propose des Sessions avec la personne signal&eacute;e :</p>
+                        <ul>
+                            <li>Le signalement est soumis directement par un participant impact&eacute; par une violation du Code de Conduite du Participant</li>
+                            <li>Nous pouvons identifier le signaleur et la personne signal&eacute;e</li>
+                            <li>L&rsquo;&eacute;v&eacute;nement s&rsquo;est produit sur le site, lors de tout autre &eacute;v&eacute;nement officiel ou dans tout espace officiel en ligne</li>
+                            <li>Les personnes impliqu&eacute;es ont toutes achet&eacute; un billet pour le dernier &eacute;v&eacute;nement</li>
+                            <li>Le signaleur accepte que l&rsquo;&eacute;quipe partage le minimum de donn&eacute;es avec la personne signal&eacute;e n&eacute;cessaire pour tenir les sessions</li>
+                            <li>Il y a 2 signalements de code bleu de 2 personnes diff&eacute;rentes, ou 1 signalement de code orange ou rouge</li>
+                        </ul>
+                        <p>&Agrave; travers les Sessions de Consentement, nous explorons ce qui s&rsquo;est pass&eacute;, les apprentissages qui peuvent en d&eacute;couler individuellement et collectivement, et visons &agrave; cr&eacute;er un Accord de Participation qui permet &agrave; la personne signal&eacute;e de participer au prochain &eacute;v&eacute;nement tout en &eacute;quilibrant le besoin de la communaut&eacute; de se sentir en s&eacute;curit&eacute;.</p>
+                    </section>
+
+                    <p style="margin-top: 2rem;">
+                        <a href="code-of-conduct.html" class="consent-coc-link">Lire le Code de Conduite du Participant &rarr;</a>
+                    </p>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="consent-intro">
+                        <p><strong>Qualsiasi cosa meravigliosa pu&ograve; essere terribile se data senza consenso.</strong> Questo include esperienze sessuali, cibo, qualsiasi forma di contatto, aiutare con un compito, farsi fotografare o che le proprie foto vengano condivise&hellip; persino un getto d&rsquo;acqua rinfrescante!</p>
+                        <p>Quello che ti fa sentire bene in questo momento potrebbe essere esattamente ci&ograve; che un&rsquo;altra persona <strong>non</strong> vuole, o che tu non apprezzeresti in un contesto diverso. &Egrave; orribile rendersi conto che ci&ograve; che hai dato con buone intenzioni potrebbe essere stato vissuto con dolore. Fai semplicemente il passo in pi&ugrave; e verifica.</p>
+                        <p>Qualcuno sulla playa probabilmente vuole e apprezza ci&ograve; che hai da offrire, o vuole offrire ci&ograve; che desideri ricevere. Trovalo, parla con lui e divertiti!</p>
+                    </div>
+
+                    <section class="consent-section">
+                        <h2>Che cos&rsquo;&egrave; il Consenso?</h2>
+                        <p><strong>Dai solo ci&ograve; che &egrave; apprezzato, prendi solo ci&ograve; che &egrave; offerto.</strong></p>
+                        <p>Come comunit&agrave; con diverse prospettive, background e stili di comunicazione, &egrave; meglio usare una comunicazione verbale chiara per assicurarsi che i limiti di tutti siano compresi e rispettati.</p>
+                        <p>Il consenso pu&ograve; essere descritto con cinque qualit&agrave; &mdash; <strong>Dato Liberamente, Informato, Reversibile, Entusiasta, Specifico (FIRES)</strong> &mdash; se sono tutte presenti, sei nel consenso:</p>
+
+                        <ul class="fires-list">
+                            <li>
+                                <strong>Dato Liberamente</strong>
+                                Se qualcuno non si sente in grado di dire no, non pu&ograve; dire s&iacute;. Questo significa che dobbiamo chiedere senza pressione ed essere consapevoli della pressione che le persone possono sentire quando c&rsquo;&egrave; uno squilibrio di potere, ad esempio quando una persona &egrave; in posizione di leadership o &egrave; fisicamente pi&ugrave; grande. La nostra capacit&agrave; di dire no &egrave; ridotta anche quando siamo incoscienti, intossicati, esausti, turbati o in una risposta traumatica (in particolare il congelamento e la compiacenza). Dobbiamo essere attenti allo stato di tutti quando chiediamo il consenso &mdash; possono elaborare informazioni e prendere decisioni?
+                            </li>
+                            <li>
+                                <strong>Informato</strong>
+                                Comunica chiaramente qual &egrave; il tuo desiderio e invita le domande &mdash; questo aiuter&agrave; davvero a evitare delusioni o sentimenti negativi in seguito. Tutti i coinvolti devono sapere cosa accadr&agrave; con tutti i dettagli necessari per prendere una decisione.
+                            </li>
+                            <li>
+                                <strong>Reversibile</strong>
+                                Il consenso pu&ograve; essere ritirato o ridotto in qualsiasi momento, senza bisogno di giustificazione. A volte l&rsquo;attivit&agrave; non &egrave; cos&iacute; piacevole come l&rsquo;avevamo immaginata. Continuare qualcosa che non fa stare bene &egrave; essere fuori dal consenso. Verifica regolarmente che tutti siano ancora nel consenso.
+                            </li>
+                            <li>
+                                <strong>Entusiasta</strong>
+                                Stai cercando una volont&agrave; attiva di partecipare all&rsquo;attivit&agrave; proposta. Un S&Igrave; entusiasta e incarnato. Qualsiasi cosa di meno dovrebbe essere considerata un No fino a quando non ottieni un chiarimento. Una risposta di compiacenza, il silenzio, la passivit&agrave; o la mancanza di resistenza &egrave; un No.
+                            </li>
+                            <li>
+                                <strong>Specifico</strong>
+                                Il fatto che qualcuno acconsenta a un&rsquo;attivit&agrave; non significa che acconsenta a qualsiasi altra cosa. Se vuoi cambiare o intensificare l&rsquo;attivit&agrave;, chiedi prima. E serve il consenso di tutti i coinvolti &mdash; se vuoi unirti a un&rsquo;interazione di gruppo, assicurati prima che ogni persona dia il consenso.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="consent-resources">
+                        <h2>Per Maggiori Informazioni</h2>
+                        <ul class="resource-list">
+                            <li><span class="resource-title">Guida alla navigazione degli spazi Sex+ ai Burns</span> <span class="coming-soon">In Arrivo</span></li>
+                            <li><span class="resource-title">Guida di sopravvivenza per le relazioni</span> <span class="coming-soon">In Arrivo</span></li>
+                            <li><span class="resource-title">Guida al consenso per i barrios</span> <span class="coming-soon">In Arrivo</span></li>
+                            <li><span class="resource-title">Guida per workshop sicuri</span> <span class="coming-soon">In Arrivo</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="consent-callout" style="margin-top: 3rem;">
+                        <h2>All&rsquo;Evento</h2>
+
+                        <h3>Marted&iacute; del Consenso</h3>
+                        <p>Una giornata dedicata durante l&rsquo;evento per concentrarsi sulla consapevolezza e l&rsquo;educazione al consenso.</p>
+
+                        <h3>Se Vivi una Violazione del Consenso</h3>
+                        <ul>
+                            <li>Un Nomade o chiunque sia vicino pu&ograve; aiutare</li>
+                            <li><strong>Welfare Enough</strong> &egrave; aperto 24/7 per il supporto emotivo</li>
+                            <li><strong>Malfare</strong> &egrave; aperto 24/7 per assistere con infortuni, preoccupazioni di sicurezza e conflitti interpersonali in confidenzialit&agrave;</li>
+                        </ul>
+
+                        <h3>Spazio Pi&ugrave; Sicuro (Safer Space)</h3>
+                        <p>Lo Spazio Pi&ugrave; Sicuro &egrave; una cabina privata, confortevole e climatizzata, progettata specificamente per ascoltarti senza essere disturbati. In questo ambiente ti invitiamo ad avere una conversazione confidenziale di supporto con un volontario che ha competenze speciali e formazione nel supporto al consenso.</p>
+                        <p>Chiunque si senta colpito dopo una violazione del consenso (qualunque essa sia, non solo aggressioni sessuali o fisiche) &egrave; molto benvenuto ad avere una conversazione confidenziale nello Spazio Pi&ugrave; Sicuro.</p>
+                    </div>
+
+                    <section class="consent-section">
+                        <h2>Segnalazioni</h2>
+                        <p>Esiste un Modulo di Segnalazione che pu&ograve; essere utilizzato per segnalare qualsiasi comportamento al di fuori del <a href="code-of-conduct.html">Codice di Condotta del Partecipante</a> o che ti preoccupa.</p>
+                        <p style="margin-bottom: 1.5rem;"><span class="coming-soon">Modulo di Segnalazione In Arrivo</span></p>
+                        <p>All&rsquo;evento, i Moduli di Segnalazione sono disponibili al Welfare, alla Tenda Gialla nella zona di campeggio libero, presso i responsabili consenso dei barrios e allo Spazio Pi&ugrave; Sicuro. Ci sono anche codici QR in ogni bagno per le segnalazioni online.</p>
+
+                        <h3>Cosa Succede Quando Riceviamo una Segnalazione?</h3>
+                        <p>Durante l&rsquo;evento, le cassette di segnalazione vengono controllate dai Responsabili Consenso per assicurarsi che prendiamo le azioni necessarie per mantenere tutti al sicuro.</p>
+                        <p>Dopo l&rsquo;evento, due Responsabili delle Sessioni di Consenso che hanno firmato un accordo di riservatezza leggono le segnalazioni. Categorizziamo le segnalazioni con riferimento al Codice di Condotta del Partecipante e al nostro sistema di codici colore.</p>
+                        <p>I Responsabili Consenso decidono quali azioni intraprendere su ogni segnalazione per aiutare a prevenire una situazione simile in futuro.</p>
+
+                        <h3>Sessioni di Consenso</h3>
+                        <p>Se i seguenti criteri sono soddisfatti, il Team delle Sessioni di Consenso offre Sessioni con la persona segnalata:</p>
+                        <ul>
+                            <li>La segnalazione &egrave; presentata direttamente da un partecipante colpito da una violazione del Codice di Condotta del Partecipante</li>
+                            <li>Siamo in grado di identificare il segnalatore e la persona segnalata</li>
+                            <li>L&rsquo;evento &egrave; accaduto sul sito, in qualsiasi altro evento ufficiale o in qualsiasi spazio ufficiale online</li>
+                            <li>Le persone coinvolte hanno tutte acquistato un biglietto per l&rsquo;ultimo evento</li>
+                            <li>Il segnalatore accetta che il team condivida il minimo di dati con la persona segnalata necessario per tenere le sessioni</li>
+                            <li>Ci sono 2 segnalazioni di codice blu da 2 persone diverse, o 1 segnalazione di codice arancione o rosso</li>
+                        </ul>
+                        <p>Attraverso le Sessioni di Consenso esploriamo cosa &egrave; successo, l&rsquo;apprendimento che ne pu&ograve; derivare sia individualmente che collettivamente, e miriamo a creare un Accordo di Partecipazione che consenta alla persona segnalata di partecipare al prossimo evento bilanciando il bisogno della comunit&agrave; di sentirsi al sicuro.</p>
+                    </section>
+
+                    <p style="margin-top: 2rem;">
+                        <a href="code-of-conduct.html" class="consent-coc-link">Leggi il Codice di Condotta del Partecipante &rarr;</a>
+                    </p>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="consent-intro">
+                        <p><strong>Alles Wunderbare kann schrecklich sein, wenn es ohne Einverst&auml;ndnis gegeben wird.</strong> Das schlie&szlig;t sexuelle Erfahrungen, Essen, jede Form von Ber&uuml;hrung, Hilfe bei einer Aufgabe, fotografiert werden oder dass Fotos geteilt werden&hellip; sogar einen erfrischenden Wasserspr&uuml;her ein!</p>
+                        <p>Was sich f&uuml;r dich gerade gro&szlig;artig anf&uuml;hlt, k&ouml;nnte genau das sein, was eine andere Person <strong>nicht</strong> will, oder was du selbst in einem anderen Kontext nicht sch&auml;tzen w&uuml;rdest. Es ist schrecklich zu erkennen, dass das, was du mit guten Absichten gegeben hast, mit Schmerz erlebt wurde. Mach einfach den zus&auml;tzlichen Schritt und frag nach.</p>
+                        <p>Jemand auf der Playa w&uuml;rde wahrscheinlich das wollen und sch&auml;tzen, was du zu bieten hast, oder will das anbieten, was du erhalten m&ouml;chtest. Finde sie, sprich mit ihnen und hab Spa&szlig;!</p>
+                    </div>
+
+                    <section class="consent-section">
+                        <h2>Was ist Einverst&auml;ndnis?</h2>
+                        <p><strong>Gib nur, was gesch&auml;tzt wird, nimm nur, was angeboten wird.</strong></p>
+                        <p>Als Gemeinschaft mit vielf&auml;ltigen Perspektiven, Hintergr&uuml;nden und Kommunikationsstilen ist es am besten, klare verbale Kommunikation zu nutzen, um sicherzustellen, dass die Grenzen aller verstanden und respektiert werden.</p>
+                        <p>Einverst&auml;ndnis kann durch f&uuml;nf Qualit&auml;ten beschrieben werden &mdash; <strong>Freiwillig Gegeben, Informiert, Widerrufbar, Enthusiastisch, Spezifisch (FIRES)</strong> &mdash; wenn alle vorhanden sind, bist du im Einverst&auml;ndnis:</p>
+
+                        <ul class="fires-list">
+                            <li>
+                                <strong>Freiwillig Gegeben</strong>
+                                Wenn jemand sich nicht in der Lage f&uuml;hlt, Nein zu sagen, kann er nicht Ja sagen. Das bedeutet, dass wir ohne Druck fragen m&uuml;ssen und uns des Drucks bewusst sein m&uuml;ssen, den Menschen sp&uuml;ren k&ouml;nnen, wenn ein Machtungleichgewicht besteht &mdash; etwa wenn eine Person in einer F&uuml;hrungsposition ist oder physisch gr&ouml;&szlig;er ist. Unsere F&auml;higkeit, Nein zu sagen, ist auch reduziert, wenn wir bewusstlos, berauscht, ersch&ouml;pft, aufgew&uuml;hlt oder in einer Traumareaktion sind (insbesondere Erstarrung und Unterwerfung). Wir m&uuml;ssen auf den Zustand aller achten, wenn wir um Einverst&auml;ndnis bitten &mdash; k&ouml;nnen sie Informationen aufnehmen und Entscheidungen treffen?
+                            </li>
+                            <li>
+                                <strong>Informiert</strong>
+                                Kommuniziere klar, was dein Wunsch ist, und lade zu Fragen ein &mdash; das wird wirklich helfen, Entt&auml;uschungen oder negative Gef&uuml;hle sp&auml;ter zu vermeiden. Alle Beteiligten m&uuml;ssen wissen, was passieren wird, in so vielen Details, wie es f&uuml;r sie notwendig ist, um eine Entscheidung zu treffen.
+                            </li>
+                            <li>
+                                <strong>Widerrufbar</strong>
+                                Einverst&auml;ndnis kann jederzeit zur&uuml;ckgezogen oder herabgestuft werden, ohne Begr&uuml;ndung. Manchmal f&uuml;hlt sich die Aktivit&auml;t nicht so gut an, wie wir es uns vorgestellt haben. Etwas fortzusetzen, das sich nicht gut anf&uuml;hlt, ist au&szlig;erhalb des Einverst&auml;ndnisses. &Uuml;berpr&uuml;fe regelm&auml;&szlig;ig, ob alle noch im Einverst&auml;ndnis sind.
+                            </li>
+                            <li>
+                                <strong>Enthusiastisch</strong>
+                                Du suchst nach einer aktiven Bereitschaft, an der vorgeschlagenen Aktivit&auml;t teilzunehmen. Ein begeistertes, verk&ouml;rpertes JA. Alles Geringere sollte als Nein betrachtet werden, bis du eine Kl&auml;rung erh&auml;ltst. Eine unterwerfende Reaktion, Schweigen, Passivit&auml;t oder fehlender Widerstand ist ein Nein.
+                            </li>
+                            <li>
+                                <strong>Spezifisch</strong>
+                                Nur weil jemand einer Aktivit&auml;t zustimmt, bedeutet das nicht, dass er allem anderen zustimmt. Wenn du die Aktivit&auml;t &auml;ndern oder intensivieren m&ouml;chtest, frag zuerst. Und es braucht das Einverst&auml;ndnis aller Beteiligten &mdash; wenn du einer Gruppeninteraktion beitreten m&ouml;chtest, stelle zuerst sicher, dass jede Person ihr Einverst&auml;ndnis gibt.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="consent-resources">
+                        <h2>Weitere Informationen</h2>
+                        <ul class="resource-list">
+                            <li><span class="resource-title">Leitfaden f&uuml;r Sex+-R&auml;ume bei Burns</span> <span class="coming-soon">Demnächst</span></li>
+                            <li><span class="resource-title">&Uuml;berlebensleitfaden f&uuml;r Beziehungen</span> <span class="coming-soon">Demnächst</span></li>
+                            <li><span class="resource-title">Consent-Leitfaden f&uuml;r Barrios</span> <span class="coming-soon">Demnächst</span></li>
+                            <li><span class="resource-title">Leitfaden f&uuml;r sichere Workshops</span> <span class="coming-soon">Demnächst</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="consent-callout" style="margin-top: 3rem;">
+                        <h2>Bei der Veranstaltung</h2>
+
+                        <h3>Consent-Dienstag</h3>
+                        <p>Ein spezieller Tag w&auml;hrend der Veranstaltung, der sich auf Bewusstsein und Bildung zum Thema Einverst&auml;ndnis konzentriert.</p>
+
+                        <h3>Wenn du eine Einverst&auml;ndnisverletzung erlebst</h3>
+                        <ul>
+                            <li>Ein Nomade oder jede Person in der N&auml;he kann helfen</li>
+                            <li><strong>Welfare Enough</strong> ist rund um die Uhr f&uuml;r emotionale Unterst&uuml;tzung ge&ouml;ffnet</li>
+                            <li><strong>Malfare</strong> ist rund um die Uhr ge&ouml;ffnet, um bei Verletzungen, Sicherheitsbedenken und zwischenmenschlichen Konflikten vertraulich zu helfen</li>
+                        </ul>
+
+                        <h3>Sicherer Raum (Safer Space)</h3>
+                        <p>Der Sichere Raum ist eine private, komfortable, klimatisierte Kabine, die speziell daf&uuml;r konzipiert ist, dir zuzuh&ouml;ren, ohne gest&ouml;rt zu werden. In dieser Umgebung laden wir dich ein, ein vertrauliches Unterst&uuml;tzungsgespr&auml;ch mit einem Freiwilligen zu f&uuml;hren, der besondere F&auml;higkeiten und eine Ausbildung in Consent-Unterst&uuml;tzung hat.</p>
+                        <p>Jeder, der sich nach einer Einverst&auml;ndnisverletzung betroffen f&uuml;hlt (was auch immer es ist, nicht nur sexuelle oder k&ouml;rperliche &Uuml;bergriffe), ist sehr willkommen, ein vertrauliches Gespr&auml;ch im Sicheren Raum zu f&uuml;hren.</p>
+                    </div>
+
+                    <section class="consent-section">
+                        <h2>Meldung</h2>
+                        <p>Es gibt ein Meldeformular, das verwendet werden kann, um jedes Verhalten au&szlig;erhalb des <a href="code-of-conduct.html">Verhaltenskodex f&uuml;r Teilnehmer</a> oder das dich beunruhigt, zu melden.</p>
+                        <p style="margin-bottom: 1.5rem;"><span class="coming-soon">Meldeformular Demnächst Verf&uuml;gbar</span></p>
+                        <p>Bei der Veranstaltung sind Meldeformulare beim Welfare, im Gelben Zelt in der Freicamping-Zone, bei den Consent-Verantwortlichen der Barrios und im Sicheren Raum erh&auml;ltlich. Es gibt auch QR-Codes in jeder Toilette f&uuml;r Online-Meldungen.</p>
+
+                        <h3>Was passiert, wenn wir eine Meldung erhalten?</h3>
+                        <p>W&auml;hrend der Veranstaltung werden die Meldeboxen von den Consent-Verantwortlichen &uuml;berpr&uuml;ft, um sicherzustellen, dass wir die notwendigen Ma&szlig;nahmen ergreifen, um alle sicher zu halten.</p>
+                        <p>Nach der Veranstaltung lesen zwei Leiter der Consent-Sitzungen, die eine Vertraulichkeitsvereinbarung unterzeichnet haben, die Meldungen. Wir kategorisieren die Meldungen mit Bezug auf den Verhaltenskodex f&uuml;r Teilnehmer und unser Farbcodesystem.</p>
+                        <p>Die Consent-Verantwortlichen entscheiden, welche Ma&szlig;nahmen bei jeder Meldung ergriffen werden, um eine &auml;hnliche Situation in Zukunft zu verhindern.</p>
+
+                        <h3>Consent-Sitzungen</h3>
+                        <p>Wenn die folgenden Kriterien erf&uuml;llt sind, bietet das Team f&uuml;r Consent-Sitzungen Sitzungen mit der gemeldeten Person an:</p>
+                        <ul>
+                            <li>Die Meldung wird direkt von einem Teilnehmer eingereicht, der von einem Versto&szlig; gegen den Verhaltenskodex betroffen ist</li>
+                            <li>Wir k&ouml;nnen den Melder und die gemeldete Person identifizieren</li>
+                            <li>Das Ereignis fand auf dem Gel&auml;nde, bei einer anderen offiziellen Veranstaltung oder in einem offiziellen Online-Raum statt</li>
+                            <li>Die beteiligten Personen haben alle ein Ticket f&uuml;r die letzte Veranstaltung gekauft</li>
+                            <li>Der Melder stimmt zu, dass das Team das Minimum an Daten mit der gemeldeten Person teilt, das f&uuml;r die Sitzungen notwendig ist</li>
+                            <li>Es gibt 2 Meldungen mit blauem Code von 2 verschiedenen Personen, oder 1 Meldung mit orangem oder rotem Code</li>
+                        </ul>
+                        <p>Durch die Consent-Sitzungen erkunden wir, was passiert ist, welche Erkenntnisse daraus sowohl individuell als auch kollektiv gewonnen werden k&ouml;nnen, und streben die Erstellung einer Teilnahmevereinbarung an, die es der gemeldeten Person erm&ouml;glicht, an der n&auml;chsten Veranstaltung teilzunehmen, w&auml;hrend das Bed&uuml;rfnis der Gemeinschaft nach Sicherheit ausgeglichen wird.</p>
+                    </section>
+
+                    <p style="margin-top: 2rem;">
+                        <a href="code-of-conduct.html" class="consent-coc-link">Verhaltenskodex f&uuml;r Teilnehmer lesen &rarr;</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+
+    <script src="script.js"></script>
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
