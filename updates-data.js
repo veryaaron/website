@@ -3,6 +3,7 @@
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
     // === March 19 ===
+    {"date": "2026-03-19", "source": "Comms", "text": "New <a href=\"/#principles\">Elsewhere Principles</a> section with examples"},
     {"date": "2026-03-19", "source": "Welfare", "text": "New <a href=\"consent.html\">Consent page</a> published (EN/ES/FR/IT/DE)"},
     {"date": "2026-03-19", "source": "Comms", "text": "Redesigned \u2018What is Elsewhere?\u2019 website section"},
     {"date": "2026-03-19", "source": "Press", "text": "The Some Times publishes its first edition. Find it on <a href=\"https://discord.com/channels/1462886445583962245/1479879473687171142/1483973847920414793\" target=\"_blank\">Discord</a>"},
