@@ -2,6 +2,9 @@
 // Each entry: { date: "YYYY-MM-DD", source: "Team", text: "Update text" }
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
+    // === March 19 ===
+    {"date": "2026-03-19", "source": "Legal", "text": "\u2018Elsewhere\u2019 name fully cleared by NCA lawyers"},
+
     // === March 18 ===
     {"date": "2026-03-18", "source": "Ticketing", "text": "Ticketing page is now ready for comms launch"},
     {"date": "2026-03-18", "source": "Board", "text": "Last statutes amendments before members are approved submitted to board for review"},
