@@ -12,7 +12,13 @@
                     '<span></span><span></span><span></span>' +
                 '</button>' +
                 '<ul class="nav-links">' +
-                    '<li><a href="' + prefix + '/#event">Event</a></li>' +
+                    '<li class="nav-dropdown">' +
+                        '<a href="' + prefix + '/#event">Event <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>' +
+                        '<ul class="nav-dropdown-menu">' +
+                            '<li><a href="' + prefix + '/consent.html">Consent</a></li>' +
+                            '<li><a href="' + prefix + '/survival-guide.html">Survival Guide</a></li>' +
+                        '</ul>' +
+                    '</li>' +
                     '<li><a href="' + prefix + '/#principles">Principles</a></li>' +
                     '<li><a href="' + prefix + '/faq.html">FAQ</a></li>' +
                     '<li><a href="' + prefix + '/transparency.html">Transparency</a></li>' +

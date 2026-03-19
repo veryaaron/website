@@ -30,6 +30,24 @@
         });
     }
 
+    // Nav dropdowns — toggle on mobile, let hover work on desktop
+    function initNavDropdowns() {
+        document.querySelectorAll('.nav-dropdown > a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                // Only intercept on mobile (nav-toggle visible)
+                var toggle = document.querySelector('.nav-toggle');
+                if (!toggle || window.getComputedStyle(toggle).display === 'none') return;
+
+                var parent = this.parentElement;
+                if (!parent.classList.contains('open')) {
+                    e.preventDefault();
+                    parent.classList.toggle('open');
+                }
+                // Second tap follows the link normally
+            });
+        });
+    }
+
     // Smooth scroll
     function initSmoothScroll() {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -515,6 +533,7 @@
     // Init
     function init() {
         initMobileNav();
+        initNavDropdowns();
         initSmoothScroll();
         initSlideshow();
         initHeaderScroll();

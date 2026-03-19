@@ -199,6 +199,13 @@ h4 { font-size: 1.15rem; }
     color: #fff;
 }
 
+.header:not(.scrolled) .nav-dropdown-menu a {
+    color: var(--color-text-muted);
+}
+.header:not(.scrolled) .nav-dropdown-menu a:hover {
+    color: var(--color-accent);
+}
+
 .header:not(.scrolled) .nav-toggle span {
     background: #fff;
 }
@@ -241,6 +248,45 @@ h4 { font-size: 1.15rem; }
     transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--color-accent); }
+
+/* Nav dropdown */
+.nav-dropdown { position: relative; }
+.nav-dropdown > a { display: inline-flex; align-items: center; gap: 0.3rem; }
+.nav-chevron { transition: transform 0.2s; }
+.nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 160px;
+    padding: 0.5rem 0;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+    z-index: 1000;
+    margin-top: 0.5rem;
+}
+.nav-dropdown-menu li { padding: 0; }
+.nav-dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.88rem;
+    white-space: nowrap;
+}
+.nav-dropdown:hover > .nav-dropdown-menu,
+.nav-dropdown.open > .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+.nav-dropdown:hover .nav-chevron,
+.nav-dropdown.open .nav-chevron {
+    transform: rotate(180deg);
+}
 
 .nav-toggle {
     display: none;
@@ -2272,6 +2318,30 @@ h4 { font-size: 1.15rem; }
     .nav-links a {
         display: block;
         padding: 0.75rem 0;
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+        padding: 0;
+        margin: 0;
+        min-width: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        transition: max-height 0.3s;
+    }
+    .nav-dropdown.open > .nav-dropdown-menu {
+        max-height: 200px;
+    }
+    .nav-dropdown-menu a {
+        padding: 0.5rem 0 0.5rem 1.25rem;
+        font-size: 0.88rem;
+        color: var(--color-text-muted);
     }
 
     .hero h1 { font-size: clamp(3rem, 15vw, 5rem); }
