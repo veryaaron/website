@@ -484,6 +484,98 @@ h4 { font-size: 1.15rem; }
         -2px -2px 0 rgba(122, 139, 106, 0.14);
 }
 
+/* Title glitch effects */
+.about-title.glitch-shake {
+    animation: titleShake 0.4s linear;
+}
+.about-title.glitch-chromatic {
+    animation: titleChromatic 0.5s steps(3, end);
+}
+.about-title.glitch-skew {
+    animation: titleSkew 0.3s ease-out;
+}
+.about-title.glitch-flicker {
+    animation: titleFlicker 0.4s steps(1, end);
+}
+.about-title.glitch-dropout {
+    animation: titleDropout 0.35s steps(1, end);
+}
+
+@keyframes titleShake {
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(-2px, 1px); }
+    20% { transform: translate(1px, -1px); }
+    30% { transform: translate(-1px, -2px); }
+    40% { transform: translate(2px, 1px); }
+    50% { transform: translate(-1px, 2px); }
+    60% { transform: translate(1px, -1px); }
+    70% { transform: translate(-2px, -1px); }
+    80% { transform: translate(2px, 0); }
+    90% { transform: translate(-1px, 1px); }
+}
+
+@keyframes titleChromatic {
+    0%, 100% {
+        text-shadow:
+            5px 7px 0 rgba(194, 112, 62, 0.42),
+            -2px -2px 0 rgba(122, 139, 106, 0.14);
+    }
+    25% {
+        text-shadow:
+            8px 5px 0 rgba(0, 255, 255, 0.35),
+            -4px 2px 0 rgba(255, 0, 128, 0.3),
+            2px -3px 0 rgba(255, 255, 0, 0.2);
+    }
+    50% {
+        text-shadow:
+            -6px 8px 0 rgba(255, 0, 128, 0.35),
+            5px -2px 0 rgba(0, 255, 255, 0.3),
+            -2px 4px 0 rgba(255, 255, 0, 0.2);
+    }
+    75% {
+        text-shadow:
+            4px -4px 0 rgba(0, 255, 255, 0.3),
+            -7px 6px 0 rgba(255, 0, 128, 0.35),
+            3px 2px 0 rgba(255, 255, 0, 0.15);
+    }
+}
+
+@keyframes titleSkew {
+    0%, 100% { transform: skewX(0deg); }
+    15% { transform: skewX(-4deg) translateX(-3px); }
+    30% { transform: skewX(3deg) translateX(2px); }
+    50% { transform: skewX(-2deg); }
+    70% { transform: skewX(1deg); }
+}
+
+@keyframes titleFlicker {
+    0%, 100% { opacity: 1; }
+    10% { opacity: 0.3; }
+    20% { opacity: 1; }
+    30% { opacity: 0.6; }
+    40% { opacity: 1; }
+    55% { opacity: 0.2; }
+    65% { opacity: 0.9; }
+    75% { opacity: 0.4; }
+    85% { opacity: 1; }
+}
+
+@keyframes titleDropout {
+    0%, 100% {
+        text-shadow:
+            5px 7px 0 rgba(194, 112, 62, 0.42),
+            -2px -2px 0 rgba(122, 139, 106, 0.14);
+    }
+    15%, 70% {
+        text-shadow: none;
+    }
+    75% {
+        text-shadow:
+            5px 7px 0 rgba(194, 112, 62, 0.15),
+            -2px -2px 0 rgba(122, 139, 106, 0.05);
+    }
+}
+
 /* Flow container — clearfix, one canvas */
 .ac-flow {
     position: relative;

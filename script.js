@@ -362,6 +362,43 @@
         setTimeout(glitch, 3000);
     }
 
+    // Title Glitch — subtle glitches on "Your Temporary Desert City"
+    function initTitleGlitch() {
+        var title = document.querySelector('.about-title');
+        if (!title) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var effects = [
+            { cls: 'glitch-shake',     duration: 400 },
+            { cls: 'glitch-chromatic', duration: 500 },
+            { cls: 'glitch-skew',      duration: 300 },
+            { cls: 'glitch-flicker',   duration: 400 },
+            { cls: 'glitch-dropout',   duration: 350 }
+        ];
+
+        var last = -1;
+
+        function glitch() {
+            // Pick a different effect than last time
+            var idx;
+            do { idx = Math.floor(Math.random() * effects.length); } while (idx === last);
+            last = idx;
+
+            var fx = effects[idx];
+            title.classList.add(fx.cls);
+
+            setTimeout(function() {
+                title.classList.remove(fx.cls);
+            }, fx.duration);
+
+            var next = 5000 + Math.random() * 15000;
+            setTimeout(glitch, next);
+        }
+
+        // Start after initial delay
+        setTimeout(glitch, 3000);
+    }
+
     // Back to Top
     function initBackToTop() {
         var btn = document.querySelector('.back-to-top');
@@ -385,6 +422,7 @@
         initScrollAnimations();
         initGlitchText();
         initPromoGlitch();
+        initTitleGlitch();
         initBackToTop();
     }
 
