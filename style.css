@@ -485,6 +485,17 @@ h4 { font-size: 1.15rem; }
 }
 
 /* Title glitch effects */
+/* Photo glitch overlay positioning */
+.ac-img { position: relative; }
+.ac-img .photo-glitch-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 10;
+}
+
 .about-title.glitch-shake {
     animation: titleShake 0.4s linear;
 }

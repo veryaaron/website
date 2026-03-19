@@ -399,6 +399,105 @@
         setTimeout(glitch, 3000);
     }
 
+    // Photo Glitch — glitch effects on the 4 whatis photos
+    function initPhotoGlitch() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        // Map each container to its source image number and glitch files
+        var photos = [
+            { sel: '.ac-img--a', src: 1 },
+            { sel: '.ac-img--b', src: 4 },
+            { sel: '.ac-img--c', src: 3 },
+            { sel: '.ac-img--d', src: 2 }
+        ];
+
+        var blendModes = ['difference', 'exclusion', 'color-dodge', 'hard-light'];
+
+        photos.forEach(function(photo) {
+            var container = document.querySelector(photo.sel);
+            if (!container) return;
+
+            var mainImg = container.querySelector('img');
+            var originalSrc = mainImg.src;
+
+            // Build glitch src list
+            var glitchSrcs = [];
+            for (var g = 1; g <= 5; g++) {
+                glitchSrcs.push('images/whatis-' + photo.src + '-glitch-' + g + '.jpg');
+            }
+
+            // Preload
+            glitchSrcs.forEach(function(src) { var img = new Image(); img.src = src; });
+
+            function randomGlitchSrc() {
+                return glitchSrcs[Math.floor(Math.random() * glitchSrcs.length)];
+            }
+
+            // Mode 1: Simple swap — replace image for ~400-600ms
+            function modeSwap() {
+                mainImg.src = randomGlitchSrc();
+                setTimeout(function() {
+                    mainImg.src = originalSrc;
+                }, 400 + Math.random() * 200);
+            }
+
+            // Mode 2: Difference drift — overlay with blend mode, drift a few px, fade out
+            function modeDrift() {
+                var overlay = document.createElement('img');
+                overlay.src = randomGlitchSrc();
+                overlay.className = 'photo-glitch-overlay';
+                overlay.style.mixBlendMode = blendModes[Math.floor(Math.random() * blendModes.length)];
+                overlay.style.opacity = '0.7';
+                overlay.style.transition = 'transform 1.2s ease-out, opacity 0.4s ease';
+
+                // Match the main image's transform (rotation, filters) so it overlays correctly
+                var computed = window.getComputedStyle(mainImg);
+                overlay.style.transform = computed.transform;
+                overlay.style.filter = computed.filter;
+                overlay.style.borderRadius = computed.borderRadius;
+                overlay.style.boxShadow = 'none';
+
+                container.appendChild(overlay);
+
+                // Drift by 3-10px in a random direction
+                var dx = (Math.random() - 0.5) * 2 * (3 + Math.random() * 7);
+                var dy = (Math.random() - 0.5) * 2 * (3 + Math.random() * 7);
+
+                requestAnimationFrame(function() {
+                    var baseTransform = overlay.style.transform;
+                    if (baseTransform && baseTransform !== 'none') {
+                        overlay.style.transform = baseTransform + ' translate(' + dx + 'px, ' + dy + 'px)';
+                    } else {
+                        overlay.style.transform = 'translate(' + dx + 'px, ' + dy + 'px)';
+                    }
+                });
+
+                // Fade out and remove
+                setTimeout(function() {
+                    overlay.style.opacity = '0';
+                    setTimeout(function() {
+                        if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+                    }, 400);
+                }, 900 + Math.random() * 400);
+            }
+
+            function glitch() {
+                if (Math.random() < 0.45) {
+                    modeDrift();
+                } else {
+                    modeSwap();
+                }
+
+                var next = 10000 + Math.random() * 30000;
+                setTimeout(glitch, next);
+            }
+
+            // Stagger start times so all 4 photos don't glitch simultaneously
+            var startDelay = 2000 + Math.random() * 4000;
+            setTimeout(glitch, startDelay);
+        });
+    }
+
     // Back to Top
     function initBackToTop() {
         var btn = document.querySelector('.back-to-top');
@@ -423,6 +522,7 @@
         initGlitchText();
         initPromoGlitch();
         initTitleGlitch();
+        initPhotoGlitch();
         initBackToTop();
     }
 
