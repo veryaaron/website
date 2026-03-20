@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Grants | Elsewhere &mdash; by Nobodies Collective</title>
+    <meta name="description" content="Bring your art to Elsewhere 2026. Apply for grants of €500–€3,000, get support from art escorts, and create something unforgettable in the Spanish desert.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── Art Grants Page ── */
+        .art-page {
+            padding: 0 0 4rem;
+        }
+
+        /* Hero */
+        .art-hero {
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: #1a1208;
+        }
+
+        .art-hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('images/art/hero-art.jpg') center/cover no-repeat;
+            opacity: 0.6;
+        }
+
+        .art-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(26,18,8,0.3) 0%, rgba(26,18,8,0.7) 100%);
+        }
+
+        .art-hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 10rem 2rem 6rem;
+            max-width: 800px;
+        }
+
+        .art-hero-content h1 {
+            color: #fff;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+        }
+
+        .art-hero-content p {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.2rem;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .art-hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+
+        /* Content sections */
+        .art-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        .art-section {
+            margin-top: 4rem;
+        }
+
+        .art-section h2 {
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+
+        .art-section p,
+        .art-section li {
+            color: var(--color-text-muted);
+            line-height: 1.7;
+        }
+
+        .art-section p {
+            margin-bottom: 1rem;
+        }
+
+        .art-section ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .art-section li {
+            margin-bottom: 0.4rem;
+        }
+
+        .art-section li strong {
+            color: var(--color-text);
+        }
+
+        /* Image + text layout */
+        .art-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+            margin-top: 2rem;
+        }
+
+        .art-row--reverse .art-row-img {
+            order: -1;
+        }
+
+        .art-row-img img {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        @media (max-width: 700px) {
+            .art-row {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .art-row--reverse .art-row-img {
+                order: 0;
+            }
+        }
+
+        /* Collage images — full width */
+        .art-collage {
+            margin: 3rem 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .art-collage img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Highlight box */
+        .art-highlight {
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .art-highlight p {
+            color: var(--color-text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .art-highlight p:last-child {
+            margin-bottom: 0;
+        }
+
+        .art-highlight strong {
+            color: var(--color-text);
+        }
+
+        /* Process steps */
+        .art-steps {
+            list-style: none;
+            padding: 0;
+            counter-reset: step;
+            margin: 1.5rem 0;
+        }
+
+        .art-steps li {
+            counter-increment: step;
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .art-steps li:last-child {
+            border-bottom: none;
+        }
+
+        .art-steps li::before {
+            content: counter(step);
+            flex-shrink: 0;
+            width: 2rem;
+            height: 2rem;
+            background: var(--color-accent);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* CTA section */
+        .art-cta-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+        }
+
+        .art-cta-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .art-cta-section p {
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .art-cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .art-cta-buttons .btn {
+            min-width: 200px;
+        }
+
+        /* Contact line */
+        .art-contact {
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+
+        .art-contact a {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="art-page">
+
+        <!-- Hero -->
+        <section class="art-hero">
+            <div class="art-hero-bg"></div>
+            <div class="art-hero-overlay"></div>
+            <div class="art-hero-content">
+                <h1>Bring Your Art to Elsewhere 2026</h1>
+                <p>Elsewhere is built by people like you. People, artists, anti-artists and creatives who decide to create something for others, without needing permission, perfection, or a massive budget.</p>
+                <div class="art-hero-cta">
+                    <a href="https://forms.gle/9YQCsPKXtxTUjZ9a6" target="_blank" class="btn btn-primary">Apply for an Art Grant</a>
+                    <a href="elsewhere-art-guide-2026.pdf" target="_blank" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.85);">Download Art Guide (PDF)</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="art-content">
+            <br>
+            <a href="/" class="back-link">Back to home</a>
+
+            <!-- Collage: daytime art -->
+            <div class="art-collage">
+                <img src="images/art/sign-to-apply.jpg" alt="A collage of art installations at previous events — from hanging lanterns and painted buses to a giant metal camel and intimate desert bars">
+            </div>
+
+            <p style="text-align:center; font-size:1.15rem; color:var(--color-text-muted); margin-top:1.5rem;">If you're even considering bringing art&hellip; <strong style="color:var(--color-text)">this is your sign to apply.</strong></p>
+
+            <!-- What counts as art -->
+            <section class="art-section">
+                <div class="art-row">
+                    <div>
+                        <h2>What counts as &ldquo;art&rdquo;?</h2>
+                        <p>Almost anything, as long as it's intentional and shareable (and ideally tangible to at least one of our five senses). This includes:</p>
+                        <ul>
+                            <li>Installations (big or small)</li>
+                            <li>Small weird wonders (low-budget, personal, playful)</li>
+                            <li>Mutant vehicles / artomobiles</li>
+                            <li>Functional or &ldquo;innovation&rdquo; projects</li>
+                            <li>The Temple (a dedicated reflective space)</li>
+                            <li>Arty experiences &mdash; the more indulgent and confusing, the better!</li>
+                        </ul>
+                        <div class="art-highlight">
+                            <p><strong>You don't need to go big.</strong> Some of the most impactful pieces are small, strange, and human-scale. We get a lot of interest around interactive art &mdash; not just spectacle art.</p>
+                        </div>
+                    </div>
+                    <div class="art-row-img">
+                        <img src="images/art/what-counts.jpg" alt="Night-time art installations glowing with neon lights — a giant Pac-Man, a fire-breathing dragon sculpture, illuminated geometric structures">
+                    </div>
+                </div>
+            </section>
+
+            <!-- What support do you get -->
+            <section class="art-section">
+                <div class="art-row art-row--reverse">
+                    <div>
+                        <h2>What support do you actually get?</h2>
+                        <p>We're not just handing you a PDF and wishing you luck. You get:</p>
+                        <ul>
+                            <li><strong>Grants</strong> &mdash; typically &euro;500&ndash;&euro;3,000 (up to &euro;5,000 for larger projects as an exception)</li>
+                            <li><strong>An Art Escort</strong> &mdash; a real human helping you make your idea feasible</li>
+                            <li><strong>Placement on the map</strong> + power access (if needed)</li>
+                            <li><strong>Artist community</strong> &mdash; shared logistics, transport, ideas</li>
+                            <li><strong>On-site support</strong> &mdash; tools, coordination, guidance</li>
+                            <li><strong>Early Entry</strong></li>
+                        </ul>
+                        <div class="art-highlight">
+                            <p><strong>Important:</strong> You'll need to pay upfront and get reimbursed after, so plan cash flow. Keep all your invoices, bills and receipts &mdash; take photos! Detailed refunding guidelines will follow.</p>
+                        </div>
+                    </div>
+                    <div class="art-row-img">
+                        <img src="images/art/support.jpg" alt="The Placebo Bar — a handcrafted desert installation with a hanging lantern, glass bottles, and a sunset glow over the playa">
+                    </div>
+                </div>
+            </section>
+
+            <!-- What are we looking for -->
+            <section class="art-section">
+                <div class="art-row">
+                    <div>
+                        <h2>What are we looking for?</h2>
+                        <p>Not perfection. Not polished decks. No Temu-extravaganzas. We care about:</p>
+                        <ul>
+                            <li><strong>Feasibility</strong> &mdash; can it actually be built?</li>
+                            <li><strong>Safety</strong> &mdash; will it hold up in wind, heat, rain?</li>
+                            <li><strong>Participation</strong> &mdash; how do people engage with it?</li>
+                            <li><strong>Creativity</strong> &mdash; does it feel alive, interesting, or surprising?</li>
+                            <li><strong>Responsibility</strong> &mdash; can you build it and remove it?</li>
+                        </ul>
+                        <p><strong>Strong idea + realistic execution beats ambition without grounding.</strong></p>
+                    </div>
+                    <div class="art-row-img">
+                        <img src="images/art/looking-for.jpg" alt="A surreal desert living room — a vintage armchair, an old TV, a lamp, and scattered objects creating an unexpected domestic scene on the playa">
+                    </div>
+                </div>
+            </section>
+
+            <!-- The process -->
+            <section class="art-section">
+                <h2>The process (simple version)</h2>
+                <ol class="art-steps">
+                    <li>Have an idea</li>
+                    <li>Sketch / explain it clearly</li>
+                    <li>Estimate a realistic budget with an itemised breakdown</li>
+                    <li>Submit all details via the <a href="https://forms.gle/9YQCsPKXtxTUjZ9a6" target="_blank">art registration form</a></li>
+                </ol>
+                <p>We help if questions come up. Applications are reviewed on a rolling basis. <strong>Earlier = better support + better odds.</strong></p>
+            </section>
+
+            <!-- Common misconception -->
+            <section class="art-section">
+                <div class="art-highlight" style="border-left-color: var(--color-purple);">
+                    <h2 style="font-size:1.4rem; margin-bottom:0.75rem;">Common misconception</h2>
+                    <p>You do <strong>not</strong> need to be highly experienced to apply. Smaller projects are welcome, often easier to approve, and can be just as memorable as large builds. You also do not need a huge idea. What matters far more is having a clear idea that is thoughtful, doable, and suited to the realities of playa.</p>
+                    <p><strong>If you're unsure, apply anyway.</strong> The Art Council is not there to gatekeep. Its role is to help artists shape ideas into projects that can actually work on site. A rough but genuine concept is far more valuable than waiting until everything feels perfect.</p>
+                </div>
+            </section>
+
+            <!-- CTA section -->
+            <div class="art-cta-section">
+                <h2>Ready to create something?</h2>
+                <p>Download the full Art Guide for details on safety, grants, logistics, and reimbursement &mdash; then submit your proposal.</p>
+                <div class="art-cta-buttons">
+                    <a href="https://forms.gle/9YQCsPKXtxTUjZ9a6" target="_blank" class="btn btn-primary">Submit Your Art Proposal</a>
+                    <a href="elsewhere-art-guide-2026.pdf" target="_blank" class="btn btn-outline">Download Art Guide (PDF)</a>
+                    <a href="https://art.nobodies.team/" target="_blank" class="btn btn-outline">Art Submissions Page</a>
+                </div>
+                <p class="art-contact">Questions? Reach out to the Art team on <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a> or email <a href="mailto:hello@nobodies.team">hello@nobodies.team</a></p>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
