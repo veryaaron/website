@@ -16,6 +16,20 @@ var USEFUL_LINKS_CATEGORIES = [
                 description: 'Your way in. No ticket, no dust. Low-income tickets coming soon!',
                 url: 'https://tickets.nobodies.team/events/nobodiescollective/2089167',
                 accent: '#c9922a'
+            },
+            {
+                icon: 'person',
+                title: 'Art Grants',
+                description: 'Bring art to the desert. Apply for funding to make your vision real.',
+                url: 'art-grants.html',
+                accent: '#D4A843'
+            },
+            {
+                icon: 'person',
+                title: 'Apply for a Camp',
+                description: 'Register your barrio or camp through the Humans app.',
+                url: 'https://humans.nobodies.team/Barrios',
+                accent: '#7BA68C'
             }
         ]
     },
