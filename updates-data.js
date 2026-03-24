@@ -2,6 +2,9 @@
 // Each entry: { date: "YYYY-MM-DD", source: "Team", text: "Update text" }
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
+    // === March 24 ===
+    {"date": "2026-03-24", "source": "Governance", "text": "March 23 <a href=\"transparency/2026-03-23-board.html\">board meeting</a> minutes published to transparency page"},
+
     // === March 23 ===
     {"date": "2026-03-23", "source": "Comms", "text": "New outreach plan created — contact #comms to get involved"},
     {"date": "2026-03-23", "source": "Tech", "text": "Humans app updates focused on conversations and shift management (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1485835709456580748\" target=\"_blank\">details</a>)"},
