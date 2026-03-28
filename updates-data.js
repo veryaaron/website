@@ -2,8 +2,20 @@
 // Each entry: { date: "YYYY-MM-DD", source: "Team", text: "Update text" }
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
+    // === March 28 ===
+    {"date": "2026-03-28", "source": "Tech", "text": "Humans app updated including budget tracking, daily digest and shifts fixes (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1487236567150891109\" target=\"_blank\">details</a>)"},
+
+    // === March 27 ===
+    {"date": "2026-03-27", "source": "Welfare", "text": "Participant Wellness has now recruited a record-breaking THREE consent education leads"},
+    {"date": "2026-03-27", "source": "Welfare", "text": "Welfare shifts are now live on the <a href=\"https://humans.nobodies.team\" target=\"_blank\">Humans app</a>"},
+
     // === March 26 ===
+    {"date": "2026-03-26", "source": "Tech", "text": "Humans app updated including magic link login, @nobodies.team email accounts and shifts improvements (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1486534834498044072\" target=\"_blank\">details</a>)"},
+    {"date": "2026-03-26", "source": "Infrastructure", "text": "67 labour days\u2019 worth of shifts applied for and mostly approved"},
     {"date": "2026-03-26", "source": "Production", "text": "Meeting with Sariñena mayor — site costs confirmed at reduced rate, permit process continuing on track"},
+
+    // === March 25 ===
+    {"date": "2026-03-25", "source": "Power", "text": "Power team shift proposals being discussed on <a href=\"https://discord.com/channels/1462886445583962245/1478326781558919380\" target=\"_blank\">#power</a> channel"},
 
     // === March 24 ===
     {"date": "2026-03-24", "source": "Governance", "text": "March 23 <a href=\"transparency/2026-03-23-board.html\">board meeting</a> minutes published to transparency page"},
