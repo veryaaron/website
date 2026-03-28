@@ -2,6 +2,9 @@
 // Each entry: { date: "YYYY-MM-DD", source: "Team", text: "Update text" }
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
+    // === March 26 ===
+    {"date": "2026-03-26", "source": "Production", "text": "Meeting with Sariñena mayor — site costs confirmed at reduced rate, permit process continuing on track"},
+
     // === March 24 ===
     {"date": "2026-03-24", "source": "Governance", "text": "March 23 <a href=\"transparency/2026-03-23-board.html\">board meeting</a> minutes published to transparency page"},
 
