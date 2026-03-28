@@ -1985,6 +1985,7 @@ h4 { font-size: 1.15rem; }
 .activity-source[data-source="Art"] { background: #f0ddee; color: #7a3a6a; }
 .activity-source[data-source="Welfare"] { background: #f5dde8; color: #7a3a5a; }
 .activity-source[data-source="Press"] { background: #dde4f0; color: #3a4a7a; }
+.activity-source[data-source="Infra"] { background: #d9e6e0; color: #3d6b5a; }
 
 .activity-text {
     color: var(--color-text);
