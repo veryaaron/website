@@ -10,7 +10,7 @@ var UPDATES_DATA = [
     {"date": "2026-03-27", "source": "Welfare", "text": "Welfare shifts are now live on the <a href=\"https://humans.nobodies.team\" target=\"_blank\">Humans app</a>"},
 
     // === March 26 ===
-    {"date": "2026-03-26", "source": "Comms", "text": "Logo competition closed with 13 submissions"},
+    {"date": "2026-03-26", "source": "Comms", "text": "Logo competition closed with 14 submissions"},
     {"date": "2026-03-26", "source": "Tech", "text": "Humans app updated including magic link login, @nobodies.team email accounts and shifts improvements (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1486534834498044072\" target=\"_blank\">details</a>)"},
     {"date": "2026-03-26", "source": "Infra", "text": "67 labour days\u2019 worth of shifts applied for and mostly approved"},
     {"date": "2026-03-26", "source": "Production", "text": "Meeting with Sariñena mayor — site costs confirmed at reduced rate, permit process continuing on track"},
