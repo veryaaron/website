@@ -3,7 +3,9 @@
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
     // === March 30 ===
-    {"date": "2026-03-30", "source": "Governance", "text": "March 26 <a href=\"transparency/2026-03-26-board.html\">board meeting</a> and <a href=\"transparency/2026-03-26-community.html\">community meeting</a> minutes published to transparency page — includes full transcript, chat log, and <a href=\"https://www.youtube.com/watch?v=-O-_fXlIpos\" target=\"_blank\">video recording</a>"},
+    {"date": "2026-03-30", "source": "Tech", "text": "Humans app updated with dashboard widget, budget coordinator view and guided shift discovery (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1487929515639574570\" target=\"_blank\">details</a>)"},
+    {"date": "2026-03-30", "source": "Governance", "text": "March 26 <a href=\"transparency/2026-03-26-board.html\">board meeting</a> minutes published to transparency page"},
+    {"date": "2026-03-30", "source": "Governance", "text": "March 26 <a href=\"transparency/2026-03-26-community.html\">community meeting</a> minutes published with full transcript and chat log"},
 
     // === March 28 ===
     {"date": "2026-03-28", "source": "Tech", "text": "Humans app updated including budget tracking, daily digest and shifts fixes (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1487236567150891109\" target=\"_blank\">details</a>)"},
