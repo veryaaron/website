@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inclusion | Elsewhere &mdash; by Nobodies Collective</title>
+    <meta name="description" content="We want everyone to feel welcome at Elsewhere. Learn about our inclusion support for LGBTQIA+, BIPOC, disability, family, and more.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── Inclusion Page ─────────────────────────────────────────── */
+
+        /* Page-level grain overlay */
+        .inclusion-page {
+            position: relative;
+            background-color: #f0e8d8;
+            padding-bottom: 0;
+        }
+
+        .inclusion-page::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.055;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 220px 220px;
+        }
+
+        /* ── HERO ── */
+        .incl-hero {
+            position: relative;
+            min-height: 72vh;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            background: #120e08;
+        }
+
+        .incl-hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('images/about-photo.jpg') center 35% / cover no-repeat;
+            opacity: 0.38;
+            mix-blend-mode: normal;
+        }
+
+        .incl-hero-grain {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            opacity: 0.09;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 160px 160px;
+        }
+
+        /* warm shadow bottom */
+        .incl-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(
+                to bottom,
+                rgba(12, 9, 4, 0.25) 0%,
+                rgba(12, 9, 4, 0.0) 30%,
+                rgba(12, 9, 4, 0.6) 75%,
+                rgba(12, 9, 4, 0.92) 100%
+            );
+        }
+
+        .incl-hero-content {
+            position: relative;
+            z-index: 3;
+            padding: 9rem 2rem 3.5rem;
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .incl-hero-dept {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(255, 210, 150, 0.7);
+            margin-bottom: 0.5rem;
+        }
+
+        .incl-hero-title {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(3.5rem, 12vw, 9rem);
+            font-weight: 800;
+            line-height: 0.9;
+            color: #fff;
+            letter-spacing: -0.04em;
+            text-shadow: 0 2px 40px rgba(0,0,0,0.4);
+            display: inline-block;
+            margin-bottom: 1.25rem;
+        }
+
+        .incl-hero-sub {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.45);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        /* ── BODY WRAPPER ── */
+        .incl-body {
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 var(--spacing) 6rem;
+        }
+
+        /* back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+            color: var(--color-text-muted);
+            font-size: 0.85rem;
+        }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+
+        /* ── INTRO ── */
+        .incl-intro {
+            max-width: 680px;
+            margin: 3.5rem 0 0 2rem;
+        }
+
+        .incl-intro p {
+            font-size: 1.12rem;
+            line-height: 1.75;
+            color: var(--color-text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .incl-intro p:first-child {
+            font-size: 1.25rem;
+            color: var(--color-text);
+            font-weight: 500;
+        }
+
+        .incl-contact-bar {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+            margin: 2.5rem 0 0 2rem;
+            padding: 1rem 1.4rem;
+            background: #2c2418;
+            width: fit-content;
+            max-width: 100%;
+            transform: rotate(-0.5deg);
+        }
+
+        .incl-contact-label {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 0.95rem;
+            color: rgba(255, 210, 140, 0.7);
+            white-space: nowrap;
+        }
+
+        .incl-contact-email {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #f5ede0;
+            letter-spacing: 0.02em;
+        }
+
+        .incl-contact-email:hover {
+            color: var(--color-accent);
+        }
+
+        /* ── DIVIDER ── */
+        .incl-rule {
+            border: none;
+            border-top: 1px solid #c8bfb0;
+            margin: 4rem 0;
+            opacity: 0.4;
+        }
+
+        /* ── SECTION BASE ── */
+        .incl-section {
+            position: relative;
+            margin-bottom: 3.5rem;
+        }
+
+        .incl-section h2 {
+            font-size: clamp(1.35rem, 3.5vw, 2rem);
+            font-weight: 800;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .incl-section p {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: var(--color-text-muted);
+            margin-bottom: 0.85rem;
+            max-width: 640px;
+        }
+
+        .incl-section ul {
+            margin: 0.75rem 0 0 1.25rem;
+        }
+
+        .incl-section li {
+            font-size: 0.975rem;
+            line-height: 1.65;
+            color: var(--color-text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Section label tag */
+        .incl-tag {
+            display: inline-block;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.65rem;
+            margin-bottom: 0.8rem;
+            border: 1.5px solid currentColor;
+            color: var(--color-accent);
+        }
+
+        /* ── LGBTQIA+ ── */
+        .incl-section--lgbtq {
+            background: #faf3e8;
+            padding: 2rem 2.25rem 2rem 2.5rem;
+            border-left: 4px solid #b07090;
+            max-width: 680px;
+            transform: rotate(-0.6deg);
+            transform-origin: top left;
+            box-shadow: 3px 5px 18px rgba(44,36,24,0.07);
+        }
+
+        .incl-section--lgbtq h2 {
+            color: #7a3a5a;
+        }
+
+        .incl-barrios {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            list-style: none;
+            margin: 0.75rem 0 0 0 !important;
+            padding: 0;
+        }
+
+        .incl-barrios li {
+            display: inline-block;
+            padding: 0.35rem 0.9rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin: 0;
+        }
+
+        .incl-barrios li:nth-child(1) {
+            background: #ffe4f0;
+            color: #7a1a45;
+            transform: rotate(-1deg);
+        }
+
+        .incl-barrios li:nth-child(2) {
+            background: #ffd6e8;
+            color: #7a1a45;
+            transform: rotate(0.5deg);
+        }
+
+        .incl-barrios li:nth-child(3) {
+            background: #f7d0e8;
+            color: #7a1a45;
+            transform: rotate(-0.8deg);
+        }
+
+        /* ── BIPOC ── */
+        .incl-section--bipoc {
+            border-top: 3px solid var(--color-text);
+            padding-top: 1.75rem;
+            margin-left: 4rem;
+            max-width: 640px;
+        }
+
+        .incl-section--bipoc h2 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            color: var(--color-text);
+        }
+
+        /* ── PHOTO SCATTER ── */
+        .incl-photos {
+            display: flex;
+            gap: 0;
+            align-items: flex-start;
+            margin: 3rem 0 3rem -1rem;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .incl-photo {
+            flex: 0 0 auto;
+            overflow: hidden;
+            box-shadow: 3px 4px 18px rgba(44,36,24,0.22), 0 0 0 3px #f0e8d8;
+        }
+
+        .incl-photo img {
+            display: block;
+            object-fit: cover;
+            filter: sepia(0.12) contrast(0.96) brightness(0.96);
+        }
+
+        .incl-photo:nth-child(1) {
+            width: 220px;
+            height: 165px;
+            transform: rotate(-2.5deg) translateY(8px);
+            z-index: 2;
+        }
+
+        .incl-photo:nth-child(2) {
+            width: 280px;
+            height: 190px;
+            transform: rotate(1.2deg) translateY(-10px);
+            z-index: 3;
+            margin-left: -20px;
+        }
+
+        .incl-photo:nth-child(3) {
+            width: 200px;
+            height: 155px;
+            transform: rotate(-1deg) translateY(14px);
+            z-index: 1;
+            margin-left: -12px;
+        }
+
+        .incl-photo img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* ── DISABILITY ── */
+        .incl-section--disability {
+            margin-left: 0;
+            max-width: 700px;
+        }
+
+        .incl-section--disability h2 {
+            font-size: clamp(1.4rem, 3.5vw, 2rem);
+        }
+
+        .incl-things-label {
+            display: inline-block;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1rem;
+            color: var(--color-accent);
+            margin: 0.5rem 0 0.75rem;
+        }
+
+        /* ── CARD PAIR (Carer + Visual) ── */
+        .incl-card-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            align-items: start;
+            margin-bottom: 3.5rem;
+        }
+
+        .incl-card {
+            position: relative;
+            background: #f9f3e8;
+            padding: 1.75rem 1.75rem 1.75rem;
+            box-shadow: 2px 4px 14px rgba(44,36,24,0.09);
+        }
+
+        .incl-card h2 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 2px solid var(--color-accent);
+            letter-spacing: -0.01em;
+        }
+
+        .incl-card p {
+            font-size: 0.93rem;
+            line-height: 1.7;
+            color: var(--color-text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .incl-card--carer {
+            transform: rotate(-0.7deg);
+            border-top: 4px solid var(--color-accent);
+        }
+
+        .incl-card--visual {
+            transform: rotate(0.9deg);
+            margin-top: 1.5rem;
+            border-top: 4px solid var(--color-purple);
+        }
+
+        /* ── OTHER THINGS ── */
+        .incl-section--other {
+            background: #2c2418;
+            color: #f0e8d8;
+            padding: 2.25rem 2.5rem;
+            max-width: 600px;
+            transform: rotate(0.5deg);
+            transform-origin: top right;
+            box-shadow: 4px 6px 22px rgba(44,36,24,0.18);
+            margin-left: auto;
+            margin-right: 2rem;
+        }
+
+        .incl-section--other h2 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: rgba(255, 210, 140, 0.85);
+            margin-bottom: 1.25rem;
+        }
+
+        .incl-notice-list {
+            list-style: none;
+            margin: 0 !important;
+            padding: 0;
+        }
+
+        .incl-notice-list li {
+            font-size: 0.9rem;
+            color: rgba(240, 232, 216, 0.85);
+            padding: 0.55rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            align-items: baseline;
+            gap: 0.6rem;
+            margin: 0;
+        }
+
+        .incl-notice-list li::before {
+            content: '—';
+            color: var(--color-accent);
+            flex-shrink: 0;
+            font-size: 0.85rem;
+        }
+
+        .incl-notice-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* ── OHANA HOUSE ── */
+        .incl-section--ohana {
+            margin-top: 4rem;
+            max-width: 560px;
+            padding: 2rem 2.25rem;
+            border: 2px solid var(--color-text);
+            transform: rotate(-1deg);
+            transform-origin: top left;
+            margin-left: 3rem;
+            background: #faf3e8;
+            box-shadow: 5px 7px 0 #2c2418;
+        }
+
+        .incl-section--ohana h2 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 400;
+            color: var(--color-text);
+            margin-bottom: 0.75rem;
+        }
+
+        .incl-ohana-badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 0.2rem 0.7rem;
+            background: var(--color-text);
+            color: #f0e8d8;
+            margin-bottom: 1rem;
+        }
+
+        .incl-section--ohana p {
+            font-size: 0.97rem;
+            line-height: 1.72;
+            color: var(--color-text-muted);
+            max-width: none;
+        }
+
+        /* ── FAMILY ── */
+        .incl-section--family {
+            max-width: 660px;
+            margin-top: 4rem;
+            margin-left: 1rem;
+            padding-left: 1.5rem;
+            border-left: 2px dashed #c8bfb0;
+        }
+
+        /* ── MENSTRUATION ── */
+        .incl-section--menstru {
+            max-width: 640px;
+            margin-top: 3.5rem;
+        }
+
+        .incl-section--menstru h2 {
+            font-size: clamp(1.3rem, 3vw, 1.7rem);
+        }
+
+        .incl-menstru-list {
+            list-style: none !important;
+            margin: 0.75rem 0 0 0 !important;
+            padding: 0;
+        }
+
+        .incl-menstru-list li {
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: var(--color-text-muted);
+            padding: 0.4rem 0 0.4rem 1.75rem;
+            position: relative;
+            margin: 0;
+            border: none;
+        }
+
+        .incl-menstru-list li::before {
+            content: '◦';
+            position: absolute;
+            left: 0.4rem;
+            color: var(--color-accent);
+            font-size: 1.1rem;
+        }
+
+        /* ── HARM + LOW INCOME PAIR ── */
+        .incl-fragment-pair {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin: 4rem 0;
+        }
+
+        .incl-fragment {
+            flex: 1 1 240px;
+        }
+
+        .incl-fragment--harm {
+            padding: 1.5rem 1.75rem;
+            border: 1.5px solid #c8bfb0;
+            background: #f5ede2;
+            transform: rotate(0.8deg);
+            max-width: 300px;
+        }
+
+        .incl-fragment--harm h2 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+        }
+
+        .incl-fragment--harm .incl-coming {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+        }
+
+        .incl-fragment--income {
+            padding: 1.5rem 1.75rem;
+            background: #f5ede2;
+            border-left: 3px solid var(--color-yellow);
+            transform: rotate(-0.5deg);
+        }
+
+        .incl-fragment--income h2 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--color-text);
+            margin-bottom: 0.75rem;
+        }
+
+        .incl-fragment--income p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--color-text-muted);
+        }
+
+        /* ── RADICAL INCLUSION ── */
+        .incl-radical {
+            position: relative;
+            background: #1e1810;
+            padding: 5rem 2.5rem 5rem;
+            overflow: hidden;
+            margin: 0 calc(-1 * var(--spacing));
+        }
+
+        .incl-radical::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.07;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 160px 160px;
+        }
+
+        .incl-radical-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .incl-radical-label {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 0.9rem;
+            color: var(--color-accent);
+            display: block;
+            margin-bottom: 1.25rem;
+            letter-spacing: 0.04em;
+        }
+
+        .incl-radical h2 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            font-weight: 400;
+            color: #f0e8d8;
+            line-height: 1.0;
+            margin-bottom: 2.5rem;
+            letter-spacing: -0.01em;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.4);
+            transform: rotate(-0.5deg);
+            display: inline-block;
+        }
+
+        .incl-radical p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: rgba(240, 232, 216, 0.75);
+            margin-bottom: 1.5rem;
+            max-width: 680px;
+        }
+
+        .incl-radical p:first-of-type {
+            font-size: 1.15rem;
+            color: rgba(240, 232, 216, 0.9);
+        }
+
+        .incl-radical-email {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #f0e8d8;
+            padding: 0.6rem 1.25rem;
+            border: 2px solid rgba(240, 232, 216, 0.3);
+            letter-spacing: 0.02em;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .incl-radical-email:hover {
+            color: var(--color-accent);
+            border-color: var(--color-accent);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 860px) {
+            .incl-section--lgbtq {
+                transform: none;
+                max-width: 100%;
+            }
+
+            .incl-section--bipoc {
+                margin-left: 0;
+                max-width: 100%;
+            }
+
+            .incl-section--other {
+                transform: none;
+                margin-left: 0;
+                margin-right: 0;
+                max-width: 100%;
+            }
+
+            .incl-section--ohana {
+                transform: none;
+                margin-left: 0;
+                max-width: 100%;
+                box-shadow: 3px 5px 0 #2c2418;
+            }
+
+            .incl-section--family {
+                margin-left: 0;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .incl-intro {
+                margin-left: 0;
+            }
+
+            .incl-contact-bar {
+                margin-left: 0;
+                transform: none;
+            }
+
+            .incl-photos {
+                margin-left: 0;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .incl-card-pair {
+                grid-template-columns: 1fr;
+            }
+
+            .incl-card--carer,
+            .incl-card--visual {
+                transform: none;
+                margin-top: 0;
+            }
+
+            .incl-section--menstru {
+                max-width: 100%;
+            }
+
+            .incl-fragment-pair {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .incl-fragment--harm,
+            .incl-fragment--income {
+                transform: none;
+                max-width: 100%;
+            }
+
+            .incl-radical {
+                margin: 0 calc(-1 * var(--spacing));
+                padding: 3.5rem 1.5rem 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js" defer></script>
+
+    <main class="inclusion-page">
+
+        <!-- Hero -->
+        <section class="incl-hero">
+            <div class="incl-hero-bg"></div>
+            <div class="incl-hero-grain"></div>
+            <div class="incl-hero-content">
+                <span class="incl-hero-dept">Department of</span>
+                <h1 class="incl-hero-title">Inclusion</h1>
+                <p class="incl-hero-sub">Elsewhere &bull; Nobodies Collective</p>
+            </div>
+        </section>
+
+        <!-- Body -->
+        <div class="incl-body">
+
+            <a href="/" class="back-link">Back to Home</a>
+
+            <!-- Intro -->
+            <div class="incl-intro anim anim-fade-up">
+                <p>We want everyone to feel welcome at Elsewhere and we do our best to create a sense of belonging. We have an amazing inclusion team for this purpose.</p>
+                <p>If you need support, you can contact us at <a href="mailto:inclusion@nobodies.team">inclusion@nobodies.team</a></p>
+                <p>If you want to join our team to make Elsewhere more inclusive, you can contact us too! We would love your help.</p>
+            </div>
+
+            <div class="incl-contact-bar anim anim-fade-up">
+                <span class="incl-contact-label">reach us →</span>
+                <a href="mailto:inclusion@nobodies.team" class="incl-contact-email">inclusion@nobodies.team</a>
+            </div>
+
+            <hr class="incl-rule">
+
+            <!-- LGBTQIA+ -->
+            <section class="incl-section incl-section--lgbtq anim anim-fade-up" aria-labelledby="lgbtq-heading">
+                <span class="incl-tag">Identity &amp; belonging</span>
+                <h2 id="lgbtq-heading">LGBTQIA+ inclusion</h2>
+                <p>We welcome people of all genders, sexualities or sex variations at Elsewhere. We help the community to improve their knowledge of pronouns, gender-inclusive language and not making assumptions of people&rsquo;s identities.</p>
+                <p>In the past, we have provided information posters and pronoun stickers. We would love to provide more training about gender inclusive language and how to facilitate spaces/workshops in an inclusive way.</p>
+                <p>At Elsewhere, we also have explicitly queer barrios:</p>
+                <ul class="incl-barrios" aria-label="Queer barrios at Elsewhere">
+                    <li>EYAO</li>
+                    <li>Peach Please</li>
+                    <li>Pink Pony Paradise</li>
+                </ul>
+            </section>
+
+            <!-- BIPOC -->
+            <section class="incl-section incl-section--bipoc anim anim-fade-up" aria-labelledby="bipoc-heading">
+                <span class="incl-tag">Anti-racism &amp; culture</span>
+                <h2 id="bipoc-heading">BIPOC inclusion</h2>
+                <p>We help the community improve their anti-racism skills and cultural sensitivity knowledge. Someone from the BIPOC community gives support and advice when racism gets reported or there is need for expertise.</p>
+                <p>We are still in the beginning phase of setting up our support around BIPOC inclusion. Please reach out if you have ideas on how we can make Elsewhere a more BIPOC-safe place.</p>
+            </section>
+
+            <!-- Scattered photos -->
+            <div class="incl-photos" aria-hidden="true">
+                <div class="incl-photo">
+                    <img src="images/whatis-2.jpg" alt="">
+                </div>
+                <div class="incl-photo">
+                    <img src="images/whatis-3.jpg" alt="">
+                </div>
+                <div class="incl-photo">
+                    <img src="images/whatis-1.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- Disability -->
+            <section class="incl-section incl-section--disability anim anim-fade-up" aria-labelledby="disability-heading">
+                <span class="incl-tag">Access &amp; disability</span>
+                <h2 id="disability-heading">Disability inclusion</h2>
+                <p>The inclusion team offers support to individuals that have accessibility or disability needs for the event.</p>
+                <span class="incl-things-label">Things to consider:</span>
+                <p>The nearest hospital is about an hour away and a basic medical centre about 20 minutes away. We aren&rsquo;t legally allowed to administer medication, so if there is anything you feel you will need, please be sure to bring it. Onsite, we have a Red Cross ambulance crew in case of emergencies and a medical tent with basic first aid. There will be someone there 24 hours a day, with a radio and mobile phone.</p>
+            </section>
+
+            <!-- Carer tickets + Visual impairments -->
+            <div class="incl-card-pair">
+                <section class="incl-card incl-card--carer anim anim-slide-left" aria-labelledby="carer-heading">
+                    <h2 id="carer-heading">Carer tickets</h2>
+                    <p>We offer free carer tickets for people who need a carer to be able to participate in the event. A carer is any person who, by attending the event, enables another person to participate. This may include carers for participants with a disability, interpreters for the hearing-impaired, or support for those with unique needs.</p>
+                    <p>If you think you may need for a carer to join you, please email us to discuss options at <a href="mailto:inclusion@nobodies.team">inclusion@nobodies.team</a>. We will ask for some documentation that shows your need.</p>
+                </section>
+                <section class="incl-card incl-card--visual anim anim-slide-right" aria-labelledby="visual-heading">
+                    <h2 id="visual-heading">Participants with visual impairments</h2>
+                    <p>We try to provide workshop guides in big font for people with visual impairments. We always put one at the information point and if finances allow, we share some with individuals. Contact us at <a href="mailto:inclusion@nobodies.team">inclusion@nobodies.team</a> if this would benefit you.</p>
+                </section>
+            </div>
+
+            <!-- Other things we can help with -->
+            <section class="incl-section incl-section--other anim anim-fade-up" aria-labelledby="other-heading">
+                <h2 id="other-heading">Other things we can help with</h2>
+                <ul class="incl-notice-list">
+                    <li>Medications that need refrigerated can be stored at Malfare.</li>
+                    <li>There are wheelchair ramps at the containers of the organization.</li>
+                    <li>There are warm showers on-site (only with proof of medical reasons).</li>
+                    <li>We can provide a secret electrical plug in the freecamp zone (only with proof of medical reasons).</li>
+                    <li>Accessible toilets: works with a code you can get at the information point and Welfare.</li>
+                    <li>Live location digital map of the site.</li>
+                    <li>Normally driving on-site is not allowed, contact us for an exception.</li>
+                </ul>
+            </section>
+
+            <!-- Ohana House -->
+            <section class="incl-section incl-section--ohana anim anim-fade-up" aria-labelledby="ohana-heading">
+                <span class="incl-ohana-badge">Safe Space</span>
+                <h2 id="ohana-heading">Ohana House</h2>
+                <p>Ohana House is a child-friendly, sober and safe space. If you need a quiet break from the noise (for example if you are neurodivergent and feel overwhelmed) you can come rest at Ohana House.</p>
+            </section>
+
+            <!-- Family inclusion -->
+            <section class="incl-section incl-section--family anim anim-fade-up" aria-labelledby="family-heading">
+                <span class="incl-tag">Families &amp; children</span>
+                <h2 id="family-heading">Family inclusion</h2>
+                <p>Coming to Elsewhere with a family, especially with children, can bring its own challenges.</p>
+                <p>The Department of Inclusion supports families before and during the event. We address concerns, offer advice, and connect parents who may be able to assist each other as they prepare. We do not provide a babysitting service or assume responsibility for persons under 18: that joy belongs to the parents.</p>
+                <p>We do provide opportunities for participants of all ages to reach beyond divisions and limitations to connect with the community. For example at Ohana house, which is a child friendly sober and safe space. This is not only for children, but the space has materials present to entertain them.</p>
+            </section>
+
+            <!-- Menstruation inclusion -->
+            <section class="incl-section incl-section--menstru anim anim-fade-up" aria-labelledby="menstru-heading">
+                <span class="incl-tag">Menstruation</span>
+                <h2 id="menstru-heading">Menstruation inclusion</h2>
+                <p>With so many people on site, we are aware that quite some people will be menstruating during Elsewhere. There are menstruation stations on-site: these are toilets adjusted to the needs that come with menstruation. You will need a code to access them, which you can get at the information point and Welfare.</p>
+                <ul class="incl-menstru-list">
+                    <li>There will be a hand-washing station, where you can also clean your menstrual cup if using one.</li>
+                    <li>There will be a waste bucket for hygienic products.</li>
+                    <li>The stations are regularly cleaned by LNT&rsquo;s blood ninjas.</li>
+                </ul>
+            </section>
+
+            <!-- Harm reduction + Low income -->
+            <div class="incl-fragment-pair">
+                <section class="incl-fragment incl-fragment--harm anim anim-fade-up" aria-labelledby="harm-heading">
+                    <h2 id="harm-heading">Harm reduction</h2>
+                    <span class="incl-coming">Information coming.</span>
+                </section>
+                <section class="incl-fragment incl-fragment--income anim anim-fade-up" aria-labelledby="income-heading">
+                    <h2 id="income-heading">Low income inclusion</h2>
+                    <p>Elsewhere offers the option for low income tickets. You can find the information <a href="/low-income-tickets.html">here</a>. The inclusion team supports the process if necessary.</p>
+                </section>
+            </div>
+
+        </div><!-- /incl-body -->
+
+        <!-- Radical Inclusion — manifesto -->
+        <section class="incl-radical anim anim-fade-up" aria-labelledby="radical-heading">
+            <div class="incl-radical-inner">
+                <span class="incl-radical-label">— a core principle</span>
+                <h2 id="radical-heading">Radical<br>Inclusion</h2>
+                <p>All this being said: one of our core principles at Elsewhere is also radical self-reliance. We don&rsquo;t want to deny any participant that experience. We assist in making Elsewhere more accessible and welcoming, while encouraging every person to take the initiative to include themselves in the community.</p>
+                <p>Inclusion starts with acceptance: of ourselves, of the world around us, of the many moments that form our lives and of all the different ways there are to be human. In the end, we all face barriers of one kind or another, and it&rsquo;s up to us to step past our perceived limitations to stand (or sit) as equal members of this community.</p>
+                <p>If, after reading the survival guide, you do not feel you will be able to participate due to your specific limitation, we kindly remind you that this is an annual event. We encourage you to keep the conversation with us going and see what arrangements can be made in future years. Remember, we are learning as we grow! Questions and feedback are always welcome. Include yourself in the conversation by emailing</p>
+                <a href="mailto:inclusion@nobodies.team" class="incl-radical-email">inclusion@nobodies.team</a>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -18,6 +18,7 @@
                             '<li><a href="' + prefix + '/art-grants.html">Art Grants</a></li>' +
                             '<li><a href="' + prefix + '/consent.html">Consent</a></li>' +
                             '<li><a href="' + prefix + '/survival-guide.html">Survival Guide</a></li>' +
+                            '<li><a href="' + prefix + '/inclusion.html">Inclusion</a></li>' +
                         '</ul>' +
                     '</li>' +
                     '<li><a href="' + prefix + '/#principles">Principles</a></li>' +
