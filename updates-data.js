@@ -3,6 +3,7 @@
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
     // === March 30 ===
+    {"date": "2026-03-30", "source": "Finance", "text": "After 287 phone calls, 803 emails and 134.5 in-person visits, our bank account is finally actually open"},
     {"date": "2026-03-30", "source": "Tech", "text": "Humans app updated with dashboard widget, budget coordinator view and guided shift discovery (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1487929515639574570\" target=\"_blank\">details</a>)"},
     {"date": "2026-03-30", "source": "Governance", "text": "March 26 <a href=\"transparency/2026-03-26-board.html\">board meeting</a> minutes published to transparency page"},
     {"date": "2026-03-30", "source": "Governance", "text": "March 26 <a href=\"transparency/2026-03-26-community.html\">community meeting</a> minutes published with full transcript and chat log"},
