@@ -2,8 +2,24 @@
 // Each entry: { date: "YYYY-MM-DD", source: "Team", text: "Update text" }
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
+    // === April 5 ===
+    {"date": "2026-04-05", "source": "Barrios", "text": "27 barrios are now <a href=\"https://humans.nobodies.team/Barrios\" target=\"_blank\">registered with Elsewhere</a>"},
+    {"date": "2026-04-05", "source": "Comms", "text": "<a href=\"faq.html\">FAQ page</a> updated, reorganised and translated into 5 languages (EN/ES/FR/IT/DE)"},
+
+    // === April 4 ===
+    {"date": "2026-04-04", "source": "Tech", "text": "Humans app now has a cash flow statement built in"},
+
+    // === April 3 ===
+    {"date": "2026-04-03", "source": "Barrios", "text": "<a href=\"Barrio_Guide_2026.pdf\" target=\"_blank\">Barrio Guide 2026</a> published"},
+
     // === April 2 ===
     {"date": "2026-04-02", "source": "Governance", "text": "March 30 <a href=\"transparency/2026-03-30-board.html\">board meeting</a> minutes published to transparency page"},
+
+    // === April 1 ===
+    {"date": "2026-04-01", "source": "Press", "text": "First edition of <a href=\"Else_Matters_April_26.pdf\" target=\"_blank\">Else Matters</a> is out!"},
+
+    // === March 31 ===
+    {"date": "2026-03-31", "source": "Wellness", "text": "New <a href=\"inclusion.html\">Inclusion page</a> published"},
 
     // === March 30 ===
     {"date": "2026-03-30", "source": "Finance", "text": "After 287 phone calls, 803 emails and 134.5 in-person visits, our bank account is finally actually open"},
@@ -15,8 +31,8 @@ var UPDATES_DATA = [
     {"date": "2026-03-28", "source": "Tech", "text": "Humans app updated including budget tracking, daily digest and shifts fixes (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1487236567150891109\" target=\"_blank\">details</a>)"},
 
     // === March 27 ===
-    {"date": "2026-03-27", "source": "Welfare", "text": "Participant Wellness has now recruited a record-breaking THREE consent education leads"},
-    {"date": "2026-03-27", "source": "Welfare", "text": "Welfare shifts are now live on the <a href=\"https://humans.nobodies.team\" target=\"_blank\">Humans app</a>"},
+    {"date": "2026-03-27", "source": "Wellness", "text": "Participant Wellness has now recruited a record-breaking THREE consent education leads"},
+    {"date": "2026-03-27", "source": "Wellness", "text": "Welfare shifts are now live on the <a href=\"https://humans.nobodies.team\" target=\"_blank\">Humans app</a>"},
 
     // === March 26 ===
     {"date": "2026-03-26", "source": "Comms", "text": "Logo competition closed with 14 submissions"},
@@ -53,7 +69,7 @@ var UPDATES_DATA = [
     {"date": "2026-03-19", "source": "Governance", "text": "Process for bringing on new asociados is now active"},
     {"date": "2026-03-19", "source": "Governance", "text": "10 amendments to the association statutes passed by the board"},
     {"date": "2026-03-19", "source": "Comms", "text": "New <a href=\"/#principles\">Elsewhere Principles</a> section with examples"},
-    {"date": "2026-03-19", "source": "Welfare", "text": "New <a href=\"consent.html\">Consent page</a> published (EN/ES/FR/IT/DE)"},
+    {"date": "2026-03-19", "source": "Wellness", "text": "New <a href=\"consent.html\">Consent page</a> published (EN/ES/FR/IT/DE)"},
     {"date": "2026-03-19", "source": "Comms", "text": "Redesigned \u2018What is Elsewhere?\u2019 website section"},
     {"date": "2026-03-19", "source": "Press", "text": "The Some Times publishes its first edition. Find it on <a href=\"https://discord.com/channels/1462886445583962245/1479879473687171142/1483973847920414793\" target=\"_blank\">Discord</a>"},
     {"date": "2026-03-19", "source": "Tech", "text": "Humans app now supports per-team public pages (click on Edit Page in a team)"},
@@ -75,7 +91,7 @@ var UPDATES_DATA = [
     {"date": "2026-03-17", "source": "Tech", "text": "Humans app now supports shift setup. RIP FIST"},
     {"date": "2026-03-17", "source": "Ticketing", "text": "<a href=\"low-income-tickets.html\">Low-income ticket</a> policy and process published"},
     {"date": "2026-03-17", "source": "Community", "text": "Barrio registration is open! Register your camp at <a href=\"https://humans.nobodies.team/Barrios\" target=\"_blank\">humans.nobodies.team/Barrios</a>"},
-    {"date": "2026-03-17", "source": "Welfare", "text": "Consent team will hold European-consent-coordination deep dive session at ELS"},
+    {"date": "2026-03-17", "source": "Wellness", "text": "Consent team will hold European-consent-coordination deep dive session at ELS"},
     {"date": "2026-03-17", "source": "Tech", "text": "VIM (Volunteer Information Management) aka FIST (\ud83e\udd14) being merged into the Humans app as a single platform"},
     {"date": "2026-03-17", "source": "Community", "text": "Volunteers FAQ being assembled to answer common questions about shifts and participation"},
     {"date": "2026-03-17", "source": "Comms", "text": "Activity log section added to homepage and updates page for ongoing internal comms"},
@@ -128,7 +144,7 @@ var UPDATES_DATA = [
     // === March 11 ===
     {"date": "2026-03-11", "source": "Ticketing", "text": "Aaron onboarded as ticketing lead with full system walkthrough from Bruce"},
     {"date": "2026-03-11", "source": "Ticketing", "text": "Ticket types defined: regular, tiered VIP, low-income, carer, youth, vehicle"},
-    {"date": "2026-03-11", "source": "Welfare", "text": "Call for consent team volunteers posted; Safer Space Lead identified as critical vacancy"},
+    {"date": "2026-03-11", "source": "Wellness", "text": "Call for consent team volunteers posted; Safer Space Lead identified as critical vacancy"},
 
     // === March 10 ===
     {"date": "2026-03-10", "source": "Comms", "text": "March 9 board meeting minutes published on transparency page"},
@@ -193,7 +209,7 @@ var UPDATES_DATA = [
     {"date": "2026-02-26", "source": "Legal", "text": "Legal counsel confirms low liability risk for association members under Spanish law"},
     {"date": "2026-02-26", "source": "Production", "text": "Power team formed: Javi confirmed as lead with ~6 experienced volunteers"},
     {"date": "2026-02-26", "source": "Governance", "text": "Official voting membership criteria finalized and published to GitHub"},
-    {"date": "2026-02-26", "source": "Welfare", "text": "Participant wellness expanding scope to cover collaborators and members pre-event"},
+    {"date": "2026-02-26", "source": "Wellness", "text": "Participant wellness expanding scope to cover collaborators and members pre-event"},
     {"date": "2026-02-26", "source": "Community", "text": "Fundraising event for Curious Creatures scheduled for April 11th"},
 
     // === February 25 ===
@@ -222,7 +238,7 @@ var UPDATES_DATA = [
 
     // === February 17 ===
     {"date": "2026-02-17", "source": "Production", "text": "First coordinators meeting held \u2014 all departments check in on budgets and staffing"},
-    {"date": "2026-02-17", "source": "Welfare", "text": "Participant Wellness fully staffed: med, consent, welfare, and inclusion leads confirmed"},
+    {"date": "2026-02-17", "source": "Wellness", "text": "Participant Wellness fully staffed: med, consent, welfare, and inclusion leads confirmed"},
     {"date": "2026-02-17", "source": "Tech", "text": "Humans app operational \u2014 team management and compliance tracking live"},
     {"date": "2026-02-17", "source": "Comms", "text": "Communications team formed \u2014 newsletter and social outreach beginning"},
     {"date": "2026-02-17", "source": "Production", "text": "Master vendor engagement underway; compiling timeline for all key milestones"},
