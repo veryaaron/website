@@ -8,18 +8,27 @@ var UPDATES_DATA = [
 
     // === April 4 ===
     {"date": "2026-04-04", "source": "Tech", "text": "Humans app now has a cash flow statement built in"},
+    {"date": "2026-04-04", "source": "Tech", "text": "Humans app now available in Catalan! Plus sub-team managers, notification upgrades and Google sync fixes (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1489825466608128070\" target=\"_blank\">details</a>)"},
+    {"date": "2026-04-04", "source": "Barrios", "text": "Confirmed: the Barrios placement app will be used this year to let barrios decide how they will interfere with each other's sound systems"},
 
     // === April 3 ===
     {"date": "2026-04-03", "source": "Barrios", "text": "<a href=\"Barrio_Guide_2026.pdf\" target=\"_blank\">Barrio Guide 2026</a> published"},
+    {"date": "2026-04-03", "source": "Comms", "text": "Logo contest voting briefly published and then pulled due to technical and conceptual issues (or maybe you dreamt it)"},
+    {"date": "2026-04-03", "source": "Comms", "text": "Google Ad Grants for non-profits obtained, enabling targeted keyword advertising"},
+    {"date": "2026-04-03", "source": "Ticketing", "text": "Emails have gone out to the first batch of successful Low Income Ticket applicants"},
 
     // === April 2 ===
+    {"date": "2026-04-02", "source": "Tech", "text": "Humans app: notification inbox, Staff page, ticketing budget projections (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1489052117493612596\" target=\"_blank\">details</a>)"},
     {"date": "2026-04-02", "source": "Governance", "text": "March 30 <a href=\"transparency/2026-03-30-board.html\">board meeting</a> minutes published to transparency page"},
 
     // === April 1 ===
     {"date": "2026-04-01", "source": "Press", "text": "First edition of <a href=\"Else_Matters_April_26.pdf\" target=\"_blank\">Else Matters</a> is out!"},
+    {"date": "2026-04-01", "source": "Tech", "text": "Humans app: email outboxes, hidden teams and resource management fixes (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1488864109104599211\" target=\"_blank\">details</a>)"},
+    {"date": "2026-04-01", "source": "Tech", "text": "Humans app: shift preference wizard, VAT tracking and Google sync improvements (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1488685584099709111\" target=\"_blank\">details</a>)"},
 
     // === March 31 ===
     {"date": "2026-03-31", "source": "Wellness", "text": "New <a href=\"inclusion.html\">Inclusion page</a> published"},
+    {"date": "2026-03-31", "source": "Tech", "text": "Humans app: @nobodies.team email provisioning, non-public roles, and more shift functionality (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1488353012597653624\" target=\"_blank\">details</a>)"},
 
     // === March 30 ===
     {"date": "2026-03-30", "source": "Finance", "text": "After 287 phone calls, 803 emails and 134.5 in-person visits, our bank account is finally actually open"},
