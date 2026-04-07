@@ -2,6 +2,10 @@
 // Each entry: { date: "YYYY-MM-DD", source: "Team", text: "Update text" }
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
+    // === April 7 ===
+    {"date": "2026-04-07", "source": "Governance", "text": "April 2 <a href=\"transparency/2026-04-02-board.html\">board meeting</a> minutes published to transparency page"},
+    {"date": "2026-04-07", "source": "Governance", "text": "April 2 <a href=\"transparency/2026-04-02-community.html\">community meeting</a> minutes published with full transcript"},
+
     // === April 5 ===
     {"date": "2026-04-05", "source": "Barrios", "text": "27 barrios are now <a href=\"https://humans.nobodies.team/Barrios\" target=\"_blank\">registered with Elsewhere</a>"},
     {"date": "2026-04-05", "source": "Comms", "text": "<a href=\"faq.html\">FAQ page</a> updated, reorganised and translated into 5 languages (EN/ES/FR/IT/DE)"},

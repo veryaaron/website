@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Meeting - April 2, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .resource-links { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .resource-links h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+        .resource-links ul { list-style: none; padding: 0; margin: 0; }
+        .resource-links li { margin-bottom: 0.5rem; }
+        .resource-links a { color: var(--color-accent); font-weight: 500; }
+        .resource-links a:hover { text-decoration: underline; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem; border-radius: 8px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        .transcript-section { margin-top: 2rem; border: 1px solid var(--color-border); border-radius: 8px; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Community Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Wednesday 2 April 2026, 19:56 CEST</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Chaired by Pablo V, with board members, leads, and community members</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-04-02-community-transcript.html">Full transcript (English only)</a></li>
+                            <li>Video recording is not available for this session</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Community Call Transition</h2>
+                        <ul>
+                            <li>Community call leadership is transitioning from board-driven to community-driven.</li>
+                            <li>Starting next week, calls for agenda topics will go out, and community members are encouraged to volunteer as hosts.</li>
+                            <li>Community members interested in hosting should reach out to the board.</li>
+                            <li>Non-copyrighted community-created music will be played at the start of calls; artists should contact the team.</li>
+                        </ul>
+
+                        <h2>2. Finance and Bank Account</h2>
+                        <ul>
+                            <li>The association now has an operational bank account, enabling progress on finances, budgets, and vendor payments.</li>
+                            <li>April is designated for budget planning; coordinators will meet with the finance team to review processes.</li>
+                            <li>Purchases are targeted for May, with vendors accommodating the timeline.</li>
+                        </ul>
+
+                        <h2>3. Site Lease and Permits</h2>
+                        <ul>
+                            <li>A productive meeting with the local council resulted in a significantly reduced price for the land rental.</li>
+                            <li>The permit process has officially started, two months ahead of the regulatory deadline.</li>
+                            <li>Reduction in rental costs also reduces the environmental tax and mandatory local improvement fund contributions.</li>
+                        </ul>
+
+                        <h2>4. Ticketing Update</h2>
+                        <ul>
+                            <li>Ticket sales are on track and meeting forecasted numbers, with momentum building as word spreads.</li>
+                            <li>Low-income tickets to be sent to successful applicants within 24 hours.</li>
+                            <li>Wave 2 pricing starts April 14, with the low-income base rate increasing by 20 euros.</li>
+                            <li>Bus tickets on track, pending confirmation of available spaces.</li>
+                        </ul>
+
+                        <h2>5. Communications Campaign</h2>
+                        <ul>
+                            <li>The communications team launched a &ldquo;postcards&rdquo; campaign &mdash; voice stories from community members to be shared on social media.</li>
+                            <li>Goal: increase engagement on channels like Instagram to reach a wider audience.</li>
+                            <li>Further planned activities include newsletters, Telegram updates, and Instagram campaigns.</li>
+                        </ul>
+
+                        <h2>6. Budget Transparency via Humans App</h2>
+                        <ul>
+                            <li>Budgets are now live in the Humans app, showing a real-time view of income and expenses.</li>
+                            <li>Coordinators can edit department line items; all members can see the high-level breakdown.</li>
+                            <li>VAT calculations are incorporated, including the delayed recovery timeline.</li>
+                            <li>Starting next week, the Humans app will enforce team-based access controls on shared drives.</li>
+                        </ul>
+
+                        <h2>7. Legal Updates</h2>
+                        <ul>
+                            <li>The asset acquisition contract is in its final version, with all proposed changes accepted. Confirmation expected soon.</li>
+                            <li>Legal protection for the event name &ldquo;Elsewhere&rdquo; has been secured; trademark filing will follow after the logo contest.</li>
+                        </ul>
+
+                        <h2>8. Volunteer Needs</h2>
+                        <ul>
+                            <li>Volunteers urgently needed for build and strike, particularly strike.</li>
+                            <li>A strike lead (ideally two people) is also needed.</li>
+                            <li>Temple Art Call announced &mdash; artists, dreamers, and builders invited to co-create.</li>
+                        </ul>
+
+                        <h2>9. Website</h2>
+                        <ul>
+                            <li>The website is easy to update and not a bottleneck.</li>
+                            <li>Community members encouraged to suggest content additions or changes.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Community</td><td>Volunteer to host future community calls</td><td>Ongoing</td></tr>
+                                <tr><td>Aaron R</td><td>Release low-income tickets and notifications</td><td>Within 24 hours</td></tr>
+                                <tr><td>Coordinators</td><td>Begin collecting departmental needs for May purchases</td><td>April</td></tr>
+                                <tr><td>Peter D</td><td>Finalize team configurations in Humans app before enforcing access</td><td>Next week</td></tr>
+                                <tr><td>Peter D</td><td>Add cash flow view to budgeting tool</td><td>Next week</td></tr>
+                                <tr><td>Pepe C</td><td>Proceed with trademark filing after logo contest</td><td>When ready</td></tr>
+                                <tr><td>Community</td><td>Volunteer for build and strike</td><td>Ongoing</td></tr>
+                                <tr><td>Pablo V</td><td>Post Discord call for next meeting topics and host</td><td>This week</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Minutes auto-generated by Gemini and sanitised for publication.</em></p>
+                    </div>
+
+                    <!-- Transcript available as separate page: 2026-04-02-community-transcript.html -->
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Presidida por Pablo V, con miembros de la junta, responsables y miembros de la comunidad</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registros de la Reuni&oacute;n</h3>
+                        <ul>
+                            <li>La grabaci&oacute;n de v&iacute;deo no est&aacute; disponible para esta sesi&oacute;n</li>
+                            <li><a href="2026-04-02-community-transcript.html">Transcripci&oacute;n completa (solo en ingl&eacute;s)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Transici&oacute;n de la Llamada Comunitaria</h2>
+                        <ul>
+                            <li>El liderazgo de la llamada comunitaria est&aacute; pasando de ser dirigida por la junta a ser dirigida por la comunidad.</li>
+                            <li>A partir de la pr&oacute;xima semana, se har&aacute;n convocatorias de temas para la agenda y se anima a los miembros de la comunidad a ofrecerse como anfitriones.</li>
+                            <li>Los miembros de la comunidad interesados en ser anfitriones deben contactar con la junta.</li>
+                            <li>Se reproducir&aacute; m&uacute;sica no protegida por derechos de autor creada por la comunidad al inicio de las llamadas; los artistas deben contactar al equipo.</li>
+                        </ul>
+
+                        <h2>2. Finanzas y Cuenta Bancaria</h2>
+                        <ul>
+                            <li>La asociaci&oacute;n ya tiene una cuenta bancaria operativa, lo que permite avanzar en finanzas, presupuestos y pagos a proveedores.</li>
+                            <li>Abril est&aacute; designado para la planificaci&oacute;n presupuestaria; los coordinadores se reunir&aacute;n con el equipo financiero para revisar los procesos.</li>
+                            <li>Las compras est&aacute;n previstas para mayo, con los proveedores adaptando los plazos.</li>
+                        </ul>
+
+                        <h2>3. Alquiler del Terreno y Permisos</h2>
+                        <ul>
+                            <li>Una reuni&oacute;n productiva con el ayuntamiento local result&oacute; en un precio significativamente reducido para el alquiler del terreno.</li>
+                            <li>El proceso de permisos ha comenzado oficialmente, dos meses antes del plazo regulatorio.</li>
+                            <li>La reducci&oacute;n en los costes de alquiler tambi&eacute;n reduce el impuesto medioambiental y las contribuciones obligatorias al fondo de mejora local.</li>
+                        </ul>
+
+                        <h2>4. Actualizaci&oacute;n de Entradas</h2>
+                        <ul>
+                            <li>Las ventas de entradas van seg&uacute;n lo previsto y cumplen con las cifras pronosticadas, con un impulso creciente a medida que se corre la voz.</li>
+                            <li>Las entradas de renta baja se enviar&aacute;n a los solicitantes aceptados en las pr&oacute;ximas 24 horas.</li>
+                            <li>Los precios de la Oleada 2 comienzan el 14 de abril, con la tarifa base de renta baja aumentando en 20 euros.</li>
+                            <li>Las entradas de autob&uacute;s van seg&uacute;n lo previsto, pendiente de confirmaci&oacute;n de plazas disponibles.</li>
+                        </ul>
+
+                        <h2>5. Campa&ntilde;a de Comunicaciones</h2>
+                        <ul>
+                            <li>El equipo de comunicaciones lanz&oacute; una campa&ntilde;a de &laquo;postales&raquo; &mdash; historias en voz de miembros de la comunidad para compartir en redes sociales.</li>
+                            <li>Objetivo: aumentar la participaci&oacute;n en canales como Instagram para llegar a un p&uacute;blico m&aacute;s amplio.</li>
+                            <li>Las actividades planificadas incluyen boletines, actualizaciones en Telegram y campa&ntilde;as de Instagram.</li>
+                        </ul>
+
+                        <h2>6. Transparencia Presupuestaria a trav&eacute;s de la App Humans</h2>
+                        <ul>
+                            <li>Los presupuestos ya est&aacute;n activos en la app Humans, mostrando una vista en tiempo real de ingresos y gastos.</li>
+                            <li>Los coordinadores pueden editar las partidas de su departamento; todos los miembros pueden ver el desglose general.</li>
+                            <li>Los c&aacute;lculos de IVA est&aacute;n incorporados, incluyendo el plazo de recuperaci&oacute;n diferido.</li>
+                            <li>A partir de la pr&oacute;xima semana, la app Humans aplicar&aacute; controles de acceso basados en equipos para las unidades compartidas.</li>
+                        </ul>
+
+                        <h2>7. Actualizaciones Legales</h2>
+                        <ul>
+                            <li>El contrato de adquisici&oacute;n de activos est&aacute; en su versi&oacute;n final, con todos los cambios propuestos aceptados. Se espera confirmaci&oacute;n pronto.</li>
+                            <li>Se ha asegurado la protecci&oacute;n legal para el nombre del evento &laquo;Elsewhere&raquo;; el registro de marca se realizar&aacute; tras el concurso del logotipo.</li>
+                        </ul>
+
+                        <h2>8. Necesidades de Voluntarios</h2>
+                        <ul>
+                            <li>Se necesitan urgentemente voluntarios para montaje y desmontaje, especialmente desmontaje.</li>
+                            <li>Tambi&eacute;n se necesita un l&iacute;der de desmontaje (idealmente dos personas).</li>
+                            <li>Se anunci&oacute; la Convocatoria de Arte del Templo &mdash; se invita a artistas, so&ntilde;adores y constructores a co-crear.</li>
+                        </ul>
+
+                        <h2>9. Sitio Web</h2>
+                        <ul>
+                            <li>El sitio web es f&aacute;cil de actualizar y no es un cuello de botella.</li>
+                            <li>Se anima a los miembros de la comunidad a sugerir adiciones o cambios de contenido.</li>
+                        </ul>
+
+                        <h2>Acciones a Realizar</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Comunidad</td><td>Ofrecerse como anfitriones de futuras llamadas comunitarias</td><td>Continuo</td></tr>
+                                <tr><td>Aaron R</td><td>Enviar entradas de renta baja y notificaciones</td><td>En 24 horas</td></tr>
+                                <tr><td>Coordinadores</td><td>Comenzar a recopilar necesidades departamentales para compras de mayo</td><td>Abril</td></tr>
+                                <tr><td>Peter D</td><td>Finalizar configuraciones de equipos en la app Humans antes de aplicar controles de acceso</td><td>Pr&oacute;xima semana</td></tr>
+                                <tr><td>Peter D</td><td>A&ntilde;adir vista de flujo de caja a la herramienta de presupuestos</td><td>Pr&oacute;xima semana</td></tr>
+                                <tr><td>Pepe C</td><td>Proceder con el registro de marca tras el concurso del logotipo</td><td>Cuando est&eacute; listo</td></tr>
+                                <tr><td>Comunidad</td><td>Ofrecerse como voluntarios para montaje y desmontaje</td><td>Continuo</td></tr>
+                                <tr><td>Pablo V</td><td>Publicar convocatoria en Discord para temas y anfitriones de la pr&oacute;xima reuni&oacute;n</td><td>Esta semana</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Actas generadas autom&aacute;ticamente por Gemini y depuradas para publicaci&oacute;n.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sid&eacute;e par Pablo V, avec les membres du conseil, les responsables et des membres de la communaut&eacute;</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archives de la R&eacute;union</h3>
+                        <ul>
+                            <li>L&rsquo;enregistrement vid&eacute;o n&rsquo;est pas disponible pour cette session</li>
+                            <li><a href="2026-04-02-community-transcript.html">Transcription compl&egrave;te (en anglais uniquement)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Transition de l&rsquo;Appel Communautaire</h2>
+                        <ul>
+                            <li>Le leadership de l&rsquo;appel communautaire passe d&rsquo;une gestion par le conseil &agrave; une gestion par la communaut&eacute;.</li>
+                            <li>&Agrave; partir de la semaine prochaine, des appels &agrave; sujets pour l&rsquo;ordre du jour seront lanc&eacute;s et les membres de la communaut&eacute; sont invit&eacute;s &agrave; se porter volontaires comme animateurs.</li>
+                            <li>Les membres de la communaut&eacute; int&eacute;ress&eacute;s par l&rsquo;animation doivent contacter le conseil.</li>
+                            <li>De la musique non prot&eacute;g&eacute;e par le droit d&rsquo;auteur cr&eacute;&eacute;e par la communaut&eacute; sera diffus&eacute;e en d&eacute;but d&rsquo;appel ; les artistes doivent contacter l&rsquo;&eacute;quipe.</li>
+                        </ul>
+
+                        <h2>2. Finances et Compte Bancaire</h2>
+                        <ul>
+                            <li>L&rsquo;association dispose d&eacute;sormais d&rsquo;un compte bancaire op&eacute;rationnel, permettant d&rsquo;avancer sur les finances, les budgets et les paiements aux fournisseurs.</li>
+                            <li>Avril est consacr&eacute; &agrave; la planification budg&eacute;taire ; les coordinateurs rencontreront l&rsquo;&eacute;quipe finance pour revoir les processus.</li>
+                            <li>Les achats sont pr&eacute;vus pour mai, les fournisseurs s&rsquo;adaptant au calendrier.</li>
+                        </ul>
+
+                        <h2>3. Bail du Site et Permis</h2>
+                        <ul>
+                            <li>Une r&eacute;union productive avec le conseil municipal a abouti &agrave; un prix significativement r&eacute;duit pour la location du terrain.</li>
+                            <li>Le processus de permis a officiellement d&eacute;marr&eacute;, deux mois avant la date limite r&eacute;glementaire.</li>
+                            <li>La r&eacute;duction des co&ucirc;ts de location r&eacute;duit &eacute;galement la taxe environnementale et les contributions obligatoires au fonds d&rsquo;am&eacute;lioration local.</li>
+                        </ul>
+
+                        <h2>4. Mise &agrave; jour Billetterie</h2>
+                        <ul>
+                            <li>Les ventes de billets sont en bonne voie et conformes aux pr&eacute;visions, avec un &eacute;lan croissant &agrave; mesure que le bouche-&agrave;-oreille se r&eacute;pand.</li>
+                            <li>Les billets &agrave; revenus modestes seront envoy&eacute;s aux candidats retenus dans les 24 heures.</li>
+                            <li>Les tarifs de la Vague 2 d&eacute;butent le 14 avril, avec le tarif de base &agrave; revenus modestes augmentant de 20 euros.</li>
+                            <li>Les billets de bus sont en bonne voie, en attente de confirmation des places disponibles.</li>
+                        </ul>
+
+                        <h2>5. Campagne de Communication</h2>
+                        <ul>
+                            <li>L&rsquo;&eacute;quipe de communication a lanc&eacute; une campagne &laquo; cartes postales &raquo; &mdash; des t&eacute;moignages vocaux de membres de la communaut&eacute; &agrave; partager sur les r&eacute;seaux sociaux.</li>
+                            <li>Objectif : augmenter l&rsquo;engagement sur des canaux comme Instagram pour toucher un public plus large.</li>
+                            <li>Les activit&eacute;s pr&eacute;vues incluent des newsletters, des mises &agrave; jour Telegram et des campagnes Instagram.</li>
+                        </ul>
+
+                        <h2>6. Transparence Budg&eacute;taire via l&rsquo;Application Humans</h2>
+                        <ul>
+                            <li>Les budgets sont d&eacute;sormais en ligne dans l&rsquo;app Humans, offrant une vue en temps r&eacute;el des revenus et d&eacute;penses.</li>
+                            <li>Les coordinateurs peuvent modifier les postes budg&eacute;taires de leur d&eacute;partement ; tous les membres peuvent voir la r&eacute;partition g&eacute;n&eacute;rale.</li>
+                            <li>Les calculs de TVA sont int&eacute;gr&eacute;s, y compris le calendrier de r&eacute;cup&eacute;ration diff&eacute;r&eacute;.</li>
+                            <li>&Agrave; partir de la semaine prochaine, l&rsquo;app Humans appliquera des contr&ocirc;les d&rsquo;acc&egrave;s par &eacute;quipe sur les lecteurs partag&eacute;s.</li>
+                        </ul>
+
+                        <h2>7. Mises &agrave; jour Juridiques</h2>
+                        <ul>
+                            <li>Le contrat d&rsquo;acquisition d&rsquo;actifs est dans sa version finale, avec tous les changements propos&eacute;s accept&eacute;s. Confirmation attendue prochainement.</li>
+                            <li>La protection juridique du nom de l&rsquo;&eacute;v&eacute;nement &laquo; Elsewhere &raquo; a &eacute;t&eacute; obtenue ; le d&eacute;p&ocirc;t de marque suivra apr&egrave;s le concours du logo.</li>
+                        </ul>
+
+                        <h2>8. Besoins en B&eacute;n&eacute;voles</h2>
+                        <ul>
+                            <li>Des b&eacute;n&eacute;voles sont urgemment n&eacute;cessaires pour le montage et le d&eacute;montage, en particulier le d&eacute;montage.</li>
+                            <li>Un responsable de d&eacute;montage (id&eacute;alement deux personnes) est &eacute;galement recherch&eacute;.</li>
+                            <li>L&rsquo;Appel &agrave; l&rsquo;Art du Temple a &eacute;t&eacute; annonc&eacute; &mdash; artistes, r&ecirc;veurs et constructeurs sont invit&eacute;s &agrave; co-cr&eacute;er.</li>
+                        </ul>
+
+                        <h2>9. Site Web</h2>
+                        <ul>
+                            <li>Le site web est facile &agrave; mettre &agrave; jour et ne constitue pas un goulot d&rsquo;&eacute;tranglement.</li>
+                            <li>Les membres de la communaut&eacute; sont invit&eacute;s &agrave; sugg&eacute;rer des ajouts ou modifications de contenu.</li>
+                        </ul>
+
+                        <h2>Actions &agrave; R&eacute;aliser</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>D&eacute;lai</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Communaut&eacute;</td><td>Se porter volontaire pour animer les futurs appels communautaires</td><td>Continu</td></tr>
+                                <tr><td>Aaron R</td><td>Envoyer les billets &agrave; revenus modestes et les notifications</td><td>Dans les 24 heures</td></tr>
+                                <tr><td>Coordinateurs</td><td>Commencer &agrave; recueillir les besoins d&eacute;partementaux pour les achats de mai</td><td>Avril</td></tr>
+                                <tr><td>Peter D</td><td>Finaliser les configurations d&rsquo;&eacute;quipe dans l&rsquo;app Humans avant d&rsquo;appliquer les contr&ocirc;les d&rsquo;acc&egrave;s</td><td>Semaine prochaine</td></tr>
+                                <tr><td>Peter D</td><td>Ajouter une vue de flux de tr&eacute;sorerie &agrave; l&rsquo;outil budg&eacute;taire</td><td>Semaine prochaine</td></tr>
+                                <tr><td>Pepe C</td><td>Proc&eacute;der au d&eacute;p&ocirc;t de marque apr&egrave;s le concours du logo</td><td>Quand pr&ecirc;t</td></tr>
+                                <tr><td>Communaut&eacute;</td><td>Se porter volontaire pour le montage et le d&eacute;montage</td><td>Continu</td></tr>
+                                <tr><td>Pablo V</td><td>Publier un appel sur Discord pour les sujets et l&rsquo;animateur de la prochaine r&eacute;union</td><td>Cette semaine</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Proc&egrave;s-verbal g&eacute;n&eacute;r&eacute; automatiquement par Gemini et &eacute;pur&eacute; pour publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presieduta da Pablo V, con i membri del consiglio, i responsabili e membri della comunit&agrave;</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archivi della Riunione</h3>
+                        <ul>
+                            <li>La registrazione video non &egrave; disponibile per questa sessione</li>
+                            <li><a href="2026-04-02-community-transcript.html">Trascrizione completa (solo in inglese)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Transizione della Chiamata Comunitaria</h2>
+                        <ul>
+                            <li>La leadership della chiamata comunitaria sta passando da una gestione del consiglio a una gestione della comunit&agrave;.</li>
+                            <li>A partire dalla prossima settimana, verranno lanciati inviti per i temi dell&rsquo;ordine del giorno e i membri della comunit&agrave; sono incoraggiati a proporsi come moderatori.</li>
+                            <li>I membri della comunit&agrave; interessati a moderare devono contattare il consiglio.</li>
+                            <li>Musica non protetta da copyright creata dalla comunit&agrave; verr&agrave; riprodotta all&rsquo;inizio delle chiamate; gli artisti devono contattare il team.</li>
+                        </ul>
+
+                        <h2>2. Finanze e Conto Bancario</h2>
+                        <ul>
+                            <li>L&rsquo;associazione ha ora un conto bancario operativo, che consente di procedere con finanze, bilanci e pagamenti ai fornitori.</li>
+                            <li>Aprile &egrave; dedicato alla pianificazione del bilancio; i coordinatori si incontreranno con il team finanziario per rivedere i processi.</li>
+                            <li>Gli acquisti sono previsti per maggio, con i fornitori che si adattano alle tempistiche.</li>
+                        </ul>
+
+                        <h2>3. Affitto del Sito e Permessi</h2>
+                        <ul>
+                            <li>Un incontro produttivo con il consiglio comunale ha portato a un prezzo significativamente ridotto per l&rsquo;affitto del terreno.</li>
+                            <li>Il processo di autorizzazione &egrave; ufficialmente iniziato, due mesi prima della scadenza regolamentare.</li>
+                            <li>La riduzione dei costi di affitto riduce anche la tassa ambientale e i contributi obbligatori al fondo di miglioramento locale.</li>
+                        </ul>
+
+                        <h2>4. Aggiornamento Biglietteria</h2>
+                        <ul>
+                            <li>Le vendite dei biglietti sono in linea con le previsioni, con uno slancio crescente man mano che la voce si diffonde.</li>
+                            <li>I biglietti a reddito basso saranno inviati ai richiedenti ammessi entro 24 ore.</li>
+                            <li>I prezzi della Ondata 2 iniziano il 14 aprile, con la tariffa base a reddito basso che aumenta di 20 euro.</li>
+                            <li>I biglietti del bus sono in programma, in attesa di conferma dei posti disponibili.</li>
+                        </ul>
+
+                        <h2>5. Campagna di Comunicazione</h2>
+                        <ul>
+                            <li>Il team comunicazione ha lanciato una campagna &laquo;cartoline&raquo; &mdash; storie vocali dai membri della comunit&agrave; da condividere sui social media.</li>
+                            <li>Obiettivo: aumentare il coinvolgimento su canali come Instagram per raggiungere un pubblico pi&ugrave; ampio.</li>
+                            <li>Le attivit&agrave; previste includono newsletter, aggiornamenti Telegram e campagne Instagram.</li>
+                        </ul>
+
+                        <h2>6. Trasparenza del Bilancio tramite l&rsquo;App Humans</h2>
+                        <ul>
+                            <li>I bilanci sono ora disponibili nell&rsquo;app Humans, mostrando una vista in tempo reale di entrate e uscite.</li>
+                            <li>I coordinatori possono modificare le voci del loro dipartimento; tutti i membri possono vedere la ripartizione generale.</li>
+                            <li>I calcoli IVA sono integrati, inclusa la tempistica di recupero differito.</li>
+                            <li>A partire dalla prossima settimana, l&rsquo;app Humans applicher&agrave; controlli di accesso basati sui team per le unit&agrave; condivise.</li>
+                        </ul>
+
+                        <h2>7. Aggiornamenti Legali</h2>
+                        <ul>
+                            <li>Il contratto di acquisizione degli asset &egrave; nella sua versione finale, con tutte le modifiche proposte accettate. Conferma attesa a breve.</li>
+                            <li>La protezione legale per il nome dell&rsquo;evento &laquo;Elsewhere&raquo; &egrave; stata ottenuta; la registrazione del marchio seguir&agrave; dopo il concorso del logo.</li>
+                        </ul>
+
+                        <h2>8. Necessit&agrave; di Volontari</h2>
+                        <ul>
+                            <li>Volontari urgentemente necessari per montaggio e smontaggio, in particolare smontaggio.</li>
+                            <li>Serve anche un responsabile dello smontaggio (idealmente due persone).</li>
+                            <li>Annunciato il Bando per l&rsquo;Arte del Tempio &mdash; artisti, sognatori e costruttori invitati a co-creare.</li>
+                        </ul>
+
+                        <h2>9. Sito Web</h2>
+                        <ul>
+                            <li>Il sito web &egrave; facile da aggiornare e non &egrave; un collo di bottiglia.</li>
+                            <li>I membri della comunit&agrave; sono incoraggiati a suggerire aggiunte o modifiche ai contenuti.</li>
+                        </ul>
+
+                        <h2>Azioni da Intraprendere</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Comunit&agrave;</td><td>Proporsi come moderatori delle future chiamate comunitarie</td><td>Continuo</td></tr>
+                                <tr><td>Aaron R</td><td>Inviare i biglietti a reddito basso e le notifiche</td><td>Entro 24 ore</td></tr>
+                                <tr><td>Coordinatori</td><td>Iniziare a raccogliere le esigenze dipartimentali per gli acquisti di maggio</td><td>Aprile</td></tr>
+                                <tr><td>Peter D</td><td>Finalizzare le configurazioni dei team nell&rsquo;app Humans prima di applicare i controlli di accesso</td><td>Prossima settimana</td></tr>
+                                <tr><td>Peter D</td><td>Aggiungere una vista del flusso di cassa allo strumento di bilancio</td><td>Prossima settimana</td></tr>
+                                <tr><td>Pepe C</td><td>Procedere con la registrazione del marchio dopo il concorso del logo</td><td>Quando pronto</td></tr>
+                                <tr><td>Comunit&agrave;</td><td>Proporsi come volontari per montaggio e smontaggio</td><td>Continuo</td></tr>
+                                <tr><td>Pablo V</td><td>Pubblicare un invito su Discord per i temi e il moderatore della prossima riunione</td><td>Questa settimana</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Verbale generato automaticamente da Gemini e revisionato per la pubblicazione.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Geleitet von Pablo V, mit Vorstandsmitgliedern, Verantwortlichen und Community-Mitgliedern</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Sitzungsunterlagen</h3>
+                        <ul>
+                            <li>Videoaufzeichnung ist f&uuml;r diese Sitzung nicht verf&uuml;gbar</li>
+                            <li><a href="2026-04-02-community-transcript.html">Vollst&auml;ndiges Transkript (nur auf Englisch)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. &Uuml;bergang des Community-Calls</h2>
+                        <ul>
+                            <li>Die Leitung des Community-Calls geht vom Vorstand auf die Community &uuml;ber.</li>
+                            <li>Ab n&auml;chster Woche werden Aufrufe f&uuml;r Tagesordnungspunkte versandt, und Community-Mitglieder werden ermutigt, sich als Moderatoren zu melden.</li>
+                            <li>Interessierte Community-Mitglieder sollten den Vorstand kontaktieren.</li>
+                            <li>Nicht urheberrechtlich gesch&uuml;tzte, von der Community erstellte Musik wird zu Beginn der Calls abgespielt; K&uuml;nstler sollten das Team kontaktieren.</li>
+                        </ul>
+
+                        <h2>2. Finanzen und Bankkonto</h2>
+                        <ul>
+                            <li>Der Verein verf&uuml;gt nun &uuml;ber ein betriebsbereites Bankkonto, das Fortschritte bei Finanzen, Budgets und Lieferantenzahlungen erm&ouml;glicht.</li>
+                            <li>April ist f&uuml;r die Budgetplanung vorgesehen; Koordinatoren treffen sich mit dem Finanzteam zur Prozess&uuml;berpr&uuml;fung.</li>
+                            <li>Eink&auml;ufe sind f&uuml;r Mai geplant, wobei sich die Lieferanten an den Zeitplan anpassen.</li>
+                        </ul>
+
+                        <h2>3. Gel&auml;ndemiete und Genehmigungen</h2>
+                        <ul>
+                            <li>Ein produktives Treffen mit der Gemeindeverwaltung f&uuml;hrte zu einem deutlich reduzierten Preis f&uuml;r die Gel&auml;ndemiete.</li>
+                            <li>Der Genehmigungsprozess hat offiziell begonnen, zwei Monate vor der regulatorischen Frist.</li>
+                            <li>Die Senkung der Mietkosten reduziert auch die Umweltsteuer und die obligatorischen Beitr&auml;ge zum lokalen Verbesserungsfonds.</li>
+                        </ul>
+
+                        <h2>4. Ticketing-Update</h2>
+                        <ul>
+                            <li>Der Ticketverkauf liegt im Plan und entspricht den prognostizierten Zahlen, mit wachsendem Schwung durch Mundpropaganda.</li>
+                            <li>Tickets f&uuml;r Geringverdiener werden innerhalb von 24 Stunden an erfolgreiche Bewerber versandt.</li>
+                            <li>Die Preise der Welle 2 beginnen am 14. April, wobei der Basistarif f&uuml;r Geringverdiener um 20 Euro steigt.</li>
+                            <li>Bustickets sind im Zeitplan, ausstehend die Best&auml;tigung der verf&uuml;gbaren Pl&auml;tze.</li>
+                        </ul>
+
+                        <h2>5. Kommunikationskampagne</h2>
+                        <ul>
+                            <li>Das Kommunikationsteam hat eine &laquo;Postkarten&raquo;-Kampagne gestartet &mdash; Sprachgeschichten von Community-Mitgliedern zur Verbreitung in sozialen Medien.</li>
+                            <li>Ziel: mehr Engagement auf Kan&auml;len wie Instagram, um ein breiteres Publikum zu erreichen.</li>
+                            <li>Weitere geplante Aktivit&auml;ten umfassen Newsletter, Telegram-Updates und Instagram-Kampagnen.</li>
+                        </ul>
+
+                        <h2>6. Budgettransparenz &uuml;ber die Humans-App</h2>
+                        <ul>
+                            <li>Budgets sind jetzt in der Humans-App live, mit einer Echtzeitansicht von Einnahmen und Ausgaben.</li>
+                            <li>Koordinatoren k&ouml;nnen Abteilungsposten bearbeiten; alle Mitglieder k&ouml;nnen die &Uuml;bersicht einsehen.</li>
+                            <li>Mehrwertsteuerberechnungen sind integriert, einschlie&szlig;lich des verz&ouml;gerten R&uuml;ckerstattungszeitraums.</li>
+                            <li>Ab n&auml;chster Woche wird die Humans-App teambasierte Zugriffskontrollen f&uuml;r freigegebene Laufwerke durchsetzen.</li>
+                        </ul>
+
+                        <h2>7. Rechtliche Updates</h2>
+                        <ul>
+                            <li>Der Vertrag zur &Uuml;bernahme von Verm&ouml;genswerten liegt in seiner finalen Version vor, mit allen vorgeschlagenen &Auml;nderungen akzeptiert. Best&auml;tigung wird in K&uuml;rze erwartet.</li>
+                            <li>Der rechtliche Schutz f&uuml;r den Veranstaltungsnamen &laquo;Elsewhere&raquo; wurde gesichert; die Markenanmeldung folgt nach dem Logo-Wettbewerb.</li>
+                        </ul>
+
+                        <h2>8. Freiwilligenbedarf</h2>
+                        <ul>
+                            <li>Freiwillige werden dringend f&uuml;r Aufbau und Abbau ben&ouml;tigt, insbesondere f&uuml;r den Abbau.</li>
+                            <li>Ein Abbau-Leiter (idealerweise zwei Personen) wird ebenfalls gesucht.</li>
+                            <li>Der Tempel-Kunstaufruf wurde angek&uuml;ndigt &mdash; K&uuml;nstler, Tr&auml;umer und Erbauer sind eingeladen, mitzugestalten.</li>
+                        </ul>
+
+                        <h2>9. Webseite</h2>
+                        <ul>
+                            <li>Die Webseite ist einfach zu aktualisieren und kein Engpass.</li>
+                            <li>Community-Mitglieder werden ermutigt, Inhaltserg&auml;nzungen oder -&auml;nderungen vorzuschlagen.</li>
+                        </ul>
+
+                        <h2>Ma&szlig;nahmen</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Ma&szlig;nahme</th><th>Frist</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Community</td><td>Sich als Moderatoren f&uuml;r zuk&uuml;nftige Community-Calls melden</td><td>Laufend</td></tr>
+                                <tr><td>Aaron R</td><td>Geringverdiener-Tickets und Benachrichtigungen versenden</td><td>Innerhalb von 24 Stunden</td></tr>
+                                <tr><td>Koordinatoren</td><td>Mit der Erfassung der Abteilungsbedarfe f&uuml;r Mai-Eink&auml;ufe beginnen</td><td>April</td></tr>
+                                <tr><td>Peter D</td><td>Team-Konfigurationen in der Humans-App finalisieren bevor Zugriffskontrollen greifen</td><td>N&auml;chste Woche</td></tr>
+                                <tr><td>Peter D</td><td>Cashflow-Ansicht zum Budget-Tool hinzuf&uuml;gen</td><td>N&auml;chste Woche</td></tr>
+                                <tr><td>Pepe C</td><td>Markenanmeldung nach dem Logo-Wettbewerb einleiten</td><td>Wenn bereit</td></tr>
+                                <tr><td>Community</td><td>Sich als Freiwillige f&uuml;r Aufbau und Abbau melden</td><td>Laufend</td></tr>
+                                <tr><td>Pablo V</td><td>Discord-Aufruf f&uuml;r Themen und Moderator des n&auml;chsten Treffens ver&ouml;ffentlichen</td><td>Diese Woche</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Protokoll automatisch von Gemini erstellt und f&uuml;r die Ver&ouml;ffentlichung bereinigt.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
