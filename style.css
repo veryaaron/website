@@ -1987,6 +1987,7 @@ h4 { font-size: 1.15rem; }
 .activity-source[data-source="Press"] { background: #dde4f0; color: #3a4a7a; }
 .activity-source[data-source="Infra"] { background: #d9e6e0; color: #3d6b5a; }
 .activity-source[data-source="Barrios"] { background: #f0d5c0; color: #8a4a20; }
+.activity-source[data-source="Recruitment"] { background: #dde0f0; color: #4a3a7a; }
 
 .activity-text {
     color: var(--color-text);
