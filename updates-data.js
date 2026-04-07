@@ -3,7 +3,7 @@
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
     // === April 7 ===
-    {"date": "2026-04-07", "source": "Art", "text": "After an executive search spanning 5 continents and possibly involving a conversation in a bungalow at an unspecified tropical location, a Werkhaus lead has been located."},
+    {"date": "2026-04-07", "source": "Recruitment", "text": "After an executive search spanning 5 continents and possibly involving a conversation in a bungalow at an unspecified tropical location, a Werkhaus lead has been located."},
     {"date": "2026-04-07", "source": "Governance", "text": "April 2 <a href=\"transparency/2026-04-02-board.html\">board meeting</a> minutes published to transparency page"},
     {"date": "2026-04-07", "source": "Governance", "text": "April 2 <a href=\"transparency/2026-04-02-community.html\">community meeting</a> minutes published with full transcript"},
 
