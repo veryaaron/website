@@ -63,7 +63,7 @@
                     '<div class="footer-volunteer">' +
                         '<h4>Volunteer</h4>' +
                         '<a href="https://humans.nobodies.team" target="_blank">Humans App</a>' +
-                        '<a href="https://vim.nobodies.team" target="_blank">VIM Shifts</a>' +
+                        '<a href="' + prefix + '/volunteer/index.html">Volunteer Info</a>' +
                     '</div>' +
                     '<div class="footer-links">' +
                         '<h4>Other</h4>' +
@@ -80,6 +80,7 @@
                     '<p>Organizers of Elsewhere</p>' +
                     '<p>A Spanish non-profit cultural association</p>' +
                     '<p class="footer-address">Glorieta de Bilbao 1, 3&ordm; Derecha<br>28004 Madrid, Spain</p>' +
+                    '<p style="font-size:0.85em;opacity:0.7;">NIF: G26726299</p>' +
                     '<p>&copy; 2026 Asociaci&oacute;n Nobodies Collective</p>' +
                 '</div>' +
             '</div>' +
