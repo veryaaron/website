@@ -2,6 +2,9 @@
 // Each entry: { date: "YYYY-MM-DD", source: "Team", text: "Update text" }
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
+    // === April 8 ===
+    {"date": "2026-04-08", "source": "Governance", "text": "April 6 <a href=\"transparency/2026-04-06-board.html\">board meeting</a> minutes published to transparency page"},
+
     // === April 7 ===
     {"date": "2026-04-07", "source": "Recruitment", "text": "After an executive search spanning 5 continents and possibly involving a conversation in a bungalow at an unspecified tropical location, a Werkhaus lead has been located."},
     {"date": "2026-04-07", "source": "Governance", "text": "April 2 <a href=\"transparency/2026-04-02-board.html\">board meeting</a> minutes published to transparency page"},
