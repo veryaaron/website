@@ -3,6 +3,7 @@
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
     // === April 10 ===
+    {"date": "2026-04-10", "source": "Ticketing", "text": "Wave 1 tickets almost sold out! <a href=\"https://tickets.nobodies.team/events/nobodiescollective/2089167\" target=\"_blank\">Get yours before April 14</a>"},
     {"date": "2026-04-10", "source": "Governance", "text": "April 9 <a href=\"transparency/2026-04-09-board.html\">board meeting</a> minutes published to transparency page"},
     {"date": "2026-04-10", "source": "Governance", "text": "April 9 <a href=\"transparency/2026-04-09-community.html\">community meeting</a> minutes published with full transcript and video recording"},
 
