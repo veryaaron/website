@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Meeting - April 9, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .resource-links { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .resource-links h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+        .resource-links ul { list-style: none; padding: 0; margin: 0; }
+        .resource-links li { margin-bottom: 0.5rem; }
+        .resource-links a { color: var(--color-accent); font-weight: 500; }
+        .resource-links a:hover { text-decoration: underline; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem; border-radius: 8px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        .transcript-section { margin-top: 2rem; border: 1px solid var(--color-border); border-radius: 8px; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Community Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Wednesday 9 April 2026, 19:54 CEST</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Chaired by Ellen K, with board members, leads, and community members (~43 attendees)</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-04-09-community-transcript.html">Full transcript (English only)</a></li>
+                            <li><a href="https://youtu.be/7agJre41V2k">Video recording (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/7agJre41V2k" title="Community Meeting - April 9, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. GDPR Incident Update</h2>
+                        <ul>
+                            <li>Aaron R reported on a data leak incident from the prior week involving 47 individuals.</li>
+                            <li>The leak was caused by inherited permissions when a group was created in the organization&rsquo;s system.</li>
+                            <li>All affected individuals had already signed the data policy, and the team could track exactly what was viewed.</li>
+                            <li>The DPO coordinated the response, including communication with affected individuals and submission of a report to the AEPD within the required 72-hour deadline.</li>
+                            <li>The AEPD confirmed the case was closed from their perspective.</li>
+                            <li>System improvements have been implemented, including alerts for permission changes, and plans are in place to move sensitive data to the encrypted Humans platform.</li>
+                        </ul>
+
+                        <h2>2. Africa Burn Ambassador Opportunity</h2>
+                        <ul>
+                            <li>Sakolo S presented an opportunity for an ambassador to attend Africa Burn (starting April 27) with a free event ticket, bus ticket, and camp accommodation.</li>
+                            <li>The offer is intended to foster a relationship between the two events.</li>
+                            <li>Interested parties were asked to contact Sakolo S by email within the next few days.</li>
+                            <li>Comms was asked to finalize a media presentation or flyer for Elsewhere for distribution at the event, along with consistent messaging about the event.</li>
+                            <li>Michael M expressed support for cross-event outreach to share operational skills and processes.</li>
+                        </ul>
+
+                        <h2>3. Barrio Registration and Support</h2>
+                        <ul>
+                            <li>Cayce reported that barrio registration closes on April 14 at 23:59 CET.</li>
+                            <li>The ordering system for supplies (ice, water, gas, pallets) will be available via Humans before the end of April.</li>
+                            <li>A &ldquo;barrio speed dating&rdquo; event is planned to help barrios recruit new members.</li>
+                            <li>The barrio guide has been published and is available on the website.</li>
+                            <li>Barrios not attending this year are encouraged to register on Humans to remain in the system.</li>
+                        </ul>
+
+                        <h2>4. City Planning and Map Layout</h2>
+                        <ul>
+                            <li>The city planning team presented a new map layout for the event featuring ellipses and color zones.</li>
+                            <li>The area is slightly smaller than the previous year.</li>
+                            <li>Barrio self-placement will open next week after registration closes, using an improved app on the Humans platform with better permission controls.</li>
+                            <li>Questions about toilet placement, sound conflicts, and infrastructure placement were noted for future drafts.</li>
+                            <li>The idea of camps alternating sound slots was raised for further discussion.</li>
+                        </ul>
+
+                        <h2>5. Volunteer Needs</h2>
+                        <ul>
+                            <li>Frank F and Michael M reported critically low volunteer sign-up rates: City Planning 8%, Build &amp; Infrastructure 10%, Cantina 20%, LNT 9%, Gate 25%, Malfair 12%, Welfare 6%, Interpreters 3%.</li>
+                            <li>Barrios were at 49%.</li>
+                            <li>The early build period is the most critical need.</li>
+                            <li>A second on-site Barrio Support lead is needed.</li>
+                            <li>Transport for early volunteers includes daily pickups from the local train station, with ride-share boards being set up.</li>
+                            <li>Post-event shuttle options are being explored.</li>
+                        </ul>
+
+                        <h2>6. Ticketing Update</h2>
+                        <ul>
+                            <li>Aaron R reported that Wave 1 tickets (275 euros) are on track to sell out before the April 14 deadline.</li>
+                            <li>After that date, pricing increases to 295 euros for Wave 2.</li>
+                            <li>Community members were urged to spread the word, as hundreds of registered users have not yet purchased tickets.</li>
+                            <li>Low-income ticket applicants have been notified of their status.</li>
+                            <li>At the current sales rate, the event may match the previous year&rsquo;s attendance numbers.</li>
+                        </ul>
+
+                        <h2>7. Fencing Project</h2>
+                        <ul>
+                            <li>An update from the art team announced a creative fencing project.</li>
+                            <li>While safety tape remains necessary in some areas, creative alternatives (bunting, recyclables) are being sought for areas between and behind barrios, with prizes planned for the best designs.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Comms</td><td>Finalize a media presentation for Elsewhere within 2&ndash;3 weeks for Africa Burn distribution</td><td>2&ndash;3 weeks</td></tr>
+                                <tr><td>Comms / Community</td><td>Establish consistent messaging about the event for ambassador use</td><td>Ongoing</td></tr>
+                                <tr><td>Sakolo S</td><td>Handle logistics for Africa Burn ticket offer via email</td><td>Next few days</td></tr>
+                                <tr><td>Michael M</td><td>Check with Comms on bus schedule updates for the ticket page</td><td>Ongoing</td></tr>
+                                <tr><td>Pablo V</td><td>Post on City Planning channel regarding sound analysis and alternating slots</td><td>Ongoing</td></tr>
+                                <tr><td>Aaron R</td><td>Confirm and communicate bus schedule, prices, and ticket availability</td><td>Ongoing</td></tr>
+                                <tr><td>All</td><td>Promote Wave 1 ticket deadline (April 14) in barrio chats</td><td>April 14</td></tr>
+                                <tr><td>Community</td><td>Watch for the fencing project launch; submit non-copyrighted music to Daniel T on Discord for community calls</td><td>Ongoing</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Minutes auto-generated by Gemini and sanitised for publication.</em></p>
+                    </div>
+
+                    <!-- Transcript available as separate page: 2026-04-09-community-transcript.html -->
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Presidida por Ellen K, con miembros de la junta, responsables y miembros de la comunidad (~43 asistentes)</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registros de la Reuni&oacute;n</h3>
+                        <ul>
+                            <li><a href="2026-04-09-community-transcript.html">Transcripci&oacute;n completa (solo en ingl&eacute;s)</a></li>
+                            <li><a href="https://youtu.be/7agJre41V2k">Grabaci&oacute;n en v&iacute;deo (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/7agJre41V2k" title="Community Meeting - April 9, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Actualizaci&oacute;n sobre Incidente RGPD</h2>
+                        <ul>
+                            <li>Aaron R inform&oacute; sobre un incidente de fuga de datos de la semana anterior que afect&oacute; a 47 personas.</li>
+                            <li>La fuga fue causada por permisos heredados al crear un grupo en el sistema de la organizaci&oacute;n.</li>
+                            <li>Todas las personas afectadas ya hab&iacute;an firmado la pol&iacute;tica de datos, y el equipo pudo rastrear exactamente qu&eacute; fue visto.</li>
+                            <li>El DPO coordin&oacute; la respuesta, incluyendo la comunicaci&oacute;n con las personas afectadas y la presentaci&oacute;n de un informe a la AEPD dentro del plazo requerido de 72 horas.</li>
+                            <li>La AEPD confirm&oacute; que el caso estaba cerrado desde su perspectiva.</li>
+                            <li>Se han implementado mejoras en el sistema, incluyendo alertas para cambios de permisos, y se planea trasladar datos sensibles a la plataforma cifrada Humans.</li>
+                        </ul>
+
+                        <h2>2. Oportunidad de Embajador en Africa Burn</h2>
+                        <ul>
+                            <li>Sakolo S present&oacute; una oportunidad para que un embajador asista a Africa Burn (a partir del 27 de abril) con entrada gratuita, billete de autob&uacute;s y alojamiento en campamento.</li>
+                            <li>La oferta pretende fomentar una relaci&oacute;n entre los dos eventos.</li>
+                            <li>Se pidi&oacute; a los interesados que contacten a Sakolo S por correo electr&oacute;nico en los pr&oacute;ximos d&iacute;as.</li>
+                            <li>Se solicit&oacute; a Comunicaciones que finalice una presentaci&oacute;n medi&aacute;tica o folleto de Elsewhere para distribuir en el evento, junto con un mensaje coherente sobre el evento.</li>
+                            <li>Michael M expres&oacute; su apoyo a la colaboraci&oacute;n entre eventos para compartir habilidades operativas y procesos.</li>
+                        </ul>
+
+                        <h2>3. Registro y Apoyo de Barrios</h2>
+                        <ul>
+                            <li>Cayce inform&oacute; que el registro de barrios cierra el 14 de abril a las 23:59 CET.</li>
+                            <li>El sistema de pedidos de suministros (hielo, agua, gas, pal&eacute;s) estar&aacute; disponible a trav&eacute;s de Humans antes de finales de abril.</li>
+                            <li>Se planea un evento de &laquo;citas r&aacute;pidas de barrios&raquo; para ayudar a los barrios a reclutar nuevos miembros.</li>
+                            <li>La gu&iacute;a de barrios ha sido publicada y est&aacute; disponible en el sitio web.</li>
+                            <li>Se anima a los barrios que no asistan este a&ntilde;o a registrarse en Humans para permanecer en el sistema.</li>
+                        </ul>
+
+                        <h2>4. Planificaci&oacute;n Urbana y Dise&ntilde;o del Mapa</h2>
+                        <ul>
+                            <li>El equipo de planificaci&oacute;n urbana present&oacute; un nuevo dise&ntilde;o de mapa para el evento con elipses y zonas de colores.</li>
+                            <li>El &aacute;rea es ligeramente m&aacute;s peque&ntilde;a que el a&ntilde;o anterior.</li>
+                            <li>La autoubicaci&oacute;n de barrios se abrir&aacute; la pr&oacute;xima semana tras el cierre del registro, usando una app mejorada en la plataforma Humans con mejores controles de permisos.</li>
+                            <li>Se tomaron nota de preguntas sobre la ubicaci&oacute;n de ba&ntilde;os, conflictos de sonido y ubicaci&oacute;n de infraestructuras para futuros borradores.</li>
+                            <li>La idea de que los campamentos alternen turnos de sonido se plante&oacute; para mayor discusi&oacute;n.</li>
+                        </ul>
+
+                        <h2>5. Necesidades de Voluntarios</h2>
+                        <ul>
+                            <li>Frank F y Michael M informaron de tasas de inscripci&oacute;n de voluntarios cr&iacute;ticamente bajas: Planificaci&oacute;n Urbana 8%, Construcci&oacute;n e Infraestructura 10%, Cantina 20%, LNT 9%, Puerta 25%, Malfair 12%, Bienestar 6%, Int&eacute;rpretes 3%.</li>
+                            <li>Los barrios estaban al 49%.</li>
+                            <li>El per&iacute;odo de construcci&oacute;n temprana es la necesidad m&aacute;s cr&iacute;tica.</li>
+                            <li>Se necesita un segundo l&iacute;der de Apoyo a Barrios en el terreno.</li>
+                            <li>El transporte para voluntarios tempranos incluye recogidas diarias desde la estaci&oacute;n de tren local, con tablones de viajes compartidos en preparaci&oacute;n.</li>
+                            <li>Se est&aacute;n explorando opciones de lanzadera post-evento.</li>
+                        </ul>
+
+                        <h2>6. Actualizaci&oacute;n de Entradas</h2>
+                        <ul>
+                            <li>Aaron R inform&oacute; que las entradas de la Oleada 1 (275 euros) van camino de agotarse antes de la fecha l&iacute;mite del 14 de abril.</li>
+                            <li>Despu&eacute;s de esa fecha, el precio sube a 295 euros para la Oleada 2.</li>
+                            <li>Se inst&oacute; a los miembros de la comunidad a difundir el mensaje, ya que cientos de usuarios registrados a&uacute;n no han comprado entradas.</li>
+                            <li>Los solicitantes de entradas de renta baja han sido notificados de su estado.</li>
+                            <li>Al ritmo actual de ventas, el evento podr&iacute;a igualar las cifras de asistencia del a&ntilde;o anterior.</li>
+                        </ul>
+
+                        <h2>7. Proyecto de Cercado</h2>
+                        <ul>
+                            <li>Una actualizaci&oacute;n del equipo de arte anunci&oacute; un proyecto de cercado creativo.</li>
+                            <li>Aunque la cinta de seguridad sigue siendo necesaria en algunas zonas, se buscan alternativas creativas (banderines, materiales reciclables) para las zonas entre y detr&aacute;s de los barrios, con premios previstos para los mejores dise&ntilde;os.</li>
+                        </ul>
+
+                        <h2>Acciones a Realizar</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Comunicaciones</td><td>Finalizar una presentaci&oacute;n medi&aacute;tica de Elsewhere en 2&ndash;3 semanas para distribuci&oacute;n en Africa Burn</td><td>2&ndash;3 semanas</td></tr>
+                                <tr><td>Comunicaciones / Comunidad</td><td>Establecer un mensaje coherente sobre el evento para uso del embajador</td><td>Continuo</td></tr>
+                                <tr><td>Sakolo S</td><td>Gestionar la log&iacute;stica de la oferta de entrada de Africa Burn por correo electr&oacute;nico</td><td>Pr&oacute;ximos d&iacute;as</td></tr>
+                                <tr><td>Michael M</td><td>Consultar con Comunicaciones sobre actualizaciones del horario de autob&uacute;s para la p&aacute;gina de entradas</td><td>Continuo</td></tr>
+                                <tr><td>Pablo V</td><td>Publicar en el canal de Planificaci&oacute;n Urbana sobre an&aacute;lisis de sonido y turnos alternos</td><td>Continuo</td></tr>
+                                <tr><td>Aaron R</td><td>Confirmar y comunicar horario de autob&uacute;s, precios y disponibilidad de entradas</td><td>Continuo</td></tr>
+                                <tr><td>Todos</td><td>Promover la fecha l&iacute;mite de entradas Oleada 1 (14 de abril) en los chats de barrios</td><td>14 de abril</td></tr>
+                                <tr><td>Comunidad</td><td>Estar atentos al lanzamiento del proyecto de cercado; enviar m&uacute;sica sin copyright a Daniel T en Discord para las llamadas comunitarias</td><td>Continuo</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Actas generadas autom&aacute;ticamente por Gemini y depuradas para publicaci&oacute;n.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sid&eacute;e par Ellen K, avec les membres du conseil, les responsables et des membres de la communaut&eacute; (~43 participants)</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archives de la R&eacute;union</h3>
+                        <ul>
+                            <li><a href="2026-04-09-community-transcript.html">Transcription compl&egrave;te (en anglais uniquement)</a></li>
+                            <li><a href="https://youtu.be/7agJre41V2k">Enregistrement vid&eacute;o (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/7agJre41V2k" title="Community Meeting - April 9, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Mise &agrave; jour sur l&rsquo;Incident RGPD</h2>
+                        <ul>
+                            <li>Aaron R a rapport&eacute; un incident de fuite de donn&eacute;es de la semaine pr&eacute;c&eacute;dente impliquant 47 personnes.</li>
+                            <li>La fuite a &eacute;t&eacute; caus&eacute;e par des autorisations h&eacute;rit&eacute;es lors de la cr&eacute;ation d&rsquo;un groupe dans le syst&egrave;me de l&rsquo;organisation.</li>
+                            <li>Toutes les personnes concern&eacute;es avaient d&eacute;j&agrave; sign&eacute; la politique de donn&eacute;es, et l&rsquo;&eacute;quipe a pu suivre exactement ce qui avait &eacute;t&eacute; consult&eacute;.</li>
+                            <li>Le DPO a coordonn&eacute; la r&eacute;ponse, y compris la communication avec les personnes concern&eacute;es et la soumission d&rsquo;un rapport &agrave; l&rsquo;AEPD dans le d&eacute;lai requis de 72 heures.</li>
+                            <li>L&rsquo;AEPD a confirm&eacute; que le dossier &eacute;tait clos de leur point de vue.</li>
+                            <li>Des am&eacute;liorations du syst&egrave;me ont &eacute;t&eacute; mises en place, y compris des alertes pour les changements d&rsquo;autorisations, et des plans sont pr&eacute;vus pour d&eacute;placer les donn&eacute;es sensibles vers la plateforme chiffr&eacute;e Humans.</li>
+                        </ul>
+
+                        <h2>2. Opportunit&eacute; d&rsquo;Ambassadeur &agrave; Africa Burn</h2>
+                        <ul>
+                            <li>Sakolo S a pr&eacute;sent&eacute; une opportunit&eacute; pour un ambassadeur d&rsquo;assister &agrave; Africa Burn (&agrave; partir du 27 avril) avec un billet gratuit, un billet de bus et un h&eacute;bergement en camp.</li>
+                            <li>L&rsquo;offre vise &agrave; favoriser une relation entre les deux &eacute;v&eacute;nements.</li>
+                            <li>Les personnes int&eacute;ress&eacute;es ont &eacute;t&eacute; invit&eacute;es &agrave; contacter Sakolo S par e-mail dans les prochains jours.</li>
+                            <li>Il a &eacute;t&eacute; demand&eacute; &agrave; l&rsquo;&eacute;quipe Communication de finaliser une pr&eacute;sentation m&eacute;diatique ou un d&eacute;pliant pour Elsewhere pour distribution lors de l&rsquo;&eacute;v&eacute;nement, ainsi qu&rsquo;un message coh&eacute;rent sur l&rsquo;&eacute;v&eacute;nement.</li>
+                            <li>Michael M a exprim&eacute; son soutien &agrave; la collaboration inter-&eacute;v&eacute;nements pour partager comp&eacute;tences op&eacute;rationnelles et processus.</li>
+                        </ul>
+
+                        <h2>3. Inscription et Soutien des Barrios</h2>
+                        <ul>
+                            <li>Cayce a rapport&eacute; que l&rsquo;inscription des barrios ferme le 14 avril &agrave; 23h59 CET.</li>
+                            <li>Le syst&egrave;me de commande de fournitures (glace, eau, gaz, palettes) sera disponible via Humans avant la fin avril.</li>
+                            <li>Un &eacute;v&eacute;nement de &laquo; speed dating de barrios &raquo; est pr&eacute;vu pour aider les barrios &agrave; recruter de nouveaux membres.</li>
+                            <li>Le guide des barrios a &eacute;t&eacute; publi&eacute; et est disponible sur le site web.</li>
+                            <li>Les barrios qui ne participent pas cette ann&eacute;e sont encourag&eacute;s &agrave; s&rsquo;inscrire sur Humans pour rester dans le syst&egrave;me.</li>
+                        </ul>
+
+                        <h2>4. Planification Urbaine et Plan du Site</h2>
+                        <ul>
+                            <li>L&rsquo;&eacute;quipe de planification urbaine a pr&eacute;sent&eacute; un nouveau plan pour l&rsquo;&eacute;v&eacute;nement avec des ellipses et des zones de couleur.</li>
+                            <li>La surface est l&eacute;g&egrave;rement plus petite que l&rsquo;ann&eacute;e pr&eacute;c&eacute;dente.</li>
+                            <li>L&rsquo;auto-placement des barrios ouvrira la semaine prochaine apr&egrave;s la cl&ocirc;ture des inscriptions, en utilisant une application am&eacute;lior&eacute;e sur la plateforme Humans avec de meilleurs contr&ocirc;les d&rsquo;acc&egrave;s.</li>
+                            <li>Des questions sur l&rsquo;emplacement des toilettes, les conflits sonores et l&rsquo;emplacement des infrastructures ont &eacute;t&eacute; not&eacute;es pour les prochains brouillons.</li>
+                            <li>L&rsquo;id&eacute;e de faire alterner les cr&eacute;neaux sonores entre les camps a &eacute;t&eacute; soulev&eacute;e pour discussion ult&eacute;rieure.</li>
+                        </ul>
+
+                        <h2>5. Besoins en B&eacute;n&eacute;voles</h2>
+                        <ul>
+                            <li>Frank F et Michael M ont signal&eacute; des taux d&rsquo;inscription de b&eacute;n&eacute;voles critiquement bas : Planification Urbaine 8%, Construction &amp; Infrastructure 10%, Cantina 20%, LNT 9%, Porte 25%, Malfair 12%, Bien-&ecirc;tre 6%, Interpr&egrave;tes 3%.</li>
+                            <li>Les barrios &eacute;taient &agrave; 49%.</li>
+                            <li>La p&eacute;riode de construction pr&eacute;coce est le besoin le plus critique.</li>
+                            <li>Un deuxi&egrave;me responsable du Soutien aux Barrios sur site est n&eacute;cessaire.</li>
+                            <li>Le transport pour les b&eacute;n&eacute;voles pr&eacute;coces comprend des navettes quotidiennes depuis la gare locale, avec des tableaux de covoiturage en cours de mise en place.</li>
+                            <li>Des options de navette post-&eacute;v&eacute;nement sont &agrave; l&rsquo;&eacute;tude.</li>
+                        </ul>
+
+                        <h2>6. Mise &agrave; jour Billetterie</h2>
+                        <ul>
+                            <li>Aaron R a rapport&eacute; que les billets de la Vague 1 (275 euros) sont en passe d&rsquo;&ecirc;tre &eacute;puis&eacute;s avant la date limite du 14 avril.</li>
+                            <li>Apr&egrave;s cette date, les prix passent &agrave; 295 euros pour la Vague 2.</li>
+                            <li>Les membres de la communaut&eacute; ont &eacute;t&eacute; invit&eacute;s &agrave; diffuser l&rsquo;information, car des centaines d&rsquo;utilisateurs inscrits n&rsquo;ont pas encore achet&eacute; de billets.</li>
+                            <li>Les demandeurs de billets &agrave; revenus modestes ont &eacute;t&eacute; inform&eacute;s de leur statut.</li>
+                            <li>Au rythme actuel des ventes, l&rsquo;&eacute;v&eacute;nement pourrait &eacute;galer les chiffres de fr&eacute;quentation de l&rsquo;ann&eacute;e pr&eacute;c&eacute;dente.</li>
+                        </ul>
+
+                        <h2>7. Projet de Cl&ocirc;tures</h2>
+                        <ul>
+                            <li>Une mise &agrave; jour de l&rsquo;&eacute;quipe artistique a annonc&eacute; un projet de cl&ocirc;tures cr&eacute;atives.</li>
+                            <li>Bien que le ruban de s&eacute;curit&eacute; reste n&eacute;cessaire dans certaines zones, des alternatives cr&eacute;atives (fanions, mat&eacute;riaux recyclables) sont recherch&eacute;es pour les zones entre et derri&egrave;re les barrios, avec des prix pr&eacute;vus pour les meilleurs designs.</li>
+                        </ul>
+
+                        <h2>Actions &agrave; R&eacute;aliser</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>D&eacute;lai</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Communication</td><td>Finaliser une pr&eacute;sentation m&eacute;diatique pour Elsewhere en 2&ndash;3 semaines pour distribution &agrave; Africa Burn</td><td>2&ndash;3 semaines</td></tr>
+                                <tr><td>Communication / Communaut&eacute;</td><td>&Eacute;tablir un message coh&eacute;rent sur l&rsquo;&eacute;v&eacute;nement pour l&rsquo;usage de l&rsquo;ambassadeur</td><td>Continu</td></tr>
+                                <tr><td>Sakolo S</td><td>G&eacute;rer la logistique de l&rsquo;offre de billet Africa Burn par e-mail</td><td>Prochains jours</td></tr>
+                                <tr><td>Michael M</td><td>V&eacute;rifier avec Communication les mises &agrave; jour du calendrier de bus pour la page billetterie</td><td>Continu</td></tr>
+                                <tr><td>Pablo V</td><td>Publier sur le canal Planification Urbaine concernant l&rsquo;analyse sonore et les cr&eacute;neaux alternants</td><td>Continu</td></tr>
+                                <tr><td>Aaron R</td><td>Confirmer et communiquer le calendrier de bus, les prix et la disponibilit&eacute; des billets</td><td>Continu</td></tr>
+                                <tr><td>Tous</td><td>Promouvoir la date limite des billets Vague 1 (14 avril) dans les chats des barrios</td><td>14 avril</td></tr>
+                                <tr><td>Communaut&eacute;</td><td>Suivre le lancement du projet de cl&ocirc;tures ; soumettre de la musique libre de droits &agrave; Daniel T sur Discord pour les appels communautaires</td><td>Continu</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Proc&egrave;s-verbal g&eacute;n&eacute;r&eacute; automatiquement par Gemini et &eacute;pur&eacute; pour publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presieduta da Ellen K, con i membri del consiglio, i responsabili e membri della comunit&agrave; (~43 partecipanti)</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archivi della Riunione</h3>
+                        <ul>
+                            <li><a href="2026-04-09-community-transcript.html">Trascrizione completa (solo in inglese)</a></li>
+                            <li><a href="https://youtu.be/7agJre41V2k">Registrazione video (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/7agJre41V2k" title="Community Meeting - April 9, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Aggiornamento sull&rsquo;Incidente GDPR</h2>
+                        <ul>
+                            <li>Aaron R ha riferito di un incidente di fuga di dati della settimana precedente che ha coinvolto 47 persone.</li>
+                            <li>La fuga &egrave; stata causata da permessi ereditati durante la creazione di un gruppo nel sistema dell&rsquo;organizzazione.</li>
+                            <li>Tutte le persone coinvolte avevano gi&agrave; firmato la politica sui dati, e il team ha potuto tracciare esattamente cosa era stato visualizzato.</li>
+                            <li>Il DPO ha coordinato la risposta, compresa la comunicazione con le persone coinvolte e la presentazione di un rapporto all&rsquo;AEPD entro il termine richiesto di 72 ore.</li>
+                            <li>L&rsquo;AEPD ha confermato che il caso era chiuso dal loro punto di vista.</li>
+                            <li>Sono stati implementati miglioramenti al sistema, tra cui avvisi per modifiche ai permessi, e sono previsti piani per spostare i dati sensibili sulla piattaforma crittografata Humans.</li>
+                        </ul>
+
+                        <h2>2. Opportunit&agrave; di Ambasciatore ad Africa Burn</h2>
+                        <ul>
+                            <li>Sakolo S ha presentato un&rsquo;opportunit&agrave; per un ambasciatore di partecipare ad Africa Burn (a partire dal 27 aprile) con biglietto gratuito, biglietto del bus e alloggio in campo.</li>
+                            <li>L&rsquo;offerta mira a favorire una relazione tra i due eventi.</li>
+                            <li>&Egrave; stato chiesto agli interessati di contattare Sakolo S via e-mail nei prossimi giorni.</li>
+                            <li>&Egrave; stato richiesto al team Comunicazione di finalizzare una presentazione mediatica o un volantino per Elsewhere da distribuire all&rsquo;evento, insieme a un messaggio coerente sull&rsquo;evento.</li>
+                            <li>Michael M ha espresso il suo sostegno alla collaborazione tra eventi per condividere competenze operative e processi.</li>
+                        </ul>
+
+                        <h2>3. Registrazione e Supporto dei Barrios</h2>
+                        <ul>
+                            <li>Cayce ha comunicato che la registrazione dei barrios chiude il 14 aprile alle 23:59 CET.</li>
+                            <li>Il sistema di ordinazione delle forniture (ghiaccio, acqua, gas, pallet) sar&agrave; disponibile tramite Humans entro la fine di aprile.</li>
+                            <li>&Egrave; previsto un evento di &laquo;speed dating dei barrios&raquo; per aiutare i barrios a reclutare nuovi membri.</li>
+                            <li>La guida dei barrios &egrave; stata pubblicata ed &egrave; disponibile sul sito web.</li>
+                            <li>I barrios che non partecipano quest&rsquo;anno sono incoraggiati a registrarsi su Humans per rimanere nel sistema.</li>
+                        </ul>
+
+                        <h2>4. Pianificazione Urbana e Layout della Mappa</h2>
+                        <ul>
+                            <li>Il team di pianificazione urbana ha presentato un nuovo layout della mappa per l&rsquo;evento con ellissi e zone colorate.</li>
+                            <li>L&rsquo;area &egrave; leggermente pi&ugrave; piccola rispetto all&rsquo;anno precedente.</li>
+                            <li>L&rsquo;auto-posizionamento dei barrios aprir&agrave; la prossima settimana dopo la chiusura delle iscrizioni, utilizzando un&rsquo;app migliorata sulla piattaforma Humans con migliori controlli dei permessi.</li>
+                            <li>Domande sulla collocazione dei bagni, conflitti sonori e posizionamento delle infrastrutture sono state annotate per le bozze future.</li>
+                            <li>L&rsquo;idea di far alternare gli slot sonori tra i campi &egrave; stata sollevata per ulteriore discussione.</li>
+                        </ul>
+
+                        <h2>5. Necessit&agrave; di Volontari</h2>
+                        <ul>
+                            <li>Frank F e Michael M hanno segnalato tassi di iscrizione dei volontari criticamente bassi: Pianificazione Urbana 8%, Costruzione &amp; Infrastruttura 10%, Cantina 20%, LNT 9%, Porta 25%, Malfair 12%, Welfare 6%, Interpreti 3%.</li>
+                            <li>I barrios erano al 49%.</li>
+                            <li>Il periodo di costruzione anticipata &egrave; la necessit&agrave; pi&ugrave; critica.</li>
+                            <li>&Egrave; necessario un secondo responsabile del Supporto Barrios sul campo.</li>
+                            <li>Il trasporto per i volontari precoci include navette giornaliere dalla stazione ferroviaria locale, con bacheche per il car-sharing in fase di allestimento.</li>
+                            <li>Si stanno esplorando opzioni di navetta post-evento.</li>
+                        </ul>
+
+                        <h2>6. Aggiornamento Biglietteria</h2>
+                        <ul>
+                            <li>Aaron R ha comunicato che i biglietti dell&rsquo;Ondata 1 (275 euro) sono in procinto di esaurirsi prima della scadenza del 14 aprile.</li>
+                            <li>Dopo quella data, i prezzi salgono a 295 euro per l&rsquo;Ondata 2.</li>
+                            <li>I membri della comunit&agrave; sono stati invitati a diffondere la notizia, poich&eacute; centinaia di utenti registrati non hanno ancora acquistato i biglietti.</li>
+                            <li>I richiedenti di biglietti a reddito basso sono stati informati del loro stato.</li>
+                            <li>Al ritmo attuale delle vendite, l&rsquo;evento potrebbe eguagliare i numeri di partecipazione dell&rsquo;anno precedente.</li>
+                        </ul>
+
+                        <h2>7. Progetto Recinzioni</h2>
+                        <ul>
+                            <li>Un aggiornamento dal team artistico ha annunciato un progetto di recinzioni creative.</li>
+                            <li>Mentre il nastro di sicurezza rimane necessario in alcune aree, si cercano alternative creative (festoni, materiali riciclabili) per le aree tra e dietro i barrios, con premi previsti per i migliori design.</li>
+                        </ul>
+
+                        <h2>Azioni da Intraprendere</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Comunicazione</td><td>Finalizzare una presentazione mediatica per Elsewhere entro 2&ndash;3 settimane per la distribuzione ad Africa Burn</td><td>2&ndash;3 settimane</td></tr>
+                                <tr><td>Comunicazione / Comunit&agrave;</td><td>Stabilire un messaggio coerente sull&rsquo;evento per l&rsquo;uso dell&rsquo;ambasciatore</td><td>Continuo</td></tr>
+                                <tr><td>Sakolo S</td><td>Gestire la logistica dell&rsquo;offerta del biglietto Africa Burn via e-mail</td><td>Prossimi giorni</td></tr>
+                                <tr><td>Michael M</td><td>Verificare con Comunicazione gli aggiornamenti degli orari del bus per la pagina biglietteria</td><td>Continuo</td></tr>
+                                <tr><td>Pablo V</td><td>Pubblicare sul canale Pianificazione Urbana riguardo l&rsquo;analisi sonora e gli slot alternati</td><td>Continuo</td></tr>
+                                <tr><td>Aaron R</td><td>Confermare e comunicare orario del bus, prezzi e disponibilit&agrave; dei biglietti</td><td>Continuo</td></tr>
+                                <tr><td>Tutti</td><td>Promuovere la scadenza dei biglietti Ondata 1 (14 aprile) nelle chat dei barrios</td><td>14 aprile</td></tr>
+                                <tr><td>Comunit&agrave;</td><td>Seguire il lancio del progetto recinzioni; inviare musica libera da copyright a Daniel T su Discord per le chiamate comunitarie</td><td>Continuo</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Verbale generato automaticamente da Gemini e revisionato per la pubblicazione.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Geleitet von Ellen K, mit Vorstandsmitgliedern, Verantwortlichen und Community-Mitgliedern (~43 Teilnehmer)</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Sitzungsunterlagen</h3>
+                        <ul>
+                            <li><a href="2026-04-09-community-transcript.html">Vollst&auml;ndiges Transkript (nur auf Englisch)</a></li>
+                            <li><a href="https://youtu.be/7agJre41V2k">Videoaufzeichnung (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/7agJre41V2k" title="Community Meeting - April 9, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. DSGVO-Vorfall-Update</h2>
+                        <ul>
+                            <li>Aaron R berichtete &uuml;ber einen Datenleck-Vorfall der Vorwoche, der 47 Personen betraf.</li>
+                            <li>Das Leck wurde durch vererbte Berechtigungen bei der Erstellung einer Gruppe im System der Organisation verursacht.</li>
+                            <li>Alle betroffenen Personen hatten bereits die Datenrichtlinie unterzeichnet, und das Team konnte genau nachverfolgen, was eingesehen wurde.</li>
+                            <li>Der DSB koordinierte die Reaktion, einschlie&szlig;lich der Kommunikation mit den betroffenen Personen und der Einreichung eines Berichts bei der AEPD innerhalb der erforderlichen 72-Stunden-Frist.</li>
+                            <li>Die AEPD best&auml;tigte, dass der Fall aus ihrer Sicht geschlossen war.</li>
+                            <li>Systemverbesserungen wurden umgesetzt, darunter Warnungen bei Berechtigungs&auml;nderungen, und es sind Pl&auml;ne vorgesehen, sensible Daten auf die verschl&uuml;sselte Humans-Plattform zu verlagern.</li>
+                        </ul>
+
+                        <h2>2. Africa Burn Botschafter-M&ouml;glichkeit</h2>
+                        <ul>
+                            <li>Sakolo S stellte eine M&ouml;glichkeit f&uuml;r einen Botschafter vor, am Africa Burn (ab 27. April) teilzunehmen &mdash; mit kostenlosem Event-Ticket, Busticket und Camp-Unterkunft.</li>
+                            <li>Das Angebot soll eine Beziehung zwischen den beiden Veranstaltungen f&ouml;rdern.</li>
+                            <li>Interessierte wurden gebeten, Sakolo S innerhalb der n&auml;chsten Tage per E-Mail zu kontaktieren.</li>
+                            <li>Das Kommunikationsteam wurde gebeten, eine Medienpr&auml;sentation oder einen Flyer f&uuml;r Elsewhere zur Verteilung bei der Veranstaltung fertigzustellen, zusammen mit einer einheitlichen Botschaft &uuml;ber das Event.</li>
+                            <li>Michael M &auml;u&szlig;erte Unterst&uuml;tzung f&uuml;r event&uuml;bergreifende Zusammenarbeit zum Austausch operativer F&auml;higkeiten und Prozesse.</li>
+                        </ul>
+
+                        <h2>3. Barrio-Registrierung und Unterst&uuml;tzung</h2>
+                        <ul>
+                            <li>Cayce berichtete, dass die Barrio-Registrierung am 14. April um 23:59 CET schlie&szlig;t.</li>
+                            <li>Das Bestellsystem f&uuml;r Vorr&auml;te (Eis, Wasser, Gas, Paletten) wird &uuml;ber Humans vor Ende April verf&uuml;gbar sein.</li>
+                            <li>Ein &laquo;Barrio-Speed-Dating&raquo;-Event ist geplant, um Barrios bei der Rekrutierung neuer Mitglieder zu helfen.</li>
+                            <li>Der Barrio-Leitfaden wurde ver&ouml;ffentlicht und ist auf der Website verf&uuml;gbar.</li>
+                            <li>Barrios, die dieses Jahr nicht teilnehmen, werden ermutigt, sich auf Humans zu registrieren, um im System zu bleiben.</li>
+                        </ul>
+
+                        <h2>4. Stadtplanung und Kartengestaltung</h2>
+                        <ul>
+                            <li>Das Stadtplanungsteam pr&auml;sentierte ein neues Kartenlayout f&uuml;r die Veranstaltung mit Ellipsen und Farbzonen.</li>
+                            <li>Die Fl&auml;che ist etwas kleiner als im Vorjahr.</li>
+                            <li>Die Selbstplatzierung der Barrios wird n&auml;chste Woche nach Registrierungsschluss er&ouml;ffnet, mit einer verbesserten App auf der Humans-Plattform mit besseren Berechtigungskontrollen.</li>
+                            <li>Fragen zur Toilettenplatzierung, Schallkonflikten und Infrastrukturplatzierung wurden f&uuml;r zuk&uuml;nftige Entw&uuml;rfe vermerkt.</li>
+                            <li>Die Idee, dass Camps abwechselnd Schall-Slots nutzen, wurde zur weiteren Diskussion aufgeworfen.</li>
+                        </ul>
+
+                        <h2>5. Freiwilligenbedarf</h2>
+                        <ul>
+                            <li>Frank F und Michael M berichteten &uuml;ber kritisch niedrige Anmeldequoten f&uuml;r Freiwillige: Stadtplanung 8%, Bau &amp; Infrastruktur 10%, Cantina 20%, LNT 9%, Eingang 25%, Malfair 12%, Welfare 6%, Dolmetscher 3%.</li>
+                            <li>Barrios lagen bei 49%.</li>
+                            <li>Die fr&uuml;he Aufbauphase ist der dringendste Bedarf.</li>
+                            <li>Ein zweiter Barrio-Support-Leiter vor Ort wird ben&ouml;tigt.</li>
+                            <li>Transport f&uuml;r fr&uuml;he Freiwillige umfasst t&auml;gliche Abholungen vom &ouml;rtlichen Bahnhof, mit Mitfahrgelegenheits-Tafeln in Vorbereitung.</li>
+                            <li>Shuttle-Optionen nach der Veranstaltung werden gepr&uuml;ft.</li>
+                        </ul>
+
+                        <h2>6. Ticketing-Update</h2>
+                        <ul>
+                            <li>Aaron R berichtete, dass die Tickets der Welle 1 (275 Euro) auf dem Weg sind, vor der Frist am 14. April ausverkauft zu sein.</li>
+                            <li>Nach diesem Datum steigen die Preise auf 295 Euro f&uuml;r Welle 2.</li>
+                            <li>Community-Mitglieder wurden aufgefordert, die Nachricht zu verbreiten, da Hunderte registrierter Nutzer noch keine Tickets gekauft haben.</li>
+                            <li>Antragsteller f&uuml;r Geringverdiener-Tickets wurden &uuml;ber ihren Status informiert.</li>
+                            <li>Bei der aktuellen Verkaufsrate k&ouml;nnte die Veranstaltung die Teilnehmerzahlen des Vorjahres erreichen.</li>
+                        </ul>
+
+                        <h2>7. Zaun-Projekt</h2>
+                        <ul>
+                            <li>Ein Update vom Kunstteam k&uuml;ndigte ein kreatives Zaun-Projekt an.</li>
+                            <li>W&auml;hrend Sicherheitsband in einigen Bereichen weiterhin notwendig bleibt, werden kreative Alternativen (Wimpelketten, Recyclingmaterialien) f&uuml;r Bereiche zwischen und hinter den Barrios gesucht, mit Preisen f&uuml;r die besten Designs.</li>
+                        </ul>
+
+                        <h2>Ma&szlig;nahmen</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Ma&szlig;nahme</th><th>Frist</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Kommunikation</td><td>Eine Medienpr&auml;sentation f&uuml;r Elsewhere innerhalb von 2&ndash;3 Wochen f&uuml;r die Verteilung bei Africa Burn fertigstellen</td><td>2&ndash;3 Wochen</td></tr>
+                                <tr><td>Kommunikation / Community</td><td>Eine einheitliche Botschaft &uuml;ber das Event f&uuml;r den Botschafter-Einsatz erstellen</td><td>Laufend</td></tr>
+                                <tr><td>Sakolo S</td><td>Logistik f&uuml;r das Africa Burn Ticketangebot per E-Mail abwickeln</td><td>N&auml;chste Tage</td></tr>
+                                <tr><td>Michael M</td><td>Mit Kommunikation die Busfahrplan-Updates f&uuml;r die Ticket-Seite pr&uuml;fen</td><td>Laufend</td></tr>
+                                <tr><td>Pablo V</td><td>Im Stadtplanungs-Kanal zu Schallanalyse und alternierenden Slots posten</td><td>Laufend</td></tr>
+                                <tr><td>Aaron R</td><td>Busfahrplan, Preise und Ticketverf&uuml;gbarkeit best&auml;tigen und kommunizieren</td><td>Laufend</td></tr>
+                                <tr><td>Alle</td><td>Frist f&uuml;r Welle-1-Tickets (14. April) in Barrio-Chats bewerben</td><td>14. April</td></tr>
+                                <tr><td>Community</td><td>Auf den Start des Zaun-Projekts achten; nicht urheberrechtlich gesch&uuml;tzte Musik an Daniel T auf Discord f&uuml;r Community-Calls einreichen</td><td>Laufend</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Protokoll automatisch von Gemini erstellt und f&uuml;r die Ver&ouml;ffentlichung bereinigt.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>

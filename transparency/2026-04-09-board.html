@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCA Board Meeting Minutes - April 9, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content h4 { margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.05rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>NCA Board Meeting Minutes</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Wednesday 9 April 2026, 19:22 CEST</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Chair:</strong> Daniel T<br>
+                        <strong>Board present:</strong> Daniel T, Pablo V, Peter D, Ben D, Michelle T, Chris O, Ward<br>
+                        <strong>Also present:</strong> Anna
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Pricing Strategy</h2>
+                        <ul>
+                            <li>The board discussed pricing strategies to attract a broader range of participants.</li>
+                            <li><strong>Outcome:</strong> The board agreed to explore options further. Peter D to prepare a business case for formal board approval.</li>
+                        </ul>
+
+                        <h2>2. Platform Development Coordination</h2>
+                        <ul>
+                            <li>A request was made to pause certain development work streams pending a coordination call the following day, to avoid duplicated effort.</li>
+                            <li>A proposed side project was discussed: a ticket scanning app that could verify attendee compliance with requirements at the gate, reducing the need for paper-based checks.</li>
+                        </ul>
+
+                        <h2>3. Humans Platform: Volunteer Approval Process</h2>
+                        <ul>
+                            <li>The current manual approval process for new volunteer sign-ups was identified as a bottleneck, with 17 pending applications.</li>
+                            <li>The board discussed implementing AI-assisted name validation to automate approvals where possible, flagging edge cases for manual review (a tri-state system: auto-approve, flag for review, or auto-reject).</li>
+                        </ul>
+
+                        <h2>4. Google Ads Campaign</h2>
+                        <ul>
+                            <li>Pablo V presented a Google Ads campaign set up via Ad Grants, targeting relevant search keywords.</li>
+                            <li>The campaign budget is capped at the Ad Grants monthly limit, with a daily spend target and a minimum 5% click-through rate requirement.</li>
+                            <li>Conversion tracking is not currently installed on the website; the primary performance metric will be click-through rate.</li>
+                            <li><strong>Outcome:</strong> Pablo V to proceed with the campaign and add additional keywords. No board-level decision required at this stage.</li>
+                        </ul>
+
+                        <h2>5. Meeting Notes Publication Policy</h2>
+                        <ul>
+                            <li>Daniel T proposed allowing the person preparing meeting notes to publish sanitised board and community meeting notes directly, without requiring prior individual approval from each board member.</li>
+                            <li>Notes would continue to be run through the standard sanitisation process, and any issues spotted after publication could be corrected promptly.</li>
+                            <li>Ben D expressed a preference for retaining the prior review step, citing past occasions where the check had caught issues. However, he acknowledged the majority view and did not seek to block the vote.</li>
+                            <li>Pablo V suggested the sanitisation filter be applied more conservatively to reflect the removal of the approval step.</li>
+                            <li><strong>Decision:</strong> The motion was carried, 6 in favour, 1 opposed. The note preparer will apply extra scrutiny before publication. The policy may be revisited if issues arise.</li>
+                        </ul>
+
+                        <h2>6. Contract Approval</h2>
+                        <ul>
+                            <li>The board approved the continuation of Daniela M S&rsquo;s contract for April, maintaining a month-to-month arrangement.</li>
+                            <li>The board agreed to seek accountant advice before considering a longer-term contract.</li>
+                            <li><strong>Decision:</strong> Motion to approve April contract passed unanimously.</li>
+                        </ul>
+
+                        <h2>7. Ticket Sales Update</h2>
+                        <ul>
+                            <li>Wave 1 tickets are on track to sell out before the April 14 deadline, consistent with what was reported in the community call.</li>
+                            <li>The budget has been finalised and is now live and visible in the Humans app.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Peter D</td><td>Prepare business case for pricing strategy proposal</td><td>Next board meeting</td></tr>
+                                <tr><td>Peter D</td><td>Schedule coordination call with development team</td><td>Thursday</td></tr>
+                                <tr><td>Daniel T</td><td>Build ticket scanning side app (Ticket Tailor to Humans verification)</td><td>TBD</td></tr>
+                                <tr><td>Daniel T</td><td>Provide names list for AI validation in Humans</td><td>This week</td></tr>
+                                <tr><td>Pablo V</td><td>Add additional keywords to Google Ads campaign</td><td>This week</td></tr>
+                                <tr><td>Board</td><td>Seek accountant advice on longer-term contract options</td><td>This month</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Minutes auto-generated by Gemini and sanitised for publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Presidente:</strong> Daniel T<br>
+                        <strong>Junta presente:</strong> Daniel T, Pablo V, Peter D, Ben D, Michelle T, Chris O, Ward<br>
+                        <strong>Tambi&eacute;n presentes:</strong> Anna
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Estrategia de Precios</h2>
+                        <ul>
+                            <li>La junta discuti&oacute; estrategias de precios para atraer a una gama m&aacute;s amplia de participantes.</li>
+                            <li><strong>Resultado:</strong> La junta acord&oacute; explorar las opciones m&aacute;s a fondo. Peter D preparar&aacute; un caso de negocio para la aprobaci&oacute;n formal de la junta.</li>
+                        </ul>
+
+                        <h2>2. Coordinaci&oacute;n del Desarrollo de la Plataforma</h2>
+                        <ul>
+                            <li>Se solicit&oacute; pausar ciertos flujos de trabajo de desarrollo en espera de una llamada de coordinaci&oacute;n al d&iacute;a siguiente, para evitar la duplicaci&oacute;n de esfuerzos.</li>
+                            <li>Se discuti&oacute; un proyecto paralelo propuesto: una aplicaci&oacute;n de escaneo de entradas que podr&iacute;a verificar el cumplimiento de los requisitos de los asistentes en la puerta, reduciendo la necesidad de verificaciones en papel.</li>
+                        </ul>
+
+                        <h2>3. Plataforma Humans: Proceso de Aprobaci&oacute;n de Voluntarios</h2>
+                        <ul>
+                            <li>El proceso actual de aprobaci&oacute;n manual para nuevas inscripciones de voluntarios fue identificado como un cuello de botella, con 17 solicitudes pendientes.</li>
+                            <li>La junta discuti&oacute; la implementaci&oacute;n de validaci&oacute;n de nombres asistida por IA para automatizar aprobaciones cuando sea posible, marcando casos l&iacute;mite para revisi&oacute;n manual (un sistema de tres estados: aprobaci&oacute;n autom&aacute;tica, marcar para revisi&oacute;n o rechazo autom&aacute;tico).</li>
+                        </ul>
+
+                        <h2>4. Campa&ntilde;a de Google Ads</h2>
+                        <ul>
+                            <li>Pablo V present&oacute; una campa&ntilde;a de Google Ads configurada a trav&eacute;s de Ad Grants, dirigida a palabras clave de b&uacute;squeda relevantes.</li>
+                            <li>El presupuesto de la campa&ntilde;a est&aacute; limitado al tope mensual de Ad Grants, con un objetivo de gasto diario y un requisito m&iacute;nimo de tasa de clics del 5%.</li>
+                            <li>El seguimiento de conversiones no est&aacute; instalado actualmente en el sitio web; la m&eacute;trica principal de rendimiento ser&aacute; la tasa de clics.</li>
+                            <li><strong>Resultado:</strong> Pablo V proceder&aacute; con la campa&ntilde;a y a&ntilde;adir&aacute; palabras clave adicionales. No se requiere decisi&oacute;n a nivel de junta en esta etapa.</li>
+                        </ul>
+
+                        <h2>5. Pol&iacute;tica de Publicaci&oacute;n de Actas</h2>
+                        <ul>
+                            <li>Daniel T propuso permitir que la persona que prepara las actas publique las actas depuradas de la junta y las reuniones comunitarias directamente, sin requerir la aprobaci&oacute;n previa individual de cada miembro de la junta.</li>
+                            <li>Las actas seguir&iacute;an pasando por el proceso est&aacute;ndar de depuraci&oacute;n, y cualquier problema detectado tras la publicaci&oacute;n podr&iacute;a corregirse r&aacute;pidamente.</li>
+                            <li>Ben D expres&oacute; preferencia por mantener el paso previo de revisi&oacute;n, citando ocasiones anteriores en las que la verificaci&oacute;n hab&iacute;a detectado problemas. Sin embargo, reconoci&oacute; la opini&oacute;n mayoritaria y no busc&oacute; bloquear la votaci&oacute;n.</li>
+                            <li>Pablo V sugiri&oacute; que el filtro de depuraci&oacute;n se aplique de manera m&aacute;s conservadora para reflejar la eliminaci&oacute;n del paso de aprobaci&oacute;n.</li>
+                            <li><strong>Decisi&oacute;n:</strong> La moci&oacute;n fue aprobada, 6 a favor, 1 en contra. La persona que prepare las actas aplicar&aacute; un escrutinio adicional antes de la publicaci&oacute;n. La pol&iacute;tica podr&aacute; revisarse si surgen problemas.</li>
+                        </ul>
+
+                        <h2>6. Aprobaci&oacute;n de Contrato</h2>
+                        <ul>
+                            <li>La junta aprob&oacute; la continuaci&oacute;n del contrato de Daniela M S para abril, manteniendo un acuerdo mes a mes.</li>
+                            <li>La junta acord&oacute; buscar asesoramiento contable antes de considerar un contrato a m&aacute;s largo plazo.</li>
+                            <li><strong>Decisi&oacute;n:</strong> La moci&oacute;n para aprobar el contrato de abril fue aprobada por unanimidad.</li>
+                        </ul>
+
+                        <h2>7. Actualizaci&oacute;n de Venta de Entradas</h2>
+                        <ul>
+                            <li>Las entradas de la Ola 1 van camino de agotarse antes de la fecha l&iacute;mite del 14 de abril, consistente con lo informado en la llamada comunitaria.</li>
+                            <li>El presupuesto ha sido finalizado y ahora est&aacute; activo y visible en la aplicaci&oacute;n Humans.</li>
+                        </ul>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Peter D</td><td>Preparar caso de negocio para la propuesta de estrategia de precios</td><td>Pr&oacute;xima reuni&oacute;n de junta</td></tr>
+                                <tr><td>Peter D</td><td>Programar llamada de coordinaci&oacute;n con el equipo de desarrollo</td><td>Jueves</td></tr>
+                                <tr><td>Daniel T</td><td>Desarrollar aplicaci&oacute;n de escaneo de entradas (verificaci&oacute;n de Ticket Tailor a Humans)</td><td>Por determinar</td></tr>
+                                <tr><td>Daniel T</td><td>Proporcionar lista de nombres para validaci&oacute;n por IA en Humans</td><td>Esta semana</td></tr>
+                                <tr><td>Pablo V</td><td>A&ntilde;adir palabras clave adicionales a la campa&ntilde;a de Google Ads</td><td>Esta semana</td></tr>
+                                <tr><td>Junta</td><td>Buscar asesoramiento contable sobre opciones de contrato a m&aacute;s largo plazo</td><td>Este mes</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Actas generadas autom&aacute;ticamente por Gemini y depuradas para publicaci&oacute;n.</em></p>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sident :</strong> Daniel T<br>
+                        <strong>Conseil pr&eacute;sent :</strong> Daniel T, Pablo V, Peter D, Ben D, Michelle T, Chris O, Ward<br>
+                        <strong>&Eacute;galement pr&eacute;sents :</strong> Anna
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Strat&eacute;gie de Tarification</h2>
+                        <ul>
+                            <li>Le conseil a discut&eacute; des strat&eacute;gies de tarification pour attirer un &eacute;ventail plus large de participants.</li>
+                            <li><strong>R&eacute;sultat :</strong> Le conseil a convenu d&rsquo;explorer davantage les options. Peter D pr&eacute;parera une &eacute;tude de cas pour l&rsquo;approbation formelle du conseil.</li>
+                        </ul>
+
+                        <h2>2. Coordination du D&eacute;veloppement de la Plateforme</h2>
+                        <ul>
+                            <li>Une demande a &eacute;t&eacute; faite de suspendre certains flux de travail de d&eacute;veloppement en attendant un appel de coordination le lendemain, afin d&rsquo;&eacute;viter la duplication des efforts.</li>
+                            <li>Un projet parall&egrave;le propos&eacute; a &eacute;t&eacute; discut&eacute; : une application de scan de billets qui pourrait v&eacute;rifier la conformit&eacute; des participants aux exigences &agrave; l&rsquo;entr&eacute;e, r&eacute;duisant le besoin de v&eacute;rifications papier.</li>
+                        </ul>
+
+                        <h2>3. Plateforme Humans : Processus d&rsquo;Approbation des B&eacute;n&eacute;voles</h2>
+                        <ul>
+                            <li>Le processus actuel d&rsquo;approbation manuelle des inscriptions de nouveaux b&eacute;n&eacute;voles a &eacute;t&eacute; identifi&eacute; comme un goulot d&rsquo;&eacute;tranglement, avec 17 candidatures en attente.</li>
+                            <li>Le conseil a discut&eacute; de la mise en &oelig;uvre d&rsquo;une validation de noms assist&eacute;e par IA pour automatiser les approbations lorsque c&rsquo;est possible, signalant les cas limites pour examen manuel (un syst&egrave;me &agrave; trois &eacute;tats : approbation automatique, signalement pour examen ou rejet automatique).</li>
+                        </ul>
+
+                        <h2>4. Campagne Google Ads</h2>
+                        <ul>
+                            <li>Pablo V a pr&eacute;sent&eacute; une campagne Google Ads mise en place via Ad Grants, ciblant des mots-cl&eacute;s de recherche pertinents.</li>
+                            <li>Le budget de la campagne est plafonn&eacute; au plafond mensuel d&rsquo;Ad Grants, avec un objectif de d&eacute;penses quotidiennes et un taux de clics minimum requis de 5 %.</li>
+                            <li>Le suivi des conversions n&rsquo;est pas actuellement install&eacute; sur le site web ; la mesure principale de performance sera le taux de clics.</li>
+                            <li><strong>R&eacute;sultat :</strong> Pablo V proc&eacute;dera avec la campagne et ajoutera des mots-cl&eacute;s suppl&eacute;mentaires. Aucune d&eacute;cision au niveau du conseil n&rsquo;est requise &agrave; ce stade.</li>
+                        </ul>
+
+                        <h2>5. Politique de Publication des Comptes Rendus</h2>
+                        <ul>
+                            <li>Daniel T a propos&eacute; de permettre &agrave; la personne pr&eacute;parant les comptes rendus de publier directement les comptes rendus assainis du conseil et des r&eacute;unions communautaires, sans n&eacute;cessiter l&rsquo;approbation pr&eacute;alable individuelle de chaque membre du conseil.</li>
+                            <li>Les comptes rendus continueraient &agrave; passer par le processus standard d&rsquo;assainissement, et tout probl&egrave;me d&eacute;tect&eacute; apr&egrave;s publication pourrait &ecirc;tre corrig&eacute; rapidement.</li>
+                            <li>Ben D a exprim&eacute; une pr&eacute;f&eacute;rence pour le maintien de l&rsquo;&eacute;tape de r&eacute;vision pr&eacute;alable, citant des occasions pass&eacute;es o&ugrave; la v&eacute;rification avait d&eacute;tect&eacute; des probl&egrave;mes. Cependant, il a reconnu l&rsquo;avis majoritaire et n&rsquo;a pas cherch&eacute; &agrave; bloquer le vote.</li>
+                            <li>Pablo V a sugg&eacute;r&eacute; que le filtre d&rsquo;assainissement soit appliqu&eacute; de mani&egrave;re plus conservatrice pour refl&eacute;ter la suppression de l&rsquo;&eacute;tape d&rsquo;approbation.</li>
+                            <li><strong>D&eacute;cision :</strong> La motion a &eacute;t&eacute; adopt&eacute;e, 6 voix pour, 1 contre. La personne pr&eacute;parant les comptes rendus appliquera un examen suppl&eacute;mentaire avant publication. La politique pourra &ecirc;tre r&eacute;vis&eacute;e si des probl&egrave;mes surviennent.</li>
+                        </ul>
+
+                        <h2>6. Approbation de Contrat</h2>
+                        <ul>
+                            <li>Le conseil a approuv&eacute; la poursuite du contrat de Daniela M S pour avril, maintenant un accord au mois.</li>
+                            <li>Le conseil a convenu de demander l&rsquo;avis d&rsquo;un comptable avant d&rsquo;envisager un contrat &agrave; plus long terme.</li>
+                            <li><strong>D&eacute;cision :</strong> La motion pour approuver le contrat d&rsquo;avril a &eacute;t&eacute; adopt&eacute;e &agrave; l&rsquo;unanimit&eacute;.</li>
+                        </ul>
+
+                        <h2>7. Mise &agrave; Jour des Ventes de Billets</h2>
+                        <ul>
+                            <li>Les billets de la Vague 1 sont en bonne voie pour &ecirc;tre &eacute;puis&eacute;s avant la date limite du 14 avril, conform&eacute;ment &agrave; ce qui a &eacute;t&eacute; rapport&eacute; lors de l&rsquo;appel communautaire.</li>
+                            <li>Le budget a &eacute;t&eacute; finalis&eacute; et est d&eacute;sormais actif et visible dans l&rsquo;application Humans.</li>
+                        </ul>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>&Eacute;ch&eacute;ance</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Peter D</td><td>Pr&eacute;parer l&rsquo;&eacute;tude de cas pour la proposition de strat&eacute;gie de tarification</td><td>Prochaine r&eacute;union du conseil</td></tr>
+                                <tr><td>Peter D</td><td>Planifier un appel de coordination avec l&rsquo;&eacute;quipe de d&eacute;veloppement</td><td>Jeudi</td></tr>
+                                <tr><td>Daniel T</td><td>D&eacute;velopper l&rsquo;application de scan de billets (v&eacute;rification Ticket Tailor vers Humans)</td><td>&Agrave; d&eacute;terminer</td></tr>
+                                <tr><td>Daniel T</td><td>Fournir la liste de noms pour la validation par IA dans Humans</td><td>Cette semaine</td></tr>
+                                <tr><td>Pablo V</td><td>Ajouter des mots-cl&eacute;s suppl&eacute;mentaires &agrave; la campagne Google Ads</td><td>Cette semaine</td></tr>
+                                <tr><td>Conseil</td><td>Demander l&rsquo;avis d&rsquo;un comptable sur les options de contrat &agrave; plus long terme</td><td>Ce mois-ci</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Proc&egrave;s-verbal g&eacute;n&eacute;r&eacute; automatiquement par Gemini et assaini pour publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presidente:</strong> Daniel T<br>
+                        <strong>Consiglio presente:</strong> Daniel T, Pablo V, Peter D, Ben D, Michelle T, Chris O, Ward<br>
+                        <strong>Anche presenti:</strong> Anna
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Strategia dei Prezzi</h2>
+                        <ul>
+                            <li>Il consiglio ha discusso strategie di prezzo per attrarre una gamma pi&ugrave; ampia di partecipanti.</li>
+                            <li><strong>Risultato:</strong> Il consiglio ha concordato di esplorare ulteriormente le opzioni. Peter D preparer&agrave; un caso aziendale per l&rsquo;approvazione formale del consiglio.</li>
+                        </ul>
+
+                        <h2>2. Coordinamento dello Sviluppo della Piattaforma</h2>
+                        <ul>
+                            <li>&Egrave; stata fatta richiesta di sospendere alcuni flussi di lavoro di sviluppo in attesa di una chiamata di coordinamento il giorno successivo, per evitare la duplicazione degli sforzi.</li>
+                            <li>&Egrave; stato discusso un progetto parallelo proposto: un&rsquo;applicazione di scansione biglietti che potrebbe verificare la conformit&agrave; dei partecipanti ai requisiti all&rsquo;ingresso, riducendo la necessit&agrave; di controlli cartacei.</li>
+                        </ul>
+
+                        <h2>3. Piattaforma Humans: Processo di Approvazione dei Volontari</h2>
+                        <ul>
+                            <li>L&rsquo;attuale processo di approvazione manuale per le nuove iscrizioni dei volontari &egrave; stato identificato come un collo di bottiglia, con 17 candidature in attesa.</li>
+                            <li>Il consiglio ha discusso l&rsquo;implementazione di una validazione dei nomi assistita da IA per automatizzare le approvazioni ove possibile, segnalando i casi limite per la revisione manuale (un sistema a tre stati: approvazione automatica, segnalazione per revisione o rifiuto automatico).</li>
+                        </ul>
+
+                        <h2>4. Campagna Google Ads</h2>
+                        <ul>
+                            <li>Pablo V ha presentato una campagna Google Ads configurata tramite Ad Grants, mirata a parole chiave di ricerca pertinenti.</li>
+                            <li>Il budget della campagna &egrave; limitato al tetto mensile di Ad Grants, con un obiettivo di spesa giornaliera e un requisito minimo di tasso di clic del 5%.</li>
+                            <li>Il monitoraggio delle conversioni non &egrave; attualmente installato sul sito web; la metrica principale di performance sar&agrave; il tasso di clic.</li>
+                            <li><strong>Risultato:</strong> Pablo V proceder&agrave; con la campagna e aggiunger&agrave; parole chiave aggiuntive. Nessuna decisione a livello di consiglio richiesta in questa fase.</li>
+                        </ul>
+
+                        <h2>5. Politica di Pubblicazione dei Verbali</h2>
+                        <ul>
+                            <li>Daniel T ha proposto di consentire alla persona che prepara i verbali di pubblicare direttamente i verbali sanificati del consiglio e delle riunioni comunitarie, senza richiedere l&rsquo;approvazione preventiva individuale di ciascun membro del consiglio.</li>
+                            <li>I verbali continuerebbero a passare attraverso il processo standard di sanificazione, e qualsiasi problema riscontrato dopo la pubblicazione potrebbe essere corretto tempestivamente.</li>
+                            <li>Ben D ha espresso una preferenza per il mantenimento del passaggio di revisione preventiva, citando occasioni passate in cui il controllo aveva rilevato problemi. Tuttavia, ha riconosciuto il parere della maggioranza e non ha cercato di bloccare la votazione.</li>
+                            <li>Pablo V ha suggerito che il filtro di sanificazione venga applicato in modo pi&ugrave; conservativo per riflettere la rimozione del passaggio di approvazione.</li>
+                            <li><strong>Decisione:</strong> La mozione &egrave; stata approvata, 6 a favore, 1 contrario. La persona che prepara i verbali applicher&agrave; un esame supplementare prima della pubblicazione. La politica potr&agrave; essere rivista se dovessero sorgere problemi.</li>
+                        </ul>
+
+                        <h2>6. Approvazione del Contratto</h2>
+                        <ul>
+                            <li>Il consiglio ha approvato la continuazione del contratto di Daniela M S per aprile, mantenendo un accordo mese per mese.</li>
+                            <li>Il consiglio ha concordato di richiedere il parere di un commercialista prima di considerare un contratto a pi&ugrave; lungo termine.</li>
+                            <li><strong>Decisione:</strong> La mozione per approvare il contratto di aprile &egrave; stata approvata all&rsquo;unanimit&agrave;.</li>
+                        </ul>
+
+                        <h2>7. Aggiornamento Vendita Biglietti</h2>
+                        <ul>
+                            <li>I biglietti dell&rsquo;Ondata 1 sono in buona strada per esaurirsi prima della scadenza del 14 aprile, coerentemente con quanto riportato nella chiamata comunitaria.</li>
+                            <li>Il budget &egrave; stato finalizzato ed &egrave; ora attivo e visibile nell&rsquo;applicazione Humans.</li>
+                        </ul>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Peter D</td><td>Preparare il caso aziendale per la proposta di strategia dei prezzi</td><td>Prossima riunione del consiglio</td></tr>
+                                <tr><td>Peter D</td><td>Programmare la chiamata di coordinamento con il team di sviluppo</td><td>Gioved&igrave;</td></tr>
+                                <tr><td>Daniel T</td><td>Sviluppare l&rsquo;applicazione di scansione biglietti (verifica Ticket Tailor verso Humans)</td><td>Da definire</td></tr>
+                                <tr><td>Daniel T</td><td>Fornire la lista di nomi per la validazione IA in Humans</td><td>Questa settimana</td></tr>
+                                <tr><td>Pablo V</td><td>Aggiungere parole chiave aggiuntive alla campagna Google Ads</td><td>Questa settimana</td></tr>
+                                <tr><td>Consiglio</td><td>Richiedere il parere di un commercialista sulle opzioni di contratto a pi&ugrave; lungo termine</td><td>Questo mese</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Verbale generato automaticamente da Gemini e sanificato per la pubblicazione.</em></p>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle einer Abweichung zwischen dieser Version und der spanischen Version ist die spanische Version ma&szlig;geblich.</div>
+
+                    <div class="attendees">
+                        <strong>Vorsitz:</strong> Daniel T<br>
+                        <strong>Vorstand anwesend:</strong> Daniel T, Pablo V, Peter D, Ben D, Michelle T, Chris O, Ward<br>
+                        <strong>Ebenfalls anwesend:</strong> Anna
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Preisstrategie</h2>
+                        <ul>
+                            <li>Der Vorstand er&ouml;rterte Preisstrategien, um ein breiteres Spektrum von Teilnehmern anzuziehen.</li>
+                            <li><strong>Ergebnis:</strong> Der Vorstand stimmte zu, die Optionen weiter zu pr&uuml;fen. Peter D wird einen Gesch&auml;ftsfall f&uuml;r die formelle Genehmigung des Vorstands vorbereiten.</li>
+                        </ul>
+
+                        <h2>2. Koordination der Plattformentwicklung</h2>
+                        <ul>
+                            <li>Es wurde beantragt, bestimmte Entwicklungsarbeiten bis zu einem Koordinationsgespr&auml;ch am folgenden Tag auszusetzen, um doppelten Aufwand zu vermeiden.</li>
+                            <li>Ein vorgeschlagenes Nebenprojekt wurde besprochen: eine Ticket-Scan-App, die die Einhaltung der Anforderungen durch Teilnehmer am Eingang &uuml;berpr&uuml;fen k&ouml;nnte und den Bedarf an papierbasierten Kontrollen reduziert.</li>
+                        </ul>
+
+                        <h2>3. Humans-Plattform: Genehmigungsprozess f&uuml;r Freiwillige</h2>
+                        <ul>
+                            <li>Der aktuelle manuelle Genehmigungsprozess f&uuml;r neue Freiwilligenanmeldungen wurde als Engpass identifiziert, mit 17 ausstehenden Bewerbungen.</li>
+                            <li>Der Vorstand er&ouml;rterte die Implementierung einer KI-gest&uuml;tzten Namensvalidierung, um Genehmigungen nach M&ouml;glichkeit zu automatisieren und Grenzf&auml;lle zur manuellen &Uuml;berpr&uuml;fung zu kennzeichnen (ein Drei-Zustands-System: automatische Genehmigung, Kennzeichnung zur &Uuml;berpr&uuml;fung oder automatische Ablehnung).</li>
+                        </ul>
+
+                        <h2>4. Google Ads-Kampagne</h2>
+                        <ul>
+                            <li>Pablo V stellte eine &uuml;ber Ad Grants eingerichtete Google Ads-Kampagne vor, die auf relevante Suchbegriffe abzielt.</li>
+                            <li>Das Kampagnenbudget ist auf die monatliche Ad Grants-Obergrenze begrenzt, mit einem t&auml;glichen Ausgabenziel und einer Mindestanforderung von 5 % Klickrate.</li>
+                            <li>Conversion-Tracking ist derzeit nicht auf der Website installiert; die prim&auml;re Leistungskennzahl wird die Klickrate sein.</li>
+                            <li><strong>Ergebnis:</strong> Pablo V wird die Kampagne fortf&uuml;hren und zus&auml;tzliche Schl&uuml;sselw&ouml;rter hinzuf&uuml;gen. Auf Vorstandsebene ist in dieser Phase keine Entscheidung erforderlich.</li>
+                        </ul>
+
+                        <h2>5. Richtlinie zur Ver&ouml;ffentlichung von Sitzungsprotokollen</h2>
+                        <ul>
+                            <li>Daniel T schlug vor, der Person, die die Protokolle erstellt, zu erlauben, bereinigte Vorstands- und Gemeinschaftsprotokollen direkt zu ver&ouml;ffentlichen, ohne die vorherige individuelle Genehmigung jedes Vorstandsmitglieds zu erfordern.</li>
+                            <li>Die Protokolle w&uuml;rden weiterhin den Standardbereinigungsprozess durchlaufen, und nach der Ver&ouml;ffentlichung festgestellte Probleme k&ouml;nnten umgehend korrigiert werden.</li>
+                            <li>Ben D &auml;u&szlig;erte eine Pr&auml;ferenz f&uuml;r die Beibehaltung des vorherigen &Uuml;berpr&uuml;fungsschritts und verwies auf fr&uuml;here Gelegenheiten, bei denen die Pr&uuml;fung Probleme aufgedeckt hatte. Er anerkannte jedoch die Mehrheitsmeinung und versuchte nicht, die Abstimmung zu blockieren.</li>
+                            <li>Pablo V schlug vor, den Bereinigungsfilter konservativer anzuwenden, um den Wegfall des Genehmigungsschritts widerzuspiegeln.</li>
+                            <li><strong>Beschluss:</strong> Der Antrag wurde angenommen, 6 daf&uuml;r, 1 dagegen. Die Person, die die Protokolle erstellt, wird vor der Ver&ouml;ffentlichung eine zus&auml;tzliche Pr&uuml;fung vornehmen. Die Richtlinie kann &uuml;berarbeitet werden, falls Probleme auftreten.</li>
+                        </ul>
+
+                        <h2>6. Vertragsgenehmigung</h2>
+                        <ul>
+                            <li>Der Vorstand genehmigte die Fortsetzung des Vertrags von Daniela M S f&uuml;r April unter Beibehaltung einer monatlichen Vereinbarung.</li>
+                            <li>Der Vorstand stimmte zu, vor der Erw&auml;gung eines l&auml;ngerfristigen Vertrags den Rat eines Steuerberaters einzuholen.</li>
+                            <li><strong>Beschluss:</strong> Der Antrag zur Genehmigung des April-Vertrags wurde einstimmig angenommen.</li>
+                        </ul>
+
+                        <h2>7. Aktualisierung des Ticketverkaufs</h2>
+                        <ul>
+                            <li>Die Tickets der Welle 1 sind auf Kurs, vor dem Stichtag am 14. April ausverkauft zu sein, was mit dem &uuml;bereinstimmt, was im Gemeinschaftsanruf berichtet wurde.</li>
+                            <li>Das Budget wurde finalisiert und ist jetzt aktiv und in der Humans-App sichtbar.</li>
+                        </ul>
+
+                        <h2>Aktionspunkte</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Aktion</th><th>Frist</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Peter D</td><td>Gesch&auml;ftsfall f&uuml;r den Preisstrategievorschlag vorbereiten</td><td>N&auml;chste Vorstandssitzung</td></tr>
+                                <tr><td>Peter D</td><td>Koordinationsgespr&auml;ch mit dem Entwicklungsteam planen</td><td>Donnerstag</td></tr>
+                                <tr><td>Daniel T</td><td>Ticket-Scan-App entwickeln (Ticket Tailor zu Humans-Verifizierung)</td><td>Noch festzulegen</td></tr>
+                                <tr><td>Daniel T</td><td>Namensliste f&uuml;r KI-Validierung in Humans bereitstellen</td><td>Diese Woche</td></tr>
+                                <tr><td>Pablo V</td><td>Zus&auml;tzliche Schl&uuml;sselw&ouml;rter zur Google Ads-Kampagne hinzuf&uuml;gen</td><td>Diese Woche</td></tr>
+                                <tr><td>Vorstand</td><td>Steuerberater zu l&auml;ngerfristigen Vertragsoptionen konsultieren</td><td>Diesen Monat</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Protokoll automatisch von Gemini erstellt und f&uuml;r die Ver&ouml;ffentlichung bereinigt.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
