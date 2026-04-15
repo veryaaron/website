@@ -12,9 +12,8 @@
   <url><loc>https://nobodies.team/transparency.html</loc><priority>0.7</priority></url>
   <url><loc>https://nobodies.team/updates.html</loc><priority>0.6</priority></url>
 
-  <!-- Join / Volunteer funnels -->
-  <url><loc>https://nobodies.team/join/</loc><priority>0.7</priority></url>
-  <url><loc>https://nobodies.team/volunteer/</loc><priority>0.7</priority></url>
+  <!-- Redirects -->
+  <url><loc>https://nobodies.team/join/</loc><priority>0.3</priority></url>
 
   <!-- Tickets -->
   <url><loc>https://nobodies.team/low-income-tickets.html</loc><priority>0.6</priority></url>

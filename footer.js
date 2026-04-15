@@ -63,11 +63,10 @@
                     '<div class="footer-volunteer">' +
                         '<h4>Volunteer</h4>' +
                         '<a href="https://humans.nobodies.team" target="_blank">Humans App</a>' +
-                        '<a href="' + prefix + '/volunteer/index.html">Volunteer Info</a>' +
+                        '<a href="' + prefix + '/volunteering.html">Volunteering</a>' +
                     '</div>' +
                     '<div class="footer-links">' +
                         '<h4>Other</h4>' +
-                        '<a href="' + prefix + '/volunteering.html">Volunteering</a>' +
                         '<a href="' + prefix + '/consent.html">Consent</a>' +
                         '<a href="' + prefix + '/survival-guide.html">Survival Guide</a>' +
                         '<a href="' + prefix + '/#about">About</a>' +
