@@ -91,13 +91,6 @@ var USEFUL_LINKS_CATEGORIES = [
                 description: 'Docs, files, shared chaos. Join the NCA or apply to a team and we\'ll give you access.',
                 url: null,
                 accent: '#6B8EC5'
-            },
-            {
-                icon: 'car',
-                title: 'Ridesharing',
-                description: 'Find or offer a lift to the desert. Community-run spreadsheet.',
-                url: 'https://docs.google.com/spreadsheets/d/1PG4dEYDDYjpad_XPoHZeill-fz7lpApwnVlQQbhj8Jc/edit?gid=0#gid=0',
-                accent: '#7BA68C'
             }
         ]
     },
