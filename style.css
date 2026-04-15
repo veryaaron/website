@@ -1247,6 +1247,15 @@ h4 { font-size: 1.15rem; }
     box-shadow: 0 0 30px rgba(194, 112, 62, 0.12);
 }
 
+.ticket-wave.ticket-wave-closed {
+    opacity: 0.55;
+}
+
+.ticket-wave-badge-closed {
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.75);
+}
+
 .ticket-wave-badge {
     display: inline-block;
     background: var(--color-accent);
