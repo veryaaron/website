@@ -19,6 +19,7 @@
                             '<li><a href="' + prefix + '/consent.html">Consent</a></li>' +
                             '<li><a href="' + prefix + '/survival-guide.html">Survival Guide</a></li>' +
                             '<li><a href="' + prefix + '/inclusion.html">Inclusion</a></li>' +
+                            '<li><a href="' + prefix + '/speaking-about-elsewhere.html">Speaking About Elsewhere</a></li>' +
                         '</ul>' +
                     '</li>' +
                     '<li><a href="' + prefix + '/#principles">Principles</a></li>' +
