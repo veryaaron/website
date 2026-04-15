@@ -3,27 +3,44 @@
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
     // === April 15 ===
+    {"date": "2026-04-15", "source": "Logistics", "text": "<a href=\"https://docs.google.com/spreadsheets/d/1PG4dEYDDYjpad_XPoHZeill-fz7lpApwnVlQQbhj8Jc/edit?gid=0#gid=0\" target=\"_blank\">Ridesharing spreadsheet</a> created — find or offer a lift to the desert"},
     {"date": "2026-04-15", "source": "Ticketing", "text": "Wave 1 closed — <a href=\"https://tickets.nobodies.team/events/nobodiescollective/2089167\" target=\"_blank\">Wave 2 now on sale at €295</a> until May 14, 23:59 CET"},
+    {"date": "2026-04-15", "source": "Tech", "text": "Humans app: sub-team changes, avatar fix and rota view cleanup (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1493790383224782950\" target=\"_blank\">details</a>)"},
 
     // === April 14 ===
+    {"date": "2026-04-14", "source": "Barrios", "text": "Barrios speed dating session planned for Thursday 23rd April — find out more on <a href=\"https://discord.com/channels/1462886445583962245/1492459085952585769\" target=\"_blank\">#barrios</a>"},
     {"date": "2026-04-14", "source": "Governance", "text": "April 13 <a href=\"transparency/2026-04-13-board.html\">board meeting</a> minutes published to transparency page"},
+
+    // === April 13 ===
+    {"date": "2026-04-13", "source": "Tech", "text": "You can now mark yourself as 'not coming' on Humans — and many other fixes (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1493247347646529577\" target=\"_blank\">details</a>)"},
 
     // === April 10 ===
     {"date": "2026-04-10", "source": "Ticketing", "text": "Wave 1 tickets almost sold out! <a href=\"https://tickets.nobodies.team/events/nobodiescollective/2089167\" target=\"_blank\">Get yours before April 14</a>"},
     {"date": "2026-04-10", "source": "Governance", "text": "April 9 <a href=\"transparency/2026-04-09-board.html\">board meeting</a> minutes published to transparency page"},
     {"date": "2026-04-10", "source": "Governance", "text": "April 9 <a href=\"transparency/2026-04-09-community.html\">community meeting</a> minutes published with full transcript and video recording"},
 
+    // === April 9 ===
+    {"date": "2026-04-09", "source": "Ambassadors", "text": "Free ambassador spot at AfrikaBurn (from April 27) — ticket, bus and camp covered. Head to <a href=\"https://discord.com/channels/1462886445583962245/1484275426934390875\" target=\"_blank\">#ambassadors on Discord</a> and talk to @Octoprop to find out more"},
+    {"date": "2026-04-09", "source": "Tech", "text": "Humans app: coordinator scoping, guest dashboard updates and city planning updates (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1491905978256462005\" target=\"_blank\">details</a>)"},
+
     // === April 8 ===
     {"date": "2026-04-08", "source": "Governance", "text": "April 6 <a href=\"transparency/2026-04-06-board.html\">board meeting</a> minutes published to transparency page"},
+    {"date": "2026-04-08", "source": "Tech", "text": "Humans app: shift overlaps, Barrios summaries and ticket projections (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1491442222120570931\" target=\"_blank\">details</a>)"},
+    {"date": "2026-04-08", "source": "Tech", "text": "Humans app: new guest dashboard, staffing hours chart and departmental budgets (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1491374568672202822\" target=\"_blank\">details</a>)"},
 
     // === April 7 ===
     {"date": "2026-04-07", "source": "Recruitment", "text": "After an executive search spanning 5 continents and possibly involving a conversation in a bungalow at an unspecified tropical location, a Werkhaus lead has been located."},
     {"date": "2026-04-07", "source": "Governance", "text": "April 2 <a href=\"transparency/2026-04-02-board.html\">board meeting</a> minutes published to transparency page"},
     {"date": "2026-04-07", "source": "Governance", "text": "April 2 <a href=\"transparency/2026-04-02-community.html\">community meeting</a> minutes published with full transcript"},
+    {"date": "2026-04-07", "source": "Tech", "text": "Humans app: break-even calculations fixed, magic links and feedback features (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1491363288225943622\" target=\"_blank\">details</a>)"},
+
+    // === April 6 ===
+    {"date": "2026-04-06", "source": "Tech", "text": "Humans app: interactive city planning map, languages on profiles and budgeting improvements (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1490912861709537372\" target=\"_blank\">details</a>)"},
 
     // === April 5 ===
     {"date": "2026-04-05", "source": "Barrios", "text": "27 barrios are now <a href=\"https://humans.nobodies.team/Barrios\" target=\"_blank\">registered with Elsewhere</a>"},
     {"date": "2026-04-05", "source": "Comms", "text": "<a href=\"faq.html\">FAQ page</a> updated, reorganised and translated into 5 languages (EN/ES/FR/IT/DE)"},
+    {"date": "2026-04-05", "source": "Tech", "text": "Humans app: shift capacity improvements, new notifications and sub-team infrastructure (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1490499262012850267\" target=\"_blank\">details</a>)"},
 
     // === April 4 ===
     {"date": "2026-04-04", "source": "Tech", "text": "Humans app now has a cash flow statement built in"},
