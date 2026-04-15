@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteering | Elsewhere &mdash; by Nobodies Collective</title>
+    <meta name="description" content="Elsewhere is built by its participants. Learn how volunteering works, what to expect, and pick a shift to help make the event happen.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .vol-page {
+            padding: 0 0 4rem;
+        }
+
+        /* Hero */
+        .vol-hero {
+            position: relative;
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .vol-hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('images/art/support.jpg') center/cover no-repeat;
+            opacity: 0.45;
+        }
+
+        .vol-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(17,17,17,0.2) 0%, rgba(17,17,17,0.75) 100%);
+        }
+
+        .vol-hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 10rem 2rem 5rem;
+            max-width: 800px;
+        }
+
+        .vol-hero-content h1 {
+            color: #fff;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+        }
+
+        .vol-hero-content p {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.15rem;
+            line-height: 1.7;
+            max-width: 620px;
+            margin: 0 auto 2rem;
+        }
+
+        .vol-hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+
+        /* Content */
+        .vol-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        .vol-section {
+            margin-top: 3.5rem;
+        }
+
+        .vol-section h2 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+
+        .vol-section p,
+        .vol-section li {
+            color: var(--color-text-muted);
+            line-height: 1.7;
+        }
+
+        .vol-section p {
+            margin-bottom: 1rem;
+        }
+
+        .vol-section ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .vol-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .vol-section li strong {
+            color: var(--color-text);
+        }
+
+        /* Highlight box */
+        .vol-highlight {
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .vol-highlight p {
+            color: var(--color-text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .vol-highlight p:last-child {
+            margin-bottom: 0;
+        }
+
+        .vol-highlight strong {
+            color: var(--color-text);
+        }
+
+        /* Role grid */
+        .vol-roles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .vol-role {
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+        }
+
+        .vol-role h3 {
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+        }
+
+        .vol-role p {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* PDF section */
+        .vol-guide-section {
+            margin-top: 3.5rem;
+        }
+
+        .vol-guide-section h2 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+        }
+
+        .vol-guide-section > p {
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .pdf-embed {
+            width: 100%;
+            height: 80vh;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            margin: 1.5rem 0 2rem;
+        }
+
+        .pdf-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        /* CTA section */
+        .vol-cta-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+        }
+
+        .vol-cta-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .vol-cta-section p {
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .vol-cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .vol-cta-buttons .btn {
+            min-width: 200px;
+        }
+
+        .vol-contact {
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+
+        .vol-contact a {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="vol-page">
+
+        <!-- Hero -->
+        <section class="vol-hero">
+            <div class="vol-hero-bg"></div>
+            <div class="vol-hero-overlay"></div>
+            <div class="vol-hero-content">
+                <h1>Volunteering at Elsewhere</h1>
+                <p>Elsewhere isn&rsquo;t put on for you &mdash; it&rsquo;s built by you. Every structure, every meal, every dusty sunrise is made possible by people who show up and pitch in.</p>
+                <div class="vol-hero-cta">
+                    <a href="https://drive.google.com/file/d/1fIDrTwRtv-tqpQVP3t45wDfcg1bOJKq8/view" target="_blank" class="btn btn-primary" style="background:#fff; color:#111; border-color:#fff;">Read the Volunteering Guide</a>
+                    <a href="https://humans.nobodies.team" target="_blank" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.85);">Pick a Shift on Humans</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="vol-content">
+            <br>
+            <a href="/" class="back-link">Back to home</a>
+
+            <!-- Intro -->
+            <section class="vol-section">
+                <h2>Everyone builds Elsewhere</h2>
+                <p>There are no spectators at Elsewhere. No backstage passes, no VIPs, no magic lanyards. Every single participant &mdash; organisers, DJs, artists, first-timers &mdash; buys a ticket and is expected to contribute. The event exists because hundreds of people decide to cook, build, drive, dig, decorate, greet, clean, and care for each other.</p>
+                <p>Volunteering isn&rsquo;t a chore you get through &mdash; it&rsquo;s how you meet your people. Some of the strongest friendships at Elsewhere were forged over a shared kitchen shift at 6am, building shade structures in 35-degree heat, or cooking the last Strike dinner with whatever&rsquo;s left in the pantry. You show up as a stranger; you leave as crew.</p>
+            </section>
+
+            <!-- What it's like -->
+            <section class="vol-section">
+                <h2>What&rsquo;s it actually like?</h2>
+                <p>Over three weeks before the gates open, a small crew grows from 20 people into a hundred-strong team that transforms an empty stretch of Spanish desert into a fully functioning town &mdash; complete with neighbourhoods, a power grid, 24-hour emergency services, a recycling centre, an info point, and as many dance floors as you could want.</p>
+                <p>The work is real: digging cable trenches in the sun, unloading shipping containers, GPS-mapping the city layout, feeding 80 people three meals a day. But so is the reward. Pre-event Saturday nights turn into parties under the stars. Siestas happen in the shade of structures you helped build. Cantina (the crew kitchen) becomes the social heart of the whole operation. And by the time 3,000 people walk through the gate, you already know this place is yours &mdash; because you built it.</p>
+                <div class="vol-highlight">
+                    <p><strong>You don&rsquo;t need experience.</strong> Most of us have found ourselves installing a sound system, operating heavy machinery, cooking for a hundred people, or interpreting for local authorities &mdash; and loving every minute of a job we didn&rsquo;t even know existed before Elsewhere. All you need is a can-do attitude and a willingness to work as a team.</p>
+                </div>
+            </section>
+
+            <!-- Roles -->
+            <section class="vol-section">
+                <h2>Find your thing</h2>
+                <p>There&rsquo;s a role for every kind of person. Browse what&rsquo;s available on <a href="https://humans.nobodies.team" target="_blank">Humans</a>, or show up as a general volunteer and we&rsquo;ll help match you to a team on site.</p>
+
+                <div class="vol-roles">
+                    <div class="vol-role">
+                        <h3>Physical work in the sun</h3>
+                        <p>Infrastructure, city planning, power trenches, leave-no-trace installation. All abilities welcome &mdash; you don&rsquo;t need to be a builder.</p>
+                    </div>
+                    <div class="vol-role">
+                        <h3>Taking care of people</h3>
+                        <p>Cantina (cooking for the crew), fluffing (hydration runs and snack stations), or volunteer welfare. The kitchen is the heart of the event.</p>
+                    </div>
+                    <div class="vol-role">
+                        <h3>Meeting &amp; welcoming people</h3>
+                        <p>Gate and greeters, barrio support, artist support, No Info &amp; Ice. Be the first friendly face after a long drive.</p>
+                    </div>
+                    <div class="vol-role">
+                        <h3>Tech &amp; geekery</h3>
+                        <p>Wi-Fi network, radio comms, power grid, sound &amp; lighting, GPS city mapping. Use your brain and your soldering iron.</p>
+                    </div>
+                    <div class="vol-role">
+                        <h3>Logistics &amp; coordination</h3>
+                        <p>Production, transport, heavy machinery, purchasing runs, admin. Keep the operation moving behind the scenes.</p>
+                    </div>
+                    <div class="vol-role">
+                        <h3>Strike (post-event)</h3>
+                        <p>Take everything down and return the desert to its natural state. Many volunteers say Strike is their favourite part &mdash; small crew, desert moonlight, incredible meals from leftovers.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What you get -->
+            <section class="vol-section">
+                <h2>What we provide</h2>
+                <ul>
+                    <li><strong>Meals</strong> &mdash; breakfast, lunch, and dinner at Cantina while you&rsquo;re working with us</li>
+                    <li><strong>Hydration</strong> &mdash; water, juice, rehydration drinks, and snacks throughout the day</li>
+                    <li><strong>Cold beers</strong> at siesta and after work</li>
+                    <li><strong>Werkhaus</strong> &mdash; a communal shade structure to rest, socialise, and camp next to</li>
+                    <li><strong>Train station pickups</strong> twice daily (morning and afternoon)</li>
+                    <li><strong>Tools and safety equipment</strong> for the work you&rsquo;re doing</li>
+                    <li><strong>Days off</strong> &mdash; if you&rsquo;re on site for multiple weeks, we&rsquo;ll sort time off for laundry, shopping, or a trip to the pool</li>
+                    <li><strong>Early entry</strong> to the event</li>
+                    <li><strong>Cruz Roja (Red Cross)</strong> on site during set-up and strike</li>
+                </ul>
+            </section>
+
+            <!-- The Guide (PDF) -->
+            <section class="vol-guide-section">
+                <h2>The Volunteering Guide</h2>
+                <p>The full guide covers everything: how to sign up, when to arrive, what to pack, travel info, the pre-event timeline, strike, and all the details you&rsquo;ll need.</p>
+
+                <div class="pdf-actions">
+                    <a href="https://drive.google.com/file/d/1fIDrTwRtv-tqpQVP3t45wDfcg1bOJKq8/view" target="_blank" class="btn btn-primary">Read the Volunteering Guide</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1fIDrTwRtv-tqpQVP3t45wDfcg1bOJKq8" class="btn btn-outline">Download PDF</a>
+                </div>
+
+                <iframe class="pdf-embed" src="https://drive.google.com/file/d/1fIDrTwRtv-tqpQVP3t45wDfcg1bOJKq8/preview" allow="autoplay" loading="lazy"></iframe>
+            </section>
+
+            <!-- Bottom CTA -->
+            <div class="vol-cta-section">
+                <h2>Ready to join the crew?</h2>
+                <p>Read the guide, then head to Humans to browse shifts and sign up. Even one day makes a difference.</p>
+                <div class="vol-cta-buttons">
+                    <a href="https://drive.google.com/file/d/1fIDrTwRtv-tqpQVP3t45wDfcg1bOJKq8/view" target="_blank" class="btn btn-primary">Read the Volunteering Guide</a>
+                    <a href="https://humans.nobodies.team" target="_blank" class="btn btn-outline">Pick a Shift on Humans</a>
+                </div>
+                <p class="vol-contact">Questions? Reach the volunteer team on <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a> or email <a href="mailto:volunteer@nobodies.team">volunteer@nobodies.team</a></p>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

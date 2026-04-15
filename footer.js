@@ -67,6 +67,7 @@
                     '</div>' +
                     '<div class="footer-links">' +
                         '<h4>Other</h4>' +
+                        '<a href="' + prefix + '/volunteering.html">Volunteering</a>' +
                         '<a href="' + prefix + '/consent.html">Consent</a>' +
                         '<a href="' + prefix + '/survival-guide.html">Survival Guide</a>' +
                         '<a href="' + prefix + '/#about">About</a>' +

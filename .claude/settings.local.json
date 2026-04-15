@@ -11,7 +11,9 @@
       "Bash(git remote add:*)",
       "Bash(git push:*)",
       "Bash(git remote set-url:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(lsof -ti:8000)",
+      "Bash(xargs kill *)"
     ]
   }
 }

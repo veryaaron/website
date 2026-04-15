@@ -25,6 +25,13 @@ var USEFUL_LINKS_CATEGORIES = [
                 accent: '#D4A843'
             },
             {
+                icon: 'volunteer',
+                title: 'Volunteering Guide',
+                description: 'Everything you need to know about volunteering: how to sign up, what to expect, and how to help build Elsewhere.',
+                url: '/volunteering.html',
+                accent: '#C47A3E'
+            },
+            {
                 icon: 'person',
                 title: 'Apply for a Camp',
                 description: 'Register your barrio or camp through the Humans app.',
