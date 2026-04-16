@@ -37,6 +37,13 @@ var USEFUL_LINKS_CATEGORIES = [
                 description: 'Register your barrio or camp through the Humans app.',
                 url: 'https://humans.nobodies.team/Barrios',
                 accent: '#7BA68C'
+            },
+            {
+                icon: 'person',
+                title: 'Speaking About Elsewhere',
+                description: 'A guide to talking about Elsewhere with friends, communities, and curious strangers.',
+                url: 'speaking-about-elsewhere.html',
+                accent: '#8CAAB5'
             }
         ]
     },
