@@ -2825,6 +2825,12 @@ h4 { font-size: 1.15rem; }
         display: block;
         padding: 0.75rem 0;
     }
+    .header:not(.scrolled) .nav-links a {
+        color: var(--color-text-muted);
+    }
+    .header:not(.scrolled) .nav-links a:hover {
+        color: var(--color-accent);
+    }
 
     .nav-dropdown-menu {
         position: static;

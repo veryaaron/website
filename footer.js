@@ -69,6 +69,7 @@
                         '<h4>Other</h4>' +
                         '<a href="' + prefix + '/consent.html">Consent</a>' +
                         '<a href="' + prefix + '/survival-guide.html">Survival Guide</a>' +
+                        '<a href="' + prefix + '/speaking-about-elsewhere.html">Speaking about Elsewhere</a>' +
                         '<a href="' + prefix + '/#about">About</a>' +
                         '<a href="' + prefix + '/#principles">Principles</a>' +
                         '<a href="' + prefix + '/#event">Event</a>' +
