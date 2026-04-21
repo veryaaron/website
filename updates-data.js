@@ -2,6 +2,9 @@
 // Each entry: { date: "YYYY-MM-DD", source: "Team", text: "Update text" }
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
+    // === April 21 ===
+    {"date": "2026-04-21", "source": "Governance", "text": "April 20 <a href=\"transparency/2026-04-20-board.html\">board meeting</a> minutes published to transparency page"},
+
     // === April 15 ===
     {"date": "2026-04-15", "source": "Ticketing", "text": "Wave 1 closed — <a href=\"https://tickets.nobodies.team/events/nobodiescollective/2089167\" target=\"_blank\">Wave 2 now on sale at €295</a> until May 14, 23:59 CET"},
     {"date": "2026-04-15", "source": "Tech", "text": "Humans app: sub-team changes, avatar fix and rota view cleanup (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1493790383224782950\" target=\"_blank\">details</a>)"},
