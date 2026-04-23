@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Meeting - April 16, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .resource-links { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .resource-links h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+        .resource-links ul { list-style: none; padding: 0; margin: 0; }
+        .resource-links li { margin-bottom: 0.5rem; }
+        .resource-links a { color: var(--color-accent); font-weight: 500; }
+        .resource-links a:hover { text-decoration: underline; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem; border-radius: 8px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        .transcript-section { margin-top: 2rem; border: 1px solid var(--color-border); border-radius: 8px; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Community Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Thursday 16 April 2026, 19:40 CEST</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Chaired by Frank F, with leads and community members</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-04-16-community-transcript.html">Full transcript (English only)</a></li>
+                            <li><a href="https://youtu.be/rveET_qDMbw">Video recording (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/rveET_qDMbw" title="Community Meeting - April 16, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. City Planning and Map Launch</h2>
+                        <ul>
+                            <li>Melody P reported that city planning is in its final sprint.</li>
+                            <li>The barrio placement map on the Humans platform opens immediately after the community call.</li>
+                            <li>Barrio leads can add and edit their own barrio entries; all users can view the map.</li>
+                            <li>Known limitation: misplaced barrios cannot yet be suppressed &mdash; one garden area had been added in the wrong zone and will need to be moved manually.</li>
+                            <li>Pablo V confirmed that a Discord voice channel would be created to support real-time placement coordination.</li>
+                        </ul>
+
+                        <h2>2. L&amp;T &mdash; TAP Stations (Toilets)</h2>
+                        <ul>
+                            <li>Shitshow, from the L&amp;T department, confirmed that toilets will be available at the event.</li>
+                            <li>The stations will be known as <strong>TAP (Total Access Period)</strong>. The volunteers running them will be called &ldquo;tap dancers.&rdquo;</li>
+                            <li>TAP stations are intended only for those on their period, with accessibility needs, or with a stoma. Attendees are asked to communicate this to anyone coming to the event.</li>
+                            <li>Two open questions were put to the community for feedback:
+                                <ul>
+                                    <li>Should TAP stations be placed closer to the playa for night accessibility, or arranged in a spread-out layout?</li>
+                                    <li>What locking or security approach would be most resilient? Sandstorm resilience and resistance to forced removal are both concerns.</li>
+                                </ul>
+                            </li>
+                            <li>Feedback via Discord or the Humans app.</li>
+                        </ul>
+
+                        <h2>3. Barrio Support</h2>
+                        <ul>
+                            <li>Cayce reported that barrio registration has closed with 38 barrios registered for the year.</li>
+                            <li>The team is now working with Peter and production on the next phase: ordering supplies for on-site use.</li>
+                            <li>Next week&rsquo;s community call (23 April) will take the form of a <strong>barrio speed-dating takeover</strong>, during which interested barrios will have approximately five minutes each to pitch their identity and vibe to attendees who have not yet joined a barrio.</li>
+                            <li>Barrios wishing to take part can contact the barrier support team via Discord or at <code>barrios@nobodies.team</code>.</li>
+                        </ul>
+
+                        <h2>4. Volunteer Shortage</h2>
+                        <ul>
+                            <li>Michael M (&ldquo;Nurse&rdquo;) reported that the Teams system is working well and that new people have been joining and navigating it successfully.</li>
+                            <li>However, <strong>overall volunteer numbers stand at approximately 20% of what is needed</strong> to put the event on. Pre-event build and strike weeks are the areas of greatest concern.</li>
+                            <li>Current staffing levels by department: Build Infrastructure 14%, Cantina 26%, Power 15%, City Planning 17%, Welfare 7%, Mailfair 17%. Gates are doing well at around 40%.</li>
+                            <li>Some shortfall may reflect attendees planning to come but not yet having signed up on Teams &mdash; teams may therefore appear emptier than they are.</li>
+                            <li>Call to attendees: <a href="https://humans.nobodies.team" target="_blank">register on Teams</a> if you are planning to attend, and encourage others to do the same.</li>
+                        </ul>
+
+                        <h2>5. Buses</h2>
+                        <ul>
+                            <li>Aaron R confirmed that the bus operator is now fully agreed.</li>
+                            <li>Pricing will be a single standardised rate with no dynamic variable pricing; ticket changes will be free of charge if timings shift.</li>
+                            <li><strong>Bus tickets will go on sale the following week.</strong></li>
+                            <li>Aaron R noted that ticket sales are tracking well while volunteer registration is at around 20% &mdash; a clear gap requiring attention.</li>
+                        </ul>
+
+                        <h2>6. Creativity</h2>
+                        <ul>
+                            <li>Oliver K confirmed that Ziri has stepped down from the TOPS coordinator role.</li>
+                            <li>The wider Creativity team continues to work, with exciting art proposals coming in.</li>
+                            <li>The team&rsquo;s budget is tight and additional funding would be welcome.</li>
+                        </ul>
+
+                        <h2>7. Power</h2>
+                        <ul>
+                            <li>Cupcake reported that Power is on track in some respects, with plans in place for three grids &mdash; covering organisation, art, and barrios.</li>
+                            <li>Installation remains an uncertainty, with Power currently at 15% of needed hands. <strong>Volunteers with electrical experience are urgently needed.</strong></li>
+                            <li>Barrio leads placing in the green and blue zones were advised that those areas fall outside grid coverage; anyone with questions about grid access can contact <code>power@nobodies.team</code>.</li>
+                        </ul>
+
+                        <h2>8. Website Resources and Call for Art</h2>
+                        <ul>
+                            <li>Pablo V noted that uploading new resources to the website is quick &mdash; approximately ten minutes per document &mdash; and invited area leads who would like pages created (for example on art grants, survival dates, or volunteering information) to contact him on Discord.</li>
+                            <li>In response to a question from Ellen K, Oliver K confirmed that the art call is still open. Proposals can be submitted at <code>https://art.humans.team</code> via a Google form covering plans, power needs, and art grant requirements. The same page is linked from the Nobodies Collective homepage under Links &rarr; Art.</li>
+                            <li>Lennart L raised a question about whether road breaks on the map are negotiable. Melody P confirmed that some, but not all, breaks are negotiable, and that the city planning team is open to coordinating.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Community</td><td>Provide feedback on TAP placement and locking alternatives via Discord or the Humans app to the L&amp;T department</td><td>Ongoing</td></tr>
+                                <tr><td>Interested barrios</td><td>Contact Barrier Support on Discord or at <code>barrios@nobodies.team</code> to take part in the speed-dating takeover</td><td>Before 23 April</td></tr>
+                                <tr><td>All</td><td>Encourage attendees and prospective volunteers to <a href="https://humans.nobodies.team" target="_blank">register on Teams</a></td><td>Ongoing</td></tr>
+                                <tr><td>Aaron R</td><td>Release bus tickets for purchase</td><td>Next week</td></tr>
+                                <tr><td>Community</td><td>Volunteers with electrical experience to reach out to the Power team</td><td>Ongoing</td></tr>
+                                <tr><td>Area leads</td><td>Contact Pablo V on Discord to request website resources (art grants, survival dates, volunteering, etc.)</td><td>Ongoing</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Minutes auto-generated by Gemini and sanitised for publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Presidida por Frank F, con responsables y miembros de la comunidad</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registros de la Reuni&oacute;n</h3>
+                        <ul>
+                            <li><a href="2026-04-16-community-transcript.html">Transcripci&oacute;n completa (solo en ingl&eacute;s)</a></li>
+                            <li><a href="https://youtu.be/rveET_qDMbw">Grabaci&oacute;n en v&iacute;deo (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/rveET_qDMbw" title="Community Meeting - April 16, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Planificaci&oacute;n Urbana y Apertura del Mapa</h2>
+                        <ul>
+                            <li>Melody P inform&oacute; que la planificaci&oacute;n urbana est&aacute; en su sprint final.</li>
+                            <li>El mapa de colocaci&oacute;n de barrios en la plataforma Humans se abre inmediatamente despu&eacute;s de la llamada comunitaria.</li>
+                            <li>Los responsables de barrio pueden a&ntilde;adir y editar las entradas de su propio barrio; todos los usuarios pueden ver el mapa.</li>
+                            <li>Limitaci&oacute;n conocida: los barrios mal colocados a&uacute;n no pueden suprimirse &mdash; un jard&iacute;n se hab&iacute;a a&ntilde;adido en la zona equivocada y tendr&aacute; que moverse manualmente.</li>
+                            <li>Pablo V confirm&oacute; que se crear&iacute;a un canal de voz en Discord para apoyar la coordinaci&oacute;n de colocaci&oacute;n en tiempo real.</li>
+                        </ul>
+
+                        <h2>2. L&amp;T &mdash; Estaciones TAP (Ba&ntilde;os)</h2>
+                        <ul>
+                            <li>Shitshow, del departamento L&amp;T, confirm&oacute; que los ba&ntilde;os estar&aacute;n disponibles en el evento.</li>
+                            <li>Las estaciones ser&aacute;n conocidas como <strong>TAP (Total Access Period)</strong>. Las personas voluntarias que las gestionen ser&aacute;n llamadas &laquo;tap dancers&raquo;.</li>
+                            <li>Las estaciones TAP est&aacute;n destinadas &uacute;nicamente a personas que tienen la regla, con necesidades de accesibilidad, o con estoma. Se pide a quienes asistan que comuniquen esto a cualquier persona que venga al evento.</li>
+                            <li>Se plantearon dos preguntas abiertas a la comunidad para recibir feedback:
+                                <ul>
+                                    <li>&iquest;Deber&iacute;an las estaciones TAP colocarse m&aacute;s cerca de la playa para acceso nocturno, o disponerse en una distribuci&oacute;n dispersa?</li>
+                                    <li>&iquest;Qu&eacute; enfoque de cierre o seguridad ser&iacute;a m&aacute;s resistente? La resistencia a las tormentas de arena y a la retirada forzada son ambas preocupaciones.</li>
+                                </ul>
+                            </li>
+                            <li>Feedback v&iacute;a Discord o la app Humans.</li>
+                        </ul>
+
+                        <h2>3. Apoyo a Barrios</h2>
+                        <ul>
+                            <li>Cayce inform&oacute; que el registro de barrios ha cerrado con 38 barrios registrados para este a&ntilde;o.</li>
+                            <li>El equipo est&aacute; ahora trabajando con Peter y producci&oacute;n en la siguiente fase: el pedido de suministros para uso en el sitio.</li>
+                            <li>La llamada comunitaria de la pr&oacute;xima semana (23 de abril) tomar&aacute; la forma de un <strong>&laquo;speed dating&raquo; de barrios</strong>, durante el cual los barrios interesados tendr&aacute;n aproximadamente cinco minutos cada uno para presentar su identidad y ambiente a los asistentes que a&uacute;n no se han unido a un barrio.</li>
+                            <li>Los barrios que deseen participar pueden contactar al equipo de apoyo a barrios v&iacute;a Discord o en <code>barrios@nobodies.team</code>.</li>
+                        </ul>
+
+                        <h2>4. Escasez de Voluntarios</h2>
+                        <ul>
+                            <li>Michael M (&laquo;Nurse&raquo;) inform&oacute; que el sistema de Teams funciona bien y que nuevas personas se est&aacute;n uniendo y navegando con &eacute;xito.</li>
+                            <li>Sin embargo, <strong>los n&uacute;meros generales de voluntarios est&aacute;n en aproximadamente el 20% de lo que se necesita</strong> para realizar el evento. Las semanas de construcci&oacute;n previa y desmontaje son las &aacute;reas de mayor preocupaci&oacute;n.</li>
+                            <li>Niveles actuales de personal por departamento: Construcci&oacute;n e Infraestructura 14%, Cantina 26%, Power 15%, Planificaci&oacute;n Urbana 17%, Welfare 7%, Mailfair 17%. Gates va bien, alrededor del 40%.</li>
+                            <li>Parte del d&eacute;ficit puede reflejar asistentes que planean venir pero a&uacute;n no se han inscrito en Teams &mdash; los equipos pueden aparecer m&aacute;s vac&iacute;os de lo que realmente son.</li>
+                            <li>Llamada a quienes asisten: <a href="https://humans.nobodies.team" target="_blank">reg&iacute;strate en Teams</a> si planeas asistir, y anima a otras personas a hacer lo mismo.</li>
+                        </ul>
+
+                        <h2>5. Autobuses</h2>
+                        <ul>
+                            <li>Aaron R confirm&oacute; que el operador de autobuses est&aacute; ahora totalmente acordado.</li>
+                            <li>El precio ser&aacute; una tarifa estandarizada &uacute;nica sin precios variables din&aacute;micos; los cambios de billete ser&aacute;n gratuitos si los horarios cambian.</li>
+                            <li><strong>Los billetes de autob&uacute;s saldr&aacute;n a la venta la pr&oacute;xima semana.</strong></li>
+                            <li>Aaron R se&ntilde;al&oacute; que las ventas de entradas van bien, mientras que el registro de voluntarios est&aacute; alrededor del 20% &mdash; una clara brecha que requiere atenci&oacute;n.</li>
+                        </ul>
+
+                        <h2>6. Creatividad</h2>
+                        <ul>
+                            <li>Oliver K confirm&oacute; que Ziri ha renunciado al rol de coordinadora de TOPS.</li>
+                            <li>El equipo de Creatividad m&aacute;s amplio contin&uacute;a trabajando, con propuestas de arte emocionantes llegando.</li>
+                            <li>El presupuesto del equipo est&aacute; ajustado y financiaci&oacute;n adicional ser&iacute;a bienvenida.</li>
+                        </ul>
+
+                        <h2>7. Energ&iacute;a (Power)</h2>
+                        <ul>
+                            <li>Cupcake inform&oacute; que Power est&aacute; en camino en algunos aspectos, con planes para tres redes &mdash; cubriendo organizaci&oacute;n, arte y barrios.</li>
+                            <li>La instalaci&oacute;n sigue siendo una incertidumbre, con Power actualmente al 15% de las manos necesarias. <strong>Se necesitan urgentemente voluntarios con experiencia el&eacute;ctrica.</strong></li>
+                            <li>A los responsables de barrio que coloquen en las zonas verde y azul se les advirti&oacute; que esas &aacute;reas quedan fuera de la cobertura de la red; quienes tengan preguntas sobre acceso a la red pueden contactar <code>power@nobodies.team</code>.</li>
+                        </ul>
+
+                        <h2>8. Recursos del Sitio Web y Llamada al Arte</h2>
+                        <ul>
+                            <li>Pablo V se&ntilde;al&oacute; que subir nuevos recursos al sitio web es r&aacute;pido &mdash; aproximadamente diez minutos por documento &mdash; e invit&oacute; a los responsables de &aacute;rea que quieran p&aacute;ginas creadas (por ejemplo sobre becas de arte, fechas de supervivencia o informaci&oacute;n sobre voluntariado) a contactarle en Discord.</li>
+                            <li>En respuesta a una pregunta de Ellen K, Oliver K confirm&oacute; que la llamada al arte sigue abierta. Las propuestas pueden enviarse en <code>https://art.humans.team</code> v&iacute;a un formulario de Google que cubre planes, necesidades de energ&iacute;a y requisitos de becas de arte. La misma p&aacute;gina est&aacute; enlazada desde la p&aacute;gina de inicio de Nobodies Collective bajo Links &rarr; Art.</li>
+                            <li>Lennart L plante&oacute; una pregunta sobre si las roturas de camino en el mapa son negociables. Melody P confirm&oacute; que algunas, pero no todas, las roturas son negociables, y que el equipo de planificaci&oacute;n urbana est&aacute; abierto a coordinar.</li>
+                        </ul>
+
+                        <h2>Acciones a Realizar</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Comunidad</td><td>Proporcionar feedback sobre la colocaci&oacute;n de TAP y alternativas de cerradura v&iacute;a Discord o la app Humans al departamento L&amp;T</td><td>Continuo</td></tr>
+                                <tr><td>Barrios interesados</td><td>Contactar con Barrier Support en Discord o en <code>barrios@nobodies.team</code> para participar en el &laquo;speed dating&raquo; de barrios</td><td>Antes del 23 de abril</td></tr>
+                                <tr><td>Todos</td><td>Animar a quienes asisten y a voluntarios potenciales a <a href="https://humans.nobodies.team" target="_blank">registrarse en Teams</a></td><td>Continuo</td></tr>
+                                <tr><td>Aaron R</td><td>Poner los billetes de autob&uacute;s a la venta</td><td>Pr&oacute;xima semana</td></tr>
+                                <tr><td>Comunidad</td><td>Voluntarios con experiencia el&eacute;ctrica deben contactar al equipo Power</td><td>Continuo</td></tr>
+                                <tr><td>Responsables de &aacute;rea</td><td>Contactar a Pablo V en Discord para solicitar recursos del sitio web (becas de arte, fechas de supervivencia, voluntariado, etc.)</td><td>Continuo</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Actas generadas autom&aacute;ticamente por Gemini y depuradas para publicaci&oacute;n.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sid&eacute;e par Frank F, avec les responsables et les membres de la communaut&eacute;</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archives de la R&eacute;union</h3>
+                        <ul>
+                            <li><a href="2026-04-16-community-transcript.html">Transcription compl&egrave;te (en anglais uniquement)</a></li>
+                            <li><a href="https://youtu.be/rveET_qDMbw">Enregistrement vid&eacute;o (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/rveET_qDMbw" title="Community Meeting - April 16, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Planification Urbaine et Ouverture de la Carte</h2>
+                        <ul>
+                            <li>Melody P a rapport&eacute; que la planification urbaine est dans son sprint final.</li>
+                            <li>La carte de placement des barrios sur la plateforme Humans s&rsquo;ouvre imm&eacute;diatement apr&egrave;s l&rsquo;appel communautaire.</li>
+                            <li>Les responsables de barrio peuvent ajouter et modifier leurs propres entr&eacute;es de barrio ; tous les utilisateurs peuvent voir la carte.</li>
+                            <li>Limitation connue : les barrios mal plac&eacute;s ne peuvent pas encore &ecirc;tre supprim&eacute;s &mdash; un jardin avait &eacute;t&eacute; ajout&eacute; dans la mauvaise zone et devra &ecirc;tre d&eacute;plac&eacute; manuellement.</li>
+                            <li>Pablo V a confirm&eacute; qu&rsquo;un canal vocal Discord serait cr&eacute;&eacute; pour soutenir la coordination de placement en temps r&eacute;el.</li>
+                        </ul>
+
+                        <h2>2. L&amp;T &mdash; Stations TAP (Toilettes)</h2>
+                        <ul>
+                            <li>Shitshow, du d&eacute;partement L&amp;T, a confirm&eacute; que les toilettes seront disponibles lors de l&rsquo;&eacute;v&eacute;nement.</li>
+                            <li>Les stations seront connues sous le nom <strong>TAP (Total Access Period)</strong>. Les b&eacute;n&eacute;voles qui les g&egrave;rent seront appel&eacute;s &laquo; tap dancers &raquo;.</li>
+                            <li>Les stations TAP sont destin&eacute;es uniquement aux personnes ayant leurs r&egrave;gles, avec des besoins d&rsquo;accessibilit&eacute;, ou ayant une stomie. Il est demand&eacute; aux participants de communiquer cela &agrave; toute personne venant &agrave; l&rsquo;&eacute;v&eacute;nement.</li>
+                            <li>Deux questions ouvertes ont &eacute;t&eacute; pos&eacute;es &agrave; la communaut&eacute; pour retours :
+                                <ul>
+                                    <li>Les stations TAP devraient-elles &ecirc;tre plac&eacute;es plus pr&egrave;s de la playa pour l&rsquo;acc&egrave;s nocturne, ou dispos&eacute;es selon un agencement dispers&eacute; ?</li>
+                                    <li>Quelle approche de verrouillage ou de s&eacute;curit&eacute; serait la plus r&eacute;siliente ? La r&eacute;silience face aux temp&ecirc;tes de sable et la r&eacute;sistance au for&ccedil;age sont deux pr&eacute;occupations.</li>
+                                </ul>
+                            </li>
+                            <li>Retours via Discord ou l&rsquo;application Humans.</li>
+                        </ul>
+
+                        <h2>3. Soutien aux Barrios</h2>
+                        <ul>
+                            <li>Cayce a rapport&eacute; que l&rsquo;inscription des barrios a ferm&eacute; avec 38 barrios enregistr&eacute;s pour cette ann&eacute;e.</li>
+                            <li>L&rsquo;&eacute;quipe travaille maintenant avec Peter et la production sur la phase suivante : la commande de fournitures pour une utilisation sur site.</li>
+                            <li>L&rsquo;appel communautaire de la semaine prochaine (23 avril) prendra la forme d&rsquo;un <strong>&laquo; speed dating &raquo; de barrios</strong>, durant lequel les barrios int&eacute;ress&eacute;s auront environ cinq minutes chacun pour pr&eacute;senter leur identit&eacute; et leur ambiance aux participants qui n&rsquo;ont pas encore rejoint un barrio.</li>
+                            <li>Les barrios souhaitant participer peuvent contacter l&rsquo;&eacute;quipe de soutien aux barrios via Discord ou &agrave; <code>barrios@nobodies.team</code>.</li>
+                        </ul>
+
+                        <h2>4. P&eacute;nurie de B&eacute;n&eacute;voles</h2>
+                        <ul>
+                            <li>Michael M (&laquo; Nurse &raquo;) a rapport&eacute; que le syst&egrave;me Teams fonctionne bien et que de nouvelles personnes s&rsquo;y inscrivent et le naviguent avec succ&egrave;s.</li>
+                            <li>Cependant, <strong>les chiffres globaux de b&eacute;n&eacute;voles sont &agrave; environ 20% de ce qui est n&eacute;cessaire</strong> pour r&eacute;aliser l&rsquo;&eacute;v&eacute;nement. Les semaines de construction pr&eacute;coce et de d&eacute;montage sont les zones de pr&eacute;occupation les plus importantes.</li>
+                            <li>Niveaux actuels de personnel par d&eacute;partement : Construction et Infrastructure 14%, Cantina 26%, Power 15%, Planification Urbaine 17%, Welfare 7%, Mailfair 17%. Gates se d&eacute;brouille bien, environ 40%.</li>
+                            <li>Une partie du d&eacute;ficit peut refl&eacute;ter des participants qui pr&eacute;voient de venir mais ne se sont pas encore inscrits sur Teams &mdash; les &eacute;quipes peuvent sembler plus vides qu&rsquo;elles ne le sont r&eacute;ellement.</li>
+                            <li>Appel aux participants : <a href="https://humans.nobodies.team" target="_blank">inscrivez-vous sur Teams</a> si vous pr&eacute;voyez d&rsquo;y assister, et encouragez les autres &agrave; faire de m&ecirc;me.</li>
+                        </ul>
+
+                        <h2>5. Bus</h2>
+                        <ul>
+                            <li>Aaron R a confirm&eacute; que l&rsquo;op&eacute;rateur de bus est maintenant enti&egrave;rement accord&eacute;.</li>
+                            <li>Les tarifs seront un prix unique standardis&eacute; sans tarification variable dynamique ; les changements de billets seront gratuits si les horaires changent.</li>
+                            <li><strong>Les billets de bus seront mis en vente la semaine prochaine.</strong></li>
+                            <li>Aaron R a not&eacute; que les ventes de billets progressent bien, tandis que l&rsquo;inscription des b&eacute;n&eacute;voles est &agrave; environ 20% &mdash; un &eacute;cart clair qui n&eacute;cessite de l&rsquo;attention.</li>
+                        </ul>
+
+                        <h2>6. Cr&eacute;ativit&eacute;</h2>
+                        <ul>
+                            <li>Oliver K a confirm&eacute; que Ziri a quitt&eacute; le r&ocirc;le de coordinatrice TOPS.</li>
+                            <li>L&rsquo;&eacute;quipe Cr&eacute;ativit&eacute; plus large continue de travailler, avec des propositions artistiques int&eacute;ressantes qui arrivent.</li>
+                            <li>Le budget de l&rsquo;&eacute;quipe est serr&eacute; et un financement suppl&eacute;mentaire serait bienvenu.</li>
+                        </ul>
+
+                        <h2>7. &Eacute;nergie (Power)</h2>
+                        <ul>
+                            <li>Cupcake a rapport&eacute; que Power est sur la bonne voie &agrave; certains &eacute;gards, avec des plans en place pour trois r&eacute;seaux &mdash; couvrant l&rsquo;organisation, l&rsquo;art et les barrios.</li>
+                            <li>L&rsquo;installation reste une incertitude, avec Power actuellement &agrave; 15% des mains n&eacute;cessaires. <strong>Des b&eacute;n&eacute;voles avec de l&rsquo;exp&eacute;rience &eacute;lectrique sont urgemment n&eacute;cessaires.</strong></li>
+                            <li>Les responsables de barrio pla&ccedil;ant dans les zones verte et bleue ont &eacute;t&eacute; avis&eacute;s que ces zones sont hors couverture r&eacute;seau ; toute question concernant l&rsquo;acc&egrave;s au r&eacute;seau peut &ecirc;tre adress&eacute;e &agrave; <code>power@nobodies.team</code>.</li>
+                        </ul>
+
+                        <h2>8. Ressources du Site Web et Appel &agrave; l&rsquo;Art</h2>
+                        <ul>
+                            <li>Pablo V a not&eacute; que t&eacute;l&eacute;verser de nouvelles ressources sur le site web est rapide &mdash; environ dix minutes par document &mdash; et a invit&eacute; les responsables d&rsquo;&eacute;quipe souhaitant cr&eacute;er des pages (par exemple sur les bourses artistiques, les dates de survie ou les informations sur le b&eacute;n&eacute;volat) &agrave; le contacter sur Discord.</li>
+                            <li>En r&eacute;ponse &agrave; une question d&rsquo;Ellen K, Oliver K a confirm&eacute; que l&rsquo;appel &agrave; l&rsquo;art est toujours ouvert. Les propositions peuvent &ecirc;tre soumises &agrave; <code>https://art.humans.team</code> via un formulaire Google couvrant plans, besoins en &eacute;nergie et exigences de bourses artistiques. La m&ecirc;me page est li&eacute;e depuis la page d&rsquo;accueil de Nobodies Collective sous Links &rarr; Art.</li>
+                            <li>Lennart L a pos&eacute; une question sur la n&eacute;gociabilit&eacute; des ruptures de routes sur la carte. Melody P a confirm&eacute; que certaines, mais pas toutes, sont n&eacute;gociables, et que l&rsquo;&eacute;quipe de planification urbaine est ouverte &agrave; la coordination.</li>
+                        </ul>
+
+                        <h2>Actions &agrave; R&eacute;aliser</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>D&eacute;lai</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Communaut&eacute;</td><td>Fournir des retours sur l&rsquo;emplacement des TAP et les alternatives de verrouillage via Discord ou l&rsquo;application Humans au d&eacute;partement L&amp;T</td><td>Continu</td></tr>
+                                <tr><td>Barrios int&eacute;ress&eacute;s</td><td>Contacter Barrier Support sur Discord ou &agrave; <code>barrios@nobodies.team</code> pour participer au &laquo; speed dating &raquo; des barrios</td><td>Avant le 23 avril</td></tr>
+                                <tr><td>Tous</td><td>Encourager les participants et les b&eacute;n&eacute;voles potentiels &agrave; <a href="https://humans.nobodies.team" target="_blank">s&rsquo;inscrire sur Teams</a></td><td>Continu</td></tr>
+                                <tr><td>Aaron R</td><td>Mettre les billets de bus en vente</td><td>Semaine prochaine</td></tr>
+                                <tr><td>Communaut&eacute;</td><td>Les b&eacute;n&eacute;voles avec de l&rsquo;exp&eacute;rience &eacute;lectrique doivent contacter l&rsquo;&eacute;quipe Power</td><td>Continu</td></tr>
+                                <tr><td>Responsables d&rsquo;&eacute;quipe</td><td>Contacter Pablo V sur Discord pour demander des ressources du site web (bourses artistiques, dates de survie, b&eacute;n&eacute;volat, etc.)</td><td>Continu</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Proc&egrave;s-verbal g&eacute;n&eacute;r&eacute; automatiquement par Gemini et &eacute;pur&eacute; pour publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presieduta da Frank F, con i responsabili e i membri della comunit&agrave;</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archivi della Riunione</h3>
+                        <ul>
+                            <li><a href="2026-04-16-community-transcript.html">Trascrizione completa (solo in inglese)</a></li>
+                            <li><a href="https://youtu.be/rveET_qDMbw">Registrazione video (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/rveET_qDMbw" title="Community Meeting - April 16, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Pianificazione Urbana e Apertura della Mappa</h2>
+                        <ul>
+                            <li>Melody P ha riferito che la pianificazione urbana &egrave; nel suo sprint finale.</li>
+                            <li>La mappa di posizionamento dei barrios sulla piattaforma Humans si apre immediatamente dopo la chiamata comunitaria.</li>
+                            <li>I responsabili di barrio possono aggiungere e modificare le proprie voci di barrio; tutti gli utenti possono visualizzare la mappa.</li>
+                            <li>Limitazione nota: i barrios posizionati male non possono ancora essere soppressi &mdash; un giardino era stato aggiunto nella zona sbagliata e dovr&agrave; essere spostato manualmente.</li>
+                            <li>Pablo V ha confermato che sarebbe stato creato un canale vocale Discord per supportare il coordinamento del posizionamento in tempo reale.</li>
+                        </ul>
+
+                        <h2>2. L&amp;T &mdash; Stazioni TAP (Bagni)</h2>
+                        <ul>
+                            <li>Shitshow, del dipartimento L&amp;T, ha confermato che i bagni saranno disponibili all&rsquo;evento.</li>
+                            <li>Le stazioni saranno conosciute come <strong>TAP (Total Access Period)</strong>. I volontari che le gestiscono saranno chiamati &laquo;tap dancers&raquo;.</li>
+                            <li>Le stazioni TAP sono destinate solo alle persone che hanno il ciclo, con necessit&agrave; di accessibilit&agrave;, o con stomia. Si chiede ai partecipanti di comunicarlo a chiunque venga all&rsquo;evento.</li>
+                            <li>Sono state poste due domande aperte alla comunit&agrave; per ricevere feedback:
+                                <ul>
+                                    <li>Le stazioni TAP dovrebbero essere posizionate pi&ugrave; vicino alla playa per l&rsquo;accesso notturno, o disposte in un layout sparso?</li>
+                                    <li>Quale approccio di chiusura o sicurezza sarebbe pi&ugrave; resiliente? La resistenza alle tempeste di sabbia e alla rimozione forzata sono entrambe preoccupazioni.</li>
+                                </ul>
+                            </li>
+                            <li>Feedback via Discord o l&rsquo;app Humans.</li>
+                        </ul>
+
+                        <h2>3. Supporto Barrios</h2>
+                        <ul>
+                            <li>Cayce ha comunicato che la registrazione dei barrios &egrave; chiusa con 38 barrios registrati per quest&rsquo;anno.</li>
+                            <li>Il team sta ora lavorando con Peter e la produzione sulla fase successiva: l&rsquo;ordine di forniture per l&rsquo;uso in loco.</li>
+                            <li>La chiamata comunitaria della prossima settimana (23 aprile) prender&agrave; la forma di un <strong>&laquo;speed dating&raquo; di barrios</strong>, durante il quale i barrios interessati avranno circa cinque minuti ciascuno per presentare la propria identit&agrave; e atmosfera ai partecipanti che non si sono ancora uniti a un barrio.</li>
+                            <li>I barrios che desiderano partecipare possono contattare il team di supporto barrios via Discord o a <code>barrios@nobodies.team</code>.</li>
+                        </ul>
+
+                        <h2>4. Carenza di Volontari</h2>
+                        <ul>
+                            <li>Michael M (&laquo;Nurse&raquo;) ha riferito che il sistema Teams funziona bene e che nuove persone si stanno iscrivendo e navigando con successo.</li>
+                            <li>Tuttavia, <strong>i numeri complessivi dei volontari sono a circa il 20% di quanto necessario</strong> per realizzare l&rsquo;evento. Le settimane di costruzione anticipata e smontaggio sono le aree di maggior preoccupazione.</li>
+                            <li>Livelli attuali di personale per dipartimento: Costruzione e Infrastruttura 14%, Cantina 26%, Power 15%, Pianificazione Urbana 17%, Welfare 7%, Mailfair 17%. Gates va bene, circa il 40%.</li>
+                            <li>Parte del deficit pu&ograve; riflettere partecipanti che intendono venire ma non si sono ancora iscritti su Teams &mdash; i team possono apparire pi&ugrave; vuoti di quanto siano realmente.</li>
+                            <li>Appello ai partecipanti: <a href="https://humans.nobodies.team" target="_blank">iscriviti su Teams</a> se intendi partecipare, e incoraggia altri a fare lo stesso.</li>
+                        </ul>
+
+                        <h2>5. Autobus</h2>
+                        <ul>
+                            <li>Aaron R ha confermato che l&rsquo;operatore di autobus &egrave; ora pienamente concordato.</li>
+                            <li>I prezzi saranno una tariffa standardizzata unica senza prezzi variabili dinamici; le modifiche ai biglietti saranno gratuite se gli orari cambiano.</li>
+                            <li><strong>I biglietti degli autobus saranno in vendita la prossima settimana.</strong></li>
+                            <li>Aaron R ha notato che le vendite dei biglietti procedono bene, mentre la registrazione dei volontari &egrave; intorno al 20% &mdash; un divario chiaro che richiede attenzione.</li>
+                        </ul>
+
+                        <h2>6. Creativit&agrave;</h2>
+                        <ul>
+                            <li>Oliver K ha confermato che Ziri ha lasciato il ruolo di coordinatrice TOPS.</li>
+                            <li>Il team Creativit&agrave; pi&ugrave; ampio continua a lavorare, con proposte artistiche interessanti in arrivo.</li>
+                            <li>Il budget del team &egrave; ristretto e finanziamenti aggiuntivi sarebbero benvenuti.</li>
+                        </ul>
+
+                        <h2>7. Energia (Power)</h2>
+                        <ul>
+                            <li>Cupcake ha riferito che Power &egrave; in linea sotto alcuni aspetti, con piani per tre reti &mdash; che coprono organizzazione, arte e barrios.</li>
+                            <li>L&rsquo;installazione rimane un&rsquo;incertezza, con Power attualmente al 15% delle mani necessarie. <strong>Sono urgentemente necessari volontari con esperienza elettrica.</strong></li>
+                            <li>Ai responsabili di barrio che posizionano nelle zone verdi e blu &egrave; stato consigliato che quelle aree sono fuori dalla copertura di rete; chiunque abbia domande sull&rsquo;accesso alla rete pu&ograve; contattare <code>power@nobodies.team</code>.</li>
+                        </ul>
+
+                        <h2>8. Risorse del Sito Web e Chiamata all&rsquo;Arte</h2>
+                        <ul>
+                            <li>Pablo V ha notato che caricare nuove risorse sul sito web &egrave; rapido &mdash; circa dieci minuti per documento &mdash; e ha invitato i responsabili d&rsquo;area che desiderano creare pagine (ad esempio su borse d&rsquo;arte, date di sopravvivenza o informazioni sul volontariato) a contattarlo su Discord.</li>
+                            <li>In risposta a una domanda di Ellen K, Oliver K ha confermato che la chiamata all&rsquo;arte &egrave; ancora aperta. Le proposte possono essere inviate a <code>https://art.humans.team</code> tramite un modulo Google che copre piani, necessit&agrave; energetiche e requisiti per borse d&rsquo;arte. La stessa pagina &egrave; collegata dalla homepage di Nobodies Collective sotto Links &rarr; Art.</li>
+                            <li>Lennart L ha sollevato una domanda sulla negoziabilit&agrave; delle rotture stradali sulla mappa. Melody P ha confermato che alcune, ma non tutte, sono negoziabili, e che il team di pianificazione urbana &egrave; aperto a coordinarsi.</li>
+                        </ul>
+
+                        <h2>Azioni da Intraprendere</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Comunit&agrave;</td><td>Fornire feedback sul posizionamento TAP e alternative di chiusura tramite Discord o l&rsquo;app Humans al dipartimento L&amp;T</td><td>Continuo</td></tr>
+                                <tr><td>Barrios interessati</td><td>Contattare Barrier Support su Discord o a <code>barrios@nobodies.team</code> per partecipare allo &laquo;speed dating&raquo; dei barrios</td><td>Prima del 23 aprile</td></tr>
+                                <tr><td>Tutti</td><td>Incoraggiare i partecipanti e i volontari potenziali a <a href="https://humans.nobodies.team" target="_blank">registrarsi su Teams</a></td><td>Continuo</td></tr>
+                                <tr><td>Aaron R</td><td>Mettere in vendita i biglietti degli autobus</td><td>Prossima settimana</td></tr>
+                                <tr><td>Comunit&agrave;</td><td>I volontari con esperienza elettrica devono contattare il team Power</td><td>Continuo</td></tr>
+                                <tr><td>Responsabili d&rsquo;area</td><td>Contattare Pablo V su Discord per richiedere risorse del sito web (borse d&rsquo;arte, date di sopravvivenza, volontariato, ecc.)</td><td>Continuo</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Verbale generato automaticamente da Gemini e revisionato per la pubblicazione.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Geleitet von Frank F, mit Verantwortlichen und Community-Mitgliedern</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Sitzungsunterlagen</h3>
+                        <ul>
+                            <li><a href="2026-04-16-community-transcript.html">Vollst&auml;ndiges Transkript (nur auf Englisch)</a></li>
+                            <li><a href="https://youtu.be/rveET_qDMbw">Videoaufzeichnung (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/rveET_qDMbw" title="Community Meeting - April 16, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Stadtplanung und Karten-&Ouml;ffnung</h2>
+                        <ul>
+                            <li>Melody P berichtete, dass die Stadtplanung im Endspurt ist.</li>
+                            <li>Die Barrio-Platzierungskarte auf der Humans-Plattform &ouml;ffnet sich unmittelbar nach dem Community-Call.</li>
+                            <li>Barrio-Leiter k&ouml;nnen ihre eigenen Barrio-Eintr&auml;ge hinzuf&uuml;gen und bearbeiten; alle Nutzer k&ouml;nnen die Karte einsehen.</li>
+                            <li>Bekannte Einschr&auml;nkung: Falsch platzierte Barrios k&ouml;nnen noch nicht unterdr&uuml;ckt werden &mdash; ein Garten wurde in der falschen Zone hinzugef&uuml;gt und muss manuell verschoben werden.</li>
+                            <li>Pablo V best&auml;tigte, dass ein Discord-Voice-Kanal eingerichtet werden w&uuml;rde, um die Echtzeit-Platzierungskoordination zu unterst&uuml;tzen.</li>
+                        </ul>
+
+                        <h2>2. L&amp;T &mdash; TAP-Stationen (Toiletten)</h2>
+                        <ul>
+                            <li>Shitshow von der L&amp;T-Abteilung best&auml;tigte, dass Toiletten bei der Veranstaltung verf&uuml;gbar sein werden.</li>
+                            <li>Die Stationen werden als <strong>TAP (Total Access Period)</strong> bekannt sein. Die Freiwilligen, die sie betreuen, werden &laquo;Tap Dancers&raquo; genannt.</li>
+                            <li>TAP-Stationen sind nur f&uuml;r Personen mit Menstruation, mit Barrierefreiheitsbedarf oder mit einem Stoma vorgesehen. Teilnehmer werden gebeten, dies an alle weiterzugeben, die zur Veranstaltung kommen.</li>
+                            <li>Zwei offene Fragen wurden der Community zur R&uuml;ckmeldung gestellt:
+                                <ul>
+                                    <li>Sollten TAP-Stationen n&auml;her an der Playa platziert werden f&uuml;r n&auml;chtlichen Zugang, oder in einem verteilten Layout angeordnet werden?</li>
+                                    <li>Welcher Verschluss- oder Sicherheitsansatz w&auml;re am widerstandsf&auml;higsten? Die Widerstandsf&auml;higkeit gegen Sandst&uuml;rme und gewaltsame Entfernung sind zwei Bedenken.</li>
+                                </ul>
+                            </li>
+                            <li>Feedback &uuml;ber Discord oder die Humans-App.</li>
+                        </ul>
+
+                        <h2>3. Barrio-Unterst&uuml;tzung</h2>
+                        <ul>
+                            <li>Cayce berichtete, dass die Barrio-Registrierung mit 38 registrierten Barrios f&uuml;r dieses Jahr geschlossen wurde.</li>
+                            <li>Das Team arbeitet nun mit Peter und der Produktion an der n&auml;chsten Phase: der Bestellung von Vorr&auml;ten f&uuml;r die Nutzung vor Ort.</li>
+                            <li>Der Community-Call der n&auml;chsten Woche (23. April) wird in Form eines <strong>&laquo;Barrio-Speed-Datings&raquo;</strong> stattfinden, bei dem interessierte Barrios jeweils etwa f&uuml;nf Minuten Zeit haben, ihre Identit&auml;t und Stimmung Teilnehmern vorzustellen, die sich noch keinem Barrio angeschlossen haben.</li>
+                            <li>Barrios, die teilnehmen m&ouml;chten, k&ouml;nnen das Barrio-Support-Team &uuml;ber Discord oder unter <code>barrios@nobodies.team</code> kontaktieren.</li>
+                        </ul>
+
+                        <h2>4. Freiwilligenmangel</h2>
+                        <ul>
+                            <li>Michael M (&laquo;Nurse&raquo;) berichtete, dass das Teams-System gut funktioniert und neue Personen sich erfolgreich anmelden und navigieren.</li>
+                            <li>Die <strong>Gesamtzahl der Freiwilligen liegt jedoch bei etwa 20% des Bedarfs</strong>, um die Veranstaltung durchzuf&uuml;hren. Die Wochen der fr&uuml;hen Aufbauphase und des Abbaus sind die gr&ouml;&szlig;ten Sorgenbereiche.</li>
+                            <li>Aktuelle Besetzungsstand nach Abteilung: Bau &amp; Infrastruktur 14%, Cantina 26%, Power 15%, Stadtplanung 17%, Welfare 7%, Mailfair 17%. Gates liegen gut bei etwa 40%.</li>
+                            <li>Ein Teil des Defizits k&ouml;nnte Teilnehmer widerspiegeln, die kommen wollen, sich aber noch nicht auf Teams angemeldet haben &mdash; Teams k&ouml;nnen daher leerer erscheinen, als sie sind.</li>
+                            <li>Aufruf an Teilnehmer: <a href="https://humans.nobodies.team" target="_blank">Melden Sie sich auf Teams an</a>, wenn Sie teilnehmen m&ouml;chten, und ermutigen Sie andere, dasselbe zu tun.</li>
+                        </ul>
+
+                        <h2>5. Busse</h2>
+                        <ul>
+                            <li>Aaron R best&auml;tigte, dass der Busbetreiber nun vollst&auml;ndig vereinbart ist.</li>
+                            <li>Die Preise werden ein einheitlicher Standardtarif ohne dynamische variable Preisgestaltung sein; Ticket&auml;nderungen sind kostenlos, falls sich Zeiten &auml;ndern.</li>
+                            <li><strong>Bustickets werden n&auml;chste Woche in den Verkauf gehen.</strong></li>
+                            <li>Aaron R merkte an, dass die Ticketverk&auml;ufe gut laufen, w&auml;hrend die Freiwilligenregistrierung bei etwa 20% liegt &mdash; eine deutliche L&uuml;cke, die Aufmerksamkeit erfordert.</li>
+                        </ul>
+
+                        <h2>6. Kreativit&auml;t</h2>
+                        <ul>
+                            <li>Oliver K best&auml;tigte, dass Ziri die Rolle der TOPS-Koordinatorin aufgegeben hat.</li>
+                            <li>Das breitere Kreativit&auml;ts-Team arbeitet weiter, mit spannenden Kunstvorschl&auml;gen, die eingehen.</li>
+                            <li>Das Budget des Teams ist knapp, und zus&auml;tzliche Finanzierung w&auml;re willkommen.</li>
+                        </ul>
+
+                        <h2>7. Strom (Power)</h2>
+                        <ul>
+                            <li>Cupcake berichtete, dass Power in einigen Aspekten auf Kurs ist, mit Pl&auml;nen f&uuml;r drei Netze &mdash; die Organisation, Kunst und Barrios abdecken.</li>
+                            <li>Die Installation bleibt ungewiss, da Power derzeit bei 15% der ben&ouml;tigten H&auml;nde liegt. <strong>Freiwillige mit Elektroerfahrung werden dringend ben&ouml;tigt.</strong></li>
+                            <li>Barrio-Leiter, die in den gr&uuml;nen und blauen Zonen platzieren, wurden darauf hingewiesen, dass diese Bereiche au&szlig;erhalb der Netzabdeckung liegen; alle, die Fragen zum Netzzugang haben, k&ouml;nnen <code>power@nobodies.team</code> kontaktieren.</li>
+                        </ul>
+
+                        <h2>8. Website-Ressourcen und Kunstaufruf</h2>
+                        <ul>
+                            <li>Pablo V merkte an, dass das Hochladen neuer Ressourcen auf die Website schnell ist &mdash; etwa zehn Minuten pro Dokument &mdash; und lud Bereichsleiter, die Seiten erstellt haben m&ouml;chten (zum Beispiel zu Kunststipendien, &Uuml;berlebensdaten oder Freiwilligeninformationen), ein, ihn auf Discord zu kontaktieren.</li>
+                            <li>Als Antwort auf eine Frage von Ellen K best&auml;tigte Oliver K, dass der Kunstaufruf noch offen ist. Vorschl&auml;ge k&ouml;nnen unter <code>https://art.humans.team</code> &uuml;ber ein Google-Formular eingereicht werden, das Pl&auml;ne, Strombedarf und Anforderungen f&uuml;r Kunststipendien abdeckt. Dieselbe Seite ist von der Nobodies Collective-Startseite unter Links &rarr; Art verlinkt.</li>
+                            <li>Lennart L stellte eine Frage dar&uuml;ber, ob Stra&szlig;enunterbrechungen auf der Karte verhandelbar sind. Melody P best&auml;tigte, dass einige, aber nicht alle verhandelbar sind, und dass das Stadtplanungsteam offen f&uuml;r Koordination ist.</li>
+                        </ul>
+
+                        <h2>Ma&szlig;nahmen</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Ma&szlig;nahme</th><th>Frist</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Community</td><td>Feedback zu TAP-Platzierung und Verschluss-Alternativen via Discord oder der Humans-App an die L&amp;T-Abteilung geben</td><td>Laufend</td></tr>
+                                <tr><td>Interessierte Barrios</td><td>Barrier Support auf Discord oder unter <code>barrios@nobodies.team</code> kontaktieren, um am Barrio-Speed-Dating teilzunehmen</td><td>Vor dem 23. April</td></tr>
+                                <tr><td>Alle</td><td>Teilnehmer und potenzielle Freiwillige ermutigen, <a href="https://humans.nobodies.team" target="_blank">sich auf Teams zu registrieren</a></td><td>Laufend</td></tr>
+                                <tr><td>Aaron R</td><td>Bustickets zum Verkauf freigeben</td><td>N&auml;chste Woche</td></tr>
+                                <tr><td>Community</td><td>Freiwillige mit Elektroerfahrung sollen sich beim Power-Team melden</td><td>Laufend</td></tr>
+                                <tr><td>Bereichsleiter</td><td>Pablo V auf Discord kontaktieren, um Website-Ressourcen anzufordern (Kunststipendien, &Uuml;berlebensdaten, Freiwilligenarbeit usw.)</td><td>Laufend</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Protokoll automatisch von Gemini erstellt und f&uuml;r die Ver&ouml;ffentlichung bereinigt.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
