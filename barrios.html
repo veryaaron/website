@@ -103,6 +103,125 @@
         .alternative-card h2 {
             margin-top: 0;
         }
+
+        .barrios-grid-wrapper {
+            margin: 2rem 0 3rem;
+        }
+
+        .barrios-grid-status {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .barrios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .barrio-card {
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            border: 1px solid var(--color-border);
+        }
+
+        .barrio-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .barrio-card-img {
+            aspect-ratio: 16 / 10;
+            background: #d9cdb8;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .barrio-card-img-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 2rem;
+            color: rgba(0, 0, 0, 0.35);
+        }
+
+        .barrio-card-body {
+            padding: 1rem 1.1rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex: 1;
+        }
+
+        .barrio-card-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .barrio-card-blurb {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--color-text-muted);
+            margin: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .barrio-card-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            margin-top: auto;
+            padding-top: 0.5rem;
+        }
+
+        .barrio-badge {
+            font-size: 0.72rem;
+            padding: 0.2rem 0.55rem;
+            border-radius: 999px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        .barrio-badge--accepting {
+            background: #e0f0e4;
+            color: #2a6a3e;
+        }
+
+        .barrio-badge--maybe {
+            background: #fbeecb;
+            color: #8a6a1a;
+        }
+
+        .barrio-badge--closed {
+            background: #ece7e0;
+            color: #6a6055;
+        }
+
+        .barrio-badge--kids {
+            background: #e6ecf5;
+            color: #3a4e6e;
+        }
+
+        .barrio-badge--veteran {
+            background: #f2e3d9;
+            color: #8a4a25;
+        }
     </style>
 </head>
 <body>
@@ -151,6 +270,11 @@
                         <a href="https://humans.nobodies.team/Barrios" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join a Barrio Now!</a>
                     </div>
 
+                    <div class="barrios-grid-wrapper">
+                        <p class="barrios-grid-status" id="barrios-grid-status">Loading barrios&hellip;</p>
+                        <div class="barrios-grid" id="barrios-grid"></div>
+                    </div>
+
                     <div class="alternative-card">
                         <h2>Alternative to joining a barrio: freecamping</h2>
 
@@ -169,5 +293,69 @@
     <div id="shared-footer"></div>
     <script src="footer.js" defer></script>
     <script src="script.js" defer></script>
+    <script>
+    (function() {
+        var HUMANS_BASE = 'https://humans.nobodies.team';
+        var grid = document.getElementById('barrios-grid');
+        var status = document.getElementById('barrios-grid-status');
+
+        function escapeHtml(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+
+        function renderCard(b) {
+            var img = b.imageUrl
+                ? '<div class="barrio-card-img" style="background-image:url(' + HUMANS_BASE + escapeHtml(b.imageUrl) + ')"></div>'
+                : '<div class="barrio-card-img"><div class="barrio-card-img-placeholder">' + escapeHtml((b.name || '?').charAt(0)) + '</div></div>';
+
+            var badges = '';
+            if (b.acceptingMembers === 'Yes') {
+                badges += '<span class="barrio-badge barrio-badge--accepting">Accepting members</span>';
+            } else if (b.acceptingMembers === 'Maybe') {
+                badges += '<span class="barrio-badge barrio-badge--maybe">Maybe accepting</span>';
+            } else {
+                badges += '<span class="barrio-badge barrio-badge--closed">Full</span>';
+            }
+            if (b.kidsWelcome === 'Yes') {
+                badges += '<span class="barrio-badge barrio-badge--kids">Kids welcome</span>';
+            }
+            if (typeof b.timesAtNowhere === 'number' && b.timesAtNowhere >= 5) {
+                badges += '<span class="barrio-badge barrio-badge--veteran">' + b.timesAtNowhere + ' years</span>';
+            }
+
+            return '<a class="barrio-card" href="' + HUMANS_BASE + '/Barrios/' + encodeURIComponent(b.slug) + '" target="_blank" rel="noopener noreferrer">' +
+                img +
+                '<div class="barrio-card-body">' +
+                    '<h3 class="barrio-card-name">' + escapeHtml(b.name) + '</h3>' +
+                    (b.blurbShort ? '<p class="barrio-card-blurb">' + escapeHtml(b.blurbShort) + '</p>' : '') +
+                    '<div class="barrio-card-badges">' + badges + '</div>' +
+                '</div>' +
+            '</a>';
+        }
+
+        function acceptRank(v) {
+            return v === 'Yes' ? 0 : v === 'Maybe' ? 1 : 2;
+        }
+
+        fetch('barrios-data.json')
+            .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+            .then(function(data) {
+                var barrios = data.filter(function(b) { return b.status === 'Active'; });
+                barrios.sort(function(a, b) {
+                    var ar = acceptRank(a.acceptingMembers), br = acceptRank(b.acceptingMembers);
+                    if (ar !== br) return ar - br;
+                    return a.name.localeCompare(b.name);
+                });
+                status.textContent = barrios.length + ' barrios at Elsewhere 2026. Click a card to learn more on Humans.';
+                grid.innerHTML = barrios.map(renderCard).join('');
+            })
+            .catch(function(err) {
+                status.textContent = 'Could not load barrios. Explore them directly on Humans.';
+                console.error('barrios load failed', err);
+            });
+    })();
+    </script>
 </body>
 </html>
