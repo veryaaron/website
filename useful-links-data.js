@@ -40,6 +40,13 @@ var USEFUL_LINKS_CATEGORIES = [
             },
             {
                 icon: 'person',
+                title: 'Barrios Guide',
+                description: 'Everything you need to know about barrios: running one, joining one, and what to expect on site.',
+                url: 'Barrio_Guide_2026.pdf',
+                accent: '#A68B5C'
+            },
+            {
+                icon: 'person',
                 title: 'Speaking About Elsewhere',
                 description: 'A guide to talking about Elsewhere with friends, communities, and curious strangers.',
                 url: 'speaking-about-elsewhere.html',
