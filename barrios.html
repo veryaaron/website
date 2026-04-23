@@ -116,8 +116,14 @@
 
         .barrios-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 1.25rem;
+        }
+
+        @media (min-width: 720px) {
+            .barrios-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         .barrio-card {
