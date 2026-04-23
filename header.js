@@ -16,6 +16,7 @@
                         '<a href="' + prefix + '/#event">Event <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>' +
                         '<ul class="nav-dropdown-menu">' +
                             '<li><a href="' + prefix + '/art-grants.html">Art Grants</a></li>' +
+                            '<li><a href="https://humans.nobodies.team/Barrios" target="_blank" rel="noopener noreferrer">Barrios</a></li>' +
                             '<li><a href="' + prefix + '/consent.html">Consent</a></li>' +
                             '<li><a href="' + prefix + '/survival-guide.html">Survival Guide</a></li>' +
                             '<li><a href="' + prefix + '/inclusion.html">Inclusion</a></li>' +
