@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Meeting &mdash; Barrios Speed Dating &mdash; April 23, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content h3 a { color: var(--color-primary); text-decoration: none; border-bottom: 2px solid var(--color-accent); }
+        .meeting-content h3 a:hover { color: var(--color-accent); }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .resource-links { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .resource-links h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+        .resource-links ul { list-style: none; padding: 0; margin: 0; }
+        .resource-links li { margin-bottom: 0.5rem; }
+        .resource-links a { color: var(--color-accent); font-weight: 500; }
+        .resource-links a:hover { text-decoration: underline; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem; border-radius: 8px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+        .barrio-card { border-left: 3px solid var(--color-accent); padding-left: 1rem; margin: 1.5rem 0; }
+        .barrio-card h3 { margin-top: 0.25rem; }
+        .draft-banner { background: #fff3cd; border: 1px solid #ffc107; color: #664d03; padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; font-weight: 500; }
+            .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+</style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Community Meeting &mdash; Barrios Speed Dating</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Thursday 23 April 2026, 19:57 CEST</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Hosted by Ellen / Dr Plantes (Planet Resilium), with sixteen barrios pitching and closing remarks from Peter D</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="https://youtu.be/4XbDZzIuLsA">Video recording (YouTube)</a></li>
+                            <li><a href="https://humans.nobodies.team/Barrios">All barrios (Humans directory)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/4XbDZzIuLsA" title="Community Meeting &mdash; Barrios Speed Dating &mdash; April 23, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>Summary</h2>
+                        <p>Sixteen barrios pitched themselves in five-minute portraits to unaffiliated attendees looking for a home on the playa. The range was vast &mdash; from twenty-person low-tech experimental collectives to hundred-and-twenty-person party cathedrals with curated subwoofer collections. Camp fees spanned &pound;50 (if you build for two weeks) to &euro;375 (if you want hot showers with pressure).</p>
+
+                        <p>Peter D closed with an NCA update. Ticket projection sits at 1,600&ndash;2,200, most likely 1,800. The next focus area is volunteers for build.</p>
+
+                        <h2>The Sixteen Barrios</h2>
+
+                        <div class="barrio-card">
+                            <h3>1. <a href="https://humans.nobodies.team/Barrios/barrio-espace">Barrio Espace</a> &mdash; Marianne F</h3>
+                            <p>French, ~50 people, turning 10 this year. Workshop-heavy vibe with a &ldquo;big chill&rdquo; activity space and a self-described &ldquo;VIP area&rdquo; on the playa. The VIP thing is a bit &mdash; entrances in the back, and the front exists so you can walk past and pointedly not go in. Marianne presented from outside a Paris theatre fifteen minutes before curtain and is openly not good with computers; a team of Discord-literate humans backs her up. Apply via Humans, or find the barrios Discord channel and ask for her.</p>
+                        </div>
+
+                        <div class="barrio-card">
+                            <h3>2. <a href="https://humans.nobodies.team/Barrios/ran-dome">Ran&rsquo;Dome</a> &mdash; Cocci</h3>
+                            <p>French, since 2014, red zone. Self-describes as &ldquo;the Elsewhere pub&rdquo; &mdash; a place to sit, play games, rest, meet people, have a drink, and do everything else you&rsquo;d do in a bar. Low shift load (one kitchen, two LNT, with extra NORG shifts encouraged this year). Camp fee is free-price, starting at &euro;115 for tight wallets, averaging &euro;190, all-in including 24-hour buffet, hot evening meal, drinks, showers, and the sound system it takes to transport a small nightclub across a border. Already self-awarded &ldquo;best barrio of Elsewhere 2026&rdquo; &mdash; sorry to the others. Humans or Discord.</p>
+                        </div>
+
+                        <div class="barrio-card">
+                            <h3>3. <a href="https://humans.nobodies.team/Barrios/belly-town">Belly Town</a> &mdash; Eva / Elisa</h3>
+                            <p>Small (~30), three or four years old, French-speaking, family-vibe. Body-centred workshops: massage, dance, Qi Gong. Dinners together, then going out together &mdash; &ldquo;a little team of fools&rdquo; in the speaker&rsquo;s own translation. Has a corner specifically for introverts to recharge. An in-house dietician plans the meals, which the speaker noted with audible pride. Camp fee around &euro;230, flexible for low income and for those wanting to contribute more. Short call to confirm mutual vibe before joining. Humans.</p>
+                        </div>
+
+                        <div class="barrio-card">
+                            <h3>4. <a href="https://humans.nobodies.team/Barrios/yes">Yes! Camp</a> &mdash; Hannah &amp; Nancy</h3>
+                            <p>Ten years in, sex positive, kinky, sensual, consent-forward, and &ldquo;not a sex camp but very playful.&rdquo; Also: spiritual seekers, mindfulness, and morning circles where the whole camp checks in. Came with photos. Did an actual slideshow. Featured Olympic-style workshops, communal dinners, and a sandstorm dance scene that apparently lasted multiple repeats of the same song. Nancy&rsquo;s opener: &ldquo;welcome to the family&rdquo; is what she says to everyone who says yes. Dutch and German organisational energy &mdash; the host and Nancy agreed this was a feature, not a bug. Humans, then a form, ten-day turnaround, and hippies who mean well.</p>
+                        </div>
+
+                        <div class="barrio-card">
+                            <h3>5. <a href="https://humans.nobodies.team/Barrios/olive-odyssey">Olive Odyssey</a> &mdash; Elise</h3>
+                            <p>Previously known as Fariha, now better recognised as Olive Odyssey. Mediterranean vibe, mostly Spanish-speaking internally but all comms in English, hospitality-first, positions itself at a front-facing spot so you can come in and be absorbed. Not a sex camp, not not a cuddle-puddle camp. Runs misters during heatwaves and a daily ice-cold afternoon bar, both of which are the correct answer to Spanish desert weather. ~35 people, just above &euro;200 fee. Promises a talk on the history of olive oil, with opinions about virginity therein.</p>
+                        </div>
+
+                        <div class="barrio-card">
+                            <h3>6. <a href="https://humans.nobodies.team/Barrios/curious-creatures">Curious Creatures</a> &mdash; Misty (aka Joel)</h3>
+                            <p>Since 2018, now around 65 people representing ~40 countries, headquartered in Amsterdam with a year-round maker space. Sex positive but emphatically &ldquo;not a sex camp&rdquo; &mdash; also workshops, a Pok&eacute;mon Master tournament that Misty insists remains unbeaten, their French-art-tour-with-champagne ritual, and an attempt to stay a &ldquo;light camp, not a heavy one&rdquo; (their own phrasing, explicitly geopolitics-free). Stormproof dome, shaded tenting, hot <em>and</em> cold pressure showers, and an air-conditioned welfare corner. &euro;375 fee, everything included. Camp video on YouTube if you want a trailer before committing. Humans / curiouscreatures.info.</p>
+                        </div>
+
+                        <div class="barrio-card">
+                            <h3>7. <a href="https://humans.nobodies.team/Barrios/desert-dessert">Desert Dessert</a> &mdash; Jonas (Tatiana couldn&rsquo;t make it)</h3>
+                            <p>Since 2015. Changes its concept and its name every single year, which is committed performance art whether intended or not. Used to be a full sound camp with a big PA; now scaled to a living room with a DJ booth, the alternative-sound niche (no opera-house techno; they leave that to the big players). Dinner at 20:00 sharp, shuts the camp every second night so the barrio can go see what everyone else is doing. Alt-sound, a play space that exists because sex used to happen in less appropriate corners, siesta-hour electrolytes + cake. 25&ndash;30 people. No form &mdash; you write them an email explaining why you fit, and they call. This year&rsquo;s concept is bakery; they intend to bake for the playa.</p>
+                        </div>
+
+                        <div class="barrio-card">
+                            <h3>8. <a href="https://humans.nobodies.team/Barrios/glitch">Glitch</a> &mdash; Don Funk &amp; Jonathan</h3>
+                            <p>42 people (&ldquo;a magic number&rdquo;), sex positive, Berlin-club-with-French-accent, artsy d&eacute;cor, laid-back kitchen with a steady rotation of post-dance-floor returnees. Don made slides during the other presentations and then briefly lost them mid-share; Jonathan covered. An older shower shown on slide, with the explanation that they had to put <em>something</em> up because Curious Creatures raised the shower bar. No freeloaders, but inclusive finance &mdash; typical contribution &euro;200&ndash;300, with room for less if you show up more. Open to newbies (reserve spots held) and experienced burners alike. Humans.</p>
+                        </div>
+
+                        <div class="barrio-card">
+                            <h3>9. <a href="https://humans.nobodies.team/Barrios/jamhouse">JamHouse</a> &mdash; Espen, Alessia &amp; Frank</h3>
+                            <p>Three years old, barrio built around bringing live music to the playa. Workshops, drum circles, vocal-release-therapy things, morning &ldquo;jam tasting&rdquo; at Marmalade House where Frank&rsquo;s homemade jams (from Barcelona) were served alongside live jams. A pajama party is under consideration for 2026. Proud shower, proud kitchen with a serving window. &euro;280 fee, family-style meals daily, four-star kitchen with fridge. Sign-up at jamhouse.space. Espen&rsquo;s closing line: if you don&rsquo;t end up at JamHouse, &ldquo;have a fucking amazing burn&rdquo; anyway.</p>
+                        </div>
+
+                        <div class="barrio-card">
+                            <h3>10. <a href="https://humans.nobodies.team/Barrios/garden-of-joy">Garden of Joy</a> &mdash; Daniel T</h3>
+                            <p>Largest camp this year at 100&ndash;120. Sex positive, playroom open 24/7, introducing consent angels for nighttime oversight. Italian-rooted (now international) kitchen with fresh cheese, ham, fresh pulpo, an ice cream machine, and &mdash; in the presenter&rsquo;s words &mdash; &ldquo;I eat better at the Garden than I do at home.&rdquo; Hosts a growing collection of Funktion One subwoofers at the front, which the presenter somewhat wistfully noted now occupies the entire frontage, obscuring the rest of the playa. Red zone; goes very late. Lots of fairy lights, always more than before. Occasional hot showers (conditional on sun and water-cube refill timing). &euro;275 all-in. Presenter&rsquo;s final caveats, in order: don&rsquo;t come if you hate sex-positive spaces, loud music, or fairy lights &mdash; but if you don&rsquo;t like fairy lights, wear a blindfold and come anyway.</p>
+                        </div>
+
+                        <div class="barrio-card">
+                            <h3>11. <a href="https://humans.nobodies.team/Barrios/planet-resilium">Planet Resilium</a> &mdash; Ellen / Dr Plantes</h3>
+                            <p>The host&rsquo;s own camp. ~20 people, French-speaking, mostly experienced at other burns, and otherwise a year-round community doing a once-yearly event together. Self-imposed constraint: build the camp using only low-tech, bio-sourced or secondhand materials, track greenhouse-gas footprint, avoid non-renewable resources where possible. Solar cookers, solar-baked baguettes, chocolate cakes baked in a solar oven that apparently worked. Vegetarian kitchen. No hierarchy, no leads &mdash; collective action with the governance overhead that implies. Not the party camp, not the sex camp, &ldquo;for the freaks and geeks.&rdquo; This year&rsquo;s experiment: low-tech sparkly-beer kegs. ~&euro;200 fee with a solidarity ceiling so low-income members never pay more in fees than their discounted ticket cost. Humans.</p>
+                        </div>
+
+                        <div class="barrio-card">
+                            <h3>12. <a href="https://humans.nobodies.team/Barrios/peach-please">Peach Please</a> &mdash; Miriam &amp; Liv (Cupcake is on a train)</h3>
+                            <p>Queer sex positive, 35 people, third year. Explicit motto: &ldquo;bringing the queer orgy we were missing, to Elsewhere.&rdquo; Workshop space, cuddle space, chill-out space, a shower that may or may not have appeared in JamHouse&rsquo;s shower photo. Plant-based kitchen. Signature workshop: live drawing where the models were queer people actively having sex &mdash; what the presenters described as &ldquo;a very different perspective on voyeurism.&rdquo; This year they&rsquo;re upgrading the workshop space to a dome and experimenting with solar power and an underground fridge. &euro;220 average fee, flexible. Specifically inviting queer folks; open to allies discovering things.</p>
+                        </div>
+
+                        <div class="barrio-card">
+                            <h3>13. <a href="https://humans.nobodies.team/Barrios/jugaton">Jugaton</a> &mdash; Gabby &amp; Ory (the &ldquo;co-daddies&rdquo;)</h3>
+                            <p>Third year, Spanish word for &ldquo;playful,&rdquo; pink-and-animal-print aesthetic, Barcelona core plus global family. Sex positive but no dedicated play space &mdash; held in the orange zone. Minimum three parties, workshops, opening circle, buddy system (one buddy before the event, a different buddy on the playa &mdash; &ldquo;someone to hug and cry on&rdquo;). Signature: their ecstatic kink party, which the lead&rsquo;s organiser Didi is simultaneously running for 100 people in Berlin this weekend. &euro;250&ndash;300 fee, low-income flex. Very international, mix of hardcore and less-hardcore party people. Ory&rsquo;s closing: &ldquo;you&rsquo;ll always have family around that want to have fun with you.&rdquo; English-speaking.</p>
+                        </div>
+
+                        <div class="barrio-card">
+                            <h3>14. <a href="https://humans.nobodies.team/Barrios/wonderever">Wonderever</a> &mdash; Rishas</h3>
+                            <p>Tenth year. Theme: comfort. A lot of hammocks. More hammocks than you&rsquo;d expect. Large W structure visible from the middle of the playa is the lighthouse &mdash; if you&rsquo;re lost at night, walk toward the W. Mostly-vegetarian communal food, BYO non-veg if you insist. Disabled-friendly seating in the tower. Not workshop-heavy as hosts, but hospitable to workshops others run. Around 40 people, ~&euro;200 previously, fee TBC. A cat named Victor sometimes travels with them; this year unclear.</p>
+                        </div>
+
+                        <div class="barrio-card">
+                            <h3>15. <a href="https://humans.nobodies.team/Barrios/werkhuas">Werkha&uuml;s</a></h3>
+                            <p>The <em>other</em> W on the playa. Home of the build and strike crews. Not really a lifestyle barrio &mdash; it&rsquo;s the camp for people who want to make all the other barrios physically exist. &pound;50 camp fee, reduced for low-income tickets, eat at Cantina for free, camp under a shade structure that goes up almost immediately. This year has a lot of space and several alarms going off at meetings about it. Early build starts June 16; the second build week is also wide open. The ask was explicit: if you know a builder, send them. During the event, Werkha&uuml;s becomes a social drop-in space for all volunteers. &ldquo;Build is the best part.&rdquo; Discord &rarr; infrastructure, or Humans.</p>
+                        </div>
+
+                        <div class="barrio-card">
+                            <h3>16. <a href="https://humans.nobodies.team/Barrios/barrio-del-sol">Barrio del Sol</a> &mdash; Lucas E</h3>
+                            <p>Small (cap 25), silly, proactive, wildly international, big French contingent. &ldquo;Who cares, let&rsquo;s go get a beer&rdquo; school of shower philosophy &mdash; a basic pump-camping thing, cold on purpose because it&rsquo;s 40&deg;C anyway. Bell tent for workshops, sound system for silly parties, container converted to air-conditioned kitchen, fully vegan camp with BYO exceptions, and &mdash; almost forgotten in the pitch &mdash; <em>a swimming pool</em>, currently fundraising. Volunteer pool-attendant shifts are, per Lucas, &ldquo;nice, fun, and easy.&rdquo; &pound;190 flat fee including food, drink, alcohol, infrastructure. Humans.</p>
+                        </div>
+
+                        <h2>NCA Update &mdash; Peter D</h2>
+                        <p>A group of directors attended the European Leadership Summit (ELS) last weekend. The coordinators&rsquo; go/no-go meeting for the 2026 event is scheduled for next week, and current signs are positive. The outstanding focus area is recruiting volunteers &mdash; particularly for the build weeks.</p>
+
+                        <p><strong>Ticket projection:</strong> 1,600&ndash;2,200 sold, most likely landing around 1,800. Work is underway to replace the current thumb-in-the-air method with a proper mathematical model fed by historical sales data &mdash; expected ready in a week or two.</p>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Who</th><th>Action</th><th>When</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Prospective camp-joiners</td><td>Apply via Humans barrio pages, Discord, or the linked forms</td><td>Ongoing</td></tr>
+                                <tr><td>Barrio leads</td><td>Respond to applications within promised windows</td><td>Ongoing</td></tr>
+                                <tr><td>Community</td><td>Recruit builders (especially for early build starting 16 June); direct them to Werkha&uuml;s via Discord infrastructure or Humans</td><td>Urgent</td></tr>
+                                <tr><td>All</td><td>Encourage attendees and prospective volunteers to <a href="https://humans.nobodies.team" target="_blank">register on Teams</a></td><td>Ongoing</td></tr>
+                                <tr><td>Peter D / tech</td><td>Replace thumb-in-air attendance estimate with a real model based on historical ticket data</td><td>Next 1&ndash;2 weeks</td></tr>
+                                <tr><td>Coordinators</td><td>Hold go/no-go meeting</td><td>Next week</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Minutes prepared from the audio recording and the Gemini transcript. Names sanitised to first-name-plus-initial where surnames appeared; camp-scene handles (Dr Plantes, Cocci, Misty, Don Funk, Cupcake) retained as used by speakers. Barrio name spellings per humans.nobodies.team canonical.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="es">
+<div class="attendees">
+    <strong>Facilitado por Ellen / Dr Plantes (Planet Resilium), con dieciséis barrios presentándose y unas palabras de cierre de Peter D</strong>
+</div>
+
+<div class="resource-links">
+    <h3>Registros Completos</h3>
+    <ul>
+        <li><a href="https://youtu.be/4XbDZzIuLsA">Grabación de vídeo (YouTube)</a></li>
+        <li><a href="https://humans.nobodies.team/Barrios">Todos los barrios (directorio de Humans)</a></li>
+    </ul>
+</div>
+
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/4XbDZzIuLsA" title="Community Meeting &mdash; Barrios Speed Dating &mdash; April 23, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<div class="meeting-content">
+    <h2>Resumen</h2>
+    <p>Dieciséis barrios se presentaron en retratos de cinco minutos ante asistentes sin afiliación que buscaban un hogar en la playa. El abanico fue amplísimo &mdash; desde colectivos experimentales de baja tecnología de veinte personas hasta catedrales de fiesta de ciento veinte personas con colecciones curadas de subwoofers. Las cuotas de camp iban desde &pound;50 (si construyes durante dos semanas) hasta &euro;375 (si quieres duchas calientes con presión).</p>
+
+    <p>Peter D cerró con una actualización de la NCA. La proyección de entradas está entre 1.600 y 2.200, probablemente en torno a 1.800. El siguiente foco son las personas voluntarias para el build.</p>
+
+    <h2>Los Dieciséis Barrios</h2>
+
+    <div class="barrio-card">
+        <h3>1. <a href="https://humans.nobodies.team/Barrios/barrio-espace">Barrio Espace</a> &mdash; Marianne F</h3>
+        <p>Franc&eacute;s, ~50 personas, cumple 10 a&ntilde;os este a&ntilde;o. Ambiente cargado de talleres con un espacio de actividad &ldquo;big chill&rdquo; y una autodenominada &ldquo;zona VIP&rdquo; en la playa. Lo de VIP es medio broma &mdash; las entradas est&aacute;n por detr&aacute;s, y el frente existe para que puedas pasar por delante y, muy ostensiblemente, no entrar. Marianne present&oacute; desde fuera de un teatro de Par&iacute;s quince minutos antes de que se levantara el tel&oacute;n y admite abiertamente que no se lleva bien con los ordenadores; un equipo de humanos con soltura en Discord le hace de respaldo. Apl&iacute;cate v&iacute;a Humans, o encuentra el canal de barrios en Discord y pregunta por ella.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>2. <a href="https://humans.nobodies.team/Barrios/ran-dome">Ran&rsquo;Dome</a> &mdash; Cocci</h3>
+        <p>Franc&eacute;s, desde 2014, zona roja. Se define como &ldquo;el pub de Elsewhere&rdquo; &mdash; un sitio para sentarse, jugar, descansar, conocer gente, tomar algo y hacer todo lo dem&aacute;s que har&iacute;as en un bar. Carga de turnos baja (una cocina, dos de LNT, con turnos extra de NORG alentados este a&ntilde;o). La cuota de camp es de precio libre, empezando en &euro;115 para bolsillos ajustados, con una media de &euro;190, todo incluido: buf&eacute; 24 horas, comida caliente por la noche, bebidas, duchas, y el sistema de sonido que hace falta para transportar un peque&ntilde;o club nocturno a trav&eacute;s de una frontera. Ya se han autoproclamado &ldquo;mejor barrio de Elsewhere 2026&rdquo; &mdash; lo sentimos por los dem&aacute;s. Humans o Discord.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>3. <a href="https://humans.nobodies.team/Barrios/belly-town">Belly Town</a> &mdash; Eva / Elisa</h3>
+        <p>Peque&ntilde;o (~30), de tres o cuatro a&ntilde;os, francoparlante, ambiente familiar. Talleres centrados en el cuerpo: masaje, danza, Qi Gong. Cenan juntos y luego salen juntos &mdash; &ldquo;un peque&ntilde;o equipo de locos&rdquo; en la propia traducci&oacute;n de la ponente. Tiene un rinc&oacute;n espec&iacute;fico para que las personas introvertidas recarguen. Una dietista interna planifica las comidas, algo que la ponente mencion&oacute; con audible orgullo. Cuota de camp en torno a &euro;230, flexible para rentas bajas y para quienes quieran aportar m&aacute;s. Una llamada corta para confirmar que hay buen rollo mutuo antes de unirse. Humans.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>4. <a href="https://humans.nobodies.team/Barrios/yes">Yes! Camp</a> &mdash; Hannah y Nancy</h3>
+        <p>Diez a&ntilde;os de recorrido, sex positive, kinky, sensual, con el consentimiento por delante, y &ldquo;no es un sex camp pero s&iacute; muy juguet&oacute;n&rdquo;. Tambi&eacute;n: buscadores espirituales, mindfulness y c&iacute;rculos matutinos donde todo el camp comparte c&oacute;mo est&aacute;. Llegaron con fotos. Hicieron un slideshow de verdad. Incluyeron talleres estilo ol&iacute;mpico, cenas comunales y una escena de baile durante una tormenta de arena que, al parecer, dur&oacute; varias repeticiones de la misma canci&oacute;n. La frase de apertura de Nancy: &ldquo;bienvenida a la familia&rdquo; es lo que le dice a todo el que dice s&iacute;. Energ&iacute;a organizativa holandesa y alemana &mdash; la anfitriona y Nancy coincidieron en que esto es una virtud, no un defecto. Humans, luego un formulario, diez d&iacute;as de respuesta, y hippies bienintencionados.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>5. <a href="https://humans.nobodies.team/Barrios/olive-odyssey">Olive Odyssey</a> &mdash; Elise</h3>
+        <p>Anteriormente conocido como Fariha, ahora mejor reconocido como Olive Odyssey. Ambiente mediterr&aacute;neo, internamente en su mayor&iacute;a hispanohablante pero con toda la comunicaci&oacute;n en ingl&eacute;s, la hospitalidad primero, situado en una ubicaci&oacute;n frontal para que puedas entrar y dejarte absorber. No es un sex camp, pero tampoco deja de ser un camp de cuddle-puddle. Pone misters durante las olas de calor y un bar diario helad&iacute;simo por la tarde, ambas cosas la respuesta correcta al clima del desierto espa&ntilde;ol. ~35 personas, cuota poco por encima de &euro;200. Promete una charla sobre la historia del aceite de oliva, con opiniones sobre la virginidad del mismo.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>6. <a href="https://humans.nobodies.team/Barrios/curious-creatures">Curious Creatures</a> &mdash; Misty (alias Joel)</h3>
+        <p>Desde 2018, ahora unas 65 personas que representan ~40 pa&iacute;ses, con sede en &Aacute;msterdam y un maker space abierto todo el a&ntilde;o. Sex positive pero enf&aacute;ticamente &ldquo;no es un sex camp&rdquo; &mdash; tambi&eacute;n talleres, un torneo de Maestro Pok&eacute;mon que Misty insiste en que sigue invicto, su ritual de gira de arte franc&eacute;s con champ&aacute;n, y el intento de seguir siendo un &ldquo;camp ligero, no pesado&rdquo; (su propia formulaci&oacute;n, expl&iacute;citamente libre de geopol&iacute;tica). Domo a prueba de tormentas, tiendas con sombra, duchas calientes <em>y</em> fr&iacute;as a presi&oacute;n y un rinc&oacute;n de welfare con aire acondicionado. Cuota de &euro;375, todo incluido. V&iacute;deo del camp en YouTube por si quieres un tr&aacute;iler antes de comprometerte. Humans / curiouscreatures.info.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>7. <a href="https://humans.nobodies.team/Barrios/desert-dessert">Desert Dessert</a> &mdash; Jonas (Tatiana no pudo asistir)</h3>
+        <p>Desde 2015. Cambia de concepto y de nombre cada a&ntilde;o, lo cual es un arte performativo comprometido, se pretenda o no. Antes era un sound camp completo con un gran PA; ahora se ha reducido a un sal&oacute;n con cabina de DJ, nicho de sonido alternativo (nada de techno de opera-house; eso lo dejan para los grandes). Cena a las 20:00 en punto, cierran el camp cada dos noches para que el barrio pueda ir a ver qu&eacute; est&aacute; haciendo el resto. Sonido alternativo, un play space que existe porque el sexo sol&iacute;a ocurrir en rincones menos apropiados, electrolitos + tarta a la hora de la siesta. 25&ndash;30 personas. No hay formulario &mdash; les escribes un email explicando por qu&eacute; encajas, y te llaman. El concepto de este a&ntilde;o es panader&iacute;a; tienen la intenci&oacute;n de hornear para la playa.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>8. <a href="https://humans.nobodies.team/Barrios/glitch">Glitch</a> &mdash; Don Funk y Jonathan</h3>
+        <p>42 personas (&ldquo;un n&uacute;mero m&aacute;gico&rdquo;), sex positive, club de Berl&iacute;n con acento franc&eacute;s, decoraci&oacute;n artsy, cocina relajada con un flujo constante de personas que vuelven de la pista. Don se hizo las diapositivas durante las presentaciones de los dem&aacute;s y despu&eacute;s las perdi&oacute; brevemente mientras las compart&iacute;a; Jonathan cubri&oacute;. Una ducha m&aacute;s vieja apareci&oacute; en la diapositiva, con la explicaci&oacute;n de que ten&iacute;an que poner <em>algo</em> porque Curious Creatures hab&iacute;a subido el list&oacute;n de las duchas. Nada de colados, pero finanzas inclusivas &mdash; la aportaci&oacute;n t&iacute;pica es de &euro;200&ndash;300, con margen para menos si te implicas m&aacute;s. Abiertos a novatos (reservan plazas) y a burners con experiencia. Humans.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>9. <a href="https://humans.nobodies.team/Barrios/jamhouse">JamHouse</a> &mdash; Espen, Alessia y Frank</h3>
+        <p>Tres a&ntilde;os, un barrio construido alrededor de llevar m&uacute;sica en directo a la playa. Talleres, c&iacute;rculos de percusi&oacute;n, cosas tipo vocal-release-therapy, &ldquo;cata de mermeladas&rdquo; por la ma&ntilde;ana en Marmalade House donde las mermeladas caseras de Frank (desde Barcelona) se sirven junto a jams en directo. Se est&aacute; considerando una fiesta de pijamas para 2026. Ducha de la que se enorgullecen, cocina de la que se enorgullecen con ventanilla de servicio. Cuota de &euro;280, comidas estilo familiar a diario, cocina de cuatro estrellas con nevera. Inscripci&oacute;n en jamhouse.space. Frase final de Espen: si no acabas en JamHouse, &ldquo;que tengas un burn de puta madre&rdquo; de todas formas.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>10. <a href="https://humans.nobodies.team/Barrios/garden-of-joy">Garden of Joy</a> &mdash; Daniel T</h3>
+        <p>El camp m&aacute;s grande este a&ntilde;o, con 100&ndash;120 personas. Sex positive, playroom abierto 24/7, con &aacute;ngeles de consentimiento como novedad para la supervisi&oacute;n nocturna. Cocina de ra&iacute;z italiana (ahora internacional) con queso fresco, jam&oacute;n, pulpo fresco, una m&aacute;quina de helados y &mdash; en palabras del ponente &mdash; &ldquo;como mejor en el Garden que en casa&rdquo;. Alberga una colecci&oacute;n creciente de subwoofers Funktion One en la fachada, que el ponente con un punto de melancol&iacute;a reconoci&oacute; que ahora ocupa todo el frente, tapando el resto de la playa. Zona roja; se alarga hasta bien tarde. Muchas fairy lights, siempre m&aacute;s que antes. Duchas calientes ocasionales (condicionadas al sol y al momento de rellenar el cubo de agua). &euro;275 todo incluido. Advertencias finales del ponente, en orden: no vengas si odias los espacios sex positive, la m&uacute;sica alta o las fairy lights &mdash; pero si no te gustan las fairy lights, ponte un antifaz y ven igual.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>11. <a href="https://humans.nobodies.team/Barrios/planet-resilium">Planet Resilium</a> &mdash; Ellen / Dr Plantes</h3>
+        <p>El camp de la propia anfitriona. ~20 personas, francoparlantes, con experiencia mayormente en otros burns, y por lo dem&aacute;s una comunidad de todo el a&ntilde;o que hace un evento anual juntos. Restricci&oacute;n autoimpuesta: construir el camp usando s&oacute;lo materiales de baja tecnolog&iacute;a, de origen biol&oacute;gico o de segunda mano, hacer seguimiento de la huella de gases de efecto invernadero y evitar recursos no renovables cuando sea posible. Cocinas solares, baguettes horneadas al sol, tartas de chocolate horneadas en un horno solar que al parecer funcion&oacute;. Cocina vegetariana. Sin jerarqu&iacute;a, sin leads &mdash; acci&oacute;n colectiva con la sobrecarga de gobernanza que eso implica. No es el camp de fiesta, no es el camp de sexo, &ldquo;para los freaks y los geeks&rdquo;. Experimento de este a&ntilde;o: barriles de cerveza sparkly de baja tecnolog&iacute;a. Cuota de ~&euro;200 con un techo de solidaridad tan bajo que las personas de rentas bajas nunca pagan m&aacute;s en cuota que el precio ya descontado de su entrada. Humans.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>12. <a href="https://humans.nobodies.team/Barrios/peach-please">Peach Please</a> &mdash; Miriam y Liv (Cupcake est&aacute; en un tren)</h3>
+        <p>Queer sex positive, 35 personas, tercer a&ntilde;o. Lema expl&iacute;cito: &ldquo;traer a Elsewhere la orgy queer que echamos de menos&rdquo;. Espacio de talleres, espacio de cuddle, espacio de chill-out, y una ducha que puede o no haber aparecido en la foto de la ducha de JamHouse. Cocina plant-based. Taller estrella: dibujo en directo en el que las modelos eran personas queer manteniendo sexo activamente &mdash; lo que las ponentes describieron como &ldquo;una perspectiva muy distinta sobre el voyeurismo&rdquo;. Este a&ntilde;o est&aacute;n mejorando el espacio de talleres convirti&eacute;ndolo en un domo y experimentando con energ&iacute;a solar y una nevera subterr&aacute;nea. Cuota media de &euro;220, flexible. Invitando espec&iacute;ficamente a personas queer; abiertas a allies que est&eacute;n descubriendo cosas.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>13. <a href="https://humans.nobodies.team/Barrios/jugaton">Jugaton</a> &mdash; Gabby y Ory (los &ldquo;co-daddies&rdquo;)</h3>
+        <p>Tercer a&ntilde;o, la palabra espa&ntilde;ola para &ldquo;juguet&oacute;n&rdquo;, est&eacute;tica rosa y estampado animal, n&uacute;cleo de Barcelona m&aacute;s familia global. Sex positive pero sin play space dedicado &mdash; situado en la zona naranja. M&iacute;nimo tres fiestas, talleres, c&iacute;rculo de apertura, sistema de buddies (un buddy antes del evento, un buddy distinto en la playa &mdash; &ldquo;alguien a quien abrazar y sobre quien llorar&rdquo;). Se&ntilde;a de identidad: su fiesta ecstatic kink, que la organizadora Didi del lead est&aacute; montando simult&aacute;neamente para 100 personas en Berl&iacute;n este fin de semana. Cuota de &euro;250&ndash;300, flex para rentas bajas. Muy internacional, mezcla de fiesteros hardcore y menos hardcore. Cierre de Ory: &ldquo;siempre tendr&aacute;s familia alrededor que quiera divertirse contigo&rdquo;. Se habla en ingl&eacute;s.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>14. <a href="https://humans.nobodies.team/Barrios/wonderever">Wonderever</a> &mdash; Rishas</h3>
+        <p>D&eacute;cimo a&ntilde;o. Tema: confort. Muchas hamacas. M&aacute;s hamacas de las que esperas. Una gran estructura en forma de W visible desde el centro de la playa es su faro &mdash; si te pierdes de noche, camina hacia la W. Comida comunal mayormente vegetariana, BYO no-vegetariano si insistes. Asientos accesibles para personas con discapacidad en la torre. Como anfitriones no son muy de talleres, pero son hospitalarios con los talleres que organicen otros. Unas 40 personas, ~&euro;200 el a&ntilde;o pasado, cuota por confirmar. Un gato llamado Victor a veces viaja con ellos; este a&ntilde;o no est&aacute; claro.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>15. <a href="https://humans.nobodies.team/Barrios/werkhuas">Werkha&uuml;s</a></h3>
+        <p>La <em>otra</em> W de la playa. Casa de los equipos de build y strike. No es realmente un barrio de estilo de vida &mdash; es el camp para la gente que quiere que todos los dem&aacute;s barrios existan f&iacute;sicamente. Cuota de &pound;50, reducida para entradas de renta baja, comes en Cantina gratis, acampas bajo una estructura de sombra que se monta casi de inmediato. Este a&ntilde;o tienen mucho espacio y varias alarmas sonando sobre ello en las reuniones. El early build empieza el 16 de junio; la segunda semana de build tambi&eacute;n est&aacute; bien abierta. La petici&oacute;n fue expl&iacute;cita: si conoces a alguien que construya, m&aacute;ndalo. Durante el evento, Werkha&uuml;s se convierte en un drop-in social para toda la gente voluntaria. &ldquo;El build es la mejor parte&rdquo;. Discord &rarr; infrastructure, o Humans.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>16. <a href="https://humans.nobodies.team/Barrios/barrio-del-sol">Barrio del Sol</a> &mdash; Lucas E</h3>
+        <p>Peque&ntilde;o (tope 25), tonto, proactivo, salvajemente internacional, con un gran contingente franc&eacute;s. Escuela de filosof&iacute;a de la ducha &ldquo;qu&eacute; m&aacute;s da, v&aacute;monos a por una cerveza&rdquo; &mdash; una cosa b&aacute;sica tipo ducha de camping con bomba, fr&iacute;a a prop&oacute;sito porque hay 40&deg;C de todas formas. Tienda bell para talleres, sistema de sonido para fiestas tontas, un contenedor reconvertido en cocina con aire acondicionado, camp totalmente vegano con excepciones BYO y &mdash; casi se le olvida al ponente &mdash; <em>una piscina</em>, actualmente recaudando fondos. Los turnos de voluntariado como pool-attendant son, seg&uacute;n Lucas, &ldquo;agradables, divertidos y f&aacute;ciles&rdquo;. Cuota plana de &pound;190 que incluye comida, bebida, alcohol e infraestructura. Humans.</p>
+    </div>
+
+    <h2>Actualizaci&oacute;n de la NCA &mdash; Peter D</h2>
+    <p>Un grupo de directores asisti&oacute; a la European Leadership Summit (ELS) el fin de semana pasado. La reuni&oacute;n de go/no-go de los coordinadores para el evento de 2026 est&aacute; prevista para la semana que viene, y las se&ntilde;ales actuales son positivas. El foco pendiente es reclutar personas voluntarias &mdash; especialmente para las semanas de build.</p>
+
+    <p><strong>Proyecci&oacute;n de entradas:</strong> 1.600&ndash;2.200 vendidas, probablemente aterrizando en torno a 1.800. Se est&aacute; trabajando para sustituir el m&eacute;todo actual del dedo al viento por un modelo matem&aacute;tico adecuado alimentado con datos hist&oacute;ricos de ventas &mdash; se espera listo en una o dos semanas.</p>
+
+    <h2>Acciones</h2>
+    <table class="action-table">
+        <thead>
+            <tr><th>Qui&eacute;n</th><th>Acci&oacute;n</th><th>Cu&aacute;ndo</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Personas interesadas en unirse a un camp</td><td>Aplicar v&iacute;a las p&aacute;ginas de barrio en Humans, Discord o los formularios enlazados</td><td>En curso</td></tr>
+            <tr><td>Leads de barrio</td><td>Responder a las solicitudes dentro de los plazos prometidos</td><td>En curso</td></tr>
+            <tr><td>Comunidad</td><td>Reclutar personas constructoras (especialmente para el early build que empieza el 16 de junio); dirigirlas a Werkha&uuml;s v&iacute;a Discord infrastructure o Humans</td><td>Urgente</td></tr>
+            <tr><td>Todas</td><td>Animar a asistentes y posibles voluntarias a <a href="https://humans.nobodies.team" target="_blank">registrarse en Teams</a></td><td>En curso</td></tr>
+            <tr><td>Peter D / tech</td><td>Sustituir la estimaci&oacute;n de asistencia al dedo por un modelo real basado en datos hist&oacute;ricos de entradas</td><td>En las pr&oacute;ximas 1&ndash;2 semanas</td></tr>
+            <tr><td>Coordinadores</td><td>Celebrar la reuni&oacute;n de go/no-go</td><td>La semana que viene</td></tr>
+        </tbody>
+    </table>
+
+    <p><em>Acta preparada a partir de la grabaci&oacute;n de audio y de la transcripci&oacute;n de Gemini. Nombres sanitizados a nombre de pila m&aacute;s inicial cuando aparec&iacute;an apellidos; los alias de la escena de camp (Dr Plantes, Cocci, Misty, Don Funk, Cupcake) se conservan tal como los usaron las personas ponentes. Las grafias de los nombres de barrio siguen la forma can&oacute;nica de humans.nobodies.team.</em></p>
+</div>
+
+</div>
+
+                <div class="lang-content" data-lang="fr">
+<div class="attendees">
+    <strong>Animée par Ellen / Dr Plantes (Planet Resilium), avec seize barrios qui se présentent et un mot de clôture de Peter D</strong>
+</div>
+
+<div class="resource-links">
+    <h3>Enregistrements Complets</h3>
+    <ul>
+        <li><a href="https://youtu.be/4XbDZzIuLsA">Enregistrement vidéo (YouTube)</a></li>
+        <li><a href="https://humans.nobodies.team/Barrios">Tous les barrios (annuaire Humans)</a></li>
+    </ul>
+</div>
+
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/4XbDZzIuLsA" title="Réunion communautaire &mdash; Speed Dating des Barrios &mdash; 23 avril 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<div class="meeting-content">
+    <h2>Résumé</h2>
+    <p>Seize barrios se sont présentés en portraits de cinq minutes à des participants non affiliés cherchant un foyer sur la playa. L'éventail était vaste &mdash; depuis des collectifs expérimentaux low-tech d'une vingtaine de personnes jusqu'à des cathédrales de la fête de cent-vingt personnes avec des collections de subwoofers soigneusement sélectionnées. Les cotisations de camp allaient de 50&nbsp;£ (si vous construisez pendant deux semaines) à 375&nbsp;€ (si vous voulez des douches chaudes avec de la pression).</p>
+
+    <p>Peter D a conclu avec une mise à jour NCA. La projection de billets se situe entre 1&nbsp;600 et 2&nbsp;200, très probablement 1&nbsp;800. Le prochain point de focus est le recrutement de bénévoles pour le build.</p>
+
+    <h2>Les Seize Barrios</h2>
+
+    <div class="barrio-card">
+        <h3>1. <a href="https://humans.nobodies.team/Barrios/barrio-espace">Barrio Espace</a> &mdash; Marianne F</h3>
+        <p>Français, ~50 personnes, qui fête ses 10 ans cette année. Ambiance très ateliers avec un grand espace «&nbsp;big chill&nbsp;» et un «&nbsp;espace VIP&nbsp;» autoproclamé sur la playa. Le VIP, c'est un peu une blague &mdash; les entrées sont à l'arrière, et la façade existe pour qu'on passe devant et qu'on n'y entre ostensiblement pas. Marianne a fait sa présentation depuis l'extérieur d'un théâtre parisien quinze minutes avant le lever du rideau et assume ne pas être à l'aise avec l'informatique&nbsp;; une équipe d'humains à l'aise avec Discord la soutient. Candidature via Humans, ou trouvez le canal Discord des barrios et demandez-la.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>2. <a href="https://humans.nobodies.team/Barrios/ran-dome">Ran'Dome</a> &mdash; Cocci</h3>
+        <p>Français, depuis 2014, zone rouge. Se décrit comme «&nbsp;le pub d'Elsewhere&nbsp;» &mdash; un endroit pour s'asseoir, jouer à des jeux, se reposer, rencontrer des gens, prendre un verre, et faire tout ce qu'on fait dans un bar. Charge de shifts faible (une cuisine, deux LNT, avec des shifts NORG supplémentaires encouragés cette année). La cotisation est à prix libre, à partir de 115&nbsp;€ pour les petits budgets, avec une moyenne de 190&nbsp;€, tout compris : buffet 24h/24, repas chaud du soir, boissons, douches, et le sound system qu'il faut pour transporter une petite boîte de nuit au-delà d'une frontière. Déjà auto-décoré «&nbsp;meilleur barrio d'Elsewhere 2026&nbsp;» &mdash; désolé pour les autres. Humans ou Discord.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>3. <a href="https://humans.nobodies.team/Barrios/belly-town">Belly Town</a> &mdash; Eva / Elisa</h3>
+        <p>Petit (~30), trois ou quatre ans d'existence, francophone, ambiance familiale. Ateliers centrés sur le corps : massage, danse, Qi Gong. Dîners ensemble, puis on sort ensemble &mdash; «&nbsp;une petite équipe de fous&nbsp;» dans la traduction même de l'intervenante. Possède un coin spécifiquement pour les introvertis qui ont besoin de recharger. Une diététicienne en interne planifie les repas, ce que l'intervenante a mentionné avec une fierté audible. Cotisation autour de 230&nbsp;€, flexible pour les petits revenus et pour celles et ceux qui veulent contribuer davantage. Bref appel pour confirmer la vibe mutuelle avant d'intégrer. Humans.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>4. <a href="https://humans.nobodies.team/Barrios/yes">Yes! Camp</a> &mdash; Hannah &amp; Nancy</h3>
+        <p>Dix ans d'existence, sex positive, kinky, sensuel, centré sur le consentement, et «&nbsp;pas un sex camp mais très joueur&nbsp;». Aussi : chercheurs spirituels, pleine conscience, et cercles matinaux où tout le camp fait le point. Sont venues avec des photos. Ont fait un vrai diaporama. Présentait des ateliers style olympique, des dîners communs, et une scène de danse en pleine tempête de sable qui a apparemment duré plusieurs répétitions de la même chanson. La phrase d'ouverture de Nancy : «&nbsp;bienvenue dans la famille&nbsp;», c'est ce qu'elle dit à tous ceux qui disent oui. Énergie organisationnelle néerlandaise et allemande &mdash; l'hôtesse et Nancy étaient d'accord pour dire que c'est une fonctionnalité, pas un bug. Humans, puis un formulaire, délai de dix jours, et des hippies bien intentionnés.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>5. <a href="https://humans.nobodies.team/Barrios/olive-odyssey">Olive Odyssey</a> &mdash; Elise</h3>
+        <p>Anciennement connu sous le nom de Fariha, désormais mieux reconnu en tant qu'Olive Odyssey. Ambiance méditerranéenne, majoritairement hispanophone en interne mais toutes les communications en anglais, hospitalité avant tout, se positionne en façade pour qu'on puisse entrer et se laisser absorber. Pas un sex camp, pas non plus un camp anti-cuddle-puddle. Fait fonctionner des brumisateurs pendant les canicules et un bar de l'après-midi glacé quotidien, deux réponses correctes au climat désertique espagnol. ~35 personnes, cotisation juste au-dessus de 200&nbsp;€. Promet une conférence sur l'histoire de l'huile d'olive, avec des opinions sur la virginité qui y figure.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>6. <a href="https://humans.nobodies.team/Barrios/curious-creatures">Curious Creatures</a> &mdash; Misty (alias Joel)</h3>
+        <p>Depuis 2018, maintenant environ 65 personnes représentant ~40 pays, basé à Amsterdam avec un maker space ouvert toute l'année. Sex positive mais catégoriquement «&nbsp;pas un sex camp&nbsp;» &mdash; aussi des ateliers, un tournoi de Pokémon Master que Misty insiste pour dire qu'il reste invaincu, leur rituel de tour-d'art-français-au-champagne, et une volonté de rester un «&nbsp;camp léger, pas un camp lourd&nbsp;» (leur propre formulation, explicitement apolitique). Dôme résistant aux tempêtes, tentes ombragées, douches chaudes <em>et</em> froides avec pression, et un coin welfare climatisé. Cotisation de 375&nbsp;€, tout inclus. Vidéo du camp sur YouTube si vous voulez une bande-annonce avant de vous engager. Humans / curiouscreatures.info.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>7. <a href="https://humans.nobodies.team/Barrios/desert-dessert">Desert Dessert</a> &mdash; Jonas (Tatiana n'a pas pu venir)</h3>
+        <p>Depuis 2015. Change de concept et de nom chaque année, ce qui est une performance artistique assidue, intentionnelle ou non. Était autrefois un sound camp complet avec une grosse sono&nbsp;; maintenant réduit à un salon avec une cabine de DJ, la niche du son alternatif (pas de techno façon opéra&nbsp;; ils laissent ça aux grands acteurs). Dîner à 20h00 précises, ferment le camp un soir sur deux pour que le barrio puisse aller voir ce que font tous les autres. Son alternatif, un play space qui existe parce que le sexe se passait auparavant dans des coins moins appropriés, électrolytes + gâteau à l'heure de la sieste. 25 à 30 personnes. Pas de formulaire &mdash; vous leur écrivez un mail en expliquant pourquoi vous correspondez, et ils appellent. Le concept cette année est la boulangerie&nbsp;; ils ont l'intention de faire du pain pour la playa.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>8. <a href="https://humans.nobodies.team/Barrios/glitch">Glitch</a> &mdash; Don Funk &amp; Jonathan</h3>
+        <p>42 personnes («&nbsp;un chiffre magique&nbsp;»), sex positive, ambiance club-berlinois-à-l'accent-français, décor artistique, cuisine décontractée avec une rotation régulière de revenants d'après-dancefloor. Don a fait ses slides pendant les autres présentations et les a brièvement perdus au milieu du partage&nbsp;; Jonathan a pris le relais. Une vieille douche montrée sur un slide, avec l'explication qu'ils devaient bien mettre <em>quelque chose</em> parce que Curious Creatures avait relevé la barre des douches. Pas de passagers clandestins, mais finance inclusive &mdash; contribution typique de 200 à 300&nbsp;€, avec de la marge pour moins si vous êtes plus présent. Ouvert aux newbies (des places sont réservées) comme aux burners expérimentés. Humans.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>9. <a href="https://humans.nobodies.team/Barrios/jamhouse">JamHouse</a> &mdash; Espen, Alessia &amp; Frank</h3>
+        <p>Trois ans d'existence, barrio construit autour de l'idée d'amener la musique live sur la playa. Ateliers, cercles de percussions, trucs de vocal-release-therapy, «&nbsp;dégustation de confitures&nbsp;» matinale à Marmalade House où les confitures maison de Frank (de Barcelone) étaient servies à côté de jams live. Une soirée pyjama est à l'étude pour 2026. Douche dont ils sont fiers, cuisine dont ils sont fiers avec une fenêtre de service. Cotisation de 280&nbsp;€, repas en famille tous les jours, cuisine quatre étoiles avec frigo. Inscription sur jamhouse.space. La phrase de clôture d'Espen : si vous ne finissez pas à JamHouse, «&nbsp;passez un putain de burn incroyable&nbsp;» quand même.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>10. <a href="https://humans.nobodies.team/Barrios/garden-of-joy">Garden of Joy</a> &mdash; Daniel T</h3>
+        <p>Le plus grand camp cette année, 100 à 120 personnes. Sex positive, playroom ouvert 24h/24, introduction des anges du consentement pour la supervision nocturne. Cuisine d'origine italienne (désormais internationale) avec du fromage frais, du jambon, du poulpe frais, une machine à glace, et &mdash; selon les mots du présentateur &mdash; «&nbsp;je mange mieux au Garden qu'à la maison&nbsp;». Héberge une collection grandissante de subwoofers Funktion One en façade, ce que le présentateur a noté avec un léger regret, constatant qu'elle occupe désormais toute la façade et masque le reste de la playa. Zone rouge&nbsp;; ça se finit très tard. Beaucoup de guirlandes lumineuses, toujours plus qu'avant. Douches chaudes occasionnelles (conditionnées au soleil et au timing de remplissage du water-cube). 275&nbsp;€ tout inclus. Dernières mises en garde du présentateur, dans l'ordre : ne venez pas si vous détestez les espaces sex-positive, la musique forte, ou les guirlandes lumineuses &mdash; mais si vous n'aimez pas les guirlandes, mettez un bandeau et venez quand même.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>11. <a href="https://humans.nobodies.team/Barrios/planet-resilium">Planet Resilium</a> &mdash; Ellen / Dr Plantes</h3>
+        <p>Le camp de l'animatrice elle-même. ~20 personnes, francophones, la plupart expérimentés à d'autres burns, et par ailleurs une communauté qui existe toute l'année et organise un événement une fois par an ensemble. Contrainte auto-imposée : construire le camp uniquement avec des matériaux low-tech, biosourcés ou de seconde main, mesurer l'empreinte gaz à effet de serre, éviter les ressources non renouvelables quand c'est possible. Fours solaires, baguettes cuites au soleil, gâteaux au chocolat cuits dans un four solaire qui apparemment fonctionnait. Cuisine végétarienne. Pas de hiérarchie, pas de leads &mdash; action collective avec le surcoût de gouvernance que cela implique. Pas le camp fête, pas le camp sexe, «&nbsp;pour les freaks et les geeks&nbsp;». Expérimentation de cette année : fûts de bière pétillante low-tech. Cotisation ~200&nbsp;€ avec un plafond de solidarité, afin que les membres à faible revenu ne paient jamais plus en cotisations que leur billet à tarif réduit. Humans.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>12. <a href="https://humans.nobodies.team/Barrios/peach-please">Peach Please</a> &mdash; Miriam &amp; Liv (Cupcake est dans un train)</h3>
+        <p>Queer sex positive, 35 personnes, troisième année. Devise explicite : «&nbsp;amener à Elsewhere l'orgie queer qui nous manquait&nbsp;». Espace atelier, espace câlins, espace chill-out, une douche qui est peut-être ou peut-être pas apparue sur la photo de douche de JamHouse. Cuisine végétale. Atelier signature : dessin en direct où les modèles étaient des personnes queer en pleine activité sexuelle &mdash; ce que les présentatrices ont décrit comme «&nbsp;une perspective très différente sur le voyeurisme&nbsp;». Cette année elles upgradent l'espace atelier en dôme et expérimentent avec l'énergie solaire et un frigo enterré. Cotisation moyenne de 220&nbsp;€, flexible. Invitent spécifiquement les personnes queer&nbsp;; ouvert aux alliés en phase de découverte.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>13. <a href="https://humans.nobodies.team/Barrios/jugaton">Jugaton</a> &mdash; Gabby &amp; Ory (les «&nbsp;co-daddies&nbsp;»)</h3>
+        <p>Troisième année, mot espagnol pour «&nbsp;joueur&nbsp;», esthétique rose-et-imprimé-animal, noyau barcelonais plus famille mondiale. Sex positive mais pas d'espace de jeu dédié &mdash; se tient en zone orange. Minimum trois soirées, ateliers, cercle d'ouverture, système de buddy (un buddy avant l'événement, un autre buddy sur la playa &mdash; «&nbsp;quelqu'un à qui faire un câlin et sur qui pleurer&nbsp;»). Signature : leur soirée kink extatique, que Didi, l'organisatrice du lead, anime simultanément pour 100 personnes à Berlin ce week-end. Cotisation de 250 à 300&nbsp;€, flexibilité pour les petits revenus. Très international, mélange de party people hardcore et moins hardcore. La clôture d'Ory : «&nbsp;vous aurez toujours une famille autour de vous qui veut s'amuser avec vous&nbsp;». Anglophone.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>14. <a href="https://humans.nobodies.team/Barrios/wonderever">Wonderever</a> &mdash; Rishas</h3>
+        <p>Dixième année. Thème : le confort. Beaucoup de hamacs. Plus de hamacs qu'on ne pourrait s'y attendre. La grande structure en W, visible depuis le milieu de la playa, est le phare &mdash; si vous êtes perdu la nuit, marchez vers le W. Nourriture communautaire majoritairement végétarienne, BYO non-veg si vous insistez. Sièges accessibles aux personnes à mobilité réduite dans la tour. Pas très orienté ateliers en tant qu'hôtes, mais hospitaliers envers les ateliers organisés par d'autres. Environ 40 personnes, ~200&nbsp;€ précédemment, cotisation à confirmer. Un chat nommé Victor voyage parfois avec eux&nbsp;; cette année, c'est incertain.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>15. <a href="https://humans.nobodies.team/Barrios/werkhuas">Werkhaüs</a></h3>
+        <p>L'<em>autre</em> W de la playa. Foyer des équipes de build et de strike. Pas vraiment un barrio de mode de vie &mdash; c'est le camp pour les personnes qui veulent faire exister physiquement tous les autres barrios. Cotisation de 50&nbsp;£, réduite pour les billets à tarif modeste, repas gratuits à Cantina, campement sous une structure d'ombrage qui se monte presque immédiatement. Cette année ils ont beaucoup de place et plusieurs alarmes qui sonnent en réunion à ce sujet. L'early build commence le 16 juin&nbsp;; la deuxième semaine de build est aussi largement ouverte. La demande était explicite : si vous connaissez un·e constructeur·rice, envoyez-le·a. Pendant l'événement, Werkhaüs devient un espace social ouvert à tous les bénévoles. «&nbsp;Le build, c'est la meilleure partie.&nbsp;» Discord &rarr; infrastructure, ou Humans.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>16. <a href="https://humans.nobodies.team/Barrios/barrio-del-sol">Barrio del Sol</a> &mdash; Lucas E</h3>
+        <p>Petit (plafond 25), idiot, proactif, follement international, gros contingent français. École «&nbsp;on s'en fout, allons boire une bière&nbsp;» de la philosophie de la douche &mdash; un truc basique de pompe de camping, froid exprès parce qu'il fait 40&nbsp;°C de toute façon. Tente bell pour les ateliers, sound system pour les soirées idiotes, container converti en cuisine climatisée, camp entièrement vegan avec exceptions BYO, et &mdash; presque oublié dans la présentation &mdash; <em>une piscine</em>, actuellement en recherche de financement. Les shifts bénévoles de surveillance de piscine sont, selon Lucas, «&nbsp;agréables, amusants, et faciles&nbsp;». Cotisation forfaitaire de 190&nbsp;£ incluant nourriture, boisson, alcool, infrastructure. Humans.</p>
+    </div>
+
+    <h2>Mise à jour NCA &mdash; Peter D</h2>
+    <p>Un groupe de directeurs a assisté au European Leadership Summit (ELS) le week-end dernier. La réunion go/no-go des coordinateurs pour l'événement 2026 est programmée pour la semaine prochaine, et les signes actuels sont positifs. Le point de focus en suspens est le recrutement de bénévoles &mdash; en particulier pour les semaines de build.</p>
+
+    <p><strong>Projection de billets&nbsp;:</strong> 1&nbsp;600 à 2&nbsp;200 vendus, très probablement autour de 1&nbsp;800. Un travail est en cours pour remplacer la méthode actuelle au doigt mouillé par un véritable modèle mathématique alimenté par les données de ventes historiques &mdash; attendu prêt d'ici une semaine ou deux.</p>
+
+    <h2>Actions</h2>
+    <table class="action-table">
+        <thead>
+            <tr><th>Qui</th><th>Action</th><th>Quand</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Candidats potentiels aux camps</td><td>Postuler via les pages barrio sur Humans, Discord, ou les formulaires liés</td><td>En continu</td></tr>
+            <tr><td>Leads des barrios</td><td>Répondre aux candidatures dans les délais annoncés</td><td>En continu</td></tr>
+            <tr><td>Communauté</td><td>Recruter des constructeurs (surtout pour l'early build qui commence le 16 juin)&nbsp;; les orienter vers Werkhaüs via Discord infrastructure ou Humans</td><td>Urgent</td></tr>
+            <tr><td>Toutes et tous</td><td>Encourager participants et bénévoles potentiels à <a href="https://humans.nobodies.team" target="_blank">s'inscrire sur Teams</a></td><td>En continu</td></tr>
+            <tr><td>Peter D / tech</td><td>Remplacer l'estimation de fréquentation au doigt mouillé par un vrai modèle basé sur les données historiques de billetterie</td><td>D'ici 1 à 2 semaines</td></tr>
+            <tr><td>Coordinateurs</td><td>Tenir la réunion go/no-go</td><td>La semaine prochaine</td></tr>
+        </tbody>
+    </table>
+
+    <p><em>Minutes préparées à partir de l'enregistrement audio et de la transcription Gemini. Noms anonymisés au prénom+initiale là où les noms de famille apparaissaient&nbsp;; les pseudonymes de scène (Dr Plantes, Cocci, Misty, Don Funk, Cupcake) conservés tels qu'utilisés par les intervenant·e·s. Orthographes des noms de barrios selon humans.nobodies.team canonique.</em></p>
+</div>
+
+</div>
+
+                <div class="lang-content" data-lang="it">
+<div class="attendees">
+    <strong>Ospitato da Ellen / Dr Plantes (Planet Resilium), con sedici barrios che si presentano e le osservazioni conclusive di Peter D</strong>
+</div>
+
+<div class="resource-links">
+    <h3>Registrazioni Complete</h3>
+    <ul>
+        <li><a href="https://youtu.be/4XbDZzIuLsA">Registrazione video (YouTube)</a></li>
+        <li><a href="https://humans.nobodies.team/Barrios">Tutti i barrios (directory Humans)</a></li>
+    </ul>
+</div>
+
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/4XbDZzIuLsA" title="Riunione della Comunità &mdash; Speed Dating dei Barrios &mdash; 23 aprile 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<div class="meeting-content">
+    <h2>Riepilogo</h2>
+    <p>Sedici barrios si sono presentati in ritratti da cinque minuti a partecipanti non affiliati in cerca di una casa sulla playa. La gamma era vasta &mdash; da collettivi sperimentali low-tech di venti persone a cattedrali della festa da centoventi persone con collezioni curate di subwoofer. Le quote di camp andavano da &pound;50 (se costruisci per due settimane) a &euro;375 (se vuoi docce calde con pressione).</p>
+
+    <p>Peter D ha chiuso con un aggiornamento NCA. La proiezione dei biglietti si attesta tra 1.600 e 2.200, molto probabilmente 1.800. La prossima area di focus sono i volontari per la costruzione.</p>
+
+    <h2>I Sedici Barrios</h2>
+
+    <div class="barrio-card">
+        <h3>1. <a href="https://humans.nobodies.team/Barrios/barrio-espace">Barrio Espace</a> &mdash; Marianne F</h3>
+        <p>Francese, ~50 persone, compie 10 anni quest&rsquo;anno. Vibe orientata ai workshop con uno spazio attività &ldquo;big chill&rdquo; e una &ldquo;VIP area&rdquo; autodescritta sulla playa. La cosa del VIP è una trovata &mdash; gli ingressi sono sul retro, e la parte davanti esiste perché tu ci passi davanti e ostentatamente non ci entri. Marianne si è presentata da fuori un teatro di Parigi quindici minuti prima dell&rsquo;apertura del sipario ed è dichiaratamente poco a suo agio con i computer; un team di umani alfabetizzati a Discord la supporta. Candidati via Humans, oppure trova il canale Discord dei barrios e chiedi di lei.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>2. <a href="https://humans.nobodies.team/Barrios/ran-dome">Ran&rsquo;Dome</a> &mdash; Cocci</h3>
+        <p>Francese, dal 2014, zona rossa. Si autodefinisce &ldquo;il pub di Elsewhere&rdquo; &mdash; un posto dove sedersi, giocare, riposare, conoscere gente, bere qualcosa e fare tutto il resto che faresti in un bar. Carico di turni basso (una cucina, due LNT, con turni NORG extra incoraggiati quest&rsquo;anno). La quota di camp è a prezzo libero, a partire da &euro;115 per portafogli stretti, con una media di &euro;190, tutto compreso tra cui buffet 24 ore, pasto caldo serale, bevande, docce, e l&rsquo;impianto audio che serve per trasportare un piccolo nightclub attraverso un confine. Già autoassegnatisi il titolo di &ldquo;miglior barrio di Elsewhere 2026&rdquo; &mdash; scusate agli altri. Humans o Discord.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>3. <a href="https://humans.nobodies.team/Barrios/belly-town">Belly Town</a> &mdash; Eva / Elisa</h3>
+        <p>Piccolo (~30), tre o quattro anni di vita, francofono, vibe familiare. Workshop incentrati sul corpo: massaggio, danza, Qi Gong. Cene insieme, poi uscite insieme &mdash; &ldquo;una piccola squadra di folli&rdquo; nella traduzione della stessa speaker. Ha un angolo specifico dove gli introversi possono ricaricarsi. Una dietista interna pianifica i pasti, cosa che la speaker ha notato con udibile orgoglio. Quota di camp intorno a &euro;230, flessibile per redditi bassi e per chi vuole contribuire di più. Breve chiamata per confermare la vibe reciproca prima di unirsi. Humans.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>4. <a href="https://humans.nobodies.team/Barrios/yes">Yes! Camp</a> &mdash; Hannah &amp; Nancy</h3>
+        <p>Dieci anni di attività, sex positive, kinky, sensuale, centrato sul consenso, e &ldquo;non un sex camp ma molto giocoso&rdquo;. Inoltre: ricercatori spirituali, mindfulness, e cerchi mattutini dove tutto il camp fa check-in. Sono arrivate con le foto. Hanno fatto una presentazione con slide vera e propria. In evidenza workshop in stile Olimpico, cene comunitarie, e una scena di danza nella tempesta di sabbia che apparentemente è durata varie ripetizioni della stessa canzone. La battuta di apertura di Nancy: &ldquo;benvenuto in famiglia&rdquo; è ciò che dice a chiunque dica sì. Energia organizzativa olandese e tedesca &mdash; la conduttrice e Nancy hanno concordato che questa è una feature, non un bug. Humans, poi un modulo, tempi di risposta di dieci giorni, e hippy con buone intenzioni.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>5. <a href="https://humans.nobodies.team/Barrios/olive-odyssey">Olive Odyssey</a> &mdash; Elise</h3>
+        <p>Precedentemente noto come Fariha, ora meglio riconosciuto come Olive Odyssey. Vibe mediterranea, internamente per lo più ispanofona ma tutte le comunicazioni in inglese, ospitalità prima di tutto, si posiziona in un punto frontale così puoi entrare ed essere assorbito. Non un sex camp, non non un cuddle-puddle camp. Fa funzionare i nebulizzatori durante le ondate di calore e un bar pomeridiano ghiacciato giornaliero, entrambi risposta corretta al clima del deserto spagnolo. ~35 persone, quota appena sopra i &euro;200. Promette una conferenza sulla storia dell&rsquo;olio d&rsquo;oliva, con opinioni sulla verginità dello stesso.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>6. <a href="https://humans.nobodies.team/Barrios/curious-creatures">Curious Creatures</a> &mdash; Misty (aka Joel)</h3>
+        <p>Dal 2018, ora circa 65 persone rappresentanti ~40 paesi, con quartier generale ad Amsterdam e uno spazio maker attivo tutto l&rsquo;anno. Sex positive ma enfaticamente &ldquo;non un sex camp&rdquo; &mdash; anche workshop, un torneo da Maestro Pok&eacute;mon che Misty sostiene rimanga imbattuto, il rituale del tour dell&rsquo;arte francese con champagne, e il tentativo di restare un &ldquo;camp leggero, non pesante&rdquo; (parole loro, esplicitamente senza geopolitica). Domo antitempesta, tende ombreggiate, docce a pressione calde <em>e</em> fredde, e un angolo welfare con aria condizionata. Quota di &euro;375, tutto incluso. Video del camp su YouTube se vuoi un trailer prima di impegnarti. Humans / curiouscreatures.info.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>7. <a href="https://humans.nobodies.team/Barrios/desert-dessert">Desert Dessert</a> &mdash; Jonas (Tatiana non ce l&rsquo;ha fatta)</h3>
+        <p>Dal 2015. Cambia concept e nome ogni singolo anno, cosa che è performance art impegnata, intenzionale o meno. Un tempo era un sound camp a tutti gli effetti con un grande PA; ora ridimensionato a un salotto con cabina DJ, nicchia di suono alternativo (niente techno da teatro dell&rsquo;opera; lasciano quello ai grandi player). Cena alle 20:00 in punto, chiudono il camp una sera sì e una no così il barrio può andare a vedere cosa fanno tutti gli altri. Suono alternativo, uno spazio di gioco che esiste perché il sesso succedeva in angoli meno appropriati, elettroliti + torta nell&rsquo;ora della siesta. 25&ndash;30 persone. Nessun modulo &mdash; scrivi loro un&rsquo;email spiegando perché sei adatto, e ti chiamano. Il concept di quest&rsquo;anno è panetteria; intendono infornare per la playa.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>8. <a href="https://humans.nobodies.team/Barrios/glitch">Glitch</a> &mdash; Don Funk &amp; Jonathan</h3>
+        <p>42 persone (&ldquo;un numero magico&rdquo;), sex positive, club berlinese con accento francese, decori artistici, cucina rilassata con un ricambio costante di reduci dal dance floor. Don ha preparato slide durante le altre presentazioni e poi le ha brevemente perse a metà della condivisione; Jonathan ha coperto. Una doccia vetusta mostrata su una slide, con la spiegazione che dovevano metterci <em>qualcosa</em> perché Curious Creatures aveva alzato l&rsquo;asticella delle docce. Niente scrocconi, ma finanza inclusiva &mdash; contributo tipico &euro;200&ndash;300, con margine per meno se ti presenti di più. Aperti a novellini (posti riservati tenuti) e burner esperti. Humans.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>9. <a href="https://humans.nobodies.team/Barrios/jamhouse">JamHouse</a> &mdash; Espen, Alessia &amp; Frank</h3>
+        <p>Tre anni di vita, barrio costruito attorno al portare musica dal vivo sulla playa. Workshop, cerchi di percussioni, sessioni di vocal-release-therapy, &ldquo;jam tasting&rdquo; mattutino alla Marmalade House dove le marmellate fatte in casa da Frank (da Barcellona) venivano servite insieme a jam session dal vivo. Si sta valutando un pigiama party per il 2026. Doccia orgogliosa, cucina orgogliosa con finestra di servizio. Quota &euro;280, pasti in stile familiare quotidiani, cucina a quattro stelle con frigorifero. Iscrizioni su jamhouse.space. Frase di chiusura di Espen: se non finisci a JamHouse, &ldquo;have a fucking amazing burn&rdquo; comunque.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>10. <a href="https://humans.nobodies.team/Barrios/garden-of-joy">Garden of Joy</a> &mdash; Daniel T</h3>
+        <p>Camp più grande quest&rsquo;anno con 100&ndash;120 persone. Sex positive, playroom aperta 24/7, introducono gli angeli del consenso per la supervisione notturna. Cucina di radici italiane (ora internazionale) con formaggio fresco, prosciutto, polpo fresco, una macchina del gelato, e &mdash; secondo le parole del presentatore &mdash; &ldquo;mangio meglio al Garden che a casa mia.&rdquo; Ospita una crescente collezione di subwoofer Funktion One sul fronte, che il presentatore ha notato con una certa malinconia ora occupa l&rsquo;intera facciata, oscurando il resto della playa. Zona rossa; si va molto avanti. Tante lucine, sempre più di prima. Docce calde occasionali (condizionate al sole e al timing del rifornimento dei water cube). &euro;275 tutto compreso. Avvertenze finali del presentatore, in ordine: non venire se odi gli spazi sex-positive, la musica alta, o le lucine &mdash; ma se non ti piacciono le lucine, metti una benda e vieni comunque.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>11. <a href="https://humans.nobodies.team/Barrios/planet-resilium">Planet Resilium</a> &mdash; Ellen / Dr Plantes</h3>
+        <p>Il camp della conduttrice stessa. ~20 persone, francofono, per lo più esperti in altri burn, e per il resto una comunità attiva tutto l&rsquo;anno che fa un evento annuale insieme. Vincolo autoimposto: costruire il camp usando solo materiali low-tech, di origine biologica o di seconda mano, monitorare l&rsquo;impronta dei gas serra, evitare risorse non rinnovabili dove possibile. Cuociatori solari, baguette cotte al sole, torte al cioccolato cotte in un forno solare che apparentemente ha funzionato. Cucina vegetariana. Nessuna gerarchia, nessun lead &mdash; azione collettiva con il sovraccarico di governance che ciò implica. Non il camp della festa, non il sex camp, &ldquo;per i freak e i geek&rdquo;. Esperimento di quest&rsquo;anno: fusti di birra frizzante low-tech. Quota ~&euro;200 con un tetto solidarietà così basso che i membri a basso reddito non pagano mai più di quota di quanto abbia sia loro costato il biglietto scontato. Humans.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>12. <a href="https://humans.nobodies.team/Barrios/peach-please">Peach Please</a> &mdash; Miriam &amp; Liv (Cupcake è su un treno)</h3>
+        <p>Queer sex positive, 35 persone, terzo anno. Motto esplicito: &ldquo;portare l&rsquo;orgia queer che ci mancava, a Elsewhere.&rdquo; Spazio workshop, spazio coccole, spazio chill-out, una doccia che potrebbe o no essere apparsa nella foto della doccia di JamHouse. Cucina plant-based. Workshop di punta: disegno dal vivo dove i modelli erano persone queer che facevano attivamente sesso &mdash; ciò che le presentatrici hanno descritto come &ldquo;una prospettiva molto diversa sul voyeurismo.&rdquo; Quest&rsquo;anno stanno aggiornando lo spazio workshop a un domo e sperimentando con energia solare e un frigo sotterraneo. Quota media &euro;220, flessibile. Invitano specificamente persone queer; aperte ad alleati che scoprono cose.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>13. <a href="https://humans.nobodies.team/Barrios/jugaton">Jugaton</a> &mdash; Gabby &amp; Ory (i &ldquo;co-daddy&rdquo;)</h3>
+        <p>Terzo anno, parola spagnola per &ldquo;giocoso&rdquo;, estetica rosa e stampa animalier, nucleo di Barcellona più famiglia globale. Sex positive ma nessuno spazio di gioco dedicato &mdash; tenuto nella zona arancione. Minimo tre feste, workshop, cerchio di apertura, sistema di buddy (un buddy prima dell&rsquo;evento, un buddy diverso sulla playa &mdash; &ldquo;qualcuno da abbracciare e su cui piangere&rdquo;). Di punta: la loro festa kink estatica, che l&rsquo;organizzatrice lead Didi sta contemporaneamente facendo per 100 persone a Berlino questo weekend. Quota &euro;250&ndash;300, flessibilità per redditi bassi. Molto internazionale, mix di gente da festa hardcore e meno-hardcore. Chiusura di Ory: &ldquo;avrai sempre famiglia intorno che vuole divertirsi con te.&rdquo; Anglofono.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>14. <a href="https://humans.nobodies.team/Barrios/wonderever">Wonderever</a> &mdash; Rishas</h3>
+        <p>Decimo anno. Tema: comfort. Un sacco di amache. Più amache di quante te ne aspetteresti. La grande struttura a W visibile dal centro della playa è il faro &mdash; se ti perdi di notte, cammina verso la W. Cibo comunitario per lo più vegetariano, porta il tuo non-veg se insisti. Posti a sedere accessibili per disabili nella torre. Non molto orientato ai workshop in quanto ospiti, ma ospitale verso i workshop che altri conducono. Intorno a 40 persone, ~&euro;200 in precedenza, quota da confermare. Un gatto di nome Victor a volte viaggia con loro; quest&rsquo;anno incerto.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>15. <a href="https://humans.nobodies.team/Barrios/werkhuas">Werkha&uuml;s</a></h3>
+        <p>L&rsquo;<em>altra</em> W sulla playa. Casa delle crew di build e strike. Non proprio un barrio di stile di vita &mdash; è il camp per chi vuole far esistere fisicamente tutti gli altri barrios. Quota camp &pound;50, ridotta per biglietti a basso reddito, si mangia gratis alla Cantina, si accampa sotto una struttura ombreggiata che va su quasi immediatamente. Quest&rsquo;anno ha un sacco di spazio e vari allarmi che suonano nelle riunioni a riguardo. L&rsquo;early build inizia il 16 giugno; anche la seconda settimana di build è largamente aperta. La richiesta è stata esplicita: se conosci un costruttore, mandalo. Durante l&rsquo;evento, Werkha&uuml;s diventa uno spazio di ritrovo sociale per tutti i volontari. &ldquo;Build is the best part.&rdquo; Discord &rarr; infrastructure, oppure Humans.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>16. <a href="https://humans.nobodies.team/Barrios/barrio-del-sol">Barrio del Sol</a> &mdash; Lucas E</h3>
+        <p>Piccolo (cap 25), sciocco, proattivo, follemente internazionale, grande contingente francese. Scuola di filosofia della doccia &ldquo;chi se ne frega, andiamo a prenderci una birra&rdquo; &mdash; una pompa da campeggio basilare, fredda di proposito perché tanto ci sono 40&deg;C. Bell tent per i workshop, impianto audio per feste sciocche, container convertito in cucina con aria condizionata, camp completamente vegan con eccezioni BYO, e &mdash; quasi dimenticata nel pitch &mdash; <em>una piscina</em>, attualmente in raccolta fondi. I turni di volontariato come pool-attendant sono, secondo Lucas, &ldquo;belli, divertenti e facili.&rdquo; Quota fissa di &pound;190 che include cibo, bevande, alcol, infrastruttura. Humans.</p>
+    </div>
+
+    <h2>Aggiornamento NCA &mdash; Peter D</h2>
+    <p>Un gruppo di direttori ha partecipato all&rsquo;European Leadership Summit (ELS) lo scorso weekend. La riunione di go/no-go dei coordinatori per l&rsquo;evento 2026 è programmata per la prossima settimana, e i segnali attuali sono positivi. L&rsquo;area di focus aperta è il reclutamento di volontari &mdash; in particolare per le settimane di build.</p>
+
+    <p><strong>Proiezione biglietti:</strong> 1.600&ndash;2.200 venduti, probabilmente atterrando intorno a 1.800. È in corso un lavoro per sostituire l&rsquo;attuale metodo a spanne con un modello matematico vero e proprio alimentato da dati storici di vendita &mdash; previsto pronto tra una o due settimane.</p>
+
+    <h2>Azioni</h2>
+    <table class="action-table">
+        <thead>
+            <tr><th>Chi</th><th>Azione</th><th>Quando</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Aspiranti membri dei camp</td><td>Candidarsi tramite le pagine barrio su Humans, Discord, o i moduli linkati</td><td>In corso</td></tr>
+            <tr><td>Lead dei barrios</td><td>Rispondere alle candidature entro i tempi promessi</td><td>In corso</td></tr>
+            <tr><td>Comunità</td><td>Reclutare costruttori (specialmente per l&rsquo;early build che inizia il 16 giugno); indirizzarli a Werkha&uuml;s tramite Discord infrastructure o Humans</td><td>Urgente</td></tr>
+            <tr><td>Tutti</td><td>Incoraggiare partecipanti e aspiranti volontari a <a href="https://humans.nobodies.team" target="_blank">registrarsi su Teams</a></td><td>In corso</td></tr>
+            <tr><td>Peter D / tech</td><td>Sostituire la stima di affluenza a spanne con un modello reale basato su dati storici dei biglietti</td><td>Prossime 1&ndash;2 settimane</td></tr>
+            <tr><td>Coordinatori</td><td>Tenere la riunione go/no-go</td><td>Prossima settimana</td></tr>
+        </tbody>
+    </table>
+
+    <p><em>Verbali preparati dalla registrazione audio e dalla trascrizione Gemini. Nomi sanitizzati a nome di battesimo più iniziale dove comparivano cognomi; handle da camp-scene (Dr Plantes, Cocci, Misty, Don Funk, Cupcake) mantenuti come usati dagli speaker. Grafia dei nomi dei barrios secondo la forma canonica di humans.nobodies.team.</em></p>
+</div>
+
+</div>
+
+                <div class="lang-content" data-lang="de">
+<div class="attendees">
+    <strong>Moderiert von Ellen / Dr Plantes (Planet Resilium), mit sechzehn Barrios, die sich vorstellten, und einem Schlusswort von Peter D</strong>
+</div>
+
+<div class="resource-links">
+    <h3>Vollständige Aufzeichnungen</h3>
+    <ul>
+        <li><a href="https://youtu.be/4XbDZzIuLsA">Videoaufzeichnung (YouTube)</a></li>
+        <li><a href="https://humans.nobodies.team/Barrios">Alle Barrios (Humans-Verzeichnis)</a></li>
+    </ul>
+</div>
+
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/4XbDZzIuLsA" title="Community-Meeting &mdash; Barrios Speed-Dating &mdash; 23. April 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<div class="meeting-content">
+    <h2>Zusammenfassung</h2>
+    <p>Sechzehn Barrios präsentierten sich in fünfminütigen Porträts vor nicht zugeordneten Teilnehmenden, die ein Zuhause auf der playa suchten. Die Bandbreite war enorm &mdash; von zwanzigköpfigen Low-Tech-Experimentierkollektiven bis zu hundertzwanzigköpfigen Party-Kathedralen mit kuratierten Subwoofer-Sammlungen. Die Camp-Gebühren reichten von £50 (wenn du zwei Wochen mitbaust) bis €375 (wenn du heiße Duschen mit Druck willst).</p>
+
+    <p>Peter D schloss mit einem NCA-Update. Die Ticket-Prognose liegt bei 1.600&ndash;2.200, wahrscheinlich 1.800. Der nächste Schwerpunkt sind Freiwillige für den Aufbau.</p>
+
+    <h2>Die Sechzehn Barrios</h2>
+
+    <div class="barrio-card">
+        <h3>1. <a href="https://humans.nobodies.team/Barrios/barrio-espace">Barrio Espace</a> &mdash; Marianne F</h3>
+        <p>Französisch, ~50 Personen, wird dieses Jahr 10. Workshop-lastige Atmosphäre mit einem &bdquo;Big Chill&ldquo;-Aktivitätsbereich und einem selbsternannten &bdquo;VIP-Bereich&ldquo; auf der playa. Die VIP-Sache ist ein Scherz &mdash; Eingänge hinten, und die Front existiert, damit du vorbeigehen und betont nicht hineingehen kannst. Marianne präsentierte von außerhalb eines Pariser Theaters fünfzehn Minuten vor Vorstellungsbeginn und gibt offen zu, nicht gut mit Computern zu sein; ein Team von Discord-kundigen Menschen unterstützt sie. Bewerbung über Humans, oder finde den Barrios-Discord-Kanal und frage nach ihr.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>2. <a href="https://humans.nobodies.team/Barrios/ran-dome">Ran&rsquo;Dome</a> &mdash; Cocci</h3>
+        <p>Französisch, seit 2014, rote Zone. Beschreibt sich selbst als &bdquo;den Elsewhere-Pub&ldquo; &mdash; ein Ort zum Sitzen, Spielen, Ausruhen, Leute treffen, etwas trinken und alles andere, was man in einer Bar tun würde. Geringe Schichtlast (eine Küche, zwei LNT, mit zusätzlichen NORG-Schichten, die dieses Jahr gefördert werden). Die Camp-Gebühr ist preisoffen, beginnend bei €115 für knappe Geldbeutel, im Durchschnitt €190, alles inklusive, einschließlich 24-Stunden-Buffet, warmem Abendessen, Getränken, Duschen und der Soundanlage, die es braucht, um einen kleinen Nachtclub über eine Grenze zu transportieren. Hat sich bereits selbst zum &bdquo;besten Barrio von Elsewhere 2026&ldquo; gekürt &mdash; sorry an die anderen. Humans oder Discord.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>3. <a href="https://humans.nobodies.team/Barrios/belly-town">Belly Town</a> &mdash; Eva / Elisa</h3>
+        <p>Klein (~30), drei oder vier Jahre alt, französischsprachig, Familienatmosphäre. Körperzentrierte Workshops: Massage, Tanz, Qi Gong. Gemeinsame Abendessen, dann gemeinsam ausgehen &mdash; &bdquo;ein kleines Team von Narren&ldquo; in der Eigenübersetzung der Sprecherin. Hat eine Ecke speziell für Introvertierte zum Aufladen. Eine hauseigene Ernährungsberaterin plant die Mahlzeiten, was die Sprecherin mit hörbarem Stolz erwähnte. Camp-Gebühr etwa €230, flexibel für geringes Einkommen und für diejenigen, die mehr beitragen möchten. Kurzes Telefonat zur Bestätigung der gegenseitigen Chemie vor dem Beitritt. Humans.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>4. <a href="https://humans.nobodies.team/Barrios/yes">Yes! Camp</a> &mdash; Hannah &amp; Nancy</h3>
+        <p>Zehn Jahre dabei, sexpositiv, kinky, sinnlich, konsensorientiert und &bdquo;kein Sex-Camp, aber sehr verspielt&ldquo;. Außerdem: spirituelle Suchende, Achtsamkeit und Morgenkreise, in denen das ganze Camp eincheckt. Kamen mit Fotos. Haben tatsächlich eine Diashow gemacht. Boten Workshops im olympischen Stil, gemeinsame Abendessen und eine Sandsturm-Tanzszene, die offenbar mehrere Wiederholungen desselben Liedes lang andauerte. Nancys Eröffnung: &bdquo;Willkommen in der Familie&ldquo; ist, was sie zu allen sagt, die Ja sagen. Niederländische und deutsche Organisationsenergie &mdash; die Moderatorin und Nancy waren sich einig, dass dies ein Feature ist, kein Bug. Humans, dann ein Formular, zehn Tage Bearbeitungszeit und Hippies, die es gut meinen.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>5. <a href="https://humans.nobodies.team/Barrios/olive-odyssey">Olive Odyssey</a> &mdash; Elise</h3>
+        <p>Früher bekannt als Fariha, jetzt besser bekannt als Olive Odyssey. Mediterrane Atmosphäre, intern überwiegend spanischsprachig, aber alle Kommunikation auf Englisch, gastfreundschaftsorientiert, positioniert sich an einem nach vorne gerichteten Platz, damit du hereinkommen und aufgenommen werden kannst. Kein Sex-Camp, aber auch kein Nicht-Kuschel-Camp. Betreibt Mister bei Hitzewellen und eine tägliche eiskalte Nachmittagsbar, beides die richtige Antwort auf das Wetter in der spanischen Wüste. ~35 Personen, knapp über €200 Gebühr. Verspricht einen Vortrag über die Geschichte des Olivenöls, mit Meinungen über die Jungfräulichkeit darin.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>6. <a href="https://humans.nobodies.team/Barrios/curious-creatures">Curious Creatures</a> &mdash; Misty (alias Joel)</h3>
+        <p>Seit 2018, jetzt rund 65 Personen aus ~40 Ländern, mit Hauptsitz in Amsterdam und einem ganzjährigen Maker-Space. Sexpositiv, aber nachdrücklich &bdquo;kein Sex-Camp&ldquo; &mdash; dazu Workshops, ein Pokémon-Master-Turnier, von dem Misty behauptet, es sei ungeschlagen, ihr französisches Kunsttour-mit-Champagner-Ritual und der Versuch, ein &bdquo;leichtes Camp, kein schweres&ldquo; zu bleiben (ihre eigene Formulierung, ausdrücklich geopolitikfrei). Sturmfester Dome, schattiges Zelten, heiße <em>und</em> kalte Druckduschen und eine klimatisierte Welfare-Ecke. €375 Gebühr, alles inklusive. Camp-Video auf YouTube, falls du einen Trailer vor der Zusage willst. Humans / curiouscreatures.info.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>7. <a href="https://humans.nobodies.team/Barrios/desert-dessert">Desert Dessert</a> &mdash; Jonas (Tatiana konnte nicht kommen)</h3>
+        <p>Seit 2015. Ändert jedes einzelne Jahr Konzept und Namen, was engagierte Performance-Kunst ist, ob beabsichtigt oder nicht. War früher ein vollständiges Sound-Camp mit großer PA; jetzt auf ein Wohnzimmer mit DJ-Booth heruntergefahren, die Alternativ-Sound-Nische (kein Opernhaus-Techno; das überlassen sie den Großen). Abendessen um 20:00 Uhr pünktlich, schließt das Camp jede zweite Nacht, damit das Barrio sehen kann, was alle anderen machen. Alt-Sound, ein Play-Space, der existiert, weil Sex früher in weniger geeigneten Ecken stattfand, Siesta-Stunden-Elektrolyte + Kuchen. 25&ndash;30 Personen. Kein Formular &mdash; du schreibst ihnen eine E-Mail, in der du erklärst, warum du passt, und sie rufen an. Das diesjährige Konzept ist Bäckerei; sie beabsichtigen, für die playa zu backen.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>8. <a href="https://humans.nobodies.team/Barrios/glitch">Glitch</a> &mdash; Don Funk &amp; Jonathan</h3>
+        <p>42 Personen (&bdquo;eine magische Zahl&ldquo;), sexpositiv, Berlin-Club-mit-französischem-Akzent, kunstvolle Deko, entspannte Küche mit stetiger Rotation von Post-Dancefloor-Rückkehrern. Don erstellte Folien während der anderen Präsentationen und verlor sie dann kurzzeitig mitten im Teilen; Jonathan übernahm. Eine ältere Dusche auf einer Folie gezeigt, mit der Erklärung, dass sie <em>irgendetwas</em> zeigen mussten, weil Curious Creatures die Dusch-Messlatte hochgelegt hatte. Keine Trittbrettfahrer, aber inklusive Finanzen &mdash; typischer Beitrag €200&ndash;300, mit Spielraum für weniger, wenn du mehr anpackst. Offen für Neulinge (reservierte Plätze) und erfahrene burner gleichermaßen. Humans.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>9. <a href="https://humans.nobodies.team/Barrios/jamhouse">JamHouse</a> &mdash; Espen, Alessia &amp; Frank</h3>
+        <p>Drei Jahre alt, ein Barrio rund um das Bringen von Live-Musik auf die playa. Workshops, Trommelkreise, Stimm-Release-Therapie-Dinge, morgendliche &bdquo;Jam-Verkostung&ldquo; im Marmalade House, wo Franks hausgemachte Marmeladen (aus Barcelona) neben Live-Jams serviert wurden. Eine Pyjama-Party wird für 2026 erwogen. Stolze Dusche, stolze Küche mit einem Serviermonster. €280 Gebühr, täglich Familienstil-Mahlzeiten, Vier-Sterne-Küche mit Kühlschrank. Anmeldung unter jamhouse.space. Espens Schlusssatz: Wenn du nicht bei JamHouse landest, &bdquo;hab trotzdem einen verdammt großartigen burn&ldquo;.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>10. <a href="https://humans.nobodies.team/Barrios/garden-of-joy">Garden of Joy</a> &mdash; Daniel T</h3>
+        <p>Größtes Camp dieses Jahr mit 100&ndash;120 Personen. Sexpositiv, Playroom rund um die Uhr geöffnet, Einführung von Consent Angels für die nächtliche Aufsicht. Italienisch verwurzelte (inzwischen internationale) Küche mit frischem Käse, Schinken, frischem Pulpo, einer Eismaschine und &mdash; in den Worten des Vortragenden &mdash; &bdquo;Ich esse im Garden besser als zu Hause.&ldquo; Beherbergt eine wachsende Sammlung von Funktion-One-Subwoofern an der Front, von denen der Vortragende etwas wehmütig anmerkte, dass sie inzwischen die gesamte Fassade einnimmt und den Rest der playa verdeckt. Rote Zone; geht sehr spät. Viele Lichterketten, immer mehr als zuvor. Gelegentlich heiße Duschen (abhängig von Sonne und Wasserwürfel-Nachfüll-Timing). €275 alles inklusive. Abschließende Einschränkungen des Vortragenden, in dieser Reihenfolge: Komm nicht, wenn du sexpositive Räume, laute Musik oder Lichterketten hasst &mdash; aber wenn du Lichterketten nicht magst, trag eine Augenbinde und komm trotzdem.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>11. <a href="https://humans.nobodies.team/Barrios/planet-resilium">Planet Resilium</a> &mdash; Ellen / Dr Plantes</h3>
+        <p>Das eigene Camp der Moderatorin. ~20 Personen, französischsprachig, überwiegend erfahren auf anderen burns, und ansonsten eine ganzjährige Gemeinschaft, die einmal jährlich eine Veranstaltung gemeinsam macht. Selbst auferlegte Einschränkung: Camp-Bau nur mit Low-Tech-, biobasierten oder gebrauchten Materialien, Nachverfolgung des Treibhausgas-Fußabdrucks, Vermeidung nicht-erneuerbarer Ressourcen wo möglich. Solarkocher, solargebackene Baguettes, Schokoladenkuchen aus einem Solarofen, der offenbar funktionierte. Vegetarische Küche. Keine Hierarchie, keine Leads &mdash; kollektives Handeln mit dem damit verbundenen Governance-Aufwand. Nicht das Party-Camp, nicht das Sex-Camp, &bdquo;für die Freaks und Geeks&ldquo;. Das diesjährige Experiment: Low-Tech-Sparkly-Beer-Fässer. ~€200 Gebühr mit einer Solidaritätsobergrenze, damit Mitglieder mit geringem Einkommen nie mehr an Gebühren zahlen als ihre vergünstigten Ticketkosten. Humans.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>12. <a href="https://humans.nobodies.team/Barrios/peach-please">Peach Please</a> &mdash; Miriam &amp; Liv (Cupcake ist in einem Zug)</h3>
+        <p>Queer sexpositiv, 35 Personen, drittes Jahr. Explizites Motto: &bdquo;Die queere Orgie, die uns fehlte, nach Elsewhere bringen.&ldquo; Workshop-Bereich, Kuschel-Bereich, Chill-out-Bereich, eine Dusche, die möglicherweise auf JamHouses Duschfoto erschienen ist. Pflanzenbasierte Küche. Signatur-Workshop: Live-Zeichnen, bei dem die Modelle queere Personen waren, die aktiv Sex hatten &mdash; was die Vortragenden als &bdquo;eine sehr andere Perspektive auf Voyeurismus&ldquo; beschrieben. Dieses Jahr rüsten sie den Workshop-Bereich zu einem Dome auf und experimentieren mit Solarenergie und einem unterirdischen Kühlschrank. Durchschnittsgebühr €220, flexibel. Laden speziell queere Menschen ein; offen für Verbündete, die Dinge entdecken.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>13. <a href="https://humans.nobodies.team/Barrios/jugaton">Jugaton</a> &mdash; Gabby &amp; Ory (die &bdquo;Co-Daddies&ldquo;)</h3>
+        <p>Drittes Jahr, spanisches Wort für &bdquo;verspielt&ldquo;, Ästhetik in Pink und Animal Print, Barcelona-Kern plus globale Familie. Sexpositiv, aber kein eigener Play-Space &mdash; in der orangefarbenen Zone angesiedelt. Mindestens drei Partys, Workshops, Eröffnungskreis, Buddy-System (ein Buddy vor dem Event, ein anderer Buddy auf der playa &mdash; &bdquo;jemand zum Umarmen und Ausheulen&ldquo;). Signatur: ihre ekstatische Kink-Party, die die Hauptorganisatorin Didi dieses Wochenende gleichzeitig für 100 Personen in Berlin ausrichtet. Gebühr €250&ndash;300, flexibel für geringes Einkommen. Sehr international, Mix aus hardcore und weniger hardcore Party-Leuten. Orys Schlusswort: &bdquo;Du wirst immer Familie um dich haben, die Spaß mit dir haben will.&ldquo; Englischsprachig.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>14. <a href="https://humans.nobodies.team/Barrios/wonderever">Wonderever</a> &mdash; Rishas</h3>
+        <p>Zehntes Jahr. Thema: Komfort. Viele Hängematten. Mehr Hängematten als du erwarten würdest. Die große W-Struktur, die von der Mitte der playa aus sichtbar ist, ist der Leuchtturm &mdash; wenn du nachts verloren bist, geh Richtung W. Überwiegend vegetarisches Gemeinschaftsessen, BYO nicht-veggie wenn du darauf bestehst. Behindertenfreundliche Sitzgelegenheiten im Turm. Als Gastgeber nicht workshop-lastig, aber gastfreundlich gegenüber Workshops, die andere veranstalten. Rund 40 Personen, ~€200 zuvor, Gebühr noch zu bestätigen. Eine Katze namens Victor reist manchmal mit ihnen; dieses Jahr unklar.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>15. <a href="https://humans.nobodies.team/Barrios/werkhuas">Werkhaüs</a></h3>
+        <p>Das <em>andere</em> W auf der playa. Heimat der Build- und Strike-Crews. Eigentlich kein Lifestyle-Barrio &mdash; es ist das Camp für Leute, die wollen, dass all die anderen Barrios physisch existieren. £50 Camp-Gebühr, reduziert für Tickets mit geringem Einkommen, kostenloses Essen in der Cantina, Campen unter einer Beschattungsstruktur, die fast sofort steht. Dieses Jahr gibt es viel Platz und mehrere Alarmglocken, die in Meetings darüber schrillen. Der frühe Aufbau beginnt am 16. Juni; auch die zweite Aufbauwoche ist weit offen. Die Bitte war explizit: Wenn du einen Bauer kennst, schick ihn. Während des Events wird Werkhaüs zu einem sozialen Treffpunkt für alle Freiwilligen. &bdquo;Der Aufbau ist der beste Teil.&ldquo; Discord &rarr; infrastructure, oder Humans.</p>
+    </div>
+
+    <div class="barrio-card">
+        <h3>16. <a href="https://humans.nobodies.team/Barrios/barrio-del-sol">Barrio del Sol</a> &mdash; Lucas E</h3>
+        <p>Klein (max. 25), albern, proaktiv, wild international, großes französisches Kontingent. &bdquo;Wen kümmert&rsquo;s, lass uns ein Bier holen&ldquo;-Schule der Duschphilosophie &mdash; eine einfache Pump-Camping-Sache, absichtlich kalt, weil es sowieso 40 °C hat. Bell-Zelt für Workshops, Soundsystem für alberne Partys, Container umgebaut zu klimatisierter Küche, vollständig veganes Camp mit BYO-Ausnahmen und &mdash; im Pitch fast vergessen &mdash; <em>ein Swimmingpool</em>, für den gerade Gelder gesammelt werden. Freiwillige Pool-Aufsicht-Schichten sind laut Lucas &bdquo;nett, lustig und einfach&ldquo;. £190 Pauschalgebühr einschließlich Essen, Getränke, Alkohol, Infrastruktur. Humans.</p>
+    </div>
+
+    <h2>NCA-Update &mdash; Peter D</h2>
+    <p>Eine Gruppe von Direktoren nahm letztes Wochenende am European Leadership Summit (ELS) teil. Das Go/No-Go-Meeting der Koordinatoren für das Event 2026 ist für nächste Woche angesetzt, und die aktuellen Zeichen sind positiv. Der ausstehende Schwerpunkt ist das Anwerben von Freiwilligen &mdash; insbesondere für die Aufbauwochen.</p>
+
+    <p><strong>Ticket-Prognose:</strong> 1.600&ndash;2.200 verkauft, wahrscheinlich landend bei etwa 1.800. Es wird daran gearbeitet, die aktuelle Daumen-über-den-Wind-Methode durch ein richtiges mathematisches Modell zu ersetzen, das mit historischen Verkaufsdaten gefüttert wird &mdash; voraussichtlich in ein bis zwei Wochen fertig.</p>
+
+    <h2>Aktionspunkte</h2>
+    <table class="action-table">
+        <thead>
+            <tr><th>Wer</th><th>Aktion</th><th>Wann</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Interessierte Camp-Beitretende</td><td>Bewerbung über die Humans-Barrio-Seiten, Discord oder die verlinkten Formulare</td><td>Laufend</td></tr>
+            <tr><td>Barrio-Leads</td><td>Antwort auf Bewerbungen innerhalb der versprochenen Zeitfenster</td><td>Laufend</td></tr>
+            <tr><td>Community</td><td>Bauer anwerben (insbesondere für den frühen Aufbau ab 16. Juni); sie an Werkhaüs über Discord infrastructure oder Humans verweisen</td><td>Dringend</td></tr>
+            <tr><td>Alle</td><td>Teilnehmende und potenzielle Freiwillige ermutigen, sich <a href="https://humans.nobodies.team" target="_blank">auf Teams zu registrieren</a></td><td>Laufend</td></tr>
+            <tr><td>Peter D / Tech</td><td>Daumen-über-den-Wind-Teilnahmeschätzung durch ein echtes Modell auf Basis historischer Ticketdaten ersetzen</td><td>Nächste 1&ndash;2 Wochen</td></tr>
+            <tr><td>Koordinatoren</td><td>Go/No-Go-Meeting abhalten</td><td>Nächste Woche</td></tr>
+        </tbody>
+    </table>
+
+    <p><em>Protokoll erstellt aus der Audioaufnahme und dem Gemini-Transkript. Namen anonymisiert zu Vornamen plus Initial, wo Nachnamen auftauchten; Camp-Szene-Handles (Dr Plantes, Cocci, Misty, Don Funk, Cupcake) beibehalten, wie von den Sprechenden verwendet. Barrio-Namensschreibweisen gemäß der kanonischen Form auf humans.nobodies.team.</em></p>
+</div>
+
+</div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+    <script src="../script.js"></script>
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
