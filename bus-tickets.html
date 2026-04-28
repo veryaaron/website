@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Tickets | Elsewhere &mdash; by Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .legal-page { padding: 8rem 0 4rem; }
+        .legal-header { text-align: center; margin-bottom: 3rem; }
+        .legal-header h1 { margin-bottom: 1rem; }
+        .legal-intro { color: var(--color-text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto; padding-bottom: 2rem; border-bottom: 1px solid var(--color-border); line-height: 1.7; }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: var(--color-text-muted); font-size: 0.9rem; }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+        .legal-content { max-width: 800px; margin: 0 auto; }
+        .legal-section { margin-top: 3rem; }
+        .legal-section h2 { font-size: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+        .legal-section h3 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .legal-section p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
+        .legal-section ul { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; padding-left: 1.5rem; }
+        .legal-section li { margin-bottom: 0.5rem; }
+        .legal-section a { color: var(--color-accent); font-weight: 500; }
+        .legal-contact { margin-top: 3rem; padding: 2rem 2.5rem; background: var(--color-bg-alt); border-radius: var(--radius); text-align: center; color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.7; }
+        .legal-contact a { color: var(--color-accent); font-weight: 500; }
+        @media (max-width: 768px) { .legal-page { padding: 6rem 0 3rem; } }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 2rem 0; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .bus-keyfacts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+        .bus-keyfact { padding: 1.25rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 3px solid var(--color-accent); }
+        .bus-keyfact .label { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-muted); margin-bottom: 0.4rem; }
+        .bus-keyfact .value { display: block; font-size: 1.25rem; font-weight: 600; color: var(--color-text); }
+        .bus-route { font-style: italic; color: var(--color-text-muted); margin-top: 0.25rem; margin-bottom: 1rem; }
+        .bus-schedule-list { list-style: none; padding-left: 0; }
+        .bus-schedule-list li { padding: 0.75rem 1rem; margin-bottom: 0.5rem; background: var(--color-bg-alt); border-radius: var(--radius); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+        .bus-schedule-list .date { font-weight: 600; color: var(--color-text); }
+        .bus-schedule-list .time { color: var(--color-text-muted); }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="legal-page">
+        <div class="container">
+            <a href="/" class="back-link">Back to Home</a>
+
+            <div class="legal-header">
+                <h1>Bus Tickets</h1>
+                <p class="legal-intro">Elsewhere 2026 &mdash; coaches between Barcelona and the site.</p>
+            </div>
+
+            <div class="lang-toggle">
+                <button class="active" data-lang="en">English</button>
+                <button data-lang="es">Espa&ntilde;ol</button>
+                <button data-lang="fr">Fran&ccedil;ais</button>
+                <button data-lang="it">Italiano</button>
+                <button data-lang="de">Deutsch</button>
+            </div>
+
+            <div class="legal-content">
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <section class="legal-section">
+                        <h2>The essentials</h2>
+
+                        <div class="bus-keyfacts">
+                            <div class="bus-keyfact">
+                                <span class="label">Price</span>
+                                <span class="value">&euro;48 per seat</span>
+                            </div>
+                            <div class="bus-keyfact">
+                                <span class="label">On sale from</span>
+                                <span class="value">Mon 4 May, 20:00 CEST</span>
+                            </div>
+                        </div>
+
+                        <p style="margin-top: 1.5rem;">Bus tickets are <strong>not included</strong> in your event ticket. They are sold separately and seats are limited &mdash; book early. Extra buses may be added in either direction if demand is high.</p>
+
+                        <!-- TODO: replace with the live ticket sale URL once published. -->
+                        <p><em>The sale link will be published here when tickets go live on Monday 4 May at 20:00 CEST. Watch the <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a>, <a href="https://t.me/nobodiescollective" target="_blank">Telegram</a> or <a href="https://chat.whatsapp.com/HXJTO6nevLw9QlORlkHxY0?mode=gi_c" target="_blank">WhatsApp</a> announcement channels for the link.</em></p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Outbound &mdash; to Elsewhere</h2>
+                        <p class="bus-route">Barcelona Sants &rarr; El Prat Airport &rarr; Sari&ntilde;ena (1 hour break) &rarr; Elsewhere</p>
+                        <ul class="bus-schedule-list">
+                            <li><span class="date">Friday 3 July 2026</span><span class="time">11:00</span></li>
+                            <li><span class="date">Monday 6 July 2026</span><span class="time">11:30</span></li>
+                            <li><span class="date">Monday 6 July 2026</span><span class="time">16:00</span></li>
+                            <li><span class="date">Tuesday 7 July 2026</span><span class="time">11:00</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Return &mdash; from Elsewhere</h2>
+                        <p class="bus-route">Elsewhere &rarr; El Prat Airport &rarr; Barcelona Sants</p>
+                        <ul class="bus-schedule-list">
+                            <li><span class="date">Sunday 12 July 2026</span><span class="time">13:00</span></li>
+                            <li><span class="date">Monday 13 July 2026</span><span class="time">13:00</span></li>
+                            <li><span class="date">Tuesday 14 July 2026</span><span class="time">13:00</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Good to know</h2>
+                        <ul>
+                            <li>All times are local (CEST).</li>
+                            <li>Buses pick up at <strong>Barcelona Sants Estaci&oacute;n</strong> (train station) and <strong>El Prat Airport</strong> on the way out, in that order.</li>
+                            <li>The Sari&ntilde;ena stop is a one-hour break for stretching, food and supplies.</li>
+                            <li>Seats are limited. If you want to be sure of a spot, book as soon as sales open.</li>
+                            <li>If a journey sells out, extra buses may be added &mdash; keep an eye on the announcement channels.</li>
+                        </ul>
+                    </section>
+
+                    <div class="legal-contact">
+                        <p>Questions about the bus? Email <a href="mailto:hello@nobodies.team">hello@nobodies.team</a> and we&rsquo;ll point you at the right human.</p>
+                        <p>Love, dust, and desert wheels. &#x1F9E1;</p>
+                    </div>
+                </div>
+
+                <!-- ==================== ESPAÑOL ==================== -->
+                <div class="lang-content" data-lang="es">
+                    <section class="legal-section">
+                        <h2>Lo esencial</h2>
+
+                        <div class="bus-keyfacts">
+                            <div class="bus-keyfact">
+                                <span class="label">Precio</span>
+                                <span class="value">48&euro; por plaza</span>
+                            </div>
+                            <div class="bus-keyfact">
+                                <span class="label">A la venta desde</span>
+                                <span class="value">Lun 4 mayo, 20:00 CEST</span>
+                            </div>
+                        </div>
+
+                        <p style="margin-top: 1.5rem;">Los billetes de autob&uacute;s <strong>no est&aacute;n incluidos</strong> en tu entrada al evento. Se venden por separado y las plazas son limitadas &mdash; reserva pronto. Si la demanda es alta, podr&iacute;an a&ntilde;adirse autobuses adicionales en cualquiera de las direcciones.</p>
+
+                        <p><em>El enlace de compra se publicar&aacute; aqu&iacute; cuando los billetes salgan a la venta el lunes 4 de mayo a las 20:00 CEST. Atenta a los canales de anuncios en <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a>, <a href="https://t.me/nobodiescollective" target="_blank">Telegram</a> o <a href="https://chat.whatsapp.com/HXJTO6nevLw9QlORlkHxY0?mode=gi_c" target="_blank">WhatsApp</a>.</em></p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Ida &mdash; hacia Elsewhere</h2>
+                        <p class="bus-route">Barcelona Sants &rarr; Aeropuerto de El Prat &rarr; Sari&ntilde;ena (parada de 1 hora) &rarr; Elsewhere</p>
+                        <ul class="bus-schedule-list">
+                            <li><span class="date">Viernes 3 de julio de 2026</span><span class="time">11:00</span></li>
+                            <li><span class="date">Lunes 6 de julio de 2026</span><span class="time">11:30</span></li>
+                            <li><span class="date">Lunes 6 de julio de 2026</span><span class="time">16:00</span></li>
+                            <li><span class="date">Martes 7 de julio de 2026</span><span class="time">11:00</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Vuelta &mdash; desde Elsewhere</h2>
+                        <p class="bus-route">Elsewhere &rarr; Aeropuerto de El Prat &rarr; Barcelona Sants</p>
+                        <ul class="bus-schedule-list">
+                            <li><span class="date">Domingo 12 de julio de 2026</span><span class="time">13:00</span></li>
+                            <li><span class="date">Lunes 13 de julio de 2026</span><span class="time">13:00</span></li>
+                            <li><span class="date">Martes 14 de julio de 2026</span><span class="time">13:00</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Bueno saber</h2>
+                        <ul>
+                            <li>Todas las horas son locales (CEST).</li>
+                            <li>Los autobuses recogen en <strong>Barcelona Sants Estaci&oacute;n</strong> (estaci&oacute;n de tren) y en el <strong>Aeropuerto de El Prat</strong>, en ese orden.</li>
+                            <li>La parada de Sari&ntilde;ena es un descanso de una hora para estirar las piernas, comer y aprovisionarse.</li>
+                            <li>Las plazas son limitadas. Si quieres asegurarte sitio, reserva en cuanto abra la venta.</li>
+                            <li>Si un viaje se agota, podr&iacute;an a&ntilde;adirse autobuses adicionales &mdash; atenta a los canales de anuncios.</li>
+                        </ul>
+                    </section>
+
+                    <div class="legal-contact">
+                        <p>&iquest;Tienes preguntas sobre el autob&uacute;s? Escribe a <a href="mailto:hello@nobodies.team">hello@nobodies.team</a> y te pondremos en contacto con la persona adecuada.</p>
+                        <p>Cari&ntilde;o, polvo y ruedas del desierto. &#x1F9E1;</p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRANÇAIS ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <section class="legal-section">
+                        <h2>L&rsquo;essentiel</h2>
+
+                        <div class="bus-keyfacts">
+                            <div class="bus-keyfact">
+                                <span class="label">Prix</span>
+                                <span class="value">48&euro; par place</span>
+                            </div>
+                            <div class="bus-keyfact">
+                                <span class="label">En vente &agrave; partir du</span>
+                                <span class="value">Lun 4 mai, 20h00 CEST</span>
+                            </div>
+                        </div>
+
+                        <p style="margin-top: 1.5rem;">Les billets de bus <strong>ne sont pas inclus</strong> dans votre billet d&rsquo;&eacute;v&eacute;nement. Ils sont vendus s&eacute;par&eacute;ment et les places sont limit&eacute;es &mdash; r&eacute;servez t&ocirc;t. Des bus suppl&eacute;mentaires peuvent &ecirc;tre ajout&eacute;s dans les deux sens si la demande est forte.</p>
+
+                        <p><em>Le lien de vente sera publi&eacute; ici lorsque les billets seront mis en vente le lundi 4 mai &agrave; 20h00 CEST. Surveillez les canaux d&rsquo;annonces sur <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a>, <a href="https://t.me/nobodiescollective" target="_blank">Telegram</a> ou <a href="https://chat.whatsapp.com/HXJTO6nevLw9QlORlkHxY0?mode=gi_c" target="_blank">WhatsApp</a>.</em></p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Aller &mdash; vers Elsewhere</h2>
+                        <p class="bus-route">Barcelone Sants &rarr; A&eacute;roport d&rsquo;El Prat &rarr; Sari&ntilde;ena (pause d&rsquo;1 heure) &rarr; Elsewhere</p>
+                        <ul class="bus-schedule-list">
+                            <li><span class="date">Vendredi 3 juillet 2026</span><span class="time">11h00</span></li>
+                            <li><span class="date">Lundi 6 juillet 2026</span><span class="time">11h30</span></li>
+                            <li><span class="date">Lundi 6 juillet 2026</span><span class="time">16h00</span></li>
+                            <li><span class="date">Mardi 7 juillet 2026</span><span class="time">11h00</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Retour &mdash; depuis Elsewhere</h2>
+                        <p class="bus-route">Elsewhere &rarr; A&eacute;roport d&rsquo;El Prat &rarr; Barcelone Sants</p>
+                        <ul class="bus-schedule-list">
+                            <li><span class="date">Dimanche 12 juillet 2026</span><span class="time">13h00</span></li>
+                            <li><span class="date">Lundi 13 juillet 2026</span><span class="time">13h00</span></li>
+                            <li><span class="date">Mardi 14 juillet 2026</span><span class="time">13h00</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Bon &agrave; savoir</h2>
+                        <ul>
+                            <li>Tous les horaires sont locaux (CEST).</li>
+                            <li>Les bus prennent les passagers &agrave; <strong>Barcelone Sants Estaci&oacute;n</strong> (gare ferroviaire) puis &agrave; l&rsquo;<strong>a&eacute;roport d&rsquo;El Prat</strong>, dans cet ordre.</li>
+                            <li>L&rsquo;arr&ecirc;t &agrave; Sari&ntilde;ena est une pause d&rsquo;une heure pour se d&eacute;gourdir les jambes, manger et s&rsquo;approvisionner.</li>
+                            <li>Les places sont limit&eacute;es. Pour &ecirc;tre s&ucirc;r d&rsquo;une place, r&eacute;servez d&egrave;s l&rsquo;ouverture de la vente.</li>
+                            <li>Si un trajet est complet, des bus suppl&eacute;mentaires peuvent &ecirc;tre ajout&eacute;s &mdash; surveillez les canaux d&rsquo;annonces.</li>
+                        </ul>
+                    </section>
+
+                    <div class="legal-contact">
+                        <p>Des questions sur le bus ? &Eacute;crivez &agrave; <a href="mailto:hello@nobodies.team">hello@nobodies.team</a> et nous vous orienterons vers la bonne personne.</p>
+                        <p>De l&rsquo;amour, de la poussi&egrave;re et des roues du d&eacute;sert. &#x1F9E1;</p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIANO ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <section class="legal-section">
+                        <h2>L&rsquo;essenziale</h2>
+
+                        <div class="bus-keyfacts">
+                            <div class="bus-keyfact">
+                                <span class="label">Prezzo</span>
+                                <span class="value">48&euro; a posto</span>
+                            </div>
+                            <div class="bus-keyfact">
+                                <span class="label">In vendita da</span>
+                                <span class="value">Lun 4 maggio, 20:00 CEST</span>
+                            </div>
+                        </div>
+
+                        <p style="margin-top: 1.5rem;">I biglietti del bus <strong>non sono inclusi</strong> nel biglietto dell&rsquo;evento. Vengono venduti separatamente e i posti sono limitati &mdash; prenota in anticipo. Se la richiesta &egrave; alta, potrebbero essere aggiunti bus extra in entrambe le direzioni.</p>
+
+                        <p><em>Il link per l&rsquo;acquisto sar&agrave; pubblicato qui quando i biglietti andranno in vendita luned&igrave; 4 maggio alle 20:00 CEST. Tieni d&rsquo;occhio i canali di annunci su <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a>, <a href="https://t.me/nobodiescollective" target="_blank">Telegram</a> o <a href="https://chat.whatsapp.com/HXJTO6nevLw9QlORlkHxY0?mode=gi_c" target="_blank">WhatsApp</a>.</em></p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Andata &mdash; verso Elsewhere</h2>
+                        <p class="bus-route">Barcellona Sants &rarr; Aeroporto El Prat &rarr; Sari&ntilde;ena (pausa di 1 ora) &rarr; Elsewhere</p>
+                        <ul class="bus-schedule-list">
+                            <li><span class="date">Venerd&igrave; 3 luglio 2026</span><span class="time">11:00</span></li>
+                            <li><span class="date">Luned&igrave; 6 luglio 2026</span><span class="time">11:30</span></li>
+                            <li><span class="date">Luned&igrave; 6 luglio 2026</span><span class="time">16:00</span></li>
+                            <li><span class="date">Marted&igrave; 7 luglio 2026</span><span class="time">11:00</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Ritorno &mdash; da Elsewhere</h2>
+                        <p class="bus-route">Elsewhere &rarr; Aeroporto El Prat &rarr; Barcellona Sants</p>
+                        <ul class="bus-schedule-list">
+                            <li><span class="date">Domenica 12 luglio 2026</span><span class="time">13:00</span></li>
+                            <li><span class="date">Luned&igrave; 13 luglio 2026</span><span class="time">13:00</span></li>
+                            <li><span class="date">Marted&igrave; 14 luglio 2026</span><span class="time">13:00</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Da sapere</h2>
+                        <ul>
+                            <li>Tutti gli orari sono locali (CEST).</li>
+                            <li>I bus prendono i passeggeri a <strong>Barcellona Sants Estaci&oacute;n</strong> (stazione ferroviaria) e all&rsquo;<strong>Aeroporto El Prat</strong>, in quest&rsquo;ordine.</li>
+                            <li>La sosta a Sari&ntilde;ena &egrave; una pausa di un&rsquo;ora per sgranchirsi le gambe, mangiare e fare provviste.</li>
+                            <li>I posti sono limitati. Per assicurarti un posto, prenota appena apre la vendita.</li>
+                            <li>Se un viaggio &egrave; esaurito, potrebbero essere aggiunti bus extra &mdash; tieni d&rsquo;occhio i canali di annunci.</li>
+                        </ul>
+                    </section>
+
+                    <div class="legal-contact">
+                        <p>Domande sul bus? Scrivi a <a href="mailto:hello@nobodies.team">hello@nobodies.team</a> e ti indirizzeremo alla persona giusta.</p>
+                        <p>Amore, polvere e ruote del deserto. &#x1F9E1;</p>
+                    </div>
+                </div>
+
+                <!-- ==================== DEUTSCH ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <section class="legal-section">
+                        <h2>Das Wichtigste</h2>
+
+                        <div class="bus-keyfacts">
+                            <div class="bus-keyfact">
+                                <span class="label">Preis</span>
+                                <span class="value">48&euro; pro Sitzplatz</span>
+                            </div>
+                            <div class="bus-keyfact">
+                                <span class="label">Verkaufsbeginn</span>
+                                <span class="value">Mo 4. Mai, 20:00 CEST</span>
+                            </div>
+                        </div>
+
+                        <p style="margin-top: 1.5rem;">Bustickets sind <strong>nicht im Eventticket enthalten</strong>. Sie werden separat verkauft und die Pl&auml;tze sind begrenzt &mdash; buche fr&uuml;h. Bei hoher Nachfrage k&ouml;nnen in beide Richtungen zus&auml;tzliche Busse eingesetzt werden.</p>
+
+                        <p><em>Der Verkaufslink wird hier ver&ouml;ffentlicht, sobald die Tickets am Montag, 4. Mai um 20:00 CEST in den Verkauf gehen. Behalte die Ank&uuml;ndigungskan&auml;le im Auge: <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a>, <a href="https://t.me/nobodiescollective" target="_blank">Telegram</a> oder <a href="https://chat.whatsapp.com/HXJTO6nevLw9QlORlkHxY0?mode=gi_c" target="_blank">WhatsApp</a>.</em></p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Hinfahrt &mdash; nach Elsewhere</h2>
+                        <p class="bus-route">Barcelona Sants &rarr; Flughafen El Prat &rarr; Sari&ntilde;ena (1 Stunde Pause) &rarr; Elsewhere</p>
+                        <ul class="bus-schedule-list">
+                            <li><span class="date">Freitag, 3. Juli 2026</span><span class="time">11:00</span></li>
+                            <li><span class="date">Montag, 6. Juli 2026</span><span class="time">11:30</span></li>
+                            <li><span class="date">Montag, 6. Juli 2026</span><span class="time">16:00</span></li>
+                            <li><span class="date">Dienstag, 7. Juli 2026</span><span class="time">11:00</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>R&uuml;ckfahrt &mdash; von Elsewhere</h2>
+                        <p class="bus-route">Elsewhere &rarr; Flughafen El Prat &rarr; Barcelona Sants</p>
+                        <ul class="bus-schedule-list">
+                            <li><span class="date">Sonntag, 12. Juli 2026</span><span class="time">13:00</span></li>
+                            <li><span class="date">Montag, 13. Juli 2026</span><span class="time">13:00</span></li>
+                            <li><span class="date">Dienstag, 14. Juli 2026</span><span class="time">13:00</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>Gut zu wissen</h2>
+                        <ul>
+                            <li>Alle Zeiten sind Ortszeit (CEST).</li>
+                            <li>Die Busse fahren am <strong>Bahnhof Barcelona Sants</strong> und am <strong>Flughafen El Prat</strong> ab, in dieser Reihenfolge.</li>
+                            <li>Der Stopp in Sari&ntilde;ena ist eine einst&uuml;ndige Pause zum Beine vertreten, Essen und Eindecken.</li>
+                            <li>Die Pl&auml;tze sind begrenzt. Wenn du sicher mitfahren m&ouml;chtest, buche sobald der Verkauf startet.</li>
+                            <li>Sollte eine Fahrt ausverkauft sein, werden eventuell zus&auml;tzliche Busse eingesetzt &mdash; behalte die Ank&uuml;ndigungskan&auml;le im Auge.</li>
+                        </ul>
+                    </section>
+
+                    <div class="legal-contact">
+                        <p>Fragen zum Bus? Schreib an <a href="mailto:hello@nobodies.team">hello@nobodies.team</a> und wir leiten dich an die richtige Person weiter.</p>
+                        <p>Liebe, Staub und W&uuml;stenr&auml;der. &#x1F9E1;</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
