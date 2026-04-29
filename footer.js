@@ -42,6 +42,7 @@
                         '<a href="' + prefix + '/estatutos.html">Estatutos</a>' +
                         '<a href="' + prefix + '/transparency.html">Transparency</a>' +
                         '<a href="' + prefix + '/faq.html">FAQ</a>' +
+                        '<a href="' + prefix + '/newsletters.html">Newsletters</a>' +
                     '</div>' +
                     '<div class="footer-legal">' +
                         '<div class="footer-legal-group">' +
