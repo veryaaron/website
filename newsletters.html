@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletters | Elsewhere &mdash; by Nobodies Collective</title>
+    <meta name="description" content="Subscribe to the Elsewhere newsletter and read past editions.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="images/hero-1.jpg" fetchpriority="high">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Newsletters hero — single static slide */
+        .hero--newsletters { min-height: auto; padding: 9rem 0 5rem; }
+        .hero--newsletters .hero-content { max-width: 720px; }
+        .hero--newsletters .hero-title-img { width: clamp(240px, 55vw, 480px); margin-bottom: 1.75rem; }
+        .hero-newsletter-heading {
+            color: #fff;
+            font-size: clamp(1.4rem, 3vw, 1.85rem);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+        }
+        .hero-newsletter-blurb {
+            color: rgba(255,255,255,0.92);
+            font-size: 1.05rem;
+            margin-bottom: 1.75rem;
+            text-shadow: 0 1px 8px rgba(0,0,0,0.35);
+        }
+
+        /* Form styled for dark hero — mirrors home .newsletter form */
+        .hero-newsletter .ml-form-embedContainer { max-width: 560px; margin: 0 auto; box-shadow: none; }
+        .hero-newsletter .ml-form-embedWrapper,
+        .hero-newsletter .ml-form-embedWrapper.embedForm { background: transparent; border: none; box-shadow: none; padding: 0; }
+        .hero-newsletter .ml-form-embedBody,
+        .hero-newsletter .ml-form-embedBody.ml-form-embedBodyDefault { padding: 0; margin: 0; }
+        .hero-newsletter .ml-block-form,
+        .hero-newsletter form.ml-block-form {
+            display: flex !important;
+            gap: 0.75rem;
+            flex-wrap: nowrap;
+            align-items: stretch;
+            background: rgba(255,255,255,0.15);
+            padding: 0.5rem;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .hero-newsletter .ml-form-formContent { flex: 1; min-width: 0; margin: 0; padding: 0; }
+        .hero-newsletter .ml-form-fieldRow,
+        .hero-newsletter .ml-form-fieldRow.ml-last-item,
+        .hero-newsletter .ml-field-group { margin: 0; padding: 0; }
+        .hero-newsletter input.form-control,
+        .hero-newsletter input[type="email"] {
+            padding: 1rem 1.25rem !important;
+            border: 2px solid transparent !important;
+            border-radius: 12px !important;
+            font-size: 1rem !important;
+            font-family: var(--font-body) !important;
+            background: #fff !important;
+            width: 100% !important;
+            height: auto !important;
+            box-sizing: border-box !important;
+            -webkit-appearance: none !important;
+            appearance: none !important;
+        }
+        .hero-newsletter input.form-control::placeholder { color: #888; opacity: 1; }
+        .hero-newsletter input.form-control:focus {
+            outline: none !important;
+            border-color: rgba(255,255,255,0.6) !important;
+            box-shadow: 0 0 0 4px rgba(255,255,255,0.2) !important;
+        }
+        .hero-newsletter .ml-form-embedSubmit { margin: 0; padding: 0; flex-shrink: 0; }
+        .hero-newsletter button.primary {
+            padding: 1rem 2rem !important;
+            background: #1a1a1a !important;
+            color: #fff !important;
+            border: none !important;
+            border-radius: 12px !important;
+            font-size: 1rem !important;
+            font-weight: 600 !important;
+            font-family: var(--font-body) !important;
+            cursor: pointer !important;
+            transition: all 0.2s ease !important;
+            white-space: nowrap !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+            line-height: 1.4 !important;
+        }
+        .hero-newsletter button.primary:hover { background: #333 !important; transform: translateY(-2px); }
+        .hero-newsletter .ml-form-successBody {
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.15);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            max-width: 560px;
+            margin: 0 auto;
+        }
+        .hero-newsletter .ml-form-successContent p { color: #fff; font-size: 1.1rem; margin: 0; }
+
+        .hero-newsletter-cta { margin-top: 2rem; }
+
+        @media (max-width: 600px) {
+            .hero-newsletter .ml-block-form,
+            .hero-newsletter form.ml-block-form { flex-direction: column; }
+            .hero-newsletter button.primary { width: 100%; }
+        }
+
+        /* Past newsletters archive */
+        .newsletters-archive-section { padding: 5rem 0; }
+        .newsletter-archive {
+            padding: 2.5rem;
+            background: #fff;
+            border-radius: var(--radius);
+            border: 1px solid var(--color-border);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .newsletter-archive h2 { margin-bottom: 0.25rem; color: var(--color-text); font-size: 1.5rem; }
+        .newsletter-archive-subtitle { color: var(--color-text-muted); margin-bottom: 1.5rem; font-size: 0.95rem; }
+        .newsletter-archive-list { border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden; }
+        .newsletter-entry {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--color-border);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        .newsletter-entry:last-child { border-bottom: none; }
+        .newsletter-entry:hover { background: var(--color-bg); }
+        .newsletter-date {
+            color: var(--color-text-muted);
+            font-size: 0.8rem;
+            white-space: nowrap;
+            min-width: 4.5rem;
+            font-variant-numeric: tabular-nums;
+        }
+        .newsletter-title { color: var(--color-text); flex: 1; }
+        .newsletter-title a { color: var(--color-accent); font-weight: 500; }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main>
+        <section class="hero hero--newsletters">
+            <div class="hero-slideshow">
+                <div class="hero-slide active" style="background-image: url('images/hero-1.jpg')"></div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-vignette" aria-hidden="true"></div>
+            <div class="hero-grain" aria-hidden="true"></div>
+            <div class="hero-content container">
+                <h1>
+                    <img src="images/title.png" alt="Elsewhere — a participatory arts gathering in the Spanish desert" class="hero-title-img" fetchpriority="high">
+                </h1>
+                <p class="hero-newsletter-heading">Get News about Elsewhere</p>
+                <p class="hero-newsletter-blurb">Stay up to date with important news and announcements.</p>
+
+                <div class="hero-newsletter">
+                    <div id="mlb2-36155024" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-36155024">
+                        <div class="ml-form-align-center">
+                            <div class="ml-form-embedWrapper embedForm">
+                                <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/subscribe" data-code="" method="post" target="_blank">
+                                        <div class="ml-form-formContent">
+                                            <div class="ml-form-fieldRow ml-last-item">
+                                                <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                                                    <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="ml-submit" value="1">
+                                        <div class="ml-form-embedSubmit">
+                                            <button type="submit" class="primary">Subscribe</button>
+                                            <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                                <div class="ml-form-embedSubmitLoad"></div>
+                                                <span class="sr-only">Loading...</span>
+                                            </button>
+                                        </div>
+                                        <input type="hidden" name="anticsrf" value="true">
+                                    </form>
+                                </div>
+                                <div class="ml-form-successBody row-success" style="display: none">
+                                    <div class="ml-form-successContent">
+                                        <p>Thanks for subscribing!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-newsletter-cta">
+                    <a href="/" class="btn btn-outline">See full event info</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletters-archive-section">
+            <div class="container">
+                <div class="newsletter-archive">
+                    <h2>Past Newsletters</h2>
+                    <p class="newsletter-archive-subtitle">Read previous editions of the Elsewhere newsletter.</p>
+                    <div class="newsletter-archive-list">
+                        <div class="newsletter-entry">
+                            <div class="newsletter-date">18 Apr</div>
+                            <div class="newsletter-title"><a href="https://preview.mailerlite.io/preview/2058732/emails/184645602715370533" target="_blank" rel="noopener">Early build</a></div>
+                        </div>
+                        <div class="newsletter-entry">
+                            <div class="newsletter-date">21 Mar</div>
+                            <div class="newsletter-title"><a href="https://preview.mailerlite.io/preview/2058732/emails/182542459580974862" target="_blank" rel="noopener">Did someone say tickets!</a></div>
+                        </div>
+                        <div class="newsletter-entry">
+                            <div class="newsletter-date">16 Mar</div>
+                            <div class="newsletter-title"><a href="https://preview.mailerlite.io/preview/2058732/emails/181563448233035240" target="_blank" rel="noopener">Welcome to the NCA</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            function ml_webform_success_36155024() {
+                var $ = ml_jQuery || jQuery;
+                $('.ml-subscribe-form-36155024 .row-success').show();
+                $('.ml-subscribe-form-36155024 .row-form').hide();
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                var params = new URLSearchParams(window.location.search);
+                var email = params.get('email');
+                if (email) {
+                    var emailInput = document.querySelector('.ml-subscribe-form-36155024 input[name="fields[email]"]');
+                    if (emailInput) emailInput.value = email;
+                }
+            });
+        </script>
+        <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+        <script>fetch("https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/takel")</script>
+    </main>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
