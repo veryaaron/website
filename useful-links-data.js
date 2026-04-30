@@ -18,6 +18,13 @@ var USEFUL_LINKS_CATEGORIES = [
                 accent: '#c9922a'
             },
             {
+                icon: 'car',
+                title: 'Getting There',
+                description: 'How to reach Elsewhere by car, train, plane or rideshare. Where the site is.',
+                url: 'getting-there.html',
+                accent: '#8CAAB5'
+            },
+            {
                 icon: 'bus',
                 title: 'Bus Tickets',
                 description: 'Coaches between Barcelona and the site. Schedule, prices, and how to book.',

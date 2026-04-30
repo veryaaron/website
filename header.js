@@ -19,6 +19,7 @@
                             '<li><a href="' + prefix + '/barrios.html">Join a Barrio / Camp</a></li>' +
                             '<li><a href="' + prefix + '/consent.html">Consent</a></li>' +
                             '<li><a href="' + prefix + '/survival-guide.html">Survival Guide</a></li>' +
+                            '<li><a href="' + prefix + '/getting-there.html">Getting There</a></li>' +
                             '<li><a href="' + prefix + '/bus-tickets.html">Bus Tickets</a></li>' +
                             '<li><a href="' + prefix + '/inclusion.html">Inclusion</a></li>' +
                             '<li><a href="' + prefix + '/volunteering.html">Volunteering<span class="nav-badge">Help needed!</span></a></li>' +
