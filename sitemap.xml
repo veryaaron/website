@@ -20,6 +20,7 @@
   <!-- Tickets -->
   <url><loc>https://nobodies.team/low-income-tickets.html</loc><priority>0.6</priority></url>
   <url><loc>https://nobodies.team/local-residents-discount.html</loc><priority>0.5</priority></url>
+  <url><loc>https://nobodies.team/bus-tickets.html</loc><priority>0.6</priority></url>
   <url><loc>https://nobodies.team/refund-policy.html</loc><priority>0.4</priority></url>
 
   <!-- Legal / Policy -->

@@ -18,6 +18,13 @@ var USEFUL_LINKS_CATEGORIES = [
                 accent: '#c9922a'
             },
             {
+                icon: 'bus',
+                title: 'Bus Tickets',
+                description: 'Coaches between Barcelona and the site. Schedule, prices, and how to book.',
+                url: 'bus-tickets.html',
+                accent: '#5B9BC5'
+            },
+            {
                 icon: 'person',
                 title: 'Art Grants',
                 description: 'Bring art to the desert. Apply for funding to make your vision real.',
