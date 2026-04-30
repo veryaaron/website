@@ -39,6 +39,9 @@
         .travel-keyfact .value { display: block; font-size: 1.25rem; font-weight: 600; color: var(--color-text); }
         .travel-cta { display: inline-block; margin-top: 0.5rem; padding: 0.7rem 1.4rem; background: var(--color-accent); color: #fff !important; border-radius: var(--radius); font-weight: 600; text-decoration: none; }
         .travel-cta:hover { filter: brightness(1.1); }
+        .travel-map { max-width: 800px; margin: 0 auto 2rem; border-radius: var(--radius); overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+        .travel-map iframe { display: block; width: 100%; height: 380px; border: 0; }
+        @media (max-width: 600px) { .travel-map iframe { height: 300px; } }
     </style>
 </head>
 <body>
@@ -52,6 +55,10 @@
             <div class="legal-header">
                 <h1>Getting There</h1>
                 <p class="legal-intro">Elsewhere 2026 takes place in the Monegros desert, in the province of Huesca, Arag&oacute;n &mdash; northern Spain. This page is your overview of the ways to reach the site.</p>
+            </div>
+
+            <div class="travel-map">
+                <iframe src="https://maps.google.com/maps?q=Sari%C3%B1ena%2C%20Huesca%2C%20Spain&t=&z=9&ie=UTF8&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Sari&ntilde;ena, Huesca"></iframe>
             </div>
 
             <div class="lang-toggle">
