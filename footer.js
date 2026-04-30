@@ -69,6 +69,7 @@
                     '<div class="footer-links">' +
                         '<h4>Other</h4>' +
                         '<a href="' + prefix + '/barrios.html">Barrios</a>' +
+                        '<a href="' + prefix + '/getting-there.html">Getting There</a>' +
                         '<a href="' + prefix + '/bus-tickets.html">Bus Tickets</a>' +
                         '<a href="' + prefix + '/consent.html">Consent</a>' +
                         '<a href="' + prefix + '/survival-guide.html">Survival Guide</a>' +
