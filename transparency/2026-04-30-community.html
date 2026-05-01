@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Meeting - April 30, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .resource-links { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .resource-links h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+        .resource-links ul { list-style: none; padding: 0; margin: 0; }
+        .resource-links li { margin-bottom: 0.5rem; }
+        .resource-links a { color: var(--color-accent); font-weight: 500; }
+        .resource-links a:hover { text-decoration: underline; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem; border-radius: 8px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        .transcript-section { margin-top: 2rem; border: 1px solid var(--color-border); border-radius: 8px; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Community Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Thursday 30 April 2026, 19:40 CEST</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>With Pablo V, Daniela M S, Frank F, Ben, Michael M, Ellen, and community members</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-04-30-community-transcript.html">Full transcript (English only)</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=eMTdbGUdoBg">Video recording (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/eMTdbGUdoBg" title="Community Meeting - April 30, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Asset Procurement</h2>
+                        <ul>
+                            <li>Asset procurement is secured. The event has everything it needs to proceed.</li>
+                        </ul>
+
+                        <h2>2. Ticketing</h2>
+                        <ul>
+                            <li>Pablo V reported that ticketing is in a strong position: the project is now <strong>confident of reaching break-even</strong>, which &mdash; given the compressed sales window this year &mdash; is a meaningful milestone.</li>
+                            <li>The first wave saw an exceptional rush in the days before the price increase, with the late-wave spike contributing more sales than the initial opening burst.</li>
+                            <li>A second wave lands in approximately two weeks; once that data is in, a tighter projection of final attendance will be possible.</li>
+                            <li>Financially, the event is no longer at risk.</li>
+                            <li>Pablo V, Peter and Laura are working on a streamlined post-purchase &ldquo;thank you&rdquo; flow that walks ticket-holders directly into shift sign-up &mdash; modelled on how airline checkouts surface hotel and car add-ons. Some friction was already removed by Peter; more is in progress.</li>
+                        </ul>
+
+                        <h2>3. Buses and Website</h2>
+                        <ul>
+                            <li>Daniela M S confirmed that <strong>bus tickets go on sale Monday</strong>.</li>
+                            <li>The buses page is now live on the website, alongside a new Barrios information section. A Survival Guide is expected within a couple of weeks.</li>
+                            <li>The Werkhaus application route is currently on Discord but will be linked from the website shortly.</li>
+                            <li>The travel-reimbursement scheme &mdash; for people coming early to set up or staying through strike &mdash; is open. Applications via the Event Volunteers page or to <code>travelclaims@nobodies.team</code>.</li>
+                        </ul>
+
+                        <h2>4. Volunteers and Coordination</h2>
+                        <ul>
+                            <li>Frank F reported steady signups: 30 to 100 new shift signups per day, with 53 on the day of the call. The volunteer pages have been redesigned for clarity (work by Laura and Peter).</li>
+                            <li>However, the totals are still well below where they need to be: roughly <strong>42% for setup, 23% for the event itself, and 12% for strike</strong>, with the most acute shortfall in <strong>early-build infrastructure</strong> &mdash; around 15 more committed people are needed for early build alone.</li>
+                            <li>Pablo V introduced a tiering framework being developed with coordinators. Every shift is valued, but not every shift is equally needed:
+                                <ul>
+                                    <li><strong>Critical</strong> &mdash; without these the event is unsafe and would have to be cancelled (e.g. toilets, Red Cross, minimal gate, perimeter, Mailfare, Werkhaus).</li>
+                                    <li><strong>Base expectation</strong> &mdash; what makes a good event, consistent with the principles (e.g. full gate, info, Middle Elsewhere, Ohana House).</li>
+                                    <li><strong>Nice-to-have</strong> &mdash; improvements that raise safety, reduce workload, bring joy, or build toward a better event next year.</li>
+                                </ul>
+                            </li>
+                            <li>Coordinators are being asked to classify their needs in this format (link in the coordinator channel). The intent is to make trade-offs visible: if staffing reaches 100% everything ships; if not, the team can make conscious decisions about what is dropped.</li>
+                            <li>One possible adjustment in Humans was floated &mdash; surfacing nice-to-have shifts only once critical and base-expectation slots are filled.</li>
+                        </ul>
+
+                        <h2>5. Framing the Year &mdash; A Reset</h2>
+                        <ul>
+                            <li>Ben shared a reflection that emerged from the sense-check meeting between board members and coordinators the day before. There is a felt pressure on parts of the team to live up to a particular standard or memory of what the event &ldquo;has to be&rdquo;.</li>
+                            <li>The framing offered: <strong>this year is a reset</strong>, and a chance to return to the core spirit of radical participation and community-building. The end-state matters less than the process of building together with whoever turns up and whatever they can do.</li>
+                            <li>Michael M added: the cornerstone is people. The pressure that is worth carrying is the pressure to make sure volunteers are safe, supported, and that commitments made to them are met. If the music is wrong or a particular party under-delivers, that is survivable. If a volunteer who has stepped forward is not held by the structure, that is not.</li>
+                        </ul>
+
+                        <h2>6. Barrios Support</h2>
+                        <ul>
+                            <li>Ellen reported a new function on Humans, built by Peter: barrios can now <strong>sign up named leads</strong> against a small set of roles &mdash; Shift Ninja, total-access-period (toilets) shift, consent, wellbeing, build/setup point of contact, and technical lead.</li>
+                            <li>This gives Barrios Support a clear contact list per barrio for each function and removes the need to chase the right person via group chat.</li>
+                        </ul>
+
+                        <h2>7. Borderland Cross-Promotion</h2>
+                        <ul>
+                            <li>Pablo V shared that <strong>Borderland will send a dedicated newsletter next week</strong> introducing the event to its community of around 11,000 people, with all relevant channels included.</li>
+                            <li>Attendees with connections to other regional burns were encouraged to spread similar messages through their networks. Although ticket sales are surpassing expectations, every additional participant lifts the rest of the system &mdash; more volunteer hands, more energy, less concentrated load on the people already in.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Coordinators</td><td>Fill in the critical / base / nice-to-have format shared in the coordinator channel, and feed back on the format itself</td><td>Ongoing</td></tr>
+                                <tr><td>Pablo V, Peter, Laura</td><td>Continue work on the post-purchase &rarr; shift-signup flow</td><td>Ongoing</td></tr>
+                                <tr><td>All</td><td>Spread the word in adjacent burner and regional networks; share the Borderland newsletter when it lands</td><td>Ongoing</td></tr>
+                                <tr><td>Barrio leads</td><td>Sign up named leads on <a href="https://humans.nobodies.team" target="_blank">Humans</a> (Shift Ninja, TAP, consent, wellbeing, build contact, technical lead)</td><td>Ongoing</td></tr>
+                                <tr><td>Community</td><td>Register on Teams; early-build infrastructure is the most acute gap (volunteers with electrical / build experience especially welcome)</td><td>Ongoing</td></tr>
+                                <tr><td>Early arrivals and strike crew</td><td>Apply for travel reimbursement via the Event Volunteers page or <code>travelclaims@nobodies.team</code></td><td>Ongoing</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Minutes prepared from the audio recording.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Con Pablo V, Daniela M S, Frank F, Ben, Michael M, Ellen, y miembros de la comunidad</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registros de la Reuni&oacute;n</h3>
+                        <ul>
+                            <li><a href="2026-04-30-community-transcript.html">Transcripci&oacute;n completa (solo en ingl&eacute;s)</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=eMTdbGUdoBg">Grabaci&oacute;n en v&iacute;deo (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/eMTdbGUdoBg" title="Community Meeting - April 30, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Adquisici&oacute;n de Activos</h2>
+                        <ul>
+                            <li>La adquisici&oacute;n de activos est&aacute; asegurada. El evento tiene todo lo que necesita para seguir adelante.</li>
+                        </ul>
+
+                        <h2>2. Venta de Entradas</h2>
+                        <ul>
+                            <li>Pablo V inform&oacute; que la venta de entradas est&aacute; en una posici&oacute;n s&oacute;lida: el proyecto tiene ahora <strong>la confianza de alcanzar el punto de equilibrio</strong>, lo que &mdash; dado el calendario de ventas comprimido de este a&ntilde;o &mdash; es un hito significativo.</li>
+                            <li>La primera oleada vivi&oacute; un repunte excepcional en los d&iacute;as previos a la subida de precio, con un pico tard&iacute;o que aport&oacute; m&aacute;s ventas que la apertura inicial.</li>
+                            <li>Una segunda oleada llega en aproximadamente dos semanas; una vez que se disponga de esos datos, ser&aacute; posible una proyecci&oacute;n m&aacute;s ajustada de la asistencia final.</li>
+                            <li>Financieramente, el evento ya no est&aacute; en riesgo.</li>
+                            <li>Pablo V, Peter y Laura est&aacute;n trabajando en un flujo de &laquo;gracias&raquo; despu&eacute;s de la compra que lleve directamente a los compradores de entradas a inscribirse en turnos &mdash; inspirado en c&oacute;mo las aerol&iacute;neas ofrecen hotel y coche tras la compra. Peter ya elimin&oacute; algunas fricciones; hay m&aacute;s en marcha.</li>
+                        </ul>
+
+                        <h2>3. Autobuses y Sitio Web</h2>
+                        <ul>
+                            <li>Daniela M S confirm&oacute; que <strong>los billetes de autob&uacute;s saldr&aacute;n a la venta el lunes</strong>.</li>
+                            <li>La p&aacute;gina de autobuses ya est&aacute; activa en el sitio web, junto con una nueva secci&oacute;n de informaci&oacute;n sobre Barrios. Se espera una Gu&iacute;a de Supervivencia en un par de semanas.</li>
+                            <li>El proceso de solicitud para Werkhaus est&aacute; actualmente en Discord, pero se enlazar&aacute; desde el sitio web pr&oacute;ximamente.</li>
+                            <li>El programa de reembolso de viajes &mdash; para personas que vienen pronto a montar o que se quedan hasta el desmontaje &mdash; est&aacute; abierto. Las solicitudes se hacen a trav&eacute;s de la p&aacute;gina de Event Volunteers o en <code>travelclaims@nobodies.team</code>.</li>
+                        </ul>
+
+                        <h2>4. Voluntarios y Coordinaci&oacute;n</h2>
+                        <ul>
+                            <li>Frank F inform&oacute; de inscripciones constantes: entre 30 y 100 nuevas inscripciones de turnos al d&iacute;a, con 53 el d&iacute;a de la llamada. Las p&aacute;ginas de voluntariado han sido redise&ntilde;adas para mayor claridad (trabajo de Laura y Peter).</li>
+                            <li>Sin embargo, los totales siguen estando muy por debajo de donde necesitan estar: aproximadamente <strong>42% para el montaje, 23% para el evento mismo y 12% para el desmontaje</strong>, con la falta m&aacute;s aguda en la <strong>infraestructura de construcci&oacute;n temprana</strong> &mdash; se necesitan unas 15 personas comprometidas m&aacute;s solo para la construcci&oacute;n temprana.</li>
+                            <li>Pablo V present&oacute; un marco de niveles que se est&aacute; desarrollando con los coordinadores. Cada turno es valorado, pero no todos los turnos son igualmente necesarios:
+                                <ul>
+                                    <li><strong>Cr&iacute;tico</strong> &mdash; sin esto el evento es inseguro y tendr&iacute;a que cancelarse (p.ej. ba&ntilde;os, Cruz Roja, gate m&iacute;nimo, per&iacute;metro, Mailfare, Werkhaus).</li>
+                                    <li><strong>Expectativa base</strong> &mdash; lo que hace un buen evento, coherente con los principios (p.ej. gate completo, info, Middle Elsewhere, Ohana House).</li>
+                                    <li><strong>Deseable</strong> &mdash; mejoras que aumentan la seguridad, reducen la carga de trabajo, traen alegr&iacute;a o construyen hacia un mejor evento el a&ntilde;o que viene.</li>
+                                </ul>
+                            </li>
+                            <li>Se est&aacute; pidiendo a los coordinadores que clasifiquen sus necesidades en este formato (enlace en el canal de coordinadores). La intenci&oacute;n es hacer visibles los compromisos: si el personal llega al 100% todo se entrega; si no, el equipo puede tomar decisiones conscientes sobre qu&eacute; se descarta.</li>
+                            <li>Se mencion&oacute; un posible ajuste en Humans &mdash; mostrar los turnos &laquo;deseables&raquo; solo una vez que est&eacute;n cubiertos los huecos cr&iacute;ticos y de expectativa base.</li>
+                        </ul>
+
+                        <h2>5. Marco del A&ntilde;o &mdash; Un Reinicio</h2>
+                        <ul>
+                            <li>Ben comparti&oacute; una reflexi&oacute;n que surgi&oacute; de la reuni&oacute;n de chequeo entre miembros del board y coordinadores del d&iacute;a anterior. Hay una presi&oacute;n sentida en partes del equipo para estar a la altura de un est&aacute;ndar o memoria particular de lo que el evento &laquo;tiene que ser&raquo;.</li>
+                            <li>El enfoque ofrecido: <strong>este a&ntilde;o es un reinicio</strong>, y una oportunidad para volver al esp&iacute;ritu central de la participaci&oacute;n radical y la construcci&oacute;n comunitaria. El estado final importa menos que el proceso de construir juntos con quienes aparezcan y con lo que puedan aportar.</li>
+                            <li>Michael M a&ntilde;adi&oacute;: la piedra angular son las personas. La presi&oacute;n que vale la pena llevar es la de asegurarse de que los voluntarios est&eacute;n a salvo, apoyados, y de que se cumplan los compromisos asumidos con ellos. Si la m&uacute;sica est&aacute; mal o una fiesta concreta no cumple, eso es soportable. Si una persona voluntaria que ha dado un paso adelante no est&aacute; sostenida por la estructura, eso no lo es.</li>
+                        </ul>
+
+                        <h2>6. Apoyo a Barrios</h2>
+                        <ul>
+                            <li>Ellen inform&oacute; de una nueva funci&oacute;n en Humans, construida por Peter: los barrios pueden ahora <strong>inscribir responsables nombrados</strong> para un peque&ntilde;o conjunto de roles &mdash; Shift Ninja, turno del periodo de acceso total (ba&ntilde;os), consentimiento, bienestar, punto de contacto para construcci&oacute;n/montaje y responsable t&eacute;cnico.</li>
+                            <li>Esto da a Barrios Support una lista clara de contactos por barrio para cada funci&oacute;n y elimina la necesidad de buscar a la persona correcta a trav&eacute;s del chat de grupo.</li>
+                        </ul>
+
+                        <h2>7. Promoci&oacute;n Cruzada con Borderland</h2>
+                        <ul>
+                            <li>Pablo V comparti&oacute; que <strong>Borderland enviar&aacute; un bolet&iacute;n dedicado la pr&oacute;xima semana</strong> presentando el evento a su comunidad de unas 11.000 personas, con todos los canales relevantes incluidos.</li>
+                            <li>Se anim&oacute; a quienes asisten y tienen conexiones con otros burns regionales a difundir mensajes similares a trav&eacute;s de sus redes. Aunque las ventas de entradas est&aacute;n superando las expectativas, cada participante adicional eleva el resto del sistema &mdash; m&aacute;s manos voluntarias, m&aacute;s energ&iacute;a, menos carga concentrada en quienes ya est&aacute;n dentro.</li>
+                        </ul>
+
+                        <h2>Acciones a Realizar</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Coordinadores</td><td>Rellenar el formato cr&iacute;tico / base / deseable compartido en el canal de coordinadores, y dar feedback sobre el formato mismo</td><td>Continuo</td></tr>
+                                <tr><td>Pablo V, Peter, Laura</td><td>Continuar el trabajo en el flujo post-compra &rarr; inscripci&oacute;n a turnos</td><td>Continuo</td></tr>
+                                <tr><td>Todos</td><td>Difundir el mensaje en redes burner y regionales adyacentes; compartir el bolet&iacute;n de Borderland cuando aparezca</td><td>Continuo</td></tr>
+                                <tr><td>Responsables de barrio</td><td>Inscribir responsables nombrados en <a href="https://humans.nobodies.team" target="_blank">Humans</a> (Shift Ninja, TAP, consentimiento, bienestar, contacto de construcci&oacute;n, responsable t&eacute;cnico)</td><td>Continuo</td></tr>
+                                <tr><td>Comunidad</td><td>Registrarse en Teams; la infraestructura de construcci&oacute;n temprana es la falta m&aacute;s aguda (especialmente bienvenidas personas con experiencia el&eacute;ctrica / de construcci&oacute;n)</td><td>Continuo</td></tr>
+                                <tr><td>Llegadas tempranas y equipo de desmontaje</td><td>Solicitar reembolso de viaje a trav&eacute;s de la p&aacute;gina de Event Volunteers o <code>travelclaims@nobodies.team</code></td><td>Continuo</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Actas preparadas a partir de la grabaci&oacute;n de audio.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Avec Pablo V, Daniela M S, Frank F, Ben, Michael M, Ellen, et des membres de la communaut&eacute;</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archives de la R&eacute;union</h3>
+                        <ul>
+                            <li><a href="2026-04-30-community-transcript.html">Transcription compl&egrave;te (en anglais uniquement)</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=eMTdbGUdoBg">Enregistrement vid&eacute;o (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/eMTdbGUdoBg" title="Community Meeting - April 30, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Acquisition des Ressources</h2>
+                        <ul>
+                            <li>L&rsquo;acquisition des ressources est s&eacute;curis&eacute;e. L&rsquo;&eacute;v&eacute;nement a tout ce dont il a besoin pour aller de l&rsquo;avant.</li>
+                        </ul>
+
+                        <h2>2. Billetterie</h2>
+                        <ul>
+                            <li>Pablo V a rapport&eacute; que la billetterie est en bonne position : le projet est maintenant <strong>confiant d&rsquo;atteindre le seuil de rentabilit&eacute;</strong>, ce qui &mdash; compte tenu du calendrier de vente compress&eacute; cette ann&eacute;e &mdash; est un jalon significatif.</li>
+                            <li>La premi&egrave;re vague a connu une affluence exceptionnelle dans les jours pr&eacute;c&eacute;dant l&rsquo;augmentation de prix, le pic tardif ayant g&eacute;n&eacute;r&eacute; plus de ventes que l&rsquo;ouverture initiale.</li>
+                            <li>Une deuxi&egrave;me vague arrive dans environ deux semaines ; une fois ces donn&eacute;es disponibles, une projection plus pr&eacute;cise de la fr&eacute;quentation finale sera possible.</li>
+                            <li>Financi&egrave;rement, l&rsquo;&eacute;v&eacute;nement n&rsquo;est plus en danger.</li>
+                            <li>Pablo V, Peter et Laura travaillent sur un flux post-achat &laquo; merci &raquo; qui am&egrave;ne directement les acheteurs de billets &agrave; s&rsquo;inscrire pour des cr&eacute;neaux &mdash; sur le mod&egrave;le des compagnies a&eacute;riennes proposant h&ocirc;tel et voiture apr&egrave;s un achat. Peter a d&eacute;j&agrave; supprim&eacute; quelques frictions ; d&rsquo;autres sont en cours.</li>
+                        </ul>
+
+                        <h2>3. Bus et Site Web</h2>
+                        <ul>
+                            <li>Daniela M S a confirm&eacute; que <strong>les billets de bus seront mis en vente lundi</strong>.</li>
+                            <li>La page bus est maintenant en ligne sur le site, ainsi qu&rsquo;une nouvelle section d&rsquo;information sur les Barrios. Un Guide de Survie est attendu d&rsquo;ici quelques semaines.</li>
+                            <li>La proc&eacute;dure d&rsquo;inscription pour Werkhaus est actuellement sur Discord, mais sera bient&ocirc;t li&eacute;e depuis le site web.</li>
+                            <li>Le programme de remboursement de voyage &mdash; pour les personnes arrivant t&ocirc;t pour le montage ou restant pendant le d&eacute;montage &mdash; est ouvert. Demandes via la page Event Volunteers ou &agrave; <code>travelclaims@nobodies.team</code>.</li>
+                        </ul>
+
+                        <h2>4. B&eacute;n&eacute;voles et Coordination</h2>
+                        <ul>
+                            <li>Frank F a rapport&eacute; des inscriptions r&eacute;guli&egrave;res : entre 30 et 100 nouvelles inscriptions de cr&eacute;neaux par jour, avec 53 le jour de l&rsquo;appel. Les pages b&eacute;n&eacute;volat ont &eacute;t&eacute; redessin&eacute;es pour plus de clart&eacute; (travail de Laura et Peter).</li>
+                            <li>Cependant, les totaux restent bien en dessous des besoins : environ <strong>42% pour le montage, 23% pour l&rsquo;&eacute;v&eacute;nement lui-m&ecirc;me, et 12% pour le d&eacute;montage</strong>, avec le manque le plus aigu dans <strong>l&rsquo;infrastructure de construction pr&eacute;coce</strong> &mdash; environ 15 personnes engag&eacute;es suppl&eacute;mentaires sont n&eacute;cessaires pour la construction pr&eacute;coce seule.</li>
+                            <li>Pablo V a pr&eacute;sent&eacute; un cadre de hi&eacute;rarchisation en cours de d&eacute;veloppement avec les coordinateurs. Chaque cr&eacute;neau est valoris&eacute;, mais tous ne sont pas &eacute;galement n&eacute;cessaires :
+                                <ul>
+                                    <li><strong>Critique</strong> &mdash; sans cela l&rsquo;&eacute;v&eacute;nement est dangereux et devrait &ecirc;tre annul&eacute; (p.ex. toilettes, Croix-Rouge, porte minimale, p&eacute;rim&egrave;tre, Mailfare, Werkhaus).</li>
+                                    <li><strong>Attente de base</strong> &mdash; ce qui fait un bon &eacute;v&eacute;nement, conforme aux principes (p.ex. porte compl&egrave;te, info, Middle Elsewhere, Ohana House).</li>
+                                    <li><strong>Souhaitable</strong> &mdash; am&eacute;liorations qui augmentent la s&eacute;curit&eacute;, r&eacute;duisent la charge de travail, apportent de la joie ou pr&eacute;parent un meilleur &eacute;v&eacute;nement l&rsquo;ann&eacute;e prochaine.</li>
+                                </ul>
+                            </li>
+                            <li>Il est demand&eacute; aux coordinateurs de classer leurs besoins dans ce format (lien dans le canal des coordinateurs). L&rsquo;intention est de rendre les compromis visibles : si le personnel atteint 100%, tout est livr&eacute; ; sinon, l&rsquo;&eacute;quipe peut prendre des d&eacute;cisions conscientes sur ce qui est abandonn&eacute;.</li>
+                            <li>Un ajustement possible dans Humans a &eacute;t&eacute; &eacute;voqu&eacute; &mdash; n&rsquo;afficher les cr&eacute;neaux &laquo; souhaitables &raquo; qu&rsquo;une fois les places critiques et de base remplies.</li>
+                        </ul>
+
+                        <h2>5. Cadre de l&rsquo;Ann&eacute;e &mdash; Une R&eacute;initialisation</h2>
+                        <ul>
+                            <li>Ben a partag&eacute; une r&eacute;flexion issue de la r&eacute;union de v&eacute;rification entre membres du board et coordinateurs la veille. Il y a une pression ressentie dans certaines parties de l&rsquo;&eacute;quipe pour &ecirc;tre &agrave; la hauteur d&rsquo;un standard ou d&rsquo;une m&eacute;moire particuli&egrave;re de ce que l&rsquo;&eacute;v&eacute;nement &laquo; doit &ecirc;tre &raquo;.</li>
+                            <li>Le cadrage propos&eacute; : <strong>cette ann&eacute;e est une r&eacute;initialisation</strong>, et une chance de revenir &agrave; l&rsquo;esprit central de participation radicale et de construction communautaire. L&rsquo;&eacute;tat final importe moins que le processus de construire ensemble avec celles et ceux qui se pr&eacute;sentent et avec ce qu&rsquo;ils peuvent apporter.</li>
+                            <li>Michael M a ajout&eacute; : la pierre angulaire, ce sont les gens. La pression qui vaut la peine d&rsquo;&ecirc;tre port&eacute;e est celle de s&rsquo;assurer que les b&eacute;n&eacute;voles sont en s&eacute;curit&eacute;, soutenus, et que les engagements pris envers eux sont tenus. Si la musique est rat&eacute;e ou qu&rsquo;une f&ecirc;te d&eacute;&ccedil;oit, c&rsquo;est supportable. Si une personne b&eacute;n&eacute;vole qui s&rsquo;est avanc&eacute;e n&rsquo;est pas tenue par la structure, &ccedil;a ne l&rsquo;est pas.</li>
+                        </ul>
+
+                        <h2>6. Soutien aux Barrios</h2>
+                        <ul>
+                            <li>Ellen a rapport&eacute; une nouvelle fonction sur Humans, d&eacute;velopp&eacute;e par Peter : les barrios peuvent maintenant <strong>inscrire des responsables nomm&eacute;s</strong> pour un petit ensemble de r&ocirc;les &mdash; Shift Ninja, cr&eacute;neau de la p&eacute;riode d&rsquo;acc&egrave;s total (toilettes), consentement, bien-&ecirc;tre, point de contact construction/montage et responsable technique.</li>
+                            <li>Cela donne &agrave; Barrios Support une liste de contacts claire par barrio pour chaque fonction et &eacute;limine la n&eacute;cessit&eacute; de chercher la bonne personne via le chat de groupe.</li>
+                        </ul>
+
+                        <h2>7. Promotion Crois&eacute;e avec Borderland</h2>
+                        <ul>
+                            <li>Pablo V a partag&eacute; que <strong>Borderland enverra une newsletter d&eacute;di&eacute;e la semaine prochaine</strong> pr&eacute;sentant l&rsquo;&eacute;v&eacute;nement &agrave; sa communaut&eacute; d&rsquo;environ 11 000 personnes, avec tous les canaux pertinents inclus.</li>
+                            <li>Les participants ayant des connexions avec d&rsquo;autres burns r&eacute;gionaux ont &eacute;t&eacute; encourag&eacute;s &agrave; diffuser des messages similaires dans leurs r&eacute;seaux. M&ecirc;me si les ventes de billets d&eacute;passent les attentes, chaque participant suppl&eacute;mentaire all&egrave;ge le reste du syst&egrave;me &mdash; plus de mains b&eacute;n&eacute;voles, plus d&rsquo;&eacute;nergie, moins de charge concentr&eacute;e sur celles et ceux d&eacute;j&agrave; engag&eacute;s.</li>
+                        </ul>
+
+                        <h2>Actions &agrave; R&eacute;aliser</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>D&eacute;lai</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Coordinateurs</td><td>Remplir le format critique / base / souhaitable partag&eacute; dans le canal des coordinateurs, et donner un retour sur le format lui-m&ecirc;me</td><td>Continu</td></tr>
+                                <tr><td>Pablo V, Peter, Laura</td><td>Continuer le travail sur le flux post-achat &rarr; inscription aux cr&eacute;neaux</td><td>Continu</td></tr>
+                                <tr><td>Tous</td><td>Diffuser le message dans les r&eacute;seaux burner et r&eacute;gionaux adjacents ; partager la newsletter Borderland &agrave; sa sortie</td><td>Continu</td></tr>
+                                <tr><td>Responsables de barrio</td><td>Inscrire les responsables nomm&eacute;s sur <a href="https://humans.nobodies.team" target="_blank">Humans</a> (Shift Ninja, TAP, consentement, bien-&ecirc;tre, contact construction, responsable technique)</td><td>Continu</td></tr>
+                                <tr><td>Communaut&eacute;</td><td>S&rsquo;inscrire sur Teams ; l&rsquo;infrastructure de construction pr&eacute;coce est le manque le plus aigu (b&eacute;n&eacute;voles avec exp&eacute;rience &eacute;lectrique / construction particuli&egrave;rement bienvenus)</td><td>Continu</td></tr>
+                                <tr><td>Arriv&eacute;es pr&eacute;coces et &eacute;quipe de d&eacute;montage</td><td>Demander le remboursement de voyage via la page Event Volunteers ou <code>travelclaims@nobodies.team</code></td><td>Continu</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Proc&egrave;s-verbal pr&eacute;par&eacute; &agrave; partir de l&rsquo;enregistrement audio.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Con Pablo V, Daniela M S, Frank F, Ben, Michael M, Ellen, e membri della comunit&agrave;</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archivi della Riunione</h3>
+                        <ul>
+                            <li><a href="2026-04-30-community-transcript.html">Trascrizione completa (solo in inglese)</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=eMTdbGUdoBg">Registrazione video (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/eMTdbGUdoBg" title="Community Meeting - April 30, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Acquisizione Risorse</h2>
+                        <ul>
+                            <li>L&rsquo;acquisizione delle risorse &egrave; assicurata. L&rsquo;evento ha tutto ci&ograve; di cui ha bisogno per procedere.</li>
+                        </ul>
+
+                        <h2>2. Biglietteria</h2>
+                        <ul>
+                            <li>Pablo V ha riferito che la biglietteria &egrave; in una posizione solida: il progetto &egrave; ora <strong>fiducioso di raggiungere il pareggio</strong>, il che &mdash; considerato il calendario di vendita compresso di quest&rsquo;anno &mdash; &egrave; un traguardo significativo.</li>
+                            <li>La prima ondata ha visto un&rsquo;impennata eccezionale nei giorni precedenti l&rsquo;aumento del prezzo, con il picco tardivo che ha generato pi&ugrave; vendite dell&rsquo;apertura iniziale.</li>
+                            <li>Una seconda ondata arriva tra circa due settimane; una volta disponibili quei dati, sar&agrave; possibile una proiezione pi&ugrave; precisa della partecipazione finale.</li>
+                            <li>Finanziariamente, l&rsquo;evento non &egrave; pi&ugrave; a rischio.</li>
+                            <li>Pablo V, Peter e Laura stanno lavorando a un flusso post-acquisto &laquo;grazie&raquo; che porti direttamente gli acquirenti dei biglietti all&rsquo;iscrizione ai turni &mdash; sul modello delle compagnie aeree che propongono hotel e auto dopo un acquisto. Peter ha gi&agrave; rimosso alcune frizioni; altre sono in corso.</li>
+                        </ul>
+
+                        <h2>3. Autobus e Sito Web</h2>
+                        <ul>
+                            <li>Daniela M S ha confermato che <strong>i biglietti degli autobus saranno in vendita luned&igrave;</strong>.</li>
+                            <li>La pagina autobus &egrave; ora online sul sito, insieme a una nuova sezione informativa sui Barrios. Una Guida alla Sopravvivenza &egrave; attesa entro un paio di settimane.</li>
+                            <li>La procedura di candidatura per Werkhaus &egrave; attualmente su Discord, ma sar&agrave; presto collegata dal sito.</li>
+                            <li>Il programma di rimborso viaggio &mdash; per chi arriva presto per il montaggio o resta fino allo smontaggio &mdash; &egrave; aperto. Le richieste vanno presentate tramite la pagina Event Volunteers o a <code>travelclaims@nobodies.team</code>.</li>
+                        </ul>
+
+                        <h2>4. Volontari e Coordinamento</h2>
+                        <ul>
+                            <li>Frank F ha riferito di iscrizioni costanti: tra 30 e 100 nuove iscrizioni di turno al giorno, con 53 il giorno della chiamata. Le pagine del volontariato sono state ridisegnate per maggiore chiarezza (lavoro di Laura e Peter).</li>
+                            <li>Tuttavia, i totali restano molto al di sotto di dove devono essere: circa <strong>42% per il montaggio, 23% per l&rsquo;evento stesso e 12% per lo smontaggio</strong>, con la mancanza pi&ugrave; acuta nell&rsquo;<strong>infrastruttura di costruzione anticipata</strong> &mdash; servono circa 15 persone impegnate in pi&ugrave; solo per la costruzione anticipata.</li>
+                            <li>Pablo V ha presentato un quadro di livelli in fase di sviluppo con i coordinatori. Ogni turno &egrave; valorizzato, ma non tutti sono ugualmente necessari:
+                                <ul>
+                                    <li><strong>Critico</strong> &mdash; senza questi l&rsquo;evento &egrave; insicuro e dovrebbe essere cancellato (es. bagni, Croce Rossa, gate minimo, perimetro, Mailfare, Werkhaus).</li>
+                                    <li><strong>Aspettativa di base</strong> &mdash; ci&ograve; che rende un buon evento, coerente con i principi (es. gate completo, info, Middle Elsewhere, Ohana House).</li>
+                                    <li><strong>Auspicabile</strong> &mdash; miglioramenti che aumentano la sicurezza, riducono il carico di lavoro, portano gioia o costruiscono verso un evento migliore l&rsquo;anno prossimo.</li>
+                                </ul>
+                            </li>
+                            <li>Ai coordinatori viene chiesto di classificare le proprie esigenze in questo formato (link nel canale dei coordinatori). L&rsquo;intento &egrave; rendere visibili i compromessi: se il personale raggiunge il 100% tutto va in porto; altrimenti, il team pu&ograve; prendere decisioni consapevoli su cosa viene tagliato.</li>
+                            <li>&Egrave; stato accennato un possibile aggiustamento in Humans &mdash; mostrare i turni &laquo;auspicabili&raquo; solo una volta riempiti i posti critici e di aspettativa di base.</li>
+                        </ul>
+
+                        <h2>5. Inquadramento dell&rsquo;Anno &mdash; Un Reset</h2>
+                        <ul>
+                            <li>Ben ha condiviso una riflessione emersa dalla riunione di verifica tra membri del board e coordinatori del giorno precedente. C&rsquo;&egrave; una pressione percepita in parti del team per essere all&rsquo;altezza di uno standard o di una memoria particolare di ci&ograve; che l&rsquo;evento &laquo;deve essere&raquo;.</li>
+                            <li>L&rsquo;inquadramento offerto: <strong>quest&rsquo;anno &egrave; un reset</strong>, e un&rsquo;occasione per tornare allo spirito centrale della partecipazione radicale e della costruzione comunitaria. Lo stato finale conta meno del processo di costruire insieme con chi si presenta e con quello che pu&ograve; portare.</li>
+                            <li>Michael M ha aggiunto: la pietra angolare sono le persone. La pressione che vale la pena portare &egrave; quella di assicurarsi che i volontari siano al sicuro, supportati, e che gli impegni presi nei loro confronti siano mantenuti. Se la musica &egrave; sbagliata o una festa specifica delude, &egrave; sopportabile. Se una persona volontaria che si &egrave; fatta avanti non &egrave; sostenuta dalla struttura, non lo &egrave;.</li>
+                        </ul>
+
+                        <h2>6. Supporto Barrios</h2>
+                        <ul>
+                            <li>Ellen ha riferito di una nuova funzione su Humans, costruita da Peter: i barrios possono ora <strong>iscrivere responsabili nominati</strong> per un piccolo insieme di ruoli &mdash; Shift Ninja, turno del periodo di accesso totale (bagni), consenso, benessere, punto di contatto per costruzione/montaggio e responsabile tecnico.</li>
+                            <li>Questo d&agrave; a Barrios Support una lista di contatti chiara per ogni barrio per ciascuna funzione e rimuove la necessit&agrave; di cercare la persona giusta tramite la chat di gruppo.</li>
+                        </ul>
+
+                        <h2>7. Promozione Incrociata con Borderland</h2>
+                        <ul>
+                            <li>Pablo V ha condiviso che <strong>Borderland inviar&agrave; una newsletter dedicata la prossima settimana</strong> presentando l&rsquo;evento alla sua comunit&agrave; di circa 11.000 persone, con tutti i canali rilevanti inclusi.</li>
+                            <li>I partecipanti con connessioni ad altri burn regionali sono stati incoraggiati a diffondere messaggi simili attraverso le proprie reti. Anche se le vendite dei biglietti stanno superando le aspettative, ogni partecipante in pi&ugrave; alleggerisce il resto del sistema &mdash; pi&ugrave; mani volontarie, pi&ugrave; energia, meno carico concentrato su chi &egrave; gi&agrave; coinvolto.</li>
+                        </ul>
+
+                        <h2>Azioni da Intraprendere</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Coordinatori</td><td>Compilare il formato critico / base / auspicabile condiviso nel canale dei coordinatori, e dare un riscontro sul formato stesso</td><td>Continuo</td></tr>
+                                <tr><td>Pablo V, Peter, Laura</td><td>Continuare il lavoro sul flusso post-acquisto &rarr; iscrizione ai turni</td><td>Continuo</td></tr>
+                                <tr><td>Tutti</td><td>Diffondere il messaggio in reti burner e regionali adiacenti; condividere la newsletter di Borderland al suo arrivo</td><td>Continuo</td></tr>
+                                <tr><td>Responsabili di barrio</td><td>Iscrivere responsabili nominati su <a href="https://humans.nobodies.team" target="_blank">Humans</a> (Shift Ninja, TAP, consenso, benessere, contatto costruzione, responsabile tecnico)</td><td>Continuo</td></tr>
+                                <tr><td>Comunit&agrave;</td><td>Registrarsi su Teams; l&rsquo;infrastruttura di costruzione anticipata &egrave; la mancanza pi&ugrave; acuta (volontari con esperienza elettrica / di costruzione particolarmente benvenuti)</td><td>Continuo</td></tr>
+                                <tr><td>Arrivi anticipati e squadra di smontaggio</td><td>Richiedere il rimborso viaggio tramite la pagina Event Volunteers o <code>travelclaims@nobodies.team</code></td><td>Continuo</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Verbale preparato a partire dalla registrazione audio.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Mit Pablo V, Daniela M S, Frank F, Ben, Michael M, Ellen, und Community-Mitgliedern</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Sitzungsunterlagen</h3>
+                        <ul>
+                            <li><a href="2026-04-30-community-transcript.html">Vollst&auml;ndiges Transkript (nur auf Englisch)</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=eMTdbGUdoBg">Videoaufzeichnung (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/eMTdbGUdoBg" title="Community Meeting - April 30, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Beschaffung der Ressourcen</h2>
+                        <ul>
+                            <li>Die Beschaffung der Ressourcen ist gesichert. Die Veranstaltung hat alles, was sie braucht, um stattzufinden.</li>
+                        </ul>
+
+                        <h2>2. Ticketverkauf</h2>
+                        <ul>
+                            <li>Pablo V berichtete, dass der Ticketverkauf in einer starken Position ist: das Projekt ist nun <strong>zuversichtlich, die Gewinnschwelle zu erreichen</strong>, was &mdash; angesichts des komprimierten Verkaufszeitraums in diesem Jahr &mdash; ein bedeutender Meilenstein ist.</li>
+                            <li>Die erste Welle erlebte einen au&szlig;ergew&ouml;hnlichen Ansturm in den Tagen vor der Preiserh&ouml;hung, mit einem sp&auml;ten Anstieg, der mehr Verk&auml;ufe brachte als die anf&auml;ngliche Er&ouml;ffnung.</li>
+                            <li>Eine zweite Welle kommt in etwa zwei Wochen; sobald diese Daten vorliegen, ist eine genauere Prognose der Endteilnehmerzahl m&ouml;glich.</li>
+                            <li>Finanziell ist die Veranstaltung nicht mehr gef&auml;hrdet.</li>
+                            <li>Pablo V, Peter und Laura arbeiten an einem optimierten Nach-Kauf-&laquo;Danke&raquo;-Flow, der Ticketk&auml;ufer direkt zur Schichtanmeldung f&uuml;hrt &mdash; nach dem Vorbild von Fluggesellschaften, die nach einem Kauf Hotel und Auto anbieten. Einige Reibungspunkte wurden bereits von Peter beseitigt; weitere sind in Arbeit.</li>
+                        </ul>
+
+                        <h2>3. Busse und Website</h2>
+                        <ul>
+                            <li>Daniela M S best&auml;tigte, dass <strong>Bustickets am Montag in den Verkauf gehen</strong>.</li>
+                            <li>Die Bus-Seite ist nun auf der Website aktiv, ebenso wie ein neuer Bereich mit Informationen zu den Barrios. Ein Survival Guide wird in den n&auml;chsten Wochen erwartet.</li>
+                            <li>Der Bewerbungsweg f&uuml;r Werkhaus l&auml;uft derzeit &uuml;ber Discord, wird aber in K&uuml;rze von der Website verlinkt sein.</li>
+                            <li>Das Reisekostenerstattungsprogramm &mdash; f&uuml;r Personen, die fr&uuml;h zum Aufbau anreisen oder bis zum Abbau bleiben &mdash; ist offen. Antr&auml;ge &uuml;ber die Event-Volunteers-Seite oder an <code>travelclaims@nobodies.team</code>.</li>
+                        </ul>
+
+                        <h2>4. Freiwillige und Koordination</h2>
+                        <ul>
+                            <li>Frank F berichtete von stetigen Anmeldungen: 30 bis 100 neue Schichtanmeldungen pro Tag, mit 53 am Tag des Calls. Die Freiwilligen-Seiten wurden zur Klarheit neu gestaltet (Arbeit von Laura und Peter).</li>
+                            <li>Die Gesamtzahlen liegen jedoch noch deutlich unter dem Bedarf: etwa <strong>42% f&uuml;r den Aufbau, 23% f&uuml;r die Veranstaltung selbst und 12% f&uuml;r den Abbau</strong>, mit dem akutesten Mangel in der <strong>fr&uuml;hen Aufbau-Infrastruktur</strong> &mdash; etwa 15 weitere engagierte Personen werden allein f&uuml;r den fr&uuml;hen Aufbau ben&ouml;tigt.</li>
+                            <li>Pablo V stellte einen Stufenrahmen vor, der mit den Koordinatoren entwickelt wird. Jede Schicht ist wertvoll, aber nicht jede ist gleicherma&szlig;en notwendig:
+                                <ul>
+                                    <li><strong>Kritisch</strong> &mdash; ohne diese ist die Veranstaltung unsicher und m&uuml;sste abgesagt werden (z.B. Toiletten, Rotes Kreuz, minimaler Gate, Perimeter, Mailfare, Werkhaus).</li>
+                                    <li><strong>Grunderwartung</strong> &mdash; was eine gute Veranstaltung ausmacht, im Einklang mit den Prinzipien (z.B. voller Gate, Info, Middle Elsewhere, Ohana House).</li>
+                                    <li><strong>W&uuml;nschenswert</strong> &mdash; Verbesserungen, die Sicherheit erh&ouml;hen, Arbeitslast reduzieren, Freude bringen oder zu einer besseren Veranstaltung im n&auml;chsten Jahr beitragen.</li>
+                                </ul>
+                            </li>
+                            <li>Die Koordinatoren werden gebeten, ihre Bedarfe in diesem Format einzuordnen (Link im Koordinatoren-Kanal). Die Absicht ist, Kompromisse sichtbar zu machen: wenn die Besetzung 100% erreicht, wird alles geliefert; falls nicht, kann das Team bewusste Entscheidungen treffen, was wegf&auml;llt.</li>
+                            <li>Eine m&ouml;gliche Anpassung in Humans wurde angesprochen &mdash; &laquo;w&uuml;nschenswerte&raquo; Schichten erst dann anzuzeigen, wenn die kritischen und Grunderwartungspl&auml;tze gef&uuml;llt sind.</li>
+                        </ul>
+
+                        <h2>5. Rahmen des Jahres &mdash; Ein Neustart</h2>
+                        <ul>
+                            <li>Ben teilte eine Reflexion, die aus dem Sense-Check-Treffen zwischen Board-Mitgliedern und Koordinatoren am Vortag hervorging. Es gibt einen wahrgenommenen Druck in Teilen des Teams, einem bestimmten Standard oder einer Erinnerung daran gerecht zu werden, was die Veranstaltung &laquo;sein muss&raquo;.</li>
+                            <li>Der angebotene Rahmen: <strong>dieses Jahr ist ein Neustart</strong>, und eine Chance, zum Kerngeist der radikalen Teilhabe und des Community-Aufbaus zur&uuml;ckzukehren. Der Endzustand ist weniger wichtig als der Prozess, gemeinsam mit denen, die kommen, und mit dem, was sie beitragen k&ouml;nnen, etwas zu bauen.</li>
+                            <li>Michael M f&uuml;gte hinzu: der Eckpfeiler sind die Menschen. Der Druck, der es wert ist, getragen zu werden, ist der, sicherzustellen, dass Freiwillige sicher sind, unterst&uuml;tzt werden und die ihnen gegen&uuml;ber gemachten Zusagen erf&uuml;llt werden. Wenn die Musik nicht stimmt oder eine bestimmte Party entt&auml;uscht, ist das ertr&auml;glich. Wenn eine freiwillige Person, die sich vorgewagt hat, nicht von der Struktur getragen wird, ist das es nicht.</li>
+                        </ul>
+
+                        <h2>6. Barrio-Unterst&uuml;tzung</h2>
+                        <ul>
+                            <li>Ellen berichtete von einer neuen Funktion auf Humans, gebaut von Peter: Barrios k&ouml;nnen nun <strong>benannte Verantwortliche</strong> f&uuml;r eine kleine Reihe von Rollen anmelden &mdash; Shift Ninja, Schicht der Total Access Period (Toiletten), Consent, Wellbeing, Ansprechpartner f&uuml;r Aufbau/Setup und technischer Verantwortlicher.</li>
+                            <li>Das gibt Barrios Support eine klare Kontaktliste pro Barrio f&uuml;r jede Funktion und beseitigt die Notwendigkeit, die richtige Person &uuml;ber den Gruppenchat zu suchen.</li>
+                        </ul>
+
+                        <h2>7. Borderland Cross-Promotion</h2>
+                        <ul>
+                            <li>Pablo V teilte mit, dass <strong>Borderland n&auml;chste Woche einen eigenen Newsletter</strong> verschicken wird, der die Veranstaltung seiner Community von rund 11.000 Personen vorstellt, mit allen relevanten Kan&auml;len.</li>
+                            <li>Teilnehmer mit Verbindungen zu anderen regionalen Burns wurden ermutigt, &auml;hnliche Botschaften &uuml;ber ihre Netzwerke zu verbreiten. Auch wenn die Ticketverk&auml;ufe die Erwartungen &uuml;bertreffen, entlastet jede zus&auml;tzliche teilnehmende Person den Rest des Systems &mdash; mehr freiwillige H&auml;nde, mehr Energie, weniger konzentrierte Last auf denen, die schon dabei sind.</li>
+                        </ul>
+
+                        <h2>Ma&szlig;nahmen</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Ma&szlig;nahme</th><th>Frist</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Koordinatoren</td><td>Das im Koordinatoren-Kanal geteilte Format kritisch / Grunderwartung / w&uuml;nschenswert ausf&uuml;llen und R&uuml;ckmeldung zum Format selbst geben</td><td>Laufend</td></tr>
+                                <tr><td>Pablo V, Peter, Laura</td><td>Arbeit am Nach-Kauf &rarr; Schichtanmeldung-Flow fortsetzen</td><td>Laufend</td></tr>
+                                <tr><td>Alle</td><td>Die Botschaft in benachbarten Burner- und regionalen Netzwerken verbreiten; den Borderland-Newsletter teilen, sobald er erscheint</td><td>Laufend</td></tr>
+                                <tr><td>Barrio-Verantwortliche</td><td>Benannte Verantwortliche auf <a href="https://humans.nobodies.team" target="_blank">Humans</a> anmelden (Shift Ninja, TAP, Consent, Wellbeing, Aufbau-Kontakt, technischer Verantwortlicher)</td><td>Laufend</td></tr>
+                                <tr><td>Community</td><td>Auf Teams registrieren; die fr&uuml;he Aufbau-Infrastruktur ist die akuteste L&uuml;cke (Freiwillige mit Elektro- / Bau-Erfahrung besonders willkommen)</td><td>Laufend</td></tr>
+                                <tr><td>Fr&uuml;he Anreisen und Abbau-Crew</td><td>Reisekostenerstattung &uuml;ber die Event-Volunteers-Seite oder <code>travelclaims@nobodies.team</code> beantragen</td><td>Laufend</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Protokoll erstellt aus der Audioaufzeichnung.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>

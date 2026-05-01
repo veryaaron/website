@@ -2,6 +2,9 @@
 // Each entry: { date: "YYYY-MM-DD", source: "Team", text: "Update text" }
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
+    // === May 1 ===
+    {"date": "2026-05-01", "source": "Governance", "text": "April 30 <a href=\"transparency/2026-04-30-community.html\">community meeting</a> minutes published in 5 languages with full transcript and video recording"},
+
     // === April 28 ===
     {"date": "2026-04-28", "source": "Logistics", "text": "<a href=\"bus-tickets.html\">Bus schedule</a> published &mdash; Barcelona &harr; Elsewhere, &euro;48 per seat. Sales open Monday 4 May at 20:00 CEST"},
 
