@@ -11,39 +11,70 @@
         const links = document.querySelector('.nav-links');
         if (!toggle || !links) return;
 
+        function isMobile() {
+            return window.getComputedStyle(toggle).display !== 'none';
+        }
+
+        function setOpen(open) {
+            links.classList.toggle('active', open);
+            toggle.classList.toggle('active', open);
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            if (!open) {
+                // Reset any expanded dropdowns so the next open starts collapsed
+                document.querySelectorAll('.nav-dropdown.open').forEach(function(d) {
+                    d.classList.remove('open');
+                });
+            }
+        }
+
         toggle.addEventListener('click', () => {
-            links.classList.toggle('active');
+            setOpen(!links.classList.contains('active'));
         });
 
-        // Close on link click
+        // Close on link click — but NOT when tapping a dropdown parent on mobile
+        // (that's a section toggle, handled in initNavDropdowns).
         links.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                links.classList.remove('active');
+                if (isMobile() && link.parentElement &&
+                    link.parentElement.classList.contains('nav-dropdown')) {
+                    return;
+                }
+                setOpen(false);
             });
         });
 
         // Close on outside click
         document.addEventListener('click', (e) => {
             if (!toggle.contains(e.target) && !links.contains(e.target)) {
-                links.classList.remove('active');
+                setOpen(false);
             }
         });
     }
 
-    // Nav dropdowns — toggle on mobile, let hover work on desktop
+    // Nav dropdowns — toggle on mobile, let hover work on desktop.
+    // The dropdown parents are non-link group titles (no href), so we
+    // always preventDefault and treat them as buttons.
     function initNavDropdowns() {
         document.querySelectorAll('.nav-dropdown > a').forEach(function(link) {
             link.addEventListener('click', function(e) {
-                // Only intercept on mobile (nav-toggle visible)
+                e.preventDefault();
                 var toggle = document.querySelector('.nav-toggle');
-                if (!toggle || window.getComputedStyle(toggle).display === 'none') return;
-
-                var parent = this.parentElement;
-                if (!parent.classList.contains('open')) {
-                    e.preventDefault();
-                    parent.classList.toggle('open');
+                var isMobile = toggle && window.getComputedStyle(toggle).display !== 'none';
+                if (!isMobile) {
+                    // Desktop: hover handles open/close, click is a no-op.
+                    return;
                 }
-                // Second tap follows the link normally
+                // Mobile: tap toggles — opens if closed, closes if open.
+                this.parentElement.classList.toggle('open');
+            });
+            // Keyboard support: Enter/Space toggles the dropdown so keyboard
+            // users can reach the sub-items. (The anchor has no href, so the
+            // browser's default Enter-activates-link behaviour doesn't apply.)
+            link.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.parentElement.classList.toggle('open');
+                }
             });
         });
     }
