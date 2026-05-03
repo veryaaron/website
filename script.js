@@ -51,20 +51,30 @@
         });
     }
 
-    // Nav dropdowns — toggle on mobile, let hover work on desktop
+    // Nav dropdowns — toggle on mobile, let hover work on desktop.
+    // The dropdown parents are non-link group titles (no href), so we
+    // always preventDefault and treat them as buttons.
     function initNavDropdowns() {
         document.querySelectorAll('.nav-dropdown > a').forEach(function(link) {
             link.addEventListener('click', function(e) {
-                // Only intercept on mobile (nav-toggle visible)
+                e.preventDefault();
                 var toggle = document.querySelector('.nav-toggle');
-                if (!toggle || window.getComputedStyle(toggle).display === 'none') return;
-
-                var parent = this.parentElement;
-                if (!parent.classList.contains('open')) {
-                    e.preventDefault();
-                    parent.classList.toggle('open');
+                var isMobile = toggle && window.getComputedStyle(toggle).display !== 'none';
+                if (!isMobile) {
+                    // Desktop: hover handles open/close, click is a no-op.
+                    return;
                 }
-                // Second tap follows the link normally
+                // Mobile: tap toggles — opens if closed, closes if open.
+                this.parentElement.classList.toggle('open');
+            });
+            // Keyboard support: Enter/Space toggles the dropdown so keyboard
+            // users can reach the sub-items. (The anchor has no href, so the
+            // browser's default Enter-activates-link behaviour doesn't apply.)
+            link.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.parentElement.classList.toggle('open');
+                }
             });
         });
     }

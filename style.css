@@ -251,7 +251,15 @@ h4 { font-size: 1.15rem; }
 
 /* Nav dropdown */
 .nav-dropdown { position: relative; }
-.nav-dropdown > a { display: inline-flex; align-items: center; gap: 0.3rem; }
+.nav-dropdown > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    /* Parents are non-link group titles (no href) — keep them visibly
+       interactive and prevent text-selection cursors. */
+    cursor: pointer;
+    user-select: none;
+}
 .nav-chevron { transition: transform 0.2s; }
 .nav-dropdown-menu {
     position: absolute;
@@ -2891,12 +2899,12 @@ h4 { font-size: 1.15rem; }
     .header:not(.scrolled) .nav-links a:hover {
         color: var(--color-accent);
     }
-    /* Tickets CTA: align left like the other items, don't stretch full width */
+    /* Tickets CTA: centered in the open menu, doesn't stretch full width */
     .nav-links .btn-nav {
-        align-self: flex-start;
-        margin-top: 0.5rem;
+        align-self: center;
+        margin-top: 0.75rem;
         font-size: 1.05rem;
-        padding: 0.6rem 1.25rem;
+        padding: 0.6rem 1.5rem;
     }
 
     .nav-dropdown-menu {
