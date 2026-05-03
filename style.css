@@ -305,18 +305,46 @@ h4 { font-size: 1.15rem; }
 .nav-toggle {
     display: none;
     flex-direction: column;
+    justify-content: center;
     gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 5px;
+    /* Fix size so the X transform pivots cleanly */
+    width: 34px;
+    height: 34px;
+    position: relative;
 }
 .nav-toggle span {
     display: block;
     width: 24px;
     height: 2px;
     background: var(--color-text);
-    transition: 0.3s;
+    transition: transform 0.3s, opacity 0.2s, top 0.3s;
+}
+
+/* Hamburger → cross when the menu is open */
+.nav-toggle.active {
+    /* Stack the bars on top of each other so two cross into an X */
+    gap: 0;
+    justify-content: center;
+}
+.nav-toggle.active span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -12px;
+    margin-top: -1px;
+}
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+}
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
 }
 
 /* Hero */
@@ -2821,29 +2849,54 @@ h4 { font-size: 1.15rem; }
         left: 0;
         right: 0;
         flex-direction: column;
+        align-items: stretch;
         gap: 0;
         background: #fff;
         border-bottom: 1px solid var(--color-border);
-        padding: 1rem;
+        padding: 1rem 1.25rem 1.5rem;
+        text-align: left;
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
-        transition: all 0.3s;
+        transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
     }
     .nav-links.active {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
     }
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+    }
     .nav-links a {
         display: block;
         padding: 0.75rem 0;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+    /* Top-level dropdown parent stays inline-flex so the chevron sits next
+       to the label, but we want it left-aligned and full-width on mobile. */
+    .nav-dropdown > a {
+        display: flex;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        width: 100%;
     }
     .header:not(.scrolled) .nav-links a {
         color: var(--color-text-muted);
     }
     .header:not(.scrolled) .nav-links a:hover {
         color: var(--color-accent);
+    }
+    /* Tickets CTA: align left like the other items, don't stretch full width */
+    .nav-links .btn-nav {
+        align-self: flex-start;
+        margin-top: 0.5rem;
+        font-size: 1.05rem;
+        padding: 0.6rem 1.25rem;
     }
 
     .nav-dropdown-menu {
@@ -2859,18 +2912,71 @@ h4 { font-size: 1.15rem; }
         overflow: hidden;
         opacity: 1;
         visibility: visible;
-        transition: max-height 0.3s;
+        transition: max-height 0.4s ease;
     }
     .nav-dropdown.open > .nav-dropdown-menu {
-        max-height: 200px;
+        /* Large enough to fit every sub-item (Event has 11). Using a big
+           value rather than `none` keeps the height transition working. */
+        max-height: 800px;
     }
     .nav-dropdown-menu a {
-        padding: 0.5rem 0 0.5rem 1.25rem;
-        font-size: 0.88rem;
+        padding: 0.55rem 0 0.55rem 1.25rem;
+        font-size: 1.05rem;
         color: var(--color-text-muted);
+        justify-content: flex-start;
+        gap: 0.6rem;
     }
 
-    .hero h1 { font-size: clamp(3rem, 15vw, 5rem); }
+    /* Header logo — was 1.75rem, too dominant on narrow screens
+       and crowds the toggle. Trim it to a comfortable mobile size. */
+    .logo { font-size: 1.15rem; }
+
+    /* Hero — fit comfortably in the viewport on mobile.
+       100svh respects mobile browser chrome so we don't crop content
+       behind the URL bar. Tighter top/bottom padding leaves room for
+       all 4 channel buttons to show without overflow. */
+    .hero {
+        min-height: 100svh;
+        padding: 5.5rem 0 2.5rem;
+    }
+    .hero h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+        margin-bottom: 1rem;
+    }
+    .hero-tag {
+        font-size: 0.78rem;
+        padding: 0.4rem 0.9rem;
+        margin-bottom: 1rem;
+    }
+    .hero-title-img {
+        /* Slightly smaller upper bound so it doesn't dominate */
+        width: clamp(220px, 78vw, 460px);
+    }
+    .hero-cta-row {
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+    }
+    .hero-social-label {
+        margin-top: 1rem;
+        margin-bottom: 0.4rem;
+    }
+    /* Channel buttons: wrap into a tidy 2-row grid on mobile so
+       Discord / Telegram / WhatsApp / Newsletter are all visible. */
+    .hero-social {
+        flex-wrap: wrap;
+        gap: 0.6rem 1rem;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    .hero-social-link {
+        font-size: 0.88rem;
+        gap: 0.35rem;
+    }
+    .hero-social-link svg {
+        width: 18px;
+        height: 18px;
+    }
 
     /* About / Event — mobile */
     .ac-img--a,
@@ -3274,6 +3380,29 @@ h4 { font-size: 1.15rem; }
 .anim.visible {
     opacity: 1;
     transform: translate(0, 0);
+}
+
+/* Mobile: convert horizontal slide-ins into a vertical fade-up.
+   The translateX(±60px) pre-reveal state used by .anim-slide-left and
+   .anim-slide-right pushes elements past the right edge of narrow
+   viewports — which produces a horizontal scrollbar before the
+   IntersectionObserver fires .visible on each element. Switching the
+   pre-reveal transform to translateY(30px) at <=768px keeps the
+   fade-in motion without affecting horizontal scroll. */
+@media (max-width: 768px) {
+    .anim-slide-left,
+    .anim-slide-right {
+        transform: translateY(30px);
+    }
+
+    /* Defensive guard against any other source of horizontal overflow on
+       narrow viewports (rotated decorative images, oversized headings,
+       future content). overflow-x: clip is used instead of hidden so
+       position: sticky inside the page continues to work. */
+    html,
+    body {
+        overflow-x: clip;
+    }
 }
 
 /* Staggered delays for principles (stepped entry) */
