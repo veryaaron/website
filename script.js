@@ -11,21 +11,42 @@
         const links = document.querySelector('.nav-links');
         if (!toggle || !links) return;
 
+        function isMobile() {
+            return window.getComputedStyle(toggle).display !== 'none';
+        }
+
+        function setOpen(open) {
+            links.classList.toggle('active', open);
+            toggle.classList.toggle('active', open);
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            if (!open) {
+                // Reset any expanded dropdowns so the next open starts collapsed
+                document.querySelectorAll('.nav-dropdown.open').forEach(function(d) {
+                    d.classList.remove('open');
+                });
+            }
+        }
+
         toggle.addEventListener('click', () => {
-            links.classList.toggle('active');
+            setOpen(!links.classList.contains('active'));
         });
 
-        // Close on link click
+        // Close on link click — but NOT when tapping a dropdown parent on mobile
+        // (that's a section toggle, handled in initNavDropdowns).
         links.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                links.classList.remove('active');
+                if (isMobile() && link.parentElement &&
+                    link.parentElement.classList.contains('nav-dropdown')) {
+                    return;
+                }
+                setOpen(false);
             });
         });
 
         // Close on outside click
         document.addEventListener('click', (e) => {
             if (!toggle.contains(e.target) && !links.contains(e.target)) {
-                links.classList.remove('active');
+                setOpen(false);
             }
         });
     }
