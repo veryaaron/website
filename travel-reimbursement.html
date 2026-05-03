@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup & Strike Travel Reimbursement | Elsewhere &mdash; by Nobodies Collective</title>
+    <meta name="description" content="We're offering travel expense reimbursements for volunteers who arrive early for set-up or stay through full strike at Elsewhere 2026.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tr-page {
+            padding: 0 0 4rem;
+        }
+
+        /* Hero */
+        .tr-hero {
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .tr-hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('images/art/support.jpg') center/cover no-repeat;
+            opacity: 0.35;
+        }
+
+        .tr-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(17,17,17,0.2) 0%, rgba(17,17,17,0.8) 100%);
+        }
+
+        .tr-hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 10rem 2rem 5rem;
+            max-width: 760px;
+        }
+
+        .tr-hero-label {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+
+        .tr-hero-content h1 {
+            color: #fff;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+        }
+
+        .tr-hero-content p {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        /* Language note */
+        .lang-note-banner {
+            margin-top: 1.5rem;
+            padding: 0.9rem 1.25rem;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            border-left: 3px solid var(--color-accent);
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+        }
+
+        .lang-note-banner a {
+            font-weight: 600;
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+
+        /* Content */
+        .tr-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        .tr-section {
+            margin-top: 3.5rem;
+        }
+
+        .tr-section h2 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+
+        .tr-section p,
+        .tr-section li {
+            color: var(--color-text-muted);
+            line-height: 1.7;
+        }
+
+        .tr-section p {
+            margin-bottom: 1rem;
+        }
+
+        .tr-section ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tr-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .tr-section li strong {
+            color: var(--color-text);
+        }
+
+        /* Highlight box */
+        .tr-highlight {
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .tr-highlight p {
+            color: var(--color-text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .tr-highlight p:last-child { margin-bottom: 0; }
+
+        .tr-highlight strong {
+            color: var(--color-text);
+        }
+
+        /* Tiers */
+        .tr-tiers {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+
+        .tr-tier {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+        }
+
+        .tr-tier-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .tr-tier h3 {
+            font-size: 1rem;
+            color: var(--color-text);
+            margin-bottom: 0.4rem;
+        }
+
+        .tr-tier-dates {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .tr-tier-amount {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--color-text);
+            line-height: 1;
+        }
+
+        .tr-tier-note {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* Steps */
+        .tr-steps {
+            counter-reset: tr-step;
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .tr-steps li {
+            counter-increment: tr-step;
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+            margin-bottom: 1.25rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        .tr-steps li::before {
+            content: counter(tr-step);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 2rem;
+            height: 2rem;
+            background: var(--color-accent);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .tr-steps li strong {
+            color: var(--color-text);
+        }
+
+        /* Apply CTA */
+        .tr-apply {
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+        }
+
+        .tr-apply h2 {
+            margin-bottom: 1rem;
+        }
+
+        .tr-apply p {
+            color: var(--color-text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tr-contact {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+
+        .tr-contact a {
+            font-weight: 600;
+        }
+
+        /* Werkhaus link banner */
+        .tr-werkhaus-banner {
+            margin-top: 3.5rem;
+            background: var(--color-text);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            color: #fff;
+        }
+
+        .tr-werkhaus-banner h2 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .tr-werkhaus-banner p {
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            max-width: 580px;
+        }
+
+        @media (max-width: 600px) {
+            .tr-tiers {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="tr-page">
+
+        <!-- Hero -->
+        <section class="tr-hero">
+            <div class="tr-hero-bg"></div>
+            <div class="tr-hero-overlay"></div>
+            <div class="tr-hero-content">
+                <span class="tr-hero-label">For setup &amp; strike volunteers</span>
+                <h1>Travel Reimbursement</h1>
+                <p>Elsewhere runs entirely on volunteer power. The people who arrive early to build the city and stay late to take it down are the backbone of the event — and we want to make it easier for them to be there.</p>
+            </div>
+        </section>
+
+        <div class="tr-content">
+            <br>
+            <a href="volunteering.html" class="back-link">Back to Volunteering</a>
+
+            <div class="lang-note-banner">
+                This page is also available in Spanish. <a href="https://docs.google.com/document/d/10IJFAeNxhaX4iH-yUeXJyUKYnX9vvVYlkb1KjZAZqQo/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Open the document</a> — use the tabs at the top to switch between English and Spanish.
+            </div>
+
+            <!-- Intro -->
+            <section class="tr-section">
+                <h2>What is this?</h2>
+                <p>This year we&rsquo;re offering travel expense reimbursements for volunteers who commit to early set-up or full strike. It&rsquo;s not a ticket discount — it&rsquo;s a reimbursement of your actual travel costs, processed after the event.</p>
+                <p>Places are limited and we&rsquo;ll prioritise volunteers for our most critical roles — infrastructure build and cantina — so the sooner you apply, the better.</p>
+                <div class="tr-highlight">
+                    <p><strong>Everyone still buys a ticket.</strong> This covers your travel costs, nothing else. You show up, you do the work, you submit receipts, we pay you back.</p>
+                </div>
+            </section>
+
+            <!-- Tiers -->
+            <section class="tr-section">
+                <h2>Reimbursement tiers</h2>
+
+                <div class="tr-tiers">
+                    <div class="tr-tier">
+                        <span class="tr-tier-label">Early set-up</span>
+                        <h3>Arrive 15–18 June</h3>
+                        <p class="tr-tier-dates">The earliest crew. Build starts here.</p>
+                        <div class="tr-tier-amount">up to &euro;275</div>
+                        <p class="tr-tier-note">travel reimbursement</p>
+                    </div>
+                    <div class="tr-tier">
+                        <span class="tr-tier-label">Mid set-up</span>
+                        <h3>Arrive 19–22 June</h3>
+                        <p class="tr-tier-dates">City is taking shape. All hands needed.</p>
+                        <div class="tr-tier-amount">up to &euro;160</div>
+                        <p class="tr-tier-note">travel reimbursement</p>
+                    </div>
+                    <div class="tr-tier">
+                        <span class="tr-tier-label">Strike</span>
+                        <h3>Stay through full strike</h3>
+                        <p class="tr-tier-dates">Until 22 July. Leave no trace.</p>
+                        <div class="tr-tier-amount">up to &euro;275</div>
+                        <p class="tr-tier-note">travel reimbursement</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How it works -->
+            <section class="tr-section">
+                <h2>How it works</h2>
+
+                <ol class="tr-steps">
+                    <li><strong>Get your ticket</strong> for Elsewhere 2026 — <a href="https://tickets.nobodies.team/events/nobodiescollective/2089167" target="_blank" rel="noopener noreferrer">buy one here</a></li>
+                    <li><strong>Sign up on Humans</strong> at <a href="https://humans.nobodies.team" target="_blank">humans.nobodies.team</a> and add yourself to the relevant set-up or strike shifts</li>
+                    <li><strong>Fill in the application form</strong> below</li>
+                    <li><strong>If approved</strong>, submit your travel receipts after the event to <a href="mailto:travelclaims@nobodies.team">travelclaims@nobodies.team</a></li>
+                    <li><strong>Reimbursement</strong> is processed in July/August</li>
+                </ol>
+            </section>
+
+            <!-- Werkhaus banner -->
+            <div class="tr-werkhaus-banner">
+                <h2>Going all in? Consider Werkhaus.</h2>
+                <p>If you&rsquo;re arriving early or staying for strike, you&rsquo;re Werkhaus material. It&rsquo;s the volunteer barrio — meals included, crew community, &euro;50 barrio fee. Combined with this reimbursement, it significantly reduces the cost of going all in.</p>
+                <a href="werkhaus.html" class="btn btn-primary">Find out about Werkhaus &rarr;</a>
+            </div>
+
+            <!-- Apply -->
+            <section class="tr-section" id="apply">
+                <h2>Apply</h2>
+                <p>Applications are open now. The sooner you apply, the better your chances — places for critical roles fill up fast.</p>
+            </section>
+
+            <!-- Apply CTA -->
+            <div class="tr-apply">
+                <h2>Ready to commit?</h2>
+                <p>Fill in the application form. We&rsquo;ll be in touch.</p>
+                <a href="https://forms.gle/NrZeZAzqZUEUadW46" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Apply for travel reimbursement</a>
+                <p class="tr-contact">Questions? Email <a href="mailto:travelclaims@nobodies.team">travelclaims@nobodies.team</a></p>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

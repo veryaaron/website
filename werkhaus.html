@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Werkhaus | Elsewhere &mdash; by Nobodies Collective</title>
+    <meta name="description" content="Werkhaus is the volunteer home of Elsewhere — a barrio for the crew that builds the city, from first day of setup through last day of strike.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .wk-page {
+            padding: 0 0 4rem;
+        }
+
+        /* Hero */
+        .wk-hero {
+            position: relative;
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .wk-hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('images/art/support.jpg') center/cover no-repeat;
+            opacity: 0.4;
+        }
+
+        .wk-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(17,17,17,0.2) 0%, rgba(17,17,17,0.8) 100%);
+        }
+
+        .wk-hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 10rem 2rem 5rem;
+            max-width: 800px;
+        }
+
+        .wk-hero-label {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+
+        .wk-hero-content h1 {
+            color: #fff;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+        }
+
+        .wk-hero-content p {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.15rem;
+            line-height: 1.7;
+            max-width: 620px;
+            margin: 0 auto 2rem;
+        }
+
+        .wk-hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Language note */
+        .lang-note-banner {
+            margin-top: 1.5rem;
+            padding: 0.9rem 1.25rem;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            border-left: 3px solid var(--color-accent);
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+        }
+
+        .lang-note-banner a {
+            font-weight: 600;
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+
+        /* Content */
+        .wk-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        .wk-section {
+            margin-top: 3.5rem;
+        }
+
+        .wk-section h2 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+
+        .wk-section h3 {
+            font-size: 1.15rem;
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .wk-section p,
+        .wk-section li {
+            color: var(--color-text-muted);
+            line-height: 1.7;
+        }
+
+        .wk-section p {
+            margin-bottom: 1rem;
+        }
+
+        .wk-section ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .wk-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .wk-section li strong {
+            color: var(--color-text);
+        }
+
+        /* Highlight box */
+        .wk-highlight {
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .wk-highlight p {
+            color: var(--color-text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .wk-highlight p:last-child {
+            margin-bottom: 0;
+        }
+
+        .wk-highlight strong {
+            color: var(--color-text);
+        }
+
+        /* What's included grid */
+        .wk-includes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+
+        .wk-include-item {
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+        }
+
+        .wk-include-item h3 {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+            margin-top: 0;
+            color: var(--color-text);
+        }
+
+        .wk-include-item p {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Eligibility paths */
+        .wk-paths {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+
+        .wk-path {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+        }
+
+        .wk-path-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .wk-path h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            margin-top: 0;
+            color: var(--color-text);
+        }
+
+        .wk-path p {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* TODO placeholder style */
+        .wk-todo {
+            background: #fffbea;
+            border: 2px dashed #e6c84a;
+            border-radius: var(--radius);
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+            color: #7a6200;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .wk-todo strong {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* Fee callout */
+        .wk-fee {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+
+        .wk-fee-amount {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-text);
+            line-height: 1;
+        }
+
+        .wk-fee-note {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* How to apply steps */
+        .wk-steps {
+            counter-reset: wk-step;
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .wk-steps li {
+            counter-increment: wk-step;
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+            margin-bottom: 1.25rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        .wk-steps li::before {
+            content: counter(wk-step);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 2rem;
+            height: 2rem;
+            background: var(--color-accent);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .wk-steps li strong {
+            color: var(--color-text);
+        }
+
+        /* Travel reimbursement banner */
+        .wk-travel-banner {
+            margin-top: 3.5rem;
+            background: var(--color-text);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            color: #fff;
+        }
+
+        .wk-travel-banner h2 {
+            color: #fff;
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+        }
+
+        .wk-travel-banner p {
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            max-width: 620px;
+        }
+
+        /* Apply CTA */
+        .wk-apply {
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+        }
+
+        .wk-apply h2 {
+            margin-bottom: 1rem;
+        }
+
+        .wk-apply p {
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .wk-apply-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .wk-contact {
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+
+        .wk-contact a {
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .wk-paths,
+            .wk-includes {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="wk-page">
+
+        <!-- Hero -->
+        <section class="wk-hero">
+            <div class="wk-hero-bg"></div>
+            <div class="wk-hero-overlay"></div>
+            <div class="wk-hero-content">
+                <span class="wk-hero-label">A barrio for the crew</span>
+                <h1>Werkhaus</h1>
+                <p>The volunteer home of Elsewhere. Open from the first day of build through the last day of strike — for the people who make the whole thing possible.</p>
+                <div class="wk-hero-cta">
+                    <a href="https://forms.gle/bebhM9vb3pseUtPaA" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background:#fff; color:#111; border-color:#fff;">Apply to join Werkhaus</a>
+                    <a href="volunteering.html" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.85);">Volunteering guide</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="wk-content">
+            <br>
+            <a href="volunteering.html" class="back-link">Back to Volunteering</a>
+
+            <div class="lang-note-banner">
+                This page is also available in Spanish. <a href="https://docs.google.com/document/d/1f-Kq_pmgXqbCYqFCQfVZflq-STHIQSGpY1t7AjRq2uA/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Open the document</a> — use the tabs at the top to switch between English and Spanish.
+            </div>
+
+            <!-- What is Werkhaus -->
+            <section class="wk-section">
+                <h2>What is Werkhaus?</h2>
+                <p>Werkhaus is the barrio for people going all in. If you're arriving early to build the city, staying through to strike, or holding a year-round role — this is your home on site.</p>
+                <p>It's where the crew lives. The people you'll build alongside, eat with, problem-solve with at midnight, and end up knowing better than almost anyone else. Small crew energy with the whole event as your playground.</p>
+                <div class="wk-highlight">
+                    <p><strong>First time at Elsewhere?</strong> That's absolutely fine. If you've got a week to give before the gates open, you'll leave knowing how to build a city from scratch — and with people you won't forget.</p>
+                </div>
+            </section>
+
+            <!-- What's included -->
+            <section class="wk-section">
+                <h2>What&rsquo;s included</h2>
+
+                <div class="wk-includes">
+                    <div class="wk-include-item">
+                        <h3>Meals</h3>
+                        <p>Breakfast, lunch, and dinner at Cantina throughout your stay — covered by the organisation.</p>
+                    </div>
+                    <div class="wk-include-item">
+                        <h3>Space &amp; shade</h3>
+                        <p>Barrio infrastructure, shade structures, and camping space in the crew home.</p>
+                    </div>
+                    <div class="wk-include-item">
+                        <h3>Your people</h3>
+                        <p>A community of experienced, committed people who know how to get things done.</p>
+                    </div>
+                    <div class="wk-include-item">
+                        <h3>Early entry</h3>
+                        <p>You're already on site before the gates open. The event is yours from day zero.</p>
+                    </div>
+                </div>
+
+                <div class="wk-fee">
+                    <span class="wk-fee-amount">&euro;50</span>
+                    <span class="wk-fee-note">barrio fee, covers drinks and extras throughout your stay</span>
+                </div>
+            </section>
+
+            <!-- Who is Werkhaus for -->
+            <section class="wk-section">
+                <h2>Who is Werkhaus for?</h2>
+                <p>Werkhaus is open to anyone who meets one of the following:</p>
+
+                <div class="wk-paths">
+                    <div class="wk-path">
+                        <span class="wk-path-label">Pre-event</span>
+                        <h3>Set-up crew</h3>
+                        <p>Commit to at least one week on site during set-up before the gates open.</p>
+                    </div>
+                    <div class="wk-path">
+                        <span class="wk-path-label">Event time</span>
+                        <h3>Volunteer shifts</h3>
+                        <p>Complete 20 hours of volunteer shifts during the event — or 16 hours if your shifts focus on critical roles (Malfare, site leads, Nomads, event maintenance, or fluffing).</p>
+                    </div>
+                    <div class="wk-path">
+                        <span class="wk-path-label">Year-round</span>
+                        <h3>Organisational roles</h3>
+                        <p>Hold a year-round organisational role within the NCA.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Extra support -->
+            <section class="wk-section">
+                <h2>Extra support this year</h2>
+                <p>We&rsquo;re offering travel expense reimbursements for volunteers who arrive early for set-up or stay through full strike. Combined with the &euro;50 barrio fee, this significantly reduces the cost of going all-in.</p>
+                <p><a href="travel-reimbursement.html">Find out more and apply for travel reimbursement &rarr;</a></p>
+            </section>
+
+            <!-- How to apply -->
+            <section class="wk-section" id="apply">
+                <h2>How to apply</h2>
+                <p>Applications are open now. Confirmations roll from mid-May. Places are limited &mdash; the sooner you apply, the better.</p>
+
+                <ol class="wk-steps">
+                    <li>Make sure you have a ticket for Elsewhere 2026 &mdash; <a href="https://tickets.nobodies.team/events/nobodiescollective/2089167" target="_blank" rel="noopener noreferrer">get yours here</a></li>
+                    <li>Sign up at <a href="https://humans.nobodies.team" target="_blank">humans.nobodies.team</a> and add yourself to the relevant shifts</li>
+                    <li>Fill in the application form below</li>
+                </ol>
+
+                <a href="https://forms.gle/bebhM9vb3pseUtPaA" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Apply to join Werkhaus</a>
+            </section>
+
+            <!-- Travel reimbursement banner -->
+            <div class="wk-travel-banner">
+                <h2>Arriving early or staying for strike?</h2>
+                <p>We&rsquo;re offering travel expense reimbursements for set-up and strike volunteers this year. It&rsquo;s not a discount on your ticket &mdash; it&rsquo;s a reimbursement of actual travel costs, processed after the event.</p>
+                <a href="travel-reimbursement.html" class="btn btn-primary">Find out more &rarr;</a>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="wk-apply">
+                <h2>Ready to go all in?</h2>
+                <p>Questions? Drop us a line. If you want to know more about what Werkhaus is actually like before you commit, the volunteering guide has the full picture.</p>
+                <div class="wk-apply-buttons">
+                    <a href="https://forms.gle/bebhM9vb3pseUtPaA" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Apply to join Werkhaus</a>
+                    <a href="volunteering.html" class="btn btn-outline">Read the Volunteering Guide</a>
+                </div>
+                <p class="wk-contact">Questions? Email <a href="mailto:werkhausbarrio@nobodies.team">werkhausbarrio@nobodies.team</a></p>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
