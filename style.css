@@ -3276,6 +3276,29 @@ h4 { font-size: 1.15rem; }
     transform: translate(0, 0);
 }
 
+/* Mobile: convert horizontal slide-ins into a vertical fade-up.
+   The translateX(±60px) pre-reveal state used by .anim-slide-left and
+   .anim-slide-right pushes elements past the right edge of narrow
+   viewports — which produces a horizontal scrollbar before the
+   IntersectionObserver fires .visible on each element. Switching the
+   pre-reveal transform to translateY(30px) at <=768px keeps the
+   fade-in motion without affecting horizontal scroll. */
+@media (max-width: 768px) {
+    .anim-slide-left,
+    .anim-slide-right {
+        transform: translateY(30px);
+    }
+
+    /* Defensive guard against any other source of horizontal overflow on
+       narrow viewports (rotated decorative images, oversized headings,
+       future content). overflow-x: clip is used instead of hidden so
+       position: sticky inside the page continues to work. */
+    html,
+    body {
+        overflow-x: clip;
+    }
+}
+
 /* Staggered delays for principles (stepped entry) */
 .principle.anim:nth-child(1)  { transition-delay: 0s; }
 .principle.anim:nth-child(2)  { transition-delay: 0.08s; }
