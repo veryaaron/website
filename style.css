@@ -2927,7 +2927,56 @@ h4 { font-size: 1.15rem; }
         gap: 0.6rem;
     }
 
-    .hero h1 { font-size: clamp(3rem, 15vw, 5rem); }
+    /* Header logo — was 1.75rem, too dominant on narrow screens
+       and crowds the toggle. Trim it to a comfortable mobile size. */
+    .logo { font-size: 1.15rem; }
+
+    /* Hero — fit comfortably in the viewport on mobile.
+       100svh respects mobile browser chrome so we don't crop content
+       behind the URL bar. Tighter top/bottom padding leaves room for
+       all 4 channel buttons to show without overflow. */
+    .hero {
+        min-height: 100svh;
+        padding: 5.5rem 0 2.5rem;
+    }
+    .hero h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+        margin-bottom: 1rem;
+    }
+    .hero-tag {
+        font-size: 0.78rem;
+        padding: 0.4rem 0.9rem;
+        margin-bottom: 1rem;
+    }
+    .hero-title-img {
+        /* Slightly smaller upper bound so it doesn't dominate */
+        width: clamp(220px, 78vw, 460px);
+    }
+    .hero-cta-row {
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+    }
+    .hero-social-label {
+        margin-top: 1rem;
+        margin-bottom: 0.4rem;
+    }
+    /* Channel buttons: wrap into a tidy 2-row grid on mobile so
+       Discord / Telegram / WhatsApp / Newsletter are all visible. */
+    .hero-social {
+        flex-wrap: wrap;
+        gap: 0.6rem 1rem;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    .hero-social-link {
+        font-size: 0.88rem;
+        gap: 0.35rem;
+    }
+    .hero-social-link svg {
+        width: 18px;
+        height: 18px;
+    }
 
     /* About / Event — mobile */
     .ac-img--a,
