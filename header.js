@@ -23,6 +23,7 @@
                             '<li><a href="' + prefix + '/bus-tickets.html">Bus Tickets</a></li>' +
                             '<li><a href="' + prefix + '/inclusion.html">Inclusion</a></li>' +
                             '<li><a href="' + prefix + '/volunteering.html">Volunteering<span class="nav-badge">Help needed!</span></a></li>' +
+                            '<li><a href="' + prefix + '/werkhaus.html">Werkhaus</a></li>' +
                             '<li><a href="' + prefix + '/speaking-about-elsewhere.html">Speaking About Elsewhere</a></li>' +
                         '</ul>' +
                     '</li>' +
