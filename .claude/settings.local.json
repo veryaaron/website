@@ -12,8 +12,11 @@
       "Bash(git push:*)",
       "Bash(git remote set-url:*)",
       "Bash(grep:*)",
-      "Bash(lsof -ti:8000)",
-      "Bash(xargs kill *)"
+      "Bash(git fetch *)",
+      "Bash(git ls-tree *)",
+      "Bash(git checkout *)",
+      "Bash(git stash *)",
+      "Bash(gh pr create --repo nobodies-collective/website --base main --head veryaaron:bus-tickets-book-button --title 'Replace bus ticket sale-pending notice with Book here button' --body ' *)"
     ]
   }
 }
